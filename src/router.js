@@ -61,12 +61,11 @@ export default new Router({
       component: SadrCrypto,
       beforeEnter(to, from, next){
         console.log(store);
-
-        // Store.actions.auth.authenticate().then(()=>{
-        //   next('/EditYourProfile');
-        // }).catch(() => {
-        //   next('/Login');
-        // })
+        Store.actions.auth.authenticate().then(()=>{
+          next('/EditYourProfile');
+        }).catch(() => {
+          next('/Login');
+        })
       }
     }, 
     {

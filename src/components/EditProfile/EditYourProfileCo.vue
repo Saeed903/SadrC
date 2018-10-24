@@ -14,20 +14,18 @@
         </div>
 
         <div class="resendEmail">
-            <p class="resendEmailText"><span class="surprise">!</span> you have not verified your email yet.you have about 2 days,22 hours until your vertification mail expires.please check your inbox for the vertification mail soon.</p>
+            <span class="resendEmailText"><span class="surprise">!</span> you have not verified your email yet.you have about 2 days,22 hours until your vertification mail expires.please check your inbox for the vertification mail soon.</span>
             <v-btn color="info" round to="">resend vertification email</v-btn>
         </div>
 
         <div class="resendEmail">
-            <p class="resendEmailText"><span class="surprise">!</span> you have not added a vertified phone number to your account yet.</p>
+            <span class="resendEmailText"><span class="surprise">!</span> you have not added a vertified phone number to your account yet.</span>
             <v-btn color="info" round to="">verify phone number</v-btn>
         </div>
 
         <div class="resendEmail">
             <div>
-                <p class="resendEmailText"><span class="surprise">!</span> you have not  set a real name to your account yet.</p>
-            </div>
-            <div>
+                <span class="resendEmailText"><span class="surprise">!</span> you have not  set a real name to your account yet.</span>
                 <v-btn color="info" round to="">set real name</v-btn>
             </div>
         </div>

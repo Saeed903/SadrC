@@ -19,6 +19,7 @@
 
         <div class="showRealName">
             <v-switch
+            v-model="props.item.habilitado"
             color="blue"
             label="show me as real name verifier to others"
             >
@@ -110,7 +111,17 @@
     </div>
 </template>
 <script>
-    
+export default{
+  data: () => ({
+        select: null,
+        items: [
+            'istanbul',
+            'tehran',
+            'ankara',
+            'tabriz',
+        ],
+    }),
+}
 </script>
 <style>
 .backInfoTop{
