@@ -111,7 +111,7 @@
                 <v-textarea
                     box
                     label="introduction"
-                    class="farzad"
+                    class="textarea"
                     hint="shown on your public profile.plain text only,up to 200 characters."
                 >
                 </v-textarea>
@@ -124,32 +124,32 @@
             save profile
              </v-btn>
         </div>
-        <div>
-            <p>change password</p>
-            <router-link to="">change password</router-link>
+        <div class="changePassword">
+            <span class="twoCharacters">change password</span><br>
+            <router-link class="routerCharacters" to="">change password</router-link>
         </div>
-        <div>
-            <p>change email address</p>
-            <router-link to="">change email address</router-link>
+        <div class="changePassword">
+            <span class="twoCharacters">change email address</span><br>
+            <router-link class="routerCharacters" to="">change email address</router-link>
         </div>
-        <div>
-            <p>vertification</p>
-            <p>E-mail verified:no</p>
-            <router-link to="">set up email</router-link>
-            <p>phone number verified:no</p>
-            <router-link to="">verify phone number</router-link>
-            <p>identify verified;no</p>
-            <router-link to="">verify identify</router-link>
+        <div class="changePassword">
+            <span class="twoCharacters">vertification</span><br>
+            <span class="textCharacters">E-mail verified:no</span><br>
+            <router-link class="routerCharacters" to="">set up email</router-link><br>
+            <span class="textCharacters">phone number verified:no</span><br>
+            <router-link class="routerCharacters" to="">verify phone number</router-link><br>
+            <span class="textCharacters">identify verified;no</span><br>
+            <router-link class="routerCharacters" to="">verify identify</router-link>
         </div>
-        <div>
-            <p>security</p>
-            <p>your account security level is:weak</p>
-            <router-link to="">edit security options</router-link>
+        <div class="changePassword">
+            <span class="twoCharacters">security</span><br>
+            <span class="textCharacters">your account security level is:weak</span><br>
+            <router-link class="routerCharacters" to="">edit security options</router-link><br>
         </div>
-        <div>
-            <p>real name</p>
-            <p>real name vertification :0 vertifications</p>
-            <router-link to="">your real name information</router-link>
+        <div class="changePassword">
+            <span class="twoCharacters">real name</span><br>
+            <span class="textCharacters">real name vertification :0 vertifications</span><br>
+            <router-link class="routerCharacters" to="">your real name information</router-link><br>
         </div>
         <div>
             <p>apps</p>
@@ -262,7 +262,37 @@ export default {
 .selectPercentage{
     width:35%;
 }
-.farzad{
+.textarea{
     padding-top:25px;
 }
+.twoCharacters{
+    font-size:20px;
+    font-weight:bold;
+    font-family:b nazanin;
+    color:rgb(34, 31, 31);
+    text-shadow:1px 3px 3px rgb(168, 156, 156);
+}
+.routerCharacters{
+    text-decoration:none;
+    text-align:justify;
+    direction:rtl;
+    text-indent:5px;
+    font-size:17px;
+    font-family:b nazanin;
+    color:rgb(15, 123, 224);
+}
+.routerCharacters:hover{
+    text-decoration:underline;
+    color:rgb(3, 129, 247);
+    text-shadow:1px 3px 3px rgb(179, 167, 167);
+}
+.textCharacters{
+    font-size:17px;
+    font-family:b nazanin;
+    color:rgb(5, 5, 5);
+}
+.changePassword{
+    padding-top:30px;
+}
+
 </style>

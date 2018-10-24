@@ -65,7 +65,7 @@ export default new Router({
         // Store.actions.auth.authenticate().then(()=>{
         //   next('/EditYourProfile');
         // }).catch(() => {
-        //   next('/login');
+        //   next('/Login');
         // })
       }
     }, 
