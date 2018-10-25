@@ -1,34 +1,36 @@
 <template>
     <div>
         <div>
-            <p class="editProfileText">edit your profile</p>
+            <p class="editProfileText">ویرایش پروفایل</p>
         </div>
 
         <div class="topInformationBox">
-            <router-link class="topBoxText" to="">basic user information</router-link><br>
-            <router-link class="topBoxText" to="">change password</router-link><br>
-            <router-link class="topBoxText" to="">change email address</router-link><br>
-            <router-link class="topBoxText" to="">verification</router-link><br>
-            <router-link class="topBoxText" to="">security</router-link><br>
-            <router-link class="topBoxText" to="">real name</router-link><br>
+            <router-link class="topBoxText" to="">اطلاعات پایه کاربر</router-link><br>
+            <router-link class="topBoxText" to="">تغییر رمز عبور</router-link><br>
+            <router-link class="topBoxText" to="">تغییر آدرس ایمیل</router-link><br>
+            <router-link class="topBoxText" to="">تایید</router-link><br>
+            <router-link class="topBoxText" to="">امنیت</router-link><br>
+            <router-link class="topBoxText" to="">اسم واقعی</router-link><br>
         </div>
 
         <div class="resendEmail">
             <span class="resendEmailText"><span class="surprise">!</span> you have not verified your email yet.you have about 2 days,22 hours until your vertification mail expires.please check your inbox for the vertification mail soon.</span>
-            <v-btn color="info" round to="">resend vertification email</v-btn>
+            <v-btn color="info" round to="">ارسال آدرس ایمیل تایید شده</v-btn>
         </div>
 
         <div class="resendEmail">
-            <span class="resendEmailText"><span class="surprise">!</span> you have not added a vertified phone number to your account yet.</span>
-            <v-btn color="info" round to="">verify phone number</v-btn>
+            <span class="resendEmailText"><span class="surprise">!</span>شما شماره تلفن تایید شده را به حساب کاربری خود اضافه نکرده اید</span>
+            <v-btn color="info" round to="">تایید شماره تلفن</v-btn>
         </div>
 
         <div class="resendEmail">
             <div>
-                <span class="resendEmailText"><span class="surprise">!</span> you have not  set a real name to your account yet.</span>
-                <v-btn color="info" round to="">set real name</v-btn>
+                <span class="resendEmailText"><span class="surprise">!</span>شما هنوز نام واقعی خود را به حساب کاربری خود تنظیم نکرده اید.</span>
+                <v-btn color="info" round to="">ایجاد نام واقعی</v-btn>
             </div>
         </div>
+
+
     </div>
 </template>
 <script>
@@ -36,7 +38,7 @@
 </script>
 <style>
 .editProfileText{
-    text-align:left;
+    text-align:right;
     font-size:25px;
     font-family:b nazanin;
     font-weight:bold;
@@ -79,5 +81,5 @@
 .surprise{
     font-weight:bold;
 }
-</style>
 
+</style>

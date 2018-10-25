@@ -1,21 +1,21 @@
 <template>
     <div>
-        <div class="changePassword">
-            <span class="twoCharacters">change password</span><br>
-            <router-link class="routerCharacters" to="">change password</router-link>
+          <div class="changePassword">
+            <span class="twoCharacters">تغییر رمز عبور</span><br>
+            <router-link class="routerCharacters" to="">تغییر رمز عبور</router-link>
         </div>
 
         <div class="changePassword">
-            <span class="twoCharacters">change email address</span><br>
-            <router-link class="routerCharacters" to="">change email address</router-link>
+            <span class="twoCharacters">تغییر آدرس ایمیل</span><br>
+            <router-link class="routerCharacters" to="">تغییر آدرس ایمیل</router-link>
         </div>
 
         <div class="changePassword">
-            <span class="twoCharacters">vertification</span><br>
-            <span class="textCharacters">E-mail verified:no</span><br>
-            <router-link class="routerCharacters" to="">set up email</router-link><br>
-            <span class="textCharacters">phone number verified:no</span><br>
-            <router-link class="routerCharacters" to="">verify phone number</router-link><br>
+            <span class="twoCharacters">ارزیابی</span><br>
+            <span class="textCharacters">آدرس ایمیل تایید شده:نه</span><br>
+            <router-link class="routerCharacters" to="">راه اندازی ایمیل</router-link><br>
+            <span class="textCharacters">شماره تلفن تایید شده:نه</span><br>
+            <router-link class="routerCharacters" to="">تایید شماره تلفن</router-link><br>
             <span class="textCharacters">identify verified;no</span><br>
             <router-link class="routerCharacters" to="">verify identify</router-link>
         </div>
@@ -62,6 +62,13 @@
     
 </script>
 <style>
+
+
+
+
+
+
+
 .twoCharacters{
     font-size:21px;
     font-weight:bold;

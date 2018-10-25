@@ -1,127 +1,106 @@
 <template>
     <div>
-        <div class="backInfoTop">
-            <p class="basicInfo">basic user information</p>
-            <p class="basicEmail">email:farzad6238afsari@gmail.com(unverified)</p>
+        
+         <div class="backInfoTop">
+            <p class="basicInfo">اطلاعات پایه کاربر</p>
+            <p class="basicEmail">ایمیل:farzad6238afsari@gmail.com(تایید نشده)</p>
         </div>
 
-        <div>
-            <v-select
-            class="selectPercentage"
-            v-model="select"
-            :items="items"
-            :rules="[v => !!v || 'timezone is required']"
-            label="timezone"
-            required
-            >
-            </v-select>
-        </div>
+       
 
         <div class="showRealName">
             <v-switch
-            v-model="props.item.habilitado"
             color="blue"
-            label="show me as real name verifier to others"
+            label="من را بعنوان تایید کننده نام واقعی به دیگران نشان بده"
             >
             </v-switch>
-            <span class="userNameShown"> your username is shown when people make new trades with your trading partners.</span>
+            <span class="userNameShown">نام کاربری شما زمانی نمایش داده می شوند که افراد با شرکای تجاری خود معاملات جدیدی را انجام میدهند</span>
         </div>
 
         <div class="showRealName">
             <v-switch
             color="blue"
-            label="disable sensitive information from email notifications"
+            label="اطلاعات حساس را از اطلاعیه های ایمیل غیر فعال کنید."
             >
             </v-switch>
-            <span class="userNameShown">the email will just ask you to log in to the site.where the actual notifications will be.</span>
+            <span class="userNameShown">ایمیل فقظ از شما می خواهد که به سایت وارد شوید.جایی که اطلاعیه های واقعی باشد.</span>
         </div>
 
         <div class="showRealName">
             <v-switch
             color="blue"
-            label="enable web notifications"
+            label="اعلان های وب را فعال کنید."
             >
             </v-switch>
-            <span class="userNameShown">you will get external notifications for sale temporarily</span>
+            <span class="userNameShown">شما اطلاعیه های خارجی برای فروش را بطور  موقت دریافت خواهید کرد.</span>
         </div>
 
         <div class="showRealName">
             <v-switch
             color="blue"
-            label="selling vacation"
+            label="فروش در تعطبلات"
             >
             </v-switch>
-            <span class="userNameShown">disable all your advertisements for purchase temporarily</span>
+            <span class="userNameShown">همه تبلیغات خود را برای خرید به طور موقت غیر فغال کنید.</span>
         </div>
 
         <div class="showRealName">
             <v-switch
             color="blue"
-            label="buying vacation"
+            label="خرید در تعطیلات"
             >
             </v-switch>
-            <span class="userNameShown">disable all your advertisements for purchase temporarily</span>
+            <span class="userNameShown">همه تبلیغات خود را برای خرید به طور موقت غیر فغال کنید.</span>
         </div>
 
         <div class="showRealName">
             <v-switch
             color="blue"
-            label="send SMS notifications for new trade contacts"
+            label=" ارسال پیامک برای مخاطبین جدید تجارت"
             >
             </v-switch>
-            <span class="userNameShown">send SMS notifications from new contact requests.(price:free)</span>
+            <span class="userNameShown">ارسال پیامک از درخواست های تماس جدید</span>
         </div>
 
         <div class="showRealName">
             <v-switch
             color="blue"
-            label="send SMS notifications for new online payments"
+            label="ارسال پیامک برای پرداخت های جدید آنلاین"
             >
             </v-switch>
-            <span class="userNameShown">send SMS notifications fro new online payments in your advertisements(price:free)</span>
+            <span class="userNameShown">ارسال پیامک برای پرداخت های آنلاین در تبلیغات شما</span>
         </div>
 
         <div class="showRealName">
             <v-switch
             color="blue"
-            label="send SMS notifications from new online escrow releases(price:free)"
+            label=""
             >
             </v-switch>
-            <span class="userNameShown">send SMS notifications from new online escrow release(price:free)</span>
+            <span class="userNameShown">ارسال پیامک از نسخه های جدید آنلاین سپرو</span>
         </div>
 
         <div>
             <v-flex xs6>
                 <v-textarea
                 box
-                label="introduction"
+                label="معرفی"
                 class="textarea"
-                hint="shown on your public profile.plain text only,up to 200 characters."
+                hint="در پروفایل عمومی شما نشان داده می شود.تا سقف 200 کاراکتر متن نوشته شود."
                 >
                 </v-textarea>
             </v-flex>
             <v-btn 
-            @click="submit"
             color="blue"
             round
             >
-            save profile
+            ذخیره مشخصات
             </v-btn>
         </div>
     </div>
 </template>
 <script>
-export default{
-  data: () => ({
-        select: null,
-        items: [
-            'istanbul',
-            'tehran',
-            'ankara',
-            'tabriz',
-        ],
-    }),
-}
+    
 </script>
 <style>
 .backInfoTop{
@@ -157,5 +136,6 @@ export default{
 .textarea{
     padding-top:25px;
 }
+
 
 </style>

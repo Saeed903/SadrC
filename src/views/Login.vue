@@ -6,8 +6,8 @@
         @keydown.prevent.enter 
         v-model="valid"
       >
-      <p class="logText">log in</p>
-      <p class="longText">By logging in to your account, you can easily transfer your transactions and see your wallet</p>
+      <p class="logText">ثبت نام</p>
+      <p class="longText">.با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید</p>
       <div class="logBorder">
         <v-text-field
           v-validate="'required|max:30'"
@@ -15,7 +15,7 @@
           :counter="30"
           :error-messages="errors.collect('email')"
           label="E-mail"
-          data-vv-name="email"
+          data-vv-name="ایمیل"
           class="textField"
           required
         >
@@ -33,19 +33,19 @@
         >
         </v-text-field>
       <div>
-        <p class="humanConfirm">please confirm that you are a human</p>
+        <p class="humanConfirm">لطفا تایید کنید که شما یک انسان هستید</p>
       </div>
       <div>
-        <p>photo place</p>
+        <p>محل عکس</p>
       </div>
-        <v-btn type="submit" class="primary" >login</v-btn>
+        <v-btn type="submit" class="primary" >ورود</v-btn>
       </div>
       </v-form>
     <div>
-      <router-link class="forgotPass" to="ResetPassword">forgot password?</router-link>
+      <router-link class="forgotPass" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link>
     </div>
     <div>
-      <p class="newTo">new to sadrCrypto?<router-link to="/SignUp" class="signIn">sign up now</router-link></p>
+      <p class="newTo">new to sadrCrypto?<router-link to="/SignUp" class="signIn">ثبت نام کنید</router-link></p>
     </div>
     </div>
     <Footer></Footer> 
@@ -71,12 +71,12 @@
       },
       dictionary: {
         attributes: {
-          email: 'E-mail Address'
+          email: 'آدرس ایمیل'
           // custom attributes
         },
         custom: {
           name: {
-            required: () => 'userName or email field is required.',
+            required: () => 'نام کاربر یا ایمیل الزامیست',
             max: 'The userName or email field may not be greater than 30 characters'
             // custom messages
           },

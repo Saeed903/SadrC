@@ -9,11 +9,11 @@
       :loading="loading"
     >
       <template slot="items" slot-scope="props">
-        <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
+        <td>({{props.item.tradeCount}},{{props.item.satisfiedPercent}}){{ props.item.trader }}</td>
         <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
         <td class="text-xs-right">{{ props.item.price }}</td>
         <td class="text-xs-right">{{ props.item.limits }}</td>
-        <td class="text-xs-right"><v-btn class="primary" @click="buy()">buy</v-btn></td>
+        <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
       </template>
     </v-data-table>
 </div>
@@ -32,7 +32,7 @@ export default{
   },
   computed:{
     typeCustomer:function() {
-        return (this.isSeller==1) ?'Seller':'Buyer';
+        return (this.isSeller==1) ?'فروشنده':'خریدار';
     },
     headers:function() {
         return  [{
@@ -42,9 +42,9 @@ export default{
             sortable: false,
             value: 'name'
             },
-            { text: 'paymentMethod', value: 'paymentMethod' },
-            { text: ' price | bitcoin', value: ' price | bitcoin' },
-            { text: 'limits', value: 'limits' }
+            { text: 'روش پرداخت', value: 'روش پرداخت' },
+            { text: ' بیت کوین | قیمت ', value: ' بیت کوین | قیمت' },
+            { text: 'محدودیت ها', value: 'محدودیت ها' }
             
         ]
     }
@@ -111,42 +111,42 @@ export default{
     getDesserts () {
     return [
         {
-            trader:'farzad',
+            trader:'فرزاد افسری',
             tradeCount:'98',
             satisfiedPercent:'100%',
-            paymentMethod:'sign',
+            paymentMethod:'تایید کردن',
             price:'58',
             limits:'100',
         },
          {
-            trader:'ali',
+            trader:'علی',
             tradeCount:'98',
             satisfiedPercent:'100%',
-            paymentMethod:'sign',
+            paymentMethod:'تایید کردن',
             price:'58',
             limits:'100',
         },
          {
-            trader:'heydar',
+            trader:'حیدر',
             tradeCount:'98',
             satisfiedPercent:'100%',
-            paymentMethod:'sign',
+            paymentMethod:'تایید کردن',
             price:'58',
             limits:'100',
         },
          {
-            trader:'koomari',
+            trader:'حسین',
             tradeCount:'98',
             satisfiedPercent:'100%',
-            paymentMethod:'sign',
+            paymentMethod:'تایید کردن',
             price:'58',
             limits:'100',
         },
          {
-            trader:'lakzad',
+            trader:'باقری',
             tradeCount:'98',
             satisfiedPercent:'100%',
-            paymentMethod:'sign',
+            paymentMethod:'تایید کردن',
             price:'58',
             limits:'100',
         },
