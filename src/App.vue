@@ -128,6 +128,7 @@
         { icon: 'touch_app', text:'Ethereum', path:'/Ethereum'},
         { icon: 'archive', text:'Ripple', path:'/Ripple'},
         { icon: 'delete', text:'Zcash', path:'/Zcash'},
+        { icon: 'delete', text:'Zcash1', path:'/Zcash'},
         { icon: 'touch_app', text:'have a question?', path:'/HaveQuestion',},
       ],
       signState:'SignUp Free',
