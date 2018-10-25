@@ -59,14 +59,14 @@ export default new Router({
       path: '/',
       name: 'SadrCrypto',
       component: SadrCrypto,
-      beforeEnter(to, from, next){
-        console.log(store);
-        Store.actions.auth.authenticate().then(()=>{
-          next('/EditYourProfile');
-        }).catch(() => {
-          next('/Login');
-        })
-      }
+      // beforeEnter(to, from, next){
+      //   console.log(store);
+      //   Store.actions.auth.authenticate().then(()=>{
+      //     next('/EditYourProfile');
+      //   }).catch(() => {
+      //     next('/Login');
+      //   })
+      // }
     }, 
     {
       path: '/WalletSendBitconRefunds',
