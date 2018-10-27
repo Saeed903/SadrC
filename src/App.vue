@@ -82,6 +82,7 @@
       <v-toolbar-title style="width: 20%">
             <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span></router-link>
       </v-toolbar-title>
+      <v-spacer></v-spacer>
       <v-toolbar-items style="width:50%; padding: 0 0 0 25px">
           
             <router-link to="PostTrade" class="menu">post-trade</router-link>
