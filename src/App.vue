@@ -82,19 +82,21 @@
       <v-toolbar-title style="width: 20%">
             <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span></router-link>
       </v-toolbar-title>
-      <v-toolbar-title style="width: 35%">
+      <v-toolbar-items style="width:50%; padding: 0 0 0 25px">
           
             <router-link to="PostTrade" class="menu">post-trade</router-link>
             <router-link to="Forums" class="menu">forums</router-link>
             <router-link to="Help" class="menu">help</router-link>
-      </v-toolbar-title>   
-      <v-toolbar-title style="width: 40%"> 
-        <router-link to="EditYourProfile" class="menu">edit-profile</router-link>
-        <router-link to="Wallet" class="menu">wallet</router-link>
-        <router-link to="DashBoard" class="menu">DashBoard</router-link>
+      </v-toolbar-items>   
+      <v-toolbar-items v-if="user" > 
+        <router-link  to="EditYourProfile" class="menu">edit-profile</router-link>
+        <router-link  to="Wallet" class="menu">wallet</router-link>
+        <router-link  to="DashBoard" class="menu">DashBoard</router-link>
+      </v-toolbar-items> 
+      <v-toolbar-items v-if="!user"> 
         <router-link to="Signup" class="freeRegister">{{signState}}</router-link>
         <router-link to="Login" class="menu">log in</router-link>
-      </v-toolbar-title>
+      </v-toolbar-items>
         
       
      
@@ -119,6 +121,7 @@
 </template>
 <script>
   
+  import { mapState } from 'vuex';
 
   export default {
   data: () => ({
@@ -147,6 +150,8 @@
     },
     mounted(){
      
+    }, computed: {
+      ...mapState ('auth', {user: 'payload'})
     }
 }
 </script>

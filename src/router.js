@@ -60,9 +60,8 @@ export default new Router({
       name: 'SadrCrypto',
       component: SadrCrypto,
       beforeEnter(to, from, next){
-        console.log(store);
         store.dispatch('auth/authenticate').then(()=>{
-          next('/EditYourProfile');
+          next('/');
         }).catch(() => {
           next('/Login');
         })
