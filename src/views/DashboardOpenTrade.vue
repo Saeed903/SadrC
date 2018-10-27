@@ -1,11 +1,11 @@
 <template>
     <div>
-        <p>your advertisements</p>
+        <p>تبلیغات شما</p>
         <p>you can create a maximum of 5 advertisements.the limits is based on your 30 day volume.which is 0.00000000 BTC.to learn more about advertisements limits,<router-link to="LearnAdverDashboard">click here</router-link></p>
         <v-data-table
             class="text-xs-left"
             :headers="headers"
-            :items="desserts"
+            :items="desserts" 
             :pagination.sync="pagination"
             :total-items="totalDesserts"
             :loading="loading"

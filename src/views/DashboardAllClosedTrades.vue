@@ -1,7 +1,7 @@
 <template>
     <div>
-        <p>closed trades,all</p>
-        <router-link to="">download data in csv format</router-link>
+        <p>بستن تمام معاملات</p>
+        <router-link to="">.اطلاعات را با فرمت سی اس وی دانلود کنید</router-link>
         <div class="dataTable">
             <v-data-table
                 class="text-xs-left"
@@ -16,7 +16,7 @@
                     <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
                     <td class="text-xs-right">{{ props.item.price }}</td>
                     <td class="text-xs-right">{{ props.item.limits }}</td>
-                    <td class="text-xs-right"><v-btn class="primary" @click="buy()">buy</v-btn></td>
+                    <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
                 </template>
             </v-data-table>
         </div>

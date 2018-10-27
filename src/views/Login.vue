@@ -6,7 +6,7 @@
         @keydown.prevent.enter 
         v-model="valid"
       >
-      <p class="logText">ثبت نام</p>
+      <p class="logText">ورود</p>
       <p class="longText">.با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید</p>
       <div class="logBorder">
         <v-text-field
@@ -14,8 +14,8 @@
           v-model="user.email"
           :counter="30"
           :error-messages="errors.collect('email')"
-          label="E-mail"
-          data-vv-name="ایمیل"
+          label="ایمیل"
+          data-vv-name="email"
           class="textField"
           required
         >
@@ -26,7 +26,7 @@
           counter="20"
           :error-messages="errors.collect('password')"
           :type="'password'"
-          label="Password"
+          label="رمز عبور"
           class="textField"
           data-vv-name="password"
           required

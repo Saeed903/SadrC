@@ -1,13 +1,13 @@
 <template>
     <div>
         <div>
-            <p class="sendBtc">send bitcoins</p>
+            <p class="sendBtc">فرستادن بیت کوین</p>
         </div>
         <div class="wallet">
             <div class="walletBtc">
-                <p class="boxText">in your wallet:</p>
-                <p class="boxText">transactions fee:</p>
-                <p class="boxText">you can speed up to:</p>
+                <p class="boxText">:در کیف پول شما</p>
+                <p class="boxText">:هزینه معاملات</p>
+                <p class="boxText">:شما می توانید به سرعت</p>
             </div>
             <div class="walletBtcLeft">
                 <p>0 BTC</p>
@@ -17,46 +17,46 @@
         </div>
         <div>
             <v-text-field
-            label="bitcoin address"
+            label="آدرس بیت کوین"
             class="textField"
             >
             </v-text-field>
         </div>
         <div>
             <v-text-field
-             label="amount in bitcoins"
+             label="مقدار بیت کوین"
              class="secondTextField"
             >
             </v-text-field>
         </div>
         <div>
-            <p class="moreOption">more options</p>
+            <p class="moreOption">گزینه های بیشتر</p>
         </div>
         <div>
             <v-text-field
                 class="textAppear"
-                label="appears in the transactions list"
+                label=".در لیست معاملات نمایش داده می شود"
             >
             </v-text-field>
         </div>
         <div>
             <v-text-field
                 class="textAmount"
-                label="amount"
+                label="مقدار"
             >
             </v-text-field>
         </div>
         <div>
             <v-select
                 :items="items"
-                label="usd"
+                label="دلار"
                 required
                 class="select"
             >
             </v-select>
         </div>
         <div>
-            <v-btn to="" class="primary">continue</v-btn>
+            <v-btn to="" class="primary">ادامه دادن</v-btn>
         </div>
         <div>
             <v-list-group>
@@ -75,7 +75,7 @@
     }
 </script>
 <style>
-.textField{s
+.textField{
     width:50%;
 }
 .secondTextField{

@@ -1,7 +1,7 @@
 <template>
     <div>
-        <p>wallet transactions</p>
-        <p>below os the history of your localbitcoins wallet</p>
+        <p>معاملات کیف پول</p>
+        <p>ریز تاریخچه کیف پول صدرکریپتو</p>
         <v-data-table
     :headers="headers"
     :items="desserts"
