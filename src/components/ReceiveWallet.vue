@@ -1,7 +1,7 @@
 <template>
     <div>
-        <p class="receiveBitcoins">receive bitcoins</p>
-        <p class="giveAddress">give out the bitcoin address below to receive bitcoins</p>
+        <p class="receiveBitcoins">دریافت بیت کوین</p>
+        <p class="giveAddress">.آدرس بیت کوین را برای دریافت بیت کوین ارسال کنید</p>
         <p>3qdsfkabj45dfgag874fgafjasgnj</p>
         <v-list-group>
             {{text}}

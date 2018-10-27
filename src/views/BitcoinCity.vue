@@ -1,12 +1,12 @@
 <template>
     <div>
         <div>
-            <p>Exchangers in 248 countries and 16370 cities</p>
+            <p>مبدل ها در 248 کشور و 16370 شهر</p>
             <v-divider></v-divider>
         </div>
         <div>
-            <p>banglasesh</p>
-            <p>cities with cash trade(total 742)</p>
+            <p>بنگلادش</p>
+            <p>شهرستانها با تجارت نقدی</p>
             <ul>
                 <li>Rajshahi Division (7)</li>
                 <li>Jessore (2)</li>
@@ -45,10 +45,10 @@
                 <li>Jalsukha (1)</li>
                 <li>Kasba (1)</li>
             </ul>
-            <p>online trade</p>
+            <p>تجارت آنلاین</p>
             <ul>
-                <li>Buy bitcoins online in Bangladesh</li>
-                <li>Sell bitcoins online in Bangladesh</li>
+                <li>خرید بیت کوین آنلاین درایران </li>
+                <li>فروش بیت کوین آنلاین در ایران</li>
             </ul>
         </div>
         <v-divider></v-divider>
