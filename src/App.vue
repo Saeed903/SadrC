@@ -93,6 +93,7 @@
         <router-link  to="EditYourProfile" class="menu">edit-profile</router-link>
         <router-link  to="Wallet" class="menu">wallet</router-link>
         <router-link  to="DashBoard" class="menu">DashBoard</router-link>
+        <v-btn flat @click="logout">LogOut</v-btn>
       </v-toolbar-items> 
       <v-toolbar-items v-if="!user"> 
         <router-link to="Signup" class="freeRegister">{{signState}}</router-link>
@@ -122,7 +123,7 @@
 </template>
 <script>
   
-  import { mapState } from 'vuex';
+  import { mapState, mapActions } from 'vuex';
 
   export default {
   data: () => ({
@@ -143,7 +144,12 @@
     },
     methods:{
       
-      
+      ...mapActions('auth',{ authLogout: 'logout' }),
+
+      logout(){
+        this.authLogout().than(()=> this.$router.push('/SadrCrypto'));
+      },
+
       sidebar(paths){
         this.$router.push(paths);
         
