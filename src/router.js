@@ -48,6 +48,7 @@ import walletReciveBitcoinQRCodeForMobile from './views/walletReciveBitcoinQRCod
 import WalletSendBitconHowLong from './views/WalletSendBitconHowLong.vue'
 import WalletSendBitconOutgoingbitcoin from './views/WalletSendBitconOutgoingbitcoin.vue'
 import WalletSendBitconRefunds from './views/WalletSendBitconRefunds.vue'
+import Home from './views/Home.vue'
 
 Vue.use(Router)
 
@@ -58,7 +59,7 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: SadrCrypto,
+      component: Home,
       beforeEnter(to, from, next){
         store.dispatch('auth/authenticate').then(()=>{
           console.log('test')
