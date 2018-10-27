@@ -1,9 +1,9 @@
 <template>
     <div>
         <div>
-            <p>sadrCrypto identify verification</p>
-            <p>please use the window below to start the ID verification process.once your ID is verified with vertified with sadrCrypto you will be able to buy and sell bitcoins from many more traders.</p>
-            <p>for a successfull verification make sure that</p>
+            <p>تایید هویت درصدر کریپتو</p>
+            <p>.لطفا از پنجره زیر برای شروع فرآیند تأیید هویت استفاده کنید. پس از شناسایی و تایید شما در صدر کریپتو، شما قادر به خرید و فروش بیت کوین از بسیاری از معامله گران دیگر خواهید بود</p>
+            <p>.برای تأیید موفقیت آمیز اطمینان حاصل کنید</p>
             <ul>
                 <li>you havent hidden or blurred any information on your ID.</li>
                 <li>you havent written any text on top of the image od ID.</li>
