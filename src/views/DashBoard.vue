@@ -5,7 +5,7 @@
         <v-btn to="OpenTradeDashboard">تجارت باز است</v-btn>
         <v-btn to="CompletedTradeDashboard">تکمیل معالات</v-btn>
         <v-btn to="CancelledTradeDashboard">لغومعاملات</v-btn>
-        <v-btn to="AllClosedDashboard">بستن معاملات</v-btn>
+        <v-btn to="AllClosedDashboard">بستن تمام معاملات</v-btn>
         <Footer></Footer>
     </div>
 </template>
