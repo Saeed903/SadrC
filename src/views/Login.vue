@@ -107,7 +107,7 @@
             ...this.user
           }).then(()=>{
             console.log('logged in');
-            this.$router.push('/');
+            this.$router.push('/SadrCrypto');
           }).catch(e => {
             console.error('Authentication Error');
           })
