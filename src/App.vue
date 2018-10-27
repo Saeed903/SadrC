@@ -88,12 +88,12 @@
             <router-link to="Forums" class="menu">forums</router-link>
             <router-link to="Help" class="menu">help</router-link>
       </v-toolbar-items>   
-      <v-toolbar-items v-if="!user" > 
+      <v-toolbar-items v-if="user" > 
         <router-link  to="EditYourProfile" class="menu">edit-profile</router-link>
         <router-link  to="Wallet" class="menu">wallet</router-link>
         <router-link  to="DashBoard" class="menu">DashBoard</router-link>
       </v-toolbar-items> 
-      <v-toolbar-items v-if="user"> 
+      <v-toolbar-items v-if="!user"> 
         <router-link to="Signup" class="freeRegister">{{signState}}</router-link>
         <router-link to="Login" class="menu">log in</router-link>
       </v-toolbar-items>
@@ -149,7 +149,7 @@
       }
     },
     mounted(){
-     
+     console.log(this.user);
     }, computed: {
       ...mapState ('auth', {user: 'payload'})
     }

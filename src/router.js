@@ -62,11 +62,9 @@ export default new Router({
       component: Home,
       beforeEnter(to, from, next){
         store.dispatch('auth/authenticate').then(()=>{
-          console.log('test')
-          //this.$router.push('/');
           next('/SadrCrypto');
         }).catch(() => {
-          next('/Login');
+          next('/SadrCrypto');
         })
       }
     }, 
