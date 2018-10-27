@@ -57,15 +57,22 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'SadrCrypto',
+      name: 'Home',
       component: SadrCrypto,
       beforeEnter(to, from, next){
         store.dispatch('auth/authenticate').then(()=>{
-          next('/');
+          console.log('test')
+          //this.$router.push('/');
+          next('/SadrCrypto');
         }).catch(() => {
           next('/Login');
         })
       }
+    }, 
+    {
+      path: '/SadrCrypto',
+      name: 'SadrCrypto',
+      component: SadrCrypto,
     }, 
     {
       path: '/WalletSendBitconRefunds',
