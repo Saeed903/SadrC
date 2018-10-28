@@ -1,11 +1,11 @@
 <template>
     <div>
-        <p>your advertisements</p>
-        <p>you can create a maximum of 5 advertisements.the limits is based on your 30 day volume.which is 0.00000000 BTC.to learn more about advertisements limits,<router-link to="LearnAdverDashboard">click here</router-link></p>
+        <p>تبلیغات شما</p>
+        <p>شما می توانید حداکثر 5 آگهی ایجاد کنید محدودیت ها براساس حجم 30 روزه شما است که 0.00000000 بیت کوین است. برای کسب اطلاعات بیشتر درباره محدودیت های تبلیغات <router-link to="LearnAdverDashboard">اینجا کلیک کنید</router-link></p>
         <v-data-table
             class="text-xs-left"
             :headers="headers"
-            :items="desserts"
+            :items="desserts" 
             :pagination.sync="pagination"
             :total-items="totalDesserts"
             :loading="loading"
@@ -15,16 +15,16 @@
                 <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
                 <td class="text-xs-right">{{ props.item.price }}</td>
                 <td class="text-xs-right">{{ props.item.limits }}</td>
-                <td class="text-xs-right"><v-btn class="primary" @click="buy()">buy</v-btn></td>
+                <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
             </template>
         </v-data-table>
-        <v-btn class="primary">create adveritsement</v-btn>
-        <p>vacation</p>
-        <v-checkbox>selling vacation</v-checkbox>
-        <p>disable all your advertisements for purchase temporarily</p>
-        <v-checkbox>buying vacation</v-checkbox>
-        <p>disable all your advertisements for purchase temporarily</p>
-        <v-btn to="" class="primary">save</v-btn>
+        <v-btn class="primary">ایجاد تبلیغات</v-btn>
+        <p>تعطیلات</p>
+        <v-checkbox>فروش در تعطیلات</v-checkbox>
+        <p>.همه تبلیغات خود را برای خرید به طور موقت غیرفعال کنید</p>
+        <v-checkbox>خرید در تعطیلات</v-checkbox>
+        <p>.همه تبلیغات خود را برای خرید به طور موقت غیرفعال کنید</p>
+        <v-btn to="" class="primary">ذخیره</v-btn>
     </div>
 </template>
 <script>

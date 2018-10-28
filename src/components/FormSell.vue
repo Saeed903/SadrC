@@ -6,7 +6,7 @@
       type="number"
       style="text-align:right;width:47%;float:right;margin-left:5px;margin-top:0"
       :rules="amountRules"
-      label="amount"
+      label="میزان"
       required
     ></v-text-field>
     <v-select
@@ -14,21 +14,21 @@
       style="text-align:right;width:47%;margin-right:5px;margin-top:10px"
       :items="country"
       :rules="[v => !!v || 'country is required']"
-      label="country"
+      label="کشور"
       required
     ></v-select>
     <v-select
       v-model="offers"
       :items="offers"
       :rules="[v => !!v || 'is required']"
-      label  ="all onlines offers"
+      label  ="تمام وقت"
       required
     ></v-select>
     <v-checkbox
       v-model="checkbox"
       :rules="[v => !!v || 'you must accept to continue']"
       style=""
-      label="do you agree?"
+      label="موافقید؟"
       required
     ></v-checkbox>
 
@@ -36,9 +36,9 @@
       :disabled="!valid"
       @click="submit"
     >
-     submit
+     ارسال
     </v-btn>
-    <v-btn @click="clear">clear</v-btn>
+    <v-btn @click="clear">پاک کردن</v-btn>
   </v-form>
 </template>
 <script>

@@ -6,14 +6,14 @@
         @submit.prevent="signUp"
         @keydown.prevent.enter>
 
-        <p class="registerAccount">register a new account</p>
-        <p class="start">sign up for a user account to start buying or selling bitcoins.</p>
+        <p class="registerAccount">.یک حساب جدید ثبت کنید</p>
+        <p class="start">.ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
         <v-text-field
           v-validate="'required|max:30'"
           v-model="user.username"
           :counter="30"
           :error-messages="errors.collect('username')"
-          label="Username"
+          label="نام کاربر"
           class="textFields"
           data-vv-name="username"
           required
@@ -22,7 +22,7 @@
           v-validate="'required|email'"
           v-model="user.email"
           :error-messages="errors.collect('email')"
-          label="E-mail"
+          label="ایمیل"
           class="textFields"
           data-vv-name="email"
           required
@@ -34,7 +34,7 @@
           class="textFields"
           :error-messages="errors.collect('password')"
           :type="'password'"
-          label="password"
+          label="رمزعبور"
           data-vv-name="password"
           required
         ></v-text-field>
@@ -45,7 +45,7 @@
           class="textFields"
           :error-messages="errors.collect('passwordAgain')"
           :type="'password'"
-          label="password(again)"
+          label="تکرار رمز عبور "
           data-vv-name="passwordAgain"
           required
         ></v-text-field>
@@ -55,14 +55,14 @@
             :sitekey="sitekey">
         </vue-recaptcha>
        
-        <v-btn type="submit" class="primary" :disabled="!valid" >submit</v-btn>
-        <v-btn @click="clear" class="primary">clear</v-btn>
+        <v-btn type="submit" class="primary" :disabled="!valid" >ارسال</v-btn>
+        <v-btn @click="clear" class="primary">پاک کردن</v-btn>
       </v-form>
       
       <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
       
-      <p class="haveAccount">already have an account?<router-link to="/Login" class="logLink">log in</router-link></p>
-      <p class="forgotPassword">forgot password?<router-link to="/ResetPassword" class="resetLink">reset your password.</router-link></p>
+      <p class="haveAccount">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="logLink">ورود</router-link></p>
+      <p class="forgotPassword">رمز عبور را فراموش کرده اید؟<router-link to="/ResetPassword" class="resetLink">.رمز عبور خودتان را باز نشانی کنید</router-link></p>
     </div>
     <Footer></Footer>
   </div>

@@ -4,25 +4,25 @@
             <img class="mineBitcoin" src="./../../public/img/CryptoImage/photoCoin.jpg" alt="">
         </div>
         <div class="wall">
-            <p class="boldText">Buy and sell bitcoins near you</p>
-            <p class="safeText">Instant. Secure. Private.</p>
+            <p class="boldText">خرید و فروش بیت کوین در نزدیکی شما</p>
+            <p class="safeText">فوری. امن. خصوصی.</p>
             <p class="introduceText">
-                <span class="orangeText">Trade bitcoins</span>
-                <router-link to="/BitcoinCity" class="hoverDecoration">in 16370 cities</router-link>
-                <span class="orangeText">and</span>
-                <router-link to="/BitcoinCountry" class="hoverDecoration">248 countries</router-link>
-                <span class="orangeText">including</span>
-                <router-link to="/RepublicIran" class="hoverDecoration">islamic republic of iran</router-link>
+                <span class="orangeText">بیت کوین تجاری</span>
+                <router-link to="/BitcoinCity" class="hoverDecoration">در 16370 شهر</router-link>
+                <span class="orangeText">و</span>
+                <router-link to="/BitcoinCountry" class="hoverDecoration">248 کشور</router-link>
+                <span class="orangeText">شامل</span>
+                <router-link to="/RepublicIran" class="hoverDecoration">جمهوری اسلامی ایران</router-link>
             </p>
-            <v-btn class="signButton" color="success" to="/Signup" block>sign up free</v-btn>
+            <v-btn class="signButton" color="success" to="/Signup" block>ثبت نام رایگان</v-btn>
         </div>  
         <div class="digitalCurrency">
-            <p class="trustText">Buy and sell digital currency</p>
-            <p class="secondTrustText">SadrCrytpo is the easiest and most trusted place to buy, sell, and manage your digital currency.</p>
+            <p class="trustText">خرید و فروش ارز دیجیتال</p>
+            <p class="secondTrustText">SadrCrytpo ساده ترین و مطمئن ترین مکان برای خرید، فروش و مدیریت ارز دیجیتال خود است.</p>
         </div>
         <div class="twoSection">
             <div>
-                <p class="bitcoinText">Buy bitcoins online in islamic republic of iran</p>
+                <p class="bitcoinText">خرید بیت کوین آنلاین در جمهوری اسلامی ایران</p>
             </div>
             <div>
                 <Transaction></Transaction>
@@ -31,7 +31,7 @@
 
         <div class="twoSection">
             <div>
-                <p class="bitcoinText">sell bitcoins online in islamic republic of iran</p>
+                <p class="bitcoinText">فروش بیت کوین آنلاین در جمهوری اسلامی ایران</p>
             </div>
             <div>
                 <Transaction></Transaction>
@@ -40,7 +40,7 @@
 
         <div class="twoSection">
             <div>
-                <p class="bitcoinText">Sell bitcoins for cash near islamic republic of iran</p>
+                <p class="bitcoinText">فروش بیت کوین برای نقدی در نزدیکی جمهوری اسلامی ایران</p>
             </div>
             <div>
                 <Transaction></Transaction>
@@ -50,16 +50,16 @@
         <div class="sadrNews">
             <p class="topNewsText">sadrCrypto.com news</p>
             <v-divider class="my-3"></v-divider>
-            <p><router-link to="MoreToolSadrCrypto" class="newsText">More tools for offchain transactions</router-link></p>
+            <p><router-link to="MoreToolSadrCrypto" class="newsText">ابزارهای بیشتر برای معاملات</router-link></p>
             <v-divider class="my-3"></v-divider>
-            <p> <router-link to="LogInPageChange" class="newsText">Login page changes</router-link></p>
+            <p> <router-link to="LogInPageChange" class="newsText">تغییر صفحه ورود به سیستم</router-link></p>
             <v-divider class="my-3"></v-divider>
-            <p><router-link to="Compensation" class="newsText">Compensation for users holding Bcash (BCH) balances</router-link></p>
+            <p><router-link to="Compensation" class="newsText">جبران برای کاربران متعلق به Bash (BCH) تعادل</router-link></p>
             <v-divider class="my-3"></v-divider>
-            <p><router-link to="SadrCryptoStatement" class="newsText">sadrCrypto statement regarding the possible hard fork on Aug 1 2017</router-link></p>
+            <p><router-link to="SadrCryptoStatement" class="newsText">بیانیه sadrCrypto در مورد چنگال سخت ممکن در 1 آگوست 2017</router-link></p>
             <v-divider class="my-3"></v-divider>
-            <p><router-link to="TransactionSystem" class="newsText">New Bitcoin transaction fee system</router-link></p>
-            <p class="rightText">read more at<router-link to="" class="newsText">sadrCrypto.com blog</router-link></p>
+            <p><router-link to="TransactionSystem" class="newsText">سیستم هزینه معامله بیت کوین جدید</router-link></p>
+            <p class="rightText">بیشتر بخوانید<router-link to="" class="newsText">sadrCrypto.com blog</router-link></p>
         </div>
         
         <p>{{btrAddr}}</p>
