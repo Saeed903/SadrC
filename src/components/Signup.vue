@@ -6,7 +6,7 @@
       v-model="name"
       :counter="10"
       :error-messages="errors.collect('name')"
-      label="name"
+      label="نام کاربر "
       data-vv-name="name"
       required
     ></v-text-field>
@@ -14,7 +14,7 @@
       v-validate="'required|email'"
       v-model="email"
       :error-messages="errors.collect('email')"
-      label="email"
+      label="ایمیل"
       data-vv-name="email"
       required
     ></v-text-field>
@@ -23,7 +23,7 @@
       v-model="password"
       :error-messages="errors.collect('password')"
       :type="showPassword ? 'text' : 'password'"
-      label="password"
+      label="کلمه عبور"
       data-vv-name="password"
       required
     ></v-text-field>
@@ -32,12 +32,13 @@
       v-model="showPassword"
       :error-messages="errors.collect('password(again)')"
       :type="showConfirmPassword ? 'text' : 'password(again)'"
-      label="password(again)"
+      label="تکرار کلمه عبور"
       data-vv-name="password(again)"
       required
     ></v-text-field>
-    <v-btn @click="submit">submit</v-btn>
-    <v-btn @click="clear">clear</v-btn>
+    <v-btn @click="submit">ارسال</v-btn>
+    <v-btn @click="clear">پاک کردن</v-btn>
+    
   </form>
   <Footer></Footer>
   </div>
