@@ -1,5 +1,5 @@
 <template>
     <div>
-        <p>this is a LogIn Page Change page</p>
+        <p>.این یک صفحه تغییر صفحه ورود به سیستم است</p>
     </div>
 </template>

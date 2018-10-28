@@ -2,7 +2,7 @@
     <div>
         <div class="twoSection">
             <div>
-                <p class="bitcoinText">Buy bitcoins online in islamic republic of iran</p>
+                <p class="bitcoinText">خرید بیت کوین آنلاین در جمهوری اسلامی ایران</p>
             </div>
             <div>
                 <Transaction></Transaction>
@@ -10,7 +10,7 @@
         </div>
         <div class="twoSection">
             <div>
-                <p class="bitcoinText">sell bitcoins online in islamic republic of iran</p>
+                <p class="bitcoinText">فروش بیت کوین آنلاین در جمهوری اسلامی ایران</p>
             </div>
             <div>
                 <Transaction></Transaction>
@@ -18,7 +18,7 @@
         </div>
         <div class="twoSection">
             <div>
-                <p class="bitcoinText">Buy and Sell Bitcoins in these popular cities in islamic republic of iran</p>
+                <p class="bitcoinText">خرید و فروش بیت کوین در این شهرهای محبوب در جمهوری اسلامی ایران</p>
             </div>
             <div>
                 <Transaction></Transaction>

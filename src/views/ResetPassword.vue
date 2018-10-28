@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="topDiv">
-      <p class="passwordReset">reset your password</p>
+      <p class="passwordReset">باز نشانی رمز عبور</p>
       <form>
         <v-text-field
           v-validate="'required|email'"
@@ -12,8 +12,8 @@
           data-vv-name="email"
           required>
         </v-text-field>
-        <v-btn @click="submit" class="primary">reset</v-btn>
-        <v-btn @click="clear" class="primary">clear</v-btn>
+        <v-btn @click="submit" class="primary">باز نشانی</v-btn>
+        <v-btn @click="clear" class="primary">پاک کردن</v-btn>
       </form>
     </div>
     <Footer></Footer>
