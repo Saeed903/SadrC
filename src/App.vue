@@ -33,7 +33,7 @@
             <v-list-tile slot="activator">
               <v-list-tile-content >
                 <v-list-tile-sub-title>
-                  <span class="navThem">{{ item.text }}</span>
+                  <span >{{ item.text }}</span>
                 </v-list-tile-sub-title>
               </v-list-tile-content>
 
@@ -79,11 +79,11 @@
     
     <v-toolbar fixed app>
       <v-spacer></v-spacer>
-      <v-toolbar-title style="width: 20%">
-            <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span></router-link>
+      <v-toolbar-title style="margin:200px">
+            <router-link to="/" class="sadrCryptoText" style="margin:10px">SadrCrypto<span class="littleText">.com</span></router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items style="width:50%; padding: 0 0 0 25px">
+      <v-toolbar-items>
           
             <router-link to="PostTrade" class="menu">ثبت آگهی جدید</router-link>
             <router-link to="Forums" class="menu">انجمن</router-link>
@@ -137,7 +137,7 @@
         { icon: 'touch_app', text:' سوال دارید؟', path:'/HaveQuestion',},
       ],
       signState:'ثبت نام رایگان',
-      loginState:'log in'
+      loginState:'ورود'
     }),
     props: {
       source: String
@@ -189,14 +189,14 @@
   color:rgb(153, 68, 68);
   font-size:15px;
   font-family:b titr;
-  margin-left:10px;
+ 
 }
 .menu{
   text-decoration:none;
   color:rgb(153, 68, 68);
   font-size:15px;
   font-family:b titr;
-  margin-left:5px;
+ 
 }
 .sadrCryptoText{
   color:rgb(153, 68, 68);
