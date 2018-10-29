@@ -15,6 +15,8 @@ Vue.use(Vuetify, {
   rtl: true
 });
 
+
+
 Vue.use(VeeValidate);
 Vue.config.productionTip = false
 
