@@ -1,8 +1,8 @@
 <template>
     <div>
-        <p>to protect your privacy,we provide a new bitcoin address for each transfer.this prevents someone from tracking all the payments you receive by looking at the blackchain.</p>
-        <p>note that addresses are valid only for 12 months.</p>
-        <p>old addresses</p>
+        <p>برای محافظت از حریم خصوصی شما، ما یک آدرس جدید bitcoin برای هر انتقال ارائه می دهیم. این مانع از ردیابی تمامی پرداخت هایی که شما با دیدن blackchain دریافت می کنید جلوگیری می کند.</p>
+        <p>توجه داشته باشید که آدرس فقط برای 12 ماه معتبر است.</p>
+        <p>آدرس های قدیمی</p>
         <v-data-table
         class="text-xs-left"
         :headers="headers"
@@ -16,7 +16,7 @@
             <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
             <td class="text-xs-right">{{ props.item.price }}</td>
             <td class="text-xs-right">{{ props.item.limits }}</td>
-            <td class="text-xs-right"><v-btn class="primary" @click="buy()">buy</v-btn></td>
+            <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
         </template>
         </v-data-table>
     </div>

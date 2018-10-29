@@ -1,12 +1,12 @@
 <template>
     <div>
-        <EditYourProfieCo></EditYourProfieCo>
-        <BasicUserInformation></BasicUserInformation>
-        <ChangePassword></ChangePassword>
+       <EditYourProfileCo></EditYourProfileCo>
+       <BasicUserInformation></BasicUserInformation>
+       <ChangePassword></ChangePassword>
     </div>
 </template>
 <script>
-import EditYourProfieCo from './../components/EditProfile/EditYourProfieCo.vue'
+import EditYourProfileCo from './../components/EditProfile/EditYourProfileCo.vue'
 import BasicUserInformation from './../components/EditProfile/BasicUserInformation.vue'
 import ChangePassword from './../components/EditProfile/ChangePassword.vue'
     export default{
@@ -16,9 +16,9 @@ import ChangePassword from './../components/EditProfile/ChangePassword.vue'
             }
         },
         components:{
-            EditYourProfieCo,
+            EditYourProfileCo,
             BasicUserInformation,
-            ChangePassword,
+            ChangePassword
         }
     }
 </script>

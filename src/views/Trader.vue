@@ -1,51 +1,51 @@
 <template>
     <div>
         <div>
-            <p>niasoh</p>
-            <p>information on niasoh</p>
+            <p>انگلستان</p>
+            <p>اطلاعات در مورد انگلستان</p>
             <div>
-                <p>trade volume</p>
-                <p>number of confirmed trades</p>
-                <p>feedback score</p>
-                <p>real name verification</p>
-                <p>first purchase</p>
-                <p>account created</p>
-                <p>last seen</p>
-                <p>language</p>
-                <p>email</p>
-                <p>phone number</p>
-                <p>ID,passport of Drivers</p>
-                <p>license</p>
-                <p>trust</p>
-                <p>blocks</p>
+                <p>حجم تجارت</p>
+                <p>تعداد معاملات تایید شده</p>
+                <p>نمهر بازخورد</p>
+                <p>تایید نام واقعی</p>
+                <p>خرید اول</p>
+                <p>حساب کاربری ایجاد شده</p>
+                <p>آخرین مشاهده شده</p>
+                <p>زبان</p>
+                <p>پست الکترونیک</p>
+                <p>شماره تلفن</p>
+                <p>شناسه گذرنامه رانندگان</p>
+                <p>مجوز</p>
+                <p>اعتماد</p>
+                <p>بلوک ها</p>
             </div>
             <div>
                 <p>500+BTC</p>
                 <p>1000+</p>
-                <p>...with 662 different partners</p>
+                <p>با 6652 شرک مختلف</p>
                 <p>100%</p>
-                <p>17 trusted verification,21</p>
-                <p>verification,1 rejected verifications</p>
-                <p>10 months,3weeks ago</p>
-                <p>10 months,3weeks ago</p>
-                <p>1minutes ago</p>
-                <p>english</p>
-                <p>verified 10 months,3 weeks ago</p>
-                <p>verified 13hours, 14 minuted ago</p>
-                <p>verified 10 months,3 weeks ago</p>
-                <p>trusted by 100+ people</p>
-                <p>blocked by 2+ people</p>
-                <p>pro trader</p>
+                <p>21,17 تایید اعتماد</p>
+                <p>تایید,1تاییدیه رد شد</p>
+                <p>3 هفته پیش</p>
+                <p>10ماه</p>
+                <p>1دقیقه قبل</p>
+                <p>انگلیسی</p>
+                <p>تایید شده 10 ماه، 3 هفته پیش</p>
+                <p>تایید شده 13 ساعت و 14 دقیقه قبل</p>
+                <p>تایید شده 10 ماه، 3 هفته پیش</p>
+                <p>اعتماد 100+ نفر</p>
+                <p>مسدود شده توسط 2+ نفر</p>
+                <p>طرفدار معامله گر</p>
             </div>
             <div>
-                <p>seller escrow release times</p>
-                <p>median:18 min</p>
-                <p>average:19 min</p>
+                <p>زمان انتشار سپرده  فروشنده</p>
+                <p>متوسط: 18 دقیقه</p>
+                <p>میانگین: 19 دقیقه</p>
             </div>
-            <router-link to="">report this user</router-link>
+            <router-link to="">گزارش این کاربر</router-link>
         </div>
         <div>
-            <p>buy bitcoins online from niasoh</p>
+            <p>خرید بیت کوین آنلاین در انگلستان</p>
             <v-data-table
                 class="text-xs-left"
                 :headers="headers"
@@ -63,9 +63,9 @@
             </template>
             </v-data-table>
         </div>
-        <router-link to="">show all users ads to buy bitcoins online</router-link>
+        <router-link to="">همه تبلیغات کاربران برای خرید بیت کوین را نشان می دهد</router-link>
         <div>
-            <p>buy bitcoins with cash from niasoh</p>
+            <p>خرید بیت کوین با پول نقد در انگلستان</p>
             <v-data-table
                 class="text-xs-left"
                 :headers="headers"
@@ -79,13 +79,13 @@
                 <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
                 <td class="text-xs-right">{{ props.item.price }}</td>
                 <td class="text-xs-right">{{ props.item.limits }}</td>
-                <td class="text-xs-right"><v-btn class="primary" @click="buy()">buy</v-btn></td>
+                <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
             </template>
             </v-data-table>
         </div>
-        <router-link to="">show all users ads to buy bitcoins with cash</router-link>
+        <router-link to="">همه تبلیغات کاربران برای خرید بیت کوین با پول نقد را نشان می دهد</router-link>
         <div>
-            <p>sell bitcoins online to niasoh</p>
+            <p>فروش بیت کوین آنلاین به انگلستان</p>
             <v-data-table
                 class="text-xs-left"
                 :headers="headers"
@@ -99,36 +99,36 @@
                 <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
                 <td class="text-xs-right">{{ props.item.price }}</td>
                 <td class="text-xs-right">{{ props.item.limits }}</td>
-                <td class="text-xs-right"><v-btn class="primary" @click="buy()">buy</v-btn></td>
+                <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
             </template>
             </v-data-table>
         </div>
-        <router-link to="">show all users ads to sell bitcoins online</router-link>
+        <router-link to="">همه تبلیغات کاربران برای فروش آنلاین بیت کوین را نشان می دهد</router-link>
         <div>
-            <router-link to="">show all users ads to sell bitcoins online</router-link>
+            <router-link to="">همه تبلیغات کاربران برای فروش آنلاین بیت کوین را نشان می دهد</router-link>
         </div>
         <div>
-            <p>feedback</p>
-            <p>feedback left by users with noticeable trade volume.</p>
+            <p>بازخورد</p>
+            <p>بازخورد توسط کاربران با حجم قابل توجه تجاری ترک شده است.</p>
             <div>
-                <p>march 1,2018,8:46 a.m</p>
+                <p>مارس 1،2018،8: 46 دقیقه</p>
                 <v-btn></v-btn>
             </div>
             <div>
-                <p>june 15 2018,4:37 p.m</p>
+                <p>june 15، 2018، 4: 37 p.m</p>
                 <v-btn></v-btn>
             </div>
             <div>
-                <p>feb 21,2018,11:59 a.m</p>
+                <p>فوریه 21، 2012، 11: 59، یکشنبه</p>
                 <v-btn></v-btn>
             </div>
             <div>
-                <p>july 18,2018,11:34 a.m</p>
+                <p>ژوئیه 18، 2011، 11: 34 یکشنبه</p>
                 <v-btn></v-btn>
             </div>
         </div>
         <div>
-            <p>..see<router-link to="">more feedback for niasoh</router-link></p>
+            <p>..دیدن<router-link to="">بازخورد بیشتر برای انگلستان</router-link></p>
         </div>
     </div>
 </template>

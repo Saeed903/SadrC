@@ -16,44 +16,44 @@
             <router-link class="routerCharacters" to="">راه اندازی ایمیل</router-link><br>
             <span class="textCharacters">شماره تلفن تایید شده:نه</span><br>
             <router-link class="routerCharacters" to="">تایید شماره تلفن</router-link><br>
-            <span class="textCharacters">identify verified;no</span><br>
-            <router-link class="routerCharacters" to="">verify identify</router-link>
+            <span class="textCharacters">شناسایی تایید شده:نه</span><br>
+            <router-link class="routerCharacters" to="">هویت را تایید کنید</router-link>
         </div>
 
         <div class="changePassword">
-            <span class="twoCharacters">security</span><br>
-            <span class="textCharacters">your account security level is:weak</span><br>
-            <router-link class="routerCharacters" to="">edit security options</router-link><br>
+            <span class="twoCharacters">امنیت</span><br>
+            <span class="textCharacters">سطح امنیتی حساب شما ضعیف اسا</span><br>
+            <router-link class="routerCharacters" to="">ویرایش گزینه های امنیتی</router-link><br>
         </div>
 
         <div class="changePassword">
-            <span class="twoCharacters">real name</span><br>
-            <span class="textCharacters">real name vertification :0 vertifications</span><br>
-            <router-link class="routerCharacters" to="">your real name information</router-link><br>
+            <span class="twoCharacters">اسم واقعی</span><br>
+            <span class="textCharacters">تایید اعتبار اسم:تایید نشده</span><br>
+            <router-link class="routerCharacters" to="">اطلاعات نام واقعی شما</router-link><br>
         </div>
 
         <div class="changePassword">
-            <span class="twoCharacters">apps</span><br>
-            <span class="textCharacters">Third-party apps can do trades for you on sadrCrypto with <router-link class="routerCharacters" to="">SadrCrypto API</router-link>.</span><br>
-            <span class="textCharacters">you are not using any apps right now</span><br>
-            <router-link class="routerCharacters" to="">set and change app PIN code</router-link><br>
-            <router-link class="routerCharacters" to="">manage apps</router-link>
+            <span class="twoCharacters">برنامه ها</span><br>
+            <span class="textCharacters">برنامه های شضص ثاثت میتوانند عملیاتی را برای شمادر صدر کریپتو انجامدهد</span><br>
+            <span class="textCharacters">شما در حال حاضر از هیچ برنامه ای استفاده نمی کنید</span><br>
+            <router-link class="routerCharacters" to="">تنظیم و تغییر کد پین برنامه</router-link><br>
+            <router-link class="routerCharacters" to="">مدیریت برنامه ها</router-link>
         </div>
 
         <div class="changePassword">
-            <span class="twoCharacters">premium service receips</span><br>
-            <router-link class="routerCharacters" to="">view your receips for sadrCrypto.com services here.</router-link><br>
-            <span class="textCharacters"><strong class="textCharacters">note:</strong>there are not the receips from your transactions,but the receipss from the services you have bought from sadrCrypto.com,for tax purposes.you can find your trade receips undre<router-link class="routerCharacters" to="">dashboard</router-link>,closed contacts.</span><br>
+            <span class="twoCharacters">دریافت خدمات حق بیمه</span><br>
+            <router-link class="routerCharacters" to="">دریافت های خود را برای خدمات صدرکریپتو مشاده کنید.</router-link><br>
+            <span class="textCharacters"><strong class="textCharacters">توجه:</strong>از معاملات شما دریافتی نشده است اما دریافتی از خدماتی که اط صدرکریپتو خریداری کرده اید برای اهداف مالیاتی است شما میتوانید کسب و کار خود را بذست اوردن مخاطبین گیدا کنید</span><br>
         </div>
 
         <div class="changePassword">
-            <span class="twoCharacters">personal data</span><br>
-            <router-link class="routerCharacters" to="">show personal data</router-link>
+            <span class="twoCharacters">اطلاعات شخصی</span><br>
+            <router-link class="routerCharacters" to="">نشان کردن اطلاعات شخصی</router-link>
         </div>
 
         <div class="changePassword">
-            <span class="twoCharacters">account data</span><br>
-            <router-link class="routerCharacters" to="">delete your sadrCryptos account</router-link>
+            <span class="twoCharacters">اطلاعات حساب</span><br>
+            <router-link class="routerCharacters" to="">حذف حساب کاربری در صدر کریپتو</router-link>
         </div>
 
     </div>
