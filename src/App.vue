@@ -33,7 +33,7 @@
             <v-list-tile slot="activator">
               <v-list-tile-content  style="text-align:right">
                 <v-list-tile-sub-title>
-                  <span class="navThem">{{ item.text }}</span>
+                  <span >{{ item.text }}</span>
                 </v-list-tile-sub-title>
               </v-list-tile-content>
 
@@ -79,11 +79,11 @@
     
     <v-toolbar fixed app>
       <v-spacer></v-spacer>
-      <v-toolbar-title style="width: 20%">
-            <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span></router-link>
+      <v-toolbar-title style="margin:200px">
+            <router-link to="/" class="sadrCryptoText" style="margin:10px">SadrCrypto<span class="littleText">.com</span></router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items style="width:50%; padding: 0 0 0 25px">
+      <v-toolbar-items>
           
             <router-link to="PostTrade" class="menu">post-trade</router-link>
             <router-link to="Forums" class="menu">forums</router-link>
@@ -136,8 +136,8 @@
         { icon: 'delete', text:'Zcash1', path:'/Zcash'},
         { icon: 'touch_app', text:'have a question?', path:'/HaveQuestion',},
       ],
-      signState:'SignUp Free',
-      loginState:'log in'
+      signState:'ثبت نام رایگان',
+      loginState:'ورود'
     }),
     props: {
       source: String
@@ -147,7 +147,7 @@
       ...mapActions('auth',{ authLogout: 'logout' }),
 
       logout(){
-        this.authLogout().then(()=> this.$router.push('/SadrCrypto'));
+        this.authLogout().then( ()=> this.$router.push('/SadrCrypto'));
       },
 
       sidebar(paths){
@@ -189,14 +189,14 @@
   color:rgb(153, 68, 68);
   font-size:15px;
   font-family:b titr;
-  margin-left:10px;
+ 
 }
 .menu{
   text-decoration:none;
   color:rgb(153, 68, 68);
   font-size:15px;
   font-family:b titr;
-  margin-left:5px;
+ 
 }
 .sadrCryptoText{
   color:rgb(153, 68, 68);
