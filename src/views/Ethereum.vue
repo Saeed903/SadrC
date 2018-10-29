@@ -1,7 +1,7 @@
 <template >
     <div>
         <div>
-            <p class="topTextEthereum">Ethereum</p>
+            <p class="topTextEthereum">اتریوم</p>
         </div>
         <div>
             <FormSell></FormSell>

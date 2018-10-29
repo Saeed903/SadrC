@@ -11,7 +11,11 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 
 
-Vue.use(Vuetify,VeeValidate)
+Vue.use(Vuetify, {
+  rtl: true
+});
+
+Vue.use(VeeValidate);
 Vue.config.productionTip = false
 
 new Vue({
