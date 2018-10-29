@@ -101,7 +101,6 @@
           const user = new User({
               ...this.user
           });
-          console.log(this.user);
           this.authenticate({
             strategy:'local',
             ...this.user

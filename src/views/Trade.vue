@@ -1,35 +1,35 @@
 <template>
     <div>
         <div>
-            <p>buy bitcoins with cash in british pound(GBP)</p>
+            <p>خرید بیت کوین با پول نقد در پوند انگلیس(GBP)</p>
             <p>sadrCrypto.com user Crypto.Asda wishes to sell bitcoins to you.</p>
         </div>
         <div>
-            <p>price:</p>
-            <p>user:</p>
-            <p>trade limits</p>
-            <p>location:</p>
+            <p>قیمت</p>
+            <p>کاربر</p>
+            <p>محدودیت های تجارت</p>
+            <p>محل سکونت:نه</p>
         </div>
         <div>
             <p>4960.63 GBP/BTC</p>
-            <p>floating price.the final bitcoin amount will be determinded</p>
-            <p>at the time of the trade finalization</p>
-            <router-link to="">Crypto Asda</router-link>
-            <p>(feedback score 100%).<router-link to="">see feedback</router-link></p>
+            <p>قیمت شناور مقدار نهایی بیت کوین تعیین خواهد شد</p>
+            <p>در زمان نهایی شدن تجارت</p>
+            <router-link to="">کریپتو asda</router-link>
+            <p>(feedback score 100%).<router-link to="">بازخورد را ببینید</router-link></p>
             <p>1,000-25,000 GBP</p>
             <router-link to="">london,UK</router-link>
-            <p>...or look up<router-link to="">other cities in united kingdom</router-link></p>
+            <p>یا نگاه کن<router-link to="">شهر های دیگر</router-link></p>
         </div>
         <div>
-            <p>terms of trade with Crypto.Asda</p>
+            <p>شرایط تجارت با گریپتوasda</p>
             <div>
-                <p>meeting prefences:secure public place</p>
+                <p>ترجیحات ملاقات:مکان عمومی امن</p>
                 <p>welcome to Crypto.Asda ve offer services buying and selling bitcoins and alt-coins,all alt-coins.ehtereum,litecoin,monero,dash,ripple.you name it ve can help you get some or trade what you have for cash,bitcoin or whatever other coin you want.</p>
-                <p>message me:07759534336</p>
+                <p>ارسال پیام به من:04134479676</p>
             </div>
         </div>
         <div>
-            <p>how much you wish to buy?</p>
+            <p>چقدر میخواهید خرید کنید</p>
             <div>
                 <v-text-field label="GBP"></v-text-field>
                 <v-text-field label="BTC"></v-text-field>
@@ -43,59 +43,59 @@
         </div>
         <div>
             <div>
-                <p>how to begin and contact the trader</p>
+                <p>چگونه میخواهید شروع و با معامله گر در تماس باشید</p>
             </div>
             <div>
-                <p>read the terms of the trade and make sure you can comply with them.use this form to send in a trade request with hte sum you wish to trade.after opening the trade request it is possible to discuss with the trader in sadrCrypto.com messaging system.</p>
-                <p>open trade requests and message inbox can be found under<router-link to="">dashboard</router-link>under your user profile page.you can send and receive messages with the trader there.</p>
-                <p>for more information see?<router-link to="">quick buy guide</router-link>.</p>
+                <p>شرایط تجارت را بخوانید و اطمینان حاصل کنید که می توانید آنها را رعایت کنید. این فرم را برای ارسال یک درخواست تجاری با مبلغی که مایل به تجارت است را بفشارید. پس از باز کردن درخواست تجارت، می توانید در ارتباط با فروشنده در sadrCrypto.com با ما صحبت کنید سیستم.</p>
+                <p>درخواست های تجاری باز و پیام صندوق پستی را می توان در زیر پیدا کرد<router-link to="">داشبورد</router-link>تحت صفحه پروفایل کاربر شما می توانید پیام ها را با بازرگان در آنجا ارسال و دریافت کنید.</p>
+                <p>برای اطلاعات بیشتر<router-link to="">راهنمای خرید سریع</router-link>.</p>
             </div>
         </div>
         <div>
             <div>
                 <div>
-                    <p>cancelling the trade</p>
+                    <p>لغو تجارت</p>
                 </div>
                 <div>
-                    <p>you can cancel the trade before making the payment.you find open trades under <router-link to="">dashboard</router-link>in your user profile.</p>
+                    <p>قبل از انجام پرداخت می توانید تجارت را لغو کنید. معاملات زیر را باز کنید<router-link to="">داشبورد</router-link>در مشخصات کاربری شما</p>
                 </div>
             </div>
         </div>
         <div>
             <div>
-                <p>?how to proceed</p>
-                <p>submit a trade request using the form above if you want physical cash pickup or delivery or otherwise want to contact the trader.no hardware needed on your part.just bring the cash and request the verify code from the seller.funds will be available in your sadrCrypto.com wallet.</p>
+                <p>چگونه ادامه دهم؟</p>
+                <p>درخواست تجارتی را با استفاده از فرم بالا در صورتی که می خواهید پول نقد و یا تحویل جاری و یا در غیر این صورت می خواهید برای تماس با معامله گر ارسال کنید. هیچ سخت افزار مورد نیاز در بخش خود را. فقط پول نقد و درخواست کد تأیید را از فروشنده. کیف پول sadrCrypto.com</p>
             </div>
             <div>
-                <p>Tips</p>
-                <p>read the ad,and check the terms</p>
-                <p>propose a meeting place and time when you cantact,if physical cash is traded.</p>
-                <p>watch fro fraudsters!check the profile feedback,and take extra caution with recently created accounts.</p>
-                <p>note that rounding and price fluctuation might change the final bitcoin amount.the flat amount you enter matters and bitcoin amount is calculated at the time of request</p>
+                <p>نکات</p>
+                <p>آگهی را بخوانید و شرایط را بررسی کنید</p>
+                <p>اگر پول نقد فیزیکی را در معرض فروش قرار دهید، محل و محل جلسه را پیشنهاد می دهید.</p>
+                <p>تماشای کلاهبرداران! بازخورد پروفایل را بررسی کنید و با حساب های اخیر ایجاد شده احتیاط کنید.</p>
+                <p>توجه داشته باشید که گرد و نوسان قیمت ممکن است مقدار نهایی بیت کوین را تغییر دهد. مقدار مسطح که وارد می کنید و مقدار بیت کوین در زمان درخواست محاسبه می شود</p>
             </div>
         </div>
         <div>
-            <router-link to="">show location on map</router-link>
+            <router-link to="">مکان را بر روی نقشه نشان میدهد</router-link>
         </div>
         <div>
-            <p>similar ads by<router-link to="">Crypto.Asda</router-link></p>
-            <p>Crypto.Asda has more bitcoin trade ads with different offering:</p>
+            <p>تببلیغات مشابه توسظ<router-link to="">کریپتوasda</router-link></p>
+            <p>Crypto.Asda دارای تبلیغات تجاری بیت کوین با ارائه های مختلف است:</p>
             <v-divider></v-divider>
-            <p>payment method</p>
+            <p>روش پرداخت</p>
             <v-divider></v-divider>
-            <router-link to="">wembley,UK</router-link>
+            <router-link to="">انگلستان</router-link>
             <v-divider></v-divider>
-            <router-link to="">woolwich,london,UL</router-link>
+            <router-link to="">انگلستان</router-link>
             <v-divider></v-divider>
-            <router-link to="">lewisham,london SE13 5AS,UL</router-link>
+            <router-link to="">لندن</router-link>
             <v-divider></v-divider>
-            <router-link to="">coventry,UK</router-link>
+            <router-link to="">کالنتری</router-link>
         </div>
         <div>
-            <p>listings with this ad</p>
-            <p>didnt find the deal you were looking for?these sadrCrypto.com listings have more bitcoin trade deals similar to this one:</p>
-            <router-link to="">buy bitcoins locally with cash in london</router-link>
-            <router-link to="">trade bitcoins in united kingdom</router-link>
+            <p>فهرست با این اگهی</p>
+            <p>معامله ای که جستجو می کنید را پیدا نکردید؟ این لیست های sadrCrypto.com معاملات تجاری بیت کوین مشابهی با این دارند:</p>
+            <router-link to="">خرید بیتکوین به صورت محلی با پول نقد در لندن</router-link>
+            <router-link to="">تجارت بیت کوین در انگلستان</router-link>
         </div>
     </div>
 </template>

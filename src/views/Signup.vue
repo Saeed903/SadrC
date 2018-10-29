@@ -1,14 +1,13 @@
 <template>
   <div>
-    <div class="sigupForm">
+    <div class="sigupForm" style="margin-right:25%">
       <v-form v-model="valid" 
         v-if="!loading"
         @submit.prevent="signUp"
         @keydown.prevent.enter>
-
-        <p class="registerAccount">.یک حساب جدید ثبت کنید</p>
-        <p class="start">.ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
-        <v-text-field
+        <p class="registerAccount">یک حساب جدید ثبت کنید</p>
+        <p class="start">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
+        <v-text-field 
           v-validate="'required|max:30'"
           v-model="user.username"
           :counter="30"
@@ -16,7 +15,6 @@
           label="نام کاربر"
           class="textFields"
           data-vv-name="username"
-          required
         ></v-text-field>
         <v-text-field
           v-validate="'required|email'"
@@ -163,24 +161,24 @@
 </script>
 <style>
 .registerAccount{
-  font-size:40px;
+  font-size:25px;
   font-family:b nazanin;
-  text-align:center;
   color:rgb(39, 37, 37);
   text-shadow:1px 1px 4px rgb(143, 132, 132);
-  margin-bottom:0
+  padding-right: 10%;
 }
 .start{
-  font-size:22px;
+  font-size:18px;
   font-family:b nazanin;
-  text-align:center;
   color:rgb(97, 92, 92);
   text-shadow:1px 3px 3px rgb(168, 155, 155);
   margin-bottom:40px;
+  padding-left: 100px;
 }
 .textFields{
-  width:100%;
+  width:50%;
   padding-right:10px;
+  
 }
 .logForm{
   margin-top:15px;
@@ -192,29 +190,26 @@
   margin-bottom:15px;
 }
 .verifyHuman{
-  font-size:19px;
+  font-size:15px;
   font-family:b nazanin;
-  text-align:left;
   color:rgb(97, 92, 92);
   text-shadow:1px 3px 3px rgb(168, 155, 155);
 }
 .haveAccount{
-  font-size:18px;
+  font-size:15px;
   font-family:b nazanin;
-  text-align:left;
   color:rgb(97, 92, 92);
   text-shadow:1px 3px 3px rgb(168, 155, 155);
 }
 .forgotPassword{
-  font-size:18px;
+  font-size:15px;
   font-family:b nazanin;
-  text-align:left;
   color:rgb(97, 92, 92);
   text-shadow:1px 3px 3px rgb(168, 155, 155);
 }
 .logLink{
   text-decoration:none;
-  font-size:16px;
+  font-size:15px;
   font-family:b nazanin;
   text-shadow:1px 3px 3px rgb(146, 141, 141);
   transition:text-shadow 0.1s;
@@ -225,7 +220,7 @@
 }
 .resetLink{
   text-decoration:none;
-  font-size:16px;
+  font-size:15px;
   font-family:b nazanin;
   text-shadow:1px 3px 3px rgb(146, 141, 141);
   transition:text-shadow 0.1s;

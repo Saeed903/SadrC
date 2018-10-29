@@ -1,7 +1,7 @@
 <template>
     <div>
-        <p>login histroy</p>
-        <router-link to="">back to account security</router-link>
+        <p>تاریخ ورود</p>
+        <router-link to="">بازگشت به امنیت حساب</router-link>
          <v-data-table
       class="text-xs-left"
       :headers="headers"
@@ -15,7 +15,7 @@
         <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
         <td class="text-xs-right">{{ props.item.price }}</td>
         <td class="text-xs-right">{{ props.item.limits }}</td>
-        <td class="text-xs-right"><v-btn class="primary" @click="buy()">buy</v-btn></td>
+        <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
       </template>
     </v-data-table>
     </div>

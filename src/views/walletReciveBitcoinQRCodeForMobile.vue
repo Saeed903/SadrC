@@ -1,8 +1,7 @@
 <template>
     <div>
-          <p>This is your receiving address as a QR code.It is possible to send 
-            bitcoins to you from mobile wallets by scanning this code.
-        </p>
+          <p>این آدرس دریافت شما به عنوان یک کد QR است. امکان ارسال وجود دارد
+             بک کوین به شما از کیف پول تلفن همراه با اسکن کردن این کد.</p>
         <QrcodeVue></QrcodeVue>
     </div>
 </template>

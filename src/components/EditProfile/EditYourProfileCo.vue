@@ -14,7 +14,7 @@
         </div>
 
         <div class="resendEmail">
-            <span class="resendEmailText"><span class="surprise">!</span> you have not verified your email yet.you have about 2 days,22 hours until your vertification mail expires.please check your inbox for the vertification mail soon.</span>
+            <span class="resendEmailText"><span class="surprise">!</span>شما هنوز ایمیل خود را تایید نکرده اید شما حدود 2 روز و 22 ساعت تا زمانی که ایمیل شما تایید شده است.لطفا به زودی صندوق پستی را برای تاییدذ بررسی کنید</span>
             <v-btn color="info" round to="">ارسال آدرس ایمیل تایید شده</v-btn>
         </div>
 

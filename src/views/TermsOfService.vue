@@ -1,34 +1,34 @@
 <template>
     <div>
         <div>
-            <p>this updated terms fo service agreement comes into on may 25 2018</p>
+            <p>این شرایط به روز شده از توافق نامه خدمات در تاریخ 25 می 2018 می باشد</p>
         </div>
         <div>
-            <p>terms of service</p>
+            <p>شرایط استفاده از خدمات</p>
         </div>
         <div>
-            <p>date of the latest revision.9th may 2018.</p>
+            <p>تاریخ آخرین تجدید نظر9 می 2018</p>
         </div>
         <div>
-            <p>welcome to sadrCrypto.com</p>
+            <p>به صدرکریپتو خوش امدید.</p>
         </div>
         <div>
-            sadrCrypto.com is a peer platform service that enables its users to exchange currency to and from bitcoin.users can use the platform to create advertisements where they offer to buy or sell bitcoin.other users reply to these advertisements and the two users can agree to meet to trade bitcoins for cash or complete the trade online.in order for a user to sell
-            bitcoins they ("seller")must store the bitcoins in the sadrCrypto.com web wallet belonging to their account from where the bitcoins are transferred to the user purchasing the bitcoin("buyer")after the seller confirms the buyers payment.all trades on this site are conducted between users fo the service.
-            sadrCrypto.com may help to sesovle disputes between buyers and sellers.acting as a escrow provider,sadrCrypto.com is not itself a party of any bitcoin trade or transactions conducted by its users.
+            sadrCrypto.com یک سرویس پلت فرم همکارانه است که کاربران آن را قادر می سازد تا ارز را به و از bitcoin تغییر دهند. کاربران می توانند از پلت فرم برای ایجاد تبلیغات در جایی که آنها پیشنهاد خرید یا فروش بیت کوین را دارند استفاده کنند. سایر کاربران به این تبلیغات پاسخ می دهند و دو کاربر می توانند با آن موافقت کنند برای خرید یک بیت کوین برای پول نقد و یا کسب و کار آنلاین آنلاین به منظور فروش کاربر، ملاقات کنید
+             بیت کوین آنها ("فروشنده") باید بیت کوین ها را در کیف پول وب سایت sadrCrypto.com متعلق به حساب خود ذخیره کنند؛ از آنجایی که بیت کوین ها به کاربر خرید بیت کوین ("خریدار") منتقل می شوند پس از اینکه فروشنده، این سایت بین کاربران برای سرویس انجام می شود.
+             sadrCrypto.com ممکن است به اختلافات سواوی بین خریداران و فروشندگان کمک کند. به عنوان یک ارائه دهنده سپرده، sadrCrypto.com خود بخشی از تجارت و یا تراکنش های بیت کوین که توسط کاربران آن انجام می شود نیست.
         </div>
         <div>
-            <p>these terms of service ("agreement")form a legal agreement covering the provision of services("service"or"services")provided by sadrCrypto or("sadrCrypto.com" or "sadrCryptos" or "us" or "our" or "we")to you as an individual("you" or "your").your use of the services will be governed by this agreement,along with the sadrCrypto.com privcay policy.please read through this agreement
-                and privacy policy carefully before accepting them.
+            <p>این شرایط خدمات ("توافق") یک توافقنامه حقوقی در زمینه ارائه خدمات ("سرویس" یا "خدمات") ارائه شده توسط sadrCrypto یا ("sadrCrypto.com" یا "sadrCryptos" یا "ما" یا "ما" یا "ما") به شما به عنوان یک فرد ("شما" یا "خود") استفاده شما از خدمات خواهد شد تحت این موافقتنامه، همراه با سیاست privatecay sadrCrypto.com اداره می شود. لطفا از طریق این موافقت نامه
+                 و سیاست حفظ حریم خصوصی با دقت قبل از پذیرش آنها.
             </p>
         </div>
         <div>
-            <p>acceptance and change of terms</p>
+            <p>پذیرش و تغییر اطلاعات</p>
         </div>
         <v-divider></v-divider>
         <div>
-            <v-btn to="">cancel</v-btn>
-            <v-btn to="">I agree</v-btn>
+            <v-btn to="">لغو</v-btn>
+            <v-btn to="">موافقم</v-btn>
         </div>
     </div>
 </template>
