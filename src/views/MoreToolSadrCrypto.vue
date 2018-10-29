@@ -1,5 +1,5 @@
 <template>
     <div>
-        <p>this is a More tools for offchain transactions page</p>
+        <p>.این یک ابزار بیشتر برای صفحه معاملات خارج از چارچوب است</p>
     </div>
 </template>

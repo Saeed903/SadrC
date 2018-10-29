@@ -82,6 +82,7 @@
       <v-toolbar-title style="width: 20%">
             <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span></router-link>
       </v-toolbar-title>
+      <v-spacer></v-spacer>
       <v-toolbar-items style="width:50%; padding: 0 0 0 25px">
           
             <router-link to="PostTrade" class="menu">post-trade</router-link>
@@ -92,6 +93,7 @@
         <router-link  to="EditYourProfile" class="menu">edit-profile</router-link>
         <router-link  to="Wallet" class="menu">wallet</router-link>
         <router-link  to="DashBoard" class="menu">DashBoard</router-link>
+        <v-btn flat @click="logout">LogOut</v-btn>
       </v-toolbar-items> 
       <v-toolbar-items v-if="!user"> 
         <router-link to="Signup" class="freeRegister">{{signState}}</router-link>
@@ -121,7 +123,7 @@
 </template>
 <script>
   
-  import { mapState } from 'vuex';
+  import { mapState, mapActions } from 'vuex';
 
   export default {
   data: () => ({
@@ -142,7 +144,12 @@
     },
     methods:{
       
-      
+      ...mapActions('auth',{ authLogout: 'logout' }),
+
+      logout(){
+        this.authLogout().then(()=> this.$router.push('/SadrCrypto'));
+      },
+
       sidebar(paths){
         this.$router.push(paths);
         

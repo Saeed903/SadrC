@@ -1,31 +1,31 @@
 <template>
     <div>
         <div>
-            <p class="createBitcoin">create a bitcoin trade advertisement</p>
+            <p class="createBitcoin">.تبلیغات تجاری بیت کوین را ایجاد کنید</p>
         </div>
         <div class="advertisement">
-            <p class="beforeCreate">please <router-link to="/Login" class="topLogText">logIn</router-link> or <router-link to="/signUp" class="topLogText0">signUp</router-link> before creating an advertisement</p>
+            <p class="beforeCreate">لطفا <router-link to="/Login" class="topLogText">ورود</router-link> یا <router-link to="/signUp" class="topLogText0">ثبت نام</router-link> قبل از ایجاد تبلیغات</p>
         </div>
         <div>
-            <p class="rules">Advertisement rules and requirements</p>
+            <p class="rules">قوانین و مقررات تبلیغاتی</p>
             <ul>
-                <li>For your ads to display you need to have Bitcoins in your LocalBitcoins wallet. You need 0.04 BTC or more for advertisements with online payment methods and 0.04 BTC or more for local advertisements (Cash).</li>
-                <li>Certain payment methods require you to be ID verified before your ads are visible.</li>
-                <li>Each completed trade costs advertisers 1% of the total trade amount.<span><router-link to="" class="fees"> See all fees on our fees page.</router-link></span></li>
-                <li>Once a trade is opened the price is final, except when there is a clear mistake in the pricing.</li>
-                <li>You are not allowed to buy or sell Bitcoin on behalf of someone else (brokering).</li>
-                <li>You may only use payment accounts that are registered in your own name (no third party payments!).</li>
-                <li>You must provide your payement details in the advertisement or in the trade chat.</li>
-                <li>All communication must happen on LocalBitcoins.com.</li>
-                <li>Payment methods marked <span class="span">High Risk</span> have a <span class="span">significant risk of fraud</span>. Be careful and always ID verify your trading partners when using high risk payment methods.</li>
+                <li>.برای نمایش تبلیغات شما باید بیت کوین را در کیف پول صدر کریپتو خود داشته باشید. شما برای تبلیغات با روش های پرداخت آنلاین و 0.04 بیت کوین یا بیشتر برای تبلیغات محلی (نقد) نیاز به 0.04 بیت کوین یا بیشتر دارید</li>
+                <li>.برخی از روش های پرداخت مستلزم آن هستند که قبل از اینکه آگهی های شما قابل مشاهده باشند، باید شناسه،شناسایی شوند</li>
+                <li>.هر تبلیغ کننده هزینه های تراکنش تکمیل شده 1٪ از کل مبلغ تجاری است<span><router-link to="" class="fees">.تمام هزینه ها را در صفحه هزینه های ما مشاهده کنید</router-link></span></li>
+                <li>.هنگامی که یک بازرگانی باز شود، قیمت نهایی است، مگر اینکه یک اشتباه روشن در قیمت گذاری وجود داشته باشد</li>
+                <li>.شما مجاز به خرید یا فروش بیت کوین از طرف شخص دیگری (واسطه) نیستید.</li>
+                <li>.شما فقط می توانید از حساب های پرداخت شده که به نام خود ثبت شده (بدون پرداخت شخص ثالث!) استفاده کنید</li>
+                <li>.شما باید جزئیات پرداخت خود را در تبلیغات و یا در چت تجاری قرار دهید</li>
+                <li>.همه ارتباطات باید در صدر کریپتواتفاق بیافتد</li>
+                <li>.روش های پرداخت مشخص شده است <span class="span">ریسک بالا</span> داشتن یک <span class="span">خطر عمده تقلب</span>.هنگام استفاده از روشهای پرداخت با ریسک بالا، مراقب باشید و همیشه آی دی را تأیید کنید</li>
             </ul>
         </div>
         <div>
-            <p class="tradeType">trade type</p>
+            <p class="tradeType">نوع تجارت</p>
         </div>
         <v-divider></v-divider>
         <div>
-                <p class="wantText">i want to...</p>
+                <p class="wantText">...من می خواهم</p>
                 <v-radio-group v-model="radioGroup">
                     <v-radio
                         v-for="tradeType in tradeTypes"
@@ -34,75 +34,75 @@
                         :value="tradeType"
                     ></v-radio>
                 </v-radio-group>
-                <p class="kindTrade">What kind of trade advertisement do you wish to create?<br> If you wish to sell bitcoins make sure<br> you have bitcoins in your LocalBitcoins wallet.</p>
+                <p class="kindTrade">چه نوع تبلیغ تجاری شما می خواهید ایجاد کنید؟<br>اگر بخواهید بیت کوین ها را بفروشید مطمئن شوید<br> شما بیت کوین ها را در کیف پول صدر کریپتو خود دارید</p>
         </div>
         <v-divider></v-divider>
         <div>
-            <v-text-field label="enter your location"></v-text-field>
+            <v-text-field label="محل خود را وارد کنید"></v-text-field>
         </div>
         <div>
-            <p>more information</p>
+            
             <v-divider></v-divider>
         </div>
         <div>
-            <p>currency</p>
-            <v-text-field label="enter currency"></v-text-field>
+            
+            <v-text-field label="پول را وارد کنید"></v-text-field>
         </div>
         <v-divider></v-divider>
         <div>
-            <p>margin</p>
-            <v-text-field label="enter margin"></v-text-field>
-            <p>Margin you want over the bitcoin market price. Use a negative value for buying or selling under the market price to attract more contacts. For more complex pricing edit the price equation directly.</p>
+            
+            <v-text-field label="حاشیه را وارد کنید"></v-text-field>
+            <p>.لبه ها که بیش از قیمت بازار بیتکوین می خواهید. برای جذب مخاطبین بیشتر از ارزش منفی برای خرید یا فروش زیر قیمت بازار استفاده کنید. برای قیمت های پیچیده تر ویرایش معادله قیمت به طور مستقیم</p>
         </div>
         <div>
             <p></p>
-            <v-text-field label="price equation"></v-text-field>
-            <p>trade price with current market value 6496.30 USD/BTC</p>
-            <p>How the trade price is determined from the hourly market price. For more information about equations how to determine your trading price see  pricing FAQ. Please note that the advertiser is always responsible for all payment processing fees.</p>
+            <v-text-field label="قیمت معامله"></v-text-field>
+            <p>قیمت تجاری با ارزش بازار فعلی 6496.30 دلار / بیت کوین</p>
+            <p>.چگونه قیمت معاملات از قیمت بازار ساعتی تعیین می شود. برای اطلاعات بیشتر در رابطه با معادلات نحوه تعریف قیمت معاملاتی خود، به سؤالات قیمت گذاری قیمت مراجعه کنید. لطفا توجه داشته باشید که همیشه تبلیغ کننده مسئول پرداخت هزینه پردازش پرداخت است</p>
         </div>
         <v-divider></v-divider>
         <div>
-            <p>max.transaction limit</p>
-            <v-text-field label="maximum transaction limit"></v-text-field>
-            <p>Optional. Maximum transaction limit in one trade. For online sells, your LocalBitcoins.com wallet balance may limit the maximum fundable trade also.</p>
+            <p>حد مجاز حداکثر معاملات</p>
+            <v-text-field label="حداکثر حد معامله"></v-text-field>
+            <p>.اختیاری. حداکثر حد معامله در یک تجارت. برای فروش آنلاین، تعادل کیفی صدر کریپتو شما می تواند حداکثر تجارت قابل اعتماد را نیز محدود کند</p>
         </div>
         <v-divider></v-divider>        
         <div>
-            <p>restrict amounts to</p>
-            <v-text-field label="restrict amount"></v-text-field>
-            <p>Optional. Restrict trading amounts to specific comma-separated integers, for example 20,50,100. In fiat currency (USD/EUR/etc). Handy for coupons, gift cards, etc.</p>
+            <p>محدود کردن مقدار به</p>
+            <v-text-field label="مقدار را محدود کن"></v-text-field>
+            <p>.اختیاری. مقدار معامله را محدود به عدد صحیح جدا از عدد کاما، به عنوان مثال 20،50،100. در ارز فیات (دلار / یورو / و غیره). دستی برای کوین، کارت هدیه و غیره</p>
         </div>
         <v-divider></v-divider>
         <div>
-            <p>liquidity options</p>
+            <p>گزینه های نقدینگی</p>
             <v-divider></v-divider>
         </div>
         <div>
-        <p>Track liquidity</p>
+        <p>پیگیری نقدینگی</p>
         <v-checkbox></v-checkbox>
-        <p>This option limits the liquidity of this advertisement to the max. transaction limit. Buyers cannot open and complete trades for more than this amount.</p>
-        <p>Example: With track liquidity turned on and max. transaction limit set to 100 USD when a buyer opens a trade for 20 USD the max. transaction limit is automatically decreased to 80 USD. It returns to 100 USD if the buyer cancels the trade, and stays at 80 USD if the trade is completed.</p>
+        <p>.این گزینه نقدینگی این تبلیغ را به حداکثر محدود می کند. محدودیت معامله خریداران می توانند معاملات را بیش از این مقدار باز نکنند</p>
+        <p>.یک خریدار باز می شود تجارت برای 20 دلار حداکثر. معامله محدود به طور خودکار به 80 دلار کاهش یافته است. اگر خریدار تجارت را لغو کند، به قیمت 100 دلار بازگشت می کند و در صورتی که تجارت به پایان برسد، به 80 دلار می رسد</p>
         </div>
         <div>
-            <p>security options</p>
+            <p>گزینه های امنیتی</p>
             <v-divider></v-divider>
         </div>
         <div>
-            <p>identified people only</p>
+            <p>فقط شناسایی افراد</p>
             <v-checkbox></v-checkbox>
-            <p>To contact your advertisement, users need to verify their identity by sending IDs, driver's licence or passport.</p>
+            <p>.برای تماس با تبلیغات خود، کاربران باید هویت خود را با ارسال شناسه، گواهینامه رانندگی یا گذرنامه تأیید کنند</p>
         </div>
         <v-divider></v-divider>
         <div>
-            <p>sms vertification required</p>
+            <p>.تأیید اس ام اس مورد نیاز است</p>
             <v-checkbox></v-checkbox>
-            <p>Only contacts with a verified mobile phone number can contact you from the advertisement</p>
+            <p>.فقط تماس با یک شماره تلفن همراه تأیید شده می تواند از طریق تبلیغ شما با شما تماس بگیرد</p>
         </div>
         <v-divider></v-divider>
         <div>
-            <p>trusted people only</p>
+            <p>فقط اعتماد مردم</p>
             <v-checkbox></v-checkbox>
-            <p>Restrict your advertisement to be shown only to users that you have marked as  Trusted.<router-link to="">Learn how to mark users as trusted</router-link>.</p>
+            <p>.تبلیغات خود را محدود کنید تا تنها به کاربران نشان داده شود که شما به عنوان اعتماد علامتگذاری کرده اید<router-link to="">Learn how to mark users as trusted</router-link>.</p>
         </div>
         <div>
             <Footer/>
@@ -117,10 +117,10 @@ import Footer from './../components/Footer.vue'
                 checkbox:true,
                 radioGroup:1,
                 tradeTypes:[
-                    "Sell Your bitcoin locally",
-                    "Buy  bitcoin locally",
-                    "Sell Your bitcoin online",
-                    "Buy bitcoin online"
+                    "فروش بیت کوین خود در صدر کریپتو",
+                    "خرید بیت کوین در صدر کریپتو",
+                    "فروش بیت کوین آنلاین شما",
+                    "خرید بیت کوین آنلاین"
                 ]
             }
         },

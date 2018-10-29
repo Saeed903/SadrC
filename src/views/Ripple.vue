@@ -1,7 +1,7 @@
 <template >
     <div>
         <div>
-            <p class="topTextRipple">Ripple</p>
+            <p class="topTextRipple">ریپل</p>
         </div>
         <div>
             <FormSell></FormSell>

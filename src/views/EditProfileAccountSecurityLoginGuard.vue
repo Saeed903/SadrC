@@ -1,11 +1,11 @@
 <template>
     <div>
-        <p>login guard</p>
-        <router-link to="">back to account security</router-link>
-        <p>security options to prevent unauthorized logins</p>
+        <p>گارد ورودی</p>
+        <router-link to="">بازگشت به امنیت حساب</router-link>
+        <p>.گزینه های امنیتی برای جلوگیری از ورود سیستم های غیر مجازاست</p>
         <v-divider></v-divider>
-        <v-checkbox>confirm logins from unknown web browsers</v-checkbox>
-        <v-btn @click="submit" class="primary">change settings</v-btn>
-        <p>any change to thsese settings requires a confirmation by email</p>
+        <v-checkbox>تایید ورود به سیستم از مرورگرهای ناشناخته وب</v-checkbox>
+        <v-btn @click="submit" class="primary">تغییر تنظیمات</v-btn>
+        <p>.هر گونه تغییر به این تنظیمات نیاز به تایید ایمیل دارد</p>
     </div>
 </template>

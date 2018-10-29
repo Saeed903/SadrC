@@ -1,19 +1,19 @@
 <template>
     <div>
         <div>
-            <p>change email address</p>
-            <p>after changing your email address.you will have to verify it again.if you dont immediately receive a verification mail after the change,try the following:</p>
+            <p>تغییر آدرس ایمیل</p>
+            <p>:پس از تغییر آدرس ایمیل شما باید دوباره آن را تأیید کنید. اگر پس از تغییر فورا ایمیل تأیید را دریافت نکنید، موارد زیر را امتحان کنید</p>
             <ul>
-                <li>wait for a bit more</li>
-                <li>check your spam folder</li>
-                <li>use another email address</li>
+                <li>.کمی بیشتر صبر کنید</li>
+                <li>.پوشه اسپم خود را بررسی کنید</li>
+                <li>.از آدرس ایمیل دیگری استفاده کنید</li>
             </ul>
-            <p>if you dont verify your email within 24 hours,we will send another verification mail.if no verification is made within 72 hours,the unverified email address is removed from your account</p>
-            <p>you can verify another email address after this.</p>
-            <p>because account recovery is linked to your verified email address,you will need to confirm this action with your credentials</p>
+            <p>.اگر شماایمیل خودتان را ظرف 24 ساعت تأیید نکنید، ما یک ایمیل تأیید دیگر خواهیم فرستاد. اگر هیچ تأییدیه ظرف مدت 72 ساعت ساخته نشود، آدرس ایمیل تأیید نشده از حساب شما حذف میشود</p>
+            <p>.بعد از این می توانید آدرس ایمیل دیگری را تایید کنید</p>
+            <p>.زیرا بازیابی حساب به آدرس ایمیل تأیید شده شما مرتبط است، شما باید این اقدام را با اعتبار خود تأیید کنید</p>
         </div>
         <dir>
-            <p>please correct the highligted errors</p>
+            <p>.لطفا خطاهای برجسته را اصلاح کنید</p>
         </dir>
         <div>
             <v-text-field
@@ -21,29 +21,29 @@
             v-model="name"
             :counter="30"
             :error-messages="errors.collect('name')"
-            label="your password"
+            label="رمز عبور شما"
             data-vv-name="name"
             class="textField"
             required
             >
             </v-text-field>
-            <p>please confirm changing the email address with your password</p>
+            <p>.لطفا تغییر آدرس ایمیل با رمز عبور خود را تایید کنید</p>
             <v-text-field
             v-validate="'required|max:20'"
             v-model="password"
             counter="20"
             :error-messages="errors.collect('password')"
             :type="showPassword ? 'text' : 'password'"
-            label="new email address"
+            label="آدرس ایمیل جدید"
             class="textField"
             data-vv-name="password"
             required
             >
             </v-text-field>
-            <p>please verify you are a human</p>
-            <p>im not a robot place</p>
-            <v-btn @click="submit" class="primary">change email address</v-btn>
-            <v-btn @click="clear" class="primary">clear</v-btn>
+            <p>.لطفا تأیید کنید که شما انسان هستید</p>
+            <p>من یک ربات نیستم</p>
+            <v-btn @click="submit" class="primary">تغییر آدرس ایمیل</v-btn>
+            <v-btn @click="clear" class="primary">پاک کردن</v-btn>
         </div>
     </div>
 </template>

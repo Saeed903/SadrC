@@ -1,21 +1,23 @@
 <template>
     <div>
         <div>
-            <p>sadrCrypto fees</p>
-            <p>bitocin trading</p>
-            <p>registering,buying, and selling bitcoin is completely free.</p>
-            <p>sadrCrypto users whi create advertisements are charged a 1% fee for every completely trade.</p>
+            <p>هزینه صدر کریپتو</p>
+            <p>تجارت بیت کوین</p>
+            <p>.ثبت، خرید و فروش بیت کوین کاملا رایگان است</p>
+            <p>.در صدر کریپتو کاربرانی که تبلیغاتی را ایجاد می کنند هزینه هر معامله به طور کامل 1٪ می باشد</p>
         </div>
         <div>
-            <p>bitcoin transaction fees</p>
-            <p>transactions to wallets of other sadrCrypto users are free.</p>
-            <p>transaction to other bitcoin walletsa are subjec to bitcoin network transaction fee.the current fee is visible on the <router-link to="">wallet page under the heading bitcoin network fees.the size of the fee changes depending on the current usage rate of the bitcoin blackchain.we automatically adjust this fee based on hte current network congestion to make sure your transaction are confirmed as  quickly as possible.the transaction fee is paid from your Sadrcrypto wallet when you send a transaction.</router-link></p>
-            <p>when sending to sadrCrypto wallet, a bitcoin fee is deducted from the deposit.the fee varies on how congested the bitcoin network is.if your amount is smallet than the bitcoin deposit fee,the deposit will not be porcesed.the current sending fee is visible on the <router-link to="">wallet page undr the heading incoming transactions and fees</router-link></p>
+            <p>هزینه های تراکنش بیت کوین</p>
+            <p>.تراکنش ها به کیف پول دیگر کاربران در صدر کرپیتو رایگان است</p>
+            <p>.معامله به دیگر کیف پول های بیت کوین به هزینه های تراکنش شبکه بیت کوین پرداخت می شود. هزینه کنونی در سایت قابل مشاهده است
+             <router-link to="">.صفحه کیف پول تحت عنوان هزینه بیت کوین شبکه هزینه می شود. اندازه هزینه ها بسته به میزان استفاده فعلی بیت بلاک چین بیت کوین به طور خودکار این هزینه را براساس تراکم شبکه فعلی اچ تی ی به منظور اطمینان از اینکه معامله شما تایید می شود در اسرع وقت. وقتی یک معامله را ارسال می کنید، هزینه معامله از کیف پول صدر کریپتو شما پرداخت می شود.</router-link></p>
+            <p>در هنگام ارسال به کیف پول صدر کریپتو،هزینه بیت کوین از سپرده کسر می شود. هزینه آن متفاوت است از اینکه چگونه شبکه بیت کوین بارگیری شده است.اگر مقدار شما کوچکتر از هزینه سپرده بیت کوین باشد، سپرده متوقف نخواهد شد. هزینه ارسال فعلی قابل مشاهده است در
+             <router-link to="">صفحه کیف پول تحت عنوان معاملات و هزینه های ورودی</router-link></p>
         </div>
         <div>
-            <p>other fees</p>
-            <p>when using our merchant invoicinig service a fee of 0.5% is deducted from the paid invoice amount of each invoice.also bitcoin network deposit fee is deducted form the invoice amount,if the invoice is paid with an external transaction.</p>
-            <p>custom work, e.g.research of possible external problems,is 200 euro/hour paid in bitcoin at the current market rate,minimum billable amount is 200 EUR.</p>
+            <p>هزینه های دیگر</p>
+            <p>در هنگام استفاده از خدمات صورتحساب ها ما تجارتی هزینه 0.5٪ کسر از مبلغ صورت حساب صورتحساب هر فاکتور است.همچنین هزینه سپرده شبکه بیت کوین از مبلغ صورت حساب محاسبه می شود، اگر صورتحساب با یک معامله خارجی پرداخت شود.</p>
+            <p>.کار سفارشی، به عنوان مثال تحقیق در مورد مشکلات احتمالی خارجی، 200 یورو در ساعت است که در بیت کوین در نرخ بازار فعلی پرداخت می شود، حداقل مبلغ قابل پرداخت 200 یورو است</p>
         </div>
         <Footer></Footer>
     </div>
