@@ -16,10 +16,6 @@ Vue.use(Vuetify, {
 });
 
 Vue.use(VeeValidate);
-<<<<<<< HEAD
-=======
-
->>>>>>> fbabba9d0bd55a8587574ac358ca471a344cd082
 Vue.config.productionTip = false
 
 new Vue({

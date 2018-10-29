@@ -136,13 +136,8 @@
         { icon: 'delete', text:'Zcash1', path:'/Zcash'},
         { icon: 'touch_app', text:'have a question?', path:'/HaveQuestion',},
       ],
-<<<<<<< HEAD
       signState:'ثبت نام رایگان',
       loginState:'ورود'
-=======
-      signState:'SignUp Free',
-      loginState:'log in'
->>>>>>> 187bc08742d6943d57091a42361930541a9f5191
     }),
     props: {
       source: String
