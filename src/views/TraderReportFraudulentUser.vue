@@ -1,20 +1,20 @@
 <template>
     <div>
         <div>
-            <p>support:i want to report a fraudulent user</p>
+            <p>پشتیبانی: من میخواهم یک کاربر جعلی را گزارش دهم</p>
         </div>
         <div>
-            <p>dears users,due to unusual amount fo tickets our current time is 2 days.we kindly ask you to not to open multiple tickets regarding the same issue.as it will only prolong our responsive time.thank you for understanding!</p>
+            <p>کاربران عزیز، با توجه به مقدار غیر معمول برای بلیط فعلی ما 2 روز است. با مهربانی از شما بخواهید که چندین بلیط را با توجه به همین موضوع باز نکنید. این فقط زمان پاسخ ما را طولانی تر خواهد کرد. برای درک بهتر است.</p>
         </div>
         <div>
-            <p>return to previous</p>
+            <p>بازگشت به قبلی</p>
         </div>
         <v-divider></v-divider>
         <div>
-            <p>please include with your report:</p>
+            <p>لطفا با گزارش خود وارد شوید:</p>
             <ul>
-                <li>the sadrCrypto username of the user you are reporting</li>
-                <li>explain in detail your reason for the report</li>
+                <li>نام کاربری صدرکریپتو از کاربری که گزارش می دهید</li>
+                <li>توضیح جزئیات دلایل خود را برای گزارش</li>
             </ul>
         </div>
         <div>
@@ -22,7 +22,7 @@
                 label="username"
             >
             </v-text-field>
-            <p>please enter the username of the user you want to report</p>
+            <p>لطفا نام کاربری کاربر که می خواهید گزارش دهید را وارد کنید</p>
         </div>
         <div>
             <v-text-field
@@ -31,10 +31,10 @@
             </v-text-field>
         </div>
         <div>
-            <p>attachment</p>
-            <v-btn>choose files</v-btn><p>no file chosen</p>
-            <p>upload a related image e.g a screenshot.to select multiple files,hold down the CTRL or SHIFT key while selecting.only PNG and JPEG images are accepted</p>
-            <v-btn @click="submit" class="primary">send request</v-btn>
+            <p>ضمیمه</p>
+            <v-btn>انتخاب قایل</v-btn><p>هیچ فایلی انتحاب نشده است</p>
+            <p>یک تصویر مربوطه را برای مثال یک صفحه نمایش آپلود کنید. برای انتخاب چندین فایل، کلید CTRL یا SHIFT را در حین انتخاب انتخاب کنید. فقط تصاویر PNG و JPEG پذیرفته می شوند.</p>
+            <v-btn @click="submit" class="primary">ارسال درخواست</v-btn>
         </div>
     </div>
 </template>

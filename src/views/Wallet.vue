@@ -1,8 +1,8 @@
 <template>
     <div>
-        <v-btn to="/SendWallet">sent bitcoin</v-btn>
-        <v-btn to="/">receive bitcoin</v-btn>
-        <v-btn>transactions</v-btn>
+        <v-btn to="/SendWallet">ارسال بیت کوین</v-btn>
+        <v-btn to="/">دریافت بیت کوین</v-btn>
+        <v-btn>معاملات</v-btn>
         <Footer class="fari"></Footer>
     </div>
 </template>
@@ -14,8 +14,3 @@
         }
     }
 </script>
-<style>
-.fari{
-    margin-top:200px;
-}
-</style>
