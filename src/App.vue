@@ -147,7 +147,7 @@
       ...mapActions('auth',{ authLogout: 'logout' }),
 
       logout(){
-        this.authLogout().then( ()=> this.$router.push('/SadrCrypto'));
+        this.authLogout().then(()=> this.$router.push('/SadrCrypto'));
       },
 
       sidebar(paths){
