@@ -5,7 +5,7 @@
         </div>
         <div class="wall">
             <p class="boldText">خرید و فروش بیت کوین در نزدیکی شما</p>
-            <p class="safeText">فوری. امن. خصوصی.</p>
+            <p class="safeText">.فوری. امن. خصوصی</p>
             <p class="introduceText">
                 <span class="orangeText">بیت کوین تجاری</span>
                 <router-link to="/BitcoinCity" class="hoverDecoration">در 16370 شهر</router-link>
