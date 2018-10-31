@@ -93,13 +93,7 @@
         <router-link  to="DashBoard" class="menu">داشبورد</router-link>
         <div class="text-xs-center">
           <v-menu offset-y>
-            <v-btn
-            slot="activator"
-            color="primary"
-            dark
-            >
-            Dropdown
-            </v-btn>
+            <v-icon>dashboard</v-icon>
             <v-list>
             <v-list-tile
             v-for="(item, index) in hello"
