@@ -91,7 +91,26 @@
         <router-link  to="EditYourProfile" class="menu">ویرایش پروفایل</router-link>
         <router-link  to="Wallet" class="menu">کیف پول</router-link>
         <router-link  to="DashBoard" class="menu">داشبورد</router-link>
-       
+        <div class="text-xs-center">
+          <v-menu offset-y>
+            <v-btn
+            slot="activator"
+            color="primary"
+            dark
+            >
+            Dropdown
+            </v-btn>
+            <v-list>
+            <v-list-tile
+            v-for="(item, index) in hello"
+            :key="index"
+            @click=""
+            >
+            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            </v-list-tile>
+            </v-list>
+          </v-menu>
+        </div>
         <v-btn flat @click="logout">خروج</v-btn>
       </v-toolbar-items> 
       <v-toolbar-items v-if="!user"> 
@@ -139,7 +158,12 @@
         { title: 'Click Me' },
         { title: 'Click Me 2' }
       ],
-      
+      hello: [
+        { title: 'Click Me' },
+        { title: 'Click Me' },
+        { title: 'Click Me' },
+        { title: 'Click Me 2' }
+      ],
       signState:'ثبت نام رایگان',
       loginState:'ورود'
     }),
