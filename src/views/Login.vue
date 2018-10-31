@@ -121,7 +121,7 @@
   }
 
 </script>
-<style>
+<style scoped>
 .logText{
   font-size:40px;
   font-family:b nazanin;

@@ -147,7 +147,7 @@
       ...mapActions('auth',{ authLogout: 'logout' }),
 
       logout(){
-        this.authLogout().than(()=> this.$router.push('/SadrCrypto'));
+        this.authLogout().then(()=> this.$router.push('/SadrCrypto'));
       },
 
       sidebar(paths){
@@ -163,7 +163,7 @@
 }
 </script>
 
-<style>
+<style scoped>
 #keep main .container {
     height: 660px;
   }

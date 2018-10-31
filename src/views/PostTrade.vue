@@ -129,7 +129,7 @@ import Footer from './../components/Footer.vue'
         }
     }
 </script>
-<style>
+<style scoped>
 .createBitcoin{
     font-size:30px;
     font-family:bold;

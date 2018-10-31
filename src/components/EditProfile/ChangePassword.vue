@@ -61,13 +61,8 @@
 <script>
     
 </script>
-<style>
 
-
-
-
-
-
+<style scoped>
 
 .twoCharacters{
     font-size:21px;

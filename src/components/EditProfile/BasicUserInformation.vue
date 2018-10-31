@@ -102,7 +102,7 @@
 <script>
     
 </script>
-<style>
+<style scoped>
 .backInfoTop{
     margin-top:22px;
 }

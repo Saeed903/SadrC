@@ -17,7 +17,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
 .receiveBitcoins{
     font-size:30px;
     font-family:b nazanin;

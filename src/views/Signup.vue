@@ -159,7 +159,7 @@
     }
   }
 </script>
-<style>
+<style scoped>
 .registerAccount{
   font-size:25px;
   font-family:b nazanin;

@@ -91,7 +91,7 @@
     })
   }
 </script>
-<style>
+<style scoped>
 .footer{
   text-align:center;
 }

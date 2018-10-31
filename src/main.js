@@ -16,6 +16,7 @@ Vue.use(Vuetify, {
 });
 
 Vue.use(VeeValidate);
+
 Vue.config.productionTip = false
 
 new Vue({

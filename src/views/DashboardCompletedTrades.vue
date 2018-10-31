@@ -126,7 +126,7 @@ export default{
 };
   
 </script>
-<style>
+<style scoped>
 .dataTable{
     margin-top:100px;
     box-shadow:1px 3px 3px rgb(190, 176, 176);
