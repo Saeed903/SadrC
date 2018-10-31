@@ -48,9 +48,10 @@
           required
         ></v-text-field>
         <vue-recaptcha
-            @verify="onVerify"
-            @expired="onExpired"
-            :sitekey="sitekey">
+            theme = "dark"
+            @verify = "onVerify"
+            @expired = "onExpired"
+            :sitekey = "sitekey">
         </vue-recaptcha>
        
         <v-btn type="submit" class="primary" :disabled="!valid" >ارسال</v-btn>
