@@ -25,6 +25,17 @@ export default new Vuex.Store({
         password : '',
       }
     }),
+    service('orders',{
+      instanceDefaults:{
+        orderId : '',
+        advertiseId : '',
+        amount : '',
+        buyerUserId : '',
+        createDate : '',
+        orderTitle : '',
+        orderStateId : '',
+      }
+    }),
     auth({ userService: 'users', }),
   ],
 })
