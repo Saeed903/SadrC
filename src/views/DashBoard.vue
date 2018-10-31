@@ -1,17 +1,19 @@
 <template>
     <div>
-        <p class="dashboardTop">داشبورد</p>
-        <p class="explainDashboard">در این صفحه شما میتوانید تبلیغات و معاملات خود را مشاهده و مدیریت کنید.</p>
-        <v-card height="200px" flat>
+        <div class="topDiv">
+            <p class="dashboardTop">داشبورد</p>
+            <p class="explainDashboard">در این صفحه شما میتوانید تبلیغات و معاملات خود را مشاهده و مدیریت کنید.</p>
+        </div>
+        <v-card flat>
             
             <v-bottom-nav
                 :active.sync="bottomNav"
+                :color="color"
                 :value="true"
                 absolute
-                color="transparent"
+                shift
                 >
                 <v-btn
-                color="teal"
                 flat
                 value="recent"
                 >
@@ -20,7 +22,6 @@
                 </v-btn>
 
                 <v-btn
-                color="teal"
                 flat
                 value="favorites"
                 >
@@ -29,7 +30,6 @@
                 </v-btn>
 
                 <v-btn
-                color="teal"
                 flat
                 value="nearby"
                 >
@@ -37,10 +37,10 @@
                 <v-icon>place</v-icon>
                 </v-btn>
             </v-bottom-nav>
-            <div class="headline text-xs-center pa-5">
+        </v-card>
+        <div class="headline text-xs-center pa-5">
                 <p>{{bottomNav}}</p>
             </div>
-        </v-card>
     </div>
 </template>
 <script>
@@ -48,6 +48,16 @@
     data () {
       return {
         bottomNav: 'recent'
+      }
+    },
+    computed: {
+      color () {
+        switch (this.bottomNav) {
+          case 0: return 'blue-grey'
+          case 1: return 'teal'
+          case 2: return 'brown'
+          case 3: return 'indigo'
+        }
       }
     }
   }
@@ -62,7 +72,7 @@
 }
 .explainDashboard{
     text-align:right;
-    font-size:25px;
+    font-size:23px;
     font-family:b nazanin;
     color:black;
 }
@@ -80,5 +90,8 @@
     background-color:rgb(30, 132, 228);
     color:white;
     border-radius:4px;
+}
+.topDiv{
+    margin-bottom:80px;
 }
 </style>
