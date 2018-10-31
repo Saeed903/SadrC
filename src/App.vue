@@ -81,6 +81,7 @@
     <v-toolbar fixed app >
       <v-toolbar-title>
             <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span></router-link>
+            <router-link to="BuyButtonLoggedButNotverifiyEmail" >BuyButtonLoggedButNotverifiyEmail</router-link>
       </v-toolbar-title>
       <v-toolbar-items >
             <router-link to="PostTrade" class="menu">ثبت آگهی</router-link>
