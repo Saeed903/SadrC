@@ -92,6 +92,7 @@
         <router-link  to="EditYourProfile" class="menu">ویرایش پروفایل</router-link>
         <router-link  to="Wallet" class="menu">کیف پول</router-link>
         <router-link  to="DashBoard" class="menu">داشبورد</router-link>
+       
         <v-btn flat @click="logout">خروج</v-btn>
       </v-toolbar-items> 
       <v-toolbar-items v-if="!user"> 
@@ -134,7 +135,12 @@
         { icon: 'delete', text:'زد کش', path:'/Zcash'},
         { icon: 'delete', text:'زد کش1', path:'/Zcash'},
         { icon: 'touch_app', text:'یک سوال دارید؟', path:'/HaveQuestion',},
+        { title: 'Click Me' },
+        { title: 'Click Me' },
+        { title: 'Click Me' },
+        { title: 'Click Me 2' }
       ],
+      
       signState:'ثبت نام رایگان',
       loginState:'ورود'
     }),

@@ -1,46 +1,83 @@
 <template>
-<div>
-    <div >
-        <p>test</p>
-    </div>
-        <v-card  height="50px">
-    <v-bottom-nav
-      :active.sync="bottomNav"
-      :color="color"
-      :value="true"
-      absolute
-      shift
-    >
-      <v-btn dark value="Video">
-        <span>Video</span>
-        <v-icon>ondemand_video</v-icon>
-      </v-btn>
+    <div>
+        <div>
+            <p class="dashboardTop">داشبورد</p>
+            <p class="explainDashboard">در این صفحه شما میتوانید تبلیغات و معاملات خود را مشاهده و مدیریت کنید.</p>
+        </div>
+        <div>
+            <v-card  height="50px">
+                <v-bottom-nav
+                    :active.sync="bottomNav"
+                    :color="color"
+                    :value="true"
+                    absolute
+                    shift
+                    >
+                    <v-btn dark value="video">
+                    <span>معاملات و تبلیغات آزاد</span>
+                    <v-icon>ondemand_video</v-icon>
+                    </v-btn>
 
-      <v-btn dark value="Music">
-        <span>Music</span>
-        <v-icon>music_note</v-icon>
-      </v-btn>
+                    <v-btn dark value="Music">
+                    <span>معاملات بسته شده</span>
+                    <v-icon>music_note</v-icon>
+                    </v-btn>
 
-      <v-btn dark  value="Book">
-        <span>Book</span>
-        <v-icon>book</v-icon>
-      </v-btn>
+                    <v-btn dark  value="Book">
+                    <span>معاملات تکمیل شده</span>
+                    <v-icon>book</v-icon>
+                    </v-btn>
 
-      <v-btn dark value="Image">
-        <span>Image</span>
-        <v-icon>image</v-icon>
-      </v-btn>
-    </v-bottom-nav>
-  </v-card>
-  <div class="headline text-xs-center pa-5">
-      Active: {{ bottomNav }}
-    </div>
-   </div> 
+                    <v-btn dark value="Image">
+                    <span>معاملات لغو شده</span>
+                    <v-icon>image</v-icon>
+                    </v-btn>
+                </v-bottom-nav>
+            </v-card>
+        </div>
+        <transition name="">
+            <div class="headline text-xs-center pa-5">
+                <div v-if="bottomNav=='Music'">
+                    <DashboardAllClosedTrades></DashboardAllClosedTrades>
+                </div>
+            </div>
+        </transition>
+
+        <transition name="">
+            <div class="headline text-xs-center pa-5">
+                <div v-if="bottomNav=='video'">
+                    <DashboardOpenTrade></DashboardOpenTrade>
+                </div>
+            </div>
+        </transition>
+
+        <transition name="">
+            <div class="headline text-xs-center pa-5">
+                <div v-if="bottomNav=='Image'">
+                    <DashboardCancelledTrades></DashboardCancelledTrades>
+                </div>
+            </div>
+        </transition>
+
+        <transition name="">
+            <div class="headline text-xs-center pa-5">
+                <div v-if="bottomNav=='Book'">
+                    <DashboardCompletedTrades></DashboardCompletedTrades>
+                </div>
+            </div>
+        </transition>
+        <Footer></Footer>
+    </div> 
 </template>
 <script>
+import DashboardAllClosedTrades from './../views/DashboardAllClosedTrades.vue'
+import DashboardOpenTrade from './../views/DashboardOpenTrade.vue'
+import DashboardCancelledTrades from './../views/DashboardCancelledTrades.vue'
+import DashboardCompletedTrades from './../views/DashboardCompletedTrades.vue'
+import Footer from './../components/Footer.vue'
   export default {
     data : () =>({
-        bottomNav: "Video"
+        bottomNav: "video"
     }),
     computed: {
       color () {
@@ -53,6 +90,13 @@
       }
     },mounted(){
         console.log(this.bottomNav);
+    },
+    components:{
+        DashboardAllClosedTrades,
+        DashboardOpenTrade,
+        DashboardCancelledTrades,
+        DashboardCompletedTrades,
+        Footer
     }
   }
 </script>
@@ -60,32 +104,16 @@
 .dashboardTop{
     font-size:35px;
     font-family:b nazanin;
-    color:black;
+    color:white;
     text-align:center;
-    text-shadow:1px 2px 2px rgb(134, 121, 121);
+    text-shadow:1px 2px 2px rgb(173, 163, 163);
 }
 .explainDashboard{
-    text-align:right;
-    font-size:23px;
-    font-family:b nazanin;
-    color:black;
-}
-.router{
-    font-size:23px;
-    font-family:b nazanin;
-    color:rgb(84, 151, 240);
-    text-decoration:none;
-    margin-right:10px;
-    padding-right:5px;
-    padding-left:5px;
     text-align:center;
-}
-.router:hover{
-    background-color:rgb(30, 132, 228);
+    font-size:20px;
+    font-family:b nazanin;
     color:white;
-    border-radius:4px;
+    text-shadow:1px 2px 2px rgb(173, 163, 163);
 }
-.topDiv{
-    margin-bottom:80px;
-}
+
 </style>
