@@ -1,7 +1,7 @@
 <template>
     <div>
-        <p>تبلیغات شما</p>
-        <p>شما می توانید حداکثر 5 آگهی ایجاد کنید محدودیت ها براساس حجم 30 روزه شما است که 0.00000000 بیت کوین است. برای کسب اطلاعات بیشتر درباره محدودیت های تبلیغات <router-link to="LearnAdverDashboard">اینجا کلیک کنید</router-link></p>
+        <p class="yourTrade">تبلیغات شما</p>
+        <p class="maxTrade">شما می توانید حداکثر 5 آگهی ایجاد کنید محدودیت ها براساس حجم 30 روزه شما است که 0.00000000 بیت کوین است. برای کسب اطلاعات بیشتر درباره محدودیت های تبلیغات <router-link to="LearnAdverDashboard">اینجا کلیک کنید</router-link></p>
         <v-data-table
             class="text-xs-left"
             :headers="headers"
@@ -125,3 +125,12 @@ export default{
   }
 };
 </script>
+<style scoped>
+.yourTrade{
+    text-align:right;
+    text-shadow:1px 2px 2px rgb(168, 152, 152);
+    font-size:20px;
+    font-family:b nazanin;
+}
+
+</style>
