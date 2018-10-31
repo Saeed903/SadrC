@@ -1,64 +1,58 @@
 <template>
-    <div>
-        <div class="topDiv">
-            <p class="dashboardTop">داشبورد</p>
-            <p class="explainDashboard">در این صفحه شما میتوانید تبلیغات و معاملات خود را مشاهده و مدیریت کنید.</p>
-        </div>
-        <v-card flat>
-            
-            <v-bottom-nav
-                :active.sync="bottomNav"
-                :color="color"
-                :value="true"
-                absolute
-                shift
-                >
-                <v-btn
-                flat
-                value="recent"
-                >
-                <span>Recent</span>
-                <v-icon>history</v-icon>
-                </v-btn>
-
-                <v-btn
-                flat
-                value="favorites"
-                >
-                <span>Favorites</span>
-                <v-icon>favorite</v-icon>
-                </v-btn>
-
-                <v-btn
-                flat
-                value="nearby"
-                >
-                <span>Nearby</span>
-                <v-icon>place</v-icon>
-                </v-btn>
-            </v-bottom-nav>
-        </v-card>
-        <div class="headline text-xs-center pa-5">
-                <p>{{bottomNav}}</p>
-            </div>
+<div>
+    <div >
+        <p>test</p>
     </div>
+        <v-card  height="50px">
+    <v-bottom-nav
+      :active.sync="bottomNav"
+      :color="color"
+      :value="true"
+      absolute
+      shift
+    >
+      <v-btn dark value="Video">
+        <span>Video</span>
+        <v-icon>ondemand_video</v-icon>
+      </v-btn>
+
+      <v-btn dark value="Music">
+        <span>Music</span>
+        <v-icon>music_note</v-icon>
+      </v-btn>
+
+      <v-btn dark  value="Book">
+        <span>Book</span>
+        <v-icon>book</v-icon>
+      </v-btn>
+
+      <v-btn dark value="Image">
+        <span>Image</span>
+        <v-icon>image</v-icon>
+      </v-btn>
+    </v-bottom-nav>
+  </v-card>
+  <div class="headline text-xs-center pa-5">
+      Active: {{ bottomNav }}
+    </div>
+   </div> 
 </template>
 <script>
   export default {
-    data () {
-      return {
-        bottomNav: 'recent'
-      }
-    },
+    data : () =>({
+        bottomNav: "Video"
+    }),
     computed: {
       color () {
         switch (this.bottomNav) {
-          case 0: return 'blue-grey'
-          case 1: return 'teal'
-          case 2: return 'brown'
-          case 3: return 'indigo'
+          case "Video": return 'blue-grey'
+          case "Music": return 'teal'
+          case "Book": return 'brown'
+          case "Image": return 'indigo'
         }
       }
+    },mounted(){
+        console.log(this.bottomNav);
     }
   }
 </script>
