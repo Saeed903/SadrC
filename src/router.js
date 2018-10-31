@@ -49,6 +49,8 @@ import WalletSendBitconHowLong from './views/WalletSendBitconHowLong.vue'
 import WalletSendBitconOutgoingbitcoin from './views/WalletSendBitconOutgoingbitcoin.vue'
 import WalletSendBitconRefunds from './views/WalletSendBitconRefunds.vue'
 import Home from './views/Home.vue'
+import AdvertiserProfile from './views/AdvertiserProfile.vue'
+import BuyButtonLoggedButNotverifiyEmail from './views/BuyButtonLoggedButNotverifiyEmail.vue'
 
 Vue.use(Router)
 
@@ -69,9 +71,19 @@ export default new Router({
       }
     }, 
     {
+      path: '/BuyButtonLoggedButNotverifiyEmail',
+      name: 'BuyButtonLoggedButNotverifiyEmail',
+      component: BuyButtonLoggedButNotverifiyEmail,
+    }, 
+    {
       path: '/SadrCrypto',
       name: 'SadrCrypto',
       component: SadrCrypto,
+    }, 
+    {
+      path: '/AdvertiserProfile',
+      name: 'AdvertiserProfile',
+      component: AdvertiserProfile,
     }, 
     {
       path: '/WalletSendBitconRefunds',
