@@ -36,7 +36,7 @@
 <script>
     
 </script>
-<style>
+<style scoped>
 .editProfileText{
     text-align:right;
     font-size:25px;

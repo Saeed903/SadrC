@@ -86,7 +86,7 @@ export default{
     }
   };
 </script>
-<style>
+<style scoped>
 .digitalCurrency{
     margin-bottom:40px;
 }

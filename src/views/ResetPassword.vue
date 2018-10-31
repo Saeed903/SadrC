@@ -66,7 +66,7 @@
     }
   }
 </script>
-<style>
+<style scoped>
 .passwordReset{
   font-size:25px;
   font-family:b nazanin;

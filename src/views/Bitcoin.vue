@@ -22,7 +22,7 @@ export default{
   }
 }
 </script>
-<style>
+<style scoped>
 .btc{
     font-size:25px;
     font-family:b nazanin;

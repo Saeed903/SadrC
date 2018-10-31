@@ -32,7 +32,7 @@ export default{
 };
 
 </script>
-<style>
+<style scoped>
 .topTextRipple{
    text-align: center;
     font-size:22px;

@@ -39,7 +39,7 @@ export default{
     }
 }
 </script>
-<style>
+<style scoped>
 .bitcoinText{
     text-align:center;
     font-size:28px;

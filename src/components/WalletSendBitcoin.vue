@@ -74,7 +74,7 @@
         }
     }
 </script>
-<style>
+<style scoped>
 .textField{
     width:50%;
 }
