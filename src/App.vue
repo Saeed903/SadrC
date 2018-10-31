@@ -2,6 +2,7 @@
 <div id="app">
   <v-app
     id="inspire"
+    dark
   >
     <v-navigation-drawer
       v-model="drawer"
@@ -82,7 +83,7 @@
             <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span></router-link>
       </v-toolbar-title>
       <v-toolbar-items >
-            <router-link to="PostTrade" class="menu"> ثبت آگهی رایگان</router-link>
+            <router-link to="PostTrade" class="menu">ثبت آگهی</router-link>
             <router-link to="Forums" class="menu">انجمن ها</router-link>
             <router-link to="Help" class="menu">کمک</router-link>
       </v-toolbar-items>   

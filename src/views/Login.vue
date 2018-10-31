@@ -7,7 +7,9 @@
         v-model="valid"
       >
       <p class="logText">ورود</p>
-      <p class="longText">.با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید</p>
+      <div class="longText">
+        <p>با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید</p>
+      </div>
       <div class="logBorder">
         <v-text-field
           v-validate="'required|max:30'"
@@ -35,16 +37,17 @@
       <div>
         <p class="humanConfirm">لطفا تایید کنید که شما یک انسان هستید</p>
       </div>
-      <div>
+      <div >
         <p>محل عکس</p>
-      </div>
-        <v-btn type="submit" class="primary" >ورود</v-btn>
+      </div >
+        <div style="text-align:center;">
+        <v-btn type="submit" class="primary"   >ورود</v-btn>
+        </div>
       </div>
       </v-form>
     <div>
       <router-link class="forgotPass" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link>
-    </div>
-    <div>
+    
       <p class="newTo">new to sadrCrypto?<router-link to="/SignUp" class="signIn">ثبت نام کنید</router-link></p>
     </div>
     </div>
@@ -123,68 +126,74 @@
 </script>
 <style scoped>
 .logText{
-  font-size:40px;
+  font-size:30px;
   font-family:b nazanin;
   text-align:center;
-  color:rgb(39, 37, 37);
-  text-shadow:1px 1px 4px rgb(143, 132, 132);
-  margin-bottom:0
+  color:rgb(240, 238, 238);
+  text-shadow:1px 1px 3px rgb(240, 238, 238);
+  margin-bottom:0;
+  
 }
 .longText{
-  font-size:22px;
+  font-size:17px;
   font-family:b nazanin;
-  text-align:left;
-  color:rgb(97, 92, 92);
-  text-shadow:1px 3px 3px rgb(168, 155, 155);
+  padding:0 20px 0 20px;
+  color:rgb(250, 241, 241);
+  text-shadow:1px 2px 2px rgb(248, 245, 245);
   margin-bottom:40px;
+  
 }
 .logForm{
-  margin-top:15px;
-  width:80%;
+  margin-top:13px;
+  width:60%;
   margin-right:auto;
   margin-left:auto;
   display:block;
-  box-shadow:3px 4px 4px rgb(153, 145, 145);
+  box-shadow:2px 3px 3px rgb(250, 246, 246);
   margin-bottom:15px;
 }
 .forgotPass{
   text-decoration:none;
   font-size:16px;
   font-family:b nazanin;
-  text-shadow:1px 3px 3px rgb(146, 141, 141);
-  text-align:left;
+  text-shadow:0px 2px 2px rgb(250, 246, 246);
+  color:rgb(250, 241, 241);
   transition:text-shadow 0.1s;
+  
+  
 }
 .forgotPass:hover{
-  text-decoration:underline;
-  text-shadow:1px 4px 4px rgb(143, 138, 138);
+  text-decoration:none;
+  text-shadow:0px 3px 3px rgb(250, 246, 246);
 }
 .signIn{
   text-decoration:none;
   font-size:16px;
   font-family:b nazanin;
-  text-shadow:1px 3px 3px rgb(146, 141, 141);
+  text-shadow:0px 2px 2px rgb(250, 246, 246);
   transition:text-shadow 0.1s;
+  color:rgb(250, 241, 241);
+  
 }
 .signIn:hover{
-  text-decoration:underline;
-  text-shadow:1px 4px 4px rgb(143, 138, 138);
+  text-decoration:none;
+  text-shadow:0px 3px 3px rgb(250, 246, 246);
 }
 .newTo{
   text-decoration:none;
   font-size:16px;
   font-family:b nazanin;
-  text-shadow:1px 3px 3px rgb(146, 141, 141);
-   color:rgb(97, 92, 92);
+  text-shadow:0px 2px 2px rgb(250, 246, 246);
+   color:rgb(250, 246, 246);
 }
 .textField{
   padding-right:10px;
 }
 .humanConfirm{
-  font-size:18px;
+  font-size:15px;
   font-family:b nazanin;
-  text-shadow:1px 3px 3px rgb(168, 155, 155);
-  text-align:left;
-  color:rgb(97, 92, 92);
+  text-shadow:0px 2px 2px rgb(250, 246, 246);
+ 
+  color:rgb(250, 246, 246);
 }
 </style>
