@@ -20,7 +20,7 @@
               </v-subheader>
             </v-flex>
             <v-flex xs6 class="text-xs-center">
-              <a href="#!" class="body-2 black--text">EDIT</a>
+              <a href="#!" class="body-2 black--text">ویرایش</a>
             </v-flex>
           </v-layout>
           <v-list-group
@@ -31,14 +31,14 @@
             :key="item.text" >
 
             <v-list-tile slot="activator">
-              <v-list-tile-content  style="text-align:right">
+              <v-list-tile-content  >
                 <v-list-tile-sub-title>
                   <span class="navThem">{{ item.text }}</span>
                 </v-list-tile-sub-title>
               </v-list-tile-content>
 
               <v-list-tile-action>
-              <v-icon v-if="item.icon">{{ item.icon }}</v-icon>
+              <v-icon v-if="item.icon" >{{ item.icon }}</v-icon>
               <p v-if="item.class" :class="item.class"></p>
             </v-list-tile-action>
 
@@ -49,7 +49,7 @@
               @click="sidebar(child.path)"
             >
               
-              <v-list-tile-content   style="text-align:right">
+              <v-list-tile-content >
                 <v-list-tile-sub-title>
                   <span class="navChildThem">{{ child.text }}</span>
                 </v-list-tile-sub-title>
@@ -77,27 +77,24 @@
       </v-list>
     </v-navigation-drawer>
     
-    <v-toolbar fixed app>
-      <v-spacer></v-spacer>
-      <v-toolbar-title style="width: 20%">
+    <v-toolbar fixed app >
+      <v-toolbar-title>
             <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span></router-link>
       </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-toolbar-items style="width:50%; padding: 0 0 0 25px">
-          
-            <router-link to="PostTrade" class="menu">post-trade</router-link>
-            <router-link to="Forums" class="menu">forums</router-link>
-            <router-link to="Help" class="menu">help</router-link>
+      <v-toolbar-items >
+            <router-link to="PostTrade" class="menu"> ثبت آگهی رایگان</router-link>
+            <router-link to="Forums" class="menu">انجمن ها</router-link>
+            <router-link to="Help" class="menu">کمک</router-link>
       </v-toolbar-items>   
       <v-toolbar-items v-if="user" > 
-        <router-link  to="EditYourProfile" class="menu">edit-profile</router-link>
-        <router-link  to="Wallet" class="menu">wallet</router-link>
-        <router-link  to="DashBoard" class="menu">DashBoard</router-link>
-        <v-btn flat @click="logout">LogOut</v-btn>
+        <router-link  to="EditYourProfile" class="menu">ویرایش پروفایل</router-link>
+        <router-link  to="Wallet" class="menu">کیف پول</router-link>
+        <router-link  to="DashBoard" class="menu">داشبورد</router-link>
+        <v-btn flat @click="logout">خروج</v-btn>
       </v-toolbar-items> 
       <v-toolbar-items v-if="!user"> 
         <router-link to="Signup" class="freeRegister">{{signState}}</router-link>
-        <router-link to="Login" class="menu">log in</router-link>
+        <router-link to="Login" class="menu">ورود</router-link>
       </v-toolbar-items>
         
       
@@ -108,7 +105,7 @@
     
     <v-content>
       <v-container fill-height>
-        <v-layout justify-center align-center>
+        <v-layout >
           <v-flex >
             <transition name="slide-fade" mode="out-in">
               <router-view/>
@@ -129,15 +126,15 @@
   data: () => ({
       drawer: true,
       items: [
-        { icon: 'lightbulb_outline', text:'Bitcoin', path:'/Bitcoin'},
-        { icon: 'touch_app', text:'Ethereum', path:'/Ethereum'},
-        { icon: 'archive', text:'Ripple', path:'/Ripple'},
-        { icon: 'delete', text:'Zcash', path:'/Zcash'},
-        { icon: 'delete', text:'Zcash1', path:'/Zcash'},
-        { icon: 'touch_app', text:'have a question?', path:'/HaveQuestion',},
+        { icon: 'lightbulb_outline', text:'بیت کوین', path:'/Bitcoin'},
+        { icon: 'touch_app', text:'اتریوم', path:'/Ethereum'},
+        { icon: 'archive', text:'ریپل', path:'/Ripple'},
+        { icon: 'delete', text:'زد کش', path:'/Zcash'},
+        { icon: 'delete', text:'زد کش1', path:'/Zcash'},
+        { icon: 'touch_app', text:'یک سوال دارید؟', path:'/HaveQuestion',},
       ],
-      signState:'SignUp Free',
-      loginState:'log in'
+      signState:'ثبت نام رایگان',
+      loginState:'ورود'
     }),
     props: {
       source: String
