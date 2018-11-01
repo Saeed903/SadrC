@@ -20,7 +20,7 @@
 </template>
 <script>
 export default{
-  name:"Transaction",
+  name:"Advertise",
   props:["isSeller"],
   data () {
     return {

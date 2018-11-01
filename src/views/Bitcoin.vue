@@ -6,7 +6,7 @@
     </div>
 </template>
 <script>
-import Transaction from './../components/Transactions.vue'
+import Transaction from './../components/Advertise.vue'
 import FormSell from './../components/FormSell.vue'
 import Footer from './../components/Footer.vue'
 export default{
