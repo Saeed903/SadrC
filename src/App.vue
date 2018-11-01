@@ -94,10 +94,19 @@
         <router-link  to="DashBoard" class="menu">داشبورد</router-link>
         <div class="text-xs-center">
           <v-menu offset-y>
-            <v-icon>dashboard</v-icon>
+            <v-btn
+            slot="activator"
+            dark
+            >
+            <v-icon
+            color="primary"
+            >
+            dashboard</v-icon>
+            <v-icon dark>arrow_drop_down</v-icon>
+            </v-btn>
             <v-list>
             <v-list-tile
-            v-for="(item, index) in hello"
+            v-for="(item, index) in Hello"
             :key="index"
             @click=""
             >
@@ -148,16 +157,12 @@
         { icon: 'delete', text:'زد کش', path:'/Zcash'},
         { icon: 'delete', text:'زد کش1', path:'/Zcash'},
         { icon: 'touch_app', text:'یک سوال دارید؟', path:'/HaveQuestion',},
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me 2' }
       ],
-      hello: [
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me 2' }
+      Hello: [
+        { title: 'sadrSys' },
+        { title: 'dashboard' },
+        { title: 'edit profile' },
+        { title: 'acount security:weak' }
       ],
       signState:'ثبت نام رایگان',
       loginState:'ورود'
