@@ -92,15 +92,19 @@
         <router-link  to="EditYourProfile" class="menu">ویرایش پروفایل</router-link>
         <router-link  to="Wallet" class="menu">کیف پول</router-link>
         <div class="text-xs-center">
-          <v-menu offset-y>
+
+          <v-menu 
+          offset-y
+          transition="slide-y-transition"
+          >
             <v-btn
             slot="activator"
             dark
             >
             <v-icon
-            
+            style="color:aqua"
             >
-            account_circle</v-icon>
+            perm_identity</v-icon>
             <v-icon dark>arrow_drop_down</v-icon>
             </v-btn>
             <v-list>
@@ -166,7 +170,7 @@
         { title: 'بازرگان', path:'' },
         { title: 'قابل اعتماد', path:'' },
         { title: 'پشتیبانی', path:'' },
-        { title: 'خروج', path:'SadrCrypto' },
+        { title: 'خروج', path:'' },
       ],
       signState:'ثبت نام رایگان',
       loginState:'ورود'
