@@ -91,7 +91,7 @@
       <v-toolbar-items v-if="user" > 
         <router-link  to="EditYourProfile" class="menu">ویرایش پروفایل</router-link>
         <router-link  to="Wallet" class="menu">کیف پول</router-link>
-        <router-link  to="Wallet" class="menu">پشتیبانی</router-link>
+        <router-link  to="Support" class="menu">پشتیبانی</router-link>
         <router-link  to="DashBoard" class="menu"><v-icon>fas fa-tachometer-alt</v-icon></router-link>
         <div class="text-xs-center">
           <v-menu offset-y>
@@ -107,11 +107,13 @@
             </v-btn>
             <v-list>
             <v-list-tile
-            v-for="(item, index) in Hello"
+            v-for="(profile, index) in Profiles"
             :key="index"
             @click=""
+            class="menuFont"
             >
-            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            <v-icon>{{profile.icon}}</v-icon>
+            <v-list-tile-title>{{ profile.title }}</v-list-tile-title>
             </v-list-tile>
             </v-list>
           </v-menu>
@@ -159,13 +161,13 @@
         { icon: 'delete', text:'زد کش1', path:'/Zcash'},
         { icon: 'touch_app', text:'یک سوال دارید؟', path:'/HaveQuestion',},
       ],
-      Hello: [
-        { title: 'sadrSys' },
-        { title: 'ویرایش پروفایل' },
-        { title: 'داشبورد' },
-        { title: 'بازرگان' },
-        { title: 'قابل اعتماد' },
-        { title: 'پشتیبانی' },
+      Profiles: [
+        { title: 'sadrSys', path:'',icon:'account_circle'},
+        { title: 'ویرایش پروفایل', path:'/home',icon:'home'},
+        { title: 'داشبورد', path:'' },
+        { title: 'بازرگان', path:'' },
+        { title: 'قابل اعتماد', path:'' },
+        { title: 'پشتیبانی', path:'' },
       ],
       signState:'ثبت نام رایگان',
       loginState:'ورود'
@@ -240,5 +242,7 @@
   font-size:15px;
   font-family:b titr;
 }
-
+.menuFont{
+  font-family:b nazanin;
+}
 </style>

@@ -51,7 +51,7 @@ import WalletSendBitconRefunds from './views/WalletSendBitconRefunds.vue'
 import Home from './views/Home.vue'
 import AdvertiserProfile from './views/AdvertiserProfile.vue'
 import BuyButtonLoggedButNotverifiyEmail from './views/BuyButtonLoggedButNotverifiyEmail.vue'
-
+import Support from './views/Support.vue'
 Vue.use(Router)
 
 import store from './store';
@@ -69,6 +69,11 @@ export default new Router({
           next('/SadrCrypto');
         })
       }
+    }, 
+    {
+      path: '/Support',
+      name: 'Support',
+      component: Support,
     }, 
     {
       path: '/BuyButtonLoggedButNotverifiyEmail',
