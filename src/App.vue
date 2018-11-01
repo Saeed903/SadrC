@@ -91,7 +91,8 @@
       <v-toolbar-items v-if="user" > 
         <router-link  to="EditYourProfile" class="menu">ویرایش پروفایل</router-link>
         <router-link  to="Wallet" class="menu">کیف پول</router-link>
-        <router-link  to="DashBoard" class="menu">داشبورد</router-link>
+        <router-link  to="Wallet" class="menu">پشتیبانی</router-link>
+        <router-link  to="DashBoard" class="menu"><v-icon>fas fa-tachometer-alt</v-icon></router-link>
         <div class="text-xs-center">
           <v-menu offset-y>
             <v-btn
@@ -99,9 +100,9 @@
             dark
             >
             <v-icon
-            color="primary"
+            
             >
-            dashboard</v-icon>
+            account_circle</v-icon>
             <v-icon dark>arrow_drop_down</v-icon>
             </v-btn>
             <v-list>
@@ -160,9 +161,11 @@
       ],
       Hello: [
         { title: 'sadrSys' },
-        { title: 'dashboard' },
-        { title: 'edit profile' },
-        { title: 'acount security:weak' }
+        { title: 'ویرایش پروفایل' },
+        { title: 'داشبورد' },
+        { title: 'بازرگان' },
+        { title: 'قابل اعتماد' },
+        { title: 'پشتیبانی' },
       ],
       signState:'ثبت نام رایگان',
       loginState:'ورود'
