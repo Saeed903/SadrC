@@ -17,9 +17,9 @@
                 <p>پنجره پرداخت</p>
              </div>
              <div class="white--text" style="padding-right:50px">
-                <p>935543438.97 IRR/BTC</p>
+                <p style="color:greenyellow">935543438.97 IRR/BTC</p>
                 <p>انتقال بانک جمهوری اسلامی ایران</p>
-                <p>آلمان</p>
+                <p><router-link to="DashBoard"><v-icon style="color:aqua">perm_identity</v-icon ></router-link>آلمان</p>
                 <p>(نمره بازخورد.100<router-link to="">دیدن بازخورد</router-link>)</p>
                 <p>10,000,000-30,000,001 IRR</p>
                 <p><router-link to="">تهران,استان تهران,ایران</router-link></p>
@@ -30,11 +30,11 @@
             
               <v-card-title>
                <div style="padding-right: 150px" >
-                <h3>شرایط تجارت با آلمان</h3>
-            
-                 <p>تایید احراز هویت پرداخت وجه مورد توافق بیت کوین</p>
-            
-                 <p>ساعات کار</p>
+                <p class="headline">شرایط تجارت با آلمان</p>
+                <div style="background-color:rgb(26, 29, 37)">
+                 <p style="padding-right:20px">تایید احراز هویت <br>پرداخت وجه مورد توافق <br>بیت کوین</p>
+                </div>
+                 <p class="headline">ساعات کار</p>
                  <v-list two-line>
                 <ul>
                   <li>یکشنبه:تعطیل</li>
@@ -52,10 +52,10 @@
               </v-card-title>
              
              
-            
-               <v-card-text class="white--text" style="color:red accenty">شما باید آدرس ایمیل خود را قبل از اینکه بتوانید در خواست تجاری را تایید  کنید بررسی کنید.صندوق ورودی خود را چک کنید و سپس به این صفحه بازگردید.اگر این موضوع همچنان ادامه دارد لطفا<router-link class="headline mb-0" to="">تماس با پشتیبانی</router-link></v-card-text>
-                  <v-btn flat color="#E6EE9C" to="">ایمیل تایید را دوباره بفرستید</v-btn>
-           
+              <div style="background-color:rgb(27, 19, 27); width:50%; max-width:100%">
+               <v-card-text class="white--text">شما باید آدرس ایمیل خود را قبل از اینکه بتوانید در خواست تجاری را تایید  کنید بررسی کنید.صندوق ورودی خود را چک کنید و سپس به این صفحه بازگردید.اگر این موضوع همچنان ادامه دارد لطفا<router-link class="headline mb-0" to="">تماس با پشتیبانی</router-link></v-card-text>
+                  <v-btn flat style="width:90%; max-width:100%" to="">ایمیل تایید را دوباره بفرستید</v-btn>
+              </div>
                <v-card-text> 
               
              <div>  
@@ -76,3 +76,9 @@
 
     </div>
 </template>
+<style>
+.heydar{
+  background-color: rgb(26, 29, 37)
+  
+}
+</style>
