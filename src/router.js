@@ -39,7 +39,7 @@ import EditProfileVerifyPhoneNumberVerification from './views/EditProfileVerifyP
 import EditYourProfile from './views/EditYourProfile.vue'
 import PrivacyPolicy from './views/PrivacyPolicy.vue'
 import TermsOfService from './views/TermsOfService.vue'
-import Trade from './views/Trade.vue'
+import Order from './views/Order.vue'
 import Trader from './views/Trader.vue'
 import TradeReportBadAdvertisement from './views/TradeReportBadAdvertisement.vue'
 import TraderReportFraudulentUser from './views/TraderReportFraudulentUser.vue'
@@ -126,9 +126,9 @@ export default new Router({
       component: Trader
     },
     {
-      path: '/Trade',
-      name: 'Trade',
-      component: Trade
+      path: '/Order',
+      name: 'Order',
+      component: Order
     },
     {
       path: '/TermsOfService',

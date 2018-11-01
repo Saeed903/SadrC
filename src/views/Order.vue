@@ -14,7 +14,7 @@
             <p>4960.63 GBP/BTC</p>
             <p>قیمت شناور مقدار نهایی بیت کوین تعیین خواهد شد</p>
             <p>در زمان نهایی شدن تجارت</p>
-            <router-link to="">کریپتو asda</router-link>
+            <router-link to="">صدر کریپتو</router-link>
             <p>(feedback score 100%).<router-link to="">بازخورد را ببینید</router-link></p>
             <p>1,000-25,000 GBP</p>
             <router-link to="">london,UK</router-link>
@@ -99,3 +99,15 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    name: 'Order',
+    data: ()=>({
+
+    }),
+}
+</script>
+<style scoped>
+
+</style>
+
