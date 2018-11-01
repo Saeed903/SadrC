@@ -91,8 +91,6 @@
       <v-toolbar-items v-if="user" > 
         <router-link  to="EditYourProfile" class="menu">ویرایش پروفایل</router-link>
         <router-link  to="Wallet" class="menu">کیف پول</router-link>
-        <router-link  to="Support" class="menu">پشتیبانی</router-link>
-        <router-link  to="DashBoard" class="menu"><v-icon>fas fa-tachometer-alt</v-icon></router-link>
         <div class="text-xs-center">
           <v-menu offset-y>
             <v-btn
@@ -162,12 +160,13 @@
         { icon: 'touch_app', text:'یک سوال دارید؟', path:'/HaveQuestion',},
       ],
       Profiles: [
-        { title: 'sadrSys', path:'',icon:'account_circle'},
-        { title: 'ویرایش پروفایل', path:'/home',icon:'home'},
-        { title: 'داشبورد', path:'' },
+        { title: 'sadrSys',icon:'account_circle'},
+        { title: 'ویرایش پروفایل', path:'EditYourProfile',icon:'home'},
+        { title: 'داشبورد', path:'DashBoard',icon:'fas fa-tachometer-alt'},
         { title: 'بازرگان', path:'' },
         { title: 'قابل اعتماد', path:'' },
         { title: 'پشتیبانی', path:'' },
+        { title: 'خروج', path:'SadrCrypto' },
       ],
       signState:'ثبت نام رایگان',
       loginState:'ورود'
