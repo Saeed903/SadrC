@@ -55,7 +55,6 @@ import Support from './views/Support.vue'
 import Merchant from './views/Merchant.vue'
 import Trusted from './views/Trusted.vue'
 import SupportDrop from './views/SupportDrop.vue'
-import LiveDrop from './views/LiveDrop.vue'
 Vue.use(Router)
 
 import store from './store';
@@ -74,11 +73,7 @@ export default new Router({
         })
       }
     }, 
-    {
-      path: '/LiveDrop',
-      name: 'LiveDrop',
-      component: LiveDrop,
-    }, 
+   
     {
       path: '/SupportDrop',
       name: 'SupportDrop',
