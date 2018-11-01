@@ -62,7 +62,7 @@
               
             </v-list-tile>
           </v-list-group>
-          <v-list-tile v-else @click="sidebar(item.path)" :key="item.text">
+          <v-list-tile v-else @click="routing(item.path)" :key="item.text">
             <v-list-tile-content style="text-align:right">
               <v-list-tile-sub-title >
                 <span class="navThem">{{ item.text }}</span>
@@ -92,22 +92,26 @@
         <router-link  to="EditYourProfile" class="menu">ویرایش پروفایل</router-link>
         <router-link  to="Wallet" class="menu">کیف پول</router-link>
         <div class="text-xs-center">
-          <v-menu offset-y>
+
+          <v-menu 
+          offset-y
+          transition="slide-y-transition"
+          >
             <v-btn
             slot="activator"
             dark
             >
             <v-icon
-            
+            style="color:aqua"
             >
-            account_circle</v-icon>
+            perm_identity</v-icon>
             <v-icon dark>arrow_drop_down</v-icon>
             </v-btn>
             <v-list>
             <v-list-tile
             v-for="(profile, index) in Profiles"
             :key="index"
-            @click=""
+            @click="routing(profile.path)"
             class="menuFont"
             >
             <v-icon>{{profile.icon}}</v-icon>
@@ -162,11 +166,11 @@
       Profiles: [
         { title: 'sadrSys',icon:'account_circle'},
         { title: 'ویرایش پروفایل', path:'EditYourProfile',icon:'home'},
-        { title: 'داشبورد', path:'DashBoard',icon:'fas fa-tachometer-alt'},
-        { title: 'بازرگان', path:'' },
-        { title: 'قابل اعتماد', path:'' },
-        { title: 'پشتیبانی', path:'' },
-        { title: 'خروج', path:'SadrCrypto' },
+        { title: 'داشبورد', path:'/DashBoard',icon:'fas fa-tachometer-alt'},
+        { title: 'بازرگان', path:'Merchant' },
+        { title: 'قابل اعتماد', path:'Trusted' },
+        { title: 'پشتیبانی', path:'SupportDrop' },
+        { title: 'خروج', path:'' },
       ],
       signState:'ثبت نام رایگان',
       loginState:'ورود'
@@ -182,7 +186,7 @@
         this.authLogout().then(()=> this.$router.push('/SadrCrypto'));
       },
 
-      sidebar(paths){
+      routing(paths){
         this.$router.push(paths);
         
       }

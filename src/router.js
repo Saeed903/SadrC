@@ -52,6 +52,9 @@ import Home from './views/Home.vue'
 import AdvertiserProfile from './views/AdvertiserProfile.vue'
 import BuyButtonLoggedButNotverifiyEmail from './views/BuyButtonLoggedButNotverifiyEmail.vue'
 import Support from './views/Support.vue'
+import Merchant from './views/Merchant.vue'
+import Trusted from './views/Trusted.vue'
+import SupportDrop from './views/SupportDrop.vue'
 Vue.use(Router)
 
 import store from './store';
@@ -69,6 +72,22 @@ export default new Router({
           next('/SadrCrypto');
         })
       }
+    }, 
+   
+    {
+      path: '/SupportDrop',
+      name: 'SupportDrop',
+      component: SupportDrop,
+    }, 
+    {
+      path: '/Trusted',
+      name: 'Trusted',
+      component: Trusted,
+    }, 
+    {
+      path: '/Merchant',
+      name: 'Merchant',
+      component: Merchant,
     }, 
     {
       path: '/Support',
