@@ -140,7 +140,7 @@ p{
 }
 .learnMoreAd{
     text-decoration:none;
-    text-shadow:1px 2px 2px rgb(192, 184, 184);
+    text-shadow:none;
 }
 .learnMoreAd:hover{
     text-decoration:none;
