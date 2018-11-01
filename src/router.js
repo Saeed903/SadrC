@@ -103,6 +103,13 @@ export default new Router({
       path: '/SadrCrypto',
       name: 'SadrCrypto',
       component: SadrCrypto,
+      beforeEnter(to, from, next){
+        store.dispatch('auth/authenticate').then(()=>{
+          next();
+        }).catch(() => {
+          next();
+        })
+      }
     }, 
     {
       path: '/AdvertiserProfile',
