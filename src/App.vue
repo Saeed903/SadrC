@@ -91,7 +91,6 @@
       <v-toolbar-items v-if="user" > 
         <router-link  to="EditYourProfile" class="menu">ویرایش پروفایل</router-link>
         <router-link  to="Wallet" class="menu">کیف پول</router-link>
-        <router-link  to="DashBoard" class="menu">داشبورد</router-link>
         <div class="text-xs-center">
           <v-menu offset-y>
             <v-btn
@@ -99,18 +98,20 @@
             dark
             >
             <v-icon
-            color="primary"
+            
             >
-            dashboard</v-icon>
+            account_circle</v-icon>
             <v-icon dark>arrow_drop_down</v-icon>
             </v-btn>
             <v-list>
             <v-list-tile
-            v-for="(item, index) in Hello"
+            v-for="(profile, index) in Profiles"
             :key="index"
             @click=""
+            class="menuFont"
             >
-            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            <v-icon>{{profile.icon}}</v-icon>
+            <v-list-tile-title>{{ profile.title }}</v-list-tile-title>
             </v-list-tile>
             </v-list>
           </v-menu>
@@ -158,11 +159,14 @@
         { icon: 'delete', text:'زد کش1', path:'/Zcash'},
         { icon: 'touch_app', text:'یک سوال دارید؟', path:'/HaveQuestion',},
       ],
-      Hello: [
-        { title: 'sadrSys' },
-        { title: 'dashboard' },
-        { title: 'edit profile' },
-        { title: 'acount security:weak' }
+      Profiles: [
+        { title: 'sadrSys',icon:'account_circle'},
+        { title: 'ویرایش پروفایل', path:'EditYourProfile',icon:'home'},
+        { title: 'داشبورد', path:'DashBoard',icon:'fas fa-tachometer-alt'},
+        { title: 'بازرگان', path:'' },
+        { title: 'قابل اعتماد', path:'' },
+        { title: 'پشتیبانی', path:'' },
+        { title: 'خروج', path:'SadrCrypto' },
       ],
       signState:'ثبت نام رایگان',
       loginState:'ورود'
@@ -237,5 +241,7 @@
   font-size:15px;
   font-family:b titr;
 }
-
+.menuFont{
+  font-family:b nazanin;
+}
 </style>
