@@ -55,7 +55,7 @@
             <span class="twoCharacters">اطلاعات حساب</span><br>
             <router-link class="routerCharacters" to="">حذف حساب کاربری در صدر کریپتو</router-link>
         </div>
-
+ 
     </div>
 </template>
 <script>
