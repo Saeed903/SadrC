@@ -55,12 +55,19 @@ import Support from './views/Support.vue'
 import Merchant from './views/Merchant.vue'
 import Trusted from './views/Trusted.vue'
 import SupportDrop from './views/SupportDrop.vue'
+import Test from './views/test.vue'
+import MoreAboutTrustSystemst from './views/MoreAboutTrustSystem.vue'
 Vue.use(Router)
 
 import store from './store';
 
 export default new Router({
   routes: [
+    {
+      path: '/Test',
+      name: 'Test',
+      component: Test,
+    }, 
     {
       path: '/',
       name: 'Home',
@@ -73,7 +80,11 @@ export default new Router({
         })
       }
     }, 
-   
+    {
+      path: '/MoreAboutTrustSystemst',
+      name: 'MoreAboutTrustSystemst',
+      component: MoreAboutTrustSystemst,
+    }, 
     {
       path: '/SupportDrop',
       name: 'SupportDrop',
