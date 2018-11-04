@@ -87,10 +87,12 @@
             <router-link to="PostTrade" class="menu">ثبت آگهی</router-link>
             <router-link to="Forums" class="menu">انجمن ها</router-link>
             <router-link to="Help" class="menu">کمک</router-link>
+            <router-link to="Test" class="menu">Test</router-link>
       </v-toolbar-items>   
       <v-toolbar-items v-if="user" > 
         <router-link  to="EditYourProfile" class="menu">ویرایش پروفایل</router-link>
         <router-link  to="Wallet" class="menu">کیف پول</router-link>
+        
         <div class="text-xs-center">
 
           <v-menu 
@@ -224,14 +226,14 @@
   text-decoration:none;
   color:rgb(153, 68, 68);
   font-size:15px;
-  font-family:b titr;
+  font-family:irsans;
   margin-left:10px;
 }
 .menu{
   text-decoration:none;
   color:rgb(153, 68, 68);
   font-size:15px;
-  font-family:b titr;
+  font-family:irsans;
   margin-left:5px;
 }
 .sadrCryptoText{
@@ -243,9 +245,9 @@
   text-decoration:none;
   color:rgb(153, 68, 68);
   font-size:15px;
-  font-family:b titr;
+  font-family:irsans;
 }
 .menuFont{
-  font-family:b nazanin;
+  font-family:irsans;
 }
 </style>

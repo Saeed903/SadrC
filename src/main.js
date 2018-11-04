@@ -9,13 +9,14 @@ import './registerServiceWorker'
 import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import '@fortawesome/fontawesome-free/css/all.css'
-
+import VueChatbox from 'vue-chatbox';
 
 Vue.use(Vuetify, {
   rtl: true
 });
 
 Vue.use(VeeValidate);
+Vue.use(VueChatbox);
 
 Vue.config.productionTip = false
 
