@@ -8,7 +8,7 @@
 
     <v-layout row wrap right >
       <v-card-media primary-title >
-        <div class="subheading">
+        <div class="subheading" style="padding-right:20px">
           <p>قیمت:</p>
           <p>روش پرداخت:</p>
           <p>کاربر:</p>
@@ -20,9 +20,9 @@
           <p style="color:greenyellow">935543438.97 IRR/BTC</p>
           <p>انتقال بانک جمهوری اسلامی ایران</p>
           <p><router-link to="/DashBoard"><v-icon style="color:aqua">perm_identity</v-icon ></router-link>آلمان</p>
-          <p>(نمره بازخورد.100<router-link to="">دیدن بازخورد</router-link>)</p>
+          <p>نمره بازخورد.100<router-link to="" class="head">دیدن بازخورد</router-link></p>
           <p>10,000,000-30,000,001 IRR</p>
-          <p ><router-link to="">تهران,استان تهران,ایران</router-link></p>
+          <p ><router-link to="" class="head">تهران,استان تهران,ایران</router-link></p>
           <p>1 ساعت و 30 دقیقه</p>
         </div>
       </v-card-media>
@@ -91,12 +91,23 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .heydar{
   background-color:rgb(27, 19, 27);
   position: relative;
   top:-120px;
   max-width:500px;
 
+}
+.head{
+  text-decoration: none;
+  padding-right:10px;
+  color:rgb(133, 129, 129);
+  
+}
+.headline{
+  text-decoration: none;
+  padding-right:10px;
+  color:rgb(133, 129, 129);
 }
 </style>
