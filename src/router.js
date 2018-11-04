@@ -55,7 +55,7 @@ import Support from './views/Support.vue'
 import Merchant from './views/Merchant.vue'
 import Trusted from './views/Trusted.vue'
 import SupportDrop from './views/SupportDrop.vue'
-import Test from './views/test.vue'
+import Test from './views/Test.vue'
 import MoreAboutTrustSystemst from './views/MoreAboutTrustSystem.vue'
 Vue.use(Router)
 
