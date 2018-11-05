@@ -10,14 +10,14 @@
       right
       app >
        <v-list >
-        <template  v-for="item in items">
+        <template  v-for="currency in currencyMenu" >
           <v-layout
             row 
-            v-if="item.heading"
-            :key="item.heading">
+            v-if="currency.heading"
+            :key="currency.heading">
             <v-flex xs6>
-              <v-subheader v-if="item.heading">
-                {{ item.heading }}
+              <v-subheader v-if="currency.heading">
+                {{ currency.heading }}
               </v-subheader>
             </v-flex>
             <v-flex xs6 class="text-xs-center">
@@ -25,29 +25,29 @@
             </v-flex>
           </v-layout>
           <v-list-group
-            v-else-if="item.children"
-            :prepend-icon="item.model ? item.arrowIcon : item['arrowIcon-alt']"
+            v-else-if="currency.children"
+            :prepend-icon="currency.model ? currency.arrowIcon : currency['arrowIcon-alt']"
             append-icon=""
-            v-model="item.model"
-            :key="item.text" >
+            v-model="currency.model"
+            :key="currency.text" >
 
             <v-list-tile slot="activator">
               <v-list-tile-content  >
                 <v-list-tile-sub-title>
-                  <span class="navThem">{{ item.text }}</span>
+                  <span class="navThem">{{ currency.text }}</span>
                 </v-list-tile-sub-title>
               </v-list-tile-content>
 
               <v-list-tile-action>
-              <v-icon v-if="item.icon" >{{ item.icon }}</v-icon>
-              <p v-if="item.class" :class="item.class"></p>
+              <v-icon v-if="currency.icon" >{{ currency.icon }}</v-icon>
+              <p v-if="currency.class" :class="currency.class"></p>
             </v-list-tile-action>
 
             </v-list-tile>
             <v-list-tile
-              v-for="(child, i) in item.children"
+              v-for="(child, i) in currency.children"
               :key="i"
-              @click="sidebar(child.path)"
+              @click="routingMenu(child.text)"
             >
               
               <v-list-tile-content >
@@ -62,15 +62,15 @@
               
             </v-list-tile>
           </v-list-group>
-          <v-list-tile v-else @click="routing(item.path)" :key="item.text">
+          <v-list-tile v-else @click="routingMenu(currency.text)" :key="currency.text">
             <v-list-tile-content style="text-align:right">
               <v-list-tile-sub-title >
-                <span class="navThem">{{ item.text }}</span>
+                <span class="navThem">{{ currency.text }}</span>
               </v-list-tile-sub-title>
             </v-list-tile-content>
             
             <v-list-tile-action>
-              <v-icon>{{ item.icon }}</v-icon>
+              <v-icon>{{ currency.icon }}</v-icon>
             </v-list-tile-action>
             
           </v-list-tile>
@@ -111,7 +111,7 @@
             <v-list-tile
             v-for="(profile, index) in Profiles"
             :key="index"
-            @click="routing(profile.path)"
+            @click="routingMenu(profile.text)"
             class="menuFont"
             >
             <v-icon>{{profile.icon}}</v-icon>
@@ -155,14 +155,7 @@
   export default {
   data: () => ({
       drawer: true,
-      items: [
-        { icon: 'lightbulb_outline', text:'بیت کوین', path:'/Bitcoin'},
-        { icon: 'touch_app', text:'اتریوم', path:'/Ethereum'},
-        { icon: 'archive', text:'ریپل', path:'/Ripple'},
-        { icon: 'delete', text:'زد کش', path:'/Zcash'},
-        { icon: 'delete', text:'زد کش1', path:'/Zcash'},
-        { icon: 'touch_app', text:'یک سوال دارید؟', path:'/HaveQuestion',},
-      ],
+      
       Profiles: [
         { title: 'sadrSys',icon:'account_circle'},
         { title: 'ویرایش پروفایل', path:'EditYourProfile',icon:'home'},
@@ -179,7 +172,7 @@
       source: String
     },
     methods:{
-      
+      ...mapActions(['routingMenu']),
       ...mapActions('auth',{ authLogout: 'logout' }),
 
       logout(){
@@ -194,6 +187,8 @@
     mounted(){
      console.log(this.user);
     }, computed: {
+      ...mapState(['currencyMenu']),
+
       ...mapState ('auth', {user: 'payload'})
     }
 }

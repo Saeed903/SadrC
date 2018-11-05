@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormSell/>
+        <FormSell :currency="currency"/>
         <Transaction/>
         <Footer/>
     </div>
@@ -9,7 +9,15 @@
 import Transaction from './../components/Advertise.vue'
 import FormSell from './../components/FormSell.vue'
 import Footer from './../components/Footer.vue'
+
+import { mapState } from 'vuex';
+
 export default{
+
+  computed:{
+      ...mapState(['currency']),
+  },
+
   data(){
       return{
           isTrader:0
