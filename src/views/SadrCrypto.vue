@@ -1,8 +1,5 @@
 <template>
     <div>
-        <div class="topImg">
-            <img class="mineBitcoin" src="./../../public/img/CryptoImage/photoCoin.jpg" alt="">
-        </div>
         <div class="wall">
             <p class="boldText">خرید و فروش بیت کوین در نزدیکی شما</p>
             <p class="safeText">.فوری. امن. خصوصی</p>
@@ -77,7 +74,8 @@ import QrcodeVue from 'qrcode.vue'
 export default{
     data:() => ({
         isTrader:0,
-        btrAddr: 'bitcoin:18JsNRxD7Tc8KDnCYkx7y98w22fgpgARMn'
+        btrAddr: 'bitcoin:18JsNRxD7Tc8KDnCYkx7y98w22fgpgARMn',
+       
     }),
     components:{
         Transaction,
