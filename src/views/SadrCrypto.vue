@@ -89,11 +89,10 @@ export default{
     margin-bottom:40px;
 }
 .wall{
-    background-color:#f5f5f5;
     border:1px solid #e3e3e3;
     margin-bottom:40px;
     height:220px;
-    box-shadow:1px 1px 10px rgb(87, 83, 83);
+    box-shadow:1px 1px 10px rgb(238, 231, 231);
 }
 .boldText{
     text-align:center;
