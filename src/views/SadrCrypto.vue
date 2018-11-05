@@ -80,7 +80,7 @@ export default{
     components:{
         Transaction,
         Footer,
-        QrcodeVue
+        QrcodeVue,
     }
   };
 </script>
@@ -97,7 +97,7 @@ export default{
 .boldText{
     text-align:center;
     font-size:25px;
-    font-family:Georgia;
+    font-family:irsans;
     color:black;
     margin-top:25px;
 }
@@ -105,13 +105,13 @@ export default{
     text-align:center;
     color:#f58220;
     font-size:25px;
-    font-family:b titr;
+    font-family:irsans;
     margin-top:25px;
 }
 .introduceText{
     text-align:center;
     font-size:15px;
-    font-family:b titr;
+    font-family:irsans;
     color:#337ab7;
     margin-top:25px;
     line-height:1;
@@ -128,7 +128,7 @@ export default{
     color:black;
     text-align:center;
     font-size:18px;
-    font-family:b nazanin;
+    font-family:irsans;
     text-shadow:1px 2px 10px rgb(49, 47, 47);
     text-decoration:none;
 }
@@ -142,7 +142,7 @@ export default{
 .bitcoinText{
     text-align:center;
     font-size:28px;
-    font-family:b titr;
+    font-family:irsans;
     color:rgb(97, 91, 91);
     text-shadow:1px 1px 4px rgb(179, 169, 169)
 }
@@ -178,7 +178,7 @@ export default{
     color:black;
     margin-top:15px;
     margin-left:10px;
-    font-family:b nazanin;
+    font-family:irsans;
 }
 .rightText{
     text-align:right
@@ -192,14 +192,14 @@ export default{
 }
 .trustText{
     font-size:25px;
-    font-family:b nazanin;
+    font-family:irsans;
     color:black;
     text-align:center;
     text-shadow:1px 1px 4px rgb(134, 129, 129);
 }
 .secondTrustText{
     font-size:20px;
-    font-family:b nazanin;
+    font-family:irsans;
     color:rgb(59, 54, 54);
     text-align:center;
     text-shadow:1px 1px 4px rgb(138, 131, 131);
