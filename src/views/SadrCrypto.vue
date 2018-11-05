@@ -1,7 +1,22 @@
 <template>
     <div>
+        <v-layout>
+            <v-flex xs12 sm6 offset-sm3>
+                <v-card hover>
+                <v-card-title primary-title>
+                    <div>
+                        <h3 class="title mb-0">خرید و فروش بیت کوین در نزدیکی شما</h3>
+                        <div color="orange " class="font-weight-bold text">فوری.امن.خصوصی</div>
+                    </div>
+                </v-card-title>
+                <v-card-actions>
+                    <v-btn flat color="green">ثبت نام رایگان</v-btn>
+                </v-card-actions>
+                </v-card>
+            </v-flex>
+        </v-layout>
         <div class="wall">
-            <p class="boldText">خرید و فروش بیت کوین در نزدیکی شما</p>
+            <p class="white--text title font-weight-medium text-xs-center " >خرید و فروش بیت کوین در نزدیکی شما</p>
             <p class="safeText">.فوری. امن. خصوصی</p>
             <p class="introduceText">
                 <span class="orangeText">بیت کوین تجاری</span>
@@ -89,10 +104,10 @@ export default{
     margin-bottom:40px;
 }
 .wall{
-    border:1px solid #e3e3e3;
+    border:3px solid #e3e3e3;
     margin-bottom:40px;
     height:220px;
-    box-shadow:1px 1px 10px rgb(238, 231, 231);
+    box-shadow:1px 1px 10px rgb(117, 111, 111);
 }
 .boldText{
     text-align:center;
