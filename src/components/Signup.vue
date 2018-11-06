@@ -39,6 +39,8 @@
     <v-btn @click="submit">submit</v-btn>
     <v-btn @click="clear">clear</v-btn>
   </form>
+  <p>{{btrAddr}}</p>
+        <qrcode-vue :value="btrAddr.slice(8)"></qrcode-vue>
   <Footer></Footer>
   </div>
 </template>
@@ -46,7 +48,7 @@
   import Vue from 'vue'
   import VeeValidate from 'vee-validate'
   import Footer from './../components/Footer.vue'
-
+import QrcodeVue from 'qrcode.vue'
   Vue.use(VeeValidate)
 
   export default {
@@ -54,7 +56,8 @@
       validator: 'new'
     },
     components:{
-      Footer
+      Footerو
+      QrcodeVue,
     },
     data: () => ({
       name: '',

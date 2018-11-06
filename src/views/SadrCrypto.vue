@@ -21,7 +21,7 @@
         </div>
         <div class="twoSection">
             <div>
-                <p class="bitcoinText">خرید بیت کوین آنلاین در جمهوری اسلامی ایران</p>
+                <p class="text-xs-center font-weight-bold headline white--text pt-3">خرید بیت کوین آنلاین در جمهوری اسلامی ایران</p>
             </div>
             <div>
                 <Transaction></Transaction>
@@ -30,7 +30,7 @@
 
         <div class="twoSection">
             <div>
-                <p class="bitcoinText">فروش بیت کوین آنلاین در جمهوری اسلامی ایران</p>
+                <p class="text-xs-center font-weight-bold headline white--text pt-3">فروش بیت کوین آنلاین در جمهوری اسلامی ایران</p>
             </div>
             <div>
                 <Transaction></Transaction>
@@ -39,30 +39,33 @@
 
         <div class="twoSection">
             <div>
-                <p class="bitcoinText">فروش بیت کوین برای نقدی در نزدیکی جمهوری اسلامی ایران</p>
+                <p class="text-xs-center font-weight-bold headline white--text pt-3">فروش بیت کوین برای نقدی در نزدیکی جمهوری اسلامی ایران</p>
             </div>
             <div>
                 <Transaction></Transaction>
             </div>
         </div>
-       
-        <div class="sadrNews">
-            <p class="topNewsText">sadrCrypto.com news</p>
-            <v-divider class="my-3"></v-divider>
-            <p><router-link to="MoreToolSadrCrypto" class="newsText">ابزارهای بیشتر برای معاملات</router-link></p>
-            <v-divider class="my-3"></v-divider>
-            <p> <router-link to="LogInPageChange" class="newsText">تغییر صفحه ورود به سیستم</router-link></p>
-            <v-divider class="my-3"></v-divider>
-            <p><router-link to="Compensation" class="newsText">جبران برای کاربران متعلق به Bash (BCH) تعادل</router-link></p>
-            <v-divider class="my-3"></v-divider>
-            <p><router-link to="SadrCryptoStatement" class="newsText">بیانیه sadrCrypto در مورد چنگال سخت ممکن در 1 آگوست 2017</router-link></p>
-            <v-divider class="my-3"></v-divider>
-            <p><router-link to="TransactionSystem" class="newsText">سیستم هزینه معامله بیت کوین جدید</router-link></p>
-            <p class="rightText">بیشتر بخوانید<router-link to="" class="newsText">sadrCrypto.com blog</router-link></p>
+        <div class="farzad">
+           <v-card>
+               <v-card-text>اخبار صدر سیستم</v-card-text>
+               <v-divider></v-divider>
+
+               <v-card-text>ابزار بیشتر برای معاملات خاموش</v-card-text>
+               <v-divider></v-divider>
+
+               <v-card-text>تغییرات صفحه ورود به سیستم</v-card-text>
+               <v-divider></v-divider>
+
+               <v-card-text>جبران خسارت برای کاربران دارای تعادل نقدی</v-card-text>
+               <v-divider></v-divider>
+
+               <v-card-text>سیستم جدید هزینه تراکنش برای بیت کوین</v-card-text>
+               <v-divider></v-divider>
+               
+               <v-card-text>اطلاعات بیشتر در وبلاگ صدر سیستم</v-card-text>
+           </v-card>
         </div>
         
-        <p>{{btrAddr}}</p>
-        <qrcode-vue :value="btrAddr.slice(8)"></qrcode-vue>
         <div>
              <Footer></Footer>
         </div>
@@ -71,7 +74,6 @@
 <script>
 import Transaction from './../components/Advertise.vue'
 import Footer from './../components/Footer.vue'
-import QrcodeVue from 'qrcode.vue'
 
 export default{
     data:() => ({
@@ -83,11 +85,17 @@ export default{
     components:{
         Transaction,
         Footer,
-        QrcodeVue,
     }
   };
 </script>
 <style scoped>
+.farzad{
+    width:80%;
+    margin-right:auto;
+    margin-left:auto;
+    display:block;
+    margin-top:50px;
+}
 .digitalCurrency{
     margin-bottom:40px;
 }
@@ -154,7 +162,7 @@ export default{
     border:1px solid rgb(160, 149, 149);
     box-shadow:1px 1px 10px rgb(87, 83, 83);
     margin-top:50px;
-    background-color:#f3f0f0;
+    background-color:#727070;
 }
 .sadrNews{
     border:1px solid #e3e3e3;
