@@ -1,36 +1,23 @@
 <template>
     <div>
-        <v-layout>
-            <v-flex xs12 sm6 offset-sm3>
-                <v-card hover>
-                <v-card-title primary-title>
-                    <div>
-                        <h3 class="title mb-0">خرید و فروش بیت کوین در نزدیکی شما</h3>
-                        <div color="orange " class="font-weight-bold text">فوری.امن.خصوصی</div>
-                    </div>
-                </v-card-title>
-                <v-card-actions>
-                    <v-btn flat color="green">ثبت نام رایگان</v-btn>
-                </v-card-actions>
-                </v-card>
-            </v-flex>
-        </v-layout>
-        <div class="wall">
-            <p class="white--text title font-weight-medium text-xs-center " >خرید و فروش بیت کوین در نزدیکی شما</p>
-            <p class="safeText">.فوری. امن. خصوصی</p>
-            <p class="introduceText">
-                <span class="orangeText">بیت کوین تجاری</span>
+        <div class="wall" >
+            <p class="white--text title font-weight-bold text-xs-center pa-3" >خرید و فروش بیت کوین در نزدیکی شما</p>
+            <p color="red" class="white--text title font-weight-bold text-xs-center orange--text">فوری . امن . خصوصی</p>
+            <p class="text-xs-center font-weight-bold title">
+                <span class="orange--text">تجارت بیت کوین</span>
                 <router-link to="/BitcoinCity" class="hoverDecoration">در 16370 شهر</router-link>
-                <span class="orangeText">و</span>
+                <span class="orange--text">و</span>
                 <router-link to="/BitcoinCountry" class="hoverDecoration">248 کشور</router-link>
-                <span class="orangeText">شامل</span>
+                <span class="orange--text">شامل</span>
                 <router-link to="/RepublicIran" class="hoverDecoration">جمهوری اسلامی ایران</router-link>
             </p>
-            <v-btn class="signButton" color="success" to="/Signup" block>ثبت نام رایگان</v-btn>
+            <div class="text-xs-center">
+                <v-btn class="primary signButton" slot="activator" round>ثبت نام رایگان</v-btn>
+            </div>
         </div>  
-        <div class="digitalCurrency">
-            <p class="trustText">خرید و فروش ارز دیجیتال</p>
-            <p class="secondTrustText">SadrCrytpo ساده ترین و مطمئن ترین مکان برای خرید، فروش و مدیریت ارز دیجیتال خود است.</p>
+        <div class="mt-5">
+            <p class="text-xs-center font-weight-bold title white--text">خرید و فروش ارز دیجیتال</p>
+            <p class="text-xs-center font-weight-bold title white--text">صدرکریپتو ساده ترین و مطمئن ترین مکان برای خرید، فروش و مدیریت ارز دیجیتال خود می باشد.</p>
         </div>
         <div class="twoSection">
             <div>
@@ -90,6 +77,7 @@ export default{
     data:() => ({
         isTrader:0,
         btrAddr: 'bitcoin:18JsNRxD7Tc8KDnCYkx7y98w22fgpgARMn',
+        show:false,
        
     }),
     components:{
@@ -104,10 +92,11 @@ export default{
     margin-bottom:40px;
 }
 .wall{
-    border:3px solid #e3e3e3;
+    border:1px solid #e3e3e3;
     margin-bottom:40px;
     height:220px;
-    box-shadow:1px 1px 10px rgb(117, 111, 111);
+    box-shadow:1px 2px 2px rgb(161, 156, 156);
+    background-color:rgb(61, 61, 61);
 }
 .boldText{
     text-align:center;
@@ -149,10 +138,10 @@ export default{
 }
 .hoverDecoration{
     text-decoration:none;
+    color:rgb(0, 174, 255)
 }
 .hoverDecoration:hover{
     text-decoration:underline;
-    text-shadow:1px 1px 4px rgb(137, 137, 235);
 }
 .bitcoinText{
     text-align:center;
@@ -169,7 +158,6 @@ export default{
 }
 .sadrNews{
     border:1px solid #e3e3e3;
-    background-color:#f5f5f5;
     width:500px;
     max-width:100%;
     margin-right:auto;
@@ -219,6 +207,5 @@ export default{
     text-align:center;
     text-shadow:1px 1px 4px rgb(138, 131, 131);
 }
-
 
 </style>
