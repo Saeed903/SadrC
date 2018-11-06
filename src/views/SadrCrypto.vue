@@ -45,7 +45,7 @@
                 <Transaction></Transaction>
             </div>
         </div>
-        <div class="farzad">
+        <div class="cardBox">
            <v-card>
                <v-card-text>اخبار صدر سیستم</v-card-text>
                <v-divider></v-divider>
@@ -89,12 +89,13 @@ export default{
   };
 </script>
 <style scoped>
-.farzad{
+.cardBox{
     width:80%;
     margin-right:auto;
     margin-left:auto;
     display:block;
     margin-top:50px;
+    margin-bottom:50px;
 }
 .digitalCurrency{
     margin-bottom:40px;
