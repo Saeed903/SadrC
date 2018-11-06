@@ -47,6 +47,7 @@
             >
               <v-card-text class="subheading">صفحه ورودی خود را چک کنید و سپس به این صفحه بازگردید.اگر این موضوع همچنان ادامه دارد لطفا<router-link class="headline mb-0" to="" >تماس با پشتیبانی</router-link>
                 <v-btn block color="secondary" dark class="text-truncate"><v-icon>send</v-icon>ایمیل تایید را دوباره بفرستید</v-btn>
+                <v-btn><router-link to="/EditProfileAccountSecurity">EditProfileAccountSecurity</router-link></v-btn>
               </v-card-text>
             </v-card>
           </v-flex>
