@@ -1,7 +1,7 @@
 <template>
 <v-container fluid grid-list-md>
   <v-layout row wrap>
-   <v-flex d-flex xs12 sm6 md12>
+   <v-flex d-flex >
     <v-card >
       <v-card-text class="title" >
         <p class="text-md-center">خرید بیت کوین با استفاده از انتقال بانکی جمهوری اسلامی ایران با ریال ایران</p>
