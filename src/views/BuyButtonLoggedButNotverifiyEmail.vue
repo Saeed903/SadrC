@@ -56,7 +56,24 @@
       </v-flex>
     </v-layout>
   </v-flex>
-
+  <v-flex d-flex xs12 sm6 md4 child-flex>
+    <v-card color="purple" dark> 
+      <v-card-text>
+        <p class="title">شرایط تجارت با آلمان</p>
+        <div style="background-color:rgb(26, 29, 37)">
+          <p style="padding-right:20px">تایید احراز هویت <br>پرداخت وجه مورد توافق <br>بیت کوین</p>
+        </div>
+          <p class="title">ساعات کار</p>
+            <v-list two-line>
+              <ul v-for="item in items" :key="item" style="padding-right:25px">
+                <li>{{item}}</li>
+              </ul>
+            </v-list>
+        <p>زمان محلی:تهران</p>
+        <p><router-link to="">گزارش این تبلیغ</router-link></p>
+      </v-card-text>
+    </v-card>
+  </v-flex>
   
   <v-flex d-flex xs12 sm6 md8>
     <v-card  dark>
