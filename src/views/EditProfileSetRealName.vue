@@ -11,6 +11,7 @@
                 <p class="subheading">نام کامل خود را وارد کنید، همانطور که در حساب برگشت و اطلاعات مربوط به خرید آنلاین مرتبط است.</p>
                 <v-flex text-xs-center>
                 <v-btn @click="submit" class="primary">نام واقعی را تنظیم کنید</v-btn>
+                <v-btn to="/EditProfileVerifyPhoneNumberVerification">EditProfileVerifyPhoneNumberVerification</v-btn>
                 </v-flex>
             </v-card-text>
         </v-card>

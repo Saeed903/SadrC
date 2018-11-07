@@ -45,7 +45,7 @@
              color="red lighten-2"
              dark
             >
-              <v-card-text class="subheading">شما باید ایمل خود را تایید نمایید.قبل از آنکه سفارش بدهید ایمیل فرستاده شده را پیدا کرده و پس از تایید دوباره به این صفحه بازگردید.
+              <v-card-text class="subheading">شما باید ایمیل خود را تایید نمایید.قبل از آنکه سفارش بدهید ایمیل فرستاده شده را پیدا کرده و پس از تایید دوباره به این صفحه بازگردید.
                 اگر دوباره خطایی ملاحضه کردید می توانید با پشتیبانی<router-link class="headline mb-0" to="" >پشتیبانی</router-link>  تماس بگیرید.
                 <v-btn block color="secondary" dark class="text-truncate"><v-icon>send</v-icon>ارسال مجدد تاییدیه ایمیل</v-btn>
                 <v-btn><router-link to="/EditProfileAccountSecurity">EditProfileAccountSecurity</router-link></v-btn>
@@ -75,7 +75,7 @@
     </v-card>
   </v-flex>
   
-  <v-flex d-flex xs12 sm6 md8>
+  <v-flex d-flex xs12 sm6 md6>
     <v-card  dark>
       <v-card-title>صدرکریپتو از شما محافظت میکند</v-card-title>
       <v-card-text>
@@ -87,7 +87,7 @@
       </v-card-text>
     </v-card>
   </v-flex>
-  <v-flex d-flex xs12 sm6 md4>
+  <v-flex d-flex xs12 sm6 md6>
     <v-card  dark>
       <v-card-title class="title"> تذکر</v-card-title>
       <v-card-text class="subheading">
