@@ -100,21 +100,6 @@
       passwordAgain:'',
       confirmPassword:'',
       
-      checkbox: null,
-      dictionary: {
-        attributes: {
-          email: 'E-mail Address'
-          // custom attributes
-        },
-        custom: {
-          name: {
-            required: () => 'Name can not be empty',
-            max: 'The name field may not be greater than 30 characters'
-            // custom messages
-          },
-         
-        }
-      }
     }),
 
     mounted () {
@@ -133,29 +118,23 @@
       this.$refs.recaptcha.reset() // Direct call reset method
       },
       signUp () {
-        this.$validator.validateAll();
         //this.$refs.invisibleRecaptcha.execute();
-        if (this.valid){
+        if (this.$refs.form.validate()){
           const { User } = this.$FeathersVuex;
           const user = new User({
               username: this.user.username,
               email: this.user.email,
               password: this.user.password,
           });
-        user.save()
-          .then(user => {
-              console.log(user);
-              this.$router.push('/login');
-          });
+          user.save()
+            .then(user => {
+                console.log(user);
+                this.$router.push('/login');
+            });
         }
       },
       clear () {
-        this.name = ''
-        this.email = ''
-        this.password = ''
-        this.showPassword = ''
-        this.showConfirmPassword = ''
-        this.$validator.reset()
+        this.$refs.form.reset()
       }
     }
   }

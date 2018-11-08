@@ -15,12 +15,12 @@
             row 
             v-if="currency.heading"
             :key="currency.heading">
-            <v-flex xs6>
+            <v-flex xs6 >
               <v-subheader v-if="currency.heading">
                 {{ currency.heading }}
               </v-subheader>
             </v-flex>
-            <v-flex xs6 class="text-xs-center">
+            <v-flex xs6 >
               <a href="#!" class="body-2 black--text">ویرایش</a>
             </v-flex>
           </v-layout>
@@ -77,22 +77,34 @@
         </template>
       </v-list>
     </v-navigation-drawer>
-    
+
+  
     <v-toolbar fixed app >
-      <v-toolbar-title>
-            <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span></router-link>
-            <router-link to="BuyButtonLoggedButNotverifiyEmail" >BuyButtonLoggedButNotverifiyEmail</router-link>
-      </v-toolbar-title>
-      <v-toolbar-items >
-            <router-link to="PostTrade" class="menu">ثبت آگهی</router-link>
-            <router-link to="Forums" class="menu">انجمن ها</router-link>
-            <router-link to="Help" class="menu">کمک</router-link>
-      </v-toolbar-items>   
+      
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn flat to="PostTrade" class="menu">ثبت آگهی</v-btn>
+        <v-btn flat to="Forums" class="menu">انجمن ها</v-btn>
+        <v-btn flat to="Help" class="menu">کمک</v-btn>
+      </v-toolbar-items>
+      
+
+      
+      <v-card-text >
+        <v-toolbar-items v-if="!user"> 
+          <router-link to="Signup" class="freeRegister">{{signState}}</router-link>
+          <router-link to="Login" class="menu">ورود</router-link>
+        </v-toolbar-items>
+      </v-card-text>
+      
+      
+      
       <v-toolbar-items v-if="user" > 
         <router-link  to="EditYourProfile" class="menu">ویرایش پروفایل</router-link>
         <router-link  to="Wallet" class="menu">کیف پول</router-link>
+      
         <div class="text-xs-center">
-
           <v-menu 
           offset-y
           transition="slide-y-transition"
@@ -121,18 +133,16 @@
           </v-menu>
         </div>
         <v-btn flat @click="logout">خروج</v-btn>
-      </v-toolbar-items> 
-      <v-toolbar-items v-if="!user"> 
-        <router-link to="Signup" class="freeRegister">{{signState}}</router-link>
-        <router-link to="Login" class="menu">ورود</router-link>
-      </v-toolbar-items>
-        
+    </v-toolbar-items>
       
-     
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-    </v-toolbar>
 
-    
+      
+      <v-card-text class="text-sm-left headline">
+        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span></router-link>
+      </v-card-text>
+      
+    </v-toolbar>
+   
     <v-content>
       <v-container fill-height>
         <v-layout >
@@ -221,6 +231,7 @@
   font-size:15px;
   font-family:b titr;
   margin-left:10px;
+  
 }
 .menu{
   text-decoration:none;
