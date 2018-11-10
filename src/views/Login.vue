@@ -1,7 +1,7 @@
 <template>
   <v-container fluid grid-list-md>
-    <v-layout column d-flex>
-    <v-flex  xs12 sm6 md6 lg6>
+    <v-layout row wrap align-justify justify-center>
+    <v-flex  xs12 sm8 md8 lg6>
       <v-card>
       <v-form v-if="!loading" 
         @submit.prevent="login" 
@@ -54,6 +54,12 @@
       <v-card-text>
       <p class="newTo">new to sadrCrypto?<router-link to="/SignUp" class="signIn">ثبت نام کنید</router-link></p>
       </v-card-text>
+       <vue-recaptcha
+            theme = "dark"
+            @verify = "onVerify"
+            @expired = "onExpired"
+            :sitekey = "sitekey">
+        </vue-recaptcha>
       </v-card-text>
       </v-card>
     </v-flex>
@@ -63,16 +69,20 @@
   </v-container>
 </template>
 <script>
- 
+ import Vue from 'vue'
+ import VeeValidate from 'vee-validate'
  import Footer from './../components/Footer.vue'
  import { mapState, mapActions } from 'vuex';
+ import VueRecaptcha from 'vue-recaptcha'; 
 
+ Vue.use(VeeValidate)
  export default {
     $_veeValidate: {
       validator: 'new'
     },
     components:{
-        Footer
+        Footer,
+        VueRecaptcha
     },
     data: () => ({
       valid: false,
