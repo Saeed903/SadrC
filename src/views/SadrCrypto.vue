@@ -49,26 +49,25 @@
             </div>
         </div>
         <div class="cardBox">
-            <v-card>
-               <v-card-text class="text-xs-right title font-weight-bold">اخبار صدر سیستم</v-card-text>
-               <v-divider></v-divider>
+                <v-card>
+                <v-card-text class="text-xs-right title font-weight-bold">اخبار صدر سیستم</v-card-text>
+                <v-divider></v-divider>
 
-               <v-card-text class="text-xs-right body-1 font-weight-medium"><router-link class="routerLink" to="">ابزار بیشتر برای معاملات خاموش</router-link></v-card-text>
-               <v-divider></v-divider>
+                <v-card-text class="text-xs-right body-1 font-weight-medium"><router-link class="routerLink" to="">ابزار بیشتر برای معاملات خاموش</router-link></v-card-text>
+                <v-divider></v-divider>
 
-               <v-card-text class="text-xs-right body-1 font-weight-medium"><router-link class="routerLink" to="">تغییرات صفحه ورود به سیستم</router-link></v-card-text>
-               <v-divider></v-divider>
+                <v-card-text class="text-xs-right body-1 font-weight-medium"><router-link class="routerLink" to="">تغییرات صفحه ورود به سیستم</router-link></v-card-text>
+                <v-divider></v-divider>
 
-               <v-card-text class="text-xs-right body-1 font-weight-medium"><router-link class="routerLink" to="">جبران خسارت برای کاربران دارای تعادل نقدی</router-link></v-card-text>
-               <v-divider></v-divider>
+                <v-card-text class="text-xs-right body-1 font-weight-medium"><router-link class="routerLink" to="">جبران خسارت برای کاربران دارای تعادل نقدی</router-link></v-card-text>
+                <v-divider></v-divider>
 
-               <v-card-text class="text-xs-right body-1 font-weight-medium"><router-link class="routerLink" to="">سیستم جدید هزینه تراکنش برای بیت کوین</router-link></v-card-text>
-               <v-divider></v-divider>
-               
-               <v-card-text class="text-xs-left body-1 font-weight-medium">اطلاعات بیشتر در<router-link class="routerLink" to=""> وبلاگ صدر سیستم </router-link></v-card-text>
-            </v-card>
+                <v-card-text class="text-xs-right body-1 font-weight-medium"><router-link class="routerLink" to="">سیستم جدید هزینه تراکنش برای بیت کوین</router-link></v-card-text>
+                <v-divider></v-divider>
+                
+                <v-card-text class="text-xs-left body-1 font-weight-medium">اطلاعات بیشتر در<router-link class="routerLink" to=""> وبلاگ صدر سیستم </router-link></v-card-text>
+                </v-card>
         </div>
-        
         <div>
              <Footer></Footer>
         </div>
