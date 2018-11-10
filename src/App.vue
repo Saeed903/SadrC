@@ -146,7 +146,7 @@
     </v-toolbar>
    
     <v-content>
-      <v-container fill-height>
+      <v-container >
         <v-layout >
           <v-flex >
             <transition name="slide-fade" mode="out-in">
