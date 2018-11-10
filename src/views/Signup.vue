@@ -62,28 +62,28 @@
           required
         ></v-text-field>
         
-        <v-card-text>
+        
         <vue-recaptcha
             theme = "dark"
             @verify = "onVerify"
             @expired = "onExpired"
             :sitekey = "sitekey">
         </vue-recaptcha>
-        </v-card-text>
-        <v-card-text >
+        
+        
         <v-btn type="submit" class="primary" :disabled="!valid" >ارسال</v-btn>
         <v-btn @click="clear" class="primary">پاک کردن</v-btn>
-        </v-card-text>
+        
       </v-form>
       
       <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
-      <v-card-text >
+      
       <p class="subheading">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="logLink">ورود</router-link></p>
-      </v-card-text>
-      <v-card-text >
+      
+      
       <p class="subheading">رمز عبور را فراموش کرده اید؟<router-link to="/ResetPassword" class="resetLink">.رمز عبور خودتان را باز نشانی کنید</router-link></p>
       </v-card-text>
-      </v-card-text>
+      
     </v-card>
     </v-flex>
   </v-layout>
