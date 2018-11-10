@@ -1,8 +1,8 @@
 <template>
-  <v-container grid-list-md >
-  <v-layout row wrap align-justify justify-center>
-    <v-flex d-flex xs12 sm6 md8 lg8>
-    <v-card>
+ 
+  <v-layout grid-list-md  row wrap align-justify justify-center >
+    <v-flex d-flex   xs12 md6 sm6 lg6>
+    <v-card  >
       <v-card-text>
       <v-form v-model="valid"  
         v-if="!loading"
@@ -87,7 +87,6 @@
     </v-card>
     </v-flex>
   </v-layout>
-</v-container>
 </template>
 <script>
   import Vue from 'vue'
