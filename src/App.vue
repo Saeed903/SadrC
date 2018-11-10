@@ -83,10 +83,10 @@
       
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn flat to="PostTrade" class="menu">ثبت آگهی</v-btn>
-        <v-btn flat to="Forums" class="menu">انجمن ها</v-btn>
-        <v-btn flat to="Help" class="menu">کمک</v-btn>
+      <v-toolbar-items>
+        <router-link flat to="PostTrade" class="menu">ثبت آگهی</router-link>
+        <router-link flat to="Forums" class="menu">انجمن ها</router-link>
+        <router-link flat to="Help" class="menu">کمک</router-link>
       </v-toolbar-items>
       
 
@@ -138,7 +138,7 @@
 
       
       <v-card-text class="text-sm-left headline">
-        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span></router-link>
+        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span><v-icon>home</v-icon></router-link>
       </v-card-text>
       
     </v-toolbar>
