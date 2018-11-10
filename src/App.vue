@@ -140,7 +140,7 @@
 
       
       <v-card-text class="text-sm-left headline">
-        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span><v-icon>home</v-icon></router-link>
+        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span></router-link>
       </v-card-text>
       
     </v-toolbar>
@@ -170,11 +170,11 @@
       
       Profiles: [
         { title: 'sadrSys',icon:'account_circle'},
-        { title: 'ویرایش پروفایل', path:'EditYourProfile',icon:'home'},
+        { title: 'ویرایش پروفایل', path:'/EditYourProfile',icon:'home'},
         { title: 'داشبورد', path:'/DashBoard',icon:'fas fa-tachometer-alt'},
-        { title: 'بازرگان', path:'Merchant' },
-        { title: 'قابل اعتماد', path:'Trusted' },
-        { title: 'پشتیبانی', path:'SupportDrop' },
+        { title: 'بازرگان', path:'/Merchant' },
+        { title: 'قابل اعتماد', path:'/Trusted' },
+        { title: 'پشتیبانی', path:'/SupportDrop' },
         { title: 'خروج', path:'' },
       ],
       signState:'ثبت نام رایگان',
