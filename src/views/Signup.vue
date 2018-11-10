@@ -14,7 +14,7 @@
         <v-card-text>
         <p class="subheading">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
         </v-card-text>
-        <v-card-text>        
+               
         <v-text-field 
           v-validate="'required|max:30'"
           v-model="user.username"
@@ -24,8 +24,8 @@
           class="textFields"
           data-vv-name="username"
         ></v-text-field>
-        </v-card-text>
-        <v-card-text>
+        
+        
         <v-text-field
           v-validate="'required|email'"
           v-model="user.email"
@@ -35,8 +35,8 @@
           data-vv-name="email"
           required
         ></v-text-field>
-        </v-card-text>
-        <v-card-text>
+        
+       
         <v-text-field
           v-validate="'required|max:20'"
           v-model="user.password"
@@ -48,8 +48,8 @@
           data-vv-name="password"
           required
         ></v-text-field>
-        </v-card-text>
-        <v-card-text>
+        
+        
         <v-text-field
           v-validate="'required|max:20'"
           v-model="showPassword"
@@ -61,7 +61,7 @@
           data-vv-name="passwordAgain"
           required
         ></v-text-field>
-        </v-card-text>
+        
         <v-card-text>
         <vue-recaptcha
             theme = "dark"
