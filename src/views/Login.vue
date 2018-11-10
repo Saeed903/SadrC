@@ -1,17 +1,21 @@
 <template>
   <v-container fluid grid-list-md>
     <v-layout column d-flex>
+      
     <v-flex  xs12 sm6 md6>
+      <v-card>
       <v-form v-if="!loading" 
         @submit.prevent="login" 
         @keydown.prevent.enter 
         v-model="valid"
       >
-      <p class="logText">ورود</p>
-      <div class="longText">
+      <v-card-text class="headline">
+      <p class="text-xs-center">ورود</p>
+      </v-card-text>
+      <v-card-text class="subheading">
         <p>با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید</p>
-      </div>
-      <div class="logBorder">
+      </v-card-text>
+      <v-card-text>
         <v-text-field
           v-validate="'required|max:30'"
           v-model="user.email"
@@ -23,6 +27,8 @@
           required
         >
         </v-text-field>
+      </v-card-text>
+      <v-card-text>
         <v-text-field
           v-validate="'required|max:20'"
           v-model="user.password"
@@ -35,22 +41,22 @@
           required
         >
         </v-text-field>
-      <div>
-        <p class="humanConfirm">لطفا تایید کنید که شما یک انسان هستید</p>
-      </div>
-      <div >
-        <p>محل عکس</p>
-      </div >
-        <div style="text-align:center;">
+      </v-card-text>
+      <v-card-text>
+      </v-card-text>
+      <v-card-text>
         <v-btn type="submit" class="primary"   >ورود</v-btn>
-        </div>
-      </div>
+      </v-card-text>
       </v-form>
-    <div>
+    <v-card-text>
+      <v-card-text>
       <router-link class="forgotPass" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link>
-    
+      </v-card-text>
+      <v-card-text>
       <p class="newTo">new to sadrCrypto?<router-link to="/SignUp" class="signIn">ثبت نام کنید</router-link></p>
-    </div>
+      </v-card-text>
+      </v-card-text>
+      </v-card>
     </v-flex>
     <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
     <Footer></Footer> 

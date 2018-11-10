@@ -1,14 +1,20 @@
 <template>
-  <v-container  grid-list-md>
-  <v-layout column wrap>
+  <v-container grid-list-md >
+  <v-layout row wrap align-justify justify-center>
+    <v-flex d-flex xs12 sm6 md8 lg8>
     <v-card>
-   <v-flex d-flex xs12 sm6 md6 >
+      <v-card-text>
       <v-form v-model="valid"  
         v-if="!loading"
         @submit.prevent="signUp"
         @keydown.prevent.enter>
-        <p class="registerAccount">یک حساب جدید ثبت کنید</p>
-        <p class="start">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
+        <c-card-text class="headline text-xs-center">
+        <p claas="text-xs-center" >یک حساب جدید ثبت کنید</p>
+        </c-card-text>
+        <v-card-text>
+        <p class="subheading">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
+        </v-card-text>
+        <v-card-text>        
         <v-text-field 
           v-validate="'required|max:30'"
           v-model="user.username"
@@ -18,6 +24,8 @@
           class="textFields"
           data-vv-name="username"
         ></v-text-field>
+        </v-card-text>
+        <v-card-text>
         <v-text-field
           v-validate="'required|email'"
           v-model="user.email"
@@ -27,6 +35,8 @@
           data-vv-name="email"
           required
         ></v-text-field>
+        </v-card-text>
+        <v-card-text>
         <v-text-field
           v-validate="'required|max:20'"
           v-model="user.password"
@@ -38,6 +48,8 @@
           data-vv-name="password"
           required
         ></v-text-field>
+        </v-card-text>
+        <v-card-text>
         <v-text-field
           v-validate="'required|max:20'"
           v-model="showPassword"
@@ -49,23 +61,31 @@
           data-vv-name="passwordAgain"
           required
         ></v-text-field>
+        </v-card-text>
+        <v-card-text>
         <vue-recaptcha
             theme = "dark"
             @verify = "onVerify"
             @expired = "onExpired"
             :sitekey = "sitekey">
         </vue-recaptcha>
-       
+        </v-card-text>
+        <v-card-text >
         <v-btn type="submit" class="primary" :disabled="!valid" >ارسال</v-btn>
         <v-btn @click="clear" class="primary">پاک کردن</v-btn>
+        </v-card-text>
       </v-form>
-      </v-flex>
-      <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
       
-      <p class="haveAccount">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="logLink">ورود</router-link></p>
-      <p class="forgotPassword">رمز عبور را فراموش کرده اید؟<router-link to="/ResetPassword" class="resetLink">.رمز عبور خودتان را باز نشانی کنید</router-link></p>
-    
+      <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
+      <v-card-text >
+      <p class="subheading">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="logLink">ورود</router-link></p>
+      </v-card-text>
+      <v-card-text >
+      <p class="subheading">رمز عبور را فراموش کرده اید؟<router-link to="/ResetPassword" class="resetLink">.رمز عبور خودتان را باز نشانی کنید</router-link></p>
+      </v-card-text>
+      </v-card-text>
     </v-card>
+    </v-flex>
   </v-layout>
 </v-container>
 </template>
