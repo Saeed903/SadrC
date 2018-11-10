@@ -1,8 +1,7 @@
 <template>
   <v-container fluid grid-list-md>
     <v-layout column d-flex>
-      
-    <v-flex  xs12 sm6 md6>
+    <v-flex  xs12 sm6 md6 lg6>
       <v-card>
       <v-form v-if="!loading" 
         @submit.prevent="login" 
