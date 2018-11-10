@@ -85,9 +85,17 @@
       <v-spacer></v-spacer>
       <v-card-text>
       <v-toolbar-items>
-        <router-link  to="PostTrade" class="menu">ثبت آگهی</router-link>
-        <router-link  to="Forums" class="menu">انجمن ها</router-link>
-        <router-link  to="Help" class="menu">کمک</router-link>
+        <v-tooltip bottom>
+      <v-icon
+        slot="activator"
+      >
+        shopping-cart
+      </v-icon>
+      <span>ثبت آگهی</span>
+    </v-tooltip>
+        <router-link  to="PostTrade" class="menu"><v-icon>shopping_cart</v-icon></router-link>
+        <router-link  to="Forums" class="menu"><v-icon>group</v-icon></router-link>
+        <router-link  to="Help" class="menu"><v-icon>help</v-icon></router-link>
       </v-toolbar-items>
       </v-card-text>
       
@@ -140,7 +148,7 @@
 
       
       <v-card-text class="text-sm-left headline">
-        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span><v-icon>home</v-icon></router-link>
+        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span><v-icon color="grey">home</v-icon></router-link>
       </v-card-text>
       
     </v-toolbar>
@@ -243,13 +251,13 @@
   margin-left:5px;
 }
 .sadrCryptoText{
-  color:rgb(153, 68, 68);
+  color:rgb(235, 224, 224);
   text-decoration:none;
   
 }
 .littleText{
   text-decoration:none;
-  color:rgb(153, 68, 68);
+  color:rgb(235, 224, 224);
   font-size:15px;
   font-family:b titr;
 }
