@@ -2,7 +2,7 @@
 <div id="app">
   <v-app
     id="inspire"
-    
+    dark
   >
     <v-navigation-drawer
       v-model="drawer"
