@@ -85,9 +85,9 @@
       <v-spacer></v-spacer>
       <v-card-text>
       <v-toolbar-items>
-        <router-link flat to="PostTrade" class="menu">ثبت آگهی</router-link>
-        <router-link flat to="Forums" class="menu">انجمن ها</router-link>
-        <router-link flat to="Help" class="menu">کمک</router-link>
+        <router-link  to="PostTrade" class="menu">ثبت آگهی</router-link>
+        <router-link  to="Forums" class="menu">انجمن ها</router-link>
+        <router-link  to="Help" class="menu">کمک</router-link>
       </v-toolbar-items>
       </v-card-text>
       
