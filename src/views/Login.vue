@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <div class="logForm">
+  <v-container fluid grid-list-md>
+    <v-layout column d-flex>
+    <v-flex  xs12 sm6 md6>
       <v-form v-if="!loading" 
         @submit.prevent="login" 
         @keydown.prevent.enter 
@@ -50,9 +51,11 @@
     
       <p class="newTo">new to sadrCrypto?<router-link to="/SignUp" class="signIn">ثبت نام کنید</router-link></p>
     </div>
-    </div>
+    </v-flex>
+    <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
     <Footer></Footer> 
-  </div>
+  </v-layout>
+  </v-container>
 </template>
 <script>
  
@@ -130,7 +133,6 @@
   font-family:b nazanin;
   text-align:center;
   color:rgb(240, 238, 238);
-  text-shadow:1px 1px 3px rgb(240, 238, 238);
   margin-bottom:0;
   
 }
@@ -139,7 +141,6 @@
   font-family:b nazanin;
   padding:0 20px 0 20px;
   color:rgb(250, 241, 241);
-  text-shadow:1px 2px 2px rgb(248, 245, 245);
   margin-bottom:40px;
   
 }
@@ -149,41 +150,33 @@
   margin-right:auto;
   margin-left:auto;
   display:block;
-  box-shadow:2px 3px 3px rgb(250, 246, 246);
   margin-bottom:15px;
 }
 .forgotPass{
   text-decoration:none;
   font-size:16px;
   font-family:b nazanin;
-  text-shadow:0px 2px 2px rgb(250, 246, 246);
   color:rgb(250, 241, 241);
-  transition:text-shadow 0.1s;
   
   
 }
 .forgotPass:hover{
   text-decoration:none;
-  text-shadow:0px 3px 3px rgb(250, 246, 246);
 }
 .signIn{
   text-decoration:none;
   font-size:16px;
   font-family:b nazanin;
-  text-shadow:0px 2px 2px rgb(250, 246, 246);
-  transition:text-shadow 0.1s;
   color:rgb(250, 241, 241);
   
 }
 .signIn:hover{
   text-decoration:none;
-  text-shadow:0px 3px 3px rgb(250, 246, 246);
 }
 .newTo{
   text-decoration:none;
   font-size:16px;
   font-family:b nazanin;
-  text-shadow:0px 2px 2px rgb(250, 246, 246);
    color:rgb(250, 246, 246);
 }
 .textField{
@@ -192,8 +185,6 @@
 .humanConfirm{
   font-size:15px;
   font-family:b nazanin;
-  text-shadow:0px 2px 2px rgb(250, 246, 246);
- 
   color:rgb(250, 246, 246);
 }
 </style>
