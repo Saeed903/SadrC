@@ -1,6 +1,7 @@
 <template>
   <v-container  grid-list-md>
   <v-layout column wrap>
+    <v-card>
    <v-flex d-flex xs12 sm6 md6 >
       <v-form v-model="valid"  
         v-if="!loading"
@@ -64,7 +65,7 @@
       <p class="haveAccount">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="logLink">ورود</router-link></p>
       <p class="forgotPassword">رمز عبور را فراموش کرده اید؟<router-link to="/ResetPassword" class="resetLink">.رمز عبور خودتان را باز نشانی کنید</router-link></p>
     
-    
+    </v-card>
   </v-layout>
 </v-container>
 </template>
