@@ -19,6 +19,9 @@ import ChangePassword from './../components/EditProfile/ChangePassword.vue'
             EditYourProfileCo,
             BasicUserInformation,
             ChangePassword
+        },
+        methods:{
+            
         }
     }
 </script>

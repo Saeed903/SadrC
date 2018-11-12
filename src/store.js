@@ -52,8 +52,21 @@ export default new Vuex.Store({
   plugins:[
     service('users',{
       instanceDefaults:{
+        id: '',
         email : '',
         password : '',
+        tel: '',
+        mobile: '',
+        verifiedDate: '',
+        isVerified:'',
+        notVerifiedDate:'',
+        introduction:'',
+        emailVerifiedDate:'',
+        phoneVerifiedDate:'',
+        identityVerifiedDate:'',
+        identityCardImage:'',
+        realName:''
+
       }
     }),
     service('orders',{
