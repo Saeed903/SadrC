@@ -12,7 +12,8 @@ import '@fortawesome/fontawesome-free/css/all.css'
 
 
 Vue.use(Vuetify, {
-  rtl: true
+  rtl: true,
+  iconfont: 'mdi'
 });
 
 Vue.use(VeeValidate);

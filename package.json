@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.2.0",
-    "@mdi/font": "^2.6.95",
+    "@mdi/font": "^2.8.94",
     "@vue/cli-plugin-babel": "^3.0.0",
     "@vue/cli-plugin-e2e-cypress": "^3.0.0",
     "@vue/cli-plugin-pwa": "^3.0.0",
