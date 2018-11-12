@@ -1,15 +1,18 @@
 <template>
+<v-card>
+    <v-card-text>
     <div>
-        <div>
-            <p class="createBitcoin">.تبلیغات تجاری بیت کوین را ایجاد کنید</p>
-        </div>
-        <div class="advertisement">
-            <p class="beforeCreate">لطفا <router-link to="/Login" class="topLogText">ورود</router-link> یا <router-link to="/signUp" class="topLogText0">ثبت نام</router-link> قبل از ایجاد تبلیغات</p>
-        </div>
-        <div>
-            <p class="rules">قوانین و مقررات تبلیغاتی</p>
-            <ul>
-                <li>.برای نمایش تبلیغات شما باید بیت کوین را در کیف پول صدر کریپتو خود داشته باشید. شما برای تبلیغات با روش های پرداخت آنلاین و 0.04 بیت کوین یا بیشتر برای تبلیغات محلی (نقد) نیاز به 0.04 بیت کوین یا بیشتر دارید</li>
+        
+            <p class="headline">تبلیغات تجاری بیت کوین را ایجاد کنید.</p>
+        
+        
+            <p class="subheading">لطفا <router-link to="/Login" class="topLogText">ورود</router-link> یا <router-link to="/signUp" class="topLogText0">ثبت نام</router-link> قبل از ایجاد تبلیغات</p>
+        
+        <v-card-text>
+            <p class="headline">قوانین و مقررات تبلیغاتی</p>
+            
+            <ul class="subheading">
+                <li>.برای نمایش تبلیغات شما باید بیت کوین را در کیف پول صدر کریپتو خود داشته باشید. شما برای تبلیغات با روش های پرداخت آنلاین و 0.04<br> بیت کوین یا بیشتر برای تبلیغات محلی (نقد) نیاز به 0.04 بیت کوین یا بیشتر دارید</li>
                 <li>.برخی از روش های پرداخت مستلزم آن هستند که قبل از اینکه آگهی های شما قابل مشاهده باشند، باید شناسه،شناسایی شوند</li>
                 <li>.هر تبلیغ کننده هزینه های تراکنش تکمیل شده 1٪ از کل مبلغ تجاری است<span><router-link to="" class="fees">.تمام هزینه ها را در صفحه هزینه های ما مشاهده کنید</router-link></span></li>
                 <li>.هنگامی که یک بازرگانی باز شود، قیمت نهایی است، مگر اینکه یک اشتباه روشن در قیمت گذاری وجود داشته باشد</li>
@@ -19,6 +22,7 @@
                 <li>.همه ارتباطات باید در صدر کریپتواتفاق بیافتد</li>
                 <li>.روش های پرداخت مشخص شده است <span class="span">ریسک بالا</span> داشتن یک <span class="span">خطر عمده تقلب</span>.هنگام استفاده از روشهای پرداخت با ریسک بالا، مراقب باشید و همیشه آی دی را تأیید کنید</li>
             </ul>
+            </v-card-text>
         </div>
         <div>
             <p class="tradeType">نوع تجارت</p>
@@ -108,6 +112,8 @@
             <Footer/>
         </div>
     </div>
+    </v-card-text>
+</v-card>
 </template>
 <script>
 import Footer from './../components/Footer.vue'
@@ -130,83 +136,5 @@ import Footer from './../components/Footer.vue'
     }
 </script>
 <style scoped>
-.createBitcoin{
-    font-size:30px;
-    font-family:bold;
-    text-align:left;
-    color:black;
-    text-shadow:1px 4px 4px rgb(179, 166, 166);
-}
-.beforeCreate{
-    color:#a94442;
-    -font-size:15px;
-    font-family:b nazanin;
-    margin-left:15px;
-    margin-top:15px;
-}
-.advertisement{
-    background-color:#f2dede;
-    border:1px solid #ebccd1;
-    border-radius:4px;
-}
-.topLogText{
-    color:#3479b6;
-    font-size:15px;
-    font-family:b nazanin;
-    text-decoration:none;
-    text-shadow:none;
-}
-.topLogText:hover{
-    text-decoration:underline;
-    color:#23527c;
-}
-.rules{
-    color:inherit;
-    text-align:left;
-    font-size:20px;
-    font-family:b nazanin;
-    margin-top:10px;
-}
-.span{
-    color:black;
-    font-family:b nazanin;
-    font-weight:bold;
-    font-size:15px;
-}
-.fees{
-    text-decoration:none;
-    color:#3479b6;
-}
-.fees:hover{
-    text-decoration:underline;
-    color:#23527c;
-}
-.tradeType{
-    margin-top:21px;
-    margin-bottom:0;
-    color:rgb(3, 3, 3);
-    font-size:20px;
-    font-family:b nazanin;
-}
-.wantText{
-    margin-top:20px;
-    margin-left:0;
-    color:black;
-    font-size:17px;
-    font-family:b nazanin;
-}
-.kindTrade{
-    color:black;
-    font-size:20px;
-    font-family:b nazanin;
-    text-align:left;
-    text-shadow:1px 4px 4px rgb(129, 124, 124);
-}
-li{
-    color:rgb(7, 7, 7);
-    font-size:15px;
-    font-family:b nazanin;
-    text-align:left;
-    text-shadow:1px 4px 4px rgb(189, 175, 175);
-}
+
  </style>

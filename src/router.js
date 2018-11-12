@@ -55,14 +55,37 @@ import Support from './views/Support.vue'
 import Merchant from './views/Merchant.vue'
 import Trusted from './views/Trusted.vue'
 import SupportDrop from './views/SupportDrop.vue'
-import MoreAboutTrustSystemst from './views/MoreAboutTrustSystem.vue'
-Vue.use(Router)
+import MoreAboutTrustSystem from './views/MoreAboutTrustSystem.vue'
+import ErrorAuth from './views/ErrorAuth.vue'
 
 import store from './store';
+
+Vue.use(Router);
+
+const authFunction = function(to, from, next){
+    store.dispatch('auth/authenticate').then(()=>{
+      next();
+    }).catch(() => {
+      next();
+    })
+};
+
+const authPrivateFunction = function(to, from, next){
+  store.dispatch('auth/authenticate').then(()=>{
+    next();
+  }).catch(() => {
+    next('/ErrorAuth');
+  })
+}
 
 export default new Router({
   routes: [
  
+    {
+      path: '/ErrorAuth',
+      name: 'ErrorAuth',
+      component: ErrorAuth,
+    }, 
     {
       path: '/',
       name: 'Home',
@@ -76,9 +99,9 @@ export default new Router({
       }
     }, 
     {
-      path: '/MoreAboutTrustSystemst',
-      name: 'MoreAboutTrustSystemst',
-      component: MoreAboutTrustSystemst,
+      path: '/MoreAboutTrustSystem',
+      name: 'MoreAboutTrustSystem',
+      component: MoreAboutTrustSystem,
     }, 
     {
       path: '/SupportDrop',
@@ -109,13 +132,7 @@ export default new Router({
       path: '/SadrCrypto',
       name: 'SadrCrypto',
       component: SadrCrypto,
-      beforeEnter(to, from, next){
-        store.dispatch('auth/authenticate').then(()=>{
-          next();
-        }).catch(() => {
-          next();
-        })
-      }
+      beforeEnter: authFunction
     }, 
     {
       path: '/AdvertiserProfile',
@@ -290,7 +307,8 @@ export default new Router({
     {
       path: '/Forums',
       name: 'Forums',
-      component: Forums
+      component: Forums,
+      beforeEnter:authPrivateFunction
     },
     {
       path: '/PostTrade',
