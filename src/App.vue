@@ -85,26 +85,49 @@
       <v-spacer></v-spacer>
       <v-card-text>
       <v-toolbar-items>
-        <v-tooltip bottom>
-      <v-icon
-        slot="activator"
-      >
-        shopping-cart
-      </v-icon>
-      <span>ثبت آگهی</span>
-    </v-tooltip>
-        <router-link  to="PostTrade" class="menu"><v-icon>shopping_cart</v-icon></router-link>
-        <router-link  to="Forums" class="menu"><v-icon>group</v-icon></router-link>
-        <router-link  to="Help" class="menu"><v-icon>help</v-icon></router-link>
+
+        <router-link to="PostTrade">
+          <v-tooltip bottom>
+            <v-icon slot="activator" color="grey" dark >
+              shopping_cart
+            </v-icon>
+            <span>ثبت آگهی</span>
+          </v-tooltip>
+        </router-link>
+      
+        <router-link to="Forums">
+          <v-tooltip bottom>
+            <v-icon slot="activator" color="grey" dark>
+              group
+            </v-icon>
+            <span>انجمن ها</span>
+          </v-tooltip>
+        </router-link>
+
+        <router-link to="Help">
+          <v-tooltip bottom>
+            <v-icon slot="activator" color="grey" dark>
+              help
+            </v-icon>
+            <span>کمک</span>
+          </v-tooltip>
+        </router-link>
+
       </v-toolbar-items>
       </v-card-text>
-      
 
-      
       <v-card-text >
         <v-toolbar-items v-if="!user"> 
           <router-link to="Signup" class="freeRegister">{{signState}}</router-link>
-          <router-link to="Login" class="menu"><v-icon>lock_open</v-icon></router-link>
+          <router-link to="Login" class="menu">
+            <v-tooltip bottom>
+              <v-icon slot="activator" color="grey" dark>
+                lock_open
+              </v-icon>
+              <span>ورود</span>
+            </v-tooltip>
+          </router-link>
+
         </v-toolbar-items>
       </v-card-text>
       
@@ -146,7 +169,6 @@
     </v-toolbar-items>
       
 
-      
       <v-card-text class="text-sm-left headline">
         <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span><v-icon color="grey">home</v-icon></router-link>
       </v-card-text>
