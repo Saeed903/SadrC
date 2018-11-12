@@ -127,7 +127,7 @@
               <span>ورود</span>
             </v-tooltip>
           </router-link>
-
+          <router-link to="MoreAboutTrustSystem">more</router-link>
         </v-toolbar-items>
       </v-card-text>
       
