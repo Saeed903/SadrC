@@ -1,16 +1,20 @@
 <template>
-  <div>
-    <div class="logForm">
+  <v-container fluid grid-list-md>
+    <v-layout row wrap align-justify justify-center>
+    <v-flex  xs12 sm8 md8 lg6>
+      <v-card>
       <v-form v-if="!loading" 
         @submit.prevent="login" 
         @keydown.prevent.enter 
         v-model="valid"
       >
-      <p class="logText">ورود</p>
-      <div class="longText">
+      <v-card-text class="headline">
+      <p class="text-xs-center">ورود</p>
+      </v-card-text>
+      <v-card-text class="subheading">
         <p>با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید</p>
-      </div>
-      <div class="logBorder">
+      </v-card-text>
+      <v-card-text>
         <v-text-field
           v-validate="'required|max:30'"
           v-model="user.email"
@@ -22,6 +26,8 @@
           required
         >
         </v-text-field>
+      </v-card-text>
+      <v-card-text>
         <v-text-field
           v-validate="'required|max:20'"
           v-model="user.password"
@@ -34,37 +40,49 @@
           required
         >
         </v-text-field>
-      <div>
-        <p class="humanConfirm">لطفا تایید کنید که شما یک انسان هستید</p>
-      </div>
-      <div >
-        <p>محل عکس</p>
-      </div >
-        <div style="text-align:center;">
+      </v-card-text>
+      <v-card-text>
+      </v-card-text>
+      <v-card-text>
         <v-btn type="submit" class="primary"   >ورود</v-btn>
-        </div>
-      </div>
+      </v-card-text>
       </v-form>
-    <div>
+    <v-card-text>
+      <v-card-text>
       <router-link class="forgotPass" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link>
-    
+      </v-card-text>
+      <v-card-text>
       <p class="newTo">new to sadrCrypto?<router-link to="/SignUp" class="signIn">ثبت نام کنید</router-link></p>
-    </div>
-    </div>
+      </v-card-text>
+       <vue-recaptcha
+            theme = "dark"
+            @verify = "onVerify"
+            @expired = "onExpired"
+            :sitekey = "sitekey">
+        </vue-recaptcha>
+      </v-card-text>
+      </v-card>
+    </v-flex>
+    <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
     <Footer></Footer> 
-  </div>
+  </v-layout>
+  </v-container>
 </template>
 <script>
- 
+ import Vue from 'vue'
+ import VeeValidate from 'vee-validate'
  import Footer from './../components/Footer.vue'
  import { mapState, mapActions } from 'vuex';
+ import VueRecaptcha from 'vue-recaptcha'; 
 
+ Vue.use(VeeValidate)
  export default {
     $_veeValidate: {
       validator: 'new'
     },
     components:{
-        Footer
+        Footer,
+        VueRecaptcha
     },
     data: () => ({
       valid: false,
@@ -130,7 +148,6 @@
   font-family:b nazanin;
   text-align:center;
   color:rgb(240, 238, 238);
-  text-shadow:1px 1px 3px rgb(240, 238, 238);
   margin-bottom:0;
   
 }
@@ -139,7 +156,6 @@
   font-family:b nazanin;
   padding:0 20px 0 20px;
   color:rgb(250, 241, 241);
-  text-shadow:1px 2px 2px rgb(248, 245, 245);
   margin-bottom:40px;
   
 }
@@ -149,41 +165,33 @@
   margin-right:auto;
   margin-left:auto;
   display:block;
-  box-shadow:2px 3px 3px rgb(250, 246, 246);
   margin-bottom:15px;
 }
 .forgotPass{
   text-decoration:none;
   font-size:16px;
   font-family:b nazanin;
-  text-shadow:0px 2px 2px rgb(250, 246, 246);
   color:rgb(250, 241, 241);
-  transition:text-shadow 0.1s;
   
   
 }
 .forgotPass:hover{
   text-decoration:none;
-  text-shadow:0px 3px 3px rgb(250, 246, 246);
 }
 .signIn{
   text-decoration:none;
   font-size:16px;
   font-family:b nazanin;
-  text-shadow:0px 2px 2px rgb(250, 246, 246);
-  transition:text-shadow 0.1s;
   color:rgb(250, 241, 241);
   
 }
 .signIn:hover{
   text-decoration:none;
-  text-shadow:0px 3px 3px rgb(250, 246, 246);
 }
 .newTo{
   text-decoration:none;
   font-size:16px;
   font-family:b nazanin;
-  text-shadow:0px 2px 2px rgb(250, 246, 246);
    color:rgb(250, 246, 246);
 }
 .textField{
@@ -192,8 +200,6 @@
 .humanConfirm{
   font-size:15px;
   font-family:b nazanin;
-  text-shadow:0px 2px 2px rgb(250, 246, 246);
- 
   color:rgb(250, 246, 246);
 }
 </style>

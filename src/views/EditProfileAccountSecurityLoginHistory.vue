@@ -2,22 +2,23 @@
     <div>
         <p>تاریخ ورود</p>
         <router-link to="">بازگشت به امنیت حساب</router-link>
-         <v-data-table
-      class="text-xs-left"
-      :headers="headers"
-      :items="desserts"
-      :pagination.sync="pagination"
-      :total-items="totalDesserts"
-      :loading="loading"
-    >
-      <template slot="items" slot-scope="props">
-        <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
-        <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
-        <td class="text-xs-right">{{ props.item.price }}</td>
-        <td class="text-xs-right">{{ props.item.limits }}</td>
-        <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
-      </template>
-    </v-data-table>
+        <v-data-table
+            class="text-xs-left"
+            :headers="headers"
+            :items="desserts"
+            :pagination.sync="pagination"
+            :total-items="totalDesserts"
+            :loading="loading"
+        >
+
+            <template slot="items" slot-scope="props">
+                <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
+                <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
+                <td class="text-xs-right">{{ props.item.price }}</td>
+                <td class="text-xs-right">{{ props.item.limits }}</td>
+                <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
+            </template>
+        </v-data-table>
     </div>
 </template>
 <script>
