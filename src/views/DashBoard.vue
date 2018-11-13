@@ -1,12 +1,11 @@
 <template>
 
-<v-flex dflex lg8>
+
     <v-card>
        
-        <v-card-text>
+       
             <p class="headline text-xs-center">داشبورد</p>
-            <p class="subheading">در این صفحه شما میتوانید تبلیغات و معاملات خود را مشاهده و مدیریت کنید.</p>
-        </v-card-text>
+       
        
         <v-card-text>
             <v-card >
@@ -73,7 +72,7 @@
         <Footer></Footer>
         
     </v-card>
-</v-flex>
+
 
 </template>
 <script>
