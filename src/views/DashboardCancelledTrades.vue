@@ -1,25 +1,32 @@
 <template>
     <div>
-        <p>معاملات لغو شده، لغو شد</p>
+        <v-card-text class="text-xs-center">
+        <p >معاملات لغو شده، لغو شد</p>
         <router-link to="">.اطلاعات را با فرمت سی اس وی دانلود کنید</router-link>
-        <div class="dataTable">
-            <v-data-table
-                class="text-xs-left"
-                :headers="headers"
-                :items="desserts"
-                :pagination.sync="pagination"
-                :total-items="totalDesserts"
-                :loading="loading"
-                >
-                <template slot="items" slot-scope="props">
-                    <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
-                    <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
-                    <td class="text-xs-right">{{ props.item.price }}</td>
-                    <td class="text-xs-right">{{ props.item.limits }}</td>
-                    <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
-                </template>
-            </v-data-table>
-        </div>
+        </v-card-text>
+
+        <v-card-text>
+            <v-card>
+                <div class="dataTable">
+                    <v-data-table
+                        class="text-xs-left"
+                        :headers="headers"
+                        :items="desserts"
+                        :pagination.sync="pagination"
+                        :total-items="totalDesserts"
+                        :loading="loading"
+                        >
+                        <template slot="items" slot-scope="props">
+                            <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
+                            <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
+                            <td class="text-xs-right">{{ props.item.price }}</td>
+                            <td class="text-xs-right">{{ props.item.limits }}</td>
+                            <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
+                        </template>
+                    </v-data-table>
+                </div>
+            </v-card>
+        </v-card-text>
     </div>
 </template>
 <script>

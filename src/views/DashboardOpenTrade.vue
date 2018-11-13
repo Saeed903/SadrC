@@ -1,10 +1,10 @@
 <template>
     <div>
+        <v-card-text class=" text-xs-center">
+        <p >تبلیغات شما</p>
+        شما می توانید حداکثر 5 آگهی ایجاد کنید محدودیت ها براساس حجم 30 روزه شما است که 0.00000000 بیت کوین است. برای کسب اطلاعات بیشتر درباره محدودیت های تبلیغات <router-link to="LearnAdverDashboard" class="learnMoreAd">اینجا کلیک کنید</router-link>
+        </v-card-text>
         
-        <p class="headline text-xs-center">تبلیغات شما</p>
-        <p class="subheading">شما می توانید حداکثر 5 آگهی ایجاد کنید محدودیت ها براساس حجم 30 روزه شما است که 0.00000000 بیت کوین است. برای کسب اطلاعات بیشتر درباره محدودیت های تبلیغات <router-link to="LearnAdverDashboard" class="learnMoreAd">اینجا کلیک کنید</router-link></p>
-        
-
         <v-card-text>
             <v-card>
                 <v-data-table

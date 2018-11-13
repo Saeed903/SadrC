@@ -1,7 +1,12 @@
 <template>
-    <div>
-        <p>بستن تمام معاملات</p>
+<div>
+    <v-card-text class="text-xs-center">
+        <p >بستن تمام معاملات</p>
         <router-link to="">.اطلاعات را با فرمت سی اس وی دانلود کنید</router-link>
+    </v-card-text>
+
+        <v-card-text>
+            <v-card>
         <div class="dataTable">
             <v-data-table
                 class="text-xs-left"
@@ -20,6 +25,8 @@
                 </template>
             </v-data-table>
         </div>
+            </v-card>
+    </v-card-text>
     </div>
 </template>
 <script>
@@ -127,10 +134,7 @@ export default{
   
 </script>
 <style scoped>
-.dataTable{
-    margin-top:100px;
-    box-shadow:1px 3px 3px rgb(190, 176, 176);
-}
+
 </style>
 
 
