@@ -80,6 +80,24 @@ export default new Vuex.Store({
         orderStateId : '',
       }
     }),
+    service('advertises', {
+      instanceDefaults:{
+        advertiseId: '',
+        tradeTypeId: '',
+        countryId: '',
+        currencyCode: '',
+        margin: '',
+        priceEquation: '',
+        minTransactionLimit: '',
+        maxTransactionLimit: '',
+        termsOfTrade: '',
+        trackLiquidity: '',
+        identifiedPeopleOnly: '',
+        smsVerification: '',
+        trustedPeopleOnly: '',
+        advertiserUserId: '',
+      }
+    }),
     auth({ userService: 'users', }),
   ],
 })
