@@ -19,7 +19,8 @@
         </div>
       
         <div class="mt-5">
-            <p class="text-xs-center font-weight-bold title white--text">خرید و فروش ارز دیجیتال</p>
+            <p class="iran">صدرکریپتو ساده ترین و مطمئن ترین مکان برای خرید، فروش و مدیریت ارز دیجیتال خود می باشد</p>
+            <p class="text-xs-center font-weight-bold title white--text" >خرید و فروش ارز دیجیتال</p>
             <p class="text-xs-center font-weight-bold title white--text">صدرکریپتو ساده ترین و مطمئن ترین مکان برای خرید، فروش و مدیریت ارز دیجیتال خود می باشد.</p>
         </div>
         <div class="twoSection">
@@ -91,6 +92,10 @@ export default{
   };
 </script>
 <style scoped>
+.iran{
+    font-family: 'Iranian Sans';
+    font-size: 20px;
+}
 .cardHover{
     border:1px solid #e3e3e3;
     box-shadow:1px 2px 2px rgb(161, 156, 156);
