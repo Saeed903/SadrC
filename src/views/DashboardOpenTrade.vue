@@ -1,30 +1,44 @@
 <template>
     <div>
-        <p class="yourTrade">تبلیغات شما</p>
-        <p>شما می توانید حداکثر 5 آگهی ایجاد کنید محدودیت ها براساس حجم 30 روزه شما است که 0.00000000 بیت کوین است. برای کسب اطلاعات بیشتر درباره محدودیت های تبلیغات <router-link to="LearnAdverDashboard" class="learnMoreAd">اینجا کلیک کنید</router-link></p>
-        <v-data-table
-            class="text-xs-left"
-            :headers="headers"
-            :items="desserts" 
-            :pagination.sync="pagination"
-            :total-items="totalDesserts"
-            :loading="loading"
-        >
-            <template slot="items" slot-scope="props">
-                <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
-                <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
-                <td class="text-xs-right">{{ props.item.price }}</td>
-                <td class="text-xs-right">{{ props.item.limits }}</td>
-                <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
-            </template>
-        </v-data-table>
+        
+        <p class="headline text-xs-center">تبلیغات شما</p>
+        <p class="subheading">شما می توانید حداکثر 5 آگهی ایجاد کنید محدودیت ها براساس حجم 30 روزه شما است که 0.00000000 بیت کوین است. برای کسب اطلاعات بیشتر درباره محدودیت های تبلیغات <router-link to="LearnAdverDashboard" class="learnMoreAd">اینجا کلیک کنید</router-link></p>
+        
+
+        <v-card-text>
+            <v-card>
+                <v-data-table
+                    class="text-xs-left"
+                    :headers="headers"
+                    :items="desserts" 
+                    :pagination.sync="pagination"
+                    :total-items="totalDesserts"
+                    :loading="loading"
+                >
+                    <template slot="items" slot-scope="props">
+                        <td class="text-xs-right">{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
+                        <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
+                        <td class="text-xs-right">{{ props.item.price }}</td>
+                        <td class="text-xs-right">{{ props.item.limits }}</td>
+                        <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
+                    </template>
+                </v-data-table>
+            </v-card>
+        </v-card-text>
+
+        <v-card-text>
+        <div class="">
         <v-btn class="primary">ایجاد تبلیغات</v-btn>
-        <p>تعطیلات</p>
-        <v-checkbox>فروش در تعطیلات</v-checkbox>
-        <p>.همه تبلیغات خود را برای خرید به طور موقت غیرفعال کنید</p>
-        <v-checkbox>خرید در تعطیلات</v-checkbox>
-        <p>.همه تبلیغات خود را برای خرید به طور موقت غیرفعال کنید</p>
+        </div>
+        </v-card-text>
+
+        <v-card-text>
+        <p class="headline">تعطیلات</p>
+        <v-checkbox label="فروش در تعطیلات" messages="همه تبلیغات خود را برای فروش به طور موقت غیرفعال کنید"></v-checkbox>
+        <v-checkbox label="خرید در تعطیلات" messages="همه تبلیغات خود را برای خرید به طور موقت غیرفعال کنید"></v-checkbox>
         <v-btn to="" class="primary">ذخیره</v-btn>
+        </v-card-text>
+
     </div>
 </template>
 <script>
@@ -126,27 +140,5 @@ export default{
 };
 </script>
 <style scoped>
-.yourTrade{
-    text-align:right;
-    text-shadow:1px 2px 2px rgb(168, 152, 152);
-    font-size:20px;
-    font-family:b nazanin;
-}
-p{
-    text-align:right;
-    text-shadow:1px 2px 2px rgb(168, 152, 152);
-    font-size:21px;
-    font-family:b nazanin;
-}
-.learnMoreAd{
-    text-decoration:none;
-    text-shadow:none;
-}
-.learnMoreAd:hover{
-    text-decoration:none;
-    text-align:right;
-    text-shadow:1px 2px 2px rgb(192, 184, 184);
-    font-size:21px;
-    font-family:b nazanin;
-}
+
 </style>
