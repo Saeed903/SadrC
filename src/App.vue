@@ -156,7 +156,7 @@
             <v-list-tile
             v-for="(profile, index) in Profiles"
             :key="index"
-            @click="routingMenu(profile.text)"
+            @click="routing(profile.path)"
             class="menuFont"
             >
             <v-icon>{{profile.icon}}</v-icon>
@@ -204,7 +204,7 @@
         { title: 'داشبورد', path:'/DashBoard',icon:'fas fa-tachometer-alt'},
         { title: 'بازرگان', path:'/Merchant',icon:'public' },
         { title: 'قابل اعتماد', path:'/Trusted',icon:'history' },
-        { title: 'پشتیبانی', path:'/SupportDrop',icon:'help' },
+        { title: 'پشتیبانی', path:'SupportDrop',icon:'help' },
         { title: 'خروج', path:'',icon:'lock' },
       ],
       signState:'ثبت نام رایگان',
