@@ -1,17 +1,19 @@
 <template>
-    <div>
-        <div>
-            <p class="dashboardTop">داشبورد</p>
-            <p class="explainDashboard">در این صفحه شما میتوانید تبلیغات و معاملات خود را مشاهده و مدیریت کنید.</p>
-        </div>
-        <div>
-            <v-card  height="50px">
+
+<v-flex dflex lg8>
+    <v-card>
+       
+        <v-card-text>
+            <p class="headline text-xs-center">داشبورد</p>
+            <p class="subheading">در این صفحه شما میتوانید تبلیغات و معاملات خود را مشاهده و مدیریت کنید.</p>
+        </v-card-text>
+       
+        <v-card-text>
+            <v-card >
                 <v-bottom-nav
                     :active.sync="bottomNav"
                     :color="color"
                     :value="true"
-                    absolute
-                    shift
                     >
                     <v-btn dark value="video">
                     <span>معاملات و تبلیغات آزاد</span>
@@ -34,9 +36,10 @@
                     </v-btn>
                 </v-bottom-nav>
             </v-card>
-        </div>
+        </v-card-text>
+
         <transition name="">
-            <div class="headline text-xs-center pa-5">
+            <div >
                 <div v-if="bottomNav=='Music'">
                     <DashboardAllClosedTrades></DashboardAllClosedTrades>
                 </div>
@@ -44,7 +47,7 @@
         </transition>
 
         <transition name="">
-            <div class="headline text-xs-center pa-5">
+            <div>
                 <div v-if="bottomNav=='video'">
                     <DashboardOpenTrade></DashboardOpenTrade>
                 </div>
@@ -52,7 +55,7 @@
         </transition>
 
         <transition name="">
-            <div class="headline text-xs-center pa-5">
+            <div >
                 <div v-if="bottomNav=='Image'">
                     <DashboardCancelledTrades></DashboardCancelledTrades>
                 </div>
@@ -60,14 +63,18 @@
         </transition>
 
         <transition name="">
-            <div class="headline text-xs-center pa-5">
+            <div>
                 <div v-if="bottomNav=='Book'">
                     <DashboardCompletedTrades></DashboardCompletedTrades>
                 </div>
             </div>
         </transition>
+
         <Footer></Footer>
-    </div> 
+        
+    </v-card>
+</v-flex>
+
 </template>
 <script>
 import DashboardAllClosedTrades from './../views/DashboardAllClosedTrades.vue'
@@ -101,19 +108,6 @@ import Footer from './../components/Footer.vue'
   }
 </script>
 <style scoped>
-.dashboardTop{
-    font-size:35px;
-    font-family:b nazanin;
-    color:white;
-    text-align:center;
-    text-shadow:1px 2px 2px rgb(173, 163, 163);
-}
-.explainDashboard{
-    text-align:center;
-    font-size:20px;
-    font-family:b nazanin;
-    color:white;
-    text-shadow:1px 2px 2px rgb(173, 163, 163);
-}
+
 
 </style>
