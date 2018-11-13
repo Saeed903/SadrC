@@ -1,35 +1,34 @@
 <template>
   <v-container fluid grid-list-md>
-    <v-layout row wrap align-justify justify-center>
+    <v-layout v-if="!loading"  row wrap align-justify justify-center>
     <v-flex  xs12 sm8 md8 lg6>
       <v-card>
-      <v-form v-if="!loading" 
+      <v-form 
         @submit.prevent="login" 
         @keydown.prevent.enter 
         v-model="valid"
       >
       <v-card-text class="headline">
-      <p class="text-xs-center">ورود</p>
+        <p class="text-xs-center">ورود</p>
       </v-card-text>
       <v-card-text class="subheading">
         <p>با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید</p>
       </v-card-text>
       <v-card-text>
         <v-text-field
-          v-validate="'required|max:30'"
+          :roles = "notEmptyRoles"
           v-model="user.email"
           :counter="30"
-          :error-messages="errors.collect('email')"
           label="ایمیل"
           data-vv-name="email"
-          class="textField"
+          class="emailField"
           required
         >
         </v-text-field>
       </v-card-text>
       <v-card-text>
         <v-text-field
-          v-validate="'required|max:20'"
+          :roles = "notEmptyRoles"
           v-model="user.password"
           counter="20"
           :error-messages="errors.collect('password')"
@@ -41,72 +40,59 @@
         >
         </v-text-field>
       </v-card-text>
-      <v-card-text>
-      </v-card-text>
+      
+      <vue-recaptcha
+          theme = "dark"
+          @verify = "onVerify"
+          @expired = "onExpired"
+          :sitekey = "sitekey">
+      </vue-recaptcha>
+      <v-card-text :class="{red:errorLogin}" v-if="errorLogin" >  {{errorMessage}} </v-card-text>
+      
       <v-card-text>
         <v-btn type="submit" class="primary"   >ورود</v-btn>
       </v-card-text>
       </v-form>
-    <v-card-text>
       <v-card-text>
-      <router-link class="forgotPass" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link>
+        <router-link class="forgotPass" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link>
       </v-card-text>
       <v-card-text>
-      <p class="newTo">new to sadrCrypto?<router-link to="/SignUp" class="signIn">ثبت نام کنید</router-link></p>
+        <p class="newTo">new to sadrCrypto?<router-link to="/SignUp" class="signIn">ثبت نام کنید</router-link></p>
       </v-card-text>
-       <vue-recaptcha
-            theme = "dark"
-            @verify = "onVerify"
-            @expired = "onExpired"
-            :sitekey = "sitekey">
-        </vue-recaptcha>
-      </v-card-text>
+       
       </v-card>
     </v-flex>
-    <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
     <Footer></Footer> 
   </v-layout>
+  <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
   </v-container>
 </template>
 <script>
  import Vue from 'vue'
- import VeeValidate from 'vee-validate'
  import Footer from './../components/Footer.vue'
  import { mapState, mapActions } from 'vuex';
  import VueRecaptcha from 'vue-recaptcha'; 
 
- Vue.use(VeeValidate)
  export default {
-    $_veeValidate: {
-      validator: 'new'
-    },
+    
     components:{
         Footer,
         VueRecaptcha
     },
     data: () => ({
+      errorLogin: false,
+      errorMessage:'',
       valid: false,
+      captchaValid: false,
+      notEmptyRoles:[(value) => !!value || "می بایستی این فیلد را پر کنید"],
+      sitekey: '6LeaLnYUAAAAAOsDilRLdvAo2o9JNBrjxhLpUGGw',
       user: {
         email: '',
         password: '',
-      },
-      dictionary: {
-        attributes: {
-          email: 'آدرس ایمیل'
-          // custom attributes
-        },
-        custom: {
-          name: {
-            required: () => 'نام کاربر یا ایمیل الزامیست',
-            max: 'The userName or email field may not be greater than 30 characters'
-            // custom messages
-          },
-        
-        }
-      },
+      }
     }),
     mounted () {
-      this.$validator.localize('en', this.dictionary)
+      
     },
     computed: {
       ...mapState('auth', {loading: 'isAuthenticatePending'}),
@@ -114,29 +100,46 @@
     methods: {
       ...mapActions('auth',['authenticate']),
 
-      login () {
-        
-        this.$validator.validateAll();
-        if(this.valid){
+      onVerify: function (response) {
+        console.log('Verify: ' + response);
+        this.captchaValid = true;
+      },
+
+      onExpired: function () {
+      console.log('Expired')
+      },
+
+      resetRecaptcha () {
+      this.$refs.recaptcha.reset() // Direct call reset method
+      },
+
+      async login () {
+        this.errorLogin=false;
+
+        if(this.valid && this.captchaValid){
           const { User } = this.$FeathersVuex;
           const user = new User({
               ...this.user
           });
-          this.authenticate({
+          await this.authenticate({
             strategy:'local',
             ...this.user
-          }).then(()=>{
+          }).then(async ()=>{
             console.log('logged in');
-            this.$router.push('/SadrCrypto');
-          }).catch(e => {
-            console.error('Authentication Error');
+            await this.$router.push('/SadrCrypto');
+          }).catch(async e => {
+            console.error('Authentication Error', e.message);
+            this.errorMessage = e.message;
+            this.errorLogin=true;
+
+            console.log(this.errorMessage);
           })
         }
       },
       clear () {
         this.email = ''
         this.password = ''
-        this.$validator.reset()
+        this.valid = false
       }
     }
   }
