@@ -59,8 +59,6 @@ export default{
     headers:function() {
         return  [{
             text: this.typeCustomer,
-            align: 'left',
-            class:'text-xs-left',
             sortable: false,
             value: 'name'
             },
@@ -133,7 +131,7 @@ export default{
     getDesserts () {
     return [
 
-            { trader: 'حیدر', paymentMethod: 'نقدی', price:'12', limits:'fgfh' },
+            { trader: 'حیدر سسیلا بللاسیال فغافغقث غقفغ غغفس فقغ غغق', paymentMethod: 'نقدی', price:'12', limits:'fgfh' },
             { trader: 'حیدر', paymentMethod: 'نقدی', price:'12', limits:'fgfh' },
             { trader: 'حیدر', paymentMethod: 'نقدی', price:'12', limits:'fgfh' }
          
