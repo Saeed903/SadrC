@@ -7,9 +7,9 @@
             v-if="!loading"
             @submit.prevent="signUp"
             @keydown.prevent.enter>
-            <c-card-text class="headline text-xs-center">
+            <v-card-text class="headline text-xs-center">
             <p claas="text-xs-center" >یک حساب جدید ثبت کنید</p>
-            </c-card-text>
+            </v-card-text>
             <v-card-text>
             <p class="subheading">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
             </v-card-text>
