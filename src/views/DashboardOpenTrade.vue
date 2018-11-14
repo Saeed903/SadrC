@@ -1,10 +1,9 @@
 <template>
     <div>
-        <v-card-text class=" text-xs-center">
-        <p >تبلیغات شما</p>
-        شما می توانید حداکثر 5 آگهی ایجاد کنید محدودیت ها براساس حجم 30 روزه شما است که 0.00000000 بیت کوین است. برای کسب اطلاعات بیشتر درباره محدودیت های تبلیغات <router-link to="LearnAdverDashboard" class="learnMoreAd">اینجا کلیک کنید</router-link>
-        </v-card-text>
         
+        <p class="text-xs-center">تبلیغات شما</p>
+        <p> شما می توانید حداکثر 5 آگهی ایجاد کنید محدودیت ها براساس حجم 30 روزه شما است که 0.00000000 بیت کوین است. برای کسب اطلاعات بیشتر درباره محدودیت های تبلیغات <router-link to="LearnAdverDashboard" class="learnMoreAd">اینجا کلیک کنید</router-link></p>
+    
         <v-card-text>
             <v-card>
                 <v-data-table
@@ -16,11 +15,11 @@
                     :loading="loading"
                 >
                     <template slot="items" slot-scope="props">
-                        <td class="text-xs-right">{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
-                        <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
-                        <td class="text-xs-right">{{ props.item.price }}</td>
-                        <td class="text-xs-right">{{ props.item.limits }}</td>
-                        <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
+                        <td >{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
+                        <td >{{ props.item.paymentMethod }}</td>
+                        <td >{{ props.item.price }}</td>
+                        <td >{{ props.item.limits }}</td>
+                        <td ><v-btn class="primary" @click="buy()">خرید</v-btn></td>
                     </template>
                 </v-data-table>
             </v-card>
@@ -55,19 +54,17 @@ export default{
   },
   computed:{
     typeCustomer:function() {
-        return (this.isSeller==1) ?'Seller':'Buyer';
+        return (this.isSeller==1) ?'فروشنده':'خریدار';
     },
     headers:function() {
         return  [{
             text: this.typeCustomer,
-            align: 'left',
-            class:'text-xs-left',
             sortable: false,
             value: 'name'
             },
-            { text: 'paymentMethod', value: 'paymentMethod' },
-            { text: ' price | bitcoin', value: ' price | bitcoin' },
-            { text: 'limits', value: 'limits' }
+            { text: 'روش پرداخت', value: 'روش پرداخت' },
+            { text: 'بیت کوین | قیمت', value: ' بیت کوین | قیمت' },
+            { text: 'محدودیت ها', value: 'محدودیت ها' }
             
         ]
     }
@@ -133,7 +130,11 @@ export default{
     },
     getDesserts () {
     return [
-        
+
+            { trader: 'حیدر سسیلا بللاسیال فغافغقث غقفغ غغفس فقغ غغق', paymentMethod: 'نقدی', price:'12', limits:'fgfh' },
+            { trader: 'حیدر', paymentMethod: 'نقدی', price:'12', limits:'fgfh' },
+            { trader: 'حیدر', paymentMethod: 'نقدی', price:'12', limits:'fgfh' }
+         
     ]
     }
   }

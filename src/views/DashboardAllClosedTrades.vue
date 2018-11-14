@@ -1,10 +1,9 @@
 <template>
 <div>
-    <v-card-text class="text-xs-center">
-        <p >بستن تمام معاملات</p>
+    
+        <p class="text-xs-center">بستن تمام معاملات</p>
         <router-link to="">.اطلاعات را با فرمت سی اس وی دانلود کنید</router-link>
-    </v-card-text>
-
+    
         <v-card-text>
             <v-card>
         <div class="dataTable">
@@ -43,7 +42,7 @@ export default{
   },
   computed:{
     typeCustomer:function() {
-        return (this.isSeller==1) ?'Seller':'Buyer';
+        return (this.isSeller==1) ?'فروشنده':'خریدار';
     },
     headers:function() {
         return  [{
@@ -53,15 +52,15 @@ export default{
             sortable: false,
             value: 'name'
             },
-            { text: 'created at', value: 'created at' },
-            { text: 'trade type', value: 'trade type' },
-            { text: 'trading partner', value: 'trading partner' },
-            { text: 'transaction status', value: 'transaction status' },
+            { text: 'ایجاد شده در', value: 'ایجاد شده در' },
+            { text: 'نوع تجارت', value: 'نوع تجارت' },
+            { text: 'شریک تجاری', value: 'شریک تجاری' },
+            { text: 'وضعیت معامله', value: 'وضعیت معامله' },
             { text: 'fiat', value: 'fiat' },
-            { text: 'trade amount', value: 'trade amount' },
-            { text: 'trading fee', value: 'trading fee' },
-            { text: 'total BTC', value: 'total BTC' },       
-            { text: 'exchange rate', value: 'exchange rate' },               
+            { text: 'مقدار تجارت', value: 'مقدار تجارت' },
+            { text: 'هزینه معاملاتی', value: 'هزینه معاملاتی' },
+            { text: 'مجموع بیت کوین', value: 'مجموع بیت کوین' },       
+            { text: 'نرخ تبدیل', value: 'نرخ تبدیل' },               
             ]
     }
   },

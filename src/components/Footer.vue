@@ -44,6 +44,7 @@
                   <li><router-link to="" class="router">block explorer</router-link></li>
               </ul>
           </div>
+          
           <div class="footerLink">
               <ul>
                   <p><router-link to="" class="routerTop">SUPPORT</router-link></p>

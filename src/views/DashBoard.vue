@@ -29,6 +29,7 @@
                     <span>معاملات لغو شده</span>
                     <v-icon>image</v-icon>
                     </v-btn>
+
                 </v-bottom-nav>
             </v-card>
         </v-card-text>
