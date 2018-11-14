@@ -286,13 +286,5 @@
   text-decoration:none;
   
 }
-.littleText{
-  text-decoration:none;
-  color:rgb(235, 224, 224);
-  font-size:15px;
-  font-family:b titr;
-}
-.menuFont{
-  font-family:b nazanin;
-}
+
 </style>

@@ -3,8 +3,8 @@
     <v-card-text>
     <div>
         
-            <p class="headline">تبلیغات تجاری بیت کوین را ایجاد کنید.</p>
-        
+            <p class="font headline">تبلیغات تجاری بیت کوین را ایجاد کنید.</p>
+            <p class="fonts headline">تبلیغات تجاری بیت کوین را ایجاد کنید.</p>
         
             <p class="subheading">لطفا <router-link to="/Login" class="topLogText">ورود</router-link> یا <router-link to="/signUp" class="topLogText0">ثبت نام</router-link> قبل از ایجاد تبلیغات</p>
         
@@ -136,5 +136,10 @@ import Footer from './../components/Footer.vue'
     }
 </script>
 <style scoped>
-
- </style>
+.font{
+    font-family:iranian sans;
+}
+.fonts{
+    font-family:b nazanin;
+}
+</style>
