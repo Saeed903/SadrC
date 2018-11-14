@@ -49,16 +49,16 @@ export default{
             sortable: false,
             value: 'name'
             },
-            { text: 'created at', value: 'created at' },
-            { text: 'trade type', value: 'trade type' },
-            { text: 'trading partner', value: 'trading partner' },
-            { text: 'transaction status', value: 'transaction status' },
+            { text: 'ایجاد شده در', value: 'ایجاد شده در' },
+            { text: 'نوع تجارت', value: 'نوع تجارت' },
+            { text: 'شریک تجاری', value: 'شریک تجاری' },
+            { text: 'وضعیت معامله', value: 'وضعیت معامله' },
             { text: 'fiat', value: 'fiat' },
-            { text: 'trade amount', value: 'trade amount' },
-            { text: 'trading fee', value: 'trading fee' },
-            { text: 'total BTC', value: 'total BTC' },       
-            { text: 'exchange rate', value: 'exchange rate' },               
-            ]
+            { text: 'مقدار تجارت', value: 'مقدار تجارت' },
+            { text: 'هزینه معاملاتی', value: 'هزینه معاملاتی' },
+            { text: 'مجموع بیت کوین', value: 'مجموع بیت کوین' },       
+            { text: 'نرخ تبدیل', value: 'نرخ تبدیل' },               
+              ]
     }
   },
   watch: {

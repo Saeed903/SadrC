@@ -2,8 +2,8 @@
     <div>
         <div>
             <v-card class="cardHover" color="rgb(61, 61, 61)">
-                <v-card-text class="white--text title font-weight-bold text-xs-center pa-3" >خرید و فروش بیت کوین در نزدیکی شما</v-card-text>
-                <v-card-text class="white--text title font-weight-bold text-xs-center orange--text">فوری.امن.خصوصی</v-card-text>
+                <v-card-text class=" iran text-xs-center " >خرید و فروش بیت کوین در نزدیکی شما</v-card-text>
+                <v-card-text class="text-xs-center title orange--text">فوری.امن.خصوصی</v-card-text>
                 <v-card-text class="text-xs-center font-weight-bold title">
                     <span class="orange--text">تجارت بیت کوین</span>
                     <router-link to="/BitcoinCity" class="hoverDecoration">در 16370 شهر</router-link>
