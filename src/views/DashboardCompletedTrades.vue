@@ -1,8 +1,9 @@
 <template>
     <div>
-        <p class="text-xs-center">معاملات بسته، به پایان رسید.</p>
-        <router-link to="">اطلاعات را با فرمت سی اس وی دانلود کنید.</router-link>
-
+        <v-card-text pt-0>
+        <p class="text-xs-center">معاملات بسته، به پایان رسید</p>
+        <router-link class="link" to="">اطلاعات را با فرمت سی اس وی دانلود کنید</router-link>
+        </v-card-text>
         <v-card-text>
             <v-card>
             <v-data-table
@@ -14,11 +15,17 @@
                 :loading="loading"
                 >
                 <template slot="items" slot-scope="props">
-                    <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
-                    <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
-                    <td class="text-xs-right">{{ props.item.price }}</td>
-                    <td class="text-xs-right">{{ props.item.limits }}</td>
-                    <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
+                   <td class="table text-xs-right">{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
+                   <td class="table text-xs-center">{{ props.item.createdAt }}</td>
+                   <td class="table text-xs-center">{{ props.item.tradeType }}</td>
+                   <td class="table text-xs-center">{{ props.item.tradingPartner }}</td>
+                   <td class="table text-xs-center">{{ props.item.transactionStatus }}</td>
+                   <td class="table text-xs-center">{{ props.item.fiat }}</td>
+                   <td class="table text-xs-center">{{ props.item.tradeAmount }}</td>
+                   <td class="table text-xs-center">{{ props.item.tradingFee }}</td>
+                   <td class="table text-xs-center">{{ props.item.totalBTC }}</td>
+                   <td class="table text-xs-center">{{ props.item.exchangeRate }}</td>
+                   <td ><v-btn class="table primary" @click="buy()">خرید</v-btn></td>
                 </template>
             </v-data-table>
             </v-card>
@@ -49,15 +56,15 @@ export default{
             sortable: false,
             value: 'name'
             },
-            { text: 'ایجاد شده در', value: 'ایجاد شده در' },
-            { text: 'نوع تجارت', value: 'نوع تجارت' },
-            { text: 'شریک تجاری', value: 'شریک تجاری' },
-            { text: 'وضعیت معامله', value: 'وضعیت معامله' },
-            { text: 'fiat', value: 'fiat' },
-            { text: 'مقدار تجارت', value: 'مقدار تجارت' },
-            { text: 'هزینه معاملاتی', value: 'هزینه معاملاتی' },
-            { text: 'مجموع بیت کوین', value: 'مجموع بیت کوین' },       
-            { text: 'نرخ تبدیل', value: 'نرخ تبدیل' },               
+            { text: 'ایجاد شده در', class:'subheading', value: 'ایجاد شده در' },
+            { text: 'نوع تجارت', class:'subheading', value: 'نوع تجارت' },
+            { text: 'شریک تجاری', class:'subheading', value: 'شریک تجاری' },
+            { text: 'وضعیت معامله', class:'subheading', value: 'وضعیت معامله' },
+            { text: 'fiat', class:'subheading', value: 'fiat' },
+            { text: 'مقدار تجارت', class:'subheading', value: 'مقدار تجارت' },
+            { text: 'هزینه معاملاتی', class:'subheading', value: 'هزینه معاملاتی' },
+            { text: 'مجموع بیت کوین', class:'subheading', value: 'مجموع بیت کوین' },       
+            { text: 'نرخ تبدیل', class:'subheading', value: 'نرخ تبدیل' },               
               ]
     }
   },
@@ -122,7 +129,50 @@ export default{
     },
     getDesserts () {
     return [
-        
+        {
+       trader:"حیدر" ,
+       tradeCount:"1",
+       satisfiedPercent:"%100",
+       createdAt:"1",
+       tradeType:"بیت کوین",
+       tradingPartner:"فرزاد",
+       transactionStatus:"فعال",
+       fiat:"1",
+       tradeAmount:"0.1",
+       tradingFee:"1درصد",
+       totalBTC:"0.5",
+       exchangeRate:"0.001",       
+    },
+
+    {
+       trader:"حیدر" ,
+       tradeCount:"1",
+       satisfiedPercent:"%100",
+       createdAt:"1",
+       tradeType:"بیت کوین",
+       tradingPartner:"فرزاد",
+       transactionStatus:"فعال",
+       fiat:"1",
+       tradeAmount:"0.1",
+       tradingFee:"1درصد",
+       totalBTC:"0.5",
+       exchangeRate:"0.001",       
+    },
+
+    {
+       trader:"حیدر" ,
+       tradeCount:"1",
+       satisfiedPercent:"%100",
+       createdAt:"1",
+       tradeType:"بیت کوین",
+       tradingPartner:"فرزاد",
+       transactionStatus:"فعال",
+       fiat:"1",
+       tradeAmount:"0.1",
+       tradingFee:"1درصد",
+       totalBTC:"0.5",
+       exchangeRate:"0.001",       
+    },
     ]
     }
   }
@@ -130,5 +180,15 @@ export default{
   
 </script>
 <style scoped>
-
+.table{
+    font-family: Iranian Sans;
+    
+}
+.link{
+    text-decoration: none;
+    color:rgb(0,153,255);
+}
+.link:hover{
+    color:rgb(0,140,255);
+}
 </style>

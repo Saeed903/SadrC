@@ -1,32 +1,32 @@
 <template>
-<div>
-    <v-card>
-            <p class="headline text-xs-center">داشبورد</p>
+<div class="font">
+    <v-card class="font">
+            <p class="titled text-xs-center">داشبورد</p>
     
         <v-card-text>
             <v-card >
-                <v-bottom-nav
+                <v-bottom-nav 
                     :active.sync="bottomNav"
                     :color="color"
                     :value="true"
                     >
                     <v-btn dark value="video">
-                    <span>معاملات و تبلیغات آزاد</span>
+                    <span class="menu">معاملات و تبلیغات آزاد</span>
                     <v-icon>ondemand_video</v-icon>
                     </v-btn>
 
                     <v-btn dark value="Music">
-                    <span>معاملات بسته شده</span>
+                    <span class="menu">معاملات بسته شده</span>
                     <v-icon>music_note</v-icon>
                     </v-btn>
 
                     <v-btn dark  value="Book">
-                    <span>معاملات تکمیل شده</span>
+                    <span class="menu">معاملات تکمیل شده</span>
                     <v-icon>book</v-icon>
                     </v-btn>
 
                     <v-btn dark value="Image">
-                    <span>معاملات لغو شده</span>
+                    <span class="menu">معاملات لغو شده</span>
                     <v-icon>image</v-icon>
                     </v-btn>
 
@@ -35,15 +35,15 @@
         </v-card-text>
 
         <transition name="">
-            <div >
-                <div v-if="bottomNav=='Music'">
-                    <DashboardAllClosedTrades></DashboardAllClosedTrades>
+            <div class="contant">
+                <div v-if="bottomNav=='Music'" >
+                    <DashboardAllClosedTrades ></DashboardAllClosedTrades>
                 </div>
             </div>
         </transition>
 
         <transition name="">
-            <div>
+            <div class="contant">
                 <div v-if="bottomNav=='video'">
                     <DashboardOpenTrade></DashboardOpenTrade>
                 </div>
@@ -51,7 +51,7 @@
         </transition>
 
         <transition name="">
-            <div >
+            <div class="contant">
                 <div v-if="bottomNav=='Image'">
                     <DashboardCancelledTrades></DashboardCancelledTrades>
                 </div>
@@ -59,7 +59,7 @@
         </transition>
 
         <transition name="">
-            <div>
+            <div class="contant">
                 <div v-if="bottomNav=='Book'">
                     <DashboardCompletedTrades></DashboardCompletedTrades>
                 </div>
@@ -109,5 +109,15 @@ import Footer from './../components/Footer.vue'
 </script>
 <style scoped>
 
+.titled{
+font-size: 27px;
+}
+.menu{
+    font-family: Iranian Sans;
+}
+.contant{
+    font-family: Iranian Sans;
+   
+}
 
 </style>
