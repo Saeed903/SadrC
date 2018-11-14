@@ -28,7 +28,7 @@
                 <p class="text-xs-center font-weight-bold headline white--text pt-3">خرید بیت کوین آنلاین در جمهوری اسلامی ایران</p>
             </div>
             <div>
-                <Transaction></Transaction>
+                <Advertise></Advertise>
             </div>
         </div>
 

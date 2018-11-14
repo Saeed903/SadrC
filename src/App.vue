@@ -245,8 +245,46 @@
 }
 </script>
 
-<style >
-body{
-  font-family: 'Iranian Sans'
+<style scoped>
+#keep main .container {
+    height: 660px;
+  }
+  .navigation-drawer__border {
+    display: none;
+  }
+ .text{
+   font-weight:400px;
+ }
+ .slide-fade-enter-active {
+  transition: all .3s ease;
 }
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+{
+  transform: translateX(10px);
+  opacity: 0;
+}
+.freeRegister{
+  text-decoration:none;
+  color:rgb(153, 68, 68);
+  font-size:15px;
+  font-family:b titr;
+  margin-left:10px;
+  
+}
+.menu{
+  text-decoration:none;
+  color:rgb(153, 68, 68);
+  font-size:15px;
+  font-family:b titr;
+  margin-left:5px;
+}
+.sadrCryptoText{
+  color:rgb(235, 224, 224);
+  text-decoration:none;
+  
+}
+
 </style>

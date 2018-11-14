@@ -1,85 +1,111 @@
 <template>
-<v-card>
-    <v-card-text>
-    <div>
-        
-            <p class="font headline">تبلیغات تجاری بیت کوین را ایجاد کنید.</p>
-            <p class="fonts headline">تبلیغات تجاری بیت کوین را ایجاد کنید.</p>
-        
-            <p class="subheading">لطفا <router-link to="/Login" class="topLogText">ورود</router-link> یا <router-link to="/signUp" class="topLogText0">ثبت نام</router-link> قبل از ایجاد تبلیغات</p>
-        
+    <v-card>
         <v-card-text>
-            <p class="headline">قوانین و مقررات تبلیغاتی</p>
-            
-            <ul class="subheading">
-                <li>.برای نمایش تبلیغات شما باید بیت کوین را در کیف پول صدر کریپتو خود داشته باشید. شما برای تبلیغات با روش های پرداخت آنلاین و 0.04<br> بیت کوین یا بیشتر برای تبلیغات محلی (نقد) نیاز به 0.04 بیت کوین یا بیشتر دارید</li>
-                <li>.برخی از روش های پرداخت مستلزم آن هستند که قبل از اینکه آگهی های شما قابل مشاهده باشند، باید شناسه،شناسایی شوند</li>
-                <li>.هر تبلیغ کننده هزینه های تراکنش تکمیل شده 1٪ از کل مبلغ تجاری است<span><router-link to="" class="fees">.تمام هزینه ها را در صفحه هزینه های ما مشاهده کنید</router-link></span></li>
-                <li>.هنگامی که یک بازرگانی باز شود، قیمت نهایی است، مگر اینکه یک اشتباه روشن در قیمت گذاری وجود داشته باشد</li>
-                <li>.شما مجاز به خرید یا فروش بیت کوین از طرف شخص دیگری (واسطه) نیستید.</li>
-                <li>.شما فقط می توانید از حساب های پرداخت شده که به نام خود ثبت شده (بدون پرداخت شخص ثالث!) استفاده کنید</li>
-                <li>.شما باید جزئیات پرداخت خود را در تبلیغات و یا در چت تجاری قرار دهید</li>
-                <li>.همه ارتباطات باید در صدر کریپتواتفاق بیافتد</li>
-                <li>.روش های پرداخت مشخص شده است <span class="span">ریسک بالا</span> داشتن یک <span class="span">خطر عمده تقلب</span>.هنگام استفاده از روشهای پرداخت با ریسک بالا، مراقب باشید و همیشه آی دی را تأیید کنید</li>
+            <p class="fontIran text-xs-center">ثبت آگهی{{currency}}</p>
+            <p class="fontIran text-xs-center"><v-icon color="red">warning</v-icon>لطفا قبل از ثبت آگهی <router-link to="/Login" class="fontsIran">ورود</router-link> یا <router-link to="/signUp" class="fontsIran">ثبت نام</router-link> کنید!</p>
+        </v-card-text>
+        <v-divider></v-divider>
+        <v-card-text>
+            <p class="fontIran text-xs-center">قوانین و مقررات تبلیغاتی:</p>
+            <ul class="fontIran pr-3">
+                <li class="mb-3">.برای نمایش تبلیغات شما باید بیت کوین را در کیف پول صدر کریپتو خود داشته باشید. شما برای تبلیغات با روش های پرداخت آنلاین و 0.04<br> بیت کوین یا بیشتر برای تبلیغات محلی (نقد) نیاز به 0.04 بیت کوین یا بیشتر دارید</li>
+                <li class="mb-3">.برخی از روش های پرداخت مستلزم آن هستند که قبل از اینکه آگهی های شما قابل مشاهده باشند، باید شناسه،شناسایی شوند</li>
+                <li class="mb-3">.هر تبلیغ کننده هزینه های تراکنش تکمیل شده 1٪ از کل مبلغ تجاری است<span><router-link to="" class="fontsIran">.تمام هزینه ها را در صفحه هزینه های ما مشاهده کنید</router-link></span></li>
+                <li class="mb-3">.هنگامی که یک بازرگانی باز شود، قیمت نهایی است، مگر اینکه یک اشتباه روشن در قیمت گذاری وجود داشته باشد</li>
+                <li class="mb-3">.شما مجاز به خرید یا فروش بیت کوین از طرف شخص دیگری (واسطه) نیستید.</li>
+                <li class="mb-3">.شما فقط می توانید از حساب های پرداخت شده که به نام خود ثبت شده (بدون پرداخت شخص ثالث!) استفاده کنید</li>
+                <li class="mb-3">.شما باید جزئیات پرداخت خود را در تبلیغات و یا در چت تجاری قرار دهید</li>
+                <li class="mb-3">.همه ارتباطات باید در صدر کریپتواتفاق بیافتد</li>
+                <li class="mb-3">.روش های پرداخت مشخص شده است <span class="fontIran">ریسک بالا</span> داشتن یک <span class="fontIran">خطر عمده تقلب</span>.هنگام استفاده از روشهای پرداخت با ریسک بالا، مراقب باشید و همیشه آی دی را تأیید کنید</li>
             </ul>
-            </v-card-text>
-        </div>
-        <div>
-            <p class="tradeType">نوع تجارت</p>
-        </div>
+        </v-card-text>
+        <v-divider></v-divider>
+        <v-card-text class="fontIran">نوع تجارتی که میخواهید انجام دهید:</v-card-text>
+        <v-card-text class="fontIran pt-0">
+            <p>اگر بخواهید بیت کوین ها را بفروشید مطمئن شوید که شما بیت کوین ها را در کیف پول صدر  کریپتو خود موجود دارید</p>
+        </v-card-text>
+        <v-radio-group v-model="radioGroup">
+            <v-radio
+            v-for="tradeType in tradeTypes"
+            :key="tradeType"
+            :label="tradeType"
+            :value="tradeType"
+            class="fontIran mt-0"
+            ></v-radio>
+        </v-radio-group>
+
+        <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <v-text-field
+                    class="mr-3"
+                    label="موقعیت مکانی"
+                    box
+                    >
+                    <template slot="label">
+                        موقعیت مکانی <v-icon style="vertical-align: middle;color:aqua">place</v-icon>
+                    </template>
+                    </v-text-field>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <v-card-text class="fontIran caption pt-1">برای تجارت آنلاین شما نیاز به مشخص کردن کشور, تجارت محلی، لطفا شهر، کد پستی و یا نام خیابان را مشخص کنید</v-card-text>
+                </v-card>
+            </v-flex>
+        </v-layout>
+
+        <v-text-field
+            class="textField mr-3" 
+            label="موقعیت مکانی"
+            box
+        >
+         <template slot="label">
+          موقعیت مکانی <v-icon style="vertical-align: middle;color:aqua">place</v-icon>
+        </template>
+        </v-text-field>
+
+        <v-select
+            v-validate="'required'"
+            :items="selectCurrency"
+            v-model="select"
+            :error-messages="errors.collect('select')"
+            data-vv-name="select"
+            label="نوع ارز"
+            class="textField mr-3" 
+            box
+        >
+        </v-select>
+        <v-text-field
+            class="textField mr-3"
+            label="محدوده تغییرات"
+            box
+            >
+        </v-text-field>
+        <v-text-field
+            class="textField mr-3"
+            label="قیمت معامله "
+            box
+        >
+        </v-text-field>
+        <v-card-text class="fontIran">قیمت تجاری با ارزش بازار فعلی 6496.30 دلار / بیت کوین</v-card-text>
+        <v-card-text class="fontIran">.چگونه قیمت معاملات از قیمت بازار ساعتی تعیین می شود. برای اطلاعات بیشتر در رابطه با معادلات نحوه تعریف قیمت معاملاتی خود، به سؤالات قیمت گذاری قیمت مراجعه کنید. لطفا توجه داشته باشید که همیشه تبلیغ کننده مسئول پرداخت هزینه پردازش پرداخت است</v-card-text>
         <v-divider></v-divider>
         <div>
-                <p class="wantText">...من می خواهم</p>
-                <v-radio-group v-model="radioGroup">
-                    <v-radio
-                        v-for="tradeType in tradeTypes"
-                        :key="tradeType"
-                        :label="tradeType"
-                        :value="tradeType"
-                    ></v-radio>
-                </v-radio-group>
-                <p class="kindTrade">چه نوع تبلیغ تجاری شما می خواهید ایجاد کنید؟<br>اگر بخواهید بیت کوین ها را بفروشید مطمئن شوید<br> شما بیت کوین ها را در کیف پول صدر کریپتو خود دارید</p>
-        </div>
-        <v-divider></v-divider>
-        <div>
-            <v-text-field label="محل خود را وارد کنید"></v-text-field>
-        </div>
-        <div>
-            
-            <v-divider></v-divider>
-        </div>
-        <div>
-            
-            <v-text-field label="پول را وارد کنید"></v-text-field>
-        </div>
-        <v-divider></v-divider>
-        <div>
-            
-            <v-text-field label="حاشیه را وارد کنید"></v-text-field>
-            <p>.لبه ها که بیش از قیمت بازار بیتکوین می خواهید. برای جذب مخاطبین بیشتر از ارزش منفی برای خرید یا فروش زیر قیمت بازار استفاده کنید. برای قیمت های پیچیده تر ویرایش معادله قیمت به طور مستقیم</p>
-        </div>
-        <div>
-            <p></p>
-            <v-text-field label="قیمت معامله"></v-text-field>
-            <p>قیمت تجاری با ارزش بازار فعلی 6496.30 دلار / بیت کوین</p>
-            <p>.چگونه قیمت معاملات از قیمت بازار ساعتی تعیین می شود. برای اطلاعات بیشتر در رابطه با معادلات نحوه تعریف قیمت معاملاتی خود، به سؤالات قیمت گذاری قیمت مراجعه کنید. لطفا توجه داشته باشید که همیشه تبلیغ کننده مسئول پرداخت هزینه پردازش پرداخت است</p>
-        </div>
-        <v-divider></v-divider>
-        <div>
-            <p>حد مجاز حداکثر معاملات</p>
-            <v-text-field label="حداکثر حد معامله"></v-text-field>
-            <p>.اختیاری. حداکثر حد معامله در یک تجارت. برای فروش آنلاین، تعادل کیفی صدر کریپتو شما می تواند حداکثر تجارت قابل اعتماد را نیز محدود کند</p>
+        <p>حد مجاز حداکثر معاملات</p>
+        <v-text-field label="حداکثر حد معامله"></v-text-field>
+        <p>.اختیاری. حداکثر حد معامله در یک تجارت. برای فروش آنلاین، تعادل کیفی صدر کریپتو شما می تواند حداکثر تجارت قابل اعتماد را نیز محدود کند</p>
         </div>
         <v-divider></v-divider>        
         <div>
-            <p>محدود کردن مقدار به</p>
-            <v-text-field label="مقدار را محدود کن"></v-text-field>
-            <p>.اختیاری. مقدار معامله را محدود به عدد صحیح جدا از عدد کاما، به عنوان مثال 20،50،100. در ارز فیات (دلار / یورو / و غیره). دستی برای کوین، کارت هدیه و غیره</p>
+        <p>محدود کردن مقدار به</p>
+        <v-text-field label="مقدار را محدود کن"></v-text-field>
+        <p>.اختیاری. مقدار معامله را محدود به عدد صحیح جدا از عدد کاما، به عنوان مثال 20،50،100. در ارز فیات (دلار / یورو / و غیره). دستی برای کوین، کارت هدیه و غیره</p>
         </div>
         <v-divider></v-divider>
         <div>
-            <p>گزینه های نقدینگی</p>
-            <v-divider></v-divider>
+        <p>گزینه های نقدینگی</p>
+        <v-divider></v-divider>
         </div>
         <div>
         <p>پیگیری نقدینگی</p>
@@ -88,47 +114,56 @@
         <p>.یک خریدار باز می شود تجارت برای 20 دلار حداکثر. معامله محدود به طور خودکار به 80 دلار کاهش یافته است. اگر خریدار تجارت را لغو کند، به قیمت 100 دلار بازگشت می کند و در صورتی که تجارت به پایان برسد، به 80 دلار می رسد</p>
         </div>
         <div>
-            <p>گزینه های امنیتی</p>
-            <v-divider></v-divider>
+        <p>گزینه های امنیتی</p>
+        <v-divider></v-divider>
         </div>
         <div>
-            <p>فقط شناسایی افراد</p>
-            <v-checkbox></v-checkbox>
-            <p>.برای تماس با تبلیغات خود، کاربران باید هویت خود را با ارسال شناسه، گواهینامه رانندگی یا گذرنامه تأیید کنند</p>
+        <p>فقط شناسایی افراد</p>
+        <v-checkbox></v-checkbox>
+        <p>.برای تماس با تبلیغات خود، کاربران باید هویت خود را با ارسال شناسه، گواهینامه رانندگی یا گذرنامه تأیید کنند</p>
         </div>
         <v-divider></v-divider>
         <div>
-            <p>.تأیید اس ام اس مورد نیاز است</p>
-            <v-checkbox></v-checkbox>
-            <p>.فقط تماس با یک شماره تلفن همراه تأیید شده می تواند از طریق تبلیغ شما با شما تماس بگیرد</p>
+        <p>.تأیید اس ام اس مورد نیاز است</p>
+        <v-checkbox></v-checkbox>
+        <p>.فقط تماس با یک شماره تلفن همراه تأیید شده می تواند از طریق تبلیغ شما با شما تماس بگیرد</p>
         </div>
         <v-divider></v-divider>
         <div>
-            <p>فقط اعتماد مردم</p>
-            <v-checkbox></v-checkbox>
-            <p>.تبلیغات خود را محدود کنید تا تنها به کاربران نشان داده شود که شما به عنوان اعتماد علامتگذاری کرده اید<router-link to="">Learn how to mark users as trusted</router-link>.</p>
+        <p>فقط اعتماد مردم</p>
+        <v-checkbox></v-checkbox>
+        <p>.تبلیغات خود را محدود کنید تا تنها به کاربران نشان داده شود که شما به عنوان اعتماد علامتگذاری کرده اید<router-link to="">Learn how to mark users as trusted</router-link>.</p>
         </div>
         <div>
-            <Footer/>
+        <Footer/>
         </div>
-    </div>
-    </v-card-text>
-</v-card>
+    </v-card>
 </template>
 <script>
+import { mapState, mapActions } from 'vuex';
 import Footer from './../components/Footer.vue'
     export default{
         data(){
             return{
                 checkbox:true,
+                select:null,
                 radioGroup:1,
                 tradeTypes:[
                     "فروش بیت کوین خود در صدر کریپتو",
                     "خرید بیت کوین در صدر کریپتو",
                     "فروش بیت کوین آنلاین شما",
                     "خرید بیت کوین آنلاین"
+                ],
+                selectCurrency:[
+                    'بیت کوین',
+                    'اتریوم',
+                    'زدکش',
+                    'ترون',
                 ]
             }
+        },
+        computed: {
+            ...mapState(['currencyMenu'])
         },
         components:{
             Footer
@@ -136,10 +171,16 @@ import Footer from './../components/Footer.vue'
     }
 </script>
 <style scoped>
-.font{
-    font-family:iranian sans;
+.fontIran{
+    font-family:'Iranian Sans';
 }
-.fonts{
-    font-family:b nazanin;
+.fontsIran{
+    font-family:'iranian sans';
+    color:rgb(0, 153, 255);
+    text-decoration:none;
 }
+.fontsIran:hover{
+    color:rgb(0, 140, 255);
+}
+
 </style>
