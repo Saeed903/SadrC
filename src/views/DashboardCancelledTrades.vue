@@ -1,9 +1,9 @@
 <template>
     <div>
-        <v-card-text class="text-xs-center">
-        <p >معاملات لغو شده، لغو شد</p>
+        
+        <p class="text-xs-center">معاملات لغو شده، لغو شد</p>
         <router-link to="">.اطلاعات را با فرمت سی اس وی دانلود کنید</router-link>
-        </v-card-text>
+        
 
         <v-card-text>
             <v-card>
