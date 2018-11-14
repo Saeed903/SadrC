@@ -37,7 +37,7 @@
                 <p class="text-xs-center font-weight-bold headline white--text pt-3">فروش بیت کوین آنلاین در جمهوری اسلامی ایران</p>
             </div>
             <div>
-                <Transaction></Transaction>
+                <Advertise></Advertise>
             </div>
         </div>
 
@@ -46,7 +46,7 @@
                 <p class="text-xs-center font-weight-bold headline white--text pt-3">فروش بیت کوین برای نقدی در نزدیکی جمهوری اسلامی ایران</p>
             </div>
             <div>
-                <Transaction></Transaction>
+                <Advertise></Advertise>
             </div>
         </div>
         <div class="cardBox">
@@ -75,7 +75,7 @@
     </div>
 </template>
 <script>
-import Transaction from './../components/Advertise.vue'
+import Advertise from './../components/Advertise.vue'
 import Footer from './../components/Footer.vue'
 
 export default{
@@ -86,7 +86,7 @@ export default{
        
     }),
     components:{
-        Transaction,
+        Advertise,
         Footer,
     }
   };
