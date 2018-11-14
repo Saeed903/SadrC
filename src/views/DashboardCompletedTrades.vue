@@ -1,8 +1,10 @@
 <template>
     <div>
-        <p>.معاملات بسته، به پایان رسید</p>
-        <router-link to="">.اطلاعات را با فرمت سی اس وی دانلود کنید</router-link>
-        <div class="dataTable">
+        <p class="text-xs-center">معاملات بسته، به پایان رسید.</p>
+        <router-link to="">اطلاعات را با فرمت سی اس وی دانلود کنید.</router-link>
+
+        <v-card-text>
+            <v-card>
             <v-data-table
                 class="text-xs-left"
                 :headers="headers"
@@ -19,7 +21,8 @@
                     <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
                 </template>
             </v-data-table>
-        </div>
+            </v-card>
+        </v-card-text>
     </div>
 </template>
 <script>
@@ -127,8 +130,5 @@ export default{
   
 </script>
 <style scoped>
-.dataTable{
-    margin-top:100px;
-    box-shadow:1px 3px 3px rgb(190, 176, 176);
-}
+
 </style>

@@ -1,12 +1,8 @@
 <template>
-
-
+<div>
     <v-card>
-       
-       
             <p class="headline text-xs-center">داشبورد</p>
-       
-       
+    
         <v-card-text>
             <v-card >
                 <v-bottom-nav
@@ -68,12 +64,16 @@
                 </div>
             </div>
         </transition>
-
-        <Footer></Footer>
         
-    </v-card>
+        </v-card>
+        
+        <v-card>
+            <v-card-text>
+        <Footer></Footer>
+            </v-card-text>
+        </v-card>
 
-
+</div>
 </template>
 <script>
 import DashboardAllClosedTrades from './../views/DashboardAllClosedTrades.vue'
