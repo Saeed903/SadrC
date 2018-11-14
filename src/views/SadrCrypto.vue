@@ -19,7 +19,8 @@
         </div>
       
         <div class="mt-5">
-            <p class="text-xs-center font-weight-bold title white--text">خرید و فروش ارز دیجیتال</p>
+            <p class="iran">صدرکریپتو ساده ترین و مطمئن ترین مکان برای خرید، فروش و مدیریت ارز دیجیتال خود می باشد</p>
+            <p class="text-xs-center font-weight-bold title white--text" >خرید و فروش ارز دیجیتال</p>
             <p class="text-xs-center font-weight-bold title white--text">صدرکریپتو ساده ترین و مطمئن ترین مکان برای خرید، فروش و مدیریت ارز دیجیتال خود می باشد.</p>
         </div>
         <div class="twoSection">
@@ -36,7 +37,7 @@
                 <p class="text-xs-center font-weight-bold headline white--text pt-3">فروش بیت کوین آنلاین در جمهوری اسلامی ایران</p>
             </div>
             <div>
-                <Transaction></Transaction>
+                <Advertise></Advertise>
             </div>
         </div>
 
@@ -45,7 +46,7 @@
                 <p class="text-xs-center font-weight-bold headline white--text pt-3">فروش بیت کوین برای نقدی در نزدیکی جمهوری اسلامی ایران</p>
             </div>
             <div>
-                <Transaction></Transaction>
+                <Advertise></Advertise>
             </div>
         </div>
         <div class="cardBox">
@@ -74,7 +75,7 @@
     </div>
 </template>
 <script>
-import Transaction from './../components/Advertise.vue'
+import Advertise from './../components/Advertise.vue'
 import Footer from './../components/Footer.vue'
 
 export default{
@@ -85,12 +86,16 @@ export default{
        
     }),
     components:{
-        Transaction,
+        Advertise,
         Footer,
     }
   };
 </script>
 <style scoped>
+.iran{
+    font-family: 'Iranian Sans';
+    font-size: 20px;
+}
 .cardHover{
     border:1px solid #e3e3e3;
     box-shadow:1px 2px 2px rgb(161, 156, 156);
