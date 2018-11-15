@@ -45,7 +45,7 @@
                     color="teal"
                     >
                     <template slot="label">
-                        موقعیت مکانی <v-icon style="vertical-align: middle;color:aqua">place</v-icon>
+                        موقعیت مکانی <v-icon style="vertical-align: middle;color:aqua">add_location</v-icon>
                     </template>
                     </v-text-field>
                 </v-card>
