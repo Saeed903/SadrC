@@ -99,6 +99,7 @@
     },
     data: () => ({
       valid: false,
+      validate:false,
       sitekey: '6LeaLnYUAAAAAOsDilRLdvAo2o9JNBrjxhLpUGGw',
       user:{
         username: '',
@@ -130,13 +131,9 @@
       },
       signUp () {
         //this.$refs.invisibleRecaptcha.execute();
-        if (this.$refs.form.validate()){
+        if (this.valid){
           const { User } = this.$FeathersVuex;
-          const user = new User({
-              username: this.user.username,
-              email: this.user.email,
-              password: this.user.password,
-          });
+          const user = new User(this.user);
           user.save()
             .then(user => {
                 console.log(user);
