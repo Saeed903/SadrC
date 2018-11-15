@@ -88,7 +88,7 @@
 
         <router-link to="BuyButtonLoggedButNotverifiyEmail">
           <v-tooltip bottom>
-            <v-icon slot="activator" color="grey" dark >
+            <v-icon slot="activator" color="white" dark >
               shopping_cart
             </v-icon>
             <span>BuyButtonLoggedButNotverifiyEmail </span>
@@ -97,7 +97,7 @@
 
         <router-link to="PostTrade">
           <v-tooltip bottom>
-            <v-icon slot="activator" color="grey" dark >
+            <v-icon slot="activator" color="white" dark >
               shopping_cart
             </v-icon>
             <span>ثبت آگهی</span>
@@ -106,7 +106,7 @@
       
         <router-link to="Forums">
           <v-tooltip bottom>
-            <v-icon slot="activator" color="grey" dark>
+            <v-icon slot="activator" color="white" dark>
               group
             </v-icon>
             <span>انجمن ها</span>
@@ -115,7 +115,7 @@
 
         <router-link to="Help">
           <v-tooltip bottom>
-            <v-icon slot="activator" color="grey" dark>
+            <v-icon slot="activator" color="white" dark>
               help
             </v-icon>
             <span>کمک</span>
@@ -130,7 +130,7 @@
           <router-link to="Signup" class="freeRegister">{{signState}}</router-link>
           <router-link to="Login" class="menu">
             <v-tooltip bottom>
-              <v-icon slot="activator" color="grey" dark>
+              <v-icon slot="activator" color="white" dark>
                 lock_open
               </v-icon>
               <span>ورود</span>
