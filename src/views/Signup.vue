@@ -18,7 +18,7 @@
               :counter="30"
               :error-messages="errors.collect('username')"
               label="نام کاربر"
-              class="text "
+              class="textBottom textField"
               data-vv-name="username"
             ></v-text-field>
 
@@ -27,7 +27,7 @@
               v-model="user.email"
               :error-messages="errors.collect('email')"
               label="ایمیل"
-              class="text "
+              class="textBottom emailField"
               data-vv-name="email"
               required
             ></v-text-field>
@@ -36,7 +36,7 @@
               v-validate="'required|max:20'"
               v-model="user.password"
               :counter="20"
-              class="text "
+              class="textBottom textField"
               :error-messages="errors.collect('password')"
               :type="'password'"
               label="رمزعبور"
@@ -48,7 +48,7 @@
               v-validate="'required|max:20'"
               v-model="showPassword"
               :counter="20"
-              class="text"
+              class="textBottom textField"
               :error-messages="errors.collect('passwordAgain')"
               :type="'password'"
               label="تکرار رمز عبور "
@@ -63,13 +63,13 @@
                 :sitekey = "sitekey">
             </vue-recaptcha>
 
-            <v-btn type="submit" class="text primary" :disabled="!valid" >ارسال</v-btn>
-            <v-btn @click="clear" class="text primary">پاک کردن</v-btn>
+            <v-btn type="submit" class="textBottom primary" :disabled="!valid" >ارسال</v-btn>
+            <v-btn @click="clear" class="textBottom primary">پاک کردن</v-btn>
 
           </v-form>
           <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
-          <p class="text">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="link">ورود</router-link></p>
-          <p class="text">رمز عبور را فراموش کرده اید؟<router-link to="/ResetPassword" class="link">.رمز عبور خودتان را باز نشانی کنید</router-link></p>
+          <p class="textBottom">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="link">ورود</router-link></p>
+          <p class="textBottom">رمز عبور را فراموش کرده اید؟<router-link to="/ResetPassword" class="link">.رمز عبور خودتان را باز نشانی کنید</router-link></p>
         </v-card-text>
       </v-card>
     </v-flex>
@@ -156,6 +156,9 @@
 .text{
   font-family: Iranian Sans;
   font-size: 15px;
+}
+.textBottom{
+  font-family: Iranian Sans;
 }
 .link{
     text-decoration: none;
