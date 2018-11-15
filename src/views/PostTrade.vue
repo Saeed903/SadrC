@@ -389,29 +389,26 @@
 </template>
 <script>
 
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions, mapGetters } from 'vuex';
 import Footer from './../components/Footer.vue'
     export default{
-        data(){
-            return{
-                checkbox:true,
-                select:null,
-                radioGroup:1,
-                tradeTypes:[
-                    "فروش بیت کوین خود در صدر کریپتو",
-                    "خرید بیت کوین در صدر کریپتو",
-                    "فروش بیت کوین آنلاین شما",
-                    "خرید بیت کوین آنلاین"
-                ],
-                selectCurrency:[
-                    'بیت کوین',
-                    'اتریوم',
-                    'زدکش',
-                    'ترون',
-                ],
-    
-            }
-        },
+        data:() => ({
+            checkbox:true,
+            select:null,
+            radioGroup:1,
+            tradeTypes:[
+                "فروش بیت کوین خود در صدر کریپتو",
+                "خرید بیت کوین در صدر کریپتو",
+                "فروش بیت کوین آنلاین شما",
+                "خرید بیت کوین آنلاین"
+            ],
+            selectCurrency:[
+                'بیت کوین',
+                'اتریوم',
+                'زدکش',
+                'ترون',
+            ],
+        }),
         computed: {
             ...mapState(['currencyMenu']),
             ...mapState('advertises', { loadingAdvertise: 'isFindPending'}),
@@ -424,12 +421,11 @@ import Footer from './../components/Footer.vue'
         methods:{
             ...mapActions('advertises', { findAdvertise : 'find'}),
         },
-        created(){
+        mounted(){
             this.findAdvertise()
-            .then(response => {
-            // In the find action, the 'todos' array is not a reactive list, but the individual records are.
-            const advertises = response.data || response
-            }), 
+                .then(response => {
+                    const advertises = response.data || response;
+                }) 
         },
         components:{
             Footer
