@@ -179,7 +179,7 @@
       
 
       <v-card-text class="text-sm-left headline">
-        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="body-2">.com</span><v-icon color="grey">home</v-icon></router-link>
+        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="body-2 ">.com</span><v-icon color="grey">home</v-icon></router-link>
       </v-card-text>
       
     </v-toolbar>
@@ -270,6 +270,7 @@ body{
 .sadrCryptoText{
   color:rgb(235, 224, 224);
   text-decoration:none;
+  font-family:b nazanin;
 }
 
 </style>

@@ -39,7 +39,7 @@
             <v-flex sm6 md6 lg6>
                 <v-card dark tile flat>
                     <v-text-field
-                    class="mr-3"
+                    class="mr-3 fontIran"
                     label="موقعیت مکانی"
                     box
                     >
@@ -66,7 +66,7 @@
                     :error-messages="errors.collect('select')"
                     data-vv-name="select"
                     label="نوع ارز"
-                    class="textField mr-3" 
+                    class="textField mr-3 fontIran" 
                     box
                     
                     >
@@ -84,7 +84,7 @@
             <v-flex sm6 md6 lg6>
                 <v-card dark tile flat >
                     <v-text-field
-                    class="textField mr-3"
+                    class="textField mr-3 fontIran"
                     label="محدوده تغییرات"
                     box
                     >
@@ -102,7 +102,7 @@
             <v-flex sm6 md6 lg6>
                 <v-card dark tile flat >
                     <v-text-field
-                    class="textField mr-3"
+                    class="textField mr-3 fontIran"
                     label="معادل قیمت"
                     box
                     >
@@ -120,16 +120,34 @@
         <v-card-text>
         <ul class="fontIran mt-4 mb-4 pr-3">
             <li class="pb-3">چگونه قیمت معاملات از قیمت بازار ساعتی تعیین می شود?</li>
-            <li class="pb-3">برای اطلاعات بیشتر در رابظه با معادلات نحوه تعریف قیمت معاملاتی خود به سوالات <router-link to="" class="fontsIran">قیمت گذاری</router-link> مراجعه کنید.</li>
+            <li class="pb-3">برای اطلاعات بیشتر در رابطه با معادلات نحوه تعریف قیمت معاملاتی خود به سوالات <router-link to="" class="fontsIran">قیمت گذاری</router-link> مراجعه کنید.</li>
             <li>لطفا توجه داشته باشید که همیشه تبلیغ کننده مسئول پرداخت هزینه پردازش پرداخت است.</li>
         </ul>
         </v-card-text>
+
+         <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                    <v-text-field
+                    class="textField mr-3 fontIran"
+                    label="کمترین مقدار معامله"
+                    box
+                    >
+                    </v-text-field>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <v-card-text class="fontIran caption pt-1">کمترین مقدار معامله در یک تجارت اختیاری است</v-card-text>    
+                </v-card>
+            </v-flex>
+        </v-layout>
   
           <v-layout row wrap>
             <v-flex sm6 md6 lg6>
                 <v-card dark tile flat >
                     <v-text-field
-                    class="textField mr-3"
+                    class="textField mr-3 fontIran"
                     label="بیشترین مقدار معامله"
                     box
                     >
@@ -147,8 +165,8 @@
             <v-flex sm6 md6 lg6>
                 <v-card dark tile flat >
                     <v-text-field
-                    class="textField mr-3"
-                    label="کمترین مقدار معامله"
+                    class="textField mr-3 fontIran"
+                    label="محدودیت مقدار معامله"
                     box
                     >
                     </v-text-field>
@@ -156,17 +174,119 @@
             </v-flex>
             <v-flex sm6 md6 lg6>
                 <v-card dark tile flat>
-                    <v-card-text class="fontIran caption pt-1">کمترین مقدار معامله در یک تجارت اختیاری است</v-card-text>    
+                    <v-card-text class="fontIran caption pt-1">.اختیاری. مقدار معامله را محدود به عدد صحیح جدا از عدد کاما، به عنوان مثال 20،50،100. در ارز فیات (دلار / یورو / و غیره). دستی برای کوین، کارت هدیه و غیره</v-card-text>    
                 </v-card>
             </v-flex>
         </v-layout>
-    
-        <div>
-        <p>محدود کردن مقدار به</p>
-        <v-text-field label="مقدار را محدود کن"></v-text-field>
-        <p>.اختیاری. مقدار معامله را محدود به عدد صحیح جدا از عدد کاما، به عنوان مثال 20،50،100. در ارز فیات (دلار / یورو / و غیره). دستی برای کوین، کارت هدیه و غیره</p>
-        </div>
-        <v-divider></v-divider>
+        <v-divider></v-divider>  
+
+        <v-card-text class="fontIran">روزها و ساعت هایی که میخواهید آگهی و تبلیغات شما نشان داده شود:</v-card-text>
+        
+        <v-layout row wrap>
+            <v-flex>
+                <v-card dark>
+                    <v-card-media class="fontIran">
+                        <div class="pt-2">
+                            <v-card-text class="">شنبه</v-card-text>
+                        </div>
+                        <div>
+                            <v-select label="از ساعت"></v-select>
+                        </div>
+                        <div>
+                            <v-select label="تا ساعت"></v-select>
+                        </div>
+                    </v-card-media>
+                </v-card>
+                <v-card dark>
+                    <v-card-media class="fontIran">
+                        <div class="pt-2">
+                            <v-card-text>1شنبه</v-card-text>
+                        </div>
+                        <div>
+                            <v-select label="از ساعت"></v-select>
+                        </div>
+                        <div>
+                            <v-select label="تا ساعت"></v-select>
+                        </div>
+                    </v-card-media>
+                </v-card>
+                <v-card dark>
+                    <v-card-media class="fontIran">
+                        <div class="pt-2">
+                            <v-card-text class="">2شنبه</v-card-text>
+                        </div>
+                        <div>
+                            <v-select label="از ساعت"></v-select>
+                        </div>
+                        <div>
+                            <v-select label="تا ساعت"></v-select>
+                        </div>
+                    </v-card-media>
+                </v-card>
+                <v-card dark>
+                    <v-card-media class="fontIran">
+                        <div class="pt-2">
+                            <v-card-text class="">3شنبه</v-card-text>
+                        </div>
+                        <div>
+                            <v-select label="از ساعت"></v-select>
+                        </div>
+                        <div>
+                            <v-select label="تا ساعت"></v-select>
+                        </div>
+                    </v-card-media>
+                </v-card>
+                <v-card dark>
+                    <v-card-media class="fontIran">
+                        <div class="pt-2">
+                            <v-card-text class="">4شنبه</v-card-text>
+                        </div>
+                        <div>
+                            <v-select label="از ساعت"></v-select>
+                        </div>
+                        <div>
+                            <v-select label="تا ساعت"></v-select>
+                        </div>
+                    </v-card-media>
+                </v-card>
+                <v-card dark>
+                    <v-card-media class="fontIran">
+                        <div class="pt-2">
+                            <v-card-text class="">5شنبه</v-card-text>
+                        </div>
+                        <div>
+                            <v-select label="از ساعت"></v-select>
+                        </div>
+                        <div>
+                            <v-select label="تا ساعت"></v-select>
+                        </div>
+                    </v-card-media>
+                </v-card>
+                <v-card dark>
+                    <v-card-media class="fontIran">
+                        <div class="pt-2">
+                            <v-card-text class="">جمعه</v-card-text>
+                        </div>
+                        <div>
+                            <v-select label="از ساعت"></v-select>
+                        </div>
+                        <div>
+                            <v-select label="تا ساعت"></v-select>
+                        </div>
+                    </v-card-media>
+                </v-card><v-card dark>
+                    <v-card-media class="fontIran">
+                        <v-card-text></v-card-text>
+                    </v-card-media>
+                </v-card>
+            </v-flex>
+        </v-layout>
+  
+
+
+
+
+
         <div>
         <p>گزینه های نقدینگی</p>
         <v-divider></v-divider>
@@ -223,7 +343,8 @@ import Footer from './../components/Footer.vue'
                     'اتریوم',
                     'زدکش',
                     'ترون',
-                ]
+                ],
+    
             }
         },
         computed: {
