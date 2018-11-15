@@ -1,7 +1,7 @@
 <template>
   <v-container fluid grid-list-md>
     <v-layout v-if="!loading"  row wrap align-justify justify-center>
-      <v-flex  d-flex xs12 sm6 md8 lg8>
+      <v-flex  d-flex xs12 sm8 md8 lg8>
         <v-card>
           <v-card-text>
             <v-form 
@@ -11,7 +11,7 @@
             >
               <v-card-text>
                 <p class="titled text-xs-center">ورود</p>
-                <p class="text">با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید</p>
+                <p class="text text-xs-center">با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید</p>
               </v-card-text>
                 <v-text-field
                   :roles = "notEmptyRoles"
