@@ -46,7 +46,7 @@ export default{
   },
   computed:{
     typeCustomer:function() {
-        return (this.isSeller==1) ?'Seller':'Buyer';
+        return (this.isSeller==1) ?'فروشنده':'خریدار';
     },
     headers:function() {
         return  [{
@@ -56,15 +56,15 @@ export default{
             sortable: false,
             value: 'name'
             },
-            { text: 'ایجاد شده در', class:'subheading', value: 'ایجاد شده در' },
-            { text: 'نوع تجارت', class:'subheading', value: 'نوع تجارت' },
-            { text: 'شریک تجاری', class:'subheading', value: 'شریک تجاری' },
-            { text: 'وضعیت معامله', class:'subheading', value: 'وضعیت معامله' },
-            { text: 'fiat', class:'subheading', value: 'fiat' },
-            { text: 'مقدار تجارت', class:'subheading', value: 'مقدار تجارت' },
-            { text: 'هزینه معاملاتی', class:'subheading', value: 'هزینه معاملاتی' },
-            { text: 'مجموع بیت کوین', class:'subheading', value: 'مجموع بیت کوین' },       
-            { text: 'نرخ تبدیل', class:'subheading', value: 'نرخ تبدیل' },               
+            { text: 'ایجاد شده در', value: 'ایجاد شده در' },
+            { text: 'نوع تجارت', value: 'نوع تجارت' },
+            { text: 'شریک تجاری',  value: 'شریک تجاری' },
+            { text: 'وضعیت معامله',  value: 'وضعیت معامله' },
+            { text: 'fiat',  value: 'fiat' },
+            { text: 'مقدار تجارت',  value: 'مقدار تجارت' },
+            { text: 'هزینه معاملاتی',  value: 'هزینه معاملاتی' },
+            { text: 'مجموع بیت کوین',  value: 'مجموع بیت کوین' },       
+            { text: 'نرخ تبدیل',  value: 'نرخ تبدیل' },               
               ]
     }
   },

@@ -27,7 +27,7 @@
 
         <v-card-text>
         <div class="">
-        <v-btn class="primary">ایجاد تبلیغات</v-btn>
+        <v-btn class="table primary">ایجاد تبلیغات</v-btn>
         </div>
         </v-card-text>
 
