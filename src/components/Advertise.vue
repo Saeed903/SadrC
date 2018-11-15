@@ -1,7 +1,7 @@
 <template >
 <div>
   <v-data-table
-      class="text-xs-left"
+      class="table text-xs-left"
       :headers="headers"
       :items="desserts"
       :pagination.sync="pagination"
@@ -9,11 +9,11 @@
       :loading="loading"
     >
       <template slot="items" slot-scope="props">
-        <td>({{props.item.tradeCount}},{{props.item.satisfiedPercent}}){{ props.item.trader }}</td>
-        <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
-        <td class="text-xs-right">{{ props.item.price }}</td>
-        <td class="text-xs-right">{{ props.item.limits }}</td>
-        <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
+        <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
+        <td class="table text-xs-right">{{ props.item.paymentMethod }}</td>
+        <td class="table text-xs-right">{{ props.item.price }}</td>
+        <td class="table text-xs-right">{{ props.item.limits }}</td>
+        <td class="table text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
       </template>
     </v-data-table>
 </div>
@@ -156,3 +156,10 @@ export default{
 };
   
 </script>
+<style scoped>
+.table{
+    font-family: Iranian Sans;
+}
+
+</style>
+

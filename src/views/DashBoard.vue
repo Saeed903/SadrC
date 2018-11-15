@@ -1,6 +1,6 @@
 <template>
-<div class="font">
-    <v-card class="font">
+<div >
+    <v-card >
             <p class="titled text-xs-center">داشبورد</p>
     
         <v-card-text>
