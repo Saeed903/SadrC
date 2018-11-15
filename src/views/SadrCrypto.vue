@@ -9,7 +9,7 @@
                     <router-link to="/BitcoinCity" class="iran hoverDecoration">در 16370 شهر</router-link>
                     <span class="iran orange--text">و</span>
                     <router-link to="/BitcoinCountry" class="iran hoverDecoration">248 کشور</router-link>
-                    <span class="orange--text">شامل</span>
+                    <span class="iran orange--text">شامل</span>
                     <router-link to="/RepublicIran" class="iran hoverDecoration">جمهوری اسلامی ایران</router-link>
                 </v-card-text>
                 <div class="text-xs-center">

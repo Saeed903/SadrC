@@ -19,7 +19,7 @@
                   :counter="30"
                   label="ایمیل"
                   data-vv-name="email"
-                  class="text emailField"
+                  class="textBottom emailField"
                   required
                 >
                 </v-text-field>
@@ -31,7 +31,7 @@
                   :error-messages="errors.collect('password')"
                   :type="'password'"
                   label="رمز عبور"
-                  class="text textField"
+                  class="textBottom textField"
                   data-vv-name="password"
                   required
                 >
@@ -45,11 +45,11 @@
                 </vue-recaptcha>
                 <v-card-text :class="{red:errorLogin}" v-if="errorLogin" >  {{errorMessage}} </v-card-text>
 
-                  <v-btn type="submit" class="text primary">ورود</v-btn>
+                  <v-btn type="submit" class="textBottom primary">ورود</v-btn>
 
             </v-form>
-                <router-link class="text link" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link>
-                <p class="text">صدر کریپتو؟<router-link to="/SignUp" class="link">ثبت نام کنید</router-link></p>
+                <p><router-link class="textBottom link" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link></p>
+                <p class="textBottom">صدر کریپتو؟<router-link to="/SignUp" class="link">ثبت نام کنید</router-link></p>
           </v-card-text>
         </v-card>
       </v-flex>
@@ -149,6 +149,9 @@
 .text{
   font-family: Iranian Sans;
   font-size: 15px;
+}
+.textBottom{
+  font-family: Iranian Sans;
 }
 .link{
     text-decoration: none;
