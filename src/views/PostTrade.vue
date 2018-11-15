@@ -39,9 +39,10 @@
             <v-flex sm6 md6 lg6>
                 <v-card dark tile flat>
                     <v-text-field
-                    class="mr-3 fontIran"
+                    class="mr-3 fontIran "
                     label="موقعیت مکانی"
                     box
+                    color="teal"
                     >
                     <template slot="label">
                         موقعیت مکانی <v-icon style="vertical-align: middle;color:aqua">place</v-icon>
@@ -281,7 +282,15 @@
                 </v-card>
             </v-flex>
         </v-layout>
-  
+        <v-flex xs12>
+            <v-textarea
+            color="teal"
+            >
+                <div slot="label">
+                    Bio <small>(optional)</small>
+                </div>
+            </v-textarea>
+        </v-flex>
 
 
 
