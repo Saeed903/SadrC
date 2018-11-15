@@ -3,29 +3,29 @@
         <div>
             <v-card class="cardHover" color="rgb(61, 61, 61)">
                 <v-card-text class=" iran text-xs-center " >خرید و فروش بیت کوین در نزدیکی شما</v-card-text>
-                <v-card-text class="text-xs-center title orange--text">فوری.امن.خصوصی</v-card-text>
-                <v-card-text class="text-xs-center font-weight-bold title">
-                    <span class="orange--text">تجارت بیت کوین</span>
-                    <router-link to="/BitcoinCity" class="hoverDecoration">در 16370 شهر</router-link>
-                    <span class="orange--text">و</span>
-                    <router-link to="/BitcoinCountry" class="hoverDecoration">248 کشور</router-link>
+                <v-card-text class="iran text-xs-center orange--text">فوری.امن.خصوصی</v-card-text>
+                <v-card-text class="text-xs-center ">
+                    <span class="iran orange--text">تجارت بیت کوین</span>
+                    <router-link to="/BitcoinCity" class="iran hoverDecoration">در 16370 شهر</router-link>
+                    <span class="iran orange--text">و</span>
+                    <router-link to="/BitcoinCountry" class="iran hoverDecoration">248 کشور</router-link>
                     <span class="orange--text">شامل</span>
-                    <router-link to="/RepublicIran" class="hoverDecoration">جمهوری اسلامی ایران</router-link>
+                    <router-link to="/RepublicIran" class="iran hoverDecoration">جمهوری اسلامی ایران</router-link>
                 </v-card-text>
                 <div class="text-xs-center">
-                    <v-btn class="primary signButton" slot="activator" round>ثبت نام رایگان</v-btn>
+                    <v-btn class="iran primary signButton" slot="activator" round>ثبت نام رایگان</v-btn>
                 </div>
             </v-card>
         </div>
       
         <div class="mt-5">
-            <p class="iran">صدرکریپتو ساده ترین و مطمئن ترین مکان برای خرید، فروش و مدیریت ارز دیجیتال خود می باشد</p>
-            <p class="text-xs-center font-weight-bold title white--text" >خرید و فروش ارز دیجیتال</p>
-            <p class="text-xs-center font-weight-bold title white--text">صدرکریپتو ساده ترین و مطمئن ترین مکان برای خرید، فروش و مدیریت ارز دیجیتال خود می باشد.</p>
+            <p class="irans text-xs-center">صدرکریپتو ساده ترین و مطمئن ترین مکان برای خرید، فروش و مدیریت ارز دیجیتال خود می باشد</p>
+            <p class="irans text-xs-center" >خرید و فروش ارز دیجیتال</p>
+            <p class="irans text-xs-center">صدرکریپتو ساده ترین و مطمئن ترین مکان برای خرید، فروش و مدیریت ارز دیجیتال خود می باشد.</p>
         </div>
         <div class="twoSection">
             <div>
-                <p class="text-xs-center font-weight-bold headline white--text pt-3">خرید بیت کوین آنلاین در جمهوری اسلامی ایران</p>
+                <p class="iran text-xs-center pt-3">خرید بیت کوین آنلاین در جمهوری اسلامی ایران</p>
             </div>
             <div>
                 <Advertise></Advertise>
@@ -34,7 +34,7 @@
 
         <div class="twoSection">
             <div>
-                <p class="text-xs-center font-weight-bold headline white--text pt-3">فروش بیت کوین آنلاین در جمهوری اسلامی ایران</p>
+                <p class="iran text-xs-center pt-3">فروش بیت کوین آنلاین در جمهوری اسلامی ایران</p>
             </div>
             <div>
                 <Advertise></Advertise>
@@ -43,7 +43,7 @@
 
         <div class="twoSection">
             <div>
-                <p class="text-xs-center font-weight-bold headline white--text pt-3">فروش بیت کوین برای نقدی در نزدیکی جمهوری اسلامی ایران</p>
+                <p class="iran text-xs-center pt-3">فروش بیت کوین برای نقدی در نزدیکی جمهوری اسلامی ایران</p>
             </div>
             <div>
                 <Advertise></Advertise>
@@ -51,22 +51,22 @@
         </div>
         <div class="cardBox">
                 <v-card>
-                <v-card-text class="text-xs-right title font-weight-bold">اخبار صدر سیستم</v-card-text>
+                <v-card-text class="iran text-xs-right">اخبار صدر سیستم</v-card-text>
                 <v-divider></v-divider>
 
-                <v-card-text class="text-xs-right body-1 font-weight-medium"><router-link class="routerLink" to="">ابزار بیشتر برای معاملات خاموش</router-link></v-card-text>
+                <v-card-text class="contant text-xs-right"><router-link class="routerLink" to="">ابزار بیشتر برای معاملات خاموش</router-link></v-card-text>
                 <v-divider></v-divider>
 
-                <v-card-text class="text-xs-right body-1 font-weight-medium"><router-link class="routerLink" to="">تغییرات صفحه ورود به سیستم</router-link></v-card-text>
+                <v-card-text class="contant text-xs-right"><router-link class="routerLink" to="">تغییرات صفحه ورود به سیستم</router-link></v-card-text>
                 <v-divider></v-divider>
 
-                <v-card-text class="text-xs-right body-1 font-weight-medium"><router-link class="routerLink" to="">جبران خسارت برای کاربران دارای تعادل نقدی</router-link></v-card-text>
+                <v-card-text class="contant text-xs-right"><router-link class="routerLink" to="">جبران خسارت برای کاربران دارای تعادل نقدی</router-link></v-card-text>
                 <v-divider></v-divider>
 
-                <v-card-text class="text-xs-right body-1 font-weight-medium"><router-link class="routerLink" to="">سیستم جدید هزینه تراکنش برای بیت کوین</router-link></v-card-text>
+                <v-card-text class="contant text-xs-right"><router-link class="routerLink" to="">سیستم جدید هزینه تراکنش برای بیت کوین</router-link></v-card-text>
                 <v-divider></v-divider>
                 
-                <v-card-text class="text-xs-left body-1 font-weight-medium">اطلاعات بیشتر در<router-link class="routerLink" to=""> وبلاگ صدر سیستم </router-link></v-card-text>
+                <v-card-text class="contant text-xs-left">اطلاعات بیشتر در<router-link class="routerLink" to=""> وبلاگ صدر سیستم </router-link></v-card-text>
                 </v-card>
         </div>
         <div>
@@ -95,6 +95,14 @@ export default{
 .iran{
     font-family: 'Iranian Sans';
     font-size: 20px;
+}
+.irans{
+    font-family: 'Iranian Sans';
+    font-size: 16px;
+}
+.contant{
+    font-family: 'Iranian Sans';
+    
 }
 .cardHover{
     border:1px solid #e3e3e3;
