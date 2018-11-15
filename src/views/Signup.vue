@@ -9,7 +9,7 @@
             @keydown.prevent.enter>
             <v-card-text>
             <p class="titled text-xs-center">یک حساب جدید ثبت کنید</p>
-            <p class="text">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
+            <p class="text text-xs-center">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
             </v-card-text>
 
             <v-text-field 
