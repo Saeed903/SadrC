@@ -2,32 +2,19 @@
 <div>
     {{advertises}}
   <v-data-table
-<<<<<<< HEAD
       class="text-xs-right"
-=======
-      class="table text-xs-left"
->>>>>>> 6f14e3ffad327b28fa175ee4fc8d9b1070030e4e
       :headers="headers"
       :items="desserts"
       :pagination.sync="pagination"
       :total-items="totalDesserts"
       :loading="loadingAdvertise"
     >
-<<<<<<< HEAD
       <template v-if="!loading" slot="items" slot-scope="props">
         <td>({{props.item.tradeCount}},{{props.item.satisfiedPercent}}){{ props.item.trader }}</td>
         <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
         <td class="text-xs-right">{{ props.item.price }}</td>
         <td class="text-xs-right">{{ props.item.limits }}</td>
         <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
-=======
-      <template slot="items" slot-scope="props">
-        <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
-        <td class="table text-xs-right">{{ props.item.paymentMethod }}</td>
-        <td class="table text-xs-right">{{ props.item.price }}</td>
-        <td class="table text-xs-right">{{ props.item.limits }}</td>
-        <td class="table text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
->>>>>>> 6f14e3ffad327b28fa175ee4fc8d9b1070030e4e
       </template>
     </v-data-table>
 </div>
