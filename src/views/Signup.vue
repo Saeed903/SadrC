@@ -1,6 +1,6 @@
 <template>
   <v-layout row wrap align-justify justify-center>
-    <v-flex d-flex xs12 sm6 md8 lg8>
+    <v-flex d-flex xs12 sm8 md8 lg8>
       <v-card >
         <v-card-text>
           <v-form ref="form" v-model="valid"  
@@ -11,7 +11,7 @@
             <p class="titled text-xs-center">یک حساب جدید ثبت کنید</p>
             <p class="text">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
             </v-card-text>
-            
+
             <v-text-field 
               v-validate="'required|max:30'"
               v-model="user.username"
