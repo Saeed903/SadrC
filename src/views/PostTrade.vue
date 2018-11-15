@@ -42,7 +42,8 @@
                     class="mr-3 fontIran "
                     label="موقعیت مکانی"
                     box
-                    color="teal"
+                    color="cyan accent-2"
+                    clearable
                     >
                     <template slot="label">
                         موقعیت مکانی <v-icon style="vertical-align: middle;color:aqua">add_location</v-icon>
@@ -67,7 +68,8 @@
                     :error-messages="errors.collect('select')"
                     data-vv-name="select"
                     label="نوع ارز"
-                    class="textField mr-3 fontIran" 
+                    class="textField mr-3 fontIran"
+                    color="cyan accent-2" 
                     box
                     
                     >
@@ -88,6 +90,7 @@
                     class="textField mr-3 fontIran"
                     label="محدوده تغییرات"
                     box
+                    color="cyan accent-2"
                     >
                     </v-text-field>
                 </v-card>
@@ -105,6 +108,7 @@
                     <v-text-field
                     class="textField mr-3 fontIran"
                     label="معادل قیمت"
+                    color="cyan accent-2"
                     box
                     >
                     </v-text-field>
@@ -133,6 +137,7 @@
                     class="textField mr-3 fontIran"
                     label="کمترین مقدار معامله"
                     box
+                    color="cyan accent-2"
                     >
                     </v-text-field>
                 </v-card>
@@ -151,6 +156,7 @@
                     class="textField mr-3 fontIran"
                     label="بیشترین مقدار معامله"
                     box
+                    color="cyan accent-2"
                     >
                     </v-text-field>
                 </v-card>
@@ -169,6 +175,7 @@
                     class="textField mr-3 fontIran"
                     label="محدودیت مقدار معامله"
                     box
+                    color="cyan accent-2"
                     >
                     </v-text-field>
                 </v-card>
@@ -308,7 +315,7 @@
                 <v-card dark tile flat >
                    <v-checkbox
                     label="پیگیری نقدینگی"
-                    class="fontIran"                   
+                    class="fontIran pr-3"                   
                    >
                    </v-checkbox>
                 </v-card>
@@ -331,7 +338,7 @@
                 <v-card dark tile flat >
                    <v-checkbox
                     label="فقط شناسایی افراد"
-                    class="fontIran"                   
+                    class="fontIran pr-3"                   
                    >
                    </v-checkbox>
                 </v-card>
@@ -348,7 +355,7 @@
                 <v-card dark tile flat >
                    <v-checkbox
                     label="تاییدیه پیامک"
-                    class="fontIran"                   
+                    class="fontIran pr-3"                   
                    >
                    </v-checkbox>
                 </v-card>
@@ -365,7 +372,7 @@
                 <v-card dark tile flat >
                    <v-checkbox
                     label="اعتماد مردم"
-                    class="fontIran"                   
+                    class="fontIran pr-3"                   
                    >
                    </v-checkbox>
                 </v-card>
