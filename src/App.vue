@@ -88,7 +88,7 @@
 
         <router-link to="BuyButtonLoggedButNotverifiyEmail">
           <v-tooltip bottom>
-            <v-icon slot="activator" color="grey" dark >
+            <v-icon slot="activator" color="white" dark >
               shopping_cart
             </v-icon>
             <span>BuyButtonLoggedButNotverifiyEmail </span>
@@ -97,7 +97,7 @@
 
         <router-link to="PostTrade">
           <v-tooltip bottom>
-            <v-icon slot="activator" color="grey" dark >
+            <v-icon slot="activator" color="white" dark >
               shopping_cart
             </v-icon>
             <span>ثبت آگهی</span>
@@ -106,7 +106,7 @@
       
         <router-link to="Forums">
           <v-tooltip bottom>
-            <v-icon slot="activator" color="grey" dark>
+            <v-icon slot="activator" color="white" dark>
               group
             </v-icon>
             <span>انجمن ها</span>
@@ -115,7 +115,7 @@
 
         <router-link to="Help">
           <v-tooltip bottom>
-            <v-icon slot="activator" color="grey" dark>
+            <v-icon slot="activator" color="white" dark>
               help
             </v-icon>
             <span>کمک</span>
@@ -130,7 +130,7 @@
           <router-link to="Signup" class="freeRegister">{{signState}}</router-link>
           <router-link to="Login" class="menu">
             <v-tooltip bottom>
-              <v-icon slot="activator" color="grey" dark>
+              <v-icon slot="activator" color="white" dark>
                 lock_open
               </v-icon>
               <span>ورود</span>
@@ -179,7 +179,7 @@
       
 
       <v-card-text class="text-sm-left headline">
-        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="littleText">.com</span><v-icon color="grey">home</v-icon></router-link>
+        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="body-2 ">.com</span><v-icon color="grey">home</v-icon></router-link>
       </v-card-text>
       
     </v-toolbar>
@@ -246,16 +246,10 @@
 </script>
 
 <style scoped>
-#keep main .container {
-    height: 660px;
-  }
-  .navigation-drawer__border {
-    display: none;
-  }
- .text{
-   font-weight:400px;
- }
- .slide-fade-enter-active {
+body{
+  font-family:iranian sans;
+}
+.slide-fade-enter-active {
   transition: all .3s ease;
 }
 .slide-fade-leave-active {
@@ -272,19 +266,11 @@
   font-size:15px;
   font-family:b titr;
   margin-left:10px;
-  
-}
-.menu{
-  text-decoration:none;
-  color:rgb(153, 68, 68);
-  font-size:15px;
-  font-family:b titr;
-  margin-left:5px;
 }
 .sadrCryptoText{
   color:rgb(235, 224, 224);
   text-decoration:none;
-  
+  font-family:b nazanin;
 }
 
 </style>

@@ -1,42 +1,48 @@
 <template>
     <div>
+        <v-card-text class="text-xs-center">
+            <v-icon large>help_outline</v-icon>
+            <p class="titled">سوالات متداول</p>
+            <p class="text">این که آیا شما یک کاربر جدید هستید و یا یک معامله گر چاشنی هستید، به تمام سوالات خود در این صفحه پاسخ خواهید داد. اگر از Bitcoins جدید هستید می توانید از این راهنمای مفید خرید بیت کوین ها با استفاده از LocalBitcoins انجام دهید. اگر می خواهید یک معامله گر شوید، راهنمای آنلاین Bitcoins ها برای شما مناسب است. شما همچنین می توانید یک سوال در انجمن های ما بپرسید یا بلیط پشتیبانی را برای تماس با پشتیبانی ما باز کنید.</p>
+        </v-card-text>
+        
         <div>
-            <v-icon>guestion</v-icon>
+            <p class="help text-xs-center">دریافت کمک بیشتر</p>
         </div>
+        <v-layout row wrap>
+            <v-flex>
+                <v-card-text class="text-xs-center">
+                <v-icon>fab fa-twitter</v-icon><br>
+                <router-link class="link" to="">یک بلیط پشتیبانی را باز کنید</router-link>
+                </v-card-text>
+             </v-flex>
+
+             <v-flex>
+                <v-card-text class="text-xs-center">
+                <v-icon>group</v-icon><br>
+                <router-link class="link" to="">پست در انجمن ما</router-link>
+                </v-card-text>
+            </v-flex>
+
+            <v-flex>
+                <v-card-text class="text-xs-center">
+                <v-icon>home</v-icon><br>
+                <router-link class="link" to="">یک صدای جیر جیر را بنویس</router-link>
+                </v-card-text>
+            </v-flex>
+        </v-layout>
+
         <div>
-            <p>سوالات متداول</p>
-            <p>این که آیا شما یک کاربر جدید هستید و یا یک معامله گر چاشنی هستید، به تمام سوالات خود در این صفحه پاسخ خواهید داد. اگر از Bitcoins جدید هستید می توانید از این راهنمای مفید خرید بیت کوین ها با استفاده از LocalBitcoins انجام دهید. اگر می خواهید یک معامله گر شوید، راهنمای آنلاین Bitcoins ها برای شما مناسب است. شما همچنین می توانید یک سوال در انجمن های ما بپرسید یا بلیط پشتیبانی را برای تماس با پشتیبانی ما باز کنید.</p>
-        </div>
-        <div>
-            <p>دریافت کمک بیشتر</p>
-        </div>
-        <div>
-            <div>
-                <v-icon>home</v-icon>
-                <p>یک بلیط پشتیبانی را باز کنید</p>
-            </div>
-            <div>
-                <v-icon>home</v-icon>
-                <p>پست در انجمن ما</p>
-            </div>
-            <div>
-                <v-icon>home</v-icon>
-                <p>یک صدای جیر جیر را بنویس</p>
-            </div>
-        </div>
-        <div>
-            <v-expansion-panel>
+            <v-expansion-panel >
                 <v-expansion-panel-content
                 v-for="(item,i) in items"
                 :key="i"
                 expand-icon="mdi-menu-down"
                 >
-                <div slot="header">{{item.title}}</div>
-                <v-card
-                
-                >
-                <v-card-text class="grey -3">{{item.persianTitle}}</v-card-text>
-                </v-card>
+                <div class="text text-xs-right" slot="header">{{item.title}}</div>
+                    <v-card>
+                        <v-card-text class="text text-xs-right">{{item.persianTitle}}</v-card-text>
+                    </v-card>
                 </v-expansion-panel-content>
             </v-expansion-panel>
         </div>
@@ -50,11 +56,11 @@
                 :key="i"
                 expand-icon="mdi-menu-down"
                 >
-                <div slot="header">{{text.title}}</div>
+                <div class="text text-xs-right" slot="header">{{text.title}}</div>
                 <v-card
                 
                 >
-                <v-card-text class="grey -3">{{text.persianTitle}}</v-card-text>
+                <v-card-text class="text text-xs-right">{{text.persianTitle}}</v-card-text>
                 </v-card>
                 </v-expansion-panel-content>
             </v-expansion-panel>
@@ -205,3 +211,24 @@ export default {
     }
 }
 </script>
+<style scoped>
+.titled{
+    font-family: Iranian Sans;
+    font-size: 28px;
+}
+.text{
+    font-family: Iranian Sans;
+}
+.link{
+    text-decoration: none;
+    color:rgb(0,153,255);
+    font-family:Iranian Sans; 
+}
+.link:hover{
+    color:rgb(0,140,255);
+}
+.help{
+    font-family:Iranian Sans;
+    font-size:18px;
+}
+</style>

@@ -1,8 +1,9 @@
 <template>
     <div>
-        <p class="text-xs-center">معاملات بسته، به پایان رسید.</p>
-        <router-link to="">اطلاعات را با فرمت سی اس وی دانلود کنید.</router-link>
-
+        <v-card-text pt-0>
+        <p class="text-xs-center">معاملات بسته، به پایان رسید</p>
+        <router-link class="link" to="">اطلاعات را با فرمت سی اس وی دانلود کنید</router-link>
+        </v-card-text>
         <v-card-text>
             <v-card>
             <v-data-table
@@ -14,11 +15,17 @@
                 :loading="loading"
                 >
                 <template slot="items" slot-scope="props">
-                    <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
-                    <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
-                    <td class="text-xs-right">{{ props.item.price }}</td>
-                    <td class="text-xs-right">{{ props.item.limits }}</td>
-                    <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
+                   <td class="table text-xs-right">{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
+                   <td class="table text-xs-center">{{ props.item.createdAt }}</td>
+                   <td class="table text-xs-center">{{ props.item.tradeType }}</td>
+                   <td class="table text-xs-center">{{ props.item.tradingPartner }}</td>
+                   <td class="table text-xs-center">{{ props.item.transactionStatus }}</td>
+                   <td class="table text-xs-center">{{ props.item.fiat }}</td>
+                   <td class="table text-xs-center">{{ props.item.tradeAmount }}</td>
+                   <td class="table text-xs-center">{{ props.item.tradingFee }}</td>
+                   <td class="table text-xs-center">{{ props.item.totalBTC }}</td>
+                   <td class="table text-xs-center">{{ props.item.exchangeRate }}</td>
+                   <td ><v-btn class="table primary" @click="buy()">خرید</v-btn></td>
                 </template>
             </v-data-table>
             </v-card>
@@ -39,7 +46,7 @@ export default{
   },
   computed:{
     typeCustomer:function() {
-        return (this.isSeller==1) ?'Seller':'Buyer';
+        return (this.isSeller==1) ?'فروشنده':'خریدار';
     },
     headers:function() {
         return  [{
@@ -122,7 +129,50 @@ export default{
     },
     getDesserts () {
     return [
-        
+        {
+       trader:"حیدر" ,
+       tradeCount:"1",
+       satisfiedPercent:"%100",
+       createdAt:"1",
+       tradeType:"بیت کوین",
+       tradingPartner:"فرزاد",
+       transactionStatus:"فعال",
+       fiat:"1",
+       tradeAmount:"0.1",
+       tradingFee:"1درصد",
+       totalBTC:"0.5",
+       exchangeRate:"0.001",       
+    },
+
+    {
+       trader:"حیدر" ,
+       tradeCount:"1",
+       satisfiedPercent:"%100",
+       createdAt:"1",
+       tradeType:"بیت کوین",
+       tradingPartner:"فرزاد",
+       transactionStatus:"فعال",
+       fiat:"1",
+       tradeAmount:"0.1",
+       tradingFee:"1درصد",
+       totalBTC:"0.5",
+       exchangeRate:"0.001",       
+    },
+
+    {
+       trader:"حیدر" ,
+       tradeCount:"1",
+       satisfiedPercent:"%100",
+       createdAt:"1",
+       tradeType:"بیت کوین",
+       tradingPartner:"فرزاد",
+       transactionStatus:"فعال",
+       fiat:"1",
+       tradeAmount:"0.1",
+       tradingFee:"1درصد",
+       totalBTC:"0.5",
+       exchangeRate:"0.001",       
+    },
     ]
     }
   }
@@ -130,5 +180,15 @@ export default{
   
 </script>
 <style scoped>
-
+.table{
+    font-family: Iranian Sans;
+    
+}
+.link{
+    text-decoration: none;
+    color:rgb(0,153,255);
+}
+.link:hover{
+    color:rgb(0,140,255);
+}
 </style>

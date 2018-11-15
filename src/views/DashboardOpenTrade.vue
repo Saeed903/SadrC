@@ -1,9 +1,9 @@
 <template>
     <div>
-        
+        <v-card-text pt-0>
         <p class="text-xs-center">تبلیغات شما</p>
-        <p> شما می توانید حداکثر 5 آگهی ایجاد کنید محدودیت ها براساس حجم 30 روزه شما است که 0.00000000 بیت کوین است. برای کسب اطلاعات بیشتر درباره محدودیت های تبلیغات <router-link to="LearnAdverDashboard" class="learnMoreAd">اینجا کلیک کنید</router-link></p>
-    
+        <p> شما می توانید حداکثر 5 آگهی ایجاد کنید محدودیت ها براساس حجم 30 روزه شما است که 0.00000000 بیت کوین است. برای کسب اطلاعات بیشتر درباره محدودیت های تبلیغات <router-link to="LearnAdverDashboard" class="link">اینجا کلیک کنید.</router-link></p>
+        </v-card-text>
         <v-card-text>
             <v-card>
                 <v-data-table
@@ -15,11 +15,11 @@
                     :loading="loading"
                 >
                     <template slot="items" slot-scope="props">
-                        <td >{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
-                        <td >{{ props.item.paymentMethod }}</td>
-                        <td >{{ props.item.price }}</td>
-                        <td >{{ props.item.limits }}</td>
-                        <td ><v-btn class="primary" @click="buy()">خرید</v-btn></td>
+                        <td class="table text-sx-right">{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
+                        <td class="table text-xs-center">{{ props.item.paymentMethod }}</td>
+                        <td class="table text-xs-center">{{ props.item.price }}</td>
+                        <td class="table text-xs-center">{{ props.item.limits }}</td>
+                        <td ><v-btn class="table primary" @click="buy()">خرید</v-btn></td>
                     </template>
                 </v-data-table>
             </v-card>
@@ -27,15 +27,15 @@
 
         <v-card-text>
         <div class="">
-        <v-btn class="primary">ایجاد تبلیغات</v-btn>
+        <v-btn class="table primary">ایجاد تبلیغات</v-btn>
         </div>
         </v-card-text>
 
         <v-card-text>
-        <p class="headline">تعطیلات</p>
+        <p class="table">تعطیلات</p>
         <v-checkbox label="فروش در تعطیلات" messages="همه تبلیغات خود را برای فروش به طور موقت غیرفعال کنید"></v-checkbox>
         <v-checkbox label="خرید در تعطیلات" messages="همه تبلیغات خود را برای خرید به طور موقت غیرفعال کنید"></v-checkbox>
-        <v-btn to="" class="primary">ذخیره</v-btn>
+        <v-btn to="" class=" table primary">ذخیره</v-btn>
         </v-card-text>
 
     </div>
@@ -131,9 +131,29 @@ export default{
     getDesserts () {
     return [
 
-            { trader: 'حیدر سسیلا بللاسیال فغافغقث غقفغ غغفس فقغ غغق', paymentMethod: 'نقدی', price:'12', limits:'fgfh' },
-            { trader: 'حیدر', paymentMethod: 'نقدی', price:'12', limits:'fgfh' },
-            { trader: 'حیدر', paymentMethod: 'نقدی', price:'12', limits:'fgfh' }
+            { trader:'حیدر', 
+            tradeCount:'1',
+            satisfiedPercent:'%100', 
+            paymentMethod: 'نقدی', 
+            price:'12', 
+            limits:'fgfh' 
+            },
+
+            { trader:'حیدر', 
+            tradeCount:'1',
+            satisfiedPercent:'%100', 
+            paymentMethod: 'نقدی', 
+            price:'12', 
+            limits:'fgfh' 
+            },
+
+            { trader:'حیدر', 
+            tradeCount:'1',
+            satisfiedPercent:'%100', 
+            paymentMethod: 'نقدی', 
+            price:'12', 
+            limits:'fgfh' 
+            },
          
     ]
     }
@@ -141,5 +161,15 @@ export default{
 };
 </script>
 <style scoped>
-
+.table{
+    font-family: Iranian Sans;
+    
+}
+.link{
+    text-decoration: none;
+    color:rgb(0,153,255);
+}
+.link:hover{
+    color:rgb(0,140,255);
+}
 </style>

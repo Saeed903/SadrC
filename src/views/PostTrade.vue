@@ -4,6 +4,7 @@
             <p class="fontIran text-xs-center">ثبت آگهی{{currency}}</p>
             <p class="fontIran text-xs-center"><v-icon color="red">warning</v-icon>لطفا قبل از ثبت آگهی <router-link to="/Login" class="fontsIran">ورود</router-link> یا <router-link to="/signUp" class="fontsIran">ثبت نام</router-link> کنید!</p>
         </v-card-text>
+        <v-card></v-card>
         <v-divider></v-divider>
         <v-card-text>
             <p class="fontIran text-xs-center">قوانین و مقررات تبلیغاتی:</p>
@@ -38,12 +39,14 @@
             <v-flex sm6 md6 lg6>
                 <v-card dark tile flat>
                     <v-text-field
-                    class="mr-3"
+                    class="mr-3 fontIran "
                     label="موقعیت مکانی"
                     box
+                    color="cyan accent-2"
+                    clearable
                     >
                     <template slot="label">
-                        موقعیت مکانی <v-icon style="vertical-align: middle;color:aqua">place</v-icon>
+                        موقعیت مکانی <v-icon style="vertical-align: middle;color:aqua">add_location</v-icon>
                     </template>
                     </v-text-field>
                 </v-card>
@@ -55,88 +58,333 @@
             </v-flex>
         </v-layout>
 
-        <v-text-field
-            class="textField mr-3" 
-            label="موقعیت مکانی"
-            box
-        >
-         <template slot="label">
-          موقعیت مکانی <v-icon style="vertical-align: middle;color:aqua">place</v-icon>
-        </template>
-        </v-text-field>
+        <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                    <v-select
+                    v-validate="'required'"
+                    :items="selectCurrency"
+                    v-model="select"
+                    :error-messages="errors.collect('select')"
+                    data-vv-name="select"
+                    label="نوع ارز"
+                    class="textField mr-3 fontIran"
+                    color="cyan accent-2" 
+                    box
+                    
+                    >
+                    </v-select>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <v-card-text class="fontIran caption pt-1">شما میتوانید هر ارزی را که میخواهید با آن تجارت کنید را انتخاب کنید.</v-card-text>
+                </v-card>
+            </v-flex>
+        </v-layout>
 
-        <v-select
-            v-validate="'required'"
-            :items="selectCurrency"
-            v-model="select"
-            :error-messages="errors.collect('select')"
-            data-vv-name="select"
-            label="نوع ارز"
-            class="textField mr-3" 
-            box
-        >
-        </v-select>
-        <v-text-field
-            class="textField mr-3"
-            label="محدوده تغییرات"
-            box
-            >
-        </v-text-field>
-        <v-text-field
-            class="textField mr-3"
-            label="قیمت معامله "
-            box
-        >
-        </v-text-field>
-        <v-card-text class="fontIran">قیمت تجاری با ارزش بازار فعلی 6496.30 دلار / بیت کوین</v-card-text>
-        <v-card-text class="fontIran">.چگونه قیمت معاملات از قیمت بازار ساعتی تعیین می شود. برای اطلاعات بیشتر در رابطه با معادلات نحوه تعریف قیمت معاملاتی خود، به سؤالات قیمت گذاری قیمت مراجعه کنید. لطفا توجه داشته باشید که همیشه تبلیغ کننده مسئول پرداخت هزینه پردازش پرداخت است</v-card-text>
+        <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                    <v-text-field
+                    class="textField mr-3 fontIran"
+                    label="محدوده تغییرات"
+                    box
+                    color="cyan accent-2"
+                    >
+                    </v-text-field>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <v-card-text class="fontIran caption pt-1">محدوده ای که می خواهید بیش از قیمت بازار بیت کوین باشد. ارزش منفی برای خرید یا فروش زیر قیمت بازار را برای جذب مخاطبین بیشتر مورد استفاده قرار دهید. برای قیمت های پیچیده تر ویرایش معادله قیمت به طور مستقیم.</v-card-text>
+                </v-card>
+            </v-flex>
+        </v-layout>
+
+        <v-layout row wrap pb-4>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                    <v-text-field
+                    class="textField mr-3 fontIran"
+                    label="معادل قیمت"
+                    color="cyan accent-2"
+                    box
+                    >
+                    </v-text-field>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <v-card-text class="fontIran caption pt-1">محدوده ای که می خواهید بیش از قیمت بازار بیت کوین باشد. ارزش منفی برای خرید یا فروش زیر قیمت بازار را برای جذب مخاطبین بیشتر مورد استفاده قرار دهید. برای قیمت های پیچیده تر ویرایش معادله قیمت به طور مستقیم<span class="fontIran green--text">6,266.70 USD/BTC</span></v-card-text>    
+                </v-card>
+            </v-flex>
+        </v-layout>
         <v-divider></v-divider>
-        <div>
-        <p>حد مجاز حداکثر معاملات</p>
-        <v-text-field label="حداکثر حد معامله"></v-text-field>
-        <p>.اختیاری. حداکثر حد معامله در یک تجارت. برای فروش آنلاین، تعادل کیفی صدر کریپتو شما می تواند حداکثر تجارت قابل اعتماد را نیز محدود کند</p>
-        </div>
-        <v-divider></v-divider>        
-        <div>
-        <p>محدود کردن مقدار به</p>
-        <v-text-field label="مقدار را محدود کن"></v-text-field>
-        <p>.اختیاری. مقدار معامله را محدود به عدد صحیح جدا از عدد کاما، به عنوان مثال 20،50،100. در ارز فیات (دلار / یورو / و غیره). دستی برای کوین، کارت هدیه و غیره</p>
-        </div>
+
+        <v-card-text>
+        <ul class="fontIran mt-4 mb-4 pr-3">
+            <li class="pb-3">چگونه قیمت معاملات از قیمت بازار ساعتی تعیین می شود?</li>
+            <li class="pb-3">برای اطلاعات بیشتر در رابطه با معادلات نحوه تعریف قیمت معاملاتی خود به سوالات <router-link to="" class="fontsIran">قیمت گذاری</router-link> مراجعه کنید.</li>
+            <li>لطفا توجه داشته باشید که همیشه تبلیغ کننده مسئول پرداخت هزینه پردازش پرداخت است.</li>
+        </ul>
+        </v-card-text>
+
+         <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                    <v-text-field
+                    class="textField mr-3 fontIran"
+                    label="کمترین مقدار معامله"
+                    box
+                    color="cyan accent-2"
+                    >
+                    </v-text-field>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <v-card-text class="fontIran caption pt-1">کمترین مقدار معامله در یک تجارت اختیاری است</v-card-text>    
+                </v-card>
+            </v-flex>
+        </v-layout>
+  
+          <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                    <v-text-field
+                    class="textField mr-3 fontIran"
+                    label="بیشترین مقدار معامله"
+                    box
+                    color="cyan accent-2"
+                    >
+                    </v-text-field>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <v-card-text class="fontIran caption pt-1">.اختیاری. حداکثر حد معامله در یک تجارت. برای فروش آنلاین، تعادل کیفی صدر کریپتو شما می تواند حداکثر تجارت قابل اعتماد را نیز محدود کند</v-card-text>    
+                </v-card>
+            </v-flex>
+        </v-layout>
+
+        <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                    <v-text-field
+                    class="textField mr-3 fontIran"
+                    label="محدودیت مقدار معامله"
+                    box
+                    color="cyan accent-2"
+                    >
+                    </v-text-field>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <v-card-text class="fontIran caption pt-1">.اختیاری. مقدار معامله را محدود به عدد صحیح جدا از عدد کاما، به عنوان مثال 20،50،100. در ارز فیات (دلار / یورو / و غیره). دستی برای کوین، کارت هدیه و غیره</v-card-text>    
+                </v-card>
+            </v-flex>
+        </v-layout>
+        <v-divider></v-divider>  
+
+        <v-card-text class="fontIran">روزها و ساعت هایی که میخواهید آگهی و تبلیغات شما نشان داده شود:</v-card-text>
+        
+        <v-layout row wrap>
+            <v-flex>
+                <v-card dark >
+                    <v-card-media class="pl-5 fontIran">
+                        <div class="pt-2">
+                            <v-card-text class="">شنبه</v-card-text>
+                        </div>
+                        <div>
+                            <v-select label="از ساعت"></v-select>
+                        </div>
+                        <div>
+                            <v-select label="تا ساعت"></v-select>
+                        </div>
+                    </v-card-media>
+                </v-card>
+                <v-card dark>
+                    <v-card-media class="fontIran">
+                        <div class="pt-2">
+                            <v-card-text>1شنبه</v-card-text>
+                        </div>
+                        <div>
+                            <v-select label="از ساعت"></v-select>
+                        </div>
+                        <div>
+                            <v-select label="تا ساعت"></v-select>
+                        </div>
+                    </v-card-media>
+                </v-card>
+                <v-card dark>
+                    <v-card-media class="fontIran">
+                        <div class="pt-2">
+                            <v-card-text class="">2شنبه</v-card-text>
+                        </div>
+                        <div>
+                            <v-select label="از ساعت"></v-select>
+                        </div>
+                        <div>
+                            <v-select label="تا ساعت"></v-select>
+                        </div>
+                    </v-card-media>
+                </v-card>
+                <v-card dark>
+                    <v-card-media class="fontIran">
+                        <div class="pt-2">
+                            <v-card-text class="">3شنبه</v-card-text>
+                        </div>
+                        <div>
+                            <v-select label="از ساعت"></v-select>
+                        </div>
+                        <div>
+                            <v-select label="تا ساعت"></v-select>
+                        </div>
+                    </v-card-media>
+                </v-card>
+                <v-card dark>
+                    <v-card-media class="fontIran">
+                        <div class="pt-2">
+                            <v-card-text class="">4شنبه</v-card-text>
+                        </div>
+                        <div>
+                            <v-select label="از ساعت"></v-select>
+                        </div>
+                        <div>
+                            <v-select label="تا ساعت"></v-select>
+                        </div>
+                    </v-card-media>
+                </v-card>
+                <v-card dark>
+                    <v-card-media class="fontIran">
+                        <div class="pt-2">
+                            <v-card-text class="">5شنبه</v-card-text>
+                        </div>
+                        <div>
+                            <v-select label="از ساعت"></v-select>
+                        </div>
+                        <div>
+                            <v-select label="تا ساعت"></v-select>
+                        </div>
+                    </v-card-media>
+                </v-card>
+                <v-card dark>
+                    <v-card-media class="fontIran">
+                        <div class="pt-2">
+                            <v-card-text class="">جمعه</v-card-text>
+                        </div>
+                        <div>
+                            <v-select label="از ساعت"></v-select>
+                        </div>
+                        <div>
+                            <v-select label="تا ساعت"></v-select>
+                        </div>
+                    </v-card-media>
+                </v-card><v-card dark>
+                    <v-card-media class="fontIran">
+                        <v-card-text></v-card-text>
+                    </v-card-media>
+                </v-card>
+            </v-flex>
+
+            <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                    <v-textarea
+                    class="textField mr-3 fontIran"
+                    label="شرایط تجارت"
+                    box
+                    >
+                    </v-textarea>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <v-card-text class="fontIran caption pt-1">سایر اطلاعاتی که میخواهید درباره تجارت خود بگویید<br>.مثال1:این تبلیغات صرفا برای معاملات نقدی است اگر میخواهید با پرداخ ت آنلاین باما تماس بپیرید.
+                        مثال2:لطفا درخواست را فقط زمانی که میتوانید پرداخت را با پول نقد ظرف مدت 12 ساعت تکمیل کمید.<br></v-card-text>    
+                </v-card>
+            </v-flex>
+        </v-layout>
         <v-divider></v-divider>
-        <div>
-        <p>گزینه های نقدینگی</p>
+        <v-card-text class="fontIran">گزینه های نقدینگی</v-card-text>
+
+          <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                   <v-checkbox
+                    label="پیگیری نقدینگی"
+                    class="fontIran pr-3"                   
+                   >
+                   </v-checkbox>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <span class="fontIran caption">.این گزینه نقدینگی این تبلیغ را به حداکثر محدود می کند. محدودیت معامله خریداران می توانند معاملات را بیش از این مقدار باز نکنند</span>    
+                </v-card>
+            </v-flex>
+        </v-layout>
+
+        </v-layout>
+
         <v-divider></v-divider>
-        </div>
-        <div>
-        <p>پیگیری نقدینگی</p>
-        <v-checkbox></v-checkbox>
-        <p>.این گزینه نقدینگی این تبلیغ را به حداکثر محدود می کند. محدودیت معامله خریداران می توانند معاملات را بیش از این مقدار باز نکنند</p>
-        <p>.یک خریدار باز می شود تجارت برای 20 دلار حداکثر. معامله محدود به طور خودکار به 80 دلار کاهش یافته است. اگر خریدار تجارت را لغو کند، به قیمت 100 دلار بازگشت می کند و در صورتی که تجارت به پایان برسد، به 80 دلار می رسد</p>
-        </div>
-        <div>
-        <p>گزینه های امنیتی</p>
-        <v-divider></v-divider>
-        </div>
-        <div>
-        <p>فقط شناسایی افراد</p>
-        <v-checkbox></v-checkbox>
-        <p>.برای تماس با تبلیغات خود، کاربران باید هویت خود را با ارسال شناسه، گواهینامه رانندگی یا گذرنامه تأیید کنند</p>
-        </div>
-        <v-divider></v-divider>
-        <div>
-        <p>.تأیید اس ام اس مورد نیاز است</p>
-        <v-checkbox></v-checkbox>
-        <p>.فقط تماس با یک شماره تلفن همراه تأیید شده می تواند از طریق تبلیغ شما با شما تماس بگیرد</p>
-        </div>
-        <v-divider></v-divider>
-        <div>
-        <p>فقط اعتماد مردم</p>
-        <v-checkbox></v-checkbox>
-        <p>.تبلیغات خود را محدود کنید تا تنها به کاربران نشان داده شود که شما به عنوان اعتماد علامتگذاری کرده اید<router-link to="">Learn how to mark users as trusted</router-link>.</p>
-        </div>
-        <div>
-        <Footer/>
-        </div>
+
+        <v-card-text class="fontIran">گزینه های امنیتی</v-card-text>
+  
+        <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                   <v-checkbox
+                    label="فقط شناسایی افراد"
+                    class="fontIran pr-3"                   
+                   >
+                   </v-checkbox>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <span class="fontIran caption">.برای تماس با تبلیغات خود، کاربران باید هویت خود را با ارسال شناسه،گواهینامه رانندگی یا گذرنامه تأیید کنند</span>    
+                </v-card>
+            </v-flex>
+        </v-layout>
+        
+        <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                   <v-checkbox
+                    label="تاییدیه پیامک"
+                    class="fontIran pr-3"                   
+                   >
+                   </v-checkbox>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <span class="fontIran caption">.فقط تماس با یک شماره تلفن همراه تأیید شده می تواند از طریق تبلیغ شما با شما تماس بگیرد</span>    
+                </v-card>
+            </v-flex>
+        </v-layout>
+
+        <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                   <v-checkbox
+                    label="اعتماد مردم"
+                    class="fontIran pr-3"                   
+                   >
+                   </v-checkbox>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <span class="fontIran caption">.تبلیغات خود را محدود کنید تا تنها به کاربران نشان داده شود که شما به عنوان اعتماد علامتگذاری کرده اید<router-link class="fontsIran" to="">چگونگی علامت گذاری به کاربران مورد اعتماد</router-link>.</span>    
+                </v-card>
+            </v-flex>
+        </v-layout>
+
+        <Footer></Footer>
     </v-card>
 </template>
 <script>
@@ -160,7 +408,8 @@ import Footer from './../components/Footer.vue'
                     'اتریوم',
                     'زدکش',
                     'ترون',
-                ]
+                ],
+    
             }
         },
         computed: {
@@ -190,6 +439,7 @@ import Footer from './../components/Footer.vue'
 <style scoped>
 .fontIran{
     font-family:'Iranian Sans';
+    padding-left:20px;
 }
 .fontsIran{
     font-family:'iranian sans';
