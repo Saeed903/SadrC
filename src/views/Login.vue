@@ -1,70 +1,66 @@
 <template>
   <v-container fluid grid-list-md>
     <v-layout v-if="!loading"  row wrap align-justify justify-center>
-    <v-flex  xs12 sm8 md8 lg6>
+      <v-flex  d-flex xs12 sm6 md8 lg8>
+        <v-card>
+          <v-card-text>
+            <v-form 
+              @submit.prevent="login" 
+              @keydown.prevent.enter 
+              v-model="valid"
+            >
+              <v-card-text>
+                <p class="titled text-xs-center">ورود</p>
+                <p class="text">با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید</p>
+              </v-card-text>
+                <v-text-field
+                  :roles = "notEmptyRoles"
+                  v-model="user.email"
+                  :counter="30"
+                  label="ایمیل"
+                  data-vv-name="email"
+                  class="text emailField"
+                  required
+                >
+                </v-text-field>
+
+                <v-text-field
+                  :roles = "notEmptyRoles"
+                  v-model="user.password"
+                  counter="20"
+                  :error-messages="errors.collect('password')"
+                  :type="'password'"
+                  label="رمز عبور"
+                  class="text textField"
+                  data-vv-name="password"
+                  required
+                >
+                </v-text-field>
+
+                <vue-recaptcha
+                    theme = "dark"
+                    @verify = "onVerify"
+                    @expired = "onExpired"
+                    :sitekey = "sitekey">
+                </vue-recaptcha>
+                <v-card-text :class="{red:errorLogin}" v-if="errorLogin" >  {{errorMessage}} </v-card-text>
+
+                  <v-btn type="submit" class="text primary">ورود</v-btn>
+
+            </v-form>
+                <router-link class="text link" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link>
+                <p class="text">صدر کریپتو؟<router-link to="/SignUp" class="link">ثبت نام کنید</router-link></p>
+          </v-card-text>
+        </v-card>
+      </v-flex>
+    </v-layout>
+
       <v-card>
-      <v-form 
-        @submit.prevent="login" 
-        @keydown.prevent.enter 
-        v-model="valid"
-      >
-      <v-card-text class="headline">
-        <p class="text-xs-center">ورود</p>
-      </v-card-text>
-      <v-card-text class="subheading">
-        <p>با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید</p>
-      </v-card-text>
-      <v-card-text>
-        <v-text-field
-          :roles = "notEmptyRoles"
-          v-model="user.email"
-          :counter="30"
-          label="ایمیل"
-          data-vv-name="email"
-          class="emailField"
-          required
-        >
-        </v-text-field>
-      </v-card-text>
-      <v-card-text>
-        <v-text-field
-          :roles = "notEmptyRoles"
-          v-model="user.password"
-          counter="20"
-          :error-messages="errors.collect('password')"
-          :type="'password'"
-          label="رمز عبور"
-          class="textField"
-          data-vv-name="password"
-          required
-        >
-        </v-text-field>
-      </v-card-text>
-      
-      <vue-recaptcha
-          theme = "dark"
-          @verify = "onVerify"
-          @expired = "onExpired"
-          :sitekey = "sitekey">
-      </vue-recaptcha>
-      <v-card-text :class="{red:errorLogin}" v-if="errorLogin" >  {{errorMessage}} </v-card-text>
-      
-      <v-card-text>
-        <v-btn type="submit" class="primary"   >ورود</v-btn>
-      </v-card-text>
-      </v-form>
-      <v-card-text>
-        <router-link class="forgotPass" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link>
-      </v-card-text>
-      <v-card-text>
-        <p class="newTo">new to sadrCrypto?<router-link to="/SignUp" class="signIn">ثبت نام کنید</router-link></p>
-      </v-card-text>
-       
+      <Footer></Footer>
       </v-card>
-    </v-flex>
-    <Footer></Footer> 
-  </v-layout>
+
   <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
+  
   </v-container>
 </template>
 <script>
@@ -146,63 +142,19 @@
 
 </script>
 <style scoped>
-.logText{
-  font-size:30px;
-  font-family:b nazanin;
-  text-align:center;
-  color:rgb(240, 238, 238);
-  margin-bottom:0;
-  
+.titled{
+  font-family: Iranian Sans;
+  font-size: 18px;
 }
-.longText{
-  font-size:17px;
-  font-family:b nazanin;
-  padding:0 20px 0 20px;
-  color:rgb(250, 241, 241);
-  margin-bottom:40px;
-  
+.text{
+  font-family: Iranian Sans;
+  font-size: 15px;
 }
-.logForm{
-  margin-top:13px;
-  width:60%;
-  margin-right:auto;
-  margin-left:auto;
-  display:block;
-  margin-bottom:15px;
+.link{
+    text-decoration: none;
+    color:rgb(0,153,255);
 }
-.forgotPass{
-  text-decoration:none;
-  font-size:16px;
-  font-family:b nazanin;
-  color:rgb(250, 241, 241);
-  
-  
-}
-.forgotPass:hover{
-  text-decoration:none;
-}
-.signIn{
-  text-decoration:none;
-  font-size:16px;
-  font-family:b nazanin;
-  color:rgb(250, 241, 241);
-  
-}
-.signIn:hover{
-  text-decoration:none;
-}
-.newTo{
-  text-decoration:none;
-  font-size:16px;
-  font-family:b nazanin;
-   color:rgb(250, 246, 246);
-}
-.textField{
-  padding-right:10px;
-}
-.humanConfirm{
-  font-size:15px;
-  font-family:b nazanin;
-  color:rgb(250, 246, 246);
+.link:hover{
+    color:rgb(0,140,255);
 }
 </style>
