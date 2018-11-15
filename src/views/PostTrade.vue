@@ -4,6 +4,7 @@
             <p class="fontIran text-xs-center">ثبت آگهی{{currency}}</p>
             <p class="fontIran text-xs-center"><v-icon color="red">warning</v-icon>لطفا قبل از ثبت آگهی <router-link to="/Login" class="fontsIran">ورود</router-link> یا <router-link to="/signUp" class="fontsIran">ثبت نام</router-link> کنید!</p>
         </v-card-text>
+        <v-card></v-card>
         <v-divider></v-divider>
         <v-card-text>
             <p class="fontIran text-xs-center">قوانین و مقررات تبلیغاتی:</p>
@@ -55,48 +56,111 @@
             </v-flex>
         </v-layout>
 
-        <v-text-field
-            class="textField mr-3" 
-            label="موقعیت مکانی"
-            box
-        >
-         <template slot="label">
-          موقعیت مکانی <v-icon style="vertical-align: middle;color:aqua">place</v-icon>
-        </template>
-        </v-text-field>
+        <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                    <v-select
+                    v-validate="'required'"
+                    :items="selectCurrency"
+                    v-model="select"
+                    :error-messages="errors.collect('select')"
+                    data-vv-name="select"
+                    label="نوع ارز"
+                    class="textField mr-3" 
+                    box
+                    
+                    >
+                    </v-select>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <v-card-text class="fontIran caption pt-1">شما میتوانید هر ارزی را که میخواهید با آن تجارت کنید را انتخاب کنید.</v-card-text>
+                </v-card>
+            </v-flex>
+        </v-layout>
 
-        <v-select
-            v-validate="'required'"
-            :items="selectCurrency"
-            v-model="select"
-            :error-messages="errors.collect('select')"
-            data-vv-name="select"
-            label="نوع ارز"
-            class="textField mr-3" 
-            box
-        >
-        </v-select>
-        <v-text-field
-            class="textField mr-3"
-            label="محدوده تغییرات"
-            box
-            >
-        </v-text-field>
-        <v-text-field
-            class="textField mr-3"
-            label="قیمت معامله "
-            box
-        >
-        </v-text-field>
-        <v-card-text class="fontIran">قیمت تجاری با ارزش بازار فعلی 6496.30 دلار / بیت کوین</v-card-text>
-        <v-card-text class="fontIran">.چگونه قیمت معاملات از قیمت بازار ساعتی تعیین می شود. برای اطلاعات بیشتر در رابطه با معادلات نحوه تعریف قیمت معاملاتی خود، به سؤالات قیمت گذاری قیمت مراجعه کنید. لطفا توجه داشته باشید که همیشه تبلیغ کننده مسئول پرداخت هزینه پردازش پرداخت است</v-card-text>
+        <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                    <v-text-field
+                    class="textField mr-3"
+                    label="محدوده تغییرات"
+                    box
+                    >
+                    </v-text-field>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <v-card-text class="fontIran caption pt-1">محدوده ای که می خواهید بیش از قیمت بازار بیت کوین باشد. ارزش منفی برای خرید یا فروش زیر قیمت بازار را برای جذب مخاطبین بیشتر مورد استفاده قرار دهید. برای قیمت های پیچیده تر ویرایش معادله قیمت به طور مستقیم.</v-card-text>
+                </v-card>
+            </v-flex>
+        </v-layout>
+
+        <v-layout row wrap pb-4>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                    <v-text-field
+                    class="textField mr-3"
+                    label="معادل قیمت"
+                    box
+                    >
+                    </v-text-field>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <v-card-text class="fontIran caption pt-1">محدوده ای که می خواهید بیش از قیمت بازار بیت کوین باشد. ارزش منفی برای خرید یا فروش زیر قیمت بازار را برای جذب مخاطبین بیشتر مورد استفاده قرار دهید. برای قیمت های پیچیده تر ویرایش معادله قیمت به طور مستقیم<span class="fontIran green--text">6,266.70 USD/BTC</span></v-card-text>    
+                </v-card>
+            </v-flex>
+        </v-layout>
         <v-divider></v-divider>
-        <div>
-        <p>حد مجاز حداکثر معاملات</p>
-        <v-text-field label="حداکثر حد معامله"></v-text-field>
-        <p>.اختیاری. حداکثر حد معامله در یک تجارت. برای فروش آنلاین، تعادل کیفی صدر کریپتو شما می تواند حداکثر تجارت قابل اعتماد را نیز محدود کند</p>
-        </div>
-        <v-divider></v-divider>        
+
+        <v-card-text>
+        <ul class="fontIran mt-4 mb-4 pr-3">
+            <li class="pb-3">چگونه قیمت معاملات از قیمت بازار ساعتی تعیین می شود?</li>
+            <li class="pb-3">برای اطلاعات بیشتر در رابظه با معادلات نحوه تعریف قیمت معاملاتی خود به سوالات <router-link to="" class="fontsIran">قیمت گذاری</router-link> مراجعه کنید.</li>
+            <li>لطفا توجه داشته باشید که همیشه تبلیغ کننده مسئول پرداخت هزینه پردازش پرداخت است.</li>
+        </ul>
+        </v-card-text>
+  
+          <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                    <v-text-field
+                    class="textField mr-3"
+                    label="بیشترین مقدار معامله"
+                    box
+                    >
+                    </v-text-field>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <v-card-text class="fontIran caption pt-1">.اختیاری. حداکثر حد معامله در یک تجارت. برای فروش آنلاین، تعادل کیفی صدر کریپتو شما می تواند حداکثر تجارت قابل اعتماد را نیز محدود کند</v-card-text>    
+                </v-card>
+            </v-flex>
+        </v-layout>
+
+        <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                    <v-text-field
+                    class="textField mr-3"
+                    label="کمترین مقدار معامله"
+                    box
+                    >
+                    </v-text-field>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <v-card-text class="fontIran caption pt-1">کمترین مقدار معامله در یک تجارت اختیاری است</v-card-text>    
+                </v-card>
+            </v-flex>
+        </v-layout>
+    
         <div>
         <p>محدود کردن مقدار به</p>
         <v-text-field label="مقدار را محدود کن"></v-text-field>
