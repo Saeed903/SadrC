@@ -388,6 +388,7 @@
     </v-card>
 </template>
 <script>
+
 import { mapState, mapActions } from 'vuex';
 import Footer from './../components/Footer.vue'
     export default{
@@ -412,7 +413,23 @@ import Footer from './../components/Footer.vue'
             }
         },
         computed: {
-            ...mapState(['currencyMenu'])
+            ...mapState(['currencyMenu']),
+            ...mapState('advertises', { loadingAdvertise: 'isFindPending'}),
+            ...mapGetters('advertises', { fingAdvertisesOnline: 'find'}),
+
+            advertises(){
+                return this.fingAdvertisesOnline().data;
+            },
+        },
+        methods:{
+            ...mapActions('advertises', { findAdvertise : 'find'}),
+        },
+        created(){
+            this.findAdvertise()
+            .then(response => {
+            // In the find action, the 'todos' array is not a reactive list, but the individual records are.
+            const advertises = response.data || response
+            }), 
         },
         components:{
             Footer

@@ -12,7 +12,7 @@ import router from './router';
 //   idField: '_id'
 // });
 
-const { service, auth, FeathersVuex } = feathersVuex(feathersClient, { idField: '_id' })
+const { service, auth, FeathersVuex } = feathersVuex(feathersClient, { idField: 'Id' })
 
 Vue.use(Vuex);
 
@@ -50,54 +50,9 @@ export default new Vuex.Store({
   },
 
   plugins:[
-    service('users',{
-      instanceDefaults:{
-        id: '',
-        email : '',
-        password : '',
-        tel: '',
-        mobile: '',
-        verifiedDate: '',
-        isVerified:'',
-        notVerifiedDate:'',
-        introduction:'',
-        emailVerifiedDate:'',
-        phoneVerifiedDate:'',
-        identityVerifiedDate:'',
-        identityCardImage:'',
-        realName:''
-
-      }
-    }),
-    service('orders',{
-      instanceDefaults:{
-        orderId : '',
-        advertiseId : '',
-        amount : '',
-        buyerUserId : '',
-        createDate : '',
-        orderTitle : '',
-        orderStateId : '',
-      }
-    }),
-    service('advertises', {
-      instanceDefaults:{
-        advertiseId: '',
-        tradeTypeId: '',
-        countryId: '',
-        currencyCode: '',
-        margin: '',
-        priceEquation: '',
-        minTransactionLimit: '',
-        maxTransactionLimit: '',
-        termsOfTrade: '',
-        trackLiquidity: '',
-        identifiedPeopleOnly: '',
-        smsVerification: '',
-        trustedPeopleOnly: '',
-        advertiserUserId: '',
-      }
-    }),
+    service('users'),
+    service('orders'),
+    service('advertises'),
     auth({ userService: 'users', }),
   ],
 })
