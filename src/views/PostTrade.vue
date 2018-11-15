@@ -42,10 +42,11 @@
                     class="mr-3 fontIran "
                     label="موقعیت مکانی"
                     box
-                    color="teal"
+                    color="cyan accent-2"
+                    clearable
                     >
                     <template slot="label">
-                        موقعیت مکانی <v-icon style="vertical-align: middle;color:aqua">place</v-icon>
+                        موقعیت مکانی <v-icon style="vertical-align: middle;color:aqua">add_location</v-icon>
                     </template>
                     </v-text-field>
                 </v-card>
@@ -67,7 +68,8 @@
                     :error-messages="errors.collect('select')"
                     data-vv-name="select"
                     label="نوع ارز"
-                    class="textField mr-3 fontIran" 
+                    class="textField mr-3 fontIran"
+                    color="cyan accent-2" 
                     box
                     
                     >
@@ -88,6 +90,7 @@
                     class="textField mr-3 fontIran"
                     label="محدوده تغییرات"
                     box
+                    color="cyan accent-2"
                     >
                     </v-text-field>
                 </v-card>
@@ -105,6 +108,7 @@
                     <v-text-field
                     class="textField mr-3 fontIran"
                     label="معادل قیمت"
+                    color="cyan accent-2"
                     box
                     >
                     </v-text-field>
@@ -133,6 +137,7 @@
                     class="textField mr-3 fontIran"
                     label="کمترین مقدار معامله"
                     box
+                    color="cyan accent-2"
                     >
                     </v-text-field>
                 </v-card>
@@ -151,6 +156,7 @@
                     class="textField mr-3 fontIran"
                     label="بیشترین مقدار معامله"
                     box
+                    color="cyan accent-2"
                     >
                     </v-text-field>
                 </v-card>
@@ -169,6 +175,7 @@
                     class="textField mr-3 fontIran"
                     label="محدودیت مقدار معامله"
                     box
+                    color="cyan accent-2"
                     >
                     </v-text-field>
                 </v-card>
@@ -185,8 +192,8 @@
         
         <v-layout row wrap>
             <v-flex>
-                <v-card dark>
-                    <v-card-media class="fontIran">
+                <v-card dark >
+                    <v-card-media class="pl-5 fontIran">
                         <div class="pt-2">
                             <v-card-text class="">شنبه</v-card-text>
                         </div>
@@ -281,55 +288,103 @@
                     </v-card-media>
                 </v-card>
             </v-flex>
+
+            <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                    <v-textarea
+                    class="textField mr-3 fontIran"
+                    label="شرایط تجارت"
+                    box
+                    >
+                    </v-textarea>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <v-card-text class="fontIran caption pt-1">سایر اطلاعاتی که میخواهید درباره تجارت خود بگویید<br>.مثال1:این تبلیغات صرفا برای معاملات نقدی است اگر میخواهید با پرداخ ت آنلاین باما تماس بپیرید.
+                        مثال2:لطفا درخواست را فقط زمانی که میتوانید پرداخت را با پول نقد ظرف مدت 12 ساعت تکمیل کمید.<br></v-card-text>    
+                </v-card>
+            </v-flex>
         </v-layout>
-        <v-flex xs12>
-            <v-textarea
-            color="teal"
-            >
-                <div slot="label">
-                    Bio <small>(optional)</small>
-                </div>
-            </v-textarea>
-        </v-flex>
-
-
-
-
-
-        <div>
-        <p>گزینه های نقدینگی</p>
         <v-divider></v-divider>
-        </div>
-        <div>
-        <p>پیگیری نقدینگی</p>
-        <v-checkbox></v-checkbox>
-        <p>.این گزینه نقدینگی این تبلیغ را به حداکثر محدود می کند. محدودیت معامله خریداران می توانند معاملات را بیش از این مقدار باز نکنند</p>
-        <p>.یک خریدار باز می شود تجارت برای 20 دلار حداکثر. معامله محدود به طور خودکار به 80 دلار کاهش یافته است. اگر خریدار تجارت را لغو کند، به قیمت 100 دلار بازگشت می کند و در صورتی که تجارت به پایان برسد، به 80 دلار می رسد</p>
-        </div>
-        <div>
-        <p>گزینه های امنیتی</p>
+        <v-card-text class="fontIran">گزینه های نقدینگی</v-card-text>
+
+          <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                   <v-checkbox
+                    label="پیگیری نقدینگی"
+                    class="fontIran pr-3"                   
+                   >
+                   </v-checkbox>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <span class="fontIran caption">.این گزینه نقدینگی این تبلیغ را به حداکثر محدود می کند. محدودیت معامله خریداران می توانند معاملات را بیش از این مقدار باز نکنند</span>    
+                </v-card>
+            </v-flex>
+        </v-layout>
+
+        </v-layout>
+
         <v-divider></v-divider>
-        </div>
-        <div>
-        <p>فقط شناسایی افراد</p>
-        <v-checkbox></v-checkbox>
-        <p>.برای تماس با تبلیغات خود، کاربران باید هویت خود را با ارسال شناسه، گواهینامه رانندگی یا گذرنامه تأیید کنند</p>
-        </div>
-        <v-divider></v-divider>
-        <div>
-        <p>.تأیید اس ام اس مورد نیاز است</p>
-        <v-checkbox></v-checkbox>
-        <p>.فقط تماس با یک شماره تلفن همراه تأیید شده می تواند از طریق تبلیغ شما با شما تماس بگیرد</p>
-        </div>
-        <v-divider></v-divider>
-        <div>
-        <p>فقط اعتماد مردم</p>
-        <v-checkbox></v-checkbox>
-        <p>.تبلیغات خود را محدود کنید تا تنها به کاربران نشان داده شود که شما به عنوان اعتماد علامتگذاری کرده اید<router-link to="">Learn how to mark users as trusted</router-link>.</p>
-        </div>
-        <div>
-        <Footer/>
-        </div>
+
+        <v-card-text class="fontIran">گزینه های امنیتی</v-card-text>
+  
+        <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                   <v-checkbox
+                    label="فقط شناسایی افراد"
+                    class="fontIran pr-3"                   
+                   >
+                   </v-checkbox>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <span class="fontIran caption">.برای تماس با تبلیغات خود، کاربران باید هویت خود را با ارسال شناسه،گواهینامه رانندگی یا گذرنامه تأیید کنند</span>    
+                </v-card>
+            </v-flex>
+        </v-layout>
+        
+        <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                   <v-checkbox
+                    label="تاییدیه پیامک"
+                    class="fontIran pr-3"                   
+                   >
+                   </v-checkbox>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <span class="fontIran caption">.فقط تماس با یک شماره تلفن همراه تأیید شده می تواند از طریق تبلیغ شما با شما تماس بگیرد</span>    
+                </v-card>
+            </v-flex>
+        </v-layout>
+
+        <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat >
+                   <v-checkbox
+                    label="اعتماد مردم"
+                    class="fontIran pr-3"                   
+                   >
+                   </v-checkbox>
+                </v-card>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <v-card dark tile flat>
+                    <span class="fontIran caption">.تبلیغات خود را محدود کنید تا تنها به کاربران نشان داده شود که شما به عنوان اعتماد علامتگذاری کرده اید<router-link class="fontsIran" to="">چگونگی علامت گذاری به کاربران مورد اعتماد</router-link>.</span>    
+                </v-card>
+            </v-flex>
+        </v-layout>
+
+        <Footer></Footer>
     </v-card>
 </template>
 <script>
@@ -367,6 +422,7 @@ import Footer from './../components/Footer.vue'
 <style scoped>
 .fontIran{
     font-family:'Iranian Sans';
+    padding-left:20px;
 }
 .fontsIran{
     font-family:'iranian sans';
