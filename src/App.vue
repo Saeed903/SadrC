@@ -15,15 +15,18 @@
             row 
             v-if="currency.heading"
             :key="currency.heading">
+           
             <v-flex xs6 >
-              <v-subheader v-if="currency.heading">
+              <v-subheader  v-if="currency.heading">
                 {{ currency.heading }}
               </v-subheader>
             </v-flex>
+
             <v-flex xs6 >
-              <a href="#!" class="body-2 black--text">ویرایش</a>
+              <a href="#!" class="">ویرایش</a>
             </v-flex>
           </v-layout>
+
           <v-list-group
             v-else-if="currency.children"
             :prepend-icon="currency.model ? currency.arrowIcon : currency['arrowIcon-alt']"
@@ -65,7 +68,7 @@
           <v-list-tile v-else @click="routingMenu(currency.text)" :key="currency.text">
             <v-list-tile-content style="text-align:right">
               <v-list-tile-sub-title >
-                <span class="navThem">{{ currency.text }}</span>
+                <span class="saidbar">{{ currency.text }}</span>
               </v-list-tile-sub-title>
             </v-list-tile-content>
             
@@ -246,7 +249,7 @@
 </script>
 
 <style scoped>
-body{
+.saidbar{
   font-family:iranian sans;
 }
 .slide-fade-enter-active {
