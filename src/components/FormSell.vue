@@ -1,29 +1,41 @@
 <template>
-  <v-layout align-justify justify-center>
-    <v-flex>
+
+  
+    
       <v-card>
+      
         <v-card-text class="table">
           <p class="titled text-xs-center">{{currency}}</p>
-
+          
           <v-form ref="form" v-model="valid" lazy-validation>
+
+            <v-layout>
+            <v-flex >
+              <v-card-text>
             <v-text-field
               v-model="amount"
               type="number"
-              style="text-align:right;width:47%; float:right; margin-left:5px;margin-top:0"
+              style=""
               :rules="amountRules"
               label="میزان"
               required
             ></v-text-field>
-
+              </v-card-text>
+          </v-flex>
+          <v-flex >
+            <v-card-text>
             <v-select
               v-model="country"
-              style="text-align:right;width:47%;margin-right:5px;margin-top:10px"
+              style=""
               :items="country"
               :rules="[v => !!v || 'کشور مورد نیاز ']"
               label="کشور"
               required
             ></v-select>
-
+            </v-card-text>
+          </v-flex>
+          <v-flex>
+            <v-card-text>
             <v-select
               v-model="offers"
               :items="offers"
@@ -31,7 +43,10 @@
               label  ="تمام وقت"
               required
             ></v-select>
-
+            </v-card-text>
+          </v-flex>
+            <v-flex >
+              <v-card-text>
             <v-checkbox
               v-model="checkbox"
               :rules="[v => !!v || 'شما باید قبول کنید که ادامه یابد']"
@@ -39,22 +54,21 @@
               label="موافقید؟"
               required
             ></v-checkbox>
-      
+              </v-card-text>
+            </v-flex>
+            </v-layout>
+            <v-flex xs6 sm6 md6 lg6>
             <v-btn
               :disabled="!valid"
               @click="submit"
             >
             ارسال
             </v-btn>
-
             <v-btn @click="clear">پاک کردن</v-btn>
-            
+            </v-flex>
           </v-form>
         </v-card-text>
       </v-card>
-    </v-flex>
-  </v-layout>
-  
 </template>
 <script>
 

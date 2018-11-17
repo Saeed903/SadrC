@@ -23,8 +23,8 @@ export default new Vuex.Store({
   state:{
     currency:'',
     currencyMenu: [
-      { icon: 'fa fa-btc', text:'بیت کوین', path:'/Bitcoin'},
-      { icon: 'touch_app', text:'اتریوم', path:'/Bitcoin'},
+      { icon: 'mdi-currency-btc', text:'بیت کوین', path:'/Bitcoin'},
+      { icon: 'mdi-currency-ERH', text:'اتریوم', path:'/Bitcoin'},
       { icon: 'archive', text:'ریپل', path:'/Bitcoin'},
       { icon: 'delete', text:'زد کش', path:'/Bitcoin'},
       { icon: 'delete', text:'زد کش1', path:'/Bitcoin'},
