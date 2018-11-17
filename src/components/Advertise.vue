@@ -2,7 +2,7 @@
 <div>
     {{advertises}}
   <v-data-table
-      class="table text-xs-center"
+      class="table text-xs-right"
       :headers="headers"
       :items="desserts"
       :pagination.sync="pagination"
@@ -129,7 +129,7 @@ export default{
     getDesserts () {
     return [
         {
-            trader:'فرزاد افسری',
+            trader:'  فرزاد افسری',
             tradeCount:'98',
             satisfiedPercent:'100%',
             paymentMethod:'تایید کردن',
