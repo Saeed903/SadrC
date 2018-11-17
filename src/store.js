@@ -24,7 +24,7 @@ export default new Vuex.Store({
     currency:'',
     currencyMenu: [
       { icon: 'mdi-currency-btc', text:'بیت کوین', path:'/Bitcoin'},
-      { icon: 'mdi-currency-ERH', text:'اتریوم', path:'/Bitcoin'},
+      { icon: 'mdi-currency-erh', text:'اتریوم', path:'/Bitcoin'},
       { icon: 'archive', text:'ریپل', path:'/Bitcoin'},
       { icon: 'delete', text:'زد کش', path:'/Bitcoin'},
       { icon: 'delete', text:'زد کش1', path:'/Bitcoin'},

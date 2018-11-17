@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid grid-list-md>
+  
     <v-layout v-if="!loading"  row wrap align-justify justify-center>
       <v-flex  d-flex xs12 sm8 md8 lg8>
         <v-card>
@@ -9,10 +9,9 @@
               @keydown.prevent.enter 
               v-model="valid"
             >
-              <v-card-text>
                 <p class="titled text-xs-center">ورود</p>
                 <p class="text text-xs-center">با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید</p>
-              </v-card-text>
+              
                 <v-text-field
                   :roles = "notEmptyRoles"
                   v-model="user.email"
@@ -61,7 +60,7 @@
     </v-flex>
   <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
   </v-layout>
-  </v-container>
+  
 </template>
 <script>
  import Vue from 'vue'
