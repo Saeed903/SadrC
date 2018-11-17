@@ -1,48 +1,54 @@
 <template>
     <div>
+        <v-card-text class="text-xs-center">
+            <v-icon large>help_outline</v-icon>
+            <p class="titled">سوالات متداول</p>
+            <p class="text">این که آیا شما یک کاربر جدید هستید و یا یک معامله گر چاشنی هستید، به تمام سوالات خود در این صفحه پاسخ خواهید داد. اگر از Bitcoins جدید هستید می توانید از این راهنمای مفید خرید بیت کوین ها با استفاده از LocalBitcoins انجام دهید. اگر می خواهید یک معامله گر شوید، راهنمای آنلاین Bitcoins ها برای شما مناسب است. شما همچنین می توانید یک سوال در انجمن های ما بپرسید یا بلیط پشتیبانی را برای تماس با پشتیبانی ما باز کنید.</p>
+        </v-card-text>
+        
         <div>
-            <v-icon>guestion</v-icon>
+            <p class="help text-xs-center">دریافت کمک بیشتر</p>
         </div>
-        <div>
-            <p>سوالات متداول</p>
-            <p>این که آیا شما یک کاربر جدید هستید و یا یک معامله گر چاشنی هستید، به تمام سوالات خود در این صفحه پاسخ خواهید داد. اگر از Bitcoins جدید هستید می توانید از این راهنمای مفید خرید بیت کوین ها با استفاده از LocalBitcoins انجام دهید. اگر می خواهید یک معامله گر شوید، راهنمای آنلاین Bitcoins ها برای شما مناسب است. شما همچنین می توانید یک سوال در انجمن های ما بپرسید یا بلیط پشتیبانی را برای تماس با پشتیبانی ما باز کنید.</p>
-        </div>
-        <div>
-            <p>دریافت کمک بیشتر</p>
-        </div>
-        <div>
-            <div>
-                <v-icon>home</v-icon>
-                <p>یک بلیط پشتیبانی را باز کنید</p>
-            </div>
-            <div>
-                <v-icon>home</v-icon>
-                <p>پست در انجمن ما</p>
-            </div>
-            <div>
-                <v-icon>home</v-icon>
-                <p>یک صدای جیر جیر را بنویس</p>
-            </div>
-        </div>
-        <div>
-            <v-expansion-panel>
+        <v-layout row wrap>
+            <v-flex>
+                <v-card-text class="text-xs-center">
+                <v-icon>fab fa-twitter</v-icon><br>
+                <router-link class="link" to="">یک بلیط پشتیبانی را باز کنید</router-link>
+                </v-card-text>
+             </v-flex>
+
+             <v-flex>
+                <v-card-text class="text-xs-center">
+                <v-icon>group</v-icon><br>
+                <router-link class="link" to="">پست در انجمن ما</router-link>
+                </v-card-text>
+            </v-flex>
+
+            <v-flex>
+                <v-card-text class="text-xs-center">
+                <v-icon>home</v-icon><br>
+                <router-link class="link" to="">یک صدای جیر جیر را بنویس</router-link>
+                </v-card-text>
+            </v-flex>
+        </v-layout>
+
+            <v-card-text>
+            <v-expansion-panel >
                 <v-expansion-panel-content
                 v-for="(item,i) in items"
                 :key="i"
                 expand-icon="mdi-menu-down"
                 >
-                <div slot="header">{{item.title}}</div>
-                <v-card
-                
-                >
-                <v-card-text class="grey -3">{{item.persianTitle}}</v-card-text>
-                </v-card>
+                <div class="text text-xs-right" slot="header">{{item.title}}</div>
+                    <v-card>
+                        <v-card-text class="text text-xs-right">{{item.persianTitle}}</v-card-text>
+                    </v-card>
                 </v-expansion-panel-content>
             </v-expansion-panel>
-        </div>
-        <div>
-            <p>در مورد بیت کوین</p>
-        </div>
+        
+        <v-card-text class="text-xs-center">
+            <p class="help">در مورد بیت کوین</p>
+        </v-card-text>
         <div>
              <v-expansion-panel>
                 <v-expansion-panel-content
@@ -50,91 +56,93 @@
                 :key="i"
                 expand-icon="mdi-menu-down"
                 >
-                <div slot="header">{{text.title}}</div>
-                <v-card
-                
-                >
-                <v-card-text class="grey -3">{{text.persianTitle}}</v-card-text>
+                <div class="text text-xs-right" slot="header">{{text.title}}</div>
+                <v-card>
+                    <v-card-text class="text text-xs-right">{{text.persianTitle}}</v-card-text>
                 </v-card>
                 </v-expansion-panel-content>
             </v-expansion-panel>
         </div>
-        <div>
+
+        <v-card-text class="help text-xs-center">
             <p>استفاده از صدرکریپتو</p>
-        </div>
-        <div>
+        </v-card-text>
+
+        
              <v-expansion-panel>
                 <v-expansion-panel-content
                 v-for="(use,i) in uses"
                 :key="i"
                 expand-icon="mdi-menu-down"
                 >
-                <div slot="header">{{use.title}}</div>
-                <v-card
-                
-                >
-                <v-card-text class="grey -3">{{use.persianTitle}}</v-card-text>
+                <div class="text text-xs-right" slot="header">{{use.title}}</div>
+                <v-card>
+                <v-card-text class="text text-xs-center">{{use.persianTitle}}</v-card-text>
                 </v-card>
                 </v-expansion-panel-content>
             </v-expansion-panel>
-        </div>
-        <div>
+       
+        <v-card-text class="help text-xs-center">
             <p>مشکلات و راه حل های مشترک</p>
-        </div>
-        <div>
+        </v-card-text>
+        
              <v-expansion-panel>
                 <v-expansion-panel-content
                 v-for="(problem,i) in problems"
                 :key="i"
                 expand-icon="mdi-menu-down"
                 >
-                <div slot="header">{{problem.title}}</div>
+                <div class="text text-xs-right" slot="header">{{problem.title}}</div>
                 <v-card
                 
                 >
-                <v-card-text class="grey -3">{{problem.persianTitle}}</v-card-text>
+                <v-card-text class="text text-xs-right">{{problem.persianTitle}}</v-card-text>
                 </v-card>
                 </v-expansion-panel-content>
             </v-expansion-panel>
-        </div>
-        <div>
+        
+        <v-card-text class="help text-xs-center">
             <p>ایجاد تبلیغات و تجارت بیت کوین</p>
-        </div>
-        <div>
+        </v-card-text>
+
+        <v-card-text>
              <v-expansion-panel>
                 <v-expansion-panel-content
                 v-for="(trade,i) in trades"
                 :key="i"
                 expand-icon="mdi-menu-down"
                 >
-                <div slot="header">{{trade.title}}</div>
+                <div class="text text-xs-right" slot="header">{{trade.title}}</div>
                 <v-card
                 
                 >
-                <v-card-text class="grey -3">{{trade.persianTitle}}</v-card-text>
+                <v-card-text class="text text-xs-right">{{trade.persianTitle}}</v-card-text>
                 </v-card>
                 </v-expansion-panel-content>
             </v-expansion-panel>
-        </div>
-        <v-card-text>واژه نامه صدرکریپتو</v-card-text>
+        </v-card-text>
+        
+    </v-card-text>
 
-        <v-card-text>
-            <p>آدرس</p>
+        <v-card-text class="titled text-xs-center">واژه نامه صدرکریپتو</v-card-text>
+
+        <v-card-text class="text text-xs-center">
+            <p class="help">آدرس</p>
             <span>یک آدرس بیت کوین به نظر می رسد در امتداد یک رشته برای حروف تصادفی و numbers.addresses استفاده می شود زمانی که شما می خواهید برای ارسال و یا دریافت کیف پول bitcoins. حداقل یک دریافت کننده و یک ارسال آدرس. هنگامی که شما می خواهید برای دریافت بیت کوین به کیف پول شما نیاز به دادن فرستنده آدرس کیف پول خود را دریافت کنید.</span>
         </v-card-text>
 
-        <v-card-text>
-            <p>AMLوKYC</p>
+        <v-card-text class="text text-xs-center">
+            <p class="help">AMLوKYC</p>
             <span>ضد پولشویی و دانستن مشتری شما، یک گروه از قوانین در ایران است که به بیت کوین فروشندگان نیاز دارند که مشتریان خود را بشناسند. معامله گران خاصی از شناسایی شما برای مطابقت با این قوانین درخواست خواهند کرد. کشورهای دیگر در سراسر جهان ممکن است قوانین مشابهی داشته باشند. الزامات</span>
         </v-card-text>
 
-        <v-card-text>
-            <p class="text-xs-center headline">بلاک چین</p>
+        <v-card-text class="text text-xs-center">
+            <p class="help">بلاک چین</p>
             <span>بلاکچین تکنولوژی پشت بیت کوین است.این چیزی که باعث می شود آن کار کند. تراکنش های بیت کوین به blockchain فرستاده می شوند تا معدنچیان بتوانند آنها را در بلوک هایی قرار دهند که منزل شما هستند. یک بلوک معادل معامله شما معدن است که به بلوکچین اضافه شده است معامله دریافت یک تاییدیه</span>
         </v-card-text>
 
-        <v-card-text>
-            <p>اطلاعات بلاک چین</p>
+        <v-card-text class="text text-xs-center">
+            <p class="help">اطلاعات بلاک چین</p>
             <span>طلاعات بلوکچین یکی از وب سایت های بسیاری است که به عنوان explocers blockchain کار می کنند.این وب سایت ها به شما اجازه می دهد بلوک چینی را ببینید و در مورد آن چه در جریان است. در شرایط عملی این امکان وجود دارد که معاملات خود را مشاهده کنید و ببینید آیا آنها تایید شده یا نه. همچنین می توانید ببینید که چند راهکار غیرقانونی وجود دارد، هرچه بیشتر طول بکشد تا تراکنش شما تایید شود</span>
         </v-card-text>
       
@@ -205,3 +213,24 @@ export default {
     }
 }
 </script>
+<style scoped>
+.titled{
+    font-family: Iranian Sans;
+    font-size: 28px;
+}
+.text{
+    font-family: Iranian Sans;
+}
+.link{
+    text-decoration: none;
+    color:rgb(0,153,255);
+    font-family:Iranian Sans; 
+}
+.link:hover{
+    color:rgb(0,140,255);
+}
+.help{
+    font-family:Iranian Sans;
+    font-size:18px;
+}
+</style>

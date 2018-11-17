@@ -53,14 +53,14 @@
           </v-card-text>
         </v-card>
       </v-flex>
-    </v-layout>
-
+    
+    <v-flex d-flex xs12 sm8 md8 lg8>
       <v-card>
       <Footer></Footer>
       </v-card>
-
+    </v-flex>
   <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
-  
+  </v-layout>
   </v-container>
 </template>
 <script>

@@ -395,31 +395,44 @@
     </v-card>
 </template>
 <script>
-import { mapState, mapActions } from 'vuex';
+
+import { mapState, mapActions, mapGetters } from 'vuex';
 import Footer from './../components/Footer.vue'
     export default{
-        data(){
-            return{
-                checkbox:true,
-                select:null,
-                radioGroup:1,
-                tradeTypes:[
-                    "فروش بیت کوین خود در صدر کریپتو",
-                    "خرید بیت کوین در صدر کریپتو",
-                    "فروش بیت کوین آنلاین شما",
-                    "خرید بیت کوین آنلاین"
-                ],
-                selectCurrency:[
-                    'بیت کوین',
-                    'اتریوم',
-                    'زدکش',
-                    'ترون',
-                ],
-    
-            }
-        },
+        data:() => ({
+            checkbox:true,
+            select:null,
+            radioGroup:1,
+            tradeTypes:[
+                "فروش بیت کوین خود در صدر کریپتو",
+                "خرید بیت کوین در صدر کریپتو",
+                "فروش بیت کوین آنلاین شما",
+                "خرید بیت کوین آنلاین"
+            ],
+            selectCurrency:[
+                'بیت کوین',
+                'اتریوم',
+                'زدکش',
+                'ترون',
+            ],
+        }),
         computed: {
-            ...mapState(['currencyMenu'])
+            ...mapState(['currencyMenu']),
+            ...mapState('advertises', { loadingAdvertise: 'isFindPending'}),
+            ...mapGetters('advertises', { fingAdvertisesOnline: 'find'}),
+
+            advertises(){
+                return this.fingAdvertisesOnline().data;
+            },
+        },
+        methods:{
+            ...mapActions('advertises', { findAdvertise : 'find'}),
+        },
+        mounted(){
+            this.findAdvertise()
+                .then(response => {
+                    const advertises = response.data || response;
+                }) 
         },
         components:{
             Footer

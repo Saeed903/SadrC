@@ -1,36 +1,46 @@
 <template >
 <div>
+    {{advertises}}
   <v-data-table
-      class="table text-xs-left"
+      class="text-xs-right"
       :headers="headers"
       :items="desserts"
       :pagination.sync="pagination"
       :total-items="totalDesserts"
-      :loading="loading"
+      :loading="loadingAdvertise"
     >
-      <template slot="items" slot-scope="props">
-        <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
-        <td class="table text-xs-right">{{ props.item.paymentMethod }}</td>
-        <td class="table text-xs-right">{{ props.item.price }}</td>
-        <td class="table text-xs-right">{{ props.item.limits }}</td>
-        <td class="table text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
+      <template v-if="!loading" slot="items" slot-scope="props">
+        <td>({{props.item.tradeCount}},{{props.item.satisfiedPercent}}){{ props.item.trader }}</td>
+        <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
+        <td class="text-xs-right">{{ props.item.price }}</td>
+        <td class="text-xs-right">{{ props.item.limits }}</td>
+        <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
       </template>
     </v-data-table>
 </div>
 </template>
 <script>
+
+import { mapActions, mapState, mapGetters } from 'vuex';
+
 export default{
   name:"Advertise",
-  props:["isSeller"],
+  props:['isSeller', 'query'],
   data () {
     return {
         totalDesserts: 0,
         desserts: [],
-        loading: true,
         pagination: {},
       }
   },
   computed:{
+    ...mapState('advertises', { loadingAdvertise: 'isFindPending'}),
+    ...mapGetters('advertises', { fingAdvertisesOnline: 'find'}),
+
+    advertises(){
+        return this.fingAdvertisesOnline().data;
+    },
+
     typeCustomer:function() {
         return (this.isSeller==1) ?'فروشنده':'خریدار';
     },
@@ -62,14 +72,22 @@ export default{
     }
   },
   mounted () {
+
+    this.findAdvertise()
+        .then(response => {
+        // In the find action, the 'todos' array is not a reactive list, but the individual records are.
+        const advertises = response.data || response
+        }), 
     console.log(this.isSeller);  
     this.getDataFromApi()
-    .then(data => {
-        this.desserts = data.items
-        this.totalDesserts = data.total
-    })
+        .then(data => {
+            this.desserts = data.items
+            this.totalDesserts = data.total
+        })
   },
   methods: {
+    ...mapActions('advertises', { findAdvertise : 'find'}),
+
     getDataFromApi () {
     this.loading = true
     return new Promise((resolve, reject) => {
