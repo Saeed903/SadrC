@@ -41,15 +41,13 @@
             <v-flex sm6 md6 lg6>
                 <v-card dark tile flat>
                     <v-text-field
-                    class="mr-3 fontIran "
+                    class="fontIran mr-3"
                     label="موقعیت مکانی"
                     box
                     color="cyan accent-2"
                     clearable
+                    append-icon="add_location"
                     >
-                    <template slot="label">
-                        موقعیت مکانی <v-icon style="vertical-align: middle;color:aqua">add_location</v-icon>
-                    </template>
                     </v-text-field>
                 </v-card>
             </v-flex>
@@ -73,7 +71,7 @@
                     class="textField mr-3 fontIran"
                     color="cyan accent-2" 
                     box
-                    
+                    clearable
                     >
                     </v-select>
                 </v-card>
@@ -93,6 +91,7 @@
                     label="محدوده تغییرات"
                     box
                     color="cyan accent-2"
+                    clearable
                     >
                     </v-text-field>
                 </v-card>
@@ -112,6 +111,7 @@
                     label="معادل قیمت"
                     color="cyan accent-2"
                     box
+                    clearable
                     >
                     </v-text-field>
                 </v-card>
@@ -140,6 +140,7 @@
                     label="کمترین مقدار معامله"
                     box
                     color="cyan accent-2"
+                    clearable
                     >
                     </v-text-field>
                 </v-card>
@@ -159,6 +160,7 @@
                     label="بیشترین مقدار معامله"
                     box
                     color="cyan accent-2"
+                    clearable
                     >
                     </v-text-field>
                 </v-card>
@@ -178,6 +180,7 @@
                     label="محدودیت مقدار معامله"
                     box
                     color="cyan accent-2"
+                    clearable
                     >
                     </v-text-field>
                 </v-card>
@@ -200,10 +203,10 @@
                             <v-card-text class="">شنبه</v-card-text>
                         </div>
                         <div>
-                            <v-select label="از ساعت" color="cyan accent-2"></v-select>
+                            <v-select label="از ساعت" color="cyan accent-2 clearable"></v-select>
                         </div>
                         <div>
-                            <v-select label="تا ساعت" color="cyan accent-2"></v-select>
+                            <v-select label="تا ساعت" color="cyan accent-2 clearable"></v-select>
                         </div>
                     </v-card-media>
                 </v-card>
@@ -213,10 +216,10 @@
                             <v-card-text>1شنبه</v-card-text>
                         </div>
                         <div>
-                            <v-select label="از ساعت" color="cyan accent-2"></v-select>
+                            <v-select label="از ساعت" color="cyan accent-2 clearable"></v-select>
                         </div>
                         <div>
-                            <v-select label="تا ساعت" color="cyan accent-2"></v-select>
+                            <v-select label="تا ساعت" color="cyan accent-2 clearable"></v-select>
                         </div>
                     </v-card-media>
                 </v-card>
@@ -226,10 +229,10 @@
                             <v-card-text class="">2شنبه</v-card-text>
                         </div>
                         <div>
-                            <v-select label="از ساعت" color="cyan accent-2"></v-select>
+                            <v-select label="از ساعت" color="cyan accent-2 clearable"></v-select>
                         </div>
                         <div>
-                            <v-select label="تا ساعت" color="cyan accent-2"></v-select>
+                            <v-select label="تا ساعت" color="cyan accent-2 clearable"></v-select>
                         </div>
                     </v-card-media>
                 </v-card>
@@ -239,10 +242,10 @@
                             <v-card-text class="">3شنبه</v-card-text>
                         </div>
                         <div>
-                            <v-select label="از ساعت" color="cyan accent-2"></v-select>
+                            <v-select label="از ساعت" color="cyan accent-2 clearable"></v-select>
                         </div>
                         <div>
-                            <v-select label="تا ساعت" color="cyan accent-2"></v-select>
+                            <v-select label="تا ساعت" color="cyan accent-2 clearable"></v-select>
                         </div>
                     </v-card-media>
                 </v-card>
@@ -252,10 +255,10 @@
                             <v-card-text class="">4شنبه</v-card-text>
                         </div>
                         <div>
-                            <v-select label="از ساعت" color="cyan accent-2"></v-select>
+                            <v-select label="از ساعت" color="cyan accent-2 clearable"></v-select>
                         </div>
                         <div>
-                            <v-select label="تا ساعت" color="cyan accent-2"></v-select>
+                            <v-select label="تا ساعت" color="cyan accent-2 clearable"></v-select>
                         </div>
                     </v-card-media>
                 </v-card>
@@ -265,10 +268,10 @@
                             <v-card-text class="">5شنبه</v-card-text>
                         </div>
                         <div>
-                            <v-select label="از ساعت" color="cyan accent-2"></v-select>
+                            <v-select label="از ساعت" color="cyan accent-2 clearable"></v-select>
                         </div>
                         <div>
-                            <v-select label="تا ساعت" color="cyan accent-2"></v-select>
+                            <v-select label="تا ساعت" color="cyan accent-2 clearable"></v-select>
                         </div>
                     </v-card-media>
                 </v-card>
@@ -278,10 +281,10 @@
                             <v-card-text class="">جمعه</v-card-text>
                         </div>
                         <div>
-                            <v-select label="از ساعت" color="cyan accent-2"></v-select>
+                            <v-select label="از ساعت" color="cyan accent-2 clearable"></v-select>
                         </div>
                         <div>
-                            <v-select label="تا ساعت" color="cyan accent-2"></v-select>
+                            <v-select label="تا ساعت" color="cyan accent-2 clearable"></v-select>
                         </div>
                     </v-card-media>
                 </v-card><v-card dark>
@@ -299,6 +302,7 @@
                     label="شرایط تجارت"
                     box
                     color="cyan accent-2"
+                    clearable
                     >
                     </v-textarea>
                 </v-card>
@@ -319,7 +323,8 @@
                    <v-checkbox
                     label="پیگیری نقدینگی"
                     class="fontIran pr-3"    
-                    color="cyan accent-2"               
+                    color="cyan accent-2"    
+                    clearable           
                    >
                    </v-checkbox>
                 </v-card>
@@ -343,7 +348,8 @@
                    <v-checkbox
                     label="فقط شناسایی افراد"
                     class="fontIran pr-3" 
-                    color="cyan accent-2"                  
+                    color="cyan accent-2"   
+                    clearable               
                    >
                    </v-checkbox>
                 </v-card>
@@ -361,7 +367,8 @@
                    <v-checkbox
                     label="تاییدیه پیامک"
                     class="fontIran pr-3"   
-                    color="cyan accent-2"                
+                    color="cyan accent-2"
+                    clearable                
                    >
                    </v-checkbox>
                 </v-card>
@@ -390,7 +397,12 @@
                 </v-card>
             </v-flex>
         </v-layout>
-
+       <v-btn
+        color="primary"
+        class="fontIran caption"
+       >
+       ثبت آگهی
+       </v-btn>
         <Footer></Footer>
     </v-card>
 </template>
