@@ -1,74 +1,76 @@
 <template>
-
-  
+  <v-layout>
+    <v-card>
+      <v-flex xs12 sm6  md3  lg3>
+    <p class="titled text-xs-center">{{currency}}</p>
+     
     
-      <v-card>
-      
-        <v-card-text class="table">
-          <p class="titled text-xs-center">{{currency}}</p>
-          
-          <v-form ref="form" v-model="valid" lazy-validation>
-
-            <v-layout>
-            <v-flex >
-              <v-card-text>
-            <v-text-field
-              v-model="amount"
-              type="number"
-              style=""
-              :rules="amountRules"
-              label="میزان"
-              required
-            ></v-text-field>
-              </v-card-text>
-          </v-flex>
-          <v-flex >
-            <v-card-text>
-            <v-select
-              v-model="country"
-              style=""
-              :items="country"
-              :rules="[v => !!v || 'کشور مورد نیاز ']"
-              label="کشور"
-              required
-            ></v-select>
-            </v-card-text>
-          </v-flex>
-          <v-flex>
-            <v-card-text>
-            <v-select
-              v-model="offers"
-              :items="offers"
-              :rules="[v => !!v || 'لازم است']"
-              label  ="تمام وقت"
-              required
-            ></v-select>
-            </v-card-text>
-          </v-flex>
-            <v-flex >
-              <v-card-text>
-            <v-checkbox
-              v-model="checkbox"
-              :rules="[v => !!v || 'شما باید قبول کنید که ادامه یابد']"
-              style=""
-              label="موافقید؟"
-              required
-            ></v-checkbox>
-              </v-card-text>
-            </v-flex>
-            </v-layout>
-            <v-flex xs6 sm6 md6 lg6>
-            <v-btn
-              :disabled="!valid"
-              @click="submit"
-            >
-            ارسال
-            </v-btn>
-            <v-btn @click="clear">پاک کردن</v-btn>
-            </v-flex>
-          </v-form>
+    <v-form ref="form" class="table" v-model="valid" lazy-validatio>
+       <v-layout>
+      <v-flex >
+        <v-card-text>
+      <v-text-field
+        v-model="amount"
+        type="number"
+        style=""
+        :rules="amountRules"
+        label="میزان"
+        required
+      ></v-text-field>
         </v-card-text>
-      </v-card>
+    </v-flex>
+    <v-flex xs12>
+      <v-card-text>
+      <v-select
+        v-model="country"
+        style=""
+        :items="country"
+        :rules="[v => !!v || 'کشور مورد نیاز ']"
+        label="کشور"
+        required
+      ></v-select>
+      </v-card-text>
+    </v-flex>
+    <v-flex xs12>
+      <v-card-text>
+      <v-select
+        v-model="offers"
+        :items="offers"
+        :rules="[v => !!v || 'لازم است']"
+        label  ="تمام وقت"
+        required
+      ></v-select>
+      </v-card-text>
+    </v-flex>
+      <v-flex xs12>
+      <v-card-text>
+      <v-select
+        v-model="country"
+        style=""
+        :items="country"
+        :rules="[v => !!v || 'کشور مورد نیاز ']"
+        label="کشور"
+        required
+      ></v-select>
+      </v-card-text>
+    </v-flex>
+    <v-flex >
+      <v-card-text>
+      <v-btn
+        :disabled="!valid"
+        @click="submit">
+      جست وجو
+      </v-btn>
+      
+       </v-card-text>
+    </v-flex>
+      
+      </v-layout>
+    </v-form>
+    
+      </v-flex>
+    </v-card>
+  </v-layout>
 </template>
 <script>
 
@@ -154,5 +156,6 @@
 }
 .table{
   font-family: Iranian Sans;
+  
 }
 </style>
