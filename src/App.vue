@@ -182,7 +182,7 @@
       
 
       <v-card-text class="text-sm-left headline">
-        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="body-2 ">.com</span><v-icon color="grey">home</v-icon></router-link>
+        <router-link to="" class="sadrLogo white--text" color="blue-grey lighten-4">sadrCrypto<span class="subheading">.com</span></router-link><v-icon color="grey" size="24px">home</v-icon>
       </v-card-text>
       
     </v-toolbar>
@@ -275,5 +275,8 @@
   text-decoration:none;
   font-family:b nazanin;
 }
-
+.sadrLogo{
+  text-decoration:none;
+  font-family:b nazanin;
+}
 </style>
