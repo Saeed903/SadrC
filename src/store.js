@@ -21,6 +21,7 @@ Vue.use(FeathersVuex);
 export default new Vuex.Store({
 
   state:{
+    sitekey: '6LeaLnYUAAAAAOsDilRLdvAo2o9JNBrjxhLpUGGw',
     currency:'',
     currencyMenu: [
       { icon: 'lightbulb_outline', text:'بیت کوین', path:'/Bitcoin'},

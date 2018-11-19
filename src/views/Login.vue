@@ -81,7 +81,6 @@
       valid: false,
       captchaValid: false,
       notEmptyRoles:[(value) => !!value || "می بایستی این فیلد را پر کنید"],
-      sitekey: '6LeaLnYUAAAAAOsDilRLdvAo2o9JNBrjxhLpUGGw',
       user: {
         email: '',
         password: '',
@@ -91,6 +90,7 @@
       
     },
     computed: {
+      ...mapState(['sitekey']),
       ...mapState('auth', {loading: 'isAuthenticatePending'}),
     },
     methods: {

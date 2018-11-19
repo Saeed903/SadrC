@@ -89,6 +89,7 @@
       validator: 'new'
     },
     computed:{
+      ...mapState(['sitekey']),
       ...mapState('users', { loading: 'isCreatePending'})
     },
     components:{
@@ -98,7 +99,6 @@
     data: () => ({
       valid: false,
       validate:false,
-      sitekey: '6LeaLnYUAAAAAOsDilRLdvAo2o9JNBrjxhLpUGGw',
       user:{
         username: '',
         email: '',
