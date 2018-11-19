@@ -13,7 +13,7 @@ import i18n from './i18n'
 
 Vue.use(Vuetify, {
   rtl: true,
-  iconfont: 'mdi',
+  //iconfont: 'mdi',
   lang: {
     locales: 'fa',
     current: 'fa'

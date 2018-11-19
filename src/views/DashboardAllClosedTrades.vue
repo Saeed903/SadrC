@@ -1,38 +1,38 @@
 <template>
-<div>
-    <v-card-text pt-0>
-        <p class="text-xs-center">بستن تمام معاملات</p>
-        <router-link class="link " to="">اطلاعات را با فرمت سی اس وی دانلود کنید.</router-link>
-    </v-card-text>
+    <div>
+        <v-card-text pt-0>
+            <p class="text-xs-center">بستن تمام معاملات</p>
+            <router-link class="link " to="">اطلاعات را با فرمت سی اس وی دانلود کنید.</router-link>
+        </v-card-text>
 
         <v-card-text>
             <v-card>
-        <div class="heydar1">
-            <v-data-table
-                class="text-xs-left"
-                :headers="headers"
-                :items="desserts"
-                :pagination.sync="pagination"
-                :total-items="totalDesserts"
-                :loading="loading"
-                >
-                <template slot="items" slot-scope="props">
-                    <td class="table text-xs-right">{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
-                    <td class="table text-xs-center">{{ props.item.createdAt }}</td>
-                    <td class="table text-xs-center">{{ props.item.tradeType }}</td>
-                    <td class="table text-xs-center">{{ props.item.tradingPartner }}</td>
-                    <td class="table text-xs-center">{{ props.item.transactionStatus }}</td>
-                    <td class="table text-xs-center">{{ props.item.fiat }}</td>
-                    <td class="table text-xs-center">{{ props.item.tradeAmount }}</td>
-                    <td class="table text-xs-center">{{ props.item.tradingFee }}</td>
-                    <td class="table text-xs-center">{{ props.item.totalBTC }}</td>
-                    <td class="table text-xs-center">{{ props.item.exchangeRate }}</td>
-                    <td ><v-btn class="table primary" @click="buy()">خرید</v-btn></td>
-                </template>
-            </v-data-table>
-        </div>
+                <div class="heydar1">
+                    <v-data-table
+                    class="text-xs-left"
+                    :headers="headers"
+                    :items="desserts"
+                    :pagination.sync="pagination"
+                    :total-items="totalDesserts"
+                    :loading="loading"
+                    >
+                        <template slot="items" slot-scope="props">
+                            <td class="table text-xs-right">{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
+                            <td class="table text-xs-center">{{ props.item.createdAt }}</td>
+                            <td class="table text-xs-center">{{ props.item.tradeType }}</td>
+                            <td class="table text-xs-center">{{ props.item.tradingPartner }}</td>
+                            <td class="table text-xs-center">{{ props.item.transactionStatus }}</td>
+                            <td class="table text-xs-center">{{ props.item.fiat }}</td>
+                            <td class="table text-xs-center">{{ props.item.tradeAmount }}</td>
+                            <td class="table text-xs-center">{{ props.item.tradingFee }}</td>
+                            <td class="table text-xs-center">{{ props.item.totalBTC }}</td>
+                            <td class="table text-xs-center">{{ props.item.exchangeRate }}</td>
+                            <td ><v-btn class="table primary" @click="buy()">خرید</v-btn></td>
+                        </template>
+                    </v-data-table>
+                </div>
             </v-card>
-    </v-card-text>
+        </v-card-text>
     </div>
 </template>
 <script>

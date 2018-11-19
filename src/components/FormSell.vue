@@ -1,60 +1,90 @@
 <template>
-  <v-layout>
-    <p>{{currency}}</p>
-    <v-form ref="form" v-model="valid" lazy-validation>
-      <v-text-field
-        v-model="amount"
-        type="number"
-        style="text-align:right;width:47%;float:right;margin-left:5px;margin-top:0"
-        :rules="amountRules"
-        label="میزان"
-        required
-      ></v-text-field>
-      <v-select
-        v-model="country"
-        style="text-align:right;width:47%;margin-right:5px;margin-top:10px"
-        :items="country"
-        :rules="[v => !!v || 'country is required']"
-        label="کشور"
-        required
-      ></v-select>
-      <v-select
-        v-model="offers"
-        :items="offers"
-        :rules="[v => !!v || 'is required']"
-        label  ="تمام وقت"
-        required
-      ></v-select>
-      <v-checkbox
-        v-model="checkbox"
-        :rules="[v => !!v || 'you must accept to continue']"
-        style=""
-        label="موافقید؟"
-        required
-      ></v-checkbox>
+  
+    <div>
+      
+    
+     
+     
+       <p class="titled text-xs-center">{{currency}}</p>
 
-      <v-btn
-        :disabled="!valid"
-        @click="submit"
-      >
-      ارسال
-      </v-btn>
-      <v-btn @click="clear">پاک کردن</v-btn>
+      <v-form  ref="form" class="table" v-model="valid" lazy-validatio>
+        <v-container>
+        <v-layout row wrap >
+          <v-flex xs12 sm6 md2>
+         
+            <v-text-field 
+              v-model="amount"
+              type="number"
+              style=""
+              :rules="amountRules"
+              label="میزان"
+              required
+            ></v-text-field>
+          
+          </v-flex>
+
+          <v-flex xs12 sm6 md2>
+          
+            <v-select
+              v-model="country"
+              style=""
+              :items="country"
+              :rules="notEmptyRoles"
+              label="کشور"
+              required
+            ></v-select>
+          
+          </v-flex>
+    
+          <v-flex xs12 sm6 md2>
+          
+            <v-select
+              v-model="offers"
+              :items="offers"
+              :rules="notEmptyRoles"
+              label  ="تمام وقت"
+              required
+            ></v-select>
+          
+          </v-flex>
+
+          <v-flex xs12 sm6 md2>
+          
+            <v-select
+              v-model="country"
+              style=""
+              :items="country"
+              :rules="notEmptyRoles"
+              label="کشور"
+              required
+            ></v-select>
+          
+          </v-flex>
+
+          <v-flex xs12 sm6 md2>
+          <v-card-text >
+            <v-btn  :disabled="!valid" @click="submit">جست وجو </v-btn>
+          </v-card-text>
+          </v-flex>
+    
+        </v-layout>
+        </v-container>
     </v-form>
-  </v-layout>
+    </div>
+    
   
 </template>
 <script>
 
   export default {
     props:['currency'],
-    data: () => ({
+    data: (vm) => ({
       
       valid: true,
       amount: '',
-      amountRules: [
-        v => !!v || 'amount is reqiured',
-      ],
+      notEmptyRoles:[(value) => !!value || 'فیلد اجباری '],
+      matchPasswordRoles:[(value) => value == vm.password?'': 'می بایست تاییده پسورد با خود پسورد یکی باشد'],
+     
       select: null,
       country: [
         'america',
@@ -121,3 +151,13 @@
     }
   }
 </script>
+<style >
+.titled{
+  font-family: Iranian Sans;
+  font-size: 20px;
+}
+.table{
+  font-family: Iranian Sans;
+  
+}
+</style>

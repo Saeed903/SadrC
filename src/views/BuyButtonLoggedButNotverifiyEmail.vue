@@ -1,12 +1,12 @@
 <template>
-<v-container fluid grid-list-md>
+
   <v-layout row wrap>
    <v-flex d-flex >
-    <v-card >
-      <v-card-text class="title" >
-        <p class="text-md-center">خرید بیت کوین با استفاده از انتقال بانکی جمهوری اسلامی ایران با ریال ایران</p>
-      </v-card-text>
-    </v-card>
+    
+      
+        <p class="titled text-xs-center">خرید بیت کوین با استفاده از انتقال بانکی جمهوری اسلامی ایران با ریال ایران</p>
+      
+    
   </v-flex> 
   <v-flex d-flex xs12 sm6 md8>
     <v-layout row wrap>
@@ -97,10 +97,10 @@
         <p>توجه داشته باشید که نوسانات بازاروهزینه انتقال ممکن است مقدار نهایی بیت کوین را تغییر دهد لذا مقدار بیت کوین در زمان درخواست محاسبه می شود</p>
       </v-card-text>
     </v-card>
-  </v-flex>
     
+  </v-flex>
   </v-layout>
-</v-container>
+
 </template>
 <script>
 export default {
@@ -120,6 +120,10 @@ export default {
 </script>
 
 <style scoped>
+.titled{
+  font-family: Iranian Sans;
+  font-size: 18px; 
+}
 
 .head{
   text-decoration: none;
@@ -133,4 +137,5 @@ export default {
   padding-right:10px;
   color:rgb(133, 129, 129);
 }
+
 </style>
