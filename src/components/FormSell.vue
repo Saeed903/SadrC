@@ -1,88 +1,90 @@
 <template>
-  <v-layout>
-    <v-card>
-      <v-flex xs12 sm6  md3  lg3>
-    <p class="titled text-xs-center">{{currency}}</p>
+  
+    <div>
+      
+    
      
+     
+       <p class="titled text-xs-center">{{currency}}</p>
+
+      <v-form  ref="form" class="table" v-model="valid" lazy-validatio>
+        <v-container>
+        <v-layout row wrap >
+          <v-flex xs12 sm6 md2>
+         
+            <v-text-field 
+              v-model="amount"
+              type="number"
+              style=""
+              :rules="amountRules"
+              label="میزان"
+              required
+            ></v-text-field>
+          
+          </v-flex>
+
+          <v-flex xs12 sm6 md2>
+          
+            <v-select
+              v-model="country"
+              style=""
+              :items="country"
+              :rules="notEmptyRoles"
+              label="کشور"
+              required
+            ></v-select>
+          
+          </v-flex>
     
-    <v-form ref="form" class="table" v-model="valid" lazy-validatio>
-       <v-layout>
-      <v-flex >
-        <v-card-text>
-      <v-text-field
-        v-model="amount"
-        type="number"
-        style=""
-        :rules="amountRules"
-        label="میزان"
-        required
-      ></v-text-field>
-        </v-card-text>
-    </v-flex>
-    <v-flex xs12>
-      <v-card-text>
-      <v-select
-        v-model="country"
-        style=""
-        :items="country"
-        :rules="[v => !!v || 'کشور مورد نیاز ']"
-        label="کشور"
-        required
-      ></v-select>
-      </v-card-text>
-    </v-flex>
-    <v-flex xs12>
-      <v-card-text>
-      <v-select
-        v-model="offers"
-        :items="offers"
-        :rules="[v => !!v || 'لازم است']"
-        label  ="تمام وقت"
-        required
-      ></v-select>
-      </v-card-text>
-    </v-flex>
-      <v-flex xs12>
-      <v-card-text>
-      <v-select
-        v-model="country"
-        style=""
-        :items="country"
-        :rules="[v => !!v || 'کشور مورد نیاز ']"
-        label="کشور"
-        required
-      ></v-select>
-      </v-card-text>
-    </v-flex>
-    <v-flex >
-      <v-card-text>
-      <v-btn
-        :disabled="!valid"
-        @click="submit">
-      جست وجو
-      </v-btn>
-      
-       </v-card-text>
-    </v-flex>
-      
-      </v-layout>
+          <v-flex xs12 sm6 md2>
+          
+            <v-select
+              v-model="offers"
+              :items="offers"
+              :rules="notEmptyRoles"
+              label  ="تمام وقت"
+              required
+            ></v-select>
+          
+          </v-flex>
+
+          <v-flex xs12 sm6 md2>
+          
+            <v-select
+              v-model="country"
+              style=""
+              :items="country"
+              :rules="notEmptyRoles"
+              label="کشور"
+              required
+            ></v-select>
+          
+          </v-flex>
+
+          <v-flex xs12 sm6 md2>
+          <v-card-text >
+            <v-btn  :disabled="!valid" @click="submit">جست وجو </v-btn>
+          </v-card-text>
+          </v-flex>
+    
+        </v-layout>
+        </v-container>
     </v-form>
+    </div>
     
-      </v-flex>
-    </v-card>
-  </v-layout>
+  
 </template>
 <script>
 
   export default {
     props:['currency'],
-    data: () => ({
+    data: (vm) => ({
       
       valid: true,
       amount: '',
-      amountRules: [
-        v => !!v || 'مقدار مورد نیاز ',
-      ],
+      notEmptyRoles:[(value) => !!value || 'فیلد اجباری '],
+      matchPasswordRoles:[(value) => value == vm.password?'': 'می بایست تاییده پسورد با خود پسورد یکی باشد'],
+     
       select: null,
       country: [
         'america',
