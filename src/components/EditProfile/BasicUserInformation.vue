@@ -36,7 +36,7 @@
             <v-switch
             color="cyan accent-2"
             class="fontIran body-1"
-            label="فروش در تعطبلات"
+            label="فروش در تعطیلات"
             >
             </v-switch>
             <span class="fontIran subheading">همه تبلیغات خود را برای خرید به طور موقت غیر فغال کنید.</span>
