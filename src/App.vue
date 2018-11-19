@@ -109,7 +109,7 @@
       
         <router-link to="Forums">
           <v-tooltip bottom>
-            <v-icon slot="activator" color="white" dark>
+            <v-icon class="iconHover" slot="activator" color="grey" dark>
               group
             </v-icon>
             <span>انجمن ها</span>
@@ -139,7 +139,7 @@
               <span>ورود</span>
             </v-tooltip>
           </router-link>
-          <router-link to="MoreAboutTrustSystem">more</router-link>
+          <router-link class="pr-3" to="MoreAboutTrustSystem">more</router-link><br>
           <router-link to="/EditYourProfile">edit profile</router-link>
         </v-toolbar-items>
       </v-card-text>
@@ -279,5 +279,11 @@
 .sadrLogo{
   text-decoration:none;
   font-family:b nazanin;
+}
+.iconHover{
+  color:white;
+}
+.iconHover:hover{
+  color:white;
 }
 </style>
