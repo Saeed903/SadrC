@@ -1,6 +1,6 @@
 <template>
     <v-layout v-if="!loading" row wrap>
-      <v-flex  d-flex xs12 sm8 md8 lg8>
+      <v-flex  d-flex xs12 sm8 md8 lg6>
           <v-card-text>
             <v-form 
               @submit.prevent="login" 
