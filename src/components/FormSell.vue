@@ -1,85 +1,64 @@
 <template>
-  <div>
-   
+  
+   <div>
      
     <p class="titled text-xs-center">{{currency}}</p>
      
     
     <v-form ref="form" class="table" v-model="valid" lazy-validatio>
-      <v-layout row wrap>
-       <v-layout >
-      <v-flex d-flex xs child-flex>
-        <v-card-text>
-      <v-text-field
-        v-model="amount"
-        type="number"
-        style=""
-        :rules="amountRules"
-        label="میزان"
-        required
-      ></v-text-field>
-        </v-card-text>
-    </v-flex>
-       </v-layout>
-       <v-layout >
-    <v-flex d-flex xs12 >
-      <v-card-text>
-      <v-select
-        v-model="country"
-        style=""
-        :items="country"
-        :rules="[v => !!v || 'کشور مورد نیاز ']"
-        label="کشور"
-        required
-      ></v-select>
-      </v-card-text>
-    </v-flex>
-       </v-layout>
-       <v-layout >
-    <v-flex d-flex xs12 >
-      <v-card-text>
-      <v-select
-        v-model="offers"
-        :items="offers"
-        :rules="[v => !!v || 'لازم است']"
-        label  ="تمام وقت"
-        required
-      ></v-select>
-      </v-card-text>
-    </v-flex>
-       </v-layout>
-       <v-layout >
-      <v-flex d-flex xs12 >
-      <v-card-text>
-      <v-select
-        v-model="country"
-        style=""
-        :items="country"
-        :rules="[v => !!v || 'کشور مورد نیاز ']"
-        label="کشور"
-        required
-      ></v-select>
-      </v-card-text>
-    </v-flex>
-       </v-layout>
-       <v-layout >
-    <v-flex xs12>
-      <v-card-text>
-      <v-btn
-        :disabled="!valid"
-        @click="submit">
-      جست وجو
-      </v-btn>
-      
-       </v-card-text>
-    </v-flex>
-       </v-layout>
-      
-      </v-layout>
+      <v-container>
+        <v-layout row wrap>
+          <v-flex d-flex xs12 md2 lg1>
+            <v-text-field
+              v-model="amount"
+              type="number"
+              style=""
+              :rules="amountRules"
+              label="میزان"
+              required
+            ></v-text-field>
+          </v-flex>
+            
+          <v-flex d-flex xs12 md3 lg3>
+            <v-select
+              v-model="country"
+              style=""
+              :items="country"
+              :rules="[v => !!v || 'کشور مورد نیاز ']"
+              label="کشور"
+              required
+            ></v-select>
+          </v-flex>
+            
+          <v-flex d-flex xs12 md2 lg1>
+            <v-select
+              v-model="offers"
+              :items="offers"
+              :rules="[v => !!v || 'لازم است']"
+              label  ="تمام وقت"
+              required
+            ></v-select>
+          </v-flex>
+            
+          <v-flex d-flex xs12 md3 lg3>
+            <v-select
+              v-model="country"
+              style=""
+              :items="country"
+              :rules="[v => !!v || 'کشور مورد نیاز ']"
+              label="کشور"
+              required
+            ></v-select>
+          </v-flex>
+            
+          <v-flex xs12 md1 lg4 text-xs-center>
+            <v-card-text>
+              <v-btn left :disabled="!valid" @click="submit"> جست وجو </v-btn>
+            </v-card-text>
+          </v-flex>
+        </v-layout>
+      </v-container>
     </v-form>
-    
-      
-    
   </div>
 </template>
 <script>
