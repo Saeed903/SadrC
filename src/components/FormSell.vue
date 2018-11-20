@@ -1,13 +1,14 @@
 <template>
-  <v-layout>
-    <v-card>
-      <v-flex xs12 sm6  md3  lg3>
+  <div>
+   
+     
     <p class="titled text-xs-center">{{currency}}</p>
      
     
     <v-form ref="form" class="table" v-model="valid" lazy-validatio>
-       <v-layout>
-      <v-flex >
+      <v-layout row wrap>
+       <v-layout >
+      <v-flex d-flex xs child-flex>
         <v-card-text>
       <v-text-field
         v-model="amount"
@@ -19,7 +20,9 @@
       ></v-text-field>
         </v-card-text>
     </v-flex>
-    <v-flex xs12>
+       </v-layout>
+       <v-layout >
+    <v-flex d-flex xs12 >
       <v-card-text>
       <v-select
         v-model="country"
@@ -31,7 +34,9 @@
       ></v-select>
       </v-card-text>
     </v-flex>
-    <v-flex xs12>
+       </v-layout>
+       <v-layout >
+    <v-flex d-flex xs12 >
       <v-card-text>
       <v-select
         v-model="offers"
@@ -42,7 +47,9 @@
       ></v-select>
       </v-card-text>
     </v-flex>
-      <v-flex xs12>
+       </v-layout>
+       <v-layout >
+      <v-flex d-flex xs12 >
       <v-card-text>
       <v-select
         v-model="country"
@@ -54,7 +61,9 @@
       ></v-select>
       </v-card-text>
     </v-flex>
-    <v-flex >
+       </v-layout>
+       <v-layout >
+    <v-flex xs12>
       <v-card-text>
       <v-btn
         :disabled="!valid"
@@ -64,13 +73,14 @@
       
        </v-card-text>
     </v-flex>
+       </v-layout>
       
       </v-layout>
     </v-form>
     
-      </v-flex>
-    </v-card>
-  </v-layout>
+      
+    
+  </div>
 </template>
 <script>
 
