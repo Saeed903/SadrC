@@ -1,140 +1,103 @@
 <template>
     <div>
-        
-         <div class="backInfoTop">
-            <p class="basicInfo">اطلاعات پایه کاربر</p>
-            <p class="basicEmail">ایمیل:farzad6238afsari@gmail.com(تایید نشده)</p>
-        </div>
+        <v-card>
 
-       
+            <v-card-text class="fontIran">اطلاعات پایه کاربر</v-card-text>
+            <span class="fontIran caption pr-3">ایمیل:farzad6238afsari@gmail.com(تایید نشده)</span>
 
-        <div class="showRealName">
             <v-switch
-            color="blue"
+            color="cyan accent-2"
             label="من را بعنوان تایید کننده نام واقعی به دیگران نشان بده"
+            class="fontIran caption pr-3 pt-3" 
             >
             </v-switch>
-            <span class="userNameShown">نام کاربری شما زمانی نمایش داده می شوند که افراد با شرکای تجاری خود معاملات جدیدی را انجام میدهند</span>
-        </div>
+            <v-card-text class="fontIran pr-3 pt-0 pb-4">نام کاربری شما زمانی نمایش داده می شوند که افراد با شرکای تجاری خود معاملات جدیدی را انجام میدهند</v-card-text>
 
-        <div class="showRealName">
             <v-switch
-            color="blue"
+            color="cyan accent-2"
             label="اطلاعات حساس را از اطلاعیه های ایمیل غیر فعال کنید."
+            class="fontIran caption pr-3" 
             >
             </v-switch>
-            <span class="userNameShown">ایمیل فقظ از شما می خواهد که به سایت وارد شوید.جایی که اطلاعیه های واقعی باشد.</span>
-        </div>
+            <v-card-text class="fontIran pr-3 pt-0 pb-4">ایمیل فقظ از شما می خواهد که به سایت وارد شوید.جایی که اطلاعیه های واقعی باشد.</v-card-text>
 
-        <div class="showRealName">
             <v-switch
-            color="blue"
+            color="cyan accent-2"
             label="اعلان های وب را فعال کنید."
+            class="fontIran caption pr-3" 
             >
             </v-switch>
-            <span class="userNameShown">شما اطلاعیه های خارجی برای فروش را بطور  موقت دریافت خواهید کرد.</span>
-        </div>
+            <v-card-text class="fontIran pr-3 pt-0 pb-4">شما اطلاعیه های خارجی برای فروش را بطور  موقت دریافت خواهید کرد.</v-card-text>
 
-        <div class="showRealName">
             <v-switch
-            color="blue"
+            color="cyan accent-2"
             label="فروش در تعطبلات"
+            class="fontIran caption pr-3" 
             >
             </v-switch>
-            <span class="userNameShown">همه تبلیغات خود را برای خرید به طور موقت غیر فغال کنید.</span>
-        </div>
+            <v-card-text class="fontIran pr-3 pt-0 pb-4">همه تبلیغات خود را برای خرید به طور موقت غیر فغال کنید.</v-card-text>
 
-        <div class="showRealName">
             <v-switch
-            color="blue"
+            color="cyan accent-2"
             label="خرید در تعطیلات"
+            class="fontIran caption pr-3" 
             >
             </v-switch>
-            <span class="userNameShown">همه تبلیغات خود را برای خرید به طور موقت غیر فغال کنید.</span>
-        </div>
+            <v-card-text class="fontIran pr-3 pt-0 pb-4">همه تبلیغات خود را برای خرید به طور موقت غیر فغال کنید.</v-card-text>
 
-        <div class="showRealName">
             <v-switch
-            color="blue"
+            color="cyan accent-2"
             label=" ارسال پیامک برای مخاطبین جدید تجارت"
+            class="fontIran caption pr-3" 
             >
             </v-switch>
-            <span class="userNameShown">ارسال پیامک از درخواست های تماس جدید</span>
-        </div>
+            <v-card-text class="fontIran pr-3 pt-0 pb-4">ارسال پیامک از درخواست های تماس جدید</v-card-text>
 
-        <div class="showRealName">
             <v-switch
-            color="blue"
+            color="cyan accent-2"
             label="ارسال پیامک برای پرداخت های جدید آنلاین"
+            class="fontIran caption pr-3" 
             >
             </v-switch>
-            <span class="userNameShown">ارسال پیامک برای پرداخت های آنلاین در تبلیغات شما</span>
-        </div>
+            <v-card-text class="fontIran pr-3 pt-0 pb-4">ارسال پیامک برای پرداخت های آنلاین در تبلیغات شما</v-card-text>
 
-        <div class="showRealName">
             <v-switch
-            color="blue"
+            color="cyan accent-2"
             label=""
+            class="fontIran caption pr-3" 
             >
             </v-switch>
-            <span class="userNameShown">ارسال پیامک از نسخه های جدید آنلاین سپرو</span>
-        </div>
+            <v-card-text class="fontIran pr-3 pt-0 pb-4">ارسال پیامک از نسخه های جدید آنلاین سپرو</v-card-text>
 
-        <div>
-            <v-flex xs6>
+            <v-flex lg6 md6 sm7>
                 <v-textarea
                 box
                 label="معرفی"
-                class="textarea"
+                class="fontIran pr-3 mt-4"
+                color="cyan accent-2"
                 hint="در پروفایل عمومی شما نشان داده می شود.تا سقف 200 کاراکتر متن نوشته شود."
+                clearable
                 >
                 </v-textarea>
             </v-flex>
             <v-btn 
             color="blue"
             round
+            class="fontIran pr-3"
             >
+            <v-icon size="15px">send</v-icon>
             ذخیره مشخصات
             </v-btn>
-        </div>
+        </v-card>
     </div>
 </template>
 <script>
     
 </script>
 <style scoped>
-.backInfoTop{
-    margin-top:22px;
-}
-.basicInfo{
-    font-size:25px;
-    font-family:b nazanin;
-    font-weight:bold;
-    color:rgb(78, 73, 73);
-    text-align:left;
-    text-shadow:1px 3px 3px rgb(201, 183, 183);
-}
-.basicEmail{
-    font-size:18px;
-    font-family:b nazanin;
-    color:rgb(78, 73, 73);
-    text-align:left;
-    text-shadow:1px 3px 3px rgb(201, 183, 183);
-}
-.selectPercentage{
-    width:35%;
-}
-.showRealName{
-    padding-bottom:25px;
-}
-.userNameShown{
-    font-size:18px;
-    font-family:b nazanin;
-    color:rgb(121, 113, 113);
-    padding-top:0;
-}
-.textarea{
-    padding-top:25px;
+.fontIran{
+    font-family:'Iranian Sans';
+    padding-left:20px;
 }
 
 

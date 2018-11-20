@@ -1,6 +1,5 @@
 <template>
-
-    <v-card>
+<div>
         <v-card-text>
             <p class="fontIran text-xs-center">ثبت آگهی{{currency}}</p>
             <p class="fontIran text-xs-center"><v-icon color="red" size="16px">warning</v-icon>لطفا قبل از ثبت آگهی <router-link to="/Login" class="fontsIran">ورود</router-link> یا <router-link to="/signUp" class="fontsIran">ثبت نام</router-link> کنید!</p>
@@ -392,7 +391,7 @@
         </v-layout>
 
         <Footer></Footer>
-    </v-card>
+</div>        
 </template>
 <script>
 
