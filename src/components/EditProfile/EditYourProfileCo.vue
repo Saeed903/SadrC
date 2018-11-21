@@ -15,16 +15,24 @@
                 </v-card>
             </v-flex>
             <v-flex xs12 sm3 md2>
-                <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">تغییر آدرس ایمیل</v-btn>
+                <v-card>
+                    <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">تغییر آدرس ایمیل</v-btn>
+                </v-card>
             </v-flex>
             <v-flex xs12 sm3 md2>
-                <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">تایید</v-btn>
+                <v-card>
+                    <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">تایید</v-btn>
+                </v-card>
             </v-flex>
             <v-flex xs12 sm3 md2> 
-                <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">امنیت</v-btn>
+                <v-card>
+                    <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">امنیت</v-btn>
+                </v-card>
             </v-flex>
             <v-flex xs12 sm3 md2>
-                <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">اسم واقعی</v-btn>
+                <v-card>
+                    <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">اسم واقعی</v-btn>
+                </v-card>
             </v-flex>
         </v-layout>
 
