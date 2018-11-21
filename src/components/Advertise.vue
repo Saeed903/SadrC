@@ -14,7 +14,7 @@
         <td class="table text-xs-center">{{ props.item.paymentMethod }}</td>
         <td class="table text-xs-center">{{ props.item.price }}</td>
         <td class="table text-xs-center">{{ props.item.limits }}</td>
-        <td class="table text-xs-center"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
+        <td class="table text-xs-center"><v-btn class="primary" @click="buy()" to="BuyButtonLoggedButNotverifiyEmail">خرید</v-btn></td>
       </template>
     </v-data-table>
 </div>

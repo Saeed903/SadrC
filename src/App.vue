@@ -88,16 +88,6 @@
       <v-spacer></v-spacer>
       <v-card-text>
       <v-toolbar-items>
-
-        <router-link to="BuyButtonLoggedButNotverifiyEmail">
-          <v-tooltip bottom>
-            <v-icon slot="activator" color="white" dark >
-              shopping_cart
-            </v-icon>
-            <span>BuyButtonLoggedButNotverifiyEmail </span>
-          </v-tooltip>
-        </router-link>
-
         <router-link to="PostTrade">
           <v-tooltip bottom>
             <v-icon slot="activator" color="white" dark >

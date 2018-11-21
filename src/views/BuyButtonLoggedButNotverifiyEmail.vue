@@ -9,7 +9,7 @@
     <v-flex d-flex xs12 sm6 md8>
       <v-layout row wrap>
         <v-flex d-flex>
-          <v-card-media class="fontIran pr-5">
+          <v-card-media class="btc pr-5">
             <div>  
               <p>قیمت:</p>
               <p>روش پرداخت:</p>
@@ -21,7 +21,7 @@
             <div class="pr-4">
               <p style="color:greenyellow">935543438.97 IRR/BTC</p>
               <p>انتقال بانک جمهوری اسلامی ایران</p>
-              <p><router-link to="/DashBoard"><v-tooltip><span><v-icon style="color:aqua">perm_identity</v-icon>داشبورد</span></v-tooltip></router-link>آلمان</p>
+              <p><router-link  to="/DashBoard"><v-tooltip  right><v-icon slot="activator"  style="color:aqua">perm_identity</v-icon><span class="fontIran">داشبورد</span></v-tooltip></router-link>آلمان</p>
               <p>نمره بازخورد.100<router-link to="" class="router">دیدن بازخورد</router-link></p>
               <p>10,000,000-30,000,001 IRR</p>
               <p ><router-link to="" class="router">تهران,استان تهران,ایران</router-link></p>
@@ -120,6 +120,8 @@ export default {
 }
 .fontIran{
 font-family: Iranian Sans;
+font-size: 13px;
+
 }
 .router{
     font-family:'iranian sans';
@@ -128,6 +130,10 @@ font-family: Iranian Sans;
 }
 .router:hover{
     color:rgb(0, 140, 255);
+}
+.btc{
+  font-family: Iranian Sans;
+  font-size: 15px;
 }
 
 </style>
