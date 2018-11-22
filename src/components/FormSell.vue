@@ -2,9 +2,35 @@
   
    <div>
      
-    <p class="titled text-xs-center">{{currency}}</p>
+    <v-card-text class="titled text-xs-center headline">{{currency}}</v-card-text>
      
     
+    <v-combobox
+    v-model="chips"
+    :items="items"
+    label="Your favorite hobbies"
+    chips
+    clearable
+    prepend-icon="filter_list"
+    solo
+    multiple
+    >
+      <template slot="selection" slot-scope="data">
+        <v-icon></v-icon>
+        <v-chip
+        :selected="data.selected"
+        close
+        @input="remove(data.item)"
+        >
+          <strong>{{ data.item }}</strong>&nbsp;
+          <span>(interest)</span>
+        </v-chip>
+      </template>
+    </v-combobox>
+
+
+
+
     <v-form ref="form" class="table" v-model="valid" lazy-validatio>
       <v-container>
         <v-layout row wrap>
@@ -73,6 +99,8 @@
         v => !!v || 'مقدار مورد نیاز ',
       ],
       select: null,
+      chips: ['Programming', 'Playing video games', 'Watching movies', 'Sleeping'],
+        items: ['Streaming', 'Eating'],
       country: [
         'america',
         'germany',
@@ -129,8 +157,13 @@
             select: this.select,
             select: this.select,
             checkbox: this.checkbox
-          })
+          }) 
         }
+        
+      },
+       remove (item) {
+        this.chips.splice(this.chips.indexOf(item), 1)
+        this.chips = [...this.chips]
       },
       clear () {
         this.$refs.form.reset()
@@ -141,7 +174,6 @@
 <style >
 .titled{
   font-family: Iranian Sans;
-  font-size: 20px;
 }
 .table{
   font-family: Iranian Sans;
