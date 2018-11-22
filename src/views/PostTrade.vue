@@ -416,7 +416,7 @@ import Footer from './../components/Footer.vue'
             ],
         }),
         computed: {
-            ...mapState(['currencyMenu']),
+            ...mapState(['currencyMenu', 'currency']),
             ...mapState('advertises', { loadingAdvertise: 'isFindPending'}),
             ...mapGetters('advertises', { fingAdvertisesOnline: 'find'}),
 
