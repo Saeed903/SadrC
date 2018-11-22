@@ -182,7 +182,7 @@
       <v-container >
         <v-layout >
           <v-flex >
-            <transition name="slide-fade" mode="out-in">
+            <transition name="list" mode="out-in">
               <router-view/>
             </transition>  
           </v-flex>
@@ -244,10 +244,10 @@
   font-family:iranian sans;
 }
 .slide-fade-enter-active {
-  transition: all .3s ease;
+  transition: all .2s ease;
 }
 .slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all .2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 .slide-fade-enter, .slide-fade-leave-to
 {
@@ -265,6 +265,18 @@
   color:rgb(235, 224, 224);
   text-decoration:none;
   font-family:b nazanin;
+}
+
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active, .list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 </style>
