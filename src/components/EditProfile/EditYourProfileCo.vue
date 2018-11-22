@@ -2,37 +2,30 @@
     <div>
         <v-card>
         <v-layout row wrap>
-            <v-card-text class="fontIran text-xs-center">ویرایش پروفایل</v-card-text>
+            <v-card-text class="fontIran text-xs-center subheading">ویرایش پروفایل</v-card-text>
 
             <v-flex xs12 sm3 md2>
-                <v-card>
-                    <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">اطلاعات پایه کاربر</v-btn>
-                </v-card>
+                <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">اطلاعات پایه کاربر</v-btn>
             </v-flex>
+
             <v-flex xs12 sm3 md2>
-                <v-card>
-                    <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">تغییر رمز عبور</v-btn>
-                </v-card>
+                <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">تغییر رمز عبور</v-btn>
             </v-flex>
+
             <v-flex xs12 sm3 md2>
-                <v-card>
-                    <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">تغییر آدرس ایمیل</v-btn>
-                </v-card>
+                <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">تغییر آدرس ایمیل</v-btn>
             </v-flex>
+
             <v-flex xs12 sm3 md2>
-                <v-card>
-                    <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">تایید</v-btn>
-                </v-card>
+                <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">تایید</v-btn>
             </v-flex>
+
             <v-flex xs12 sm3 md2> 
-                <v-card>
-                    <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">امنیت</v-btn>
-                </v-card>
+                <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">امنیت</v-btn>
             </v-flex>
+
             <v-flex xs12 sm3 md2>
-                <v-card>
-                    <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">اسم واقعی</v-btn>
-                </v-card>
+                <v-btn class="pr-3 fontIran sm4" color="info caption" round to="">اسم واقعی</v-btn>
             </v-flex>
         </v-layout>
 
@@ -40,13 +33,10 @@
         <v-card-text class="fontIran font-weight-medium caption pt-0"><v-icon color="red" size="18px">warning</v-icon>شما شماره تلفن تایید شده را به حساب کاربری خود اضافه نکرده اید.<router-link to="" class="fontsIran caption">تایید شماره تلفن</router-link></v-card-text>
         <v-card-text class="fontIran font-weight-medium caption pt-0"><v-icon color="red" size="18px">warning</v-icon>شما هنوز نام واقعی خود را به حساب کاربری خود تنظیم نکرده اید.<router-link to="" class="fontsIran caption">ایجاد نام واقعی</router-link></v-card-text>
         </v-card>
+        <v-divider color="grey"></v-divider>
     </div>
 </template>
-<script>
-    export default{
 
-    }
-</script>
 <style scoped>
 .fontIran{
     font-family:'Iranian Sans';
