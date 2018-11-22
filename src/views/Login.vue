@@ -72,7 +72,7 @@
         Footer,
         VueRecaptcha
     },
-    data: () => ({
+    data: () => ({ 
       errorLogin: false,
       errorMessage:'',
       valid: false,
