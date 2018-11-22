@@ -9,18 +9,14 @@
     v-model="chips"
     :items="items"
     label="Your favorite hobbies"
-    chips
     clearable
     prepend-icon="filter_list"
-    solo
-    multiple
     >
       <template slot="selection" slot-scope="data">
         <v-icon></v-icon>
         <v-chip
         :selected="data.selected"
         close
-        @input="remove(data.item)"
         >
           <strong>{{ data.item }}</strong>&nbsp;
           <span>(interest)</span>
@@ -100,7 +96,7 @@
       ],
       select: null,
       chips: ['Programming', 'Playing video games', 'Watching movies', 'Sleeping'],
-        items: ['Streaming', 'Eating'],
+        items: ['Streaming', 'Eating','subheading'],
       country: [
         'america',
         'germany',
