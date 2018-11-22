@@ -43,21 +43,34 @@
             <div class="pt-4">
                 <span class="fontIran pr-3">دریافت خدمات حق بیمه:</span><br>
                 <router-link class="fontsIran pr-3" to="">دریافت های خود را برای خدمات صدرکریپتو مشاده کنید.</router-link><br>
-                <span class="fontIran pr-3"><strong class="fontIran">توجه:</strong>از معاملات شما دریافتی نشده است اما دریافتی از خدماتی که اط صدرکریپتو خریداری کرده اید برای اهداف مالیاتی است شما میتوانید کسب و کار خود را بذست اوردن مخاطبین گیدا کنید</span>
+                <span class="fontIran pr-3">توجه:از معاملات شما دریافتی نشده است <br>اما دریافتی از خدماتی که از صدرکریپتو خریداری کرده اید برای اهداف مالیاتی است <br>شما میتوانید کسب و کار خود را بدست اوردن مخاطبین گیدا کنید</span>
             </div>
 
-
+            <div class="pt-4">
+                <span class="fontIran pr-3">اطلاعات شخصی</span><br>
+                <router-link class="fontsIran pr-3" to="">نشان کردن اطلاعات شخصی</router-link>
+            </div>
          
-
-            <v-card-text class="fontIran">اطلاعات شخصی</v-card-text>
-            <router-link class="fontsIran pr-3" to="">نشان کردن اطلاعات شخصی</router-link>
-
-            <v-card-text class="fontIran">اطلاعات حساب</v-card-text>
-            <router-link class="fontsIran pr-3" to="">حذف حساب کاربری در صدر کریپتو</router-link>
+            <div class="pt-4">
+                <span class="fontIran pr-3">اطلاعات حساب</span><br>
+                <router-link class="fontsIran pr-3" to="">حذف حساب کاربری در صدر کریپتو</router-link>
+            </div>
+             
+            <div class="pt-4">
+                <v-btn class="fontIran" color="primary">ذخیره تغییرات</v-btn>
+            </div>
+            <Footer></Footer>
         </v-card>
     </div>
 </template>
-
+<script>
+import Footer from './../../components/Footer.vue'
+  export default {
+    components:{
+        Footer,
+    }
+  }
+</script>
 <style scoped>
 .fontIran{
     font-family:'Iranian Sans';

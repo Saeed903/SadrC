@@ -74,6 +74,7 @@
                 label="معرفی"
                 class="fontIran pr-3 mt-4 mb-2"
                 color="cyan accent-2"
+                prepend-icon="filter_list"
                 hint="در پروفایل عمومی شما نشان داده می شود.تا سقف 200 کاراکتر متن نوشته شود."
                 clearable
                 >
