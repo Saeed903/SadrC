@@ -33,7 +33,7 @@
         </v-layout>
 
             <v-card-text>
-            <v-expansion-panel >
+            <v-expansion-panel>
                 <v-expansion-panel-content
                 v-for="(item,i) in items"
                 :key="i"
