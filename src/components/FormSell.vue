@@ -30,7 +30,7 @@
             ></v-select>
           </v-flex>
             
-          <v-flex d-flex xs12 md2 lg1>
+          <v-flex d-flex xs12 md2 lg2>
             <v-select
               v-model="offers"
               :items="offers"
@@ -51,7 +51,7 @@
             ></v-select>
           </v-flex>
             
-          <v-flex xs12 md1 lg4 text-xs-center>
+          <v-flex xs12 md1 >
             <v-card-text>
               <v-btn left :disabled="!valid" @click="submit"> جست وجو </v-btn>
             </v-card-text>

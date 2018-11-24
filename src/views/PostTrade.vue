@@ -1,12 +1,11 @@
 <template>
     <v-layout row wrap>
-        <v-card-text>
-        
-            <p class="fontIran text-xs-center">ثبت آگهی {{currency}}</p>
-            <p class="fontIran text-xs-center"><v-icon color="red" size="16px">warning</v-icon>لطفا قبل از ثبت آگهی <router-link to="/Login" class="fontsIran">ورود</router-link> یا <router-link to="/signUp" class="fontsIran">ثبت نام</router-link> کنید!</p>
-        
-        <v-divider></v-divider>
-
+        <v-flex lg8>
+            <v-card-text>
+                <p class="fontIran text-xs-center">ثبت آگهی {{currency}}</p>
+                <p class="fontIran text-xs-center"><v-icon color="red" size="16px">warning</v-icon>لطفا قبل از ثبت آگهی <router-link to="/Login" class="fontsIran">ورود</router-link> یا <router-link to="/signUp" class="fontsIran">ثبت نام</router-link> کنید!</p>
+                <v-divider></v-divider>
+            </v-card-text>
         <v-card-text>
             <p class="fontIran text-xs-center">قوانین و مقررات تبلیغاتی:</p>
             <ul class="fontIran pr-3">
@@ -272,93 +271,79 @@
             </v-flex>
 
             <v-flex sm6 md6 lg6>
-                    <p class="fontIran caption pt-2">سایر اطلاعاتی که میخواهید درباره تجارت خود بگویید<br>.مثال1:این تبلیغات صرفا برای معاملات نقدی است اگر میخواهید با پرداخ ت آنلاین باما تماس بپیرید.
+                <p class="fontIran caption pt-2">سایر اطلاعاتی که میخواهید درباره تجارت خود بگویید<br>.مثال1:این تبلیغات صرفا برای معاملات نقدی است اگر میخواهید با پرداخ ت آنلاین باما تماس بپیرید.
                         مثال2:لطفا درخواست را فقط زمانی که میتوانید پرداخت را با پول نقد ظرف مدت 12 ساعت تکمیل کمید.<br></p>    
-               
-            </v-flex>
-        </v-layout>
-        
-        <v-divider></v-divider>
-
-        <v-card-text class="fontIran">گزینه های نقدینگی</v-card-text>
-
-          <v-layout row wrap>
-            <v-flex sm6 md6 lg6>
-               
-                   <v-checkbox
-                    label="پیگیری نقدینگی"
-                    class="fontIran pr-3"    
-                    color="cyan accent-2"               
-                   >
-                   </v-checkbox>
-                
-            </v-flex>
-            <v-flex sm6 md6 lg6>
-                
-                    <span class="fontIran caption">.این گزینه نقدینگی این تبلیغ را به حداکثر محدود می کند. محدودیت معامله خریداران می توانند معاملات را بیش از این مقدار باز نکنند</span>    
-                
             </v-flex>
         </v-layout>
 
-        
-        
-        <v-divider></v-divider>
+        <v-card-text class="fontIran">
+            <p>گزینه های نقدینگی</p>
+            <v-divider></v-divider>
+        </v-card-text>
 
-        <v-card-text class="fontIran">گزینه های امنیتی</v-card-text>
+        <v-layout row wrap>
+            <v-flex sm6 md6 lg6>
+                <v-checkbox
+                label="پیگیری نقدینگی"
+                class="fontIran pr-3"    
+                color="cyan accent-2"               
+                >
+                </v-checkbox>
+            </v-flex>
+            <v-flex sm6 md6 lg6>
+                <span class="fontIran caption">.این گزینه نقدینگی این تبلیغ را به حداکثر محدود می کند. محدودیت معامله خریداران می توانند معاملات را بیش از این مقدار باز نکنند</span>    
+            </v-flex>
+        </v-layout>
+
+        <v-card-text class="fontIran">
+            <p>گزینه های امنیتی</p>
+            <v-divider></v-divider>
+        </v-card-text>
   
         <v-layout row wrap>
             <v-flex sm6 md6 lg6>
-                
-                   <v-checkbox
-                    label="فقط شناسایی افراد"
-                    class="fontIran pr-3" 
-                    color="cyan accent-2"                  
-                   >
-                   </v-checkbox>
-                
+                <v-checkbox
+                label="فقط شناسایی افراد"
+                class="fontIran pr-3" 
+                color="cyan accent-2"                  
+                >
+                </v-checkbox>
             </v-flex>
             <v-flex sm6 md6 lg6>
-               
-                    <span class="fontIran caption">.برای تماس با تبلیغات خود، کاربران باید هویت خود را با ارسال شناسه،گواهینامه رانندگی یا گذرنامه تأیید کنند</span>    
-                
+                <span class="fontIran caption">.برای تماس با تبلیغات خود، کاربران باید هویت خود را با ارسال شناسه،گواهینامه رانندگی یا گذرنامه تأیید کنند</span>    
             </v-flex>
         </v-layout>
         
         <v-layout row wrap>
             <v-flex sm6 md6 lg6>
-               
-                   <v-checkbox
-                    label="تاییدیه پیامک"
-                    class="fontIran pr-3"   
-                    color="cyan accent-2"                
-                   >
-                   </v-checkbox>
-               
+                <v-checkbox
+                label="تاییدیه پیامک"
+                class="fontIran pr-3"   
+                color="cyan accent-2"                
+                >
+                </v-checkbox>
             </v-flex>
             <v-flex sm6 md6 lg6>
-               
-                    <span class="fontIran caption">.فقط تماس با یک شماره تلفن همراه تأیید شده می تواند از طریق تبلیغ شما با شما تماس بگیرد</span>    
-               
+                <span class="fontIran caption">.فقط تماس با یک شماره تلفن همراه تأیید شده می تواند از طریق تبلیغ شما با شما تماس بگیرد</span>    
             </v-flex>
         </v-layout>
 
         <v-layout row wrap>
             <v-flex sm6 md6 lg6>
-                   <v-checkbox
-                    label="اعتماد مردم"
-                    class="fontIran pr-3"   
-                    color="cyan accent-2"                
-                   >
-                   </v-checkbox>
+                <v-checkbox
+                label="اعتماد مردم"
+                class="fontIran pr-3"   
+                color="cyan accent-2"                
+                >
+                </v-checkbox>
             </v-flex>
-
             <v-flex sm6 md6 lg6>
-                    <span class="fontIran caption">.تبلیغات خود را محدود کنید تا تنها به کاربران نشان داده شود که شما به عنوان اعتماد علامتگذاری کرده اید<router-link class="fontsIran" to="">چگونگی علامت گذاری به کاربران مورد اعتماد</router-link>.</span>    
+                <span class="fontIran caption">.تبلیغات خود را محدود کنید تا تنها به کاربران نشان داده شود که شما به عنوان اعتماد علامتگذاری کرده اید<router-link class="fontsIran" to="">چگونگی علامت گذاری به کاربران مورد اعتماد</router-link>.</span>    
             </v-flex>
         </v-layout>
 
         <Footer></Footer>
-        </v-card-text>
+        </v-flex>
     </v-layout> 
 </template>
 <script>
