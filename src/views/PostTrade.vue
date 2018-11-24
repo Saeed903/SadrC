@@ -349,47 +349,98 @@
 <script>
 
 import { mapState, mapActions, mapGetters } from 'vuex';
-import Footer from './../components/Footer.vue'
-    export default{
-        data:() => ({
-            checkbox:true,
-            select:null,
-            radioGroup:1,
-            tradeTypes:[
-                "فروش بیت کوین خود در صدر کریپتو",
-                "خرید بیت کوین در صدر کریپتو",
-                "فروش بیت کوین آنلاین شما",
-                "خرید بیت کوین آنلاین"
-            ],
-            selectCurrency:[
-                'بیت کوین',
-                'اتریوم',
-                'زدکش',
-                'ترون',
-            ],
-        }),
-        computed: {
-            ...mapState(['currencyMenu', 'currency']),
-            ...mapState('advertises', { loadingAdvertise: 'isFindPending'}),
-            ...mapGetters('advertises', { fingAdvertisesOnline: 'find'}),
 
-            advertises(){
-                return this.fingAdvertisesOnline().data;
-            },
+import Footer from './../components/Footer.vue';
+
+export default{
+    data:() => ({
+        advertise:{
+            tradeTypeId: 0,
+            countryId: 0,
+            cryptoCurrencyId: 0,
+            margin: 0,
+            priceEquation: '',
+            minTransactionLimit: 0,
+            maxTransactionLimit: 0,
+            restrictAmountTo: 0,
+            termsOfTrade: '',
+            trackLiquidity: false,
+            identifiedPeopleOnly: false,
+            smsVerification : false,
+            trustedPeopleOnly: false,
+            ownerId: 0
         },
-        methods:{
-            ...mapActions('advertises', { findAdvertise : 'find'}),
+        checkbox:true,
+        select:null,
+        radioGroup:1,
+        tradeTypes:[
+            "فروش بیت کوین خود در صدر کریپتو",
+            "خرید بیت کوین در صدر کریپتو",
+            "فروش بیت کوین آنلاین شما",
+            "خرید بیت کوین آنلاین"
+        ],
+        selectCurrency:[
+            'بیت کوین',
+            'اتریوم',
+            'زدکش',
+            'ترون',
+        ],
+    }),
+    methods:{
+        ...mapActions('tradeType', { findTradeTypes: 'find'}),
+        ...mapActions('countries', { findCountries: 'find'}),
+        ...mapActions('cryptoCurrencies', { findCryptCurrencies: 'find'}),
+
+        createAdvertise(){
+            if (this.valid){
+                const { Advertise } = this.$FeathersVuex;
+                const advertise = new Advertise( this.advertise);
+                advertise.save();
+            }
         },
-        mounted(){
-            this.findAdvertise()
-                .then(response => {
-                    const advertises = response.data || response;
-                }) 
+    },
+    mounted (){
+        this.findTradeTypes()
+            .then( response => {
+                const tradeType = response.data || response;
+            }),
+        
+        this.findCountries()
+            .then(response => {
+                const countries = response.data || response;
+            }),
+           
+        this.findCryptCurrencies()
+            .then(response => {
+                const CryptoCurrencies = response.data || response;
+            })   
+    },
+    computed: {
+        ...mapState(['currencyMenu', 'currency']),
+        ...mapState('tradeTypes', { loadingTradeTypes: 'isFindPending'}),
+        ...mapState('countries', { loadingCountries: 'isFindPending'}),
+        ...mapState('cryptoCurrencies', { loadingCryptoCurrencies: 'isFindPending'}),
+
+        ...mapGetters('tradeTypes', { findTradeTypesOnline: 'find'}),
+        ...mapGetters('cryptoCurrencies', { findCryptoCurrenciesOnline: 'find'}),
+        ...mapGetters('countries', { findCountriesOnline: 'find' }),
+
+        tradeTypes(){
+            return this.findTradeTypesOnline().data;
         },
-        components:{
-            Footer
+
+        countries(){
+            return this.findCountriesOnline().data;
+        },
+
+        cryptoCurrencies() {
+            return this.findCryptoCurrenciesOnline().data;
         }
+    },
+    components:{
+        Footer
     }
+}
 </script>
 <style scoped>
 .fontIran{
