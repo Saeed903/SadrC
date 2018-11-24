@@ -22,7 +22,10 @@ export default new Vuex.Store({
 
   state:{
     logged: false, 
-    confirmEmail: false,
+    confirmEmail:false,
+    user: {
+
+    },
     currency:'',
     currencyMenu: [
       { icon: 'mdi-currency-btc', text:'بیت کوین', path:'/Bitcoin'},
@@ -37,7 +40,8 @@ export default new Vuex.Store({
     setCurrency(state,index){
       const selectedCurrency = state.currencyMenu.filter((item)=>item.text === index);
       return state.currency = selectedCurrency[0].text;
-    }
+    },
+    set
   },
   actions:{
     routingMenu(context,index){
@@ -55,6 +59,9 @@ export default new Vuex.Store({
     service('users'),
     service('orders'),
     service('advertises'),
+    service('tradeTypes'),
+    service('cryptoCurrencies'),
+    service('countries'),
     auth({ userService: 'users', }),
   ],
 })
