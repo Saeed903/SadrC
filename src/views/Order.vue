@@ -3,7 +3,7 @@
   <v-layout row wrap>
     <v-flex d-flex>
       <v-card-text>
-        <p class="titled text-xs-center">خرید بیت کوین با استفاده از انتقال بانکی جمهوری اسلامی ایران با ریال ایران</p>
+        <p class="titled">خرید بیت کوین با استفاده از انتقال بانکی جمهوری اسلامی ایران با ریال ایران</p>
       </v-card-text>
     </v-flex>   
     <v-flex d-flex xs12 sm6 md8>
@@ -34,7 +34,7 @@
     </v-flex>
     
     <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md4 child-flex>
-      <working-hour  ></working-hour>
+      <working-hour></working-hour>
     </v-flex>
     
     <v-flex d-flex xs12 sm6 md6>

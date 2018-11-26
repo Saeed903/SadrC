@@ -1,5 +1,5 @@
 <template>
-    <div  >
+    <v-card>
         <v-card-text>
             <p class="titled">شرایط تجارت با آلمان</p>
             <div style="background-color:rgb(26, 29, 37)">
@@ -14,14 +14,31 @@
             <p class="fontIran">زمان محلی:تهران</p>
             <p ><router-link class="router" to="">گزارش این تبلیغ</router-link></p>
         </v-card-text>
-      </div>
+      </v-card>
 </template>
 <script>
 export default {
 
     name:'WorkingHour',
-    data: () => ({
-
-    }),
+    data:()=>({
+      items:[
+            "یکشنبه : تعطیل",
+            "دوشنبه : 24 ساعت",
+            "سه شنبه : تعطیل",
+            "چهارشنبه : تعطیل",
+            "پنج شنبه : تعطیل",
+            "جمعه : تعطیل",
+            "شنبه : تعطیل"
+      ]
+  })
 }
 </script>
+<style scoped>
+.fontIran{
+    font-family: Iranian Sans;
+    font-size: 13px;
+
+}
+</style>
+
+
