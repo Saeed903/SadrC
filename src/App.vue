@@ -138,7 +138,7 @@
           </router-link>
           <router-link to="MoreAboutTrustSystem">more</router-link>
           <router-link to="EditYourProfile" class="white--text">edit profile</router-link>
-          <router-link to="">my support tickets</router-link>
+          <router-link to="SupportTicket">my support tickets</router-link>
         </v-toolbar-items>
       </v-card-text>
       
