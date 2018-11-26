@@ -1,6 +1,7 @@
 <template>
 <v-container grid-list-sm>
-  <v-card>
+  <v-flex d-flex xl8>
+  
   <v-layout row wrap>
   
       <v-card-text>
@@ -31,8 +32,10 @@
           </v-card-media>
         </v-flex>
 
-        <v-flex >
+        <v-flex>
+          <v-card>
           <order-process></order-process>
+          </v-card>
         </v-flex>
       </v-layout>
     </v-flex>
@@ -49,7 +52,8 @@
       <working-hour Reminder="ture"></working-hour>  
     </v-flex>
   </v-layout>
-  </v-card>
+  
+  </v-flex>
 </v-container>
 </template>
 <script>

@@ -1,62 +1,60 @@
 <template>
-    <div>
-       
-            
-                <v-card-text class="fontIran">
-                    <div v-if="!confirmEmail && logged">
-                        <v-card-text class="fontIran">
-                            <p>شما باید ایمیل خود را تایید نمایید.قبل از آنکه سفارش بدهید ایمیل فرستاده شده را پیدا کرده و پس از تایید دوباره به این صفحه بازگردید.
-                            اگر دوباره خطایی ملاحضه کردید می توانید با پشتیبانی<router-link class="router" to="" >پشتیبانی</router-link>  تماس بگیرید.</p>
-                            <v-btn to="/EditProfileAccountSecurity" block color="secondary" dark class="fontIran"><v-icon >send</v-icon>ارسال مجدد تاییدیه ایمیل</v-btn>
-                        </v-card-text>
-                    </div>
+<div>
+    <v-card-text class="fontIran">
+        <div v-if="!confirmEmail && logged">
+            <v-card-text class="fontIran">
+                <p>شما باید ایمیل خود را تایید نمایید.قبل از آنکه سفارش بدهید ایمیل فرستاده شده را پیدا کرده و پس از تایید دوباره به این صفحه بازگردید.
+                اگر دوباره خطایی ملاحضه کردید می توانید با پشتیبانی<router-link class="router" to="" >پشتیبانی</router-link>  تماس بگیرید.</p>
+                <v-btn to="/EditProfileAccountSecurity" block color="secondary" dark class="fontIran"><v-icon >send</v-icon>ارسال مجدد تاییدیه ایمیل</v-btn>
+            </v-card-text>
+        </div>
 
-                    <div v-if="confirmEmail || !logged">
-                        <p>چقدر می خواهید خرید کنید؟</p>
-                
-                        <v-layout>
-                            <v-flex d-flex xs12 sm5 md5>
-                                <v-text-field
-                                    outline
-                                    clearable
-                                    label="بیت کوین"
-                                    type="number"
-                                    value="0.00000000"
-                                >
-                                </v-text-field>
-                            </v-flex>
-                            <v-flex d-flex xs12 sm5 md5>
-                                <v-text-field
-                                    outline
-                                    clearable
-                                    label="ریال"
-                                    type="number"
-                                    value="0.00"
-                                    clear
-                                >
-                                </v-text-field>
-                            </v-flex>
-                        </v-layout>
-                    </div>
+        <div v-if="confirmEmail || !logged">
+            <p>چقدر می خواهید خرید کنید؟</p>
+    
+            <v-layout>
+                <v-flex d-flex xs12 sm5 md5>
+                    <v-text-field
+                        outline
+                        clearable
+                        label="بیت کوین"
+                        type="number"
+                        value="0.00000000"
+                    >
+                    </v-text-field>
+                </v-flex>
+                <v-flex d-flex xs12 sm5 md5>
+                    <v-text-field
+                        outline
+                        clearable
+                        label="ریال"
+                        type="number"
+                        value="0.00"
+                        clear
+                    >
+                    </v-text-field>
+                </v-flex>
+            </v-layout>
+        </div>
 
-                    <div v-if="!logged">
-                        <p class="titled">ثبت نام و بلافاصله خرید بیت کوین</p>
-                        <v-btn to="Signup" block color="secondary"><v-icon></v-icon>ثبت نام رایگان</v-btn>
-                        <p class="type">ثبت نام رایگان است و تنها 30 ثانیه طول می کشد.</p>
-                    </div>
-         
-                    <div v-if="logged && confirmEmail">
-                        <v-textarea
-                            outline
-                            placeholder="اطلاعات تماس خود و اطلاعاتی که لازم است که آگهی دهنده بداند را در اینجا وارد کنید"
-                            clearable
-                        ></v-textarea>
-                        <v-btn block >ارسال درخواست تجارت</v-btn>
-                    </div>
-                </v-card-text>
-            
-       
-        <v-flex v-if="!logged" d-flex xs12 sm12 md12 lg12>
+        <div v-if="!logged">
+            <p class="titled">ثبت نام و بلافاصله خرید بیت کوین</p>
+            <v-btn to="Signup"  color="secondary"><v-icon></v-icon>ثبت نام رایگان</v-btn>
+            <p class="type">ثبت نام رایگان است و تنها 30 ثانیه طول می کشد.</p>
+        </div>
+
+        <div v-if="logged && confirmEmail">
+            <v-textarea
+                box
+                color="cyan accent-2"
+                hint="اطلاعات تماس خود و اطلاعاتی که لازم است که آگهی دهنده بداند را در اینجا وارد کنید"
+                clearable
+            ></v-textarea>
+            <v-btn class="text-xs-center" >ارسال درخواست تجارت</v-btn>
+        </div>
+    </v-card-text>
+        
+    <v-flex v-if="!logged" d-flex xs12 sm12 md12 lg12>
         <v-expansion-panel>
             <v-expansion-panel-content
             v-for="(item,i) in items"
@@ -69,9 +67,9 @@
                 </v-card>
             </v-expansion-panel-content>
         </v-expansion-panel>
-        </v-flex>
+    </v-flex>
         
-    </div>
+</div>
 </template>
 <script>
 import { mapState } from 'vuex'
@@ -94,19 +92,32 @@ export default {
 }
 </script>
 <style scoped>
-.fontIran{
-    font-family: Iranian Sans;
-    font-size: 14px;
-}
 .titled{
-    font-size: 18px;
-    color:aqua
+  font-family: Iranian Sans;
+  font-size: 18px; 
 }
-.type{
-font-size: 12px;
+
+.headline{
+  text-decoration: none;
+  padding-right:10px;
+  color:rgb(133, 129, 129);
 }
-.btn{
-    color:blue
+.fontIran{
+font-family: Iranian Sans;
+font-size: 13px;
+
+}
+.router{
+    font-family:'iranian sans';
+    color:rgb(0, 153, 255);
+    text-decoration:none;
+}
+.router:hover{
+    color:rgb(0, 140, 255);
+}
+.btc{
+  font-family: Iranian Sans;
+  font-size: 15px;
 }
 </style>
 
