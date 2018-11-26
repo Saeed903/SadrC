@@ -62,7 +62,7 @@
 
             <v-switch
             color="cyan accent-2"
-            label=""
+            label="ارسال پیامک برای سپرده آنلاین منتشر شده"
             class="fontIran caption pr-3 " 
             >
             </v-switch>
