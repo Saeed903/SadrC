@@ -13,47 +13,48 @@
             </v-card-text>
 
             <v-text-field 
-              v-validate="'required|max:30'"
               v-model="user.username"
               :counter="30"
-              :error-messages="errors.collect('username')"
+              :rules="notEmptyRules"
               label="نام کاربر"
               class="textBottom textField"
               data-vv-name="username"
+              clearable
             ></v-text-field>
 
             <v-text-field
               v-validate="'required|email'"
               v-model="user.email"
-              :error-messages="errors.collect('email')"
               label="ایمیل"
               class="textBottom emailField"
               data-vv-name="email"
               required
+              clearable
             ></v-text-field>
 
             <v-text-field
               v-validate="'required|max:20'"
               v-model="user.password"
               :counter="20"
+              :rules="notEmptyRules"
               class="textBottom textField"
-              :error-messages="errors.collect('password')"
               :type="'password'"
               label="رمزعبور"
               data-vv-name="password"
               required
+              clearable
             ></v-text-field>
 
             <v-text-field
-              v-validate="'required|max:20'"
               v-model="showPassword"
               :counter="20"
               class="textBottom textField"
-              :error-messages="errors.collect('passwordAgain')"
+              :rules="confirmPasswordRules"
               :type="'password'"
               label="تکرار رمز عبور "
               data-vv-name="passwordAgain"
               required
+              clearable
             ></v-text-field>
 
             <vue-recaptcha
@@ -77,17 +78,13 @@
 </template>
 <script>
   import Vue from 'vue'
-  import VeeValidate from 'vee-validate'
   import Footer from './../components/Footer.vue'
   import { mapState, mapActions } from 'vuex';
   import VueRecaptcha from 'vue-recaptcha';
 
-  Vue.use(VeeValidate)
 
   export default {
-    $_veeValidate: {
-      validator: 'new'
-    },
+    
     computed:{
       ...mapState('users', { loading: 'isCreatePending'})
     },
@@ -95,8 +92,14 @@
       Footer,
       VueRecaptcha
     },
-    data: () => ({
+    data: (vm) => ({
       valid: false,
+      notEmptyRules:[
+        v => !!v || 'می بایستی فیلد را پر کنید',
+      ],
+      confirmPasswordRules:[
+        v => v == vm.user.password || 'می بایستی با پسورد یکی باشد' ,
+      ],
       validate:false,
       sitekey: '6LeaLnYUAAAAAOsDilRLdvAo2o9JNBrjxhLpUGGw',
       user:{
@@ -113,8 +116,7 @@
     }),
 
     mounted () {
-      this.$validator.localize('en', this.dictionary);
-      console.log(this.valid);
+      console.log(vm.password);
     },
 
     methods: {
@@ -128,7 +130,6 @@
       this.$refs.recaptcha.reset() // Direct call reset method
       },
       signUp () {
-        //this.$refs.invisibleRecaptcha.execute();
         if (this.valid){
           const { User } = this.$FeathersVuex;
           const user = new User(this.user);

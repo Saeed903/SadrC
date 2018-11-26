@@ -21,6 +21,13 @@ Vue.use(FeathersVuex);
 export default new Vuex.Store({
 
   state:{
+    logged:false, 
+    confirmEmail:false,
+    user:{
+      username:'',
+      realName: '',
+      email: ''
+    },
     currency:'',
     currencyMenu: [
       { icon: 'mdi-currency-btc', text:'بیت کوین', path:'/Bitcoin'},
@@ -35,7 +42,7 @@ export default new Vuex.Store({
     setCurrency(state,index){
       const selectedCurrency = state.currencyMenu.filter((item)=>item.text === index);
       return state.currency = selectedCurrency[0].text;
-    }
+    },
   },
   actions:{
     routingMenu(context,index){
@@ -53,6 +60,9 @@ export default new Vuex.Store({
     service('users'),
     service('orders'),
     service('advertises'),
+    service('tradeTypes'),
+    service('cryptoCurrencies'),
+    service('countries'),
     auth({ userService: 'users', }),
   ],
 })

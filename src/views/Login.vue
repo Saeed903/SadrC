@@ -1,8 +1,6 @@
 <template>
-  
-    <v-layout v-if="!loading"  row wrap align-justify justify-center>
-      <v-flex  d-flex xs12 sm8 md8 lg8>
-        <v-card>
+    <v-layout v-if="!loading" row wrap>
+      <v-flex  d-flex xs12 sm8 md8 lg6>
           <v-card-text>
             <v-form 
               @submit.prevent="login" 
@@ -50,14 +48,14 @@
                 <p><router-link class="textBottom link" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link></p>
                 <p class="textBottom">صدر کریپتو؟<router-link to="/SignUp" class="link">ثبت نام کنید</router-link></p>
           </v-card-text>
-        </v-card>
+        
       </v-flex>
     
-    <v-flex d-flex xs12 sm8 md8 lg8>
+    
       <v-card>
       <Footer></Footer>
       </v-card>
-    </v-flex>
+    
   <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
   </v-layout>
   
@@ -74,7 +72,7 @@
         Footer,
         VueRecaptcha
     },
-    data: () => ({
+    data: () => ({ 
       errorLogin: false,
       errorMessage:'',
       valid: false,

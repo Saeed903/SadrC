@@ -1,12 +1,12 @@
 <template>
     <div>
         <FormSell :currency="currency"/>
-        <Transaction/>
+        <Advertise/>
         <Footer/>
     </div>
 </template>
 <script>
-import Transaction from './../components/Advertise.vue'
+import Advertise from './../components/Advertise.vue'
 import FormSell from './../components/FormSell.vue'
 import Footer from './../components/Footer.vue'
 
@@ -24,7 +24,7 @@ export default{
       }
   },
   components:{  
-    Transaction,
+    Advertise,
     FormSell,
     Footer,
   }
