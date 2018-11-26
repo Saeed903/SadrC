@@ -1,5 +1,5 @@
 <template>
-<v-container grid-list-sm>
+<v-container grid-list-md>
   <v-flex d-flex xl8>
   
   <v-layout row wrap>
@@ -31,7 +31,7 @@
               </div>  
           </v-card-media>
         </v-flex>
-
+        <v-btn to="order1">order1</v-btn>
         <v-flex>
           <v-card>
           <order-process></order-process>

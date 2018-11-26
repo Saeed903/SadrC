@@ -54,7 +54,7 @@
         </div>
     </v-card-text>
         
-    <v-flex v-if="!logged" d-flex xs12 sm12 md12 lg12>
+    <v-flex v-if="!logged " d-flex xs12 sm12 md12 lg12>
         <v-expansion-panel>
             <v-expansion-panel-content
             v-for="(item,i) in items"
