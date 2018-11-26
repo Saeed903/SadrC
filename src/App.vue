@@ -93,7 +93,7 @@
             <v-icon slot="activator" color="white" dark >
               shopping_cart
             </v-icon>
-            <span>ثبت آگهی</span>
+            <span class="saidbar">ثبت آگهی</span>
           </v-tooltip>
         </router-link>
       
@@ -102,7 +102,7 @@
             <v-icon slot="activator" color="white" dark>
               group
             </v-icon>
-            <span>انجمن ها</span>
+            <span class="saidbar">انجمن ها</span>
           </v-tooltip>
         </router-link>
 
@@ -111,7 +111,7 @@
             <v-icon slot="activator" color="white" dark>
               help
             </v-icon>
-            <span>کمک</span>
+            <span class="saidbar">کمک</span>
           </v-tooltip>
         </router-link>
 
@@ -126,7 +126,7 @@
               <v-icon slot="activator" color="white" dark>
                 lock_open
               </v-icon>
-              <span>ورود</span>
+              <span class="saidbar">ورود</span>
             </v-tooltip>
           </router-link>
           <router-link to="MoreAboutTrustSystem">more</router-link>
