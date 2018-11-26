@@ -34,33 +34,15 @@
     </v-flex>
     
     <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md4 child-flex>
-      <working-hour></working-hour>
+      <working-hour workingTime="true"></working-hour>
     </v-flex>
     
-    <v-flex d-flex xs12 sm6 md6>
-      <v-card>
-        <v-card-text class="fontIran">
-          <p class="titled">صدرکریپتو از شما محافظت می کند</p>
-          <p>بیت کوین موجود در کیف پول شما،پس از ثبت درخواست برای فروش به اندازه سفارش درکیف پول شما مسدود خواهد شد. 
-            سپس خریدار می بایستی مبلغ مورد توافق را به حساب فروشنده واریز نموده
-            و مدارک مربوطه به پرداخت را به فروشنده 
-            ارسال نمایدو فروشنده پس از بررسی و تایید مبلغ واریزی
-              .بایستی سفارش را نهایی کند که پس از نهایی شدن سفارش صدر کریپتو مقدار مسدودی بیت کوین را به کیف پول خریدار انتقال می دهد</p>
-        </v-card-text>
-      </v-card>
+    <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md6>
+      <working-hour sadrsys="true"></working-hour>  
     </v-flex>
 
-    <v-flex d-flex xs12 sm6 md6 blue lighten-2>
-      <v-card>
-        <v-card-text class="fontIran">
-          <p class="titled"> تذکر</p>
-          <p>آگهی را بخوانید و شرایط را بررسی کنید</p>
-          <p>اگرخواهان معامله بصورت حضوری و پرداخت نقدی هستید در یک مکان و زمان مشخص با فروشنده /خریدار قرار حضوری ترتیب بدهید</p>
-          <p>برای اطمینان بیشتر از صحت معامله حضوری و جلوگیری از کلاهبرداری بهتر است دیدگاه خریداران/ فروشندگان مربوط به فرد مورد نظر و همچنین پروفایل مربوطه راچک وبررسی نمایید</p>
-          <p>توجه داشته باشید که نوسانات بازاروهزینه انتقال ممکن است مقدار نهایی بیت کوین را تغییر دهد لذا مقدار بیت کوین در زمان درخواست محاسبه می شود</p>
-          <v-btn to="Order">Order</v-btn>
-        </v-card-text>
-      </v-card>
+    <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md6 blue lighten-2>
+      <working-hour Reminder="ture"></working-hour>  
     </v-flex>
   </v-layout>
 </v-container>
