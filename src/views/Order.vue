@@ -1,12 +1,13 @@
 <template>
-<v-container fluid grid-list-md>
+<v-container grid-list-sm>
+  <v-card>
   <v-layout row wrap>
-    <v-flex d-flex>
+  
       <v-card-text>
         <p class="titled">خرید بیت کوین با استفاده از انتقال بانکی جمهوری اسلامی ایران با ریال ایران</p>
       </v-card-text>
-    </v-flex>   
-    <v-flex d-flex xs12 sm6 md8>
+      
+    <v-flex d-flex xs12 sm6 md8 >
       <v-layout row wrap>
         <v-flex d-flex>
           <v-card-media class="btc pr-5">
@@ -29,22 +30,26 @@
               </div>  
           </v-card-media>
         </v-flex>
-        <order-process></order-process>
+
+        <v-flex >
+          <order-process></order-process>
+        </v-flex>
       </v-layout>
     </v-flex>
     
-    <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md4 child-flex>
+    <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md4 >
       <working-hour workingTime="true"></working-hour>
     </v-flex>
     
-    <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md6>
+    <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md6 >
       <working-hour sadrsys="true"></working-hour>  
     </v-flex>
 
-    <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md6 blue lighten-2>
+    <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md6 >
       <working-hour Reminder="ture"></working-hour>  
     </v-flex>
   </v-layout>
+  </v-card>
 </v-container>
 </template>
 <script>

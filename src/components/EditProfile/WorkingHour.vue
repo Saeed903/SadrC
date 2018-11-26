@@ -1,7 +1,7 @@
 <template>
 <div>
-    <v-card v-if="workingTime">
-        <v-card-text > 
+   
+        <v-card-text v-if="workingTime"> 
             <p class="titled">شرایط تجارت با آلمان</p>
             <div style="background-color:rgb(26, 29, 37)">
                 <p style="padding-right:20px" class="fontIran">تایید احراز هویت <br>پرداخت وجه مورد توافق <br>بیت کوین</p>
@@ -15,10 +15,10 @@
             <p class="fontIran">زمان محلی:تهران</p>
             <p ><router-link class="router" to="">گزارش این تبلیغ</router-link></p>
         </v-card-text>
-      </v-card>
+      
 
-      <v-card v-if="sadrsys">
-        <v-card-text  class="fontIran">
+     
+        <v-card-text v-if="sadrsys"  class="fontIran">
           <p class="titled">صدرکریپتو از شما محافظت می کند</p>
           <p>بیت کوین موجود در کیف پول شما،پس از ثبت درخواست برای فروش به اندازه سفارش درکیف پول شما مسدود خواهد شد. 
             سپس خریدار می بایستی مبلغ مورد توافق را به حساب فروشنده واریز نموده
@@ -26,10 +26,10 @@
             ارسال نمایدو فروشنده پس از بررسی و تایید مبلغ واریزی
               .بایستی سفارش را نهایی کند که پس از نهایی شدن سفارش صدر کریپتو مقدار مسدودی بیت کوین را به کیف پول خریدار انتقال می دهد</p>
         </v-card-text>
-      </v-card>
+      
 
-      <v-card v-if="Reminder">
-        <v-card-text class="fontIran">
+      
+        <v-card-text v-if="Reminder" class="fontIran">
           <p class="titled"> تذکر</p>
           <p>آگهی را بخوانید و شرایط را بررسی کنید</p>
           <p>اگرخواهان معامله بصورت حضوری و پرداخت نقدی هستید در یک مکان و زمان مشخص با فروشنده /خریدار قرار حضوری ترتیب بدهید</p>
@@ -37,7 +37,7 @@
           <p>توجه داشته باشید که نوسانات بازاروهزینه انتقال ممکن است مقدار نهایی بیت کوین را تغییر دهد لذا مقدار بیت کوین در زمان درخواست محاسبه می شود</p>
           <v-btn to="Order">Order</v-btn>
         </v-card-text>
-      </v-card>
+      
 </div>
 </template>
 <script>

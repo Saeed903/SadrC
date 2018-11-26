@@ -22,7 +22,7 @@ export default new Vuex.Store({
 
   state:{
     logged:true, 
-    confirmEmail:true,
+    confirmEmail:false,
     user:{
       username:'',
       realName: '',
