@@ -120,13 +120,20 @@
 
       <v-card-text >
         <v-toolbar-items v-if="!user"> 
-          <router-link to="Signup" class="freeRegister">{{signState}}</router-link>
-          <router-link to="Login" class="menu">
+          <router-link to="Login">
             <v-tooltip bottom>
               <v-icon slot="activator" color="white" dark>
                 lock_open
               </v-icon>
-              <span class="saidbar">ورود</span>
+              <span class="saidbar">{{loginState}}</span>
+            </v-tooltip>
+          </router-link>
+          <router-link to="Signup">
+            <v-tooltip bottom>
+              <v-icon slot="activator" color="white" dark>
+                lock
+              </v-icon>
+              <span class="saidbar">{{signState}}</span>
             </v-tooltip>
           </router-link>
           <router-link to="MoreAboutTrustSystem">more</router-link>
