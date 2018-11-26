@@ -21,10 +21,12 @@ Vue.use(FeathersVuex);
 export default new Vuex.Store({
 
   state:{
-    logged: false, 
+    logged: true, 
     confirmEmail:false,
-    user: {
-
+    user:{
+      username:'',
+      realName: '',
+      email: ''
     },
     currency:'',
     currencyMenu: [
@@ -41,7 +43,6 @@ export default new Vuex.Store({
       const selectedCurrency = state.currencyMenu.filter((item)=>item.text === index);
       return state.currency = selectedCurrency[0].text;
     },
-    set
   },
   actions:{
     routingMenu(context,index){

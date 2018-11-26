@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <v-card-text v-if="!confirmEmail && logged">
+    <div  >
+        <v-card-text>
             <p class="titled">شرایط تجارت با آلمان</p>
             <div style="background-color:rgb(26, 29, 37)">
                 <p style="padding-right:20px" class="fontIran">تایید احراز هویت <br>پرداخت وجه مورد توافق <br>بیت کوین</p>
@@ -17,15 +17,11 @@
       </div>
 </template>
 <script>
-import { mapState } from 'vuex'
 export default {
-    name:"WorkingHour",
+
+    name:'WorkingHour',
     data: () => ({
 
     }),
-
-    computed:{
-            ...mapState(['logged', 'confirmEmail']),
-    }
 }
 </script>

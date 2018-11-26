@@ -33,8 +33,8 @@
       </v-layout>
     </v-flex>
     
-    <v-flex d-flex xs12 sm6 md4 child-flex>
-      <working-hour></working-hour>
+    <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md4 child-flex>
+      <working-hour  ></working-hour>
     </v-flex>
     
     <v-flex d-flex xs12 sm6 md6>
@@ -66,12 +66,19 @@
 </v-container>
 </template>
 <script>
+
 import WorkingHour from "./../components/EditProfile/WorkingHour.vue";
 import OrderProcess from "./../components/OrderProcess.vue";
+
+import { mapState } from 'vuex';
+
 export default {
   components:{
     OrderProcess,
     WorkingHour
+  },
+  computed:{
+    ...mapState(['logged', 'confirmEmail']),
   },
   data:()=>({
       items:[
