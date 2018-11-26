@@ -44,11 +44,11 @@
 }
 .fontsIran{
     font-family:'iranian sans';
-    color:rgb(0, 153, 255);
+    color:#00B8D4;
     text-decoration:none;
 }
 .fontsIran:hover{
-    color:rgb(0, 140, 255);
+    color:#18FFFF;
 }
 
 </style>

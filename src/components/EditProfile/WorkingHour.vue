@@ -35,10 +35,17 @@ export default {
 </script>
 <style scoped>
 .fontIran{
-    font-family: Iranian Sans;
-    font-size: 13px;
-
+    font-family:'Iranian Sans';
+    padding-left:20px;
 }
-</style>
+.fontsIran{
+    font-family:'iranian sans';
+    color:#00B8D4;
+    text-decoration:none;
+}
+.fontsIran:hover{
+    color:#18FFFF;
+}
 
+</style>
 

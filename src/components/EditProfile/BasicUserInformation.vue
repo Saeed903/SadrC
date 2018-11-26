@@ -90,6 +90,13 @@
     font-family:'Iranian Sans';
     padding-left:20px;
 }
-
+.fontsIran{
+    font-family:'iranian sans';
+    color:#00B8D4;
+    text-decoration:none;
+}
+.fontsIran:hover{
+    color:#18FFFF;
+}
 
 </style>

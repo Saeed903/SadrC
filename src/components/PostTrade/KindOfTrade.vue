@@ -47,6 +47,7 @@
                 class="textField mr-3 fontIran"
                 color="cyan accent-2" 
                 box
+                clearable
                 >
                 </v-select>
             </v-flex>
@@ -61,6 +62,7 @@
                 label="محدوده تغییرات"
                 box
                 color="cyan accent-2"
+                clearable
                 >
                 </v-text-field>
             </v-flex>
@@ -75,6 +77,7 @@
                 label="معادل قیمت"
                 color="cyan accent-2"
                 box
+                clearable
                 >
                 </v-text-field>
             </v-flex>
@@ -105,11 +108,11 @@
 }
 .fontsIran{
     font-family:'iranian sans';
-    color:rgb(0, 153, 255);
+    color:#00B8D4;
     text-decoration:none;
 }
 .fontsIran:hover{
-    color:rgb(0, 140, 255);
+    color:#18FFFF;
 }
 
 </style>
