@@ -48,7 +48,7 @@
 
                     <div v-if="!logged">
                         <p class="titled">ثبت نام و بلافاصله خرید بیت کوین</p>
-                        <v-btn to="Signup" block color="secondary"><icon></icon>ثبت نام رایگان</v-btn>
+                        <v-btn to="Signup" block color="secondary"><v-icon></v-icon>ثبت نام رایگان</v-btn>
                         <p class="type">ثبت نام رایگان است و تنها 30 ثانیه طول می کشد.</p>
                     </div>
          

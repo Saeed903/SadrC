@@ -29,30 +29,12 @@
               </div>  
           </v-card-media>
         </v-flex>
-        
         <order-process></order-process>
-
-        
       </v-layout>
     </v-flex>
-
+    
     <v-flex d-flex xs12 sm6 md4 child-flex>
-      <v-card>
-        <v-card-text>
-          <p class="titled">شرایط تجارت با آلمان</p>
-          <div style="background-color:rgb(26, 29, 37)">
-            <p style="padding-right:20px" class="fontIran">تایید احراز هویت <br>پرداخت وجه مورد توافق <br>بیت کوین</p>
-          </div>
-            <p class="titled">ساعات کار</p>
-              <v-list>
-                <ul class="fontIran" v-for="item in items" :key="item" style="padding-right:25px">
-                  <li>{{item}}</li>
-                </ul>
-              </v-list>
-          <p class="fontIran">زمان محلی:تهران</p>
-          <p ><router-link class="router" to="">گزارش این تبلیغ</router-link></p>
-        </v-card-text>
-      </v-card>
+      <working-hour></working-hour>
     </v-flex>
     
     <v-flex d-flex xs12 sm6 md6>
@@ -70,24 +52,26 @@
 
     <v-flex d-flex xs12 sm6 md6 blue lighten-2>
       <v-card>
-      <v-card-text class="fontIran">
-        <p class="titled"> تذکر</p>
-        <p>آگهی را بخوانید و شرایط را بررسی کنید</p>
-        <p>اگرخواهان معامله بصورت حضوری و پرداخت نقدی هستید در یک مکان و زمان مشخص با فروشنده /خریدار قرار حضوری ترتیب بدهید</p>
-        <p>برای اطمینان بیشتر از صحت معامله حضوری و جلوگیری از کلاهبرداری بهتر است دیدگاه خریداران/ فروشندگان مربوط به فرد مورد نظر و همچنین پروفایل مربوطه راچک وبررسی نمایید</p>
-        <p>توجه داشته باشید که نوسانات بازاروهزینه انتقال ممکن است مقدار نهایی بیت کوین را تغییر دهد لذا مقدار بیت کوین در زمان درخواست محاسبه می شود</p>
-      <v-btn to="Order">Order</v-btn>
-      </v-card-text>
+        <v-card-text class="fontIran">
+          <p class="titled"> تذکر</p>
+          <p>آگهی را بخوانید و شرایط را بررسی کنید</p>
+          <p>اگرخواهان معامله بصورت حضوری و پرداخت نقدی هستید در یک مکان و زمان مشخص با فروشنده /خریدار قرار حضوری ترتیب بدهید</p>
+          <p>برای اطمینان بیشتر از صحت معامله حضوری و جلوگیری از کلاهبرداری بهتر است دیدگاه خریداران/ فروشندگان مربوط به فرد مورد نظر و همچنین پروفایل مربوطه راچک وبررسی نمایید</p>
+          <p>توجه داشته باشید که نوسانات بازاروهزینه انتقال ممکن است مقدار نهایی بیت کوین را تغییر دهد لذا مقدار بیت کوین در زمان درخواست محاسبه می شود</p>
+          <v-btn to="Order">Order</v-btn>
+        </v-card-text>
       </v-card>
     </v-flex>
   </v-layout>
 </v-container>
 </template>
 <script>
+import WorkingHour from "./../components/EditProfile/WorkingHour.vue";
 import OrderProcess from "./../components/OrderProcess.vue";
 export default {
   components:{
-    OrderProcess
+    OrderProcess,
+    WorkingHour
   },
   data:()=>({
       items:[
