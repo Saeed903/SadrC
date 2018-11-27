@@ -21,7 +21,7 @@ Vue.use(FeathersVuex);
 export default new Vuex.Store({
 
   state:{
-    logged: true, 
+    logged:true, 
     confirmEmail:false,
     user:{
       username:'',

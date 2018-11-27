@@ -1,24 +1,36 @@
 <template>
-<v-container >
-    <v-layout row wrapalign-justify justify-center>
-        <v-flex xs12 sm6 md6 >
+    <v-layout row wrap align-justify justify-center>
+        <v-flex xs12 sm8 md6 >
             <v-card>
-                <v-card-text pa-25>
-                    <v-card-text class="headline">
-                        <p class="text-xs-center">تأیید شماره تلفن</p>
+                <v-card-text>
+                    <v-card-text>
+                        <p class="titled text-xs-center">تأیید شماره تلفن</p>
+                        <p class="fontIran">ما کد تایید خود را به شماره تلفن شما ارسال کردیم.</p>
+                        <p class="fontIran">کد تأیید را در فیلد زیر وارد کنید.</p>
                     </v-card-text>
-                    <p class="subheading">ما کد تایید خود را به شماره تلفن شما ارسال کردیم.</p>
-                    <p class="subheading">کد تأیید را در فیلد زیر وارد کنید.</p>
-                    <v-text-field label="کد تایید"></v-text-field>
-                    </v-card-text>
-                    <v-flex text-xs-center>
-                        <v-card-text>
-                            <v-btn @click="submit" class="primary">تأیید</v-btn>
-                            <v-btn @click="submit" class="accent">شماره تلفن اشتباه است؟</v-btn>
-                        </v-card-text>
-                </v-flex>
+
+                    <v-text-field class="fontIran" label="کد تایید"></v-text-field>
+                    <v-layout>
+                        <v-flex xs4 sm3 md3 xl2 class="fontIran text-xs-center">
+                            <v-btn @click="submit" class="grey darken-2 text-xs-center">تأیید</v-btn>
+                        </v-flex>
+                        <v-flex xs6 sm4 md3 class="fontIran">
+                            <v-btn @click="submit" class="grey darken-2">شماره تلفن اشتباه است؟</v-btn>
+                        </v-flex>
+                    </v-layout>
+                </v-card-text>
             </v-card>
         </v-flex>
     </v-layout>
-</v-container>
+
 </template>
+<style scoped>
+.titled{
+  font-family: Iranian Sans;
+  font-size: 18px; 
+}
+
+.fontIran{
+font-family: Iranian Sans;
+}
+</style>
