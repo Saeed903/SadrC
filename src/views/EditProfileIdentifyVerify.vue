@@ -26,7 +26,7 @@
                 <v-card color="grey darken-1" class="text-xs-center titled">
                     <v-card-text>کمک؟</v-card-text>
                 <v-card>
-                    <v-card-text>تأیید هویت را شروع کنید.</v-card-text>
+                    <v-card-text class="titled1">تأیید هویت را شروع کنید.</v-card-text>
                 </v-card>
                     <v-card-text>ابتدا مدرک شناسایی خود را برای تأیید آماده کنید.</v-card-text>
                 </v-card>
@@ -57,11 +57,6 @@
   font-size: 18px; 
 }
 
-.headline{
-  text-decoration: none;
-  padding-right:10px;
-  color:rgb(133, 129, 129);
-}
 .fontIran{
 font-family: Iranian Sans;
 
@@ -74,8 +69,9 @@ font-family: Iranian Sans;
 .router:hover{
     color:rgb(0, 140, 255);
 }
-.btc{
-  font-family: Iranian Sans;
-  font-size: 15px;
+.titled1{
+font-family: Iranian Sans;
+  font-size: 16px; 
 }
+
 </style>
