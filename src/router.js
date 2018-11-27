@@ -57,6 +57,7 @@ import SupportDrop from './views/SupportDrop.vue'
 import MoreAboutTrustSystem from './views/MoreAboutTrustSystem.vue'
 import ErrorAuth from './views/ErrorAuth.vue'
 import SupportTicket from './views/SupportTicket.vue'
+import SupportCreateNewTicket from './views/SupportCreateNewTicket.vue'
 import store from './store';
 
 Vue.use(Router);
@@ -106,6 +107,11 @@ export default new Router({
       path: '/SupportTicket',
       name: 'SupportTicket',
       component: SupportTicket,
+    }, 
+    {
+      path: '/SupportCreateNewTicket',
+      name: 'SupportCreateNewTicket',
+      component: SupportCreateNewTicket,
     }, 
     {
       path: '/SupportDrop',
