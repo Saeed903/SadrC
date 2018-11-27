@@ -1,8 +1,7 @@
 <template>
-
     <v-layout row wrap align-justify justify-center>
         <v-flex xs12 sm8 md6 >
-            
+            <v-card>
                 <v-card-text>
                     <v-card-text>
                         <p class="titled text-xs-center">تأیید شماره تلفن</p>
@@ -20,7 +19,7 @@
                         </v-flex>
                     </v-layout>
                 </v-card-text>
-           
+            </v-card>
         </v-flex>
     </v-layout>
 
