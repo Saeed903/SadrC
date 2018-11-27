@@ -1,24 +1,30 @@
 <template>
-    <dir>
+    <div>
         <v-card-text class="fontIran subheading">بلیط های پشتیبانی من</v-card-text>
-        <v-card-text class="fontIran ">کاربران عزیز، با توجه به مقدار غیر معمول بلیط، زمان پاسخ فعلی ما 2 روز است. با مهربانی از شما می خواهیم که بلیط های چندگانه را در رابطه با همین مسئله باز نکنید، زیرا فقط زمان پاسخ ما را طولانی تر می کند.</v-card-text>
-        <v-btn class="fontIran" color="primary">یک بلیط جدید ایجاد کنید</v-btn>
-        <v-card-text class="fontIran caption pt-0">شما هیچ بلیط پشتیبانی ندارید
-            <Footer></Footer>
-</v-card-text>
-    </dir>
+
+        <v-flex>
+            <v-card color="blue-grey darken-3">
+                <v-card-text class="fontsIran text-xs-right"><v-icon color="orange lighten-3" size="17px">done_all</v-icon>کاربران عزیز، با توجه به مقدار غیر معمول بلیط، زمان پاسخ فعلی ما 2 روز است. با مهربانی از شما می خواهیم که بلیط های چندگانه را در رابطه با همین مسئله باز نکنید، زیرا فقط زمان پاسخ ما را طولانی تر می کند.</v-card-text>
+            </v-card>
+        </v-flex>
+
+        <v-btn class="fontsIran mt-4" color="primary" to="SupportCreateNewTicket"><v-icon size="17px">send</v-icon>یک بلیط جدید ایجاد کنید</v-btn>
+
+        <v-card-text class="fontIran caption pt-0"><v-icon color="red" size="17px">warning</v-icon>شما هیچ بلیط پشتیبانی ندارید</v-card-text>
+    </div>
 </template>
 <script>
-import Footer from './../components/Footer.vue'
 export default{
-    components:{
-        Footer,
-    }
+
 }
 </script>
 
 <style scoped>
 .fontIran{
     font-family:'Iranian Sans';
+}
+.fontsIran{
+    font-family:iranian sans;
+    font-size:13px;
 }
 </style>
