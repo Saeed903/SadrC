@@ -97,17 +97,3 @@ export default{
     }
 }
 </script>
-<style scoped>
-.fontIran{
-    font-family:'Iranian Sans';
-}
-.fontsIran{
-    font-family:'iranian sans';
-    color:rgb(0, 153, 255);
-    text-decoration:none;
-}
-.fontsIran:hover{
-    color:rgb(0, 140, 255);
-}
-
-</style>
