@@ -29,12 +29,12 @@
             <p> اگر بخواهید بیت کوین ها را بفروشید مطمئن شوید که شما بیت کوین ها را در کیف پول صدر  کریپتو خود موجود دارید</p>
         </v-card-text>
 
-        <v-radio-group v-model="radioGroup" class="pt-0">
+        <v-radio-group v-model="selectedTradeType" class="pt-0">
             <v-radio
             v-for="tradeType in tradeTypes"
-            :key="tradeType"
-            :label="tradeType"
-            :value="tradeType"
+            :key="tradeType.Id"
+            :label="tradeType.tradeTypeTitle"
+            :value="tradeType.tradeTypeTitle"
             class="fontIran mt-0"
             color="cyan accent-2"
             ></v-radio>
@@ -45,9 +45,9 @@
                 <v-text-field
                 class="mr-3 fontIran "
                 label="موقعیت مکانی"
-                box
                 color="cyan accent-2"
                 clearable
+                dense
                 >
                 <template slot="label">
                     موقعیت مکانی <v-icon style="vertical-align: middle;color:aqua">add_location</v-icon>
@@ -60,18 +60,19 @@
             </v-flex>
         
             <v-flex sm6 md6 lg6>
-                <v-select
+                <v-autocomplete
                 v-validate="'required'"
-                :items="selectCurrency"
-                v-model="select"
+                :items="selectCurrencies"
+                v-model="selectedCurrency"
                 :error-messages="errors.collect('select')"
                 data-vv-name="select"
                 label="نوع ارز"
                 class="textField mr-3 fontIran"
                 color="cyan accent-2" 
-                box
+                browser-autocomplete
+                dense
                 >
-                </v-select>
+                </v-autocomplete>
             </v-flex>
 
             <v-flex sm6 md6 lg6>
@@ -82,9 +83,10 @@
                 <v-text-field
                 class="textField mr-3 fontIran"
                 label="محدوده تغییرات"
-                box
                 color="cyan accent-2"
+                v-model="advertise.margin"
                 >
+                
                 </v-text-field>
             </v-flex>
 
@@ -97,7 +99,7 @@
                 class="textField mr-3 fontIran"
                 label="معادل قیمت"
                 color="cyan accent-2"
-                box
+                v-model="advertise.priceEquation"
                 >
                 </v-text-field>
             </v-flex>
@@ -122,8 +124,8 @@
                 <v-text-field
                 class="textField mr-3 fontIran"
                 label="کمترین مقدار معامله"
-                box
                 color="cyan accent-2"
+                v-model="advertise.minTransactionLimit"
                 >
                 </v-text-field>
             </v-flex>
@@ -136,8 +138,8 @@
                 <v-text-field
                 class="textField mr-3 fontIran"
                 label="بیشترین مقدار معامله"
-                box
                 color="cyan accent-2"
+                v-model="advertise.minTransactionLimit"
                 >
                 </v-text-field>
             </v-flex>
@@ -150,8 +152,8 @@
                 <v-text-field
                 class="textField mr-3 fontIran"
                 label="محدودیت مقدار معامله"
-                box
                 color="cyan accent-2"
+                v-model="advertise.restrictAmountTo"
                 >
                 </v-text-field>
             </v-flex>
@@ -184,6 +186,7 @@
                 label="شرایط تجارت"
                 box
                 color="cyan accent-2"
+                v-model="advertise.termsOfTrade"
                 >
                 </v-textarea>
             </v-flex>
@@ -204,7 +207,8 @@
                 <v-checkbox
                 label="پیگیری نقدینگی"
                 class="fontIran pr-3"    
-                color="cyan accent-2"               
+                color="cyan accent-2"   
+                v-model="advertise.trackLiquidity"            
                 >
                 </v-checkbox>
             </v-flex>
@@ -223,7 +227,8 @@
                 <v-checkbox
                 label="فقط شناسایی افراد"
                 class="fontIran pr-3" 
-                color="cyan accent-2"                  
+                color="cyan accent-2" 
+                v-model="advertise.identifiedPeopleOnly"                 
                 >
                 </v-checkbox>
             </v-flex>
@@ -237,7 +242,8 @@
                 <v-checkbox
                 label="تاییدیه پیامک"
                 class="fontIran pr-3"   
-                color="cyan accent-2"                
+                color="cyan accent-2"        
+                v-model="advertise.smsVerification"        
                 >
                 </v-checkbox>
             </v-flex>
@@ -251,7 +257,8 @@
                 <v-checkbox
                 label="اعتماد مردم"
                 class="fontIran pr-3"   
-                color="cyan accent-2"                
+                color="cyan accent-2"  
+                v-model="advertise.trustedPeopleOnly"              
                 >
                 </v-checkbox>
             </v-flex>
@@ -259,7 +266,6 @@
                 <span class="fontIran caption">.تبلیغات خود را محدود کنید تا تنها به کاربران نشان داده شود که شما به عنوان اعتماد علامتگذاری کرده اید<router-link class="fontsIran" to="">چگونگی علامت گذاری به کاربران مورد اعتماد</router-link>.</span>    
             </v-flex>
         </v-layout>
-
         <Footer></Footer>
         </v-flex>
     </v-layout> 
@@ -290,23 +296,11 @@ export default{
             ownerId: 0
         },
         checkbox:true,
-        select:null,
         radioGroup:1,
-        tradeTypes:[
-            "فروش بیت کوین خود در صدر کریپتو",
-            "خرید بیت کوین در صدر کریپتو",
-            "فروش بیت کوین آنلاین شما",
-            "خرید بیت کوین آنلاین"
-        ],
-        selectCurrency:[
-            'بیت کوین',
-            'اتریوم',
-            'زدکش',
-            'ترون',
-        ],
+        
     }),
     methods:{
-        ...mapActions('tradeType', { findTradeTypes: 'find'}),
+        ...mapActions('tradeTypes', { findTradeTypes: 'find'}),
         ...mapActions('countries', { findCountries: 'find'}),
         ...mapActions('cryptoCurrencies', { findCryptCurrencies: 'find'}),
 
@@ -314,7 +308,9 @@ export default{
             if (this.valid){
                 const { Advertise } = this.$FeathersVuex;
                 const advertise = new Advertise( this.advertise);
-                advertise.save();
+                console.log(advertise);
+                
+                //advertise.save();
             }
         },
     },
@@ -322,6 +318,7 @@ export default{
         this.findTradeTypes()
             .then( response => {
                 const tradeType = response.data || response;
+                
             }),
         
         this.findCountries()
@@ -331,7 +328,8 @@ export default{
            
         this.findCryptCurrencies()
             .then(response => {
-                const CryptoCurrencies = response.data || response;
+                const cryptoCurrencies = response.data || response;
+                
             })   
     },
     computed: {
@@ -354,7 +352,54 @@ export default{
 
         cryptoCurrencies() {
             return this.findCryptoCurrenciesOnline().data;
-        }
+        },
+        selectedTradeType:{
+            get:function(){
+                var tradeTypeTitle, tradeTypeModel;
+
+                tradeTypeModel = this.tradeTypes.find(tradeType => tradeType.Id == this.advertise.tradeTypeId);
+
+                if(tradeTypeModel != null){
+                    tradeTypeTitle = tradeTypeModel.tradeTypeTitle;
+                }
+                return tradeTypeTitle || null;
+            },
+            set:function(newValue){
+                this.advertise.tradeTypeId = this.tradeTypes.find( tt => tt.tradeTypeTitle == newValue).Id;
+
+                console.log(this.advertise);
+                
+            }
+        },
+        selectedCurrency:{
+           get: function(){
+               var currencyFullName, currencyModel;
+               currencyModel = this.cryptoCurrencies.find(currency => currency.Id == this.advertise.cryptoCurrencyId);
+               
+               if (currencyModel != null){
+                    currencyFullName = currencyModel.cryptoCurrencyCode + ' ' + 
+                                  currencyModel.cryptoCurrencyName + ' ' + 
+                                  currencyModel.cryptoCurrencyTitle;
+               }
+              
+               return currencyFullName || null;                   
+
+           },
+           set:function(newValue){
+               var cryptoCurrencyCode = newValue.split(' ');
+               var currencyModel = this.cryptoCurrencies.find(currency => currency.cryptoCurrencyCode == cryptoCurrencyCode[0]);
+               this.advertise.cryptoCurrencyId = currencyModel.Id;
+           } 
+        },
+        
+        selectCurrencies(){
+            var selected = [];
+            this.cryptoCurrencies.map(v =>{
+                    selected.push(v.cryptoCurrencyCode + ' ' + v.cryptoCurrencyName + ' ' + v.cryptoCurrencyTitle) ;
+                });
+            return selected;//.cryptoCurrencyName + ' ' + cryptoCurrencies.cryptoCurrencyCode;
+        },
+            
     },
     components:{
         Footer,
