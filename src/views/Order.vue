@@ -58,7 +58,7 @@
 </template>
 <script>
 
-import WorkingHour from "./../components/EditProfile/WorkingHour.vue";
+import WorkingHour from "./../components/WorkingHour.vue";
 import OrderProcess from "./../components/OrderProcess.vue";
 
 import { mapState } from 'vuex';

@@ -35,6 +35,7 @@
         <v-card>
       <v-card-text class="text-xs-right">
         <p>درباره ما</p>
+        <v-btn to="Fees">هزینه ها</v-btn>
       </v-card-text>
         </v-card>
       </v-flex>

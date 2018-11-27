@@ -2,8 +2,12 @@
 <div id="app">
     <v-content>
       <v-container fill-height>
-        <v-layout justify-center align-center>
-          
+        <v-layout row wrap justify-center align-center>
+          <v-flex>
+            <v-btn>ارسال بیت کوین</v-btn>
+            <v-btn>دريافت بیت کوین</v-btn>
+            <v-btn>معاملات</v-btn>
+          </v-flex>
         </v-layout>
       </v-container>
     </v-content>

@@ -172,89 +172,7 @@
         <v-container grid-list-md>
             <v-layout row wrap>
                 <v-flex>
-                    <v-layout>
-                        <v-flex xs2 sm1 md1 lg1>
-                            <v-card-text class="fontIran">شنبه</v-card-text>
-                        </v-flex>
-                        <v-flex xs5 sm4 md3 lg3>
-                            <v-select class="fontIran" label="از ساعت" color="cyan accent-2"></v-select>
-                        </v-flex>
-                        <v-flex xs5 sm4 md3 lg3>           
-                            <v-select class="fontIran" label="تا ساعت" color="cyan accent-2"></v-select>
-                        </v-flex> 
-                    </v-layout>
-
-                    <v-layout>
-                        <v-flex xs2 sm1 md1 lg1>             
-                            <v-card-text class="fontIran">1شنبه</v-card-text> 
-                        </v-flex>    
-                        <v-flex xs5 sm4 md3 lg3>        
-                        <v-select class="fontIran" label="از ساعت" color="cyan accent-2"></v-select>             
-                        </v-flex>           
-                        <v-flex xs5 sm4 md3 lg3>                        
-                            <v-select class="fontIran" label="تا ساعت" color="cyan accent-2"></v-select>                 
-                        </v-flex>   
-                    </v-layout>
-
-                    <v-layout>
-                        <v-flex xs2 sm1 md1 lg1>             
-                            <v-card-text class="fontIran">2شنبه</v-card-text> 
-                        </v-flex>    
-                        <v-flex xs5 sm4 md3 lg3>        
-                            <v-select class="fontIran" label="از ساعت" color="cyan accent-2"></v-select>             
-                        </v-flex>           
-                        <v-flex xs5 sm4 md3 lg3>                        
-                            <v-select class="fontIran" label="تا ساعت" color="cyan accent-2"></v-select>                 
-                        </v-flex>   
-                    </v-layout>
-
-                    <v-layout>
-                        <v-flex xs2 sm1 md1 lg1>             
-                            <v-card-text class="fontIran">3شنبه</v-card-text> 
-                        </v-flex>    
-                        <v-flex xs5 sm4 md3 lg3>        
-                            <v-select class="fontIran" label="از ساعت" color="cyan accent-2"></v-select>             
-                        </v-flex>           
-                        <v-flex xs5 sm4 md3 lg3>                        
-                            <v-select class="fontIran" label="تا ساعت" color="cyan accent-2"></v-select>                 
-                        </v-flex>   
-                    </v-layout>
-
-                    <v-layout>
-                        <v-flex xs2 sm1 md1 lg1>             
-                            <v-card-text class="fontIran">4شنبه</v-card-text> 
-                        </v-flex>    
-                        <v-flex xs5 sm4 md3 lg3>        
-                            <v-select class="fontIran" label="از ساعت" color="cyan accent-2"></v-select>             
-                        </v-flex>           
-                        <v-flex xs5 sm4 md3 lg3>                        
-                            <v-select class="fontIran" label="تا ساعت" color="cyan accent-2"></v-select>                 
-                        </v-flex>   
-                    </v-layout>
-
-                    <v-layout>
-                        <v-flex xs2 sm1 md1 lg1>             
-                            <v-card-text class="fontIran">5شنبه</v-card-text> 
-                        </v-flex>    
-                        <v-flex xs5 sm4 md3 lg3>        
-                            <v-select class="fontIran" label="از ساعت" color="cyan accent-2"></v-select>             
-                        </v-flex>           
-                        <v-flex xs5 sm4 md3 lg3>                        
-                            <v-select class="fontIran" label="تا ساعت" color="cyan accent-2"></v-select>                 
-                        </v-flex>   
-                    </v-layout>
-
-                    <v-layout>
-                        <v-flex xs2 sm1 md1 lg1>             
-                            <v-card-text class="fontIran">جمعه</v-card-text> 
-                        </v-flex>    
-                        <v-flex xs5 sm4 md3 lg3>        
-                            <v-select class="fontIran" label="از ساعت" color="cyan accent-2"></v-select>             
-                        </v-flex>           
-                        <v-flex xs5 sm4 md3 lg3>                        
-                            <v-select class="fontIran" label="تا ساعت" color="cyan accent-2"></v-select>                 
-                        </v-flex>   
-                    </v-layout>
+                    <WorkingHour></WorkingHour>
                 </v-flex>
             </v-layout>
         </v-container>
@@ -350,6 +268,7 @@
 
 import { mapState, mapActions, mapGetters } from 'vuex';
 
+import WorkingHour from './../components/WorkingHour.vue';
 import Footer from './../components/Footer.vue';
 
 export default{
@@ -438,7 +357,8 @@ export default{
         }
     },
     components:{
-        Footer
+        Footer,
+        WorkingHour
     }
 }
 </script>
