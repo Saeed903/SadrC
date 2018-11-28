@@ -89,13 +89,8 @@
                 
                 </v-text-field>
             </v-flex>
-<<<<<<< HEAD
 
-            </v-card-text>
-=======
         </v-layout>
-          
->>>>>>> e9f5f415cb30068fe9381ff2ad0fc06a0f124939
 
             <v-card-text class="fontIran">
                 <p>نوع تجارتی که میخواهید انجام دهید:</p>
