@@ -59,6 +59,10 @@ import FrequentlyAskedQuestions from './views/FrequentlyAskedQuestions.vue'
 import ErrorAuth from './views/ErrorAuth.vue'
 import SupportCreateNewTicket from './views/SupportCreateNewTicket.vue'
 import store from './store';
+import Guides from './views/Guides.vue';
+import HowToBuyBticoins from './views/HowToBuyBticoins.vue';
+import Blog from './views/Blog.vue';
+
 
 
 Vue.use(Router);
@@ -381,5 +385,21 @@ export default new Router({
       name: 'MenuWallet',
       component: MenuWallet
     },
+    {
+      path: '/HowToBuyBticoins',
+      name: 'HowToBuyBticoins',
+      component: HowToBuyBticoins
+    },
+    {
+      path: '/Guides',
+      name: 'Guides',
+      component: Guides
+    },
+    {
+      path: '/Blog',
+      name: 'Blog',
+      component: Blog
+    },
+    
   ]
 })
