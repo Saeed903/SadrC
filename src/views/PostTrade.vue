@@ -415,8 +415,6 @@ export default{
     }
 }
 </script>
-<<<<<<< HEAD
-=======
 <style scoped>
 .fontIran{
     font-family:'Iranian Sans';
@@ -432,4 +430,3 @@ export default{
 }
 
 </style>
->>>>>>> 9f39430419e36cbfd63ea1bf0d00f0ec4d00f4b3
