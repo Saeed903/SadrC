@@ -324,7 +324,10 @@ export default{
                 const advertise = new Advertise( this.advertise);
                 console.log(advertise);
                 
-                advertise.save();
+                advertise.save()
+                    .then(response => {
+                        alert('ثبت با موفقیت انجام شد.')
+                    });
             }
         },
     },
