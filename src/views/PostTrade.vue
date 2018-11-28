@@ -113,7 +113,7 @@
             <v-divider></v-divider>
 
             <ul class="fontIran mt-4 mb-4 pr-3">
-                <li class="pb-3">چگونه قیمت معاملات از قیمت بازار ساعتی تعیین می شود?</li>
+                <li class="pb-3">چگونه قیمت معاملات از قیمت بازار ساعتی تعیین می شود؟</li>
                 <li class="pb-3">برای اطلاعات بیشتر در رابطه با معادلات نحوه تعریف قیمت معاملاتی خود به سوالات <router-link to="" class="fontsIran">قیمت گذاری</router-link> مراجعه کنید.</li>
                 <li>لطفا توجه داشته باشید که همیشه تبلیغ کننده مسئول پرداخت هزینه پردازش پرداخت است.</li>
             </ul>
@@ -145,7 +145,7 @@
             </v-flex>
 
             <v-flex sm6 md6 lg6>
-                <p class="fontIran caption pt-1">.اختیاری. حداکثر حد معامله در یک تجارت. برای فروش آنلاین، تعادل کیفی صدر کریپتو شما می تواند حداکثر تجارت قابل اعتماد را نیز محدود کند</p>    
+                <p class="fontIran caption pt-1">اختیاری. حداکثر حد معامله در یک تجارت. برای فروش آنلاین، تعادل کیفی صدر کریپتو شما می تواند حداکثر تجارت قابل اعتماد را نیز محدود کند.</p>    
             </v-flex>
         
             <v-flex sm6 md6 lg6>
@@ -174,7 +174,7 @@
         <v-container grid-list-md>
             <v-layout row wrap>
                 <v-flex>
-                    <WorkingHour></WorkingHour>
+                    <WorkingHour1></WorkingHour1>
                 </v-flex>
             </v-layout>
         </v-container>
@@ -291,7 +291,7 @@
 
 import { mapState, mapActions, mapGetters } from 'vuex';
 
-import WorkingHour from './../components/WorkingHour.vue';
+import WorkingHour1 from './../components/WorkingHour1.vue';
 import Footer from './../components/Footer.vue';
 
 export default{
@@ -423,7 +423,7 @@ export default{
     },
     components:{
         Footer,
-        WorkingHour
+        WorkingHour1
     }
 }
 </script>
