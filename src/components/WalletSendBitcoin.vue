@@ -1,125 +1,108 @@
 <template>
-    <div>
-        <div>
-            <p class="sendBtc">فرستادن بیت کوین</p>
-        </div>
-        <div class="wallet">
-            <div class="walletBtc">
-                <p class="boxText">:در کیف پول شما</p>
-                <p class="boxText">:هزینه معاملات</p>
-                <p class="boxText">:شما می توانید به سرعت</p>
+<v-container grid-list-md>
+    <v-flex xl6>
+        <v-card-text>
+            
+            <p class="pt-0 titled">فرستادن بیت کوین</p>
+        
+            <v-flex xs12 sm6 md6 xl6>
+                <v-card>
+                    <v-card-media class="pt-2">
+                        <div class="fontIran pr-2">
+                            <p>در کیف پول شما:</p>
+                            <p>هزینه معاملات:</p>
+                            <v-divider></v-divider>
+                            <p class="pt-3">شما می توانید به سرعت:</p>
+                        </div>
+                        <div class="pr-5">
+                            <p>0 BTC</p>
+                            <p>0.00005 BTC</p>
+                            <v-divider></v-divider>
+                            <p class="pt-3">0 BTC</p>
+                        </div>
+                    </v-card-media>
+                </v-card>
+            </v-flex>
+            <v-flex  xs12 sm6 md6 xl6>
+                <v-text-field
+                label="آدرس بیت کوین"
+                class="fontIran textField"
+                >
+                </v-text-field>
+            </v-flex>
+            <v-flex  xs12 sm6 md6 xl6>
+                <v-text-field
+                label="مقدار بیت کوین"
+                class="fontIran TextField"
+                >
+                </v-text-field>
+            </v-flex>
+        
+            <v-flex xs12 sm6 md6 xl6 class="pt-3">
+                
+                <p class="fontIran">گزینه های بیشتر</p>
+                <v-divider></v-divider>
+            </v-flex>
+
+        
+            <v-flex xs12 sm6 md6 xl6 class="pt-2">
+                <v-text-field
+                    class="fontIran"
+                    label="در لیست معاملات نمایش داده می شود."
+                >
+                </v-text-field>
+            </v-flex>
+            
+            <v-layout row wrap>
+            <v-flex  xs9 sm4 md4 xl4>
+                    <v-text-field
+                        class=" fontIran textAmount"
+                        label="مقدار"
+                    >
+                    </v-text-field>
+            </v-flex>
+                <v-flex  xs3 sm2 md2 xl2>
+                    <v-select
+                        :items="items"
+                        label="دلار"
+                        required
+                        class="fontIran select"
+                    >
+                    </v-select>
+                </v-flex>
+            </v-layout>
+        
+            <div>
+                <v-btn to="" class="grey darken-2 fontIran">ادامه دادن</v-btn>
             </div>
-            <div class="walletBtcLeft">
-                <p>0 BTC</p>
-                <p>0.00005 BTC</p>
-                <p>0 BTC</p>
+            <div>
+                <v-list-group class="fontIran">
+                    {{text}}
+                </v-list-group>
             </div>
-        </div>
-        <div>
-            <v-text-field
-            label="آدرس بیت کوین"
-            class="textField"
-            >
-            </v-text-field>
-        </div>
-        <div>
-            <v-text-field
-             label="مقدار بیت کوین"
-             class="secondTextField"
-            >
-            </v-text-field>
-        </div>
-        <div>
-            <p class="moreOption">گزینه های بیشتر</p>
-        </div>
-        <div>
-            <v-text-field
-                class="textAppear"
-                label=".در لیست معاملات نمایش داده می شود"
-            >
-            </v-text-field>
-        </div>
-        <div>
-            <v-text-field
-                class="textAmount"
-                label="مقدار"
-            >
-            </v-text-field>
-        </div>
-        <div>
-            <v-select
-                :items="items"
-                label="دلار"
-                required
-                class="select"
-            >
-            </v-select>
-        </div>
-        <div>
-            <v-btn to="" class="primary">ادامه دادن</v-btn>
-        </div>
-        <div>
-            <v-list-group>
-                {{text}}
-            </v-list-group>
-        </div>
-    </div>
+        </v-card-text>
+    </v-flex>
+</v-container>
 </template>
 <script>
     export default{
         data() {
             return{
-                text:'welcome to my exchange site'
+                text:'به سایت مبادله ما خوش آمدید؟'
             }
         }
     }
 </script>
 <style scoped>
-.textField{
-    width:50%;
+.titled{
+    font-family: Iranian Sans;
+    font-size: 18px;
 }
-.secondTextField{
-    width:50%;
+.fontIran{
+    font-family: Iranian Sans;
 }
-.textAppear{
-    width:50%;
+.contant{
+    font-family: Iranian Sans;
+   
 }
-.textAmount{
-    width:50%;
-}
-.select{
-     width:50%;
-}
-.wallet{
-    background-color:rgb(226, 242, 255);
-    border:2px solid rgb(214, 229, 241);
-    border-radius:3px;
-    margin-bottom:40px;
-    height:110px;
-    width:75%;
-}
-.walletBtc{
-    float:left;
-}
-.walletBtcLeft{
-     float:left;
-     text-align:right
-}
-.sendBtc{
-    font-size:25px;
-    font-family:b titr;
-    text-align:left;
-    text-shadow:1px 3px 3px rgb(185, 173, 173);
-    display:block;
-}
-.boxText{
-    margin-left:10px;
-}
-.moreOption{
-    font-size:25px;
-    font-family:b nazanin;
-    text-align:left;
-    text-shadow:1px 3px 3px rgb(185, 173, 173);
-}
-
 </style>
