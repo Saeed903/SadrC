@@ -6,10 +6,6 @@
                 <p class="fontIran text-xs-center"><v-icon color="red" size="16px">warning</v-icon>لطفا قبل از ثبت آگهی <router-link to="/Login" class="fontsIran">ورود</router-link> یا <router-link to="/signUp" class="fontsIran">ثبت نام</router-link> کنید!</p>
                 <v-divider></v-divider>
             </v-card-text>
-<<<<<<< HEAD
-=======
-
->>>>>>> e9f5f415cb30068fe9381ff2ad0fc06a0f124939
         <v-card-text>
             <p class="fontIran text-xs-center">قوانین و مقررات تبلیغاتی:</p>
             <ul class="fontIran pr-3">
