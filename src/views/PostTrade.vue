@@ -29,69 +29,6 @@
             <p> اگر بخواهید بیت کوین ها را بفروشید مطمئن شوید که شما بیت کوین ها را در کیف پول صدر  کریپتو خود موجود دارید</p>
         </v-card-text>
 
-        <v-radio-group v-model="selectedTradeType" class="pt-0">
-            <v-radio
-            v-for="tradeType in tradeTypes"
-            :key="tradeType.Id"
-            :label="tradeType.tradeTypeTitle"
-            :value="tradeType.tradeTypeTitle"
-            class="fontIran mt-0"
-            color="cyan accent-2"
-            ></v-radio>
-        </v-radio-group>
-
-        <v-layout row wrap>
-            <v-flex sm6 md6 lg3>
-                <v-text-field
-                class="mr-3 fontIran "
-                label="موقعیت مکانی"
-                color="cyan accent-2"
-                clearable
-                dense
-                >
-                <template slot="label">
-                    موقعیت مکانی <v-icon style="vertical-align: middle;color:aqua">add_location</v-icon>
-                </template>
-                </v-text-field>
-            </v-flex>
-
-            <v-flex sm6 md6 lg6>
-                <p class="fontIran caption pt-1">برای تجارت آنلاین شما نیاز به مشخص کردن کشور, تجارت محلی، لطفا شهر، کد پستی و یا نام خیابان را مشخص کنید</p>
-            </v-flex>
-        
-            <v-flex sm6 md6 lg6>
-                <v-autocomplete
-                v-validate="'required'"
-                :items="selectCurrencies"
-                v-model="selectedCurrency"
-                :error-messages="errors.collect('select')"
-                data-vv-name="select"
-                label="نوع ارز"
-                class="textField mr-3 fontIran"
-                color="cyan accent-2" 
-                browser-autocomplete
-                dense
-                >
-                </v-autocomplete>
-            </v-flex>
-
-            <v-flex sm6 md6 lg6>
-                <p class="fontIran caption pt-1">شما میتوانید هر ارزی را که میخواهید با آن تجارت کنید را انتخاب کنید.</p>
-            </v-flex>
-       
-            <v-flex sm6 md6 lg6>
-                <v-text-field
-                class="textField mr-3 fontIran"
-                label="محدوده تغییرات"
-                color="cyan accent-2"
-                v-model="advertise.margin"
-                >
-                
-                </v-text-field>
-            </v-flex>
-
-        </v-layout>
-
             <v-card-text class="fontIran">
                 <p>نوع تجارتی که میخواهید انجام دهید:</p>
                 <p> اگر بخواهید بیت کوین ها را بفروشید مطمئن شوید که شما بیت کوین ها را در کیف پول صدر  کریپتو خود موجود دارید</p>
