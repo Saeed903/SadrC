@@ -41,10 +41,10 @@ export default{
         return this.fingAdvertisesOnline().data;
     },
 
-    typeCustomer:function() {
+    typeCustomer() {
         return (this.isSeller==1) ?'فروشنده':'خریدار';
     },
-    headers:function() {
+    headers() {
         return  [{
             text: this.typeCustomer,
             align: 'center',
@@ -75,8 +75,9 @@ export default{
 
     this.findAdvertise()
         .then(response => {
-        // In the find action, the 'todos' array is not a reactive list, but the individual records are.
-        const advertises = response.data || response
+            const advertises = response.data || response;
+            console.log(advertises);
+            
         }), 
     console.log(this.isSeller);  
     this.getDataFromApi()

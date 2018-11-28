@@ -72,7 +72,7 @@
 
 import Advertise from './../components/Advertise.vue';
 import Footer from './../components/Footer.vue';
-import { mapState, mapGetters, mapActions } from 'vuex';
+
 
 export default{
     data:() => ({
@@ -82,23 +82,15 @@ export default{
        
     }),
     computed:{
-        ...mapState('advertises', { loadingAdvertise: 'isFindPending'}),
-        ...mapGetters('advertises', { findAdvertisesOnline: 'find'}),
-
-        advertises(){
-            return this.findAdvertisesOnline().data;
-        },
+        
     },
     methods:{
-        ...mapActions('advertises', { findAdvertise: 'find' }),
+      
 
         
     }, 
     mounted(){
-        this.findAdvertise()
-            .then( response => {
-                const advertises = response.data || response;
-            })
+       
     },
     components:{
         Advertise,
