@@ -13,7 +13,7 @@
                     <router-link to="/RepublicIran" class="iran hoverDecoration">جمهوری اسلامی ایران</router-link>
                 </v-card-text>
                 <div class="text-xs-center">
-                    <v-btn class="iran" color="primary" to="Signup" round>ثبت نام رایگان</v-btn>
+                    <v-btn class="iran" color="primary" to="Signup" round><v-icon size="20px">done_all</v-icon>ثبت نام رایگان</v-btn>
                 </div>
             </v-card>
         </v-flex>
