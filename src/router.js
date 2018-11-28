@@ -59,14 +59,11 @@ import FrequentlyAskedQuestions from './views/FrequentlyAskedQuestions.vue'
 import ErrorAuth from './views/ErrorAuth.vue'
 import SupportCreateNewTicket from './views/SupportCreateNewTicket.vue'
 import store from './store';
-<<<<<<< HEAD
 import AboutUs from './views/AboutUs.vue'
-=======
 import Guides from './views/Guides.vue'
 import HowToBuyBticoins from './views/HowToBuyBticoins.vue'
 import Blog from './views/Blog.vue'
 
->>>>>>> 656d8d6801baf90081916c95435682569fcf0440
 
 
 Vue.use(Router);
@@ -108,20 +105,14 @@ export default new Router({
       }
     }, 
     {
-<<<<<<< HEAD
       path: '/AboutUs',
       name: 'AboutUs',
       component: AboutUs,
     }, 
     {
-      path: '/MoreAboutTrustSystem',
-      name: 'MoreAboutTrustSystem',
-      component: MoreAboutTrustSystem,
-=======
       path: '/FrequentlyAskedQuestions',
       name: 'FrequentlyAskedQuestions',
       component: FrequentlyAskedQuestions,
->>>>>>> 656d8d6801baf90081916c95435682569fcf0440
     }, 
     {
       path: '/SupportCreateNewTicket',
