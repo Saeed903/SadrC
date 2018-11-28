@@ -39,9 +39,8 @@
             color="cyan accent-2"
             ></v-radio>
         </v-radio-group>
-
         <v-layout row wrap>
-            <v-flex sm6 md6 lg6>
+            <v-flex sm6 md6 lg3>
                 <v-text-field
                 class="mr-3 fontIran "
                 label="موقعیت مکانی"
