@@ -1,25 +1,22 @@
 <template>
     <div>
-        <div>
-            <v-card class="cardHover" color="rgb(61, 61, 61)">
-                <v-card-text class=" iran text-xs-center " >خرید و فروش بیت کوین در نزدیکی شما</v-card-text>
-                <v-card-text class="iran text-xs-center orange--text">فوری.امن.خصوصی</v-card-text>
-                <v-card-text class="text-xs-center ">
-                    <span class="iran orange--text">تجارت بیت کوین</span>
-                    <router-link to="/BitcoinCity" class="iran hoverDecoration">در 16370 شهر</router-link>
-                    <span class="iran orange--text">و</span>
-                    <router-link to="/BitcoinCountry" class="iran hoverDecoration">248 کشور</router-link>
-                    <span class="iran orange--text">شامل</span>
-                    <router-link to="/RepublicIran" class="iran hoverDecoration">جمهوری اسلامی ایران</router-link>
-                </v-card-text>
-                <div class="text-xs-center">
-                    <v-btn class="iran primary signButton" slot="activator" round>ثبت نام رایگان</v-btn>
-                </div>
-            </v-card>
-        </div>
+        <v-card color="rgb(61, 61, 61)">
+            <v-card-text class="fontIran text-xs-center " >صدرکریپتو ساده ترین و مطمعن ترین راه برای خرید و فروش و مدیریت ارز دیجیتال</v-card-text>
+            <v-card-text class="fontIran text-xs-center orange--text">فوری.امن.خصوصی</v-card-text>
+            <v-card-text class="text-xs-center ">
+                <span class="iran orange--text">تجارت بیت کوین</span>
+                <router-link to="/BitcoinCity" class="iran hoverDecoration">در 16370 شهر</router-link>
+                <span class="iran orange--text">و</span>
+                <router-link to="/BitcoinCountry" class="iran hoverDecoration">248 کشور</router-link>
+                <span class="iran orange--text">شامل</span>
+                <router-link to="/RepublicIran" class="iran hoverDecoration">جمهوری اسلامی ایران</router-link>
+            </v-card-text>
+            <v-btn class="iran primary signButton" slot="activator" round>ثبت نام رایگان</v-btn>
+            <v-btn>ثبت نام رایگان</v-btn>
+        </v-card>
       
         <div class="mt-5">
-            <p class="irans text-xs-center">صدرکریپتو ساده ترین و مطمئن ترین مکان برای خرید، فروش و مدیریت ارز دیجیتال خود می باشد</p>
+            <p class="irans text-xs-center"></p>
             <p class="irans text-xs-center" >خرید و فروش ارز دیجیتال</p>
             <p class="irans text-xs-center">صدرکریپتو ساده ترین و مطمئن ترین مکان برای خرید، فروش و مدیریت ارز دیجیتال خود می باشد.</p>
         </div>
@@ -119,15 +116,14 @@ export default{
 }
 .irans{
     font-family: 'Iranian Sans';
-    font-size: 16px;
+    font-size:16px;
 }
-.contant{
-    font-family: 'Iranian Sans';
-    
+.fontIran{
+    font-family:iranian sans;
+    font-size:17px;
 }
 .cardHover{
     border:1px solid #e3e3e3;
-    box-shadow:1px 2px 2px rgb(161, 156, 156);
 }
 .routerLink{
     text-decoration:none;
