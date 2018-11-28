@@ -230,7 +230,6 @@
       }
     },
     mounted(){
-     console.log(this.user);
     }, computed: {
       ...mapState(['currencyMenu']),
 

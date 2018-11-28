@@ -1,7 +1,8 @@
 <template>
-<div >
-    <v-card >
-            <p class="titled text-xs-center">داشبورد</p>
+<div>
+    <v-card>
+        
+        <p class="titled text-xs-center">داشبورد</p>
     
         <v-card-text>
             <v-card >
