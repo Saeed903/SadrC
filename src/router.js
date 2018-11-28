@@ -60,14 +60,8 @@ import ErrorAuth from './views/ErrorAuth.vue'
 import SupportCreateNewTicket from './views/SupportCreateNewTicket.vue'
 import store from './store';
 import AboutUs from './views/AboutUs.vue'
-<<<<<<< HEAD
-=======
-import Guides from './views/Guides.vue'
 import HowToBuyBticoins from './views/HowToBuyBticoins.vue'
-import Blog from './views/Blog.vue'
-
->>>>>>> e9f5f415cb30068fe9381ff2ad0fc06a0f124939
-
+import Guides from './views/Guides.vue'
 
 Vue.use(Router);
 
@@ -113,15 +107,9 @@ export default new Router({
       component: AboutUs,
     }, 
     {
-<<<<<<< HEAD
-      path: '/MoreAboutTrustSystem',
-      name: 'MoreAboutTrustSystem',
-      component: MoreAboutTrustSystem,
-=======
       path: '/FrequentlyAskedQuestions',
       name: 'FrequentlyAskedQuestions',
       component: FrequentlyAskedQuestions,
->>>>>>> e9f5f415cb30068fe9381ff2ad0fc06a0f124939
     }, 
     {
       path: '/SupportCreateNewTicket',
