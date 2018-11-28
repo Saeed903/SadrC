@@ -59,6 +59,7 @@ import MoreAboutTrustSystem from './views/MoreAboutTrustSystem.vue'
 import ErrorAuth from './views/ErrorAuth.vue'
 import SupportCreateNewTicket from './views/SupportCreateNewTicket.vue'
 import store from './store';
+import AboutUs from './views/AboutUs.vue'
 
 
 Vue.use(Router);
@@ -98,6 +99,11 @@ export default new Router({
           next('/SadrCrypto');
         })
       }
+    }, 
+    {
+      path: '/AboutUs',
+      name: 'AboutUs',
+      component: AboutUs,
     }, 
     {
       path: '/MoreAboutTrustSystem',
