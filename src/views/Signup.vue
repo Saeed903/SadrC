@@ -114,11 +114,6 @@
       confirmPassword:'',
       
     }),
-
-    mounted () {
-      console.log(vm.password);
-    },
-
     methods: {
       onVerify: function (response) {
       console.log('Verify: ' + response)
@@ -129,16 +124,17 @@
       resetRecaptcha () {
       this.$refs.recaptcha.reset() // Direct call reset method
       },
+
       signUp () {
-        if (this.valid){
-          const { User } = this.$FeathersVuex;
-          const user = new User(this.user);
-          user.save()
-            .then(user => {
-                console.log(user);
-                this.$router.push('/login');
-            });
-        }
+      if (this.valid){
+        const { User } = this.$FeathersVuex;
+        const user = new User(this.user);
+        
+        user.save().then(user => {
+              console.log(user);
+              this.$router.push('/login');
+          });
+      }
       },
       clear () {
         this.$refs.form.reset()
