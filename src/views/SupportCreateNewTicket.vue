@@ -1,35 +1,45 @@
 <template>
     <div>
-        <div>
-            <v-card>
-                <c-card-text>ارتباط با پشتیبان</c-card-text>
-                <v-card-text>کاربران عزیز، به مقدار غیرمعمول بلیط فعلی زمان پاسخ فعلی ما 2 روز است. با مهربانی از شما می خواهیم که بلیط های چندگانه را در رابطه با همین مسئله باز نکنید، زیرا شما فقط زمان پاسخ طولانی خود را می گیرید.</v-card-text>
+       <v-card-text class="fontIran headline">بلیط های پشتیبانی من</v-card-text>
+
+        <v-flex>
+            <v-card color="blue-grey darken-3">
+                <v-card-text class="fontIran text-xs-right body-1"><v-icon color="orange lighten-3" size="17px">done_all</v-icon>کاربران عزیز، با توجه به مقدار غیر معمول بلیط، زمان پاسخ فعلی ما 2 روز است. با مهربانی از شما می خواهیم که بلیط های چندگانه را در رابطه با همین مسئله باز نکنید، زیرا فقط زمان پاسخ ما را طولانی تر می کند.</v-card-text>
             </v-card>
-        </div>
-        <div>
-            <v-card>
-                <v-card-text>لطفا یک لحظه از وقت خود را برای توضیح مسئله خود بکشید. هیچ یک از گزینه های زیر مطابق موضوع شما نیست. لطفا دیگران را انتخاب کنید و موضوع خود را در نوشتن زمان پاسخ ما شرح دهید.</v-card-text>
-            </v-card>
-        </div>
-        <div>
-            <v-card>
-                <v-card-text>
-                    <router-link to="">گزارش تقلب</router-link>
-                    <router-link to="">با یک تجارت مشکوک کمک کنید</router-link>
-                    <router-link to="">مشکلات با معامله بیت کوین</router-link>
-                    <router-link to="">حساب من هک شده است</router-link>
-                    <router-link to="">کاربر جدید هستم</router-link>
-                    <router-link to="">کاربر جدید هستم</router-link>
-                    <router-link to="">حساب من در تعطیلات اجباری است</router-link>
-                    <router-link to=""> با تبلیغات من مشکل دارم</router-link>
-                    <router-link to="">من بازخورد خشونت آمیز دریافت کرده ام</router-link>
-                    <router-link to="">گزارش یک اشکال</router-link>
-                    <router-link to="">من نمیتوانم وارد حساب کاربری شوم</router-link>
-                    <router-link to="">ایمیل تأیید حساب من دریافت نمی کنم</router-link>
-                    <router-link to="">من نمیتوانم شماره تلفنم را تأیید کنم</router-link>
-                    <router-link to="">دیگر</router-link>
-                </v-card-text>
-            </v-card>
-        </div>
+        </v-flex>
+
+        <v-card-text class="fontIran ">لطفا یک لحظه از وقت خود را برای توضیح مسئله خود بیاموزید. اگر هیچ یک از گزینه های زیر با موضوع شما مطابقت نداشته باشد، لطفا "دیگر" را انتخاب کنید و در قسمت نوشتن توصیف کنید</v-card-text>
+        <v-card-text class="fontIran ">لطفا بهترین گزینه را انتخاب کنید.</v-card-text>
+
+            <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>گزارش تقلب</router-link></v-card-text>
+            <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>با یک تجارت مشکوک کمک کنید</router-link></v-card-text>
+            <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>مشکلات با معامله بیت کوین</router-link></v-card-text>
+            <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>حساب من هک شده است</router-link></v-card-text>
+            <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>کاربر جدید هستم</router-link></v-card-text>
+            <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>کاربر جدید هستم</router-link></v-card-text>
+            <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>حساب من در تعطیلات اجباری است</router-link></v-card-text>
+            <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>با تبلیغات من مشکل دارم</router-link></v-card-text>
+            <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>من بازخورد خشونت آمیز دریافت کرده ام</router-link></v-card-text>
+            <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>گزارش یک اشکال</router-link></v-card-text>
+            <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>من نمیتوانم وارد حساب کاربری شوم</router-link></v-card-text>
+            <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>ایمیل تأیید حساب من دریافت نمی کنم</router-link></v-card-text>
+            <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>من نمیتوانم شماره تلفنم را تأیید کنم</router-link></v-card-text>
+            <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>دیگر</router-link></v-card-text>
+
     </div>
 </template>
+<style scoped>
+.fontIran{
+    font-family:'Iranian Sans';
+    padding-left:20px;
+}
+.fontsIran{
+    font-family:'iranian sans';
+    color:#00B8D4;
+    text-decoration:none;
+}
+.fontsIran:hover{
+    color:#18FFFF;
+}
+
+</style>
