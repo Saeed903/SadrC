@@ -62,9 +62,9 @@ import store from './store';
 <<<<<<< HEAD
 import AboutUs from './views/AboutUs.vue'
 =======
-import Guides from './views/Guides.vue';
-import HowToBuyBticoins from './views/HowToBuyBticoins.vue';
-import Blog from './views/Blog.vue';
+import Guides from './views/Guides.vue'
+import HowToBuyBticoins from './views/HowToBuyBticoins.vue'
+import Blog from './views/Blog.vue'
 
 >>>>>>> 656d8d6801baf90081916c95435682569fcf0440
 
