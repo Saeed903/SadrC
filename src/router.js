@@ -59,8 +59,10 @@ import FrequentlyAskedQuestions from './views/FrequentlyAskedQuestions.vue'
 import ErrorAuth from './views/ErrorAuth.vue'
 import SupportCreateNewTicket from './views/SupportCreateNewTicket.vue'
 import store from './store';
-
-
+import AboutUs from './views/AboutUs.vue'
+import HowToBuyBticoins from './views/HowToBuyBticoins.vue'
+import Guides from './views/Guides.vue'
+import Blog from './views/Blog.vue'
 Vue.use(Router);
 
 const authFunction = function(to, from, next){
@@ -98,6 +100,11 @@ export default new Router({
           next('/SadrCrypto');
         })
       }
+    }, 
+    {
+      path: '/AboutUs',
+      name: 'AboutUs',
+      component: AboutUs,
     }, 
     {
       path: '/FrequentlyAskedQuestions',
@@ -381,5 +388,21 @@ export default new Router({
       name: 'MenuWallet',
       component: MenuWallet
     },
+    {
+      path: '/HowToBuyBticoins',
+      name: 'HowToBuyBticoins',
+      component: HowToBuyBticoins
+    },
+    {
+      path: '/Guides',
+      name: 'Guides',
+      component: Guides
+    },
+    {
+      path: '/Blog',
+      name: 'Blog',
+      component: Blog
+    },
+    
   ]
 })
