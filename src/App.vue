@@ -237,7 +237,7 @@
         { title: 'تماس با پشتیبان', path:'',icon:'public' },
         { title: 'وبلاگ', path:'',icon:'history' },
         { title: 'هزینه ها', path:'',icon:'help' },
-        { title: 'درباره ما', path:'',icon:'lock' },
+        { title: 'درباره ما', path:'/AboutUs',icon:'lock' },
       ],
       signState:'ثبت نام رایگان',
       loginState:'ورود'
