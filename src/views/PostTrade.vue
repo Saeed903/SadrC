@@ -267,21 +267,7 @@
             </v-flex>
         </v-layout>
 
-        <GmapMap
-        :center="{lat:10, lng:10}"
-        :zoom="7"
-        map-type-id="terrain"
-        style="width: 500px; height: 300px"
-        >
-            <GmapMarker
-                :key="index"
-                v-for="(m, index) in markers"
-                :position="m.position"
-                :clickable="true"
-                :draggable="true"
-                @click="center=m.position"
-            />
-        </GmapMap>
+        
 
         <Footer></Footer>
         </v-flex>
@@ -346,11 +332,7 @@ export default{
         this.findCryptCurrencies()
             .then(response => {
                 const cryptoCurrencies = response.data || response;  
-            }),
-            
-        this.$refs.mapRef.$mapPromise.then((map) => {
-                map.panTo({lat: 1.38, lng: 103.80})
-            })    
+            })
     },
     computed: {
         ...mapState(['currencyMenu', 'currency']),
