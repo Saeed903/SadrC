@@ -348,6 +348,23 @@
                 <span class="fontIran caption">.تبلیغات خود را محدود کنید تا تنها به کاربران نشان داده شود که شما به عنوان اعتماد علامتگذاری کرده اید<router-link class="fontsIran" to="">چگونگی علامت گذاری به کاربران مورد اعتماد</router-link>.</span>    
             </v-flex>
         </v-layout>
+
+        <GmapMap
+        :center="{lat:10, lng:10}"
+        :zoom="7"
+        map-type-id="terrain"
+        style="width: 500px; height: 300px"
+        >
+            <GmapMarker
+                :key="index"
+                v-for="(m, index) in markers"
+                :position="m.position"
+                :clickable="true"
+                :draggable="true"
+                @click="center=m.position"
+            />
+        </GmapMap>
+
         <Footer></Footer>
         </v-flex>
     </v-layout> 
@@ -409,9 +426,12 @@ export default{
            
         this.findCryptCurrencies()
             .then(response => {
-                const cryptoCurrencies = response.data || response;
-                
-            })   
+                const cryptoCurrencies = response.data || response;  
+            }),
+            
+        this.$refs.mapRef.$mapPromise.then((map) => {
+                map.panTo({lat: 1.38, lng: 103.80})
+            })    
     },
     computed: {
         ...mapState(['currencyMenu', 'currency']),
