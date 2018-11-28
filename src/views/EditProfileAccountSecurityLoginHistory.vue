@@ -1,7 +1,7 @@
 <template>
     <div>
-        <p>تاریخ ورود</p>
-        <router-link to="">بازگشت به امنیت حساب</router-link>
+        <p class="titled">تاریخ ورود</p>
+        <router-link class="router" to="">بازگشت به امنیت حساب</router-link>
         <v-data-table
             class="text-xs-left"
             :headers="headers"
@@ -12,11 +12,11 @@
         >
 
             <template slot="items" slot-scope="props">
-                <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
-                <td class="text-xs-right">{{ props.item.paymentMethod }}</td>
-                <td class="text-xs-right">{{ props.item.price }}</td>
-                <td class="text-xs-right">{{ props.item.limits }}</td>
-                <td class="text-xs-right"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
+                <td class="fontIran">{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
+                <td class="text-xs-right fontIran">{{ props.item.paymentMethod }}</td>
+                <td class="text-xs-right fontIran">{{ props.item.price }}</td>
+                <td class="text-xs-right fontIran">{{ props.item.limits }}</td>
+                <td class="text-xs-right fontIran"><v-btn class="primary" @click="buy()">خرید</v-btn></td>
             </template>
         </v-data-table>
     </div>
@@ -35,7 +35,7 @@ export default{
   },
   computed:{
     typeCustomer:function() {
-        return (this.isSeller==1) ?'Seller':'Buyer';
+        return (this.isSeller==1) ?'فروشنده':'خریدار';
     },
     headers:function() {
         return  [{
@@ -45,9 +45,9 @@ export default{
             sortable: false,
             value: 'name'
             },
-            { text: 'paymentMethod', value: 'paymentMethod' },
-            { text: ' price | bitcoin', value: ' price | bitcoin' },
-            { text: 'limits', value: 'limits' }
+            { text: 'روش پرداخت', value: 'روش پرداخت' },
+            { text: ' بیت کوین | قیمت', value: ' بیت کوین | قیمت' },
+            { text: 'محدودیت ها', value: 'محدودیت ها' }
             
         ]
     }
@@ -120,3 +120,33 @@ export default{
 };
   
 </script>
+<style scoped>
+.titled{
+  font-family: Iranian Sans;
+  font-size: 18px; 
+}
+
+.headline{
+  text-decoration: none;
+  padding-right:10px;
+  color:rgb(133, 129, 129);
+}
+.fontIran{
+font-family: Iranian Sans;
+font-size: 13px;
+
+}
+.router{
+    font-family:'iranian sans';
+    color:rgb(0, 153, 255);
+    text-decoration:none;
+}
+.router:hover{
+    color:rgb(0, 140, 255);
+}
+.btc{
+  font-family: Iranian Sans;
+  font-size: 15px;
+}
+</style>
+

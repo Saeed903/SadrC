@@ -6,7 +6,7 @@
     <v-card>
       <v-card-text class="fontIran" >
         <p class="titled"> امنیت حساب</p>
-        <p><router-link class="router" to="">برگشت به اطلاعات کاربری</router-link></p>
+        <p><router-link class="router" to="EditProfileIdentifyVerify">برگشت به اطلاعات کاربری</router-link></p>
         <p class="fontIran">سطح امنیتی حساب شما <span>ضعیف</span></p>
         <p class="fontIran">امنیت ضعیف حساب باعث افزایش خطر بیت کوین می شود. لطفا تأیید صحت دو عامل را فعال کنید</p>
       </v-card-text>

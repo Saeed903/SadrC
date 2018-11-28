@@ -40,6 +40,7 @@ import EditYourProfile from './views/EditYourProfile.vue'
 import PrivacyPolicy from './views/PrivacyPolicy.vue'
 import TermsOfService from './views/TermsOfService.vue'
 import Order from './views/Order.vue'
+import Order1 from './views/Order1.vue'
 import Trader from './views/Trader.vue'
 import TradeReportBadAdvertisement from './views/TradeReportBadAdvertisement.vue'
 import TraderReportFraudulentUser from './views/TraderReportFraudulentUser.vue'
@@ -183,6 +184,11 @@ export default new Router({
       path: '/Order',
       name: 'Order',
       component: Order
+    },
+    {
+      path: '/Order1',
+      name: 'Order1',
+      component: Order1
     },
     {
       path: '/TermsOfService',

@@ -1,74 +1,63 @@
 <template>
     <div>
-        <v-card>
-            <v-card-text>
-                <span class="fontIran pb-0">تغییر رمز عبور:</span><br>
-                <router-link class="fontsIran caption" to="">تغییر رمز عبور</router-link>
-            </v-card-text>
+            <v-card-text class="fontIran">تغییر رمز عبور</v-card-text>
+            <router-link class="fontsIran" to="">تغییر رمز عبور</router-link>
 
-            <v-card-text>
-                <span class="fontIran pb-0">تغییر آدرس ایمیل:</span><br>
-                <router-link class="fontsIran caption" to="">تغییر آدرس ایمیل</router-link>
-            </v-card-text>
+            <v-card-text class="fontIran">تغییر آدرس ایمیل</v-card-text>
+            <router-link class="fontsIran" to="">تغییر آدرس ایمیل</router-link>
 
-            <v-card-text>
-                <span class="fontIran pb-0">تغییر آدرس ایمیل:</span><br>
-                <router-link class="fontsIran caption" to="">تغییر آدرس ایمیل</router-link>
-            </v-card-text>
+        <div >
+            <v-card-text class="fontIran">ارزیابی</v-card-text>
+            <v-card-text class="fontIran">آدرس ایمیل تایید شده:نه</v-card-text>
+            <router-link class="fontsIran" to="">راه اندازی ایمیل</router-link>
+            <v-card-text class="fontIran">شماره تلفن تایید شده:نه</v-card-text>
+            <router-link class="fontsIran" to="">تایید شماره تلفن</router-link>
+            <v-card-text class="fontIran">شناسایی تایید شده:نه</v-card-text>
+            <router-link class="fontsIran" to="">هویت را تایید کنید</router-link>
+        </div>
 
-            <v-card-text>
-                <span class="fontIran subheading">ارزیابی:</span><br>
-                <span class="fontIran"><v-icon size="15px" color="red">warning</v-icon>آدرس ایمیل تایید نشده است:<router-link class="fontsIran caption" to="">راه اندازی ایمیل</router-link></span><br>
-                <span class="fontIran"><v-icon size="15px" color="red">warning</v-icon>شماره تلفن تایید نشده است:<router-link class="fontsIran caption" to="">تایید شماره تلفن</router-link></span><br>
-                <span class="fontIran"><v-icon size="15px" color="red">warning</v-icon>شناسایی تایید نشده است:<router-link class="fontsIran caption" to="">هویت را تایید کنید</router-link></span>
-            </v-card-text>
+        <div >
+            <v-card-text class="fontIran">امنیت</v-card-text>
+            <v-card-text class="fontIran">سطح امنیتی حساب شما ضعیف اسا</v-card-text>
+            <router-link class="fontsIran" to="">ویرایش گزینه های امنیتی</router-link> 
+        </div>
 
-            <v-card-text>
-                <span class="fontIran">امنیت:</span><br>
-                <span class="fontIran">سطح امنیتی حساب شما ضعیف است</span><br>
-                <router-link class="fontsIran caption" to="">ویرایش گزینه های امنیتی</router-link> 
-            </v-card-text>
+        <div >
+            <v-card-text class="fontIran">اسم واقعی</v-card-text>
+            <v-card-text class="fontIran">تایید اعتبار اسم:تایید نشده</v-card-text>
+            <router-link class="fontsIran" to="">اطلاعات نام واقعی شما</router-link>
+        </div>
 
-            <v-card-text>
-                <span class="fontIran">اسم واقعی:</span><br>
-                <span class="fontIran">اعتبار اسم تایید نشده است</span><br>
-                <router-link class="fontsIran caption" to="">اطلاعات نام واقعی شما</router-link>
-            </v-card-text>
+        <div >
+            <v-card-text class="fontIran">برنامه ها</v-card-text>
+            <v-card-text class="fontIran">برنامه های شضص ثاثت میتوانند عملیاتی را برای شمادر صدر کریپتو انجامدهد</v-card-text>
+            <v-card-text class="fontIran">شما در حال حاضر از هیچ برنامه ای استفاده نمی کنید</v-card-text>
+            <router-link class="fontsIran" to="">تنظیم و تغییر کد پین برنامه</router-link>
+            <router-link class="fontsIran" to="">مدیریت برنامه ها</router-link>
+        </div>
 
-            <v-card-text>
-                <span class="fontIran">برنامه ها:</span><br>
-                <span class="fontIran">برنامه های شضص ثاثت میتوانند عملیاتی را برای شمادر صدر کریپتو انجامدهد</span><br>
-                <span class="fontIran">شما در حال حاضر از هیچ برنامه ای استفاده نمی کنید</span><br>
-                <router-link class="fontsIran caption" to="">تنظیم و تغییر کد پین برنامه</router-link><br>
-                <router-link class="fontsIran caption" to="">مدیریت برنامه ها</router-link>
-            </v-card-text>
-    
-            <v-card-text>
-                <span class="fontIran">دریافت خدمات حق بیمه:</span><br>
-                <router-link class="fontsIran caption" to="">دریافت های خود را برای خدمات صدرکریپتو مشاده کنید.</router-link><br>
-                <span class="fontIran pt-0">توجه:از معاملات شما دریافتی نشده است اما دریافتی از خدماتی که از صدرکریپتو خریداری کرده اید برای اهداف مالیاتی است شما میتوانید کسب و کار خود را بدست اوردن مخاطبین گیدا کنید</span>
-            </v-card-text>
+        <div >
+            <v-card-text class="fontIran">دریافت خدمات حق بیمه</v-card-text>
+            <router-link class="fontsIran" to="">دریافت های خود را برای خدمات صدرکریپتو مشاده کنید.</router-link><br>
+            <v-card-text class="fontIran"><strong class="fontIran">توجه:</strong>از معاملات شما دریافتی نشده است اما دریافتی از خدماتی که اط صدرکریپتو خریداری کرده اید برای اهداف مالیاتی است شما میتوانید کسب و کار خود را بذست اوردن مخاطبین گیدا کنید</v-card-text>
+        </div>
 
-            <v-card-text>
-                <span class="fontIran">اطلاعات شخصی</span><br>
-                <router-link class="fontsIran caption" to="">نشان کردن اطلاعات شخصی</router-link>
-            </v-card-text>
-         
-            <v-card-text>
-                <span class="fontIran">اطلاعات حساب</span><br>
-                <router-link class="fontsIran caption" to="">حذف حساب کاربری در صدر کریپتو</router-link>
-            </v-card-text>
-             
-            <v-btn class="fontIran mt-4" color="primary">ذخیره تغییرات</v-btn>
-        </v-card>
+        <div >
+            <v-card-text class="fontIran">اطلاعات شخصی</v-card-text>
+            <router-link class="fontsIran" to="">نشان کردن اطلاعات شخصی</router-link>
+        </div>
+
+        <div >
+            <v-card-text class="fontIran">اطلاعات حساب</v-card-text>
+            <router-link class="fontsIran" to="">حذف حساب کاربری در صدر کریپتو</router-link>
+        </div>
+ 
     </div>
 </template>
 <script>
-  export default {
-    components:{
-    }
-  }
+    
 </script>
+
 <style scoped>
 .fontIran{
     font-family:'Iranian Sans';
@@ -76,11 +65,10 @@
 }
 .fontsIran{
     font-family:'iranian sans';
-    color:#00B8D4;
+    color:rgb(0, 153, 255);
     text-decoration:none;
 }
 .fontsIran:hover{
-    color:#18FFFF;
+    color:rgb(0, 140, 255);
 }
-
 </style>

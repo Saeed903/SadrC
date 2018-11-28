@@ -93,20 +93,14 @@
     </div>
 </template>
 <script>
-import { mapActions } from 'vuex';
-import OrderProcess from './../components/OrderProcess.vue'
+
  
 export default {
-    name: 'Order',
+   
     data: ()=>({
 
     }),
-    components:{
-        OrderProcess
-    },
-    mounted() {
-
-    }
+   
 }
 </script>
 <style scoped>
