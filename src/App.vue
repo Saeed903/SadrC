@@ -150,7 +150,7 @@
               <span class="saidbar">{{signState}}</span>
             </v-tooltip>
           </router-link>
-          <router-link to="MoreAboutTrustSystem">more</router-link>
+          <router-link to="FrequentlyAskedQuestions">more</router-link>
           <router-link to="EditYourProfile" class="white--text">edit profile</router-link>
         </v-toolbar-items>
       </v-card-text>

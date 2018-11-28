@@ -55,11 +55,18 @@ import Support from './views/Support.vue'
 import Merchant from './views/Merchant.vue'
 import Trusted from './views/Trusted.vue'
 import SupportDrop from './views/SupportDrop.vue'
-import MoreAboutTrustSystem from './views/MoreAboutTrustSystem.vue'
+import FrequentlyAskedQuestions from './views/FrequentlyAskedQuestions.vue'
 import ErrorAuth from './views/ErrorAuth.vue'
 import SupportCreateNewTicket from './views/SupportCreateNewTicket.vue'
 import store from './store';
+<<<<<<< HEAD
 import AboutUs from './views/AboutUs.vue'
+=======
+import Guides from './views/Guides.vue';
+import HowToBuyBticoins from './views/HowToBuyBticoins.vue';
+import Blog from './views/Blog.vue';
+
+>>>>>>> 656d8d6801baf90081916c95435682569fcf0440
 
 
 Vue.use(Router);
@@ -101,6 +108,7 @@ export default new Router({
       }
     }, 
     {
+<<<<<<< HEAD
       path: '/AboutUs',
       name: 'AboutUs',
       component: AboutUs,
@@ -109,6 +117,11 @@ export default new Router({
       path: '/MoreAboutTrustSystem',
       name: 'MoreAboutTrustSystem',
       component: MoreAboutTrustSystem,
+=======
+      path: '/FrequentlyAskedQuestions',
+      name: 'FrequentlyAskedQuestions',
+      component: FrequentlyAskedQuestions,
+>>>>>>> 656d8d6801baf90081916c95435682569fcf0440
     }, 
     {
       path: '/SupportCreateNewTicket',
@@ -387,5 +400,21 @@ export default new Router({
       name: 'MenuWallet',
       component: MenuWallet
     },
+    {
+      path: '/HowToBuyBticoins',
+      name: 'HowToBuyBticoins',
+      component: HowToBuyBticoins
+    },
+    {
+      path: '/Guides',
+      name: 'Guides',
+      component: Guides
+    },
+    {
+      path: '/Blog',
+      name: 'Blog',
+      component: Blog
+    },
+    
   ]
 })
