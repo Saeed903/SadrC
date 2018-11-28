@@ -93,7 +93,7 @@
             <v-icon slot="activator" color="white" dark >
               shopping_cart
             </v-icon>
-            <span>ثبت آگهی</span>
+            <span class="saidbar">ثبت آگهی</span>
           </v-tooltip>
         </router-link>
       
@@ -102,7 +102,7 @@
             <v-icon slot="activator" color="white" dark>
               group
             </v-icon>
-            <span>انجمن ها</span>
+            <span class="saidbar">انجمن ها</span>
           </v-tooltip>
         </router-link>
 
@@ -111,7 +111,7 @@
             <v-icon slot="activator" color="white" dark>
               help
             </v-icon>
-            <span>کمک</span>
+            <span class="saidbar">کمک</span>
           </v-tooltip>
         </router-link>
 
@@ -120,16 +120,23 @@
 
       <v-card-text >
         <v-toolbar-items v-if="!user"> 
-          <router-link to="Signup" class="freeRegister">{{signState}}</router-link>
-          <router-link to="Login" class="menu">
+          <router-link to="Login">
             <v-tooltip bottom>
               <v-icon slot="activator" color="white" dark>
                 lock_open
               </v-icon>
-              <span>ورود</span>
+              <span class="saidbar">{{loginState}}</span>
             </v-tooltip>
           </router-link>
-          <router-link to="MoreAboutTrustSystem">more</router-link>
+          <router-link to="Signup">
+            <v-tooltip bottom>
+              <v-icon slot="activator" color="white" dark>
+                lock
+              </v-icon>
+              <span class="saidbar">{{signState}}</span>
+            </v-tooltip>
+          </router-link>
+          <router-link to="FrequentlyAskedQuestions">more</router-link>
           <router-link to="EditYourProfile" class="white--text">edit profile</router-link>
         </v-toolbar-items>
       </v-card-text>
@@ -173,7 +180,7 @@
       
 
       <v-card-text class="text-sm-left headline">
-        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="body-2 ">.com</span><v-icon color="grey">home</v-icon></router-link>
+        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="body-2">.com</span><v-icon color="grey">home</v-icon></router-link>
       </v-card-text>
       
     </v-toolbar>

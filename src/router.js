@@ -55,7 +55,7 @@ import Support from './views/Support.vue'
 import Merchant from './views/Merchant.vue'
 import Trusted from './views/Trusted.vue'
 import SupportDrop from './views/SupportDrop.vue'
-import MoreAboutTrustSystem from './views/MoreAboutTrustSystem.vue'
+import FrequentlyAskedQuestions from './views/FrequentlyAskedQuestions.vue'
 import ErrorAuth from './views/ErrorAuth.vue'
 import SupportCreateNewTicket from './views/SupportCreateNewTicket.vue'
 import store from './store';
@@ -100,9 +100,9 @@ export default new Router({
       }
     }, 
     {
-      path: '/MoreAboutTrustSystem',
-      name: 'MoreAboutTrustSystem',
-      component: MoreAboutTrustSystem,
+      path: '/FrequentlyAskedQuestions',
+      name: 'FrequentlyAskedQuestions',
+      component: FrequentlyAskedQuestions,
     }, 
     {
       path: '/SupportCreateNewTicket',
