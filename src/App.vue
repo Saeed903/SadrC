@@ -106,15 +106,29 @@
           </v-tooltip>
         </router-link>
 
-        <router-link to="Help">
-          <v-tooltip bottom>
-            <v-icon slot="activator" color="white" dark>
-              help
-            </v-icon>
-            <span class="saidbar">کمک</span>
-          </v-tooltip>
-        </router-link>
-
+          <v-menu 
+            offset-y
+            transition="slide-y-transition"
+            >
+              <v-btn
+              slot="activator"
+              dark
+              >
+                <v-icon>help</v-icon>
+                <v-icon color="grey" dark>arrow_drop_down</v-icon>
+              </v-btn>
+              <v-list>
+              <v-list-tile
+              v-for="(help, index) in helps"
+              :key="index"
+              @click="routing(help.path)"
+              class="menuFont"
+              >
+              <v-icon>{{help.icon}}</v-icon>
+              <v-list-tile-title class="fontIran">{{ help.title }}</v-list-tile-title>
+              </v-list-tile>
+              </v-list>
+            </v-menu>
       </v-toolbar-items>
       </v-card-text>
 
@@ -207,7 +221,6 @@
   export default {
   data: () => ({
       drawer: true,
-      
       Profiles: [
         { title: 'sadrSys',icon:'account_circle'},
         { title: 'ویرایش پروفایل', path:'/EditYourProfile',icon:'home'},
@@ -216,6 +229,15 @@
         { title: 'قابل اعتماد', path:'/Trusted',icon:'history' },
         { title: 'پشتیبانی', path:'SupportDrop',icon:'help' },
         { title: 'خروج', path:'',icon:'lock' },
+      ],
+       helps: [
+        { title: 'چگونه بیت کوین بخریم؟',icon:'account_circle'},
+        { title: 'سوالات متداول', path:'',icon:'home'},
+        { title: 'راهنمایی ها', path:'',icon:'fas fa-tachometer-alt'},
+        { title: 'تماس با پشتیبان', path:'',icon:'public' },
+        { title: 'وبلاگ', path:'',icon:'history' },
+        { title: 'هزینه ها', path:'',icon:'help' },
+        { title: 'درباره ما', path:'/AboutUs',icon:'lock' },
       ],
       signState:'ثبت نام رایگان',
       loginState:'ورود'
@@ -247,6 +269,10 @@
 </script>
 
 <style scoped>
+.fontIran{
+  font-family:iranian sans;
+  font-size:12px;
+}
 .saidbar{
   font-family:iranian sans;
 }
