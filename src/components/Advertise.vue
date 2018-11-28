@@ -86,7 +86,13 @@ export default{
         })
   },
   methods: {
+
+
     ...mapActions('advertises', { findAdvertise : 'find'}),
+
+    buy(){
+
+    },
 
     getDataFromApi () {
     this.loading = true
