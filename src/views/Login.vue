@@ -119,7 +119,7 @@
             ...this.user
           }).then(async ()=>{
             console.log('logged in');
-            await this.$router.push('/SadrCrypto');
+            await this.$router.go(-1);
           }).catch(async e => {
             console.error('Authentication Error', e.message);
             this.errorMessage = e.message;
