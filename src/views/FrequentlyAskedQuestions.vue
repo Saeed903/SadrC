@@ -3,7 +3,7 @@
         <v-card-text class="text-xs-center">
             <v-icon large>help_outline</v-icon>
             <p class="titled">سوالات متداول</p>
-            <p class="text">این که آیا شما یک کاربر جدید هستید و یا یک معامله گر چاشنی هستید، به تمام سوالات خود در این صفحه پاسخ خواهید داد. اگر از Bitcoins جدید هستید می توانید از این راهنمای مفید خرید بیت کوین ها با استفاده از LocalBitcoins انجام دهید. اگر می خواهید یک معامله گر شوید، راهنمای آنلاین Bitcoins ها برای شما مناسب است. شما همچنین می توانید یک سوال در انجمن های ما بپرسید یا بلیط پشتیبانی را برای تماس با پشتیبانی ما باز کنید.</p>
+            <p class="text">این که آیا شما یک کاربر جدید هستید و یا یک معامله گر چاشنی هستید، به تمام سوالات خود در این صفحه پاسخ خواهید داد. اگر از بیت کوین جدید هستید می توانید از این راهنمای مفید خرید بیت کوین ها با استفاده از صدرکریپتو انجام دهید. اگر می خواهید یک معامله گر شوید، راهنمای آنلاین بیت کوین ها برای شما مناسب است. شما همچنین می توانید یک سوال در انجمن های ما بپرسید یا بلیط پشتیبانی را برای تماس با پشتیبانی ما باز کنید.</p>
         </v-card-text>
         
         <div>
@@ -12,22 +12,22 @@
         <v-layout row wrap>
             <v-flex>
                 <v-card-text class="text-xs-center">
-                <v-icon>fab fa-twitter</v-icon><br>
+                <v-icon large>local_shipping</v-icon><br>
                 <router-link class="link" to="">یک بلیط پشتیبانی را باز کنید</router-link>
                 </v-card-text>
              </v-flex>
 
              <v-flex>
                 <v-card-text class="text-xs-center">
-                <v-icon>group</v-icon><br>
+                <v-icon large>group</v-icon><br>
                 <router-link class="link" to="">پست در انجمن ما</router-link>
                 </v-card-text>
             </v-flex>
 
             <v-flex>
                 <v-card-text class="text-xs-center">
-                <v-icon>home</v-icon><br>
-                <router-link class="link" to="">یک صدای جیر جیر را بنویس</router-link>
+                <v-icon large>fab fa-twitter</v-icon><br>
+                <router-link class="link" to="">در توییت ما بنویسید</router-link>
                 </v-card-text>
             </v-flex>
         </v-layout>

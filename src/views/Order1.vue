@@ -28,9 +28,7 @@
                 <p>ارسال پیام به من:04134479676</p>
             </div>
         </div>
-        <order-process>
-
-        </order-process>
+        
         <div>
             <v-btn class="success"></v-btn>
         </div>
