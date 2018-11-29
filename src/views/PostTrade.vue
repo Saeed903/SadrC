@@ -51,17 +51,19 @@
 
                 <v-layout row wrap>
                     <v-flex sm6 md6 lg6>
-                        <v-text-field
-                        class="mr-3 fontIran "
-                        label="موقعیت مکانی"
-                        color="cyan accent-2"
-                        clearable
+                        <v-autocomplete
+                        v-validate="'required'"
+                        :items="selectCountries"
+                        v-model="selectCountry"
+                        :error-messages="errors.collect('select')"
+                        data-vv-name="select"
+                        label="نوع ارز"
+                        class="textField mr-3 fontIran"
+                        color="cyan accent-2" 
+                        browser-autocomplete
                         dense
                         >
-                        <template slot="label">
-                            موقعیت مکانی <v-icon style="vertical-align: middle;color:aqua">add_location</v-icon>
-                        </template>
-                        </v-text-field>
+                        </v-autocomplete>
                     </v-flex>
 
                     <v-flex sm6 md6 lg6>
@@ -71,8 +73,8 @@
                     <v-flex sm6 md6 lg6>
                         <v-autocomplete
                         v-validate="'required'"
-                        :items="selectCurrencies"
-                        v-model="selectedCurrency"
+                        :items="selectCryptoCurrencies"
+                        v-model="selectCryptoCurrency"
                         :error-messages="errors.collect('select')"
                         data-vv-name="select"
                         label="نوع ارز"
@@ -314,6 +316,7 @@ export default{
         
     }),
     methods:{
+        
         ...mapActions('tradeTypes', { findTradeTypes: 'find'}),
         ...mapActions('countries', { findCountries: 'find'}),
         ...mapActions('cryptoCurrencies', { findCryptCurrencies: 'find'}),
@@ -388,7 +391,21 @@ export default{
                 
             }
         },
-        selectedCurrency:{
+        selectCountry: {
+            get:function(){
+                var countryModel, country;
+                countryModel = this.countries.find(country => country.Id == this.advertise.countryId);
+
+                if(countryModel !=null ){
+                    country = countryModel.countryName;
+                }
+                return country ;
+            },
+            set:function(selectedCountryName){
+                this.advertise.countryId = this.countries.find(country => country.countryName == selectedCountryName).Id;
+            }
+        },
+        selectCryptoCurrency:{
            get: function(){
                var currencyFullName, currencyModel;
                currencyModel = this.cryptoCurrencies.find(currency => currency.Id == this.advertise.cryptoCurrencyId);
@@ -398,18 +415,24 @@ export default{
                                   currencyModel.cryptoCurrencyName + ' ' + 
                                   currencyModel.cryptoCurrencyTitle;
                }
-              
                return currencyFullName || null;                   
-
            },
-           set:function(newValue){
-               var cryptoCurrencyCode = newValue.split(' ');
+           set:function(selectedCryptroCurrency){
+               var cryptoCurrencyCode = selectedCryptroCurrency.split(' ');
                var currencyModel = this.cryptoCurrencies.find(currency => currency.cryptoCurrencyCode == cryptoCurrencyCode[0]);
                this.advertise.cryptoCurrencyId = currencyModel.Id;
            } 
         },
+
+        selectCountries(){
+            var selected = [];
+            this.countries.map( country => {
+                selected.push(country.countryName);
+            })
+            return selected;
+        },
         
-        selectCurrencies(){
+        selectCryptoCurrencies(){
             var selected = [];
             this.cryptoCurrencies.map(v =>{
                     selected.push(v.cryptoCurrencyCode + ' ' + v.cryptoCurrencyName + ' ' + v.cryptoCurrencyTitle) ;
