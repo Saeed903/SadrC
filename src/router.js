@@ -63,10 +63,6 @@ import AboutUs from './views/AboutUs.vue'
 import HowToBuyBticoins from './views/HowToBuyBticoins.vue'
 import Guides from './views/Guides.vue'
 import Blog from './views/Blog.vue'
-<<<<<<< HEAD
-
-=======
->>>>>>> e7e9dc6c5b1a76120e656f361572d4105882f501
 Vue.use(Router);
 
 const authFunction = function(to, from, next){
