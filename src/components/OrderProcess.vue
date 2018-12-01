@@ -1,6 +1,6 @@
 <template>
-<div>
-    <v-card-text class="fontIran">
+<v-layout column>
+   
         <div v-if="!confirmEmail && logged">
             <v-card-text class="fontIran">
                 <p>شما باید ایمیل خود را تایید نمایید.قبل از آنکه سفارش بدهید ایمیل فرستاده شده را پیدا کرده و پس از تایید دوباره به این صفحه بازگردید.
@@ -8,53 +8,57 @@
                 <v-btn to="/EditProfileAccountSecurity" block color="secondary" dark class="fontIran"><v-icon >send</v-icon>ارسال مجدد تاییدیه ایمیل</v-btn>
             </v-card-text>
         </div>
+<v-layout>
+    <v-card>
+        <v-card-text>
+            <div v-if="confirmEmail || !logged">
+                <p class="fontIran">چقدر می خواهید خرید کنید؟</p>
+                <v-layout>
+                    <v-flex d-flex xs12 sm5 md5>
+                        <v-text-field
+                            outline
+                            clearable
+                            label="بیت کوین"
+                            type="number"
+                            value="0.00000000"
+                        >
+                        </v-text-field>
+                    </v-flex>
+                    <v-flex d-flex xs12 sm5 md5>
+                        <v-text-field
+                            outline
+                            clearable
+                            label="ریال"
+                            type="number"
+                            value="0.00"
+                            clear
+                        >
+                        </v-text-field>
+                    </v-flex>
+                </v-layout>
+            </div>
 
-        <div v-if="confirmEmail || !logged">
-            <p>چقدر می خواهید خرید کنید؟</p>
+            <div class="fontIran" v-if="!logged">
+                <p class="titled">ثبت نام و بلافاصله خرید بیت کوین</p>
+                <v-btn to="Signup"  color="secondary"><v-icon></v-icon>ثبت نام رایگان</v-btn>
+                <p class="type">ثبت نام رایگان است و تنها 30 ثانیه طول می کشد.</p>
+            </div>
+        </v-card-text>
+    </v-card>
+</v-layout>
     
-            <v-layout>
-                <v-flex d-flex xs12 sm5 md5>
-                    <v-text-field
-                        outline
-                        clearable
-                        label="بیت کوین"
-                        type="number"
-                        value="0.00000000"
-                    >
-                    </v-text-field>
-                </v-flex>
-                <v-flex d-flex xs12 sm5 md5>
-                    <v-text-field
-                        outline
-                        clearable
-                        label="ریال"
-                        type="number"
-                        value="0.00"
-                        clear
-                    >
-                    </v-text-field>
-                </v-flex>
-            </v-layout>
-        </div>
-
-        <div v-if="!logged">
-            <p class="titled">ثبت نام و بلافاصله خرید بیت کوین</p>
-            <v-btn to="Signup"  color="secondary"><v-icon></v-icon>ثبت نام رایگان</v-btn>
-            <p class="type">ثبت نام رایگان است و تنها 30 ثانیه طول می کشد.</p>
-        </div>
-
         <div v-if="logged && confirmEmail">
             <v-textarea
-                box
+                outline
                 color="cyan accent-2"
                 hint="اطلاعات تماس خود و اطلاعاتی که لازم است که آگهی دهنده بداند را در اینجا وارد کنید"
                 clearable
             ></v-textarea>
-            <v-btn class="text-xs-center" >ارسال درخواست تجارت</v-btn>
+            <v-btn class="text-xs-center fontIran" >ارسال درخواست تجارت</v-btn>
         </div>
-    </v-card-text>
+    
         
-    <v-flex v-if="!logged " d-flex xs12 sm12 md12 lg12>
+    <v-flex pt-2 v-if="!logged " d-flex xs12 sm12 md12 lg12>
         <v-expansion-panel>
             <v-expansion-panel-content
             v-for="(item,i) in items"
@@ -68,8 +72,8 @@
             </v-expansion-panel-content>
         </v-expansion-panel>
     </v-flex>
-        
-</div>
+    
+</v-layout>
 </template>
 <script>
 import { mapState } from 'vuex'

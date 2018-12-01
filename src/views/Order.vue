@@ -1,58 +1,53 @@
 <template>
 <v-container grid-list-md>
   <v-flex d-flex xl8>
-  
-  <v-layout row wrap>
+    <v-layout row wrap>
   
       <v-card-text>
         <p class="titled">خرید بیت کوین با استفاده از انتقال بانکی جمهوری اسلامی ایران با ریال ایران</p>
       </v-card-text>
       
-    <v-flex d-flex xs12 sm6 md8 >
-      <v-layout row wrap>
-        <v-flex d-flex>
-          <v-card-media class="btc pr-5">
-            <div>  
-              <p>قیمت:</p>
-              <p>روش پرداخت:</p>
-              <p>کاربر:</p>
-              <p>محدودیت های تجاری:</p>
-              <p>موقعیت:</p>
-              <p>پنجره پرداخت</p>
-            </div>
-            <div class="pr-4">
-              <p style="color:greenyellow">935543438.97 IRR/BTC</p>
-              <p>انتقال بانک جمهوری اسلامی ایران</p>
-              <p><router-link  to="/DashBoard"><v-tooltip  right><v-icon slot="activator"  style="color:aqua">perm_identity</v-icon><span class="fontIran">داشبورد</span></v-tooltip></router-link>آلمان</p>
-              <p>نمره بازخورد.100<router-link to="" class="router">دیدن بازخورد</router-link></p>
-              <p>10,000,000-30,000,001 IRR</p>
-              <p ><router-link to="" class="router">تهران,استان تهران,ایران</router-link></p>
-              <p>1 ساعت و 30 دقیقه</p>
+      <v-flex d-flex xs12 sm8 md8 >
+        <v-layout row wrap>
+          <v-flex d-flex>
+              <div class="btc pr-5">  
+                <p>قیمت:</p>
+                <p>روش پرداخت:</p>
+                <p>کاربر:</p>
+                <p>محدودیت های تجاری:</p>
+                <p>موقعیت:</p>
+                <p>پنجره پرداخت</p>
+              </div>
+              <div class="btc pr-4">
+                <p style="color:greenyellow">935543438.97 IRR/BTC</p>
+                <p>انتقال بانک جمهوری اسلامی ایران</p>
+                <p><router-link  to="/DashBoard"><v-tooltip  right><v-icon slot="activator"  style="color:aqua">perm_identity</v-icon><span class="fontIran">داشبورد</span></v-tooltip></router-link>آلمان</p>
+                <p>نمره بازخورد.100<router-link to="" class="router">دیدن بازخورد</router-link></p>
+                <p>10,000,000-30,000,001 IRR</p>
+                <p ><router-link to="" class="router">تهران,استان تهران,ایران</router-link></p>
+                <p>1 ساعت و 30 دقیقه</p>
               </div>  
-          </v-card-media>
-        </v-flex>
-        <v-btn to="order1">order1</v-btn>
-        <v-flex>
-          <v-card>
-          <order-process></order-process>
-          </v-card>
-        </v-flex>
-      </v-layout>
-    </v-flex>
+          </v-flex>
+          
+          <v-flex>
+            <order-process></order-process>
+          </v-flex>
+        </v-layout>
+      </v-flex>
     
-    <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md4 >
-      <working-hour workingTime="true"></working-hour>
-    </v-flex>
-    
-    <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md6 >
-      <working-hour sadrsys="true"></working-hour>  
-    </v-flex>
+      <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md4 >
+        <working-hour workingTime="true"></working-hour>
+      </v-flex>
+      
+      <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md6 >
+        <working-hour sadrsys="true"></working-hour>  
+      </v-flex>
 
-    <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md6 >
-      <working-hour Reminder="ture"></working-hour>  
-    </v-flex>
-  </v-layout>
-  
+      <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md6 >
+        <working-hour Reminder="ture"></working-hour>  
+      </v-flex>
+
+    </v-layout>
   </v-flex>
 </v-container>
 </template>

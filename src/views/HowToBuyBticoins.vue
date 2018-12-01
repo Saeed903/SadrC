@@ -11,20 +11,29 @@
                 </v-flex>
 
                 <v-layout row wrap>
-                    <v-flex>
+                    <v-flex xs6 sm6 md6 lg6 xl6>
                         <v-card>
-                            <v-flex xs6 sm6 md6 lg6 xl6>
-                                <v-tooltip label="اشتراک گذاری"><v-icon class="Share">Share</v-icon></v-tooltip>
-                                <v-tooltip><v-icon class="time">time</v-icon></v-tooltip>
-                            </v-flex>
-                            <v-flex xs6 sm6 md6 lg6 xl6>
-                                <v-icon>بیت کوین</v-icon>
+                            <v-card-text>
+                                <v-icon>بیت</v-icon>
+                                <v-icon class="pr-3">کوین</v-icon>
+                            </v-card-text>
+                        </v-card>
+                    </v-flex>
+                    <v-flex  xs6 sm6 md6 lg6 xl6>
+                        <v-card>
+                            <v-card-text class="text-xs-left">
                                 <router-link class="router" to=""> چگونه:خرید بیت کوین در صدر کریپتو</router-link>
-                            </v-flex>
-                            <!--<v-video></v-video>-->
+                                <v-icon class="pr-3">بیت کوین</v-icon>
+                            </v-card-text>
                         </v-card>
                     </v-flex>
                 </v-layout>
+
+                <v-flex>
+                    <v-card>
+                         <!--<v-video></v-video>-->
+                    </v-card>
+                </v-flex>
 
                 <v-flex>
                     <v-card-text class="fontIran">
@@ -35,8 +44,8 @@
 
                 <v-flex>
                     <v-card-text class="fontIran">
-                        <p class="fontIran1 text-xs-center">مرحله 2. جستجو برای تبلیغات</p>
-                        <p class="fontIran1">به صفحه اصلی بروید و در کادر جستجو فرم را با مبلغی که میخواهید در ارز، محل سکونت خود خریداری کنید، پر کنید و روش پرداخت را انتخاب کنید. اگر مطمئن نیستید که چگونه می خواهید پرداخت کنید، به عنوان روش پرداخت «همه پیشنهادات آنلاین» را انتخاب کنید. این سایت معامله گران بیتکوین موجود در منطقه شما را فهرست می کند.<router-link to=""> صفحه اصلی</router-link></p>
+                        <p class="fontIran text-xs-center">مرحله 2: جستجو برای تبلیغات</p>
+                        <p class="fontIran1">به صفحه اصلی بروید و در کادر جستجو فرم را با مبلغی که میخواهید در ارز، محل سکونت خود خریداری کنید، پر کنید و روش پرداخت را انتخاب کنید. اگر مطمئن نیستید که چگونه می خواهید پرداخت کنید، به عنوان روش پرداخت «همه پیشنهادات آنلاین» را انتخاب کنید. این سایت معامله گران بیتکوین موجود در منطقه شما را فهرست می کند.<router-link class="router" to=""> صفحه اصلی</router-link></p>
                         <!--<v-img src=""></v-img>-->
                     </v-card-text>
                 </v-flex>
@@ -61,52 +70,52 @@
                 <v-flex>
                     <v-card-text class="fontIran">
                         <p class="text-xs-center">مرحله 5. علامت گذاری پرداخت کامل است.</p>
-                        <p class="fontIran1">پس از انجام پرداخت، بر روی دکمه پرداخت می کنم. هنگامی که معامله گر تایید کرده است که پرداخت شما دریافت شده است، بیت کوین شما از سپرده آزاد می شود و در فورا در  <router-link to="">کیف پول صدر کریپتو</router-link>شما موجود است.</p>
+                        <p class="fontIran1">پس از انجام پرداخت، بر روی دکمه پرداخت می کنم. هنگامی که معامله گر تایید کرده است که پرداخت شما دریافت شده است، بیت کوین شما از سپرده آزاد می شود و در فورا در  <router-link class="router" to="">کیف پول صدر کریپتو</router-link>شما موجود است.</p>
                         <span class="fontIran1">و این همه در آن وجود دارد، تبریک به اولین تجارت بیت کوین شما!</span>
                         <!--<v-img src=""></v-img>-->
                     </v-card-text>
                 </v-flex>
 
-                <v-container grid-list-xl>
-                    <v-layout row wrap>
-                        <v-flex xs12 sm6 md6 lg6 xl6>
+                <v-container fluid grid-list-xl>
+                   <v-layout row wrap>
+                        <v-flex d-flex xs12 sm6 md6 lg6 xl6 child-flex>
                             <router-link class="router" to="">
                                 <v-card>
                                     <v-card-text class="headlined text-xs-center">
-                                        <p>داشبورد</p>
-                                        <p class="fontIran1">find all of your trades from your dashboard</p>
+            
+                                        <p class="pt-3">داشبورد</p>
+                                        <p class="fontIran1">تمام معاملات خود را از داشبورد خود پیدا کنید.</p>
+                                        
                                     </v-card-text>
                                 </v-card>
                             </router-link>
                         </v-flex>
-                        <v-flex xs12 sm6 md6 lg6 xl6>
+                        <v-flex d-flex xs12 sm6 md6 lg6 xl6>
                             <router-link class="router" to="">
                                 <v-card>
                                     <v-card-text class="headlined text-xs-center">
-                                        <p >identify your account</p>
-                                        <p class="fontIran1">verify your identily and you will see more advertisements at better prices</p>
+                                        <p>شناسایی حساب شما</p>
+                                        <p class="fontIran1">هویت خود را تأیید کنید و تبلیغات بیشتری را در قیمت های بهتر مشاهده خواهید کرد.</p>
                                     </v-card-text>
                                 </v-card>
                             </router-link>
                         </v-flex>
-                    </v-layout>
-                    <v-layout row wrap>
-                        <v-flex xs12 sm6 md6 lg6 xl6>
+                        <v-flex d-flex xs12 sm6 md6 lg6 xl6>
                             <router-link class="router" to="">
                                 <v-card>
                                     <v-card-text class="headlined text-xs-center">
-                                        <p >داشبورد</p>
-                                        <p class="fontIran1">find all of your trades from your dashboard</p>
+                                        <p>محبوب ترین تبلیغات</p>
+                                        <p class="fontIran1">صفحه اول تبلیغات با محبوب ترین روش های پرداخت در کشور شما را نشان می دهد</p>
                                     </v-card-text>
                                 </v-card>
                             </router-link>
                         </v-flex>
-                        <v-flex xs12 sm6 md6 lg6 xl6>
+                        <v-flex d-flex xs12 sm6 md6 lg6 xl6>
                             <router-link class="router" to="">
                                 <v-card>
                                     <v-card-text class="headlined text-xs-center">
-                                        <p>identify your account</p>
-                                        <p class="fontIran1">verify your identily and you will see more advertisements at better prices</p>
+                                        <p>بهبود امنیت</p>
+                                        <p class="fontIran1">برای اطلاعات در مورد چگونگی بهبود امنیت حساب کاربری، راهنمای امنیت ما را بخوانید.</p>
                                     </v-card-text>
                                 </v-card>
                             </router-link>
@@ -121,27 +130,27 @@
                 </v-flex>
 
                 <v-layout row wrap>
-                    <v-flex xs12 sm3 md3 lg3 xl3>
-                        <v-card-text>
-                            <v-icon></v-icon>
+                    <v-flex dflex xs12 sm3 md3 lg3 xl3>
+                        <v-card-text class="text-xs-center">
+                            <v-icon large>help_outline</v-icon><br>
                                 <router-link class="router" to="">سوالات متداول</router-link>
                         </v-card-text>
                     </v-flex>
-                    <v-flex xs12 sm3 md3 lg3 xl3>
-                        <v-card-text>
-                            <v-icon></v-icon>
+                    <v-flex dflex xs12 sm3 md3 lg3 xl3>
+                        <v-card-text class="text-xs-center">
+                            <v-icon large>group</v-icon><br>
                                 <router-link class="router" to="">پست در انجمن ما</router-link>
                         </v-card-text>
                     </v-flex>
-                    <v-flex xs12 sm3 md3 lg3 xl3>
-                        <v-card-text>
-                            <v-icon></v-icon>
+                    <v-flex dflex xs12 sm3 md3 lg3 xl3>
+                        <v-card-text class="text-xs-center">
+                            <v-icon large>fab fa-twitter</v-icon><br>
                                 <router-link class="router" to=""> در توییت ما بنویسید</router-link>
                         </v-card-text>
                     </v-flex>
-                    <v-flex xs12 sm3 md3 lg3 xl3>
-                        <v-card-text>
-                            <v-icon></v-icon>
+                    <v-flex dflex xs12 sm3 md3 lg3 xl3>
+                        <v-card-text class="text-xs-center">
+                            <v-icon large>local_shipping</v-icon><br>
                                 <router-link class="router" to="">یک بلیط پشتیبانی باز کنید</router-link>
                         </v-card-text>
                     </v-flex>
@@ -180,7 +189,7 @@ font-family: Iranian Sans;
 }
 .fontIran1{
 font-family: Iranian Sans;
-font-size: 12px;
+font-size: 13px;
 
 }
 .router{
@@ -189,7 +198,7 @@ font-size: 12px;
     text-decoration:none;
 }
 .router:hover{
-    background-color:rgb(0, 140, 255);
+    color:rgb(0, 140, 255);
 }
 .btc{
   font-family: Iranian Sans;
