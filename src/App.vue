@@ -200,17 +200,9 @@
     </v-toolbar>
    
     <v-content>
-      <v-container >
-        <v-layout >
-          <v-flex >
-            
-            <transition name="list" mode="out-in">
-              
-              <router-view/>
-            </transition>  
-          </v-flex>
-        </v-layout>
-      </v-container>
+      <transition name="list" mode="out-in">
+        <router-view/>
+      </transition>  
     </v-content>
 
 </v-app>
