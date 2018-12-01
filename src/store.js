@@ -21,13 +21,7 @@ Vue.use(FeathersVuex);
 export default new Vuex.Store({
 
   state:{
-    logged:false, 
-    confirmEmail:false,
-    user:{
-      username:'',
-      realName: '',
-      email: ''
-    },
+    
     currency:'',
     currencyMenu: [
       { icon: 'mdi-currency-btc', text:'بیت کوین', path:'/Bitcoin'},

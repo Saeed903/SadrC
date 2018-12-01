@@ -1,7 +1,7 @@
 <template>
 <v-layout column>
    
-        <div v-if="!confirmEmail && logged">
+        <div v-if="!confirmEmailDate && userId">
             <v-card-text class="fontIran">
                 <p>شما باید ایمیل خود را تایید نمایید.قبل از آنکه سفارش بدهید ایمیل فرستاده شده را پیدا کرده و پس از تایید دوباره به این صفحه بازگردید.
                 اگر دوباره خطایی ملاحضه کردید می توانید با پشتیبانی<router-link class="router" to="" >پشتیبانی</router-link>  تماس بگیرید.</p>
@@ -11,7 +11,7 @@
 <v-layout>
     <v-card>
         <v-card-text>
-            <div v-if="confirmEmail || !logged">
+            <div v-if="confirmEmailDate || !userId">
                 <p class="fontIran">چقدر می خواهید خرید کنید؟</p>
                 <v-layout>
                     <v-flex d-flex xs12 sm5 md5>
@@ -38,7 +38,7 @@
                 </v-layout>
             </div>
 
-            <div class="fontIran" v-if="!logged">
+            <div class="fontIran" v-if="!userId">
                 <p class="titled">ثبت نام و بلافاصله خرید بیت کوین</p>
                 <v-btn to="Signup"  color="secondary"><v-icon></v-icon>ثبت نام رایگان</v-btn>
                 <p class="type">ثبت نام رایگان است و تنها 30 ثانیه طول می کشد.</p>
@@ -47,7 +47,7 @@
     </v-card>
 </v-layout>
     
-        <div v-if="logged && confirmEmail">
+        <div v-if="userId && confirmEmailDate">
             <v-textarea
                 outline
                 color="cyan accent-2"
@@ -58,7 +58,7 @@
         </div>
     
         
-    <v-flex pt-2 v-if="!logged " d-flex xs12 sm12 md12 lg12>
+    <v-flex pt-2 v-if="!userId " d-flex xs12 sm12 md12 lg12>
         <v-expansion-panel>
             <v-expansion-panel-content
             v-for="(item,i) in items"
@@ -91,7 +91,18 @@ export default {
     },
 
     computed:{
-        ...mapState(['logged', 'confirmEmail']),
+        ...mapState('auth', { payload: 'payload'}),
+        confirmEmailDate(){
+            let payload = this.payload
+
+            return payload != null ? payload.user.emailVerifiedDate: null;
+        
+        },
+        userId (){
+            let payload = this.payload
+
+            return payload != null ? payload.userId: null;
+        }
     }
 }
 </script>

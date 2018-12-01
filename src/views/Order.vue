@@ -35,15 +35,15 @@
         </v-layout>
       </v-flex>
     
-      <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md4 >
+      <v-flex v-if="!confirmEmailDate && userId" d-flex xs12 sm6 md4 >
         <working-hour workingTime="true"></working-hour>
       </v-flex>
       
-      <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md6 >
+      <v-flex v-if="!confirmEmailDate && userId" d-flex xs12 sm6 md6 >
         <working-hour sadrsys="true"></working-hour>  
       </v-flex>
 
-      <v-flex v-if="!confirmEmail && logged" d-flex xs12 sm6 md6 >
+      <v-flex v-if="!confirmEmailDate && userId" d-flex xs12 sm6 md6 >
         <working-hour Reminder="ture"></working-hour>  
       </v-flex>
 
@@ -64,7 +64,18 @@ export default {
     WorkingHour
   },
   computed:{
-    ...mapState(['logged', 'confirmEmail']),
+    ...mapState('auth', { payload: 'payload'}),
+    confirmEmailDate(){
+      let payload = this.payload
+
+      return payload != null ? payload.user.emailVerifiedDate: null;
+      
+    },
+    userId (){
+      let payload = this.payload
+
+      return payload != null ? payload.userId: null;
+    }
   },
   data:()=>({
       items:[
