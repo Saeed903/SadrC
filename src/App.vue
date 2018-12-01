@@ -128,12 +128,13 @@
               <v-list-tile-title class="fontIran">{{ help.title }}</v-list-tile-title>
               </v-list-tile>
               </v-list>
-            </v-menu>
+          </v-menu>
+            
       </v-toolbar-items>
       </v-card-text>
 
       <v-card-text >
-        <v-toolbar-items v-if="!user"> 
+        <v-toolbar-items v-if="!payload"> 
           <router-link to="Login">
             <v-tooltip bottom>
               <v-icon slot="activator" color="white" dark>
@@ -157,7 +158,7 @@
       
       
       
-      <v-toolbar-items v-if="user" > 
+      <v-toolbar-items v-if="payload" > 
         <router-link  to="EditYourProfile" class="menu">ویرایش پروفایل</router-link>
         <router-link  to="Wallet" class="menu">کیف پول</router-link>
       
@@ -166,26 +167,21 @@
           offset-y
           transition="slide-y-transition"
           >
-            <v-btn
-            slot="activator"
-            dark
-            >
-            <v-icon
-            style="color:aqua"
-            >
-            perm_identity</v-icon>
-            <v-icon dark>arrow_drop_down</v-icon>
+            <v-btn slot="activator" dark>
+              <v-icon style="color:aqua">perm_identity</v-icon>
+              <span>{{user.userName}}</span>
+              <v-icon dark>arrow_drop_down</v-icon>
             </v-btn>
             <v-list>
-            <v-list-tile
-            v-for="(profile, index) in Profiles"
-            :key="index"
-            @click="routing(profile.path)"
-            class="menuFont"
-            >
-            <v-icon>{{profile.icon}}</v-icon>
-            <v-list-tile-title>{{ profile.title }}</v-list-tile-title>
-            </v-list-tile>
+              <v-list-tile
+                v-for="(profile, index) in Profiles"
+                :key="index"
+                @click="routing(profile.path)"
+                class="menuFont"
+              >
+                <v-icon>{{profile.icon}}</v-icon>
+                <v-list-tile-title>{{ profile.title }}</v-list-tile-title>
+              </v-list-tile>
             </v-list>
           </v-menu>
         </div>
@@ -214,7 +210,7 @@
     </v-content>
 
 </v-app>
-<h2>{{user}}</h2>
+<h2>{{payload}}</h2>
 </div>
 </template>
 <script>
@@ -224,15 +220,7 @@
   export default {
   data: () => ({
       drawer: true,
-      Profiles: [
-        { title: 'sadrSys',icon:'account_circle'},
-        { title: 'ویرایش پروفایل', path:'/EditYourProfile',icon:'home'},
-        { title: 'داشبورد', path:'/DashBoard',icon:'fas fa-tachometer-alt'},
-        { title: 'بازرگان', path:'/Merchant',icon:'public' },
-        { title: 'قابل اعتماد', path:'/Trusted',icon:'history' },
-        { title: 'پشتیبانی', path:'SupportDrop',icon:'help' },
-        { title: 'خروج', path:'',icon:'lock' },
-      ],
+     
        helps: [
         { title: 'چگونه بیت کوین بخریم؟', path:'/HowToBuyBticoins',icon:'account_circle'},
         { title: 'سوالات متداول', path:'/FrequentlyAskedQuestions',icon:'home'},
@@ -262,11 +250,28 @@
       }
     },
     mounted(){
-     console.log(this.user);
-    }, computed: {
+     console.log(this.payload);
+    }, 
+    computed: {
       ...mapState(['currencyMenu']),
 
-      ...mapState ('auth', { user: 'payload' })
+      ...mapState ('auth', { payload: 'payload' }),
+
+      user(){
+        return this.payload != null ? this.payload.user : null;
+      },
+
+       Profiles(){
+         return [
+        { title: this.user.userName,icon:'account_circle'},
+        { title: 'ویرایش پروفایل', path:'/EditYourProfile',icon:'home'},
+        { title: 'داشبورد', path:'/DashBoard',icon:'fas fa-tachometer-alt'},
+        { title: 'بازرگان', path:'/Merchant',icon:'public' },
+        { title: 'قابل اعتماد', path:'/Trusted',icon:'history' },
+        { title: 'پشتیبانی', path:'SupportDrop',icon:'help' },
+        { title: 'خروج', path:'',icon:'lock' },
+      ]
+       } ,
     }
 }
 </script>
