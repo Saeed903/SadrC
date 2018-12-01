@@ -12,7 +12,7 @@ import router from './router';
 //   idField: '_id'
 // });
 
-const { service, auth, FeathersVuex } = feathersVuex(feathersClient, { idField: 'Id' })
+const { service, auth, FeathersVuex } = feathersVuex(feathersClient, { idField: 'id' })
 
 Vue.use(Vuex);
 

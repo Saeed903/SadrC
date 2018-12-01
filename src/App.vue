@@ -203,7 +203,9 @@
       <v-container >
         <v-layout >
           <v-flex >
+            
             <transition name="list" mode="out-in">
+              
               <router-view/>
             </transition>  
           </v-flex>
@@ -212,6 +214,7 @@
     </v-content>
 
 </v-app>
+<h2>{{user}}</h2>
 </div>
 </template>
 <script>
@@ -263,7 +266,7 @@
     }, computed: {
       ...mapState(['currencyMenu']),
 
-      ...mapState ('auth', {user: 'payload'})
+      ...mapState ('auth', { user: 'payload' })
     }
 }
 </script>

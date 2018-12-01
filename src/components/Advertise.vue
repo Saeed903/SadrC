@@ -79,7 +79,7 @@ export default{
             console.log(advertises);
             
         }), 
-    console.log(this.isSeller);  
+    console.log(this.advertises);  
     this.getDataFromApi()
         .then(data => {
             this.desserts = data.items
