@@ -169,7 +169,7 @@
           >
             <v-btn slot="activator" dark>
               <v-icon style="color:aqua">perm_identity</v-icon>
-              <span>{{user.userName}}</span>
+              <span>{{userName}}</span>
               <v-icon dark>arrow_drop_down</v-icon>
             </v-btn>
             <v-list>
@@ -202,7 +202,6 @@
     </v-content>
 
 </v-app>
-<h2>{{payload}}</h2>
 </div>
 </template>
 <script>
@@ -249,13 +248,22 @@
 
       ...mapState ('auth', { payload: 'payload' }),
 
-      user(){
-        return this.payload != null ? this.payload.user : null;
+      userName(){
+        let payload, userOnline, userN;
+        payload = this.payload;
+
+        if (payload!=null){
+          userOnline = payload.user;
+          if (userOnline != null){
+            userN = userOnline.userName
+          }
+        }
+        return userN;
       },
 
        Profiles(){
          return [
-        { title: this.user.userName,icon:'account_circle'},
+        { title: 'userName',icon:'account_circle'},
         { title: 'ویرایش پروفایل', path:'/EditYourProfile',icon:'home'},
         { title: 'داشبورد', path:'/DashBoard',icon:'fas fa-tachometer-alt'},
         { title: 'بازرگان', path:'/Merchant',icon:'public' },
