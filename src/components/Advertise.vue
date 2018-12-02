@@ -1,8 +1,8 @@
 <template >
 <div>
-    {{advertises}}
+    
   <v-data-table
-      class="table text-xs-right"
+      class="table"
       :headers="headers"
       :items="desserts"
       :pagination.sync="pagination"
@@ -11,10 +11,10 @@
     >
       <template v-if="!loading" slot="items" slot-scope="props">
         <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
-        <td class="table text-xs-center">{{ props.item.paymentMethod }}</td>
-        <td class="table text-xs-center">{{ props.item.price }}</td>
-        <td class="table text-xs-center">{{ props.item.limits }}</td>
-        <td class="table text-xs-center"><v-btn class="primary" @click="buy()" to="Order">خرید</v-btn></td>
+        <td >{{ props.item.paymentMethod }}</td>
+        <td >{{ props.item.price }}</td>
+        <td >{{ props.item.limits }}</td>
+        <td ><v-btn class="primary" @click="buy()" to="Order">خرید</v-btn></td>
       </template>
     </v-data-table>
 </div>
@@ -45,16 +45,36 @@ export default{
         return (this.isSeller==1) ?'فروشنده':'خریدار';
     },
     headers() {
-        return  [{
-            text: this.typeCustomer,
-            align: 'center',
-            class:'text-xs-center',
-            sortable: false,
-            value: 'name'
-            },
-            { text: 'روش پرداخت', value: 'روش پرداخت' },
-            { text: ' بیت کوین | قیمت ', value: ' بیت کوین | قیمت' },
-            { text: 'محدودیت ها', value: 'محدودیت ها' }
+        return  [
+                 {
+                    text: this.typeCustomer,
+                    align: 'center',
+                    class:'text-xs-right',
+                    sortable: false,
+                    value: this.typeCustomer
+                 },
+                 {
+                    text: 'روش پرداخت',
+                    align: 'center',
+                    class:'text-xs-right',
+                    sortable: false,
+                    value: 'روش پرداخت'
+                 },
+                 {
+                    text: ' بیت کوین | قیمت ',
+                    align: 'center',
+                    class:'text-xs-right',
+                    sortable: false,
+                    value: ' بیت کوین | قیمت'
+                 },
+                 {
+                    text: 'محدودیت ها',
+                    align: 'center',
+                    class:'text-xs-right',
+                    sortable: false,
+                    value: 'محدودیت ها'
+                 },
+                
             
         ]
     }
