@@ -283,7 +283,6 @@
             <Footer></Footer>
         </v-flex>
         </v-layout>
-    </v-layout> 
 </template>
 <script>
 
