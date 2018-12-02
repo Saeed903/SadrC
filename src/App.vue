@@ -202,6 +202,7 @@
     </v-content>
 
 </v-app>
+
 </div>
 </template>
 <script>
@@ -263,7 +264,7 @@
 
        Profiles(){
          return [
-        { title: 'userName',icon:'account_circle'},
+        { title: this.userName,icon:'account_circle'},
         { title: 'ویرایش پروفایل', path:'/EditYourProfile',icon:'home'},
         { title: 'داشبورد', path:'/DashBoard',icon:'fas fa-tachometer-alt'},
         { title: 'بازرگان', path:'/Merchant',icon:'public' },
