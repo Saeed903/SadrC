@@ -1,26 +1,21 @@
 <template>
-<v-container fluid grid-list-xl pt-0>
+<v-container fluid grid-list-xl>
     <v-layout  justify-space-around>
         <v-flex lg10 xl9>
-            <v-card-text>
                 <v-flex>
-                    <v-card>
-                        <v-card-text>
-                            <p class="iran text-xs-center " >صدرکریپتو ساده ترین و مطمعن ترین راه برای خرید و فروش و مدیریت ارز دیجیتال</p>
-                            <p class="fontIran text-xs-center orange--text">فوری.امن.خصوصی</p>
-                            <p class="text-xs-center ">
-                                <span class="iran orange--text">تجارت بیت کوین</span>
-                                <router-link to="/BitcoinCity" class="iran router">در 16370 شهر</router-link>
-                                <span class="iran orange--text">و</span>
-                                <router-link to="/BitcoinCountry" class="iran router">248 کشور</router-link>
-                                <span class="iran orange--text">شامل</span>
-                                <router-link to="/RepublicIran" class="iran router">جمهوری اسلامی ایران</router-link>
-                            </p>
-                            <div class="text-xs-center">
-                                <v-btn class="iran" color="primary" to="Signup" round><v-icon size="20px">done_all</v-icon>ثبت نام رایگان</v-btn>
-                            </div>
-                        </v-card-text>
-                    </v-card>
+                    <p class="iran text-xs-center " >صدرکریپتو ساده ترین و مطمعن ترین راه برای خرید و فروش و مدیریت ارز دیجیتال</p>
+                    <p class="fontIran text-xs-center orange--text">فوری.امن.خصوصی</p>
+                    <p class="text-xs-center ">
+                        <span class="iran orange--text">تجارت بیت کوین</span>
+                        <router-link to="/BitcoinCity" class="iran router">در 16370 شهر</router-link>
+                        <span class="iran orange--text">و</span>
+                        <router-link to="/BitcoinCountry" class="iran router">248 کشور</router-link>
+                        <span class="iran orange--text">شامل</span>
+                        <router-link to="/RepublicIran" class="iran router">جمهوری اسلامی ایران</router-link>
+                    </p>
+                    <div class="text-xs-center">
+                        <v-btn class="iran" color="primary" to="Signup" round><v-icon size="20px">done_all</v-icon>ثبت نام رایگان</v-btn>
+                    </div>
                 </v-flex>
 
                 <v-flex>
@@ -60,7 +55,6 @@
                 <v-flex>
                     <Footer></Footer>
                 </v-flex>
-            </v-card-text>
         </v-flex>
     </v-layout>
 </v-container>
