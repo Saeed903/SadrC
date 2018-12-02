@@ -1,64 +1,71 @@
 <template>
-    <v-layout v-if="!loading" row wrap>
-      <v-flex  d-flex xs12 sm8 md8 lg6>
-          <v-card-text>
-            <v-form 
-              @submit.prevent="login" 
-              @keydown.prevent.enter 
-              v-model="valid"
-            >
-                <p class="titled text-xs-center">ورود</p>
-                <p class="text text-xs-center">با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید</p>
-              
-                <v-text-field
-                  :roles = "notEmptyRoles"
-                  v-model="user.email"
-                  :counter="30"
-                  label="ایمیل"
-                  data-vv-name="email"
-                  class="textBottom emailField"
-                  required
+<v-container fluid grid-list-xl pt-0>
+    <v-layout  justify-space-around v-if="!loading">
+        <v-flex lg9 xl8>
+         
+            <v-card-text>
+    
+              <v-flex  d-flex xs12 sm10 md810 lg8>
+                <v-form 
+                  @submit.prevent="login" 
+                  @keydown.prevent.enter 
+                  v-model="valid"
                 >
-                </v-text-field>
+                    <p class="titled text-xs-center">ورود</p>
+                    <p class="text text-xs-center">با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید</p>
+                  
+                    <v-text-field
+                      :roles = "notEmptyRoles"
+                      v-model="user.email"
+                      :counter="30"
+                      label="ایمیل"
+                      data-vv-name="email"
+                      class="textBottom emailField"
+                      required
+                    >
+                    </v-text-field>
 
-                <v-text-field
-                  :roles = "notEmptyRoles"
-                  v-model="user.password"
-                  counter="20"
-                  :error-messages="errors.collect('password')"
-                  :type="'password'"
-                  label="رمز عبور"
-                  class="textBottom textField"
-                  data-vv-name="password"
-                  required
-                >
-                </v-text-field>
+                    <v-text-field
+                      :roles = "notEmptyRoles"
+                      v-model="user.password"
+                      counter="20"
+                      :error-messages="errors.collect('password')"
+                      :type="'password'"
+                      label="رمز عبور"
+                      class="textBottom textField"
+                      data-vv-name="password"
+                      required
+                    >
+                    </v-text-field>
 
-                <vue-recaptcha
-                    theme = "dark"
-                    @verify = "onVerify"
-                    @expired = "onExpired"
-                    :sitekey = "sitekey">
-                </vue-recaptcha>
-                <v-card-text :class="{red:errorLogin}" v-if="errorLogin" >  {{errorMessage}} </v-card-text>
+                   
+                      <vue-recaptcha
+                          theme = "dark"
+                          @verify = "onVerify"
+                          @expired = "onExpired"
+                          :sitekey = "sitekey">
+                      </vue-recaptcha>
+                      <v-card-text :class="{red:errorLogin}" v-if="errorLogin" >  {{errorMessage}} </v-card-text>
 
-                  <v-btn type="submit" class="textBottom primary">ورود</v-btn>
-
-            </v-form>
+                        <v-btn type="submit" class="textBottom primary">ورود</v-btn>
+                   
+                </v-form>
+              </v-flex>
+              <v-flex>
                 <p><router-link class="textBottom link" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link></p>
                 <p class="textBottom">صدر کریپتو؟<router-link to="/SignUp" class="link">ثبت نام کنید</router-link></p>
-          </v-card-text>
-        
-      </v-flex>
+              </v-flex>
+              
+              <v-flex>
+              <Footer></Footer>
+              </v-flex>
     
-    
-      <v-card>
-      <Footer></Footer>
-      </v-card>
-    
-  <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
-  </v-layout>
-  
+              <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
+            </v-card-text>
+          
+        </v-flex>
+    </v-layout>
+</v-container>
 </template>
 <script>
  import Vue from 'vue'

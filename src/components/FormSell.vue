@@ -8,8 +8,8 @@
     <v-form ref="form" class="table" v-model="valid" lazy-validatio>
       <v-container>
         <v-layout row wrap>
-          <v-flex d-flex xs12 md2 lg1>
-            <v-text-field
+          <v-flex d-flex xs12 md2 lg1 pt-0>
+            <v-text-field 
               v-model="amount"
               type="number"
               style=""
@@ -19,8 +19,8 @@
             ></v-text-field>
           </v-flex>
             
-          <v-flex d-flex xs12 md3 lg3>
-            <v-select
+          <v-flex d-flex xs12 md3 lg3 pt-0>
+            <v-select 
               v-model="country"
               style=""
               :items="country"
@@ -30,7 +30,7 @@
             ></v-select>
           </v-flex>
             
-          <v-flex d-flex xs12 md2 lg2>
+          <v-flex d-flex xs12 md2 lg2 pt-0>
             <v-select
               v-model="offers"
               :items="offers"
@@ -40,7 +40,7 @@
             ></v-select>
           </v-flex>
             
-          <v-flex d-flex xs12 md3 lg3>
+          <v-flex d-flex xs12 md3 lg3 pt-0>
             <v-select
               v-model="country"
               style=""
@@ -51,7 +51,7 @@
             ></v-select>
           </v-flex>
             
-          <v-flex xs12 md1 >
+          <v-flex xs12 md1 pt-0>
             <v-card-text>
               <v-btn left :disabled="!valid" @click="submit"> جست وجو </v-btn>
             </v-card-text>
