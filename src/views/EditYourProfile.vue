@@ -1,9 +1,13 @@
 <template>
-    <div>
-       <EditYourProfileCo></EditYourProfileCo>
-       <BasicUserInformation></BasicUserInformation>
-       <ChangePassword></ChangePassword>
-    </div>
+    <v-container fluid grid-list-xl pt-0>
+        <v-layout  justify-space-around>
+            <v-flex lg10 xl8>
+                <EditYourProfileCo></EditYourProfileCo>
+                <BasicUserInformation></BasicUserInformation>
+                <ChangePassword></ChangePassword>
+            </v-flex>
+        </v-layout>
+    </v-container>
 </template>
 <script>
 import EditYourProfileCo from './../components/EditProfile/EditYourProfileCo.vue'

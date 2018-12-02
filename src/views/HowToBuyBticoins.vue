@@ -1,7 +1,7 @@
 <template>
-<div>
-    <v-layout>
-        <v-flex>
+<v-container fluid grid-list-md pt-0>
+    <v-layout  justify-space-around>
+        <v-flex lg10 xl8>
             <v-card-text class="fontIran">
                 <v-flex>
                     <v-icon class="titled"></v-icon>
@@ -12,7 +12,7 @@
 
                 <v-layout row wrap>
                     <v-flex xs6 sm6 md6 lg6 xl6>
-                        <v-card>
+                        <v-card height="100%">
                             <v-card-text>
                                 <v-icon>بیت</v-icon>
                                 <v-icon class="pr-3">کوین</v-icon>
@@ -160,7 +160,7 @@
     </v-layout>
     
      <Footer></Footer>
-</div>
+</v-container>
 </template>
 <script>
 import Footer from './../components/Footer.vue'
