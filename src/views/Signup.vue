@@ -1,16 +1,17 @@
 <template>
   <v-layout row wrap align-justify justify-center>
-    <v-flex d-flex xs12 sm8 md8 lg8>
-      <v-card >
+    <v-flex d-flex xs12 sm7 md6 lg4>
         <v-card-text>
           <v-form ref="form" v-model="valid"  
             v-if="!loading"
             @submit.prevent="signUp"
-            @keydown.prevent.enter>
-            <v-card-text>
+            @keydown.prevent.enter
+            style="max-width:320px" 
+          >
+            
             <p class="titled text-xs-center">یک حساب جدید ثبت کنید</p>
             <p class="text text-xs-center">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
-            </v-card-text>
+            
 
             <v-text-field 
               v-model="user.username"
@@ -57,7 +58,8 @@
               clearable
             ></v-text-field>
 
-            <vue-recaptcha
+            <vue-recaptcha 
+                class="pt-2"
                 theme = "dark"
                 @verify = "onVerify"
                 @expired = "onExpired"
@@ -72,7 +74,7 @@
           <p class="textBottom">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="link">ورود</router-link></p>
           <p class="textBottom">رمز عبور را فراموش کرده اید؟<router-link to="/ResetPassword" class="link">.رمز عبور خودتان را باز نشانی کنید</router-link></p>
         </v-card-text>
-      </v-card>
+     
     </v-flex>
   </v-layout>
 </template>
@@ -149,7 +151,7 @@
 }
 .text{
   font-family: Iranian Sans;
-  font-size: 15px;
+  font-size: 13px;
 }
 .textBottom{
   font-family: Iranian Sans;

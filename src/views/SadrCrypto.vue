@@ -1,7 +1,12 @@
 <template>
 <v-container fluid grid-list-xl>
     <v-layout  justify-space-around>
+<<<<<<< HEAD
         <v-flex lg10 xl9>
+=======
+        <v-flex lg10 xl8>
+            <v-card-text>
+>>>>>>> bb172ca72b38c3593908e11ec5508e09b9e158a3
                 <v-flex>
                     <p class="iran text-xs-center " >صدرکریپتو ساده ترین و مطمعن ترین راه برای خرید و فروش و مدیریت ارز دیجیتال</p>
                     <p class="fontIran text-xs-center orange--text">فوری.امن.خصوصی</p>

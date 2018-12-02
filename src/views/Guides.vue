@@ -1,22 +1,25 @@
 <template>
-<v-container fluid grid-list-md>
-    <v-flex xs12 sm12 md12 lg12 xl12 >
-            <v-card-text class="text-xs-center">
+<v-container fluid grid-list-lg pt-0>
+    <v-layout  justify-space-around>
+        <v-flex lg10 xl8>
+            <v-card-text class="text-xs-center fontIran">
                 <v-icon>description</v-icon>
                 <p class="titled">راهنمایی درصدر کرپیتو</p>
                 <p>خودتان را با راهنمایی های ما راحت کنید</p>
             </v-card-text>
-        </v-flex> 
-    <v-layout row wrap>
-        <v-flex v-for= "(help, index) in Helps" :key="index"  xs12 sm6 md6 lg6 xl6 >
-            <router-link class="router" :to="help.path" >
-                <v-card  height="100%">
-                    <v-card-text class="text-xs-center">
-                        <p class="headlined">{{help.title}}</p>
-                        <p>{{help.type}}</p>
-                    </v-card-text>
-                </v-card>
-            </router-link>
+        
+            <v-layout row wrap>
+                <v-flex v-for= "(help, index) in Helps" :key="index"  xs12 sm6 md6 lg6 xl6 >
+                    <router-link class="router" :to="help.path" >
+                        <v-card  height="100%">
+                            <v-card-text class="text-xs-center">
+                                <p class="headlined">{{help.title}}</p>
+                                <p>{{help.type}}</p>
+                            </v-card-text>
+                        </v-card>
+                    </router-link>
+                </v-flex>
+            </v-layout>
         </v-flex>
     </v-layout>
 </v-container>

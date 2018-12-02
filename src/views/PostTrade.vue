@@ -1,12 +1,13 @@
 <template>
-    <v-layout row wrap >
-        <v-flex>
+<v-container fluid grid-list-xl pt-0>
+    <v-layout  justify-space-around>
+        <v-flex lg10 xl8>
             <v-card-text>
                 <p class="fontIran text-xs-center">ثبت آگهی {{currency}}</p>
                 <p class="fontIran text-xs-center"><v-icon color="red" size="16px">warning</v-icon>لطفا قبل از ثبت آگهی <router-link to="/Login" class="fontsIran">ورود</router-link> یا <router-link to="/signUp" class="fontsIran">ثبت نام</router-link> کنید!</p>
                 <v-divider></v-divider>
             </v-card-text>
-        <v-card-text>
+            <v-card-text>
             <p class="fontIran text-xs-center">قوانین و مقررات تبلیغاتی:</p>
             <ul class="fontIran pr-3">
                 <li class="mb-3">برای نمایش تبلیغات شما باید بیت کوین را در کیف پول صدر کریپتو خود داشته باشید. شما برای تبلیغات با روش های پرداخت آنلاین و 0.04 بیت کوین یا بیشتر برای تبلیغات محلی (نقد) نیاز به 0.04 بیت کوین یا بیشتر دارید.</li>
@@ -22,12 +23,12 @@
         
             <v-divider></v-divider>
 
-        </v-card-text>
+            </v-card-text>
 
-        <v-card-text class="fontIran">
-            <p>نوع تجارتی که میخواهید انجام دهید:</p>
-            <p> اگر بخواهید بیت کوین ها را بفروشید مطمئن شوید که شما بیت کوین ها را در کیف پول صدر  کریپتو خود موجود دارید</p>
-        </v-card-text>
+            <v-card-text class="fontIran">
+                <p>نوع تجارتی که میخواهید انجام دهید:</p>
+                <p> اگر بخواهید بیت کوین ها را بفروشید مطمئن شوید که شما بیت کوین ها را در کیف پول صدر  کریپتو خود موجود دارید</p>
+            </v-card-text>
 
             <v-card-text class="fontIran">
                 <p>نوع تجارتی که میخواهید انجام دهید:</p>
@@ -281,8 +282,14 @@
             </v-form>
         
             <Footer></Footer>
+            
         </v-flex>
+<<<<<<< HEAD
         </v-layout>
+=======
+    </v-layout>
+</v-container>
+>>>>>>> bb172ca72b38c3593908e11ec5508e09b9e158a3
 </template>
 <script>
 
