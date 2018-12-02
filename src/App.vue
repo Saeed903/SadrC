@@ -169,7 +169,7 @@
           >
             <v-btn slot="activator" dark>
               <v-icon style="color:aqua">perm_identity</v-icon>
-              <span>{{userName}}</span>
+              <span class="fontIran">{{userName}}</span>
               <v-icon dark>arrow_drop_down</v-icon>
             </v-btn>
             <v-list>

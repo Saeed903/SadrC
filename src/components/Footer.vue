@@ -6,48 +6,7 @@
           <v-icon size="24px">{{ icon }}</v-icon>
         </v-btn>
       </v-card-text>
-      <v-layout row wrap>
-      <v-flex >
-        <v-card>
-      <v-card-text class="text-xs-right">
-        <p>درباره ما</p>
-      </v-card-text>
-        </v-card>
-      </v-flex>
-
-      <v-flex>
-        <v-card>
-      <v-card-text class="text-xs-right">
-        <p>درباره ما</p>
-      </v-card-text>
-        </v-card>
-      </v-flex>
-
-      <v-flex>
-        <v-card>
-      <v-card-text class="text-xs-right">
-        <p>درباره ما</p>
-      </v-card-text>
-        </v-card>
-      </v-flex>
-
-      <v-flex>
-        <v-card>
-      <v-card-text class="text-xs-right">
-        <p>درباره ما</p>
-        <v-btn to="Fees">هزینه ها</v-btn>
-      </v-card-text>
-        </v-card>
-      </v-flex>
-
-      <v-flex>
-        <v-card>
-      <v-card-text class="text-sm-left mt-0">
-        <p>SadrCrypto.com</p>
-      </v-card-text>
-        </v-card>
-      </v-flex>
-      </v-layout>
+      
 
       Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       
