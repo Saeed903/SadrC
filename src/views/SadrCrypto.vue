@@ -1,7 +1,7 @@
 <template>
 <v-container fluid grid-list-xl pt-0>
     <v-layout  justify-space-around>
-        <v-flex lg10 xl9>
+        <v-flex lg10 xl8>
             <v-card-text>
                 <v-flex>
                     <v-card>
