@@ -1,7 +1,8 @@
 <template>
-<v-container grid-list-md>
-  <v-flex d-flex xl8>
-    <v-layout row wrap>
+<v-container fluid grid-list-xl pt-0>
+  <v-flex lg9 xl8>
+    <v-layout row wrap justify-space-around>
+      
   
       <v-card-text>
         <p class="titled">خرید بیت کوین با استفاده از انتقال بانکی جمهوری اسلامی ایران با ریال ایران</p>
@@ -18,7 +19,7 @@
                 <p>موقعیت:</p>
                 <p>پنجره پرداخت</p>
               </div>
-              <div class="btc pr-4">
+              <div class="btc pr-1">
                 <p style="color:greenyellow">935543438.97 IRR/BTC</p>
                 <p>انتقال بانک جمهوری اسلامی ایران</p>
                 <p><router-link  to="/DashBoard"><v-tooltip  right><v-icon slot="activator"  style="color:aqua">perm_identity</v-icon><span class="fontIran">داشبورد</span></v-tooltip></router-link>آلمان</p>
@@ -46,7 +47,7 @@
       <v-flex v-if="!confirmEmailDate && userId" d-flex xs12 sm6 md6 >
         <working-hour Reminder="ture"></working-hour>  
       </v-flex>
-
+      
     </v-layout>
   </v-flex>
 </v-container>

@@ -1,9 +1,22 @@
 <template>
-    <div>
-        <FormSell :currency="currency"/>
-        <Advertise/>
-        <Footer/>
-    </div>
+<v-container fluid grid-list-sm pt-0>
+    <v-layout  justify-space-around>
+        <v-flex lg9 xl8>
+            <v-card-text>
+                <FormSell :currency="currency"/>
+                <Advertise/>
+                
+            </v-card-text>
+        </v-flex>
+    </v-layout>
+    <v-layout  justify-space-around>
+        <v-flex lg9 xl8>
+            <v-card-text>
+                <Footer/>
+            </v-card-text>
+        </v-flex>
+    </v-layout>
+</v-container>
 </template>
 <script>
 import Advertise from './../components/Advertise.vue'

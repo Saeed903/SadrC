@@ -1,7 +1,7 @@
 <template>
 <v-container fluid grid-list-xl pt-0>
     <v-layout  justify-space-around>
-        <v-flex lg9 xl8>
+        <v-flex lg10 xl9>
             <v-card-text>
                 <v-flex>
                     <v-card>
@@ -82,9 +82,7 @@ export default{
         
     },
     methods:{
-      
-
-        
+          
     }, 
     mounted(){
        
@@ -115,7 +113,4 @@ export default{
 .router:hover{
     color:rgb(0, 140, 255);
 }
-
-
-
 </style>
