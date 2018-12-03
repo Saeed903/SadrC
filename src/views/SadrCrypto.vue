@@ -1,5 +1,5 @@
 <template>
-<v-container fluid grid-list-xl>
+<v-container fluid grid-list-xl pt-0>
     <v-layout  justify-space-around>
         <v-flex lg10 xl9>
                 <v-flex>
@@ -18,7 +18,11 @@
                     </div>
                 </v-flex>
 
-                <v-flex>
+                <v-flex pt-0>
+                    <FormSell/>
+                </v-flex>
+
+                <v-flex pt-0>
                     <v-card height="100%" color="grey darken-1">
                         <v-card-text class="iran text-xs-center ">خرید بیت کوین آنلاین در جمهوری اسلامی ایران</v-card-text>
                     </v-card>
@@ -60,7 +64,7 @@
 </v-container>
 </template>
 <script>
-
+import FormSell from './../components/FormSell.vue'
 import Advertise from './../components/Advertise.vue';
 import Footer from './../components/Footer.vue';
 
@@ -84,6 +88,7 @@ export default{
     components:{
         Advertise,
         Footer,
+        FormSell
     }
   };
 </script>
