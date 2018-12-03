@@ -18,7 +18,7 @@
               :counter="30"
               :rules="notEmptyRules"
               label="نام کاربر"
-              class="textBottom textField"
+              class="textBottom textField pt-0"
               data-vv-name="username"
               clearable
             ></v-text-field>
@@ -27,7 +27,7 @@
               v-validate="'required|email'"
               v-model="user.email"
               label="ایمیل"
-              class="textBottom emailField"
+              class="textBottom emailField pt-0"
               data-vv-name="email"
               required
               clearable
@@ -38,7 +38,7 @@
               v-model="user.password"
               :counter="20"
               :rules="notEmptyRules"
-              class="textBottom textField"
+              class="textBottom textField pt-0"
               :type="'password'"
               label="رمزعبور"
               data-vv-name="password"
@@ -49,7 +49,7 @@
             <v-text-field
               v-model="showPassword"
               :counter="20"
-              class="textBottom textField"
+              class="textBottom textField pt-0"
               :rules="confirmPasswordRules"
               :type="'password'"
               label="تکرار رمز عبور "
