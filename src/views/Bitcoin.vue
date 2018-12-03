@@ -5,7 +5,6 @@
             <v-card-text>
                 <FormSell :currency="currency"/>
                 <Advertise/>
-                
             </v-card-text>
         </v-flex>
     </v-layout>

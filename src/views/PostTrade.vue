@@ -278,11 +278,17 @@
                     <v-btn type="submit" class="textBottom primary" :disabled="!valid" >ثبت</v-btn>
                 </v-form>
             
+<<<<<<< HEAD
                 <Footer></Footer>
                 
             </v-flex>
         </v-layout>
     </v-container>
+=======
+        </v-flex>
+    </v-layout>
+</v-container>
+>>>>>>> c92f770e4db9e745fed21d1b3396a2f064f550d4
 </template>
 <script>
 
