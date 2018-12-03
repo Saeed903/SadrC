@@ -284,12 +284,8 @@
             <Footer></Footer>
             
         </v-flex>
-<<<<<<< HEAD
-        </v-layout>
-=======
     </v-layout>
 </v-container>
->>>>>>> bb172ca72b38c3593908e11ec5508e09b9e158a3
 </template>
 <script>
 
