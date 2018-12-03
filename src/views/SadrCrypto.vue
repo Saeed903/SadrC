@@ -1,29 +1,4 @@
 <template>
-<<<<<<< HEAD
-    <v-container fluid grid-list-xl>
-        <v-layout  justify-space-around>
-            <v-flex lg10 xl9>
-                    <v-flex>
-                        <p class="iran text-xs-center " >صدرکریپتو ساده ترین و مطمعن ترین راه برای خرید و فروش و مدیریت ارز دیجیتال</p>
-                        <p class="fontIran text-xs-center orange--text">فوری.امن.خصوصی</p>
-                        <p class="text-xs-center ">
-                            <span class="iran orange--text">تجارت بیت کوین</span>
-                            <router-link to="/BitcoinCity" class="iran router">در 16370 شهر</router-link>
-                            <span class="iran orange--text">و</span>
-                            <router-link to="/BitcoinCountry" class="iran router">248 کشور</router-link>
-                            <span class="iran orange--text">شامل</span>
-                            <router-link to="/RepublicIran" class="iran router">جمهوری اسلامی ایران</router-link>
-                        </p>
-                        <div class="text-xs-center">
-                            <v-btn class="iran" color="primary" to="Signup" round><v-icon size="20px">done_all</v-icon>ثبت نام رایگان</v-btn>
-                        </div>
-                    </v-flex>
-
-                    <v-flex>
-                        <v-card height="100%" color="grey darken-1">
-                            <v-card-text class="iran text-xs-center ">خرید بیت کوین آنلاین در جمهوری اسلامی ایران</v-card-text>
-                        </v-card>
-=======
 <v-container fluid grid-list-xl pt-0>
     <v-layout  justify-space-around>
         <v-flex lg10 xl9>
@@ -51,7 +26,6 @@
                     <v-card height="100%" color="grey darken-1">
                         <v-card-text class="iran text-xs-center ">خرید بیت کوین آنلاین در جمهوری اسلامی ایران</v-card-text>
                     </v-card>
->>>>>>> c92f770e4db9e745fed21d1b3396a2f064f550d4
                         <Advertise></Advertise>
                     </v-flex>
 
