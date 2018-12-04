@@ -1,21 +1,17 @@
 <template>
-<v-container fluid grid-list-md>
-    <v-layout >
-        <v-flex d-flex>
-            <v-card >
-                <v-card-text class="fontIran">
-                    <p class="titled">گارد ورودی</p>
-                    <p><router-link class="router" to="/EditProfileIdentifyVerify">بازگشت به امنیت حساب</router-link></p>
-                    <p>گزینه های امنیتی برای جلوگیری از ورود سیستم های غیر مجازاست.</p>
-                    <v-divider></v-divider>
-                    <v-checkbox  label="تایید ورود به سیستم از مرورگرهای ناشناخته وب" ></v-checkbox>
-                    <p><v-btn @click="submit" class="primary" to="/EditProfileChangeEmail">تغییر تنظیمات</v-btn></p>
-                    <p>هر گونه تغییر به این تنظیمات نیاز به تایید ایمیل دارد.</p>
-                </v-card-text>
-            </v-card>
-        </v-flex>
-    </v-layout>
-</v-container>
+    <div>
+        <v-card>
+            <v-card-text class="fontIran">
+                <p class="titled">گارد ورودی</p>
+                <p><router-link class="router" to="/EditProfileIdentifyVerify">بازگشت به امنیت حساب</router-link></p>
+                <p>گزینه های امنیتی برای جلوگیری از ورود سیستم های غیر مجازاست.</p>
+                <v-divider></v-divider>
+                <v-checkbox  label="تایید ورود به سیستم از مرورگرهای ناشناخته وب" ></v-checkbox>
+                <p><v-btn @click="submit" class="primary" to="/EditProfileChangeEmail">تغییر تنظیمات</v-btn></p>
+                <p>هر گونه تغییر به این تنظیمات نیاز به تایید ایمیل دارد.</p>
+            </v-card-text>
+        </v-card>
+    </div>
 </template>
 <style scoped>
 .titled{

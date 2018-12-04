@@ -1,5 +1,5 @@
 <template>
-<v-container fluid grid-list-sm pt-0>
+<div>
     <v-layout  justify-space-around>
         <v-flex lg9 xl8>
             <v-card-text>
@@ -15,7 +15,7 @@
             </v-card-text>
         </v-flex>
     </v-layout>
-</v-container>
+    </div>
 </template>
 <script>
 import Advertise from './../components/Advertise.vue'

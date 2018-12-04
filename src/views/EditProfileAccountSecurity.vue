@@ -1,6 +1,5 @@
 <template>
-<v-container fluid grid-list-md>
-  <v-layout column>
+<div>
     <v-card-text>
    <v-flex d-flex>
     <v-card>
@@ -108,8 +107,7 @@
       </v-card>
     </v-flex> 
     </v-card-text>
-  </v-layout>
-</v-container>
+ </div>
     </template>
      <style scoped>
      .titled{
