@@ -76,12 +76,19 @@
                     <span class="fontIrans"><v-icon color="grey lighten-1" size="18px">reply</v-icon><router-link class="textCard" to="">تبدیل شدن به تاجر در صدرکریپتو</router-link>و کسب بیت کوین از بازدید  کنندگان جدیدی که معرفی کرده اید.</span><br>
                     <span class="fontIrans"><v-icon color="grey lighten-1" size="18px">reply</v-icon><router-link class="textCard" to="">برای پیشنهادات دیگر، از طریق فرم پشتیبانی با تیم صدرکریپتو تماس بگیرید.</router-link></span> 
                 </v-card-text>
-            
-                
+                <Footer></Footer>                
             </v-flex>
         </v-layout>
     </v-container>
 </template>
+<script>
+import Footer from './../components/Footer.vue'
+  export default{
+  components:{  
+    Footer,
+  }
+}
+</script>
 <style scoped>
 .fontIran{
     font-family:'Iranian Sans';
