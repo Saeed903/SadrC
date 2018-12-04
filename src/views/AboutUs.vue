@@ -12,7 +12,7 @@
                         </v-card-text>
                     </v-flex>
                     <v-flex sm7 xs7 md7 xl3 lg3 order-sm5>
-                        <v-card class="text-xs-center">
+                        <v-card class="text-xs-center" color="blue-grey darken-3">
                             <v-card-text>
                                 <router-link to="" class="textCard">چرا متفاوت هستیم؟</router-link><br>
                                 <router-link to="" class="textCard">ماموریت</router-link><br>
