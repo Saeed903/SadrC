@@ -196,9 +196,16 @@
     </v-toolbar>
    
     <v-content>
-      <transition name="list" mode="out-in">
-        <router-view/>
-      </transition>  
+      <v-container fluid grid-list-xl pt-0>
+        <v-layout  justify-space-around>
+          <v-flex lg10 xl9>
+            <transition name="list" mode="out-in">
+              <router-view/>
+            </transition> 
+          </v-flex>
+        </v-layout>
+      </v-container>
+       
     </v-content>
 
 </v-app>

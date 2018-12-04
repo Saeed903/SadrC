@@ -1,5 +1,6 @@
 <template>
 <v-layout column>
+    <v-flex>
    
     <div v-if="!confirmEmailDate && userId">
         <p class="fontIran">شما باید ایمیل خود را تایید نمایید.قبل از آنکه سفارش بدهید ایمیل فرستاده شده را پیدا کرده و پس از تایید دوباره به این صفحه بازگردید.
@@ -70,7 +71,7 @@
             </v-expansion-panel-content>
         </v-expansion-panel>
     </v-flex>
-    
+    </v-flex>
 </v-layout>
 </template>
 <script>
