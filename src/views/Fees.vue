@@ -1,7 +1,5 @@
 <template>
-<v-container fluid grid-list-xl>
-    <v-layout  justify-space-around>
-        <v-flex lg10 xl8>
+<div>
                 <v-card-text class="pt-0">    
                     <span class="fontIran">هزینه های صدرکریپتو</span><br>
                     <span class="fontsIran">تجارت بیت کوین</span><br>
@@ -21,9 +19,7 @@
                     <span class="fontIrans">کار سفارشی، به عنوان مثال تحقیق در مورد مشکلات احتمالی خارجی، 200 یورو در ساعت است که در بیت کوین در نرخ بازار فعلی پرداخت می شود، حداقل مبلغ قابل پرداخت 200 یورو است.</span>
                 </v-card-text>
                 <Footer></Footer>
-        </v-flex>
-    </v-layout>
-</v-container>
+ </div>
 </template>
 <script>
 import Footer from './../components/Footer.vue'
