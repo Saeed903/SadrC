@@ -1,7 +1,5 @@
 <template>
-    <v-container fluid grid-list-xl pt-0>
-        <v-layout  justify-space-around>
-            <v-flex lg10 xl8>
+ <div>
                 <v-card-text>
                     <p class="fontIran text-xs-center">ثبت آگهی {{currency}}</p>
                     <p class="fontIran text-xs-center"><v-icon color="red" size="16px">warning</v-icon>لطفا قبل از ثبت آگهی <router-link to="/Login" class="fontsIran">ورود</router-link> یا <router-link to="/signUp" class="fontsIran">ثبت نام</router-link> کنید!</p>
@@ -280,9 +278,7 @@
             
                 <Footer></Footer>
                 
-            </v-flex>
-        </v-layout>
-    </v-container>
+  </div>
 </template>
 <script>
 
