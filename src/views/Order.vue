@@ -1,15 +1,12 @@
 <template>
-<v-container fluid grid-list-md pt-0>
-  <v-layout row wrap align-justify justify-center>
-    <v-flex>
-      <p class="titled">خرید بیت کوین با استفاده از انتقال بانکی جمهوری اسلامی ایران با ریال ایران</p>
-    </v-flex>
-
-    <v-flex d-flex sm12 md6 lg6>
-      <v-layout  row wrap>
-        <v-flex d-flex>
+<div>
+  <p class="titled ">خرید بیت کوین با استفاده از انتقال بانکی جمهوری اسلامی ایران با ریال ایران</p>
+    
+    <v-flex d-flex xs-order>
+      <v-layout row wrap justify-space-around>
+        <v-flex >
           <v-layout column>
-            <v-flex>
+            <v-flex d-flex>
               <v-card-media>
                 <div class="btc">
                   <p>قیمت:</p>
@@ -30,7 +27,7 @@
                 </div>
               </v-card-media>
             </v-flex>
-            <v-flex>
+            <v-flex d-flex md4 lg4 xl4>
               <order-process></order-process>
             </v-flex>
           </v-layout>
@@ -38,7 +35,7 @@
       </v-layout>
     </v-flex>
 
-    <v-flex d-flex sm6 md6 lg6 v-if="!confirmEmailDate && userId" >
+    <v-flex v-if="!confirmEmailDate && userId" >
       <working-hour workingTime="true"></working-hour>
     </v-flex>
 
@@ -49,8 +46,7 @@
     <v-flex v-if="!confirmEmailDate && userId" d-flex xs12 sm6 md6 >
       <working-hour Reminder="ture"></working-hour>  
     </v-flex>
-  </v-layout>
-</v-container>
+</div>
 </template>
 <script>
 

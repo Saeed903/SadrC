@@ -53,7 +53,7 @@
             
           <v-flex xs12 sm1 md1 pt-0>
             <v-card-text>
-              <v-btn left :disabled="!valid" @click="submit"> جست وجو </v-btn>
+              <v-btn center :disabled="!valid" @click="submit"> جست وجو </v-btn>
             </v-card-text>
           </v-flex>
         </v-layout>
