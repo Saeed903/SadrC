@@ -1,23 +1,23 @@
 <template>
 
-    <v-layout>
-        <v-card-text v-if="workingTime"> 
-            <p class="titled">شرایط تجارت با آلمان</p>
-            <div style="background-color:rgb(26, 29, 37)">
-                <p style="padding-right:20px" class="fontIran">تایید احراز هویت <br>پرداخت وجه مورد توافق <br>بیت کوین</p>
-            </div>
-            <p class="titled">ساعات کار</p>
-            <v-list>
-                <ul class="fontIran" v-for="item in items" :key="item" style="padding-right:25px">
-                <li>{{item}}</li>
-                </ul>
-            </v-list>
-            <p class="fontIran">زمان محلی:تهران</p>
-            <p ><router-link class="router" to="">گزارش این تبلیغ</router-link></p>
-        </v-card-text>
+    <div>
+        <v-flex>
+            <v-card-text v-if="workingTime"> 
+                <p class="titled">شرایط تجارت با آلمان</p>
+                <div style="background-color:rgb(26, 29, 37)">
+                    <p style="padding-right:20px" class="fontIran">تایید احراز هویت <br>پرداخت وجه مورد توافق <br>بیت کوین</p>
+                </div>
+                <p class="titled">ساعات کار</p>
+                <v-list>
+                    <ul class="fontIran" v-for="item in items" :key="item" style="padding-right:25px">
+                    <li>{{item}}</li>
+                    </ul>
+                </v-list>
+                <p class="fontIran">زمان محلی:تهران</p>
+                <p ><router-link class="router" to="">گزارش این تبلیغ</router-link></p>
+            </v-card-text>
+        </v-flex>
       
-
-     
         <v-card-text v-if="sadrsys"  class="fontIran grey darken-3 ">
             <p class="titled  green--text " >صدرکریپتو از شما محافظت می کند.</p>
             <p>بیت کوین موجود در کیف پول شما،پس از ثبت درخواست برای فروش به اندازه سفارش درکیف پول شما مسدود خواهد شد.</p> 
@@ -33,8 +33,7 @@
           <p>برای اطمینان بیشتر از صحت معامله حضوری و جلوگیری از کلاهبرداری بهتر است دیدگاه خریداران/ فروشندگان مربوط به فرد مورد نظر و همچنین پروفایل مربوطه راچک وبررسی نمایید</p>
           <p>توجه داشته باشید که نوسانات بازاروهزینه انتقال ممکن است مقدار نهایی بیت کوین را تغییر دهد لذا مقدار بیت کوین در زمان درخواست محاسبه می شود</p>
         </v-card-text>
-    </v-layout> 
-
+    </div> 
 </template>
 <script>
 export default {
