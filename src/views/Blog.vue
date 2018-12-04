@@ -1,15 +1,10 @@
 <template>
-    <v-container fluid grid-list-xl>
-        <v-layout  justify-space-around>
-            <v-flex lg10 xl8>
-                <div class="divTopicImage">
-                    <img class="topicImage" src="./../../public/img/SadrCrypto/topic.jpg"/>
-                </div>
-            
-
-            </v-flex>
-        </v-layout>
-    </v-container>
+    <div>
+        <div class="divTopicImage">
+            <img class="topicImage" src="./../../public/img/SadrCrypto/topic.jpg"/>
+        </div>
+        <v-card-text>داستانی از دنیای بیت کوین و ارزهای دیجیتال</v-card-text>
+    </div>
 </template>
 <style>
 .topicImage{
@@ -18,4 +13,28 @@
 .divTopicImage{
     max-width:100%;
 }
+.fontIran{
+    font-family:'Iranian Sans';
+    font-size:19px;
+    color:white;
+}
+.fontsIran{
+    font-family:'Iranian Sans';
+    font-size:15px;
+    color:#E0E0E0;
+}
+.fontIrans{
+    font-family:'Iranian Sans';
+    font-size:12px;
+    color:#BDBDBD;
+}
+.textCard{
+    font-family:'iranian sans';
+    color:#00E5FF;
+    text-decoration:none;
+}
+.textCard:hover{
+    color:#18FFFF;
+}
+
 </style>
