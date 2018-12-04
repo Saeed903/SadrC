@@ -2,8 +2,9 @@
     <div>
         <div class="divTopicImage">
             <img class="topicImage" src="./../../public/img/SadrCrypto/topic.jpg"/>
+            <v-card-text class="fontAweasome text-xs-center">داستانی از دنیای بیت کوین و ارزهای دیجیتال</v-card-text>
         </div>
-        <v-card-text>داستانی از دنیای بیت کوین و ارزهای دیجیتال</v-card-text>
+       
     </div>
 </template>
 <style>
@@ -12,6 +13,10 @@
 }
 .divTopicImage{
     max-width:100%;
+}
+.fontAweasome{
+    font-size:20px;
+    font-family:'Iranian Sans';
 }
 .fontIran{
     font-family:'Iranian Sans';

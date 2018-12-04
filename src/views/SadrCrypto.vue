@@ -1,5 +1,22 @@
 <template>
 <div>
+<<<<<<< HEAD
+<v-flex>
+    <p class="iran text-xs-center " >صدرکریپتو ساده ترین و مطمعن ترین راه برای خرید و فروش و مدیریت ارز دیجیتال</p>
+    <p class="fontIran text-xs-center orange--text">فوری.امن.خصوصی</p>
+    <p class="text-xs-center ">
+        <span class="iran orange--text">تجارت بیت کوین</span>
+        <router-link to="/BitcoinCity" class="iran router">در 16370 شهر</router-link>
+        <span class="iran orange--text">و</span>
+        <router-link to="/BitcoinCountry" class="iran router">248 کشور</router-link>
+        <span class="iran orange--text">شامل</span>
+        <router-link to="/RepublicIran" class="iran router">جمهوری اسلامی ایران</router-link>
+    </p>
+    <div class="text-xs-center">
+        <v-btn class="iran" color="primary" to="Signup" round><v-icon size="20px">done_all</v-icon>ثبت نام رایگان</v-btn>
+    </div>
+</v-flex>
+=======
                 <v-flex>
                     <p class="iran text-xs-center " >صدرکریپتو ساده ترین و مطمعن ترین راه برای خرید و فروش و مدیریت ارز دیجیتال</p>
                     <p class="fontIran text-xs-center orange--text">فوری.امن.خصوصی</p>
@@ -15,6 +32,7 @@
                         <v-btn class="iran" color="primary" to="Signup" round><v-icon size="20px">done_all</v-icon>ثبت نام رایگان</v-btn>
                     </div>
                 </v-flex>
+>>>>>>> f202dc5a0db7526c4ae8ac4d248272add3767282
 
 <v-flex pt-0>
     <FormSell/>
