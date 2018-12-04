@@ -1,8 +1,5 @@
 <template>
-    <v-container fluid grid-list-xl>
-        <v-layout  justify-space-around>
-            <v-flex lg10 xl8>
-
+  <div>
                 <v-layout row wrap>
                      <v-flex sm12 xs12 xl9 lg9>
                         <v-card-text>
@@ -77,9 +74,7 @@
                     <span class="fontIrans"><v-icon color="grey lighten-1" size="18px">reply</v-icon><router-link class="textCard" to="">برای پیشنهادات دیگر، از طریق فرم پشتیبانی با تیم صدرکریپتو تماس بگیرید.</router-link></span> 
                 </v-card-text>
                 <Footer></Footer>                
-            </v-flex>
-        </v-layout>
-    </v-container>
+   </div>
 </template>
 <script>
 import Footer from './../components/Footer.vue'
