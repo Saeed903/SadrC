@@ -1,7 +1,5 @@
 <template>
-<v-container fluid grid-list-xl pt-0>
-    <v-layout  justify-space-around>
-        <v-flex lg10 xl9>
+<div>
                 <v-flex>
                     <p class="iran text-xs-center " >صدرکریپتو ساده ترین و مطمعن ترین راه برای خرید و فروش و مدیریت ارز دیجیتال</p>
                     <p class="fontIran text-xs-center orange--text">فوری.امن.خصوصی</p>
@@ -59,9 +57,7 @@
                     <v-flex>
                         <Footer></Footer>
                     </v-flex>
-            </v-flex>
-        </v-layout>
-    </v-container>
+   </div>
 </template>
 <script>
 import FormSell from './../components/FormSell.vue'
