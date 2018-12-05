@@ -1,7 +1,5 @@
 <template>
-    <v-container fluid grid-list-xl>
-        <v-layout  justify-space-around>
-            <v-flex lg10 xl8>
+   <div>
                 <v-card-text class="fontIran headline">بلیط های پشتیبانی من</v-card-text>
                 <v-flex>
                     <v-card color="blue-grey darken-3">
@@ -24,9 +22,7 @@
                 <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>ایمیل تأیید حساب من دریافت نمی کنم</router-link></v-card-text>
                 <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>من نمیتوانم شماره تلفنم را تأیید کنم</router-link></v-card-text>
                 <v-card-text class="fontIran pt-0 subheading"><router-link class="fontsIran body-1" to=""><v-icon color="grey" size="20px">message</v-icon>دیگر</router-link></v-card-text>
-            </v-flex>
-        </v-layout>
-    </v-container>
+   </div>
 </template>
 <style scoped>
 .fontIran{
