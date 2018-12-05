@@ -1,7 +1,7 @@
 <template>
   <div>
      
-    <p class="titled text-xs-center">{{currency}}</p>
+    <p class="titled">{{currency}}</p>
      
     <v-form ref="form" class="table" v-model="valid" lazy-validatio>
       <v-layout row wrap>
@@ -50,7 +50,7 @@
           
         <v-flex xs12 sm1 md1 pt-0>
           <v-card-text>
-            <v-btn center :disabled="!valid" @click="submit"> جست وجو </v-btn>
+            <v-btn :disabled="!valid" @click="submit"> جست وجو </v-btn>
           </v-card-text>
         </v-flex>
       </v-layout>
