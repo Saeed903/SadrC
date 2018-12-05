@@ -37,6 +37,7 @@
     font-family:'iranian sans';
     color:#00E5FF;
     text-decoration:none;
+    font-size:12px;
 }
 .textCard:hover{
     color:#18FFFF;
