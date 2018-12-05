@@ -96,7 +96,16 @@
             <span class="saidbar">ثبت آگهی</span>
           </v-tooltip>
         </router-link>
-      
+
+        <router-link to="PostTradeNextTap">
+          <v-tooltip bottom>
+            <v-icon slot="activator" color="white" dark >
+              shopping_cart
+            </v-icon>
+            <span class="saidbar">ثبت آگهی</span>
+          </v-tooltip>
+        </router-link>
+
         <router-link to="Forums">
           <v-tooltip bottom>
             <v-icon slot="activator" color="white" dark>
