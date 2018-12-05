@@ -224,7 +224,7 @@
         { title: 'چگونه بیت کوین بخریم؟', path:'/HowToBuyBticoins',icon:'account_circle'},
         { title: 'سوالات متداول', path:'/FrequentlyAskedQuestions',icon:'home'},
         { title: 'راهنمایی ها', path:'/Guides',icon:'fas fa-tachometer-alt'},
-        { title: 'تماس با پشتیبان', path:'/',icon:'public' },
+        { title: 'تماس با پشتیبان', path:'/SupportCreateNewTicket',icon:'public' },
         { title: 'وبلاگ', path:'/Blog',icon:'history' },
         { title: 'هزینه ها', path:'/Fees',icon:'help' },
         { title: 'درباره ما', path:'/AboutUs',icon:'lock' },
