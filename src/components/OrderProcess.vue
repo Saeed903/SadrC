@@ -57,7 +57,7 @@
         </div>
     
         
-    <v-flex pt-2 v-if="!userId " d-flex xs12 sm12 md12 lg12>
+    <v-flex v-if="!userId " d-flex xs12 sm12 md12 lg12>
         <v-expansion-panel>
             <v-expansion-panel-content
             v-for="(item,i) in items"

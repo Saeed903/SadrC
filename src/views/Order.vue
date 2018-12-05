@@ -1,10 +1,10 @@
 <template>
-<div>
+<v-layout row wrap>
   <p class="titled ">خرید بیت کوین با استفاده از انتقال بانکی جمهوری اسلامی ایران با ریال ایران</p>
     
-    <v-flex d-flex xs-order>    
-      <v-layout row wrap justify-space-around>
-        <v-flex >
+    <v-flex d-flex >    
+      <v-layout row wrap>
+        <v-flex>
           <v-layout column>
             <v-flex d-flex class="btc">
               <div>
@@ -35,7 +35,7 @@
     <v-flex v-if="!confirmEmailDate && userId" d-flex xs12 sm6 md6 >
       <working-hour Reminder="ture"></working-hour>  
     </v-flex>
-</div>
+</v-layout>
 </template>
 <script>
 
