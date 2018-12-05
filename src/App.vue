@@ -284,11 +284,8 @@
 }
 </script>
 
-<style scoped>
-.fontIran{
-  font-family:iranian sans;
-  font-size:12px;
-}
+<style>
+
 .saidbar{
   font-family:iranian sans;
 }
@@ -327,5 +324,17 @@
   opacity: 0;
   transform: translateY(30px);
 }
+.fontIran{
+    font-family:'Iranian Sans';
+}
+.fontsIran{
+    font-family:'iranian sans';
+    color:rgb(0, 153, 255);
+    text-decoration:none;
+}
+.fontsIran:hover{
+    color:rgb(0, 140, 255);
+}
 
 </style>
+
