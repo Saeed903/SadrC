@@ -1,31 +1,20 @@
 <template>
-<div>
+<v-layout row wrap>
   <p class="titled ">خرید بیت کوین با استفاده از انتقال بانکی جمهوری اسلامی ایران با ریال ایران</p>
     
-    <v-flex d-flex xs-order>
-      <v-layout row wrap justify-space-around>
-        <v-flex >
+    <v-flex d-flex >    
+      <v-layout row wrap>
+        <v-flex>
           <v-layout column>
-            <v-flex d-flex>
-              <v-card-media>
-                <div class="btc">
-                  <p>قیمت:</p>
-                  <p>روش پرداخت:</p>
-                  <p>کاربر:</p>
-                  <p>محدودیت های تجاری:</p>
-                  <p>موقعیت:</p>
-                  <p>پنجره پرداخت</p>
-                </div>
-                <div class="pr-5 btc">
-                  <p style="color:greenyellow">935543438.97 IRR/BTC</p>
-                  <p>انتقال بانک جمهوری اسلامی ایران</p>
-                  <p><router-link  to="/DashBoard"><v-tooltip  right><v-icon slot="activator"  style="color:aqua">perm_identity</v-icon><span class="fontIran">داشبورد</span></v-tooltip></router-link>آلمان</p>
-                  <p>نمره بازخورد.100<router-link to="" class="router">دیدن بازخورد</router-link></p>
-                  <p>10,000,000-30,000,001 IRR</p>
-                  <p ><router-link to="" class="router">تهران,استان تهران,ایران</router-link></p>
-                  <p>1 ساعت و 30 دقیقه</p> 
-                </div>
-              </v-card-media>
+            <v-flex d-flex class="btc">
+              <div>
+                <p>قیمت: <span style="color:greenyellow" class="pr-5">935543438.97 IRR/BTC</span></p>
+                <p>روش پرداخت: <span style="color:greenyellow">انتقال بانک جمهوری اسلامی ایران</span></p>
+                <p>کاربر: <span style="color:greenyellow"><router-link class="pr-5" to="/DashBoard"><v-tooltip  right><v-icon slot="activator"  style="color:aqua">perm_identity</v-icon><span class="fontIran">داشبورد</span></v-tooltip></router-link>آلمان</span></p>
+                <p>محدودیت های تجاری: <span style="color:greenyellow">نمره بازخورد(100).<router-link to="" class="router">دیدن بازخورد</router-link></span></p>
+                <p>موقعیت: <span style="color:greenyellow"><router-link  to="" class="router pr-5">تهران,استان تهران,ایران</router-link></span></p>
+                <p>پنجره پرداخت: <span style="color:greenyellow">1 ساعت و 30 دقیقه</span></p>
+              </div>
             </v-flex>
             <v-flex d-flex md4 lg4 xl4>
               <order-process></order-process>
@@ -46,7 +35,7 @@
     <v-flex v-if="!confirmEmailDate && userId" d-flex xs12 sm6 md6 >
       <working-hour Reminder="ture"></working-hour>  
     </v-flex>
-</div>
+</v-layout>
 </template>
 <script>
 
@@ -83,7 +72,8 @@ export default {
             "پنج شنبه : تعطیل",
             "جمعه : تعطیل",
             "شنبه : تعطیل"
-      ]
+      ],
+      
   })
 };
 </script>

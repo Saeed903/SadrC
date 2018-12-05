@@ -196,7 +196,7 @@
     </v-toolbar>
    
     <v-content>
-      <v-container fluid grid-list-xl pt-0>
+      <v-container fluid grid-list-xl>
         <v-layout  justify-space-around>
           <v-flex lg10 xl9>
             <transition name="list" mode="out-in">
