@@ -1,10 +1,10 @@
 <template>
 <v-container fluid grid-list-xl pt-0>
     <v-layout  justify-space-around v-if="!loading">
-        <v-flex d-flex xs12 sm7 md6 lg4>
+        <v-flex d-flex xs12 sm7 md6 lg7 xl7>
           <v-card-text>
             <v-form 
-              style="max-width:320px ;" 
+              style="max-width:330px ;" 
               @submit.prevent="login" 
               @keydown.prevent.enter 
               v-model="valid"
@@ -18,8 +18,10 @@
                 :counter="30"
                 label="ایمیل"
                 data-vv-name="email"
+                color="cyan accent-2"
                 class="textBottom emailField"
                 required
+                clearable
               >
               </v-text-field>
 
@@ -30,9 +32,11 @@
                 :error-messages="errors.collect('password')"
                 :type="'password'"
                 label="رمز عبور"
+                color="cyan accent-2"
                 class="textBottom textField"
                 data-vv-name="password"
                 required
+                clearable
               >
               </v-text-field>
 
@@ -48,8 +52,8 @@
           </v-form>
 
           <v-flex>
-            <p><router-link class="textBottom link" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link></p>
-            <p class="textBottom">صدر کریپتو؟<router-link to="/SignUp" class="link">ثبت نام کنید</router-link></p>
+            <router-link class="textCard" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link><br>
+            <span class="textBottom">یک حساب جدید باز کنید؟<router-link to="/SignUp" class="textCard">ثبت نام کنید</router-link></span>
           </v-flex>
 
             <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
@@ -148,13 +152,16 @@
 }
 .textBottom{
   font-family: Iranian Sans;
-}
-.link{
-    text-decoration: none;
-    color:rgb(0,153,255);
-}
-.link:hover{
-    color:rgb(0,140,255);
+  font-size:12px;
 }
 
+.textCard{
+    font-family:'iranian sans';
+    color:#00E5FF;
+    text-decoration:none;
+    font-size:12px;
+}
+.textCard:hover{
+    color:#18FFFF;
+}
 </style>
