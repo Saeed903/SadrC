@@ -8,17 +8,17 @@
                     :value="true"
                     >
                     <v-btn dark value="video">
-                    <span class="menu">ارسال بیت کوین</span>
+                    <span class="fontIrans">ارسال بیت کوین</span>
                     <v-icon>ondemand_video</v-icon>
                     </v-btn>
 
                     <v-btn dark value="Music">
-                    <span class="menu">دریافت بیت کوین</span>
+                    <span class="fontIrans">دریافت بیت کوین</span>
                     <v-icon>music_note</v-icon>
                     </v-btn>
 
                     <v-btn dark  value="Book">
-                    <span class="menu">معاملات</span>
+                    <span class="fontIrans">معاملات</span>
                     <v-icon>book</v-icon>
                     </v-btn>
 
@@ -27,7 +27,7 @@
         </v-card-text>
 
          <transition name="">
-            <div class="contant">
+            <div class="fontIrans">
                 <div v-if="bottomNav=='Music'" >
                     <WalletReceiveBitcoin ></WalletReceiveBitcoin>
                 </div>
@@ -35,7 +35,7 @@
         </transition>
 
         <transition name="">
-            <div class="contant">
+            <div class="fontIrans">
                 <div v-if="bottomNav=='video'">
                     <WalletSendBitcoin></WalletSendBitcoin>
                 </div>
@@ -43,13 +43,13 @@
         </transition>
 
         <transition name="">
-            <div class="contant">
+            <div class="fontIrans">
                 <div v-if="bottomNav=='Image'">
                     <WalletTransactions></WalletTransactions>
                 </div>
             </div>
         </transition>
-        <Footer class="fari"></Footer>
+        <Footer class="fontIrans"></Footer>
     </div>
 </template>
 <script>
