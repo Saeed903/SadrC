@@ -6,7 +6,7 @@
       <v-layout row wrap>
         <v-flex>
           <v-layout column>
-            <v-flex d-flex class="btc">
+            <v-flex class="btc">
               <div>
                 <p>قیمت: <span style="color:greenyellow" class="pr-5">935543438.97 IRR/BTC</span></p>
                 <p>روش پرداخت: <span style="color:greenyellow">انتقال بانک جمهوری اسلامی ایران</span></p>
@@ -16,7 +16,7 @@
                 <p>پنجره پرداخت: <span style="color:greenyellow">1 ساعت و 30 دقیقه</span></p>
               </div>
             </v-flex>
-            <v-flex d-flex md4 lg4 xl4>
+            <v-flex  md4 lg4 xl4>
               <order-process></order-process>
             </v-flex>
           </v-layout>
@@ -28,23 +28,37 @@
       <working-hour workingTime="true"></working-hour>
     </v-flex>
 
-    <v-flex v-if="!confirmEmailDate && userId" d-flex xs12 sm6 md6 >
+    <v-flex v-if="!confirmEmailDate && userId"  xs12 sm6 md6 >
       <working-hour sadrsys="true"></working-hour>  
     </v-flex>
 
-    <v-flex v-if="!confirmEmailDate && userId" d-flex xs12 sm6 md6 >
+    <v-flex v-if="!confirmEmailDate && userId" xs12 sm6 md6 >
       <working-hour Reminder="ture"></working-hour>  
     </v-flex>
+
+    <v-flex pr-0  xs12 sm12 md8 lg8>
+            <v-expansion-panel>
+                <v-expansion-panel-content
+                    v-for="(item,i) in items"
+                    :key="i"
+                    expand-icon="mdi-menu-down"
+                >
+                <div class="fontIran text-xs-right" slot="header">{{item.title}}</div>
+                    <v-card>
+                        <v-card-text class="fontIran text-xs-right">{{item.persianTitle}}</v-card-text>
+                    </v-card>
+                </v-expansion-panel-content>
+            </v-expansion-panel>
+        </v-flex>
 </v-layout>
 </template>
 <script>
 
 import WorkingHour from "./../components/WorkingHour.vue";
 import OrderProcess from "./../components/OrderProcess.vue";
-
 import { mapState } from 'vuex';
-
 export default {
+   
   components:{
     OrderProcess,
     WorkingHour
@@ -64,7 +78,7 @@ export default {
     }
   },
   data:()=>({
-      items:[
+      WorkingHour:[
             "یکشنبه : تعطیل",
             "دوشنبه : 24 ساعت",
             "سه شنبه : تعطیل",
@@ -73,6 +87,12 @@ export default {
             "جمعه : تعطیل",
             "شنبه : تعطیل"
       ],
+      items:[
+                {title:'چگونه می توان شروع کرد و با معامله گر تماس گرفت؟', persianTitle:'صدرکریپتو یک مبادله بیت کوین برابر با هم است. ما یک بازار است که کاربران می توانند بیت کوین ها را از یکدیگر خریداری و فروش کنند. کاربران که به عنوان معامله گران نامیده می شوند، تبلیغات با قیمت و روش پرداخت که می خواهند ارائه دهند. شما می توانید وب سایت ما برای تبلیغات تجاری و جستجوی روش پرداختی که ترجیح می دهید را مرور کنید. شما می توانید معامله گران خرید و فروش Bitcoins آنلاین را برای بیش از 60 روش مختلف پرداخت پیدا کنید.اگر شما به sadrCrypto جدید هستید و می خواهید بیت کوین را خریداری کنید، لطفا به نحوه خرید راهنمای ما برای یادگیری نحوه خرید بیت کوین نگاه کنید.'},
+                {title:'نحوه پرداخت آنلاین', persianTitle:'اتریوم'},
+                {title:'لغو تجارت', persianTitle:'زدکش'},
+                
+            ]
       
   })
 };

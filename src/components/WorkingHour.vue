@@ -9,7 +9,7 @@
                 </div>
                 <p class="titled">ساعات کار</p>
                 <v-list>
-                    <ul class="fontIran" v-for="item in items" :key="item" style="padding-right:25px">
+                    <ul class="fontIran" v-for="WorkingHour in WorkingHour" :key="WorkingHour" style="padding-right:25px">
                     <li>{{item}}</li>
                     </ul>
                 </v-list>
@@ -41,14 +41,14 @@ export default {
     name:'WorkingHour',
     props:['Reminder','sadrsys','workingTime'],
     data:()=>({
-      items:[
+      WorkingHour:[
             "یکشنبه : تعطیل",
             "دوشنبه : 24 ساعت",
             "سه شنبه : تعطیل",
             "چهارشنبه : تعطیل",
             "پنج شنبه : تعطیل",
             "جمعه : تعطیل",
-            "شنبه : تعطیل"
+            "شنبه : تعطیل",
       ]
   })
 }
