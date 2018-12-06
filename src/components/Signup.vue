@@ -1,6 +1,6 @@
 <template>
   <div> 
-  <form>
+  <v-form>
     <v-text-field
       v-validate="'required|max:15'"
       v-model="name"
@@ -8,7 +8,9 @@
       :error-messages="errors.collect('name')"
       label="name"
       data-vv-name="name"
+      color="cyan accent-2"
       required
+      clearable
     ></v-text-field>
     <v-text-field
       v-validate="'required|email'"
@@ -16,7 +18,9 @@
       :error-messages="errors.collect('email')"
       label="email"
       data-vv-name="email"
+      color="cyan accent-2"
       required
+      clearable
     ></v-text-field>
     <v-text-field
       v-validate="'required|max:10'"
@@ -24,8 +28,10 @@
       :error-messages="errors.collect('password')"
       :type="showPassword ? 'text' : 'password'"
       label="password"
+      color="cyan accent-2"
       data-vv-name="password"
       required
+      clearable
     ></v-text-field>
     <v-text-field
       v-validate="'required|max:10'"
@@ -34,11 +40,13 @@
       :type="showConfirmPassword ? 'text' : 'password(again)'"
       label="password(again)"
       data-vv-name="password(again)"
+      color="cyan accent-2"
       required
+      clearable
     ></v-text-field>
     <v-btn @click="submit">submit</v-btn>
     <v-btn @click="clear">clear</v-btn>
-  </form>
+  </v-form>
   <p>{{btrAddr}}</p>
         <qrcode-vue :value="btrAddr.slice(8)"></qrcode-vue>
   <Footer></Footer>
