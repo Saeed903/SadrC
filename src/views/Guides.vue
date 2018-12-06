@@ -6,7 +6,7 @@
         </v-card-text>
 
         <v-layout row wrap>
-            <v-flex v-for= "(help, index) in Helps" :key="index"  xs12 sm6 md6 lg12 xl12 >
+            <v-flex v-for= "(help, index) in Helps" :key="index"  xs12 sm6 md6 lg6 xl6 >
                 <router-link class="router" :to="help.path" >
                     <v-card  height="100%">
                         <v-card-text class="text-xs-center">
