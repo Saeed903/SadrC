@@ -1,7 +1,7 @@
 <template>
 <v-container fluid grid-list-xl pt-0>
     <v-layout  justify-space-around v-if="!loading">
-        <v-flex d-flex xs12 sm7 md6 lg4>
+        <v-flex d-flex xs12 sm8 md6 lg4>
           <v-card-text>
             <v-form 
               style="max-width:320px ;" 
