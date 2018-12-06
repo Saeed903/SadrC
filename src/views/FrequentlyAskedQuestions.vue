@@ -3,33 +3,33 @@
         <v-layout  justify-space-around>
             <v-flex lg10 xl8>
                 <v-card-text class="text-xs-center">
-                    <v-icon large>help_outline</v-icon>
-                    <p class="titled">سوالات متداول</p>
-                    <p class="text">این که آیا شما یک کاربر جدید هستید و یا یک معامله گر چاشنی هستید، به تمام سوالات خود در این صفحه پاسخ خواهید داد. اگر از بیت کوین جدید هستید می توانید از این راهنمای مفید خرید بیت کوین ها با استفاده از صدرکریپتو انجام دهید. اگر می خواهید یک معامله گر شوید، راهنمای آنلاین بیت کوین ها برای شما مناسب است. شما همچنین می توانید یک سوال در انجمن های ما بپرسید یا بلیط پشتیبانی را برای تماس با پشتیبانی ما باز کنید.</p>
+                     <v-icon size="40px" color="cyan accent-2">help_outline</v-icon><br>
+                    <span class="titled">سوالات متداول</span><br>
+                    <span class="text" color="red">این که آیا شما یک کاربر جدید هستید و یا یک معامله گر چاشنی هستید، به تمام سوالات خود در این صفحه پاسخ خواهید داد. اگر از بیت کوین جدید هستید می توانید از این راهنمای مفید خرید بیت کوین ها با استفاده از صدرکریپتو انجام دهید. اگر می خواهید یک معامله گر شوید، راهنمای آنلاین بیت کوین ها برای شما مناسب است. شما همچنین می توانید یک سوال در انجمن های ما بپرسید یا بلیط پشتیبانی را برای تماس با پشتیبانی ما باز کنید.</span>
                 </v-card-text>
                 
-                <div>
-                    <p class="help text-xs-center">دریافت کمک بیشتر</p>
-                </div>
+                <v-card-text>
+                    <p class="text text-xs-center">دریافت کمک بیشتر</p>
+                </v-card-text>
                 <v-layout row wrap>
                     <v-flex>
                         <v-card-text class="text-xs-center">
                         <v-icon large>local_shipping</v-icon><br>
-                        <router-link class="link" to="">یک بلیط پشتیبانی را باز کنید</router-link>
+                        <router-link class="textCard" to="">یک بلیط پشتیبانی را باز کنید</router-link>
                         </v-card-text>
                     </v-flex>
 
                     <v-flex>
                         <v-card-text class="text-xs-center">
                         <v-icon large>group</v-icon><br>
-                        <router-link class="link" to="">پست در انجمن ما</router-link>
+                        <router-link class="textCard" to="">پست در انجمن ما</router-link>
                         </v-card-text>
                     </v-flex>
 
                     <v-flex>
                         <v-card-text class="text-xs-center">
                         <v-icon large>fab fa-twitter</v-icon><br>
-                        <router-link class="link" to="">در توییت ما بنویسید</router-link>
+                        <router-link class="textCard" to="">در توییت ما بنویسید</router-link>
                         </v-card-text>
                     </v-flex>
                 </v-layout>
@@ -49,7 +49,7 @@
                     </v-expansion-panel>
                 
                 <v-card-text class="text-xs-center">
-                    <p class="help">در مورد بیت کوین</p>
+                    <p class="text">در مورد بیت کوین</p>
                 </v-card-text>
                 <div>
                     <v-expansion-panel>
@@ -67,7 +67,7 @@
                 </div>
 
                 <v-card-text class="help text-xs-center">
-                    <p>استفاده از صدرکریپتو</p>
+                    <p class="text">استفاده از صدرکریپتو</p>
                 </v-card-text>
 
                 
@@ -85,7 +85,7 @@
                     </v-expansion-panel>
             
                 <v-card-text class="help text-xs-center">
-                    <p>مشکلات و راه حل های مشترک</p>
+                    <p class="text">مشکلات و راه حل های مشترک</p>
                 </v-card-text>
                 
                     <v-expansion-panel>
@@ -104,7 +104,7 @@
                     </v-expansion-panel>
                 
                 <v-card-text class="help text-xs-center">
-                    <p>ایجاد تبلیغات و تجارت بیت کوین</p>
+                    <p class="text">ایجاد تبلیغات و تجارت بیت کوین</p>
                 </v-card-text>
 
                 <v-card-text>
@@ -229,11 +229,12 @@ export default {
     color:rgb(0,153,255);
     font-family:Iranian Sans; 
 }
-.link:hover{
-    color:rgb(0,140,255);
+.textCard{
+    font-family:'iranian sans';
+    color:#00E5FF;
+    text-decoration:none;
 }
-.help{
-    font-family:Iranian Sans;
-    font-size:18px;
+.textCard:hover{
+    color:#18FFFF;
 }
 </style>
