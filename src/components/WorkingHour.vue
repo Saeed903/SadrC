@@ -8,11 +8,9 @@
                     <p style="padding-right:20px" class="fontIran">تایید احراز هویت <br>پرداخت وجه مورد توافق <br>بیت کوین</p>
                 </div>
                 <p class="titled">ساعات کار</p>
-                <v-list>
-                    <ul class="fontIran" v-for="WorkingHour in WorkingHour" :key="WorkingHour" style="padding-right:25px">
-                    <li>{{item}}</li>
-                    </ul>
-                </v-list>
+                <ul class="fontIran" v-for="(workingHour, index) in workingHours" :key="index" style="padding-right:25px">
+                    <li>{{workingHour}}</li>
+                </ul>
                 <p class="fontIran">زمان محلی:تهران</p>
                 <p ><router-link class="router" to="">گزارش این تبلیغ</router-link></p>
             </v-card-text>
@@ -39,18 +37,7 @@
 export default {
    
     name:'WorkingHour',
-    props:['Reminder','sadrsys','workingTime'],
-    data:()=>({
-      WorkingHour:[
-            "یکشنبه : تعطیل",
-            "دوشنبه : 24 ساعت",
-            "سه شنبه : تعطیل",
-            "چهارشنبه : تعطیل",
-            "پنج شنبه : تعطیل",
-            "جمعه : تعطیل",
-            "شنبه : تعطیل",
-      ]
-  })
+    props:['Reminder','sadrsys','workingTime', 'workingHours'],
 }
 </script>
 <style scoped>
