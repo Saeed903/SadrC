@@ -356,5 +356,9 @@
 .textCard:hover{
     color:#18FFFF;
 }
+.fontIrans1{
+  font-family:'Iranian Sans';
+  font-size:12px;
+}
 </style>
 
