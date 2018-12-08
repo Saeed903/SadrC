@@ -37,7 +37,12 @@
 export default {
    
     name:'WorkingHour',
-    props:['Reminder','sadrsys','workingTime', 'workingHours'],
+    props:{
+        Reminder: Boolean,
+        sadrsys: Boolean,
+        workingTime: Boolean, 
+        workingHours: Array
+    },
 }
 </script>
 <style scoped>

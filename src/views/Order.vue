@@ -35,17 +35,17 @@
       </v-flex>
       
       <v-flex  md4 lg4 xl4 v-if="!confirmEmailDate && userId" >
-        <working-hour workingHours="HEY" workingTime="true"></working-hour>
+        <working-hour :workingHours="HEY" workingTime="true"></working-hour>
       </v-flex>
     </v-layout> 
     
     <v-layout>
       <v-flex md6 lg6 xl6 v-if="!confirmEmailDate && userId"   >
-        <working-hour workingHours="HEY" sadrsys="true"></working-hour>  
+        <working-hour :workingHours="HEY" sadrsys="true"></working-hour>  
       </v-flex>
 
       <v-flex md6 lg6 xl6 v-if="!confirmEmailDate && userId"  >
-        <working-hour workingHours="HEY" Reminder="ture"></working-hour>  
+        <working-hour :workingHours="HEY" Reminder="ture"></working-hour>  
       </v-flex>    
     </v-layout>  
 
