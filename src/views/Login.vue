@@ -21,7 +21,7 @@
                 color="cyan accent-2"
                 class="textBottom emailField"
                 required
-                clearable
+                
               >
               </v-text-field>
 
@@ -36,7 +36,7 @@
                 class="textBottom textField"
                 data-vv-name="password"
                 required
-                clearable
+                
               >
               </v-text-field>
 

@@ -6,7 +6,7 @@
         <v-btn to="/EditProfileAccountSecurity" block color="secondary" dark class="fontIran"><v-icon >send</v-icon>ارسال مجدد تاییدیه ایمیل</v-btn>
     </div>
     <v-layout>
-        <v-card-text v-if="confirmEmailDate || !userId">
+        <v-card-text class="fontIrans" v-if="confirmEmailDate || !userId">
             <p class="fontsIran">چقدر می خواهید خرید کنید؟</p>
             <v-layout>
                 <v-flex d-flex xs12 sm5 md5>
