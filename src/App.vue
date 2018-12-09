@@ -178,7 +178,7 @@
           >
             <v-btn slot="activator" dark>
               <v-icon style="color:aqua">perm_identity</v-icon>
-              <span class="fontIrans">{{userName}}</span>
+              <span class="fontIrans1">{{userName}}</span>
               <v-icon dark>arrow_drop_down</v-icon>
             </v-btn>
             <v-list>
@@ -189,7 +189,7 @@
                 class="fontIrans1 "
               >
                 <v-icon>{{profile.icon}}</v-icon>
-                <v-list-tile-title>{{ profile.title }}</v-list-tile-title>
+                <v-list-tile-title class="fontIrans1 ">{{ profile.title }}</v-list-tile-title>
               </v-list-tile>
             </v-list>
           </v-menu>
@@ -278,16 +278,16 @@
         return userN;
       },
 
-       Profiles(){
-         return [
-        { title: this.userName,icon:'account_circle'},
-        { title: 'ویرایش پروفایل', path:'/EditYourProfile',icon:'home'},
-        { title: 'داشبورد', path:'/DashBoard',icon:'fas fa-tachometer-alt'},
-        { title: 'بازرگان', path:'/Merchant',icon:'public' },
-        { title: 'قابل اعتماد', path:'/Trusted',icon:'history' },
-        { title: 'پشتیبانی', path:'SupportDrop',icon:'help' },
-        { title: 'خروج', path:'',icon:'lock' },
-      ]
+      Profiles(){
+        return [
+          { title: this.userName,icon:'account_circle'},
+          { title: 'ویرایش پروفایل', path:'/EditYourProfile',icon:'home'},
+          { title: 'داشبورد', path:'/DashBoard',icon:'fas fa-tachometer-alt'},
+          { title: 'بازرگان', path:'/Merchant',icon:'public' },
+          { title: 'قابل اعتماد', path:'/Trusted',icon:'history' },
+          { title: 'پشتیبانی', path:'SupportDrop',icon:'help' },
+          { title: 'خروج', path:'',icon:'lock' },
+        ]
        } ,
     }
 }

@@ -31,7 +31,7 @@
                     <v-card-text>این فرایند تأیید برای شناسایی  شما تأیید شده است و از شما محافظت می کند تا ویروس شناسایی کنید.  برای اطلاعات بیشتر را<router-link class="router" to="">"راهنما"</router-link>کلیک کنید.</v-card-text>
                         <v-flex text-xs-center>
                             <v-card-text>
-                                <v-btn class="fontIrans grey darken-2" to="/EditProfileSetRealName">تأیید هویت را شروع کنید.</v-btn>
+                                <v-btn class="fontIrans grey darken-2" to="">تأیید هویت را شروع کنید.</v-btn>
                             </v-card-text>
                         </v-flex>
                 </v-card>
