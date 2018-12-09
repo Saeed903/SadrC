@@ -134,7 +134,7 @@
               class="menuFont"
               >
               <v-icon>{{help.icon}}</v-icon>
-              <v-list-tile-title class="fontIran">{{ help.title }}</v-list-tile-title>
+              <v-list-tile-title class="fontIrans1">{{ help.title }}</v-list-tile-title>
               </v-list-tile>
               </v-list>
           </v-menu>
@@ -160,16 +160,16 @@
               <span class="saidbar">{{signState}}</span>
             </v-tooltip>
           </router-link>
-          <router-link to="FrequentlyAskedQuestions">more</router-link>
-          <router-link to="EditYourProfile" class="white--text">edit profile</router-link>
+          <router-link to="FrequentlyAskedQuestions" class="textCard">بیشتر</router-link>
+          <router-link to="EditYourProfile" class="textCard white--text">ویرایش پروفایل</router-link>
         </v-toolbar-items>
       </v-card-text>
       
       
       
       <v-toolbar-items v-if="payload" > 
-        <router-link  to="EditYourProfile" class="menu">ویرایش پروفایل</router-link>
-        <router-link  to="Wallet" class="menu">کیف پول</router-link>
+        <router-link  to="EditYourProfile" class="textCard">ویرایش پروفایل</router-link>
+        <router-link  to="Wallet" class="textCard">کیف پول</router-link>
       
         <div class="text-xs-center">
           <v-menu 
@@ -178,7 +178,7 @@
           >
             <v-btn slot="activator" dark>
               <v-icon style="color:aqua">perm_identity</v-icon>
-              <span class="fontIran">{{userName}}</span>
+              <span class="fontIrans1">{{userName}}</span>
               <v-icon dark>arrow_drop_down</v-icon>
             </v-btn>
             <v-list>
@@ -186,15 +186,15 @@
                 v-for="(profile, index) in Profiles"
                 :key="index"
                 @click="routing(profile.path)"
-                class="menuFont"
+                class="fontIrans1 "
               >
                 <v-icon>{{profile.icon}}</v-icon>
-                <v-list-tile-title>{{ profile.title }}</v-list-tile-title>
+                <v-list-tile-title class="fontIrans1 ">{{ profile.title }}</v-list-tile-title>
               </v-list-tile>
             </v-list>
           </v-menu>
         </div>
-        <v-btn flat @click="logout">خروج</v-btn>
+        <v-btn flat @click="logout" class="fontsIran">خروج</v-btn>
     </v-toolbar-items>
       
 
@@ -278,16 +278,16 @@
         return userN;
       },
 
-       Profiles(){
-         return [
-        { title: this.userName,icon:'account_circle'},
-        { title: 'ویرایش پروفایل', path:'/EditYourProfile',icon:'home'},
-        { title: 'داشبورد', path:'/DashBoard',icon:'fas fa-tachometer-alt'},
-        { title: 'بازرگان', path:'/Merchant',icon:'public' },
-        { title: 'قابل اعتماد', path:'/Trusted',icon:'history' },
-        { title: 'پشتیبانی', path:'SupportDrop',icon:'help' },
-        { title: 'خروج', path:'',icon:'lock' },
-      ]
+      Profiles(){
+        return [
+          { title: this.userName,icon:'account_circle'},
+          { title: 'ویرایش پروفایل', path:'/EditYourProfile',icon:'home'},
+          { title: 'داشبورد', path:'/DashBoard',icon:'fas fa-tachometer-alt'},
+          { title: 'بازرگان', path:'/Merchant',icon:'public' },
+          { title: 'قابل اعتماد', path:'/Trusted',icon:'history' },
+          { title: 'پشتیبانی', path:'SupportDrop',icon:'help' },
+          { title: 'خروج', path:'',icon:'lock' },
+        ]
        } ,
     }
 }
@@ -295,9 +295,6 @@
 
 <style>
 
-.saidbar{
-  font-family:iranian sans;
-}
 .slide-fade-enter-active {
   transition: all .2s ease;
 }
@@ -308,6 +305,9 @@
 {
   transform: translateX(10px);
   opacity: 0;
+}
+.saidbar{
+  font-family:iranian sans;
 }
 .freeRegister{
   text-decoration:none;
@@ -321,7 +321,6 @@
   text-decoration:none;
   font-family:b nazanin;
 }
-
 .list-item {
   display: inline-block;
   margin-right: 10px;
@@ -355,6 +354,10 @@
 }
 .textCard:hover{
     color:#18FFFF;
+}
+.fontIrans1{
+  font-family:'Iranian Sans';
+  font-size:12px;
 }
 </style>
 

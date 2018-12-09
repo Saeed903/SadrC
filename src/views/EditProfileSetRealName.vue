@@ -7,7 +7,7 @@
                 <v-text-field class="fontIrans pt-0" label="اسم شما"></v-text-field>
                 <p class="fontIrans">نام کامل خود را وارد کنید، همانطور که در حساب برگشت و اطلاعات مربوط به خرید آنلاین مرتبط است.</p>
                 <v-flex text-xs-center>
-                    <v-btn to="/EditProfileVerifyPhoneNumberVerification" @click="submit" class="primary fontIran">نام واقعی را تنظیم کنید</v-btn>
+                    <v-btn to="" @click="submit" class="primary fontIran">نام واقعی را تنظیم کنید</v-btn>
                 </v-flex>
             </v-card-text>
         </v-flex>
