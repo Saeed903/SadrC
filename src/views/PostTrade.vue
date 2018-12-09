@@ -46,9 +46,60 @@
             ></v-radio>
         </v-radio-group>
 
-        <v-card>
-            
-        </v-card>
+
+
+
+        <v-layout>
+            <v-flex sm612 md6 lg6>
+                <v-card>
+                    <v-autocomplete
+                    v-validate="'required'"
+                    :items="selectCountries"
+                    v-model="selectCountry"
+                    :error-messages="errors.collect('selectCountries')"
+                    data-vv-name="selectCountries"
+                    label="کشور"
+                    class="textField mr-3 fontIran"
+                    color="cyan accent-2" 
+                    browser-autocomplete
+                    dense
+                    clearable
+                    >
+                    </v-autocomplete>
+                    <p class="fontIran caption pt-1">برای تجارت آنلاین شما نیاز به مشخص کردن کشور, تجارت محلی، لطفا شهر، کد پستی و یا نام خیابان را مشخص کنید</p>
+                </v-card>
+            </v-flex>
+             <v-flex sm612 md6 lg6>
+                 <v-card>
+                    <v-autocomplete
+                    v-validate="'required'"
+                    :items="selectCryptoCurrencies"
+                    v-model="selectCryptoCurrency"
+                    :error-messages="errors.collect('selectCryptoCurrency')"
+                    data-vv-name="selectCryptoCurrency"
+                    label="نوع ارز"
+                    class="textField mr-3 fontIran"
+                    color="cyan accent-2" 
+                    browser-autocomplete
+                    dense
+                    clearable
+                    >
+                    </v-autocomplete>
+                    <p class="fontIran caption pt-1">شما میتوانید هر ارزی را که میخواهید با آن تجارت کنید را انتخاب کنید.</p>
+                </v-card>
+            </v-flex>
+        </v-layout>
+
+
+
+
+
+
+
+
+
+
+
 
         <v-layout row wrap>
             <v-flex sm6 md6 lg6>
