@@ -347,6 +347,11 @@
     font-size:12px;
     color:#BDBDBD;
 }
+.textFont{
+  font-family:iranian sans;
+  font-size:13px;
+  color:#E0E0E0;
+}
 .textCard{
     font-family:'iranian sans';
     color:#00E5FF;
