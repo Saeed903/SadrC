@@ -8,7 +8,6 @@
                 <Advertise/>
             </v-card-text>
             <v-parallax src="img/SadrCrypto/topic.jpg" height="200"></v-parallax>
-            <span>skdlgkjasdgfajkshfi</span>
         </v-flex>
     </v-layout>
     <v-layout  justify-space-around>
