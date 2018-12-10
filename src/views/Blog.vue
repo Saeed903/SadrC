@@ -1,7 +1,7 @@
 <template>
     <div>
+        <v-parallax src="img/SadrCrypto/topic.jpg" height="600"></v-parallax>
         <div class="divTopicImage">
-            <img class="topicImage" src="./../../public/img/SadrCrypto/topic.jpg"/>
             <v-card-text class="fontIran text-xs-center">داستانی از دنیای بیت کوین و ارزهای دیجیتال</v-card-text>
         </div>
         <v-card-text>
@@ -23,7 +23,9 @@
                 <span class="">September 27th, 2017</span><br>
             </div>
         </v-card-text>
+        
         <v-divider></v-divider>
+        
         <v-card-text>
             <span class="textFont" to="">جبران برای کاربران متعلق به  تعادل BCH</span><br>
             <span class="textsFont">همانطور که بسیاری از شما آگاه هستند، یک رمزنگاری جدید به نام "Bcash" یا "Bitcoin cash" در تاریخ 1 آگوست 2017 ایجاد شد. این به طوری ایجاد شد که همه کسانی که دسترسی به یک کلید خصوصی داشتند، مبلغی معادل بیت کوین را دریافت می کردند از Bcash در بلاک چین دیگر. از آنجا که قطره هوا ما درخواست های زیادی برای ما برای شروع پشتیبانی از رمزنگاری جدید دریافت کرده ایم.</span><br>
