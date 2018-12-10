@@ -295,9 +295,6 @@
 
 <style>
 
-.saidbar{
-  font-family:iranian sans;
-}
 .slide-fade-enter-active {
   transition: all .2s ease;
 }
@@ -308,6 +305,9 @@
 {
   transform: translateX(10px);
   opacity: 0;
+}
+.saidbar{
+  font-family:iranian sans;
 }
 .freeRegister{
   text-decoration:none;
@@ -321,7 +321,6 @@
   text-decoration:none;
   font-family:b nazanin;
 }
-
 .list-item {
   display: inline-block;
   margin-right: 10px;

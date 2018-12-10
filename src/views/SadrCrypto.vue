@@ -54,6 +54,8 @@
                 <v-card-text class="contant text-xs-left">اطلاعات بیشتر در<router-link class="router" to=""> وبلاگ صدر سیستم </router-link></v-card-text>
             </v-card>
     </v-flex>
+
+    {{publishAdvertise}}
     <v-flex>
         <Footer></Footer>
     </v-flex>
@@ -64,6 +66,8 @@ import FormSell from './../components/FormSell.vue'
 import Advertise from './../components/Advertise.vue';
 import Footer from './../components/Footer.vue';
 
+import { mapActions, mapGetters, mapState } from 'vuex';
+
 
 export default{
     data:() => ({
@@ -73,13 +77,24 @@ export default{
        
     }),
     computed:{
-        
+        ...mapGetters('publish-advertises', { findPublishAdvertisesOnline: 'find'}),
+
+        publishAdvertise(){
+            return this.findPublishAdvertisesOnline().data;
+        }
     },
     methods:{
-          
+        ...mapActions('publish-advertises', { findPublishAdvertises: 'find'}) ,
     }, 
     mounted(){
-       
+       this.findPublishAdvertises()
+            .then(response => {
+                const publishAdvertise = response.data || response;
+            })
+    },
+    created(){
+        //console.log('publish', this.publishAdvertise);
+        
     },
     components:{
         Advertise,
