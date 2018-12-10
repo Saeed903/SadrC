@@ -79,8 +79,7 @@
                 clearable
                 >
                 </v-textarea>
-            </v-flex>
-            <v-btn 
+                <v-btn 
             color="blue"
             round
             class="fontIran pr-3"
@@ -88,6 +87,8 @@
             <v-icon size="15px">send</v-icon>
             ذخیره مشخصات
             </v-btn>
+            </v-flex>
+            
         
     </div>
 </template>
