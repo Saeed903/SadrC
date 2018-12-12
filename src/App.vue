@@ -348,10 +348,15 @@
 }
 .textCard:hover{
     color:#18FFFF;
+    
 }
 .fontIrans1{
   font-family:'Iranian Sans';
   font-size:12px;
 }
+.card{
+  background-color:rgb(82, 95, 127)
+}
+
 </style>
 

@@ -2,7 +2,7 @@
   <div>
      
     <p class="titled">{{currency}}</p>
-     
+     <v-card style=" background-color:rgb(82, 95, 127)">
     <v-form ref="form" class="table" v-model="valid" lazy-validatio>
       <v-layout row wrap>
         <v-flex d-flex xs12 sm2 md2 lg2 pt-0>
@@ -19,7 +19,7 @@
         <v-flex d-flex xs12 sm2 md3 lg3 pt-0>
           <v-select 
             v-model="country"
-            style=""
+            style=" background-color:rgb(82, 95, 127)"
             :items="country"
             :rules="[v => !!v || 'کشور مورد نیاز ']"
             label="کشور"
@@ -50,11 +50,12 @@
           
         <v-flex xs12 sm1 md1 pt-0>
           <v-card-text>
-            <v-btn :disabled="!valid" @click="submit"> جست وجو </v-btn>
+            <v-btn :disabled="!valid" @click="submit" class="card"> جست وجو </v-btn>
           </v-card-text>
         </v-flex>
       </v-layout>
     </v-form>
+     </v-card>
   </div>
 </template>
 <script>
@@ -134,13 +135,9 @@
     }
   }
 </script>
-<style >
-.titled{
-  font-family: Iranian Sans;
-  font-size: 20px;
-}
-.table{
-  font-family: Iranian Sans;
-  
+<style scoped>
+.card{
+  background-color:rgb(82, 95, 127)
+
 }
 </style>
