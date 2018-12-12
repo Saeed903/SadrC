@@ -141,27 +141,16 @@
             
       </v-toolbar-items>
       </v-card-text>
-
-      <v-card-text >
+      <v-card-text>
         <v-toolbar-items v-if="!payload"> 
           <router-link to="Login">
-            <v-tooltip bottom>
-              <v-icon slot="activator" color="white" dark>
-                lock_open
-              </v-icon>
-              <span class="saidbar">{{loginState}}</span>
-            </v-tooltip>
+            <p class="textCard">{{loginState}}</p>
           </router-link>
           <router-link to="Signup">
-            <v-tooltip bottom>
-              <v-icon slot="activator" color="white" dark>
-                lock
-              </v-icon>
-              <span class="saidbar">{{signState}}</span>
-            </v-tooltip>
+            <p class="textCard pr-3">{{signState}}</p> 
           </router-link>
-          <router-link to="FrequentlyAskedQuestions" class="textCard">بیشتر</router-link>
-          <router-link to="EditYourProfile" class="textCard white--text">ویرایش پروفایل</router-link>
+          <router-link to="FrequentlyAskedQuestions" class="textCard pr-3">بیشتر</router-link>
+          <router-link to="EditYourProfile" class="textCard white--text pr3">ویرایش پروفایل</router-link>
         </v-toolbar-items>
       </v-card-text>
       
