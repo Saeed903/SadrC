@@ -61,9 +61,12 @@ import SupportCreateNewTicket from './views/SupportCreateNewTicket.vue'
 import store from './store';
 import AboutUs from './views/AboutUs.vue'
 import HowToBuyBticoins from './views/HowToBuyBticoins.vue'
+import EditProfileChangePassWord from './views/EditProfileChangePassWord.vue'
 import Guides from './views/Guides.vue'
+import EditProfilePersonalData from './views/EditProfilePersonalData.vue'
 import PostTradeNextTap from './views/PostTradeNextTap.vue'
 import Blog from './views/Blog.vue'
+import EditProfileDeleteAccount from './views/EditProfileDeleteAccount.vue'
 Vue.use(Router);
 
 const authFunction = function(to, from, next){
@@ -103,9 +106,19 @@ export default new Router({
       }
     }, 
     {
+      path: '/EditProfileDeleteAccount',
+      name: 'EditProfileDeleteAccount',
+      component: EditProfileDeleteAccount,
+    },
+    {
       path: '/Blog',
       name: 'Blog',
       component: Blog,
+    }, 
+    {
+      path: '/EditProfilePersonalData',
+      name: 'EditProfilePersonalData',
+      component: EditProfilePersonalData,
     }, 
     {
       path: '/AboutUs',
@@ -116,6 +129,11 @@ export default new Router({
       path: '/PostTradeNextTap',
       name: 'PostTradeNextTap',
       component: PostTradeNextTap,
+    }, 
+    {
+      path: '/EditProfileChangePassWord',
+      name: 'EditProfileChangePassWord',
+      component: EditProfileChangePassWord,
     }, 
     {
       path: '/FrequentlyAskedQuestions',

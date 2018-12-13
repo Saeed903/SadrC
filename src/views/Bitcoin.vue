@@ -2,10 +2,12 @@
 <div>
     <v-layout  justify-space-around>
         <v-flex lg9 xl8>
+            
             <v-card-text>
                 <FormSell :currency="currency"/>
                 <Advertise/>
             </v-card-text>
+            <v-parallax src="img/SadrCrypto/topic.jpg" height="200"></v-parallax>
         </v-flex>
     </v-layout>
     <v-layout  justify-space-around>

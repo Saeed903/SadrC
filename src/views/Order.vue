@@ -1,42 +1,52 @@
 <template>
+<v-container grid-list-lg>
 <v-layout  column>
+  <v-card style="background-color:rgb(30, 38, 52)">
   <p class="fontIran">خرید بیت کوین با استفاده از انتقال بانکی جمهوری اسلامی ایران با ریال ایران</p>
+  </v-card>
   <div>   
     <v-layout row wrap>
       <v-flex  md6 lg6 xl6>
-        <v-flex class="fontsIran">
+        <v-card style="background-color:rgb(30, 38, 52)">
+        <v-flex class="fontsIran card">
           <div>
-            <p>قیمت: <span style="color:greenyellow" class="pr-5">935543438.97 IRR/BTC</span></p>
-            <p>روش پرداخت: <span style="color:greenyellow">انتقال بانک جمهوری اسلامی ایران</span></p>
-            <p>کاربر: <span style="color:greenyellow"><router-link class="pr-5" to="/DashBoard"><v-tooltip  right><v-icon slot="activator"  style="color:aqua">perm_identity</v-icon><span class="fontIran">داشبورد</span></v-tooltip></router-link>آلمان</span></p>
-            <p>محدودیت های تجاری: <span style="color:greenyellow">نمره بازخورد(100).<router-link to="" class="textCard">دیدن بازخورد</router-link></span></p>
-            <p>موقعیت: <span style="color:greenyellow"><router-link  to="" class="textCard pr-5">تهران,استان تهران,ایران</router-link></span></p>
-            <p>پنجره پرداخت: <span style="color:greenyellow">1 ساعت و 30 دقیقه</span></p>
+            <p>قیمت: <span style="rgb(43,255,92)" class="pr-5 card1">935543438.97 IRR/BTC</span></p>
+            <p>روش پرداخت: <span class="card1">انتقال بانک جمهوری اسلامی ایران</span></p>
+            <p>کاربر: <span class="card1"><router-link class="pr-5" to="/DashBoard"><v-tooltip  right><v-icon slot="activator"  style="color:aqua">perm_identity</v-icon><span class="fontIran">داشبورد</span></v-tooltip></router-link>آلمان</span></p>
+            <p>محدودیت های تجاری: <span class="card1">نمره بازخورد(100).<router-link to="" class="textCard">دیدن بازخورد</router-link></span></p>
+            <p>موقعیت: <span class="card1"><router-link  to="" class="textCard pr-5">تهران,استان تهران,ایران</router-link></span></p>
+            <p>پنجره پرداخت: <span class="card1">1 ساعت و 30 دقیقه</span></p>
           </div>
         </v-flex>
+        </v-card>
+        <v-card style="background-color:rgb(30, 38, 52)">
         <v-flex d-flex>
           <order-process></order-process>
         </v-flex>
-
-        <v-flex d-flex>
+        </v-card>
+        <v-card>
+        <v-flex style="background-color:rgb(30, 38, 52)" d-flex>
           <v-expansion-panel>
               <v-expansion-panel-content
+                  style="background-color:rgb(30, 38, 52)"
                   v-for="(item,i) in items"
                   :key="i"
                   expand-icon="mdi-menu-down"
               >
-              <div class="fontIrans1 text-xs-right" slot="header">{{item.title}}</div>
-                  <v-card>
-                      <v-card-text class="fontIran text-xs-right">{{item.persianTitle}}</v-card-text>
+              <div class="fontIrans text-xs-right"  slot="header">{{item.title}}</div>
+                  <v-card >
+                    <v-card-text class="fontIrans text-xs-right" style="background-color:rgb(30, 38, 52)">{{item.persianTitle}}</v-card-text>
                   </v-card>
               </v-expansion-panel-content>
           </v-expansion-panel>
         </v-flex>
+        </v-card>
       </v-flex>
-      
+      <v-card style="background-color:rgb(30, 38, 52)">
       <v-flex d-flex height="100%" md4 lg4 xl4 v-if="!confirmEmailDate && userId" child-flex>
         <working-hour :workingHours="HEY" workingTime="true"></working-hour>
       </v-flex>
+      </v-card>
     </v-layout> 
     
     <v-layout>
@@ -50,6 +60,7 @@
     </v-layout>  
   </div>
 </v-layout>
+</v-container>
 </template>
 <script>
 
@@ -97,6 +108,12 @@ export default {
 </script>
 
 <style scoped>
-
+.card{
+  background-color:rgb(30, 38, 52)
+  
+}
+.card1{
+color:rgb(43,255,92)
+}
 
 </style>

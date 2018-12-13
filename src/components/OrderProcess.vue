@@ -3,7 +3,7 @@
     <div v-if="!confirmEmailDate && userId">
         <p class="fontIrans">شما باید ایمیل خود را تایید نمایید.قبل از آنکه سفارش بدهید ایمیل فرستاده شده را پیدا کرده و پس از تایید دوباره به این صفحه بازگردید.
         اگر دوباره خطایی ملاحضه کردید می توانید با پشتیبانی<router-link class="textCard" to="" >پشتیبانی</router-link>  تماس بگیرید.</p>
-        <v-btn to="/EditProfileAccountSecurity" block color="secondary" dark class="fontIran"><v-icon >send</v-icon>ارسال مجدد تاییدیه ایمیل</v-btn>
+        <v-btn to="/EditProfileAccountSecurity" block style="background-color:rgb(30, 38, 52)"  class="fontIran"><v-icon >send</v-icon>ارسال مجدد تاییدیه ایمیل</v-btn>
     </div>
     <v-layout>
         <v-card-text class="fontIrans" v-if="confirmEmailDate || !userId">
