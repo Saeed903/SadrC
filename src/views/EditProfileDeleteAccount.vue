@@ -1,7 +1,10 @@
 <template>
     <div>
-        <v-card-text class="fontIran">درخواست حذف حساب</v-card-text>
-        <v-card-text class="fontIrans">متاسفیم که شما  اگر مشکلی با صدرکریپتو دارید، لطفا قبل از اینکه حساب کاربری خود را حذف کنید، <router-link to="SupportCreateNewTicket" class="textCard">با ما</router-link> تماس بگیرید.</v-card-text>
+        <v-card-text>
+            <p class="fontIran">درخواست حذف حساب</p>
+            <p class="fontIrans">متاسفیم که شما  اگر مشکلی با صدرکریپتو دارید، لطفا قبل از اینکه حساب کاربری خود را حذف کنید، <router-link to="SupportCreateNewTicket" class="textCard">با ما</router-link> تماس بگیرید.</p>
+        </v-card-text>
+        
         <v-card>
             <v-card-text class="fontIran">دیسکاوری</v-card-text>
             <v-card-text  class="fontIrans">به این ترتیب که به رضایت شما به عنوان یک مبنای حقوقی برای پردازش اطلاعات شخصی شما تکیه می کنیم، این درخواست حذف حساب، نتیجه لغو رضایت شما است.</v-card-text>
@@ -10,6 +13,7 @@
         </v-card>
         <v-flex xl6 lg6 md6 sm9 xs9>
             <v-form>
+                <v-card-text class="fontsIran">لطفا حذف حساب با گذرواژه خود را تأیید کنید</v-card-text>
                 <v-text-field
                 label="رمز عبور"
                 clearable
@@ -17,9 +21,8 @@
                 color="cyan accent-2"
                 type="password"
                 ></v-text-field>
+                <v-btn color="primary" class="fontsIran" round>حذف حساب کاربری</v-btn>
             </v-form>
         </v-flex>
-        <v-card-text class="fontIran">لطفا حذف حساب با گذرواژه خود را تأیید کنید</v-card-text>
-        <v-btn color="primary" class="fontsIran">حذف حساب کاربری</v-btn>
     </div>
 </template>

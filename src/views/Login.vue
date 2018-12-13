@@ -9,8 +9,8 @@
               @keydown.prevent.enter 
               v-model="valid"
             >
-              <p class="titled text-xs-center">ورود</p>
-              <p class="text ">با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید.</p>
+              <p class="fontIran text-xs-center">ورود</p>
+              <p class="fontsIran">با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید.</p>
             
               <v-text-field
                 :roles = "notEmptyRoles"
@@ -19,7 +19,7 @@
                 label="ایمیل"
                 data-vv-name="email"
                 color="cyan accent-2"
-                class="textBottom emailField"
+                class="fontsIran emailField"
                 required
                 
               >
@@ -33,7 +33,7 @@
                 :type="'password'"
                 label="رمز عبور"
                 color="cyan accent-2"
-                class="textBottom textField"
+                class="fontsIran textField"
                 data-vv-name="password"
                 required
                 
@@ -48,12 +48,12 @@
                   :sitekey = "sitekey">
               </vue-recaptcha>
               <v-card-text :class="{red:errorLogin}" v-if="errorLogin" >  {{errorMessage}} </v-card-text>
-              <v-btn type="submit" class="textBottom primary">ورود</v-btn>  
+              <v-btn type="submit" class="fontsIran" color="primary">ورود</v-btn>  
           </v-form>
 
           <v-flex>
-            <router-link class="textCard" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link><br>
-            <span class="textBottom">یک حساب جدید باز کنید؟<router-link to="/SignUp" class="textCard">ثبت نام کنید</router-link></span>
+            <router-link class="textCard caption" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link><br>
+            <span class="fontIrans caption">یک حساب جدید باز کنید؟<router-link to="/SignUp" class="textCard">ثبت نام کنید</router-link></span>
           </v-flex>
 
             <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
@@ -141,27 +141,3 @@
   }
 
 </script>
-<style scoped>
-.titled{
-  font-family: Iranian Sans;
-  font-size: 18px;
-}
-.text{
-  font-family: Iranian Sans;
-  font-size: 13px;
-}
-.textBottom{
-  font-family: Iranian Sans;
-  font-size:12px;
-}
-
-.textCard{
-    font-family:'iranian sans';
-    color:#00E5FF;
-    text-decoration:none;
-    font-size:12px;
-}
-.textCard:hover{
-    color:#18FFFF;
-}
-</style>

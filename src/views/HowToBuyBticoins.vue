@@ -17,6 +17,7 @@
             </v-card>
         </v-flex>
 
+<<<<<<< HEAD
         <v-layout row wrap>
             <v-flex v-for="dashboard in dashboards" :key="dashboard" xs12 sm6 md6 lg6 xl6>
                 <router-link class="router" to="">
@@ -29,6 +30,20 @@
                 </router-link>
             </v-flex>
         </v-layout>
+=======
+            <v-layout row wrap>
+                <v-flex v-for="dashboard in dashboards" :key="dashboard" xs12 sm6 md6 lg6 xl6>
+                    <router-link class="router" to="">
+                        <v-card class="elevation-15">
+                            <v-card-text class="headlined text-xs-center">
+                                <p class="headlined pt-3">{{dashboard.top}}</p>
+                                <p class="fontIrans">{{dashboard.bottom}}</p>
+                            </v-card-text>
+                        </v-card>
+                    </router-link>
+                </v-flex>
+            </v-layout>
+>>>>>>> 99ff5e9dd57bdb05a746be28bad37e6edde5c6ea
             
 
         <v-flex>

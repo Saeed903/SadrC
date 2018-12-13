@@ -9,7 +9,7 @@
                         </v-card-text>
                     </v-flex>
                     <v-flex sm7 xs7 md7 xl3 lg3 order-sm5>
-                        <v-card class="text-xs-center" color="blue-grey darken-3">
+                        <v-card class="text-xs-center elevation-15" color="blue-grey darken-3">
                             <v-card-text>
                                 <router-link to="" class="textCard">چرا متفاوت هستیم؟</router-link><br>
                                 <router-link to="" class="textCard">ماموریت</router-link><br>
@@ -50,7 +50,7 @@
                     <span class="fontIrans">آدرس و دفتر ما در آدرس:</span>
                 </v-card-text>
                 <v-flex xs6>
-                    <v-card color="blue-grey darken-3">
+                    <v-card color="blue-grey darken-3 elevation-10">
                         <v-card-text>
                             <span class="fontIrans">دپارتمان صدرکریپتو</span><br>
                             <span class="fontIrans">ساختمان صدر خیابان گاندی تهران ایران</span><br>

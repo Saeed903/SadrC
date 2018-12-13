@@ -141,6 +141,7 @@
               <router-link  to="EditYourProfile" class="textCard">ویرایش پروفایل</router-link>
               <router-link  to="Wallet" class="textCard">کیف پول</router-link>
             
+<<<<<<< HEAD
               <div class="text-xs-center">
                 <v-menu 
                 offset-y
@@ -172,6 +173,72 @@
             <router-link to="/" class="sadrCryptoText">SadrCrypto<span >.com</span></router-link>
         </v-flex>
       </v-toolbar>
+=======
+      </v-toolbar-items>
+      </v-card-text>
+      <v-card-text>
+        <v-toolbar-items v-if="!payload"> 
+       
+          <router-link to="Login">
+            <v-tooltip bottom>
+              <v-icon slot="activator" color="white" dark>
+                lock
+              </v-icon>
+              <span class="saidbar">{{loginState}}</span>
+            </v-tooltip>
+          </router-link>
+          <router-link to="Signup">
+            <v-tooltip bottom>
+              <v-icon slot="activator" color="white" dark>
+              star
+              </v-icon>
+              <span class="saidbar">{{signState}}</span>
+            </v-tooltip>
+          </router-link>
+          <router-link to="FrequentlyAskedQuestions" class="textCard pr-3">بیشتر</router-link>
+          <router-link to="EditYourProfile" class="textCard white--text pr3">ویرایش پروفایل</router-link>
+        </v-toolbar-items>
+      </v-card-text>
+      
+      
+      
+      <v-toolbar-items v-if="payload" > 
+        <router-link  to="EditYourProfile" class="textCard">ویرایش پروفایل</router-link>
+        <router-link  to="Wallet" class="textCard">کیف پول</router-link>
+      
+        <div class="text-xs-center">
+          <v-menu 
+          offset-y
+          transition="slide-y-transition"
+          >
+            <v-btn slot="activator" dark>
+              <v-icon style="color:aqua">perm_identity</v-icon>
+              <span class="fontIrans1">{{userName}}</span>
+              <v-icon dark>arrow_drop_down</v-icon>
+            </v-btn>
+            <v-list>
+              <v-list-tile
+                v-for="(profile, index) in Profiles"
+                :key="index"
+                @click="routing(profile.path)"
+                class="fontIrans1 "
+              >
+                <v-icon>{{profile.icon}}</v-icon>
+                <v-list-tile-title class="fontIrans1 ">{{ profile.title }}</v-list-tile-title>
+              </v-list-tile>
+            </v-list>
+          </v-menu>
+        </div>
+        <v-btn flat @click="logout" class="fontsIran">خروج</v-btn>
+    </v-toolbar-items>
+      <v-card-text class="text-sm-left headline">
+         <v-badge overlap>
+          <span slot="badge">3</span>
+            <v-icon size="25px" color="purple">notifications</v-icon>
+        </v-badge>
+        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="body-2">.com</span><v-icon color="grey">home</v-icon></router-link>
+      </v-card-text>
+>>>>>>> 99ff5e9dd57bdb05a746be28bad37e6edde5c6ea
       
     </v-layout>
    

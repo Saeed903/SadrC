@@ -10,11 +10,19 @@
       :loading="loadingAdvertise"
      >
       <template v-if="!loading" slot="items" slot-scope="props">
+<<<<<<< HEAD
         <td >{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
         <td>{{ props.item.paymentMethod }}</td>
         <td>{{ props.item.price }}</td>
         <td>{{ props.item.limits }}</td>
         <td ><v-btn class="white--text purple" @click="buy()" to="Order" style="rgb(50,50,93)">خرید</v-btn></td>
+=======
+        <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
+        <td >{{ props.item.paymentMethod }}</td>
+        <td >{{ props.item.price }}</td>
+        <td >{{ props.item.limits }}</td>
+        <td ><v-btn class="primary elevation-5" @click="buy()" to="Order">خرید</v-btn></td>
+>>>>>>> 99ff5e9dd57bdb05a746be28bad37e6edde5c6ea
       </template>
     </v-data-table>
 </div>
