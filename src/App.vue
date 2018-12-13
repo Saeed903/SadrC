@@ -141,13 +141,12 @@
             
       </v-toolbar-items>
       </v-card-text>
-
-      <v-card-text >
+      <v-card-text>
         <v-toolbar-items v-if="!payload"> 
           <router-link to="Login">
             <v-tooltip bottom>
               <v-icon slot="activator" color="white" dark>
-                lock_open
+                lock
               </v-icon>
               <span class="saidbar">{{loginState}}</span>
             </v-tooltip>
@@ -155,13 +154,13 @@
           <router-link to="Signup">
             <v-tooltip bottom>
               <v-icon slot="activator" color="white" dark>
-                lock
+              star
               </v-icon>
               <span class="saidbar">{{signState}}</span>
             </v-tooltip>
           </router-link>
-          <router-link to="FrequentlyAskedQuestions" class="textCard">بیشتر</router-link>
-          <router-link to="EditYourProfile" class="textCard white--text">ویرایش پروفایل</router-link>
+          <router-link to="FrequentlyAskedQuestions" class="textCard pr-3">بیشتر</router-link>
+          <router-link to="EditYourProfile" class="textCard white--text pr3">ویرایش پروفایل</router-link>
         </v-toolbar-items>
       </v-card-text>
       
@@ -359,10 +358,15 @@
 }
 .textCard:hover{
     color:#18FFFF;
+    
 }
 .fontIrans1{
   font-family:'Iranian Sans';
   font-size:12px;
 }
+.card{
+  background-color:rgb(82, 95, 127)
+}
+
 </style>
 

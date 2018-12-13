@@ -2,26 +2,27 @@
     <div>
         <v-card-text>
             <v-card >
-                <v-bottom-nav 
+                <v-bottom-nav
                     :active.sync="bottomNav"
                     :color="color"
                     :value="true"
-                    >
-                    <v-btn dark value="video">
-                    <span class="fontIrans">ارسال بیت کوین</span>
-                    <v-icon>ondemand_video</v-icon>
+                    absolute
+                    shift
+                >
+                    <v-btn dark>
+                        <span class="fontIrans">ارسال بیت کوین</span>
+                        <v-icon>ondemand_video</v-icon>
                     </v-btn>
 
-                    <v-btn dark value="Music">
-                    <span class="fontIrans">دریافت بیت کوین</span>
-                    <v-icon>music_note</v-icon>
+                    <v-btn dark>
+                        <span class="fontIrans">دریافت بیت کوین</span>
+                        <v-icon>music_note</v-icon>
                     </v-btn>
 
-                    <v-btn dark  value="Book">
-                    <span class="fontIrans">معاملات</span>
-                    <v-icon>book</v-icon>
+                    <v-btn dark>
+                        <span class="fontIrans">معاملات</span>
+                        <v-icon>book</v-icon>
                     </v-btn>
-
                 </v-bottom-nav>
             </v-card>
         </v-card-text>
@@ -59,15 +60,15 @@
     import Footer from './../components/Footer.vue'
     export default{
          data : () =>({
-        bottomNav: "video"
+        bottomNav: "3"
     }),
     computed: {
       color () {
         switch (this.bottomNav) {
-          case "Video": return 'blue-grey'
-          case "Music": return 'teal'
-          case "Book": return 'brown'
-          case "Image": return 'indigo'
+          case 0: return 'blue-grey'
+          case 1: return 'teal'
+          case 2: return 'brown'
+          case 3: return 'indigo'
         }
       }
     },mounted(){

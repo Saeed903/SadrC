@@ -2,16 +2,16 @@
  <div>
 
     <v-card-text class="text-xs-center">
-        <span class="topicIran">ثبت آگهی {{currency}}</span>
+        <span class="fontIran">ثبت آگهی {{currency}}</span>
     </v-card-text>
 
-    <v-card class="text-xs-center pt-1" style="height:30px">
-        <span class="fontIran"><v-icon color="red" size="16px">warning</v-icon>لطفا قبل از ثبت آگهی <router-link to="/Login" class="textCard">ورود</router-link> یا <router-link to="/signUp" class="textCard">ثبت نام</router-link> کنید!</span>
+    <v-card class="text-xs-center pt-1 elevation-20" style="height:30px">
+        <span class="fontsIran"><v-icon color="red" size="19px">info</v-icon>لطفا قبل از ثبت آگهی <router-link to="/Login" class="textCard">ورود</router-link> یا <router-link to="/signUp" class="textCard">ثبت نام</router-link> کنید!</span>
     </v-card>
 
     <v-card-text>
-        <p class="topicIran text-xs-center">قوانین و مقررات تبلیغاتی:</p>
-        <ul class="fontIran pr-3">
+        <p class="fontIran text-xs-center">قوانین و مقررات تبلیغاتی:</p>
+        <ul class="fontsIran pr-3">
             <li class="mb-3">برای نمایش تبلیغات شما باید بیت کوین را در کیف پول صدر کریپتو خود داشته باشید. شما برای تبلیغات با روش های پرداخت آنلاین و 0.04 بیت کوین یا بیشتر برای تبلیغات محلی (نقد) نیاز به 0.04 بیت کوین یا بیشتر دارید.</li>
             <li class="mb-3">برخی از روش های پرداخت مستلزم آن هستند که قبل از اینکه آگهی های شما قابل مشاهده باشند، باید شناسه،شناسایی شوند.</li>
             <li class="mb-3">هر تبلیغ کننده هزینه های تراکنش تکمیل شده 1٪ از کل مبلغ تجاری است<span><router-link to="" class="textCard">تمام هزینه ها را در صفحه هزینه های ما مشاهده کنید.</router-link></span></li>
@@ -22,12 +22,12 @@
             <li class="mb-3">همه ارتباطات باید در صدر کریپتواتفاق بیافتد.</li>
             <li class="mb-3">روش های پرداخت مشخص شده است ریسک بالا داشتن یک خطر عمده تقلب .هنگام استفاده از روشهای پرداخت با ریسک بالا، مراقب باشید و همیشه آی دی را تأیید کنید.</li>
         </ul>
-        <v-divider></v-divider>
+        <v-divider class="mt-5 mb-3" color="grey"></v-divider>
     </v-card-text>
 
     <v-card-text>
-        <p class="topicIran">نوع تجارتی که میخواهید انجام دهید:</p>
-        <span class="fontIran"> اگر بخواهید بیت کوین ها را بفروشید مطمئن شوید که شما بیت کوین ها را در کیف پول صدر  کریپتو خود موجود دارید</span>
+        <p class="fontIran">نوع تجارتی که میخواهید انجام دهید:</p>
+        <span class="fontsIran"> اگر بخواهید بیت کوین ها را بفروشید مطمئن شوید که شما بیت کوین ها را در کیف پول صدر  کریپتو خود موجود دارید</span>
     </v-card-text>
 
     <v-form v-model="valid"
@@ -45,11 +45,6 @@
             color="cyan accent-2"
             ></v-radio>
         </v-radio-group>
-
-        <v-card>
-            
-        </v-card>
-
         <v-layout row wrap>
             <v-flex sm6 md6 lg6>
                 <v-autocomplete
@@ -99,6 +94,7 @@
                 label="محدوده تغییرات"
                 color="cyan accent-2"
                 v-model="advertise.margin"
+                clearable
                 >
                 
                 </v-text-field>
@@ -114,6 +110,7 @@
                 label="معادل قیمت"
                 color="cyan accent-2"
                 v-model="advertise.priceEquation"
+                clearable
                 >
                 </v-text-field>
             </v-flex>
@@ -124,10 +121,10 @@
         </v-layout>
 
         <v-card-text>
-            <v-divider></v-divider>
-            <ul class="fontIran mt-4 mb-4 pr-3">
+            <v-divider class="mt-5" color="grey"></v-divider>
+            <ul class="fontsIran mt-5 mb-4 pr-4">
                 <li class="pb-3">چگونه قیمت معاملات از قیمت بازار ساعتی تعیین می شود؟</li>
-                <li class="pb-3">برای اطلاعات بیشتر در رابطه با معادلات نحوه تعریف قیمت معاملاتی خود به سوالات <router-link to="" class="fontsIran">قیمت گذاری</router-link> مراجعه کنید.</li>
+                <li class="pb-3">برای اطلاعات بیشتر در رابطه با معادلات نحوه تعریف قیمت معاملاتی خود به سوالات <router-link to="" class="textCard">قیمت گذاری</router-link> مراجعه کنید.</li>
                 <li>لطفا توجه داشته باشید که همیشه تبلیغ کننده مسئول پرداخت هزینه پردازش پرداخت است.</li>
             </ul>
         </v-card-text>
@@ -144,7 +141,7 @@
             </v-flex>
 
             <v-flex sm6 md6 lg6>
-                <p class="fontIran caption pt-1">کمترین مقدار معامله در یک تجارت اختیاری است</p>    
+                <p class="fontsIran caption pt-1">کمترین مقدار معامله در یک تجارت اختیاری است</p>    
             </v-flex>
         
             <v-flex sm6 md6 lg6>
@@ -158,7 +155,7 @@
             </v-flex>
 
             <v-flex sm6 md6 lg6>
-                <p class="fontIran caption pt-1">اختیاری. حداکثر حد معامله در یک تجارت. برای فروش آنلاین، تعادل کیفی صدر کریپتو شما می تواند حداکثر تجارت قابل اعتماد را نیز محدود کند.</p>    
+                <p class="fontsIran caption pt-1">اختیاری. حداکثر حد معامله در یک تجارت. برای فروش آنلاین، تعادل کیفی صدر کریپتو شما می تواند حداکثر تجارت قابل اعتماد را نیز محدود کند.</p>    
             </v-flex>
         
             <v-flex sm6 md6 lg6>
@@ -172,15 +169,12 @@
             </v-flex>
 
             <v-flex sm6 md6 lg6>
-                <p class="fontIran caption pt-1">.اختیاری. مقدار معامله را محدود به عدد صحیح جدا از عدد کاما، به عنوان مثال 20،50،100. در ارز فیات (دلار / یورو / و غیره). دستی برای کوین، کارت هدیه و غیره</p>       
+                <p class="fontsIran caption pt-1">.اختیاری. مقدار معامله را محدود به عدد صحیح جدا از عدد کاما، به عنوان مثال 20،50،100. در ارز فیات (دلار / یورو / و غیره). دستی برای کوین، کارت هدیه و غیره</p>       
             </v-flex>
         </v-layout>
+        <v-divider class="mt-5 mb-3" color="grey"></v-divider>
 
-        <v-card-text>
-            <v-divider></v-divider>  
-        </v-card-text>
-
-        <v-card-text class="fontIran"> 
+        <v-card-text class="fontsIran"> 
             <p>روزها و ساعت هایی که میخواهید آگهی و تبلیغات شما نشان داده شود:</p>
         </v-card-text>
     
@@ -209,10 +203,10 @@
                         مثال2:لطفا درخواست را فقط زمانی که میتوانید پرداخت را با پول نقد ظرف مدت 12 ساعت تکمیل کمید.<br></p>    
             </v-flex>
         </v-layout>
+        <v-divider class="mt-5 mb-3" color="grey"></v-divider>
 
         <v-card-text class="fontIran">
             <p>گزینه های نقدینگی</p>
-            <v-divider></v-divider>
         </v-card-text>
 
         <v-layout row wrap>
@@ -229,10 +223,11 @@
                 <span class="fontIran caption">.این گزینه نقدینگی این تبلیغ را به حداکثر محدود می کند. محدودیت معامله خریداران می توانند معاملات را بیش از این مقدار باز نکنند</span>    
             </v-flex>
         </v-layout>
+        <v-divider class="mt-5 mb-3" color="grey"></v-divider>
 
         <v-card-text class="fontIran">
             <p>گزینه های امنیتی</p>
-            <v-divider></v-divider>
+            
         </v-card-text>
 
         <v-layout row wrap>
@@ -276,10 +271,10 @@
                 </v-checkbox>
             </v-flex>
             <v-flex sm6 md6 lg6>
-                <span class="fontIran caption">.تبلیغات خود را محدود کنید تا تنها به کاربران نشان داده شود که شما به عنوان اعتماد علامتگذاری کرده اید<router-link class="fontsIran" to="">چگونگی علامت گذاری به کاربران مورد اعتماد</router-link>.</span>    
+                <span class="fontIran caption">.تبلیغات خود را محدود کنید تا تنها به کاربران نشان داده شود که شما به عنوان اعتماد علامتگذاری کرده اید<router-link class="textCard" to="">چگونگی علامت گذاری به کاربران مورد اعتماد</router-link>.</span>    
             </v-flex>
         </v-layout>
-        <v-btn type="submit" class="textBottom primary" :disabled="!valid" >ثبت</v-btn>
+        <v-btn type="submit" class="fontsIran primary" :disabled="!valid" >ثبت اطلاعات</v-btn>
     </v-form>
 
     <Footer></Footer>
@@ -448,23 +443,3 @@ export default{
     }
 }
 </script>
-<style scoped>
-.fontIran{
-    font-family:'Iranian Sans';
-    color:#E0E0E0;
-    font-size:14px
-}
-.topicIran{
-    font-family:iranian sans;
-    font-size:18px;
-}
-.textCard{
-    font-family:'iranian sans';
-    color:#00E5FF;
-    text-decoration:none;
-    font-size:14px;
-}
-.textCard:hover{
-    color:#18FFFF;
-}
-</style>
