@@ -9,8 +9,8 @@
             style="max-width:320px" 
           >
             
-            <p class="titled text-xs-center">یک حساب جدید ثبت کنید</p>
-            <p class="text text-xs-center">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
+            <p class="fontIran text-xs-center">یک حساب جدید ثبت کنید</p>
+            <p class="fonts text-xs-center">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
             
 
             <v-text-field 
@@ -71,8 +71,8 @@
 
           </v-form>
           <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
-          <p class="textBottom">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="link">ورود</router-link></p>
-          <p class="textBottom">رمز عبور را فراموش کرده اید؟<router-link to="/ResetPassword" class="link">.رمز عبور خودتان را باز نشانی کنید</router-link></p>
+          <p class="fontIran caption">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="textCard">ورود</router-link></p>
+          <p class="fontIran caption">رمز عبور را فراموش کرده اید؟<router-link to="/ResetPassword" class="textCard">.رمز عبور خودتان را باز نشانی کنید</router-link></p>
         </v-card-text>
      
     </v-flex>
@@ -144,23 +144,3 @@
     }
   }
 </script>
-<style scoped>
-.titled{
-  font-family: Iranian Sans;
-  font-size: 18px;
-}
-.text{
-  font-family: Iranian Sans;
-  font-size: 13px;
-}
-.textBottom{
-  font-family: Iranian Sans;
-}
-.link{
-    text-decoration: none;
-    color:rgb(0,153,255);
-}
-.link:hover{
-    color:rgb(0,140,255);
-}
-</style>
