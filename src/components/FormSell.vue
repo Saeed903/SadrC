@@ -1,61 +1,68 @@
 <template>
   <div>
      
-    <p class="titled">{{currency}}</p>
-     <v-card>
-    <v-form ref="form" class="table" v-model="valid" lazy-validatio>
+    <p>{{currency}}</p>
+    <v-form ref="form" v-model="valid" lazy-validatio>
       <v-layout row wrap>
         <v-flex d-flex xs12 sm2 md2 lg2 pt-0>
           <v-text-field 
             v-model="amount"
             type="number"
-            style=""
             :rules="amountRules"
             label="میزان"
+            color="cyan accent-2"
+            class="fontsIran"
+            clearable
             required
           ></v-text-field>
         </v-flex>
           
         <v-flex d-flex xs12 sm2 md3 lg3 pt-0>
-          <v-select 
+          <v-autocomplete
             v-model="country"
-          
             :items="country"
             :rules="[v => !!v || 'کشور مورد نیاز ']"
             label="کشور"
+            class="fontsIran"
+            clearable
+            color="cyan accent-2"
             required
-          ></v-select>
+          ></v-autocomplete>
         </v-flex>
           
         <v-flex d-flex xs12 sm3 md2 lg2 pt-0>
-          <v-select
+          <v-autocomplete
             v-model="offers"
             :items="offers"
             :rules="[v => !!v || 'لازم است']"
             label  ="تمام وقت"
+            class="fontsIran"
+            color="cyan accent-2"
+            clearable
             required
-          ></v-select>
+          ></v-autocomplete>
         </v-flex>
           
         <v-flex d-flex xs12 sm2 md3 lg3 pt-0>
-          <v-select
+          <v-autocomplete
             v-model="country"
-            style=""
+            class="fontsIran"
             :items="country"
             :rules="[v => !!v || 'کشور مورد نیاز ']"
+            color="cyan accent-2"
             label="کشور"
+            clearable
             required
-          ></v-select>
+          ></v-autocomplete>
         </v-flex>
           
         <v-flex xs12 sm1 md1 pt-0>
           <v-card-text>
-            <v-btn :disabled="!valid" @click="submit" class="card"> جست وجو </v-btn>
+            <v-btn :disabled="!valid" @click="submit" class="primary fontsIran">جست و جو</v-btn>
           </v-card-text>
         </v-flex>
       </v-layout>
     </v-form>
-     </v-card>
   </div>
 </template>
 <script>
@@ -135,9 +142,4 @@
     }
   }
 </script>
-<style scoped>
-.card{
-  background-color:rgb(82, 95, 127)
 
-}
-</style>
