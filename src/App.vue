@@ -335,7 +335,7 @@
   font-size:12px;
 }
 .card{
-  background-color:rgb(25, 29, 41)
+  background-color:rgb(30, 38, 52)
 }
 
 </style>
