@@ -2,7 +2,7 @@
    <div>
         <v-card-text class="fontIran">بلیط های پشتیبانی من</v-card-text>
         <v-flex>
-            <v-card color="blue-grey darken-3">
+            <v-card color="blue-grey darken-3 elevation-15">
                 <v-card-text class="fontIrans text-xs-right"><v-icon color="orange lighten-3" size="17px">done_all</v-icon>کاربران عزیز، با توجه به مقدار غیر معمول بلیط، زمان پاسخ فعلی ما 2 روز است. با مهربانی از شما می خواهیم که بلیط های چندگانه را در رابطه با همین مسئله باز نکنید، زیرا فقط زمان پاسخ ما را طولانی تر می کند.</v-card-text>
             </v-card>
             <v-card-text class="fontIrans text-xs-right"><v-icon color="red" size="17px">warning</v-icon>لطفا یک لحظه از وقت خود را برای توضیح مسئله خود بیاموزید. اگر هیچ یک از گزینه های زیر با موضوع شما مطابقت نداشته باشد، لطفا "دیگر" را انتخاب کنید و در قسمت نوشتن توصیف کنید</v-card-text>

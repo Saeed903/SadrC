@@ -18,7 +18,7 @@
             <v-layout row wrap>
                 <v-flex v-for="dashboard in dashboards" :key="dashboard" xs12 sm6 md6 lg6 xl6>
                     <router-link class="router" to="">
-                        <v-card>
+                        <v-card class="elevation-15">
                             <v-card-text class="headlined text-xs-center">
                                 <p class="headlined pt-3">{{dashboard.top}}</p>
                                 <p class="fontIrans">{{dashboard.bottom}}</p>
