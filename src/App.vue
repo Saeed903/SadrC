@@ -144,10 +144,20 @@
       <v-card-text>
         <v-toolbar-items v-if="!payload"> 
           <router-link to="Login">
-            <p class="textCard">{{loginState}}</p>
+            <v-tooltip bottom>
+              <v-icon slot="activator" color="white" dark>
+                lock
+              </v-icon>
+              <span class="saidbar">{{loginState}}</span>
+            </v-tooltip>
           </router-link>
           <router-link to="Signup">
-            <p class="textCard pr-3">{{signState}}</p> 
+            <v-tooltip bottom>
+              <v-icon slot="activator" color="white" dark>
+              star
+              </v-icon>
+              <span class="saidbar">{{signState}}</span>
+            </v-tooltip>
           </router-link>
           <router-link to="FrequentlyAskedQuestions" class="textCard pr-3">بیشتر</router-link>
           <router-link to="EditYourProfile" class="textCard white--text pr3">ویرایش پروفایل</router-link>
