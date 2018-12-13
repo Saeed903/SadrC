@@ -14,7 +14,7 @@
         <td >{{ props.item.paymentMethod }}</td>
         <td >{{ props.item.price }}</td>
         <td >{{ props.item.limits }}</td>
-        <td ><v-btn class="primary" @click="buy()" to="Order">خرید</v-btn></td>
+        <td ><v-btn class="primary elevation-5" @click="buy()" to="Order">خرید</v-btn></td>
       </template>
     </v-data-table>
 </div>
