@@ -451,7 +451,7 @@ export default{
 <style scoped>
 .fontIran{
     font-family:'Iranian Sans';
-    color:#E0E0E0;
+    color:white;
     font-size:14px
 }
 .topicIran{

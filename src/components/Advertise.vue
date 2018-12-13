@@ -8,13 +8,13 @@
       :pagination.sync="pagination"
       :total-items="totalDesserts"
       :loading="loadingAdvertise"
-    >
+     >
       <template v-if="!loading" slot="items" slot-scope="props">
-        <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
-        <td >{{ props.item.paymentMethod }}</td>
-        <td >{{ props.item.price }}</td>
-        <td >{{ props.item.limits }}</td>
-        <td ><v-btn class="primary" @click="buy()" to="Order">خرید</v-btn></td>
+        <td >{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
+        <td>{{ props.item.paymentMethod }}</td>
+        <td>{{ props.item.price }}</td>
+        <td>{{ props.item.limits }}</td>
+        <td ><v-btn class="white--text purple" @click="buy()" to="Order" style="rgb(50,50,93)">خرید</v-btn></td>
       </template>
     </v-data-table>
 </div>
@@ -49,7 +49,7 @@ export default{
                  {
                     text: this.typeCustomer,
                     align: 'center',
-                    class:'text-xs-right',
+                    class:'text-xs-right white--text',
                     sortable: false,
                     value: this.typeCustomer
                  },
@@ -204,7 +204,9 @@ export default{
 <style scoped>
 .table{
     font-family: Iranian Sans;
+   background-color:rgb(30, 38, 52);
 }
+
 
 </style>
 

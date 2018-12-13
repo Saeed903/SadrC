@@ -1,66 +1,68 @@
 <template>
     <div>
-            <v-flex>
-                <v-icon class="titled"></v-icon>
-                <v-card-text class="titled text-xs-right">
-                    <span><v-icon color="yellow lighten-3">done_all</v-icon>چگونه ارز دیجیتال بخریم؟</span>
-                </v-card-text>
-            </v-flex>
-            <!--در پایین قسمتی از توضیحات مرحله ای, یک عکسی هم از سایت باید قرار گیرد-->
-            <v-flex v-for="level in levels" :key="level">
-                <v-card-text class="fontIran">
+        <v-flex>
+            <v-icon class="titled"></v-icon>
+            <v-card-text class="titled text-xs-right">
+                <span><v-icon color="yellow lighten-3">done_all</v-icon>چگونه ارز دیجیتال بخریم؟</span>
+            </v-card-text>
+        </v-flex>
+        <!--در پایین قسمتی از توضیحات مرحله ای, یک عکسی هم از سایت باید قرار گیرد-->
+        <v-flex v-for="level in levels" :key="level">
+            <v-card>
+                <v-card-text class="fontIran card">
                     <span class="text-xs-center mt-2">{{level.text}}</span><br>
                     <span class="fontIrans">{{level.describe}}</span><router-link class="textCard" to="">{{level.router}}</router-link>
-                    <v-divider class="mt-5"></v-divider>
+                    <v-divider class="mt-5 secondary"></v-divider>
                 </v-card-text>
-            </v-flex>
+            </v-card>
+        </v-flex>
 
-            <v-layout row wrap>
-                <v-flex v-for="dashboard in dashboards" :key="dashboard" xs12 sm6 md6 lg6 xl6>
-                    <router-link class="router" to="">
-                        <v-card>
-                            <v-card-text class="headlined text-xs-center">
-                                <p class="headlined pt-3">{{dashboard.top}}</p>
-                                <p class="fontIrans">{{dashboard.bottom}}</p>
-                            </v-card-text>
-                        </v-card>
-                    </router-link>
-                </v-flex>
-            </v-layout>
+        <v-layout row wrap>
+            <v-flex v-for="dashboard in dashboards" :key="dashboard" xs12 sm6 md6 lg6 xl6>
+                <router-link class="router" to="">
+                    <v-card>
+                        <v-card-text class="card text-xs-center">
+                            <p class="fontsIran pt-3">{{dashboard.top}}</p>
+                            <p class="fontIrans">{{dashboard.bottom}}</p>
+                        </v-card-text>
+                    </v-card>
+                </router-link>
+            </v-flex>
+        </v-layout>
             
 
-            <v-flex>
-                <v-card-text class="headlined text-xs-center">
-                    <span>می خواهم کمک بیشتری کنم؟</span>
+        <v-flex>
+            <v-card-text class="headlined text-xs-center">
+                <span>می خواهم کمک بیشتری کنم؟</span>
+            </v-card-text>
+        </v-flex>
+
+        <v-layout row wrap>
+            <v-flex dflex xs12 sm3 md3 lg3 xl3>
+                <v-card-text class="text-xs-center">
+                    <v-icon color="grey lighten-1" large>help_outline</v-icon><br>
+                    <router-link class="textCard" to="">سوالات متداول</router-link>
                 </v-card-text>
             </v-flex>
-
-            <v-layout row wrap>
-                <v-flex dflex xs12 sm3 md3 lg3 xl3>
-                    <v-card-text class="text-xs-center">
-                        <v-icon color="grey lighten-1" large>help_outline</v-icon><br>
-                        <router-link class="textCard" to="">سوالات متداول</router-link>
-                    </v-card-text>
-                </v-flex>
-                <v-flex dflex xs12 sm3 md3 lg3 xl3>
-                    <v-card-text class="text-xs-center">
-                        <v-icon color="grey lighten-1" large>group</v-icon><br>
-                            <router-link class="textCard" to="">پست در انجمن ما</router-link>
-                    </v-card-text>
-                </v-flex>
-                <v-flex dflex xs12 sm3 md3 lg3 xl3>
-                    <v-card-text class="text-xs-center">
-                        <v-icon color="grey lighten-1" large>fab fa-twitter</v-icon><br>
-                            <router-link class="textCard" to=""> در توییت ما بنویسید</router-link>
-                    </v-card-text>
-                </v-flex>
-                <v-flex dflex xs12 sm3 md3 lg3 xl3>
-                    <v-card-text class="text-xs-center">
-                        <v-icon color="grey lighten-1" large>local_shipping</v-icon><br>
-                            <router-link class="textCard" to="">یک بلیط پشتیبانی باز کنید</router-link>
-                    </v-card-text>
-                </v-flex>
-            </v-layout>
+            <v-flex dflex xs12 sm3 md3 lg3 xl3>
+                <v-card-text class="text-xs-center">
+                    <v-icon color="grey lighten-1" large>group</v-icon><br>
+                        <router-link class="textCard" to="">پست در انجمن ما</router-link>
+                </v-card-text>
+            </v-flex>
+            <v-flex dflex xs12 sm3 md3 lg3 xl3>
+                <v-card-text class="text-xs-center">
+                    <v-icon color="grey lighten-1" large>fab fa-twitter</v-icon><br>
+                        <router-link class="textCard" to=""> در توییت ما بنویسید</router-link>
+                </v-card-text>
+            </v-flex>
+            <v-flex dflex xs12 sm3 md3 lg3 xl3>
+                <v-card-text class="text-xs-center">
+                    <v-icon color="grey lighten-1" large>local_shipping</v-icon><br>
+                        <router-link class="textCard" to="">یک بلیط پشتیبانی باز کنید</router-link>
+                </v-card-text>
+            </v-flex>
+        </v-layout>
 
         <Footer></Footer>
     </div>
@@ -109,7 +111,7 @@ font-size: 13px;
 }
 .textCard{
     font-family:'iranian sans';
-    color:#00E5FF;
+    color:rgb(43,255,92);
     text-decoration:none;
     font-size:12px;
 }
@@ -123,6 +125,10 @@ font-size: 13px;
 .router{
     text-decoration: none;
 }
+.card{
+  background-color:rgb(30, 38, 52)
+}
+
 </style>
 
 
