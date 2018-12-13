@@ -2,7 +2,7 @@
   <div>
      
     <p class="titled">{{currency}}</p>
-     <v-card style=" background-color:rgb(82, 95, 127)">
+     <v-card>
     <v-form ref="form" class="table" v-model="valid" lazy-validatio>
       <v-layout row wrap>
         <v-flex d-flex xs12 sm2 md2 lg2 pt-0>
@@ -19,7 +19,7 @@
         <v-flex d-flex xs12 sm2 md3 lg3 pt-0>
           <v-select 
             v-model="country"
-            style=" background-color:rgb(82, 95, 127)"
+          
             :items="country"
             :rules="[v => !!v || 'کشور مورد نیاز ']"
             label="کشور"
