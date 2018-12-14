@@ -57,6 +57,7 @@ export default new Vuex.Store({
     service('tradeTypes'),
     service('cryptoCurrencies'),
     service('countries'),
+    service('publishAdvertises'),
     auth({ userService: 'users', }),
   ],
 })

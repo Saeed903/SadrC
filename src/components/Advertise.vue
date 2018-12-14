@@ -1,6 +1,6 @@
 <template >
 <div>
-    {{advertises}}
+    {{publishAdvertises}}
   <v-data-table
       class="table text-xs-right"
       :headers="headers"
@@ -22,6 +22,7 @@
 <script>
 
 import { mapActions, mapState, mapGetters } from 'vuex';
+import { log } from 'async';
 
 export default{
   name:"Advertise",
@@ -35,10 +36,17 @@ export default{
   },
   computed:{
     ...mapState('advertises', { loadingAdvertise: 'isFindPending'}),
-    ...mapGetters('advertises', { fingAdvertisesOnline: 'find'}),
+    ...mapState('publishAdvertises', { loadingPublishAdvertises: 'isFindPending'}),
+    ...mapGetters('advertises', { findAdvertisesOnline: 'find'}),
+    ...mapGetters('publishAdvertises', { findPublishAdvertisesOnline: 'find'}),
 
     advertises(){
-        return this.fingAdvertisesOnline().data;
+        return this.findAdvertisesOnline().data;
+    },
+
+    publishAdvertises(){
+
+        return this.findPublishAdvertisesOnline().data;
     },
 
     typeCustomer() {
@@ -79,7 +87,13 @@ export default{
             console.log(advertises);
             
         }), 
-    console.log(this.advertises);  
+
+    this.findPublishAdvertisesOnline()
+        .then(response => {
+            const publishAdvertises = response.data || response;
+            console.log(publishAdvertises);
+            
+        }),    
     this.getDataFromApi()
         .then(data => {
             this.desserts = data.items
@@ -90,6 +104,7 @@ export default{
 
 
     ...mapActions('advertises', { findAdvertise : 'find'}),
+    ...mapActions('publishAdvertises', { findPublishAdvertise : 'find'}),
 
     buy(){
 
