@@ -1,9 +1,9 @@
 <template>
     <div>
-       <EditYourProfileCo></EditYourProfileCo>
-       <BasicUserInformation></BasicUserInformation>
-       <ChangePassword></ChangePassword>
-    </div>
+                <EditYourProfileCo></EditYourProfileCo>
+                <BasicUserInformation></BasicUserInformation>
+                <ChangePassword></ChangePassword>
+ </div>
 </template>
 <script>
 import EditYourProfileCo from './../components/EditProfile/EditYourProfileCo.vue'

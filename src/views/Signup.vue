@@ -1,23 +1,24 @@
 <template>
   <v-layout row wrap align-justify justify-center>
-    <v-flex d-flex xs12 sm8 md8 lg8>
-      <v-card >
+    <v-flex d-flex xs12 sm7 md6 lg4>
         <v-card-text>
           <v-form ref="form" v-model="valid"  
             v-if="!loading"
             @submit.prevent="signUp"
-            @keydown.prevent.enter>
-            <v-card-text>
-            <p class="titled text-xs-center">یک حساب جدید ثبت کنید</p>
-            <p class="text text-xs-center">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
-            </v-card-text>
+            @keydown.prevent.enter
+            style="max-width:320px" 
+          >
+            
+            <p class="fontIran text-xs-center">یک حساب جدید ثبت کنید</p>
+            <p class="fonts text-xs-center">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
+            
 
             <v-text-field 
               v-model="user.username"
               :counter="30"
               :rules="notEmptyRules"
               label="نام کاربر"
-              class="textBottom textField"
+              class="textBottom textField pt-0"
               data-vv-name="username"
               clearable
             ></v-text-field>
@@ -26,7 +27,7 @@
               v-validate="'required|email'"
               v-model="user.email"
               label="ایمیل"
-              class="textBottom emailField"
+              class="textBottom emailField pt-0"
               data-vv-name="email"
               required
               clearable
@@ -37,7 +38,7 @@
               v-model="user.password"
               :counter="20"
               :rules="notEmptyRules"
-              class="textBottom textField"
+              class="textBottom textField pt-0"
               :type="'password'"
               label="رمزعبور"
               data-vv-name="password"
@@ -48,7 +49,7 @@
             <v-text-field
               v-model="showPassword"
               :counter="20"
-              class="textBottom textField"
+              class="textBottom textField pt-0"
               :rules="confirmPasswordRules"
               :type="'password'"
               label="تکرار رمز عبور "
@@ -57,7 +58,8 @@
               clearable
             ></v-text-field>
 
-            <vue-recaptcha
+            <vue-recaptcha 
+                class="pt-2"
                 theme = "dark"
                 @verify = "onVerify"
                 @expired = "onExpired"
@@ -69,10 +71,10 @@
 
           </v-form>
           <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
-          <p class="textBottom">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="link">ورود</router-link></p>
-          <p class="textBottom">رمز عبور را فراموش کرده اید؟<router-link to="/ResetPassword" class="link">.رمز عبور خودتان را باز نشانی کنید</router-link></p>
+          <p class="fontIran caption">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="textCard">ورود</router-link></p>
+          <p class="fontIran caption">رمز عبور را فراموش کرده اید؟<router-link to="/ResetPassword" class="textCard">.رمز عبور خودتان را باز نشانی کنید</router-link></p>
         </v-card-text>
-      </v-card>
+     
     </v-flex>
   </v-layout>
 </template>
@@ -142,23 +144,3 @@
     }
   }
 </script>
-<style scoped>
-.titled{
-  font-family: Iranian Sans;
-  font-size: 18px;
-}
-.text{
-  font-family: Iranian Sans;
-  font-size: 15px;
-}
-.textBottom{
-  font-family: Iranian Sans;
-}
-.link{
-    text-decoration: none;
-    color:rgb(0,153,255);
-}
-.link:hover{
-    color:rgb(0,140,255);
-}
-</style>

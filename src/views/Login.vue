@@ -1,75 +1,78 @@
 <template>
-    <v-layout v-if="!loading" row wrap>
-      <v-flex  d-flex xs12 sm8 md8 lg6>
+<v-container fluid grid-list-xl pt-0>
+    <v-layout  justify-space-around v-if="!loading">
+        <v-flex d-flex xs12 sm7 md6 lg7 xl7>
           <v-card-text>
             <v-form 
+              style="max-width:330px ;" 
               @submit.prevent="login" 
               @keydown.prevent.enter 
               v-model="valid"
             >
-                <p class="titled text-xs-center">ورود</p>
-                <p class="text text-xs-center">با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید</p>
-              
-                <v-text-field
-                  :roles = "notEmptyRoles"
-                  v-model="user.email"
-                  :counter="30"
-                  label="ایمیل"
-                  data-vv-name="email"
-                  class="textBottom emailField"
-                  required
-                >
-                </v-text-field>
+              <p class="fontIran text-xs-center">ورود</p>
+              <p class="fontsIran">با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید.</p>
+            
+              <v-text-field
+                :roles = "notEmptyRoles"
+                v-model="user.email"
+                :counter="30"
+                label="ایمیل"
+                data-vv-name="email"
+                color="cyan accent-2"
+                class="fontsIran emailField"
+                required
+                
+              >
+              </v-text-field>
 
-                <v-text-field
-                  :roles = "notEmptyRoles"
-                  v-model="user.password"
-                  counter="20"
-                  :error-messages="errors.collect('password')"
-                  :type="'password'"
-                  label="رمز عبور"
-                  class="textBottom textField"
-                  data-vv-name="password"
-                  required
-                >
-                </v-text-field>
+              <v-text-field
+                :roles = "notEmptyRoles"
+                v-model="user.password"
+                counter="20"
+                :error-messages="errors.collect('password')"
+                :type="'password'"
+                label="رمز عبور"
+                color="cyan accent-2"
+                class="fontsIran textField"
+                data-vv-name="password"
+                required
+                
+              >
+              </v-text-field>
 
-                <vue-recaptcha
-                    theme = "dark"
-                    @verify = "onVerify"
-                    @expired = "onExpired"
-                    :sitekey = "sitekey">
-                </vue-recaptcha>
-                <v-card-text :class="{red:errorLogin}" v-if="errorLogin" >  {{errorMessage}} </v-card-text>
+              <vue-recaptcha
+                  class="pt-2"
+                  theme = "dark"
+                  @verify = "onVerify"
+                  @expired = "onExpired"
+                  :sitekey = "sitekey">
+              </vue-recaptcha>
+              <v-card-text :class="{red:errorLogin}" v-if="errorLogin" >  {{errorMessage}} </v-card-text>
+              <v-btn type="submit" class="fontsIran" color="primary">ورود</v-btn>  
+          </v-form>
 
-                  <v-btn type="submit" class="textBottom primary">ورود</v-btn>
+          <v-flex>
+            <router-link class="textCard caption" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link><br>
+            <span class="fontIrans caption">یک حساب جدید باز کنید؟<router-link to="/SignUp" class="textCard">ثبت نام کنید</router-link></span>
+          </v-flex>
 
-            </v-form>
-                <p><router-link class="textBottom link" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link></p>
-                <p class="textBottom">صدر کریپتو؟<router-link to="/SignUp" class="link">ثبت نام کنید</router-link></p>
+            <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
+          
           </v-card-text>
-        
-      </v-flex>
-    
-    
-      <v-card>
-      <Footer></Footer>
-      </v-card>
-    
-  <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
-  </v-layout>
-  
+        </v-flex>
+    </v-layout>
+</v-container>
 </template>
 <script>
  import Vue from 'vue'
- import Footer from './../components/Footer.vue'
+ 
  import { mapState, mapActions } from 'vuex';
  import VueRecaptcha from 'vue-recaptcha'; 
 
  export default {
     
     components:{
-        Footer,
+        
         VueRecaptcha
     },
     data: () => ({ 
@@ -138,23 +141,3 @@
   }
 
 </script>
-<style scoped>
-.titled{
-  font-family: Iranian Sans;
-  font-size: 18px;
-}
-.text{
-  font-family: Iranian Sans;
-  font-size: 15px;
-}
-.textBottom{
-  font-family: Iranian Sans;
-}
-.link{
-    text-decoration: none;
-    color:rgb(0,153,255);
-}
-.link:hover{
-    color:rgb(0,140,255);
-}
-</style>

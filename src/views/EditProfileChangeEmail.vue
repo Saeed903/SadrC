@@ -1,8 +1,8 @@
 <template>
   <v-layout align-justify justify-center>
     <v-flex dflex xs12 sm8 md8 lg6>
-      <v-card-text class="fontIran">
-        <p class="titled ">تغییر آدرس ایمیل</p>
+      <v-card-text class="fontIrans">
+        <p class="fontIran ">تغییر آدرس ایمیل</p>
         <span>پس از تغییر آدرس ایمیل شما باید دوباره آن را تأیید کنید. اگر پس از تغییر فورا ایمیل تأیید را دریافت نکنید، موارد زیر را امتحان کنید:</span>
         <v-card-text>
         <ul>
@@ -17,12 +17,12 @@
       </v-card-text>
 
       <v-card color="red lighten-2" dark>
-        <v-card-text class="fontIran">
+        <v-card-text class="fontIrans">
           <p>لطفا خطاهای برجسته را اصلاح کنید.</p>
         </v-card-text>
       </v-card>
     
-      <p class="fontIran">لطفا تغییر آدرس ایمیل با رمز عبور خود را تایید کنید.</p>
+      <p class="fontIrans">لطفا تغییر آدرس ایمیل با رمز عبور خود را تایید کنید.</p>
       <v-form ref="form" v-model="valid"  
             v-if="!loading"
             @submit.prevent="signUp"
@@ -54,7 +54,7 @@
         >
       </v-text-field>
 
-      <div class="fontIran">
+      <div class="fontIrans">
         <p>لطفا تأیید کنید که شما انسان هستید.</p>
         <p>من یک ربات نیستم</p>
         <v-btn @click="submit" class="primary">تغییر آدرس ایمیل</v-btn>
@@ -102,15 +102,7 @@
 
 </script>
 <style scoped>
-.titled{
-  font-family: Iranian Sans;
-  font-size: 20px;
-}
-.fontIran{
-font-family: Iranian Sans;
-font-size: 14px;
 
-}
 .router{
     font-family:'iranian sans';
     color:rgb(0, 153, 255);
