@@ -8,17 +8,10 @@
         <v-layout row wrap>
             <v-flex v-for= "(help, index) in Helps" :key="index"  xs12 sm6 md6 lg6 xl6 >
                 <router-link class="router" :to="help.path" >
-<<<<<<< HEAD
-                    <v-card  height="100%" >
-                        <v-card-text class="text-xs-center card">
-                            <p class="fontIran">{{help.title}}</p>
-                            <p class="fontIrans">{{help.type}}</p>
-=======
                     <v-card class="elevation-24" height="100%">
                         <v-card-text class="text-xs-center">
                             <p class="titled">{{help.title}}</p>
                             <p class="fontIran">{{help.type}}</p>
->>>>>>> 99ff5e9dd57bdb05a746be28bad37e6edde5c6ea
                         </v-card-text>
                     </v-card>
                 </router-link>

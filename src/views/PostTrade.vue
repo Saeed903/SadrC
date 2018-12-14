@@ -443,26 +443,3 @@ export default{
     }
 }
 </script>
-<<<<<<< HEAD
-<style scoped>
-.fontIran{
-    font-family:'Iranian Sans';
-    color:white;
-    font-size:14px
-}
-.topicIran{
-    font-family:iranian sans;
-    font-size:18px;
-}
-.textCard{
-    font-family:'iranian sans';
-    color:#00E5FF;
-    text-decoration:none;
-    font-size:14px;
-}
-.textCard:hover{
-    color:#18FFFF;
-}
-</style>
-=======
->>>>>>> 99ff5e9dd57bdb05a746be28bad37e6edde5c6ea
