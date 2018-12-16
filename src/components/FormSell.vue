@@ -58,7 +58,7 @@
           
         <v-flex xs12 sm1 md1 pt-0>
           <v-card-text>
-            <v-btn :disabled="!valid" @click="submit" class="primary fontsIran">جست و جو</v-btn>
+            <v-btn :disabled="!valid" @click="submit" class="fontsIran primary elevation-24" round><v-icon>search</v-icon>جست و جو</v-btn>
           </v-card-text>
         </v-flex>
       </v-layout>

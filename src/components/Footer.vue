@@ -3,48 +3,39 @@
     <v-footer height="auto">
       <v-card class="flex" flat tile>
         <v-layout>
-          <v-flex>
-            <v-card-text>
-              <p>farzad</p>
-              <p>farzad</p>
-              <p>farzad</p>
-              <p>farzad</p>
-              <p>farzad</p>
-          </v-card-text>
-          </v-flex>
-          <v-flex>
-             <v-card-text>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          </v-card-text>
-          </v-flex>
-          <v-flex>
-             <v-card-text>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          </v-card-text>
-          </v-flex>
-          <v-flex>
-             <v-card-text>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          </v-card-text>
-          </v-flex>
+            <v-flex class="pr-3">
+              <v-card-text row wrap>
+                <p>farzad</p>
+                <p>farzad</p>
+                <p>farzad</p>
+                <p>farzad</p>
+                <p>farzad</p>
+              </v-card-text>
+            </v-flex>
+            <v-flex class="pr-3">
+              <v-card-text row wrap>
+                <p>farzad</p>
+                <p>farzad</p>
+                <p>farzad</p>
+                <p>farzad</p>
+                <p>farzad</p>
+              </v-card-text>
+            </v-flex>
+            <v-flex class="pr-3">
+              <v-card-text row wrap>
+                <p>farzad</p>
+                <p>farzad</p>
+                <p>farzad</p>
+                <p>farzad</p>
+                <p>farzad</p>
+              </v-card-text>
+            </v-flex>
         </v-layout>
   
         <v-spacer></v-spacer>
 
         <v-card-actions class="justify-center">
-          <strong class="bNazanin subheading">all right reserved by sadrCrypto dev team</strong> — 2018&copy;
+          <strong class="bNazanin subheading">copy right all right reserved by sadrCrypto dev team</strong> — 2018&copy;
         </v-card-actions>
       </v-card>
     </v-footer>
