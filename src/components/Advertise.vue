@@ -1,10 +1,6 @@
 <template >
 <div>
-<<<<<<< HEAD
     {{publishAdvertises}}
-=======
-    
->>>>>>> 38ff7f3145f257ff8c05e3e0e70477c7dd7b1ae4
   <v-data-table
       class="table"
       :headers="headers"
@@ -49,8 +45,7 @@ export default{
     },
 
     publishAdvertises(){
-
-        return this.findPublishAdvertisesOnline().data;
+        return this.findPublishAdvertisesOnline().data ;
     },
 
     typeCustomer() {
@@ -108,11 +103,10 @@ export default{
     this.findAdvertise()
         .then(response => {
             const advertises = response.data || response;
-            console.log(advertises);
             
         }), 
 
-    this.findPublishAdvertisesOnline()
+    this.findPublishAdvertise()
         .then(response => {
             const publishAdvertises = response.data || response;
             console.log(publishAdvertises);

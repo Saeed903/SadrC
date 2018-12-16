@@ -6,7 +6,6 @@
       <v-layout row wrap>
         <v-flex d-flex xs12 sm2 md2 lg2 pt-0>
           <v-text-field 
-            color="rgb(43,255,92)"
             v-model="amount"
             type="number"
             :rules="amountRules"
