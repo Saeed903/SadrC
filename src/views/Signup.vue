@@ -10,7 +10,7 @@
           >
             
             <p class="fontIran text-xs-center">یک حساب جدید ثبت کنید</p>
-            <p class="fonts text-xs-center">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
+            <p class="fontsIran text-xs-center">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
             
 
             <v-text-field 
