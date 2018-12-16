@@ -5,39 +5,39 @@
         <v-layout>
           <v-flex>
             <v-card-text>
-              <p>farzad</p>
-              <p>farzad</p>
-              <p>farzad</p>
-              <p>farzad</p>
-              <p>farzad</p>
+              <p></p>
+              <p></p>
+              <p></p>
+              <p></p>
+              <p></p>
           </v-card-text>
           </v-flex>
           <v-flex>
-             <v-card-text>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          </v-card-text>
+            <v-card-text>
+              <p>farzad</p>
+              <p>farzad</p>
+              <p>farzad</p>
+              <p>farzad</p>
+              <p>farzad</p>
+            </v-card-text>
           </v-flex>
           <v-flex>
-             <v-card-text>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          </v-card-text>
+            <v-card-text>
+              <p>farzad</p>
+              <p>farzad</p>
+              <p>farzad</p>
+              <p>farzad</p>
+              <p>farzad</p>
+            </v-card-text>
           </v-flex>
           <v-flex>
-             <v-card-text>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          <p>farzad</p>
-          </v-card-text>
+            <v-card-text>
+              <p>farzad</p>
+              <p>farzad</p>
+              <p>farzad</p>
+              <p>farzad</p>
+              <p>farzad</p>
+            </v-card-text>
           </v-flex>
         </v-layout>
   
