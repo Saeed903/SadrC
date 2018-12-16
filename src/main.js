@@ -10,7 +10,8 @@ import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import i18n from './i18n';
- 
+import { createProvider } from './vue-apollo'
+
 Vue.use(Vuetify, {
   rtl: true,
   //iconfont: 'mdi',
@@ -28,5 +29,6 @@ new Vue({
   router,
   store,
   i18n,
+  apolloProvider: createProvider(),
   render: h => h(App)
 }).$mount('#app')

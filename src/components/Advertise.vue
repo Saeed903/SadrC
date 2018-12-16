@@ -1,6 +1,10 @@
 <template >
 <div>
+<<<<<<< HEAD
+    {{publishAdvertises}}
+=======
     
+>>>>>>> 38ff7f3145f257ff8c05e3e0e70477c7dd7b1ae4
   <v-data-table
       class="table"
       :headers="headers"
@@ -8,7 +12,7 @@
       :pagination.sync="pagination"
       :total-items="totalDesserts"
       :loading="loadingAdvertise"
-    >
+     >
       <template v-if="!loading" slot="items" slot-scope="props">
         <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
         <td >{{ props.item.paymentMethod }}</td>
@@ -22,6 +26,7 @@
 <script>
 
 import { mapActions, mapState, mapGetters } from 'vuex';
+import { log } from 'async';
 
 export default{
   name:"Advertise",
@@ -35,10 +40,17 @@ export default{
   },
   computed:{
     ...mapState('advertises', { loadingAdvertise: 'isFindPending'}),
-    ...mapGetters('advertises', { fingAdvertisesOnline: 'find'}),
+    ...mapState('publishAdvertises', { loadingPublishAdvertises: 'isFindPending'}),
+    ...mapGetters('advertises', { findAdvertisesOnline: 'find'}),
+    ...mapGetters('publishAdvertises', { findPublishAdvertisesOnline: 'find'}),
 
     advertises(){
-        return this.fingAdvertisesOnline().data;
+        return this.findAdvertisesOnline().data;
+    },
+
+    publishAdvertises(){
+
+        return this.findPublishAdvertisesOnline().data;
     },
 
     typeCustomer() {
@@ -49,7 +61,7 @@ export default{
                  {
                     text: this.typeCustomer,
                     align: 'center',
-                    class:'text-xs-right',
+                    class:'text-xs-right white--text',
                     sortable: false,
                     value: this.typeCustomer
                  },
@@ -99,7 +111,13 @@ export default{
             console.log(advertises);
             
         }), 
-    console.log(this.advertises);  
+
+    this.findPublishAdvertisesOnline()
+        .then(response => {
+            const publishAdvertises = response.data || response;
+            console.log(publishAdvertises);
+            
+        }),    
     this.getDataFromApi()
         .then(data => {
             this.desserts = data.items
@@ -110,6 +128,7 @@ export default{
 
 
     ...mapActions('advertises', { findAdvertise : 'find'}),
+    ...mapActions('publishAdvertises', { findPublishAdvertise : 'find'}),
 
     buy(){
 
@@ -204,7 +223,9 @@ export default{
 <style scoped>
 .table{
     font-family: Iranian Sans;
+   background-color:rgb(30, 38, 52);
 }
+
 
 </style>
 
