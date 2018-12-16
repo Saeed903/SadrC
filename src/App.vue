@@ -160,8 +160,6 @@
               <span class="saidbar">{{signState}}</span>
             </v-tooltip>
           </router-link>
-          <router-link to="FrequentlyAskedQuestions" class="textCard pr-3">بیشتر</router-link>
-          <router-link to="EditYourProfile" class="textCard white--text pr3">ویرایش پروفایل</router-link>
         </v-toolbar-items>
       </v-card-text>
       
