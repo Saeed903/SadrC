@@ -2,14 +2,14 @@
 <div id="app">
   <v-app
     id="inspire"
-    style="background-color:#000000"
+    dark
   >
     <v-navigation-drawer
       v-model="drawer"
       fixed
       right
       app
-      style=" background-color:rgb(43,255,198)"
+      
       >
        <v-list>
         <template  v-for="currency in currencyMenu" >
@@ -83,45 +83,46 @@
     </v-navigation-drawer>
 
     <v-layout>
-        <v-toolbar style="background-color:rgb(30, 38, 52)" fixed app>
-          <v-flex xs1 sm1 md1 lg1 xl1>
-            <v-toolbar-side-icon class="white--text" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-            <v-spacer></v-spacer>
-          </v-flex>
-            <v-flex xs4 sm4 md4 lg2 xl2>
-              <v-toolbar-items>
-                <router-link to="PostTrade">
-                  <span class="pr-0 textCard">ثبت آگهی</span>
-                </router-link>
-                <router-link to="Forums">
-                  <span class="pr-1 textCard">انجمن ها</span>
-                </router-link>
+      <v-toolbar style="background-color:rgb(30, 38, 52)" fixed app>
+        <v-flex xs1 sm1 md1 lg1 xl1>
+          <v-toolbar-side-icon class="white--text" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+          <v-spacer></v-spacer>
+        </v-flex>
+          <v-flex xs4 sm4 md4 lg2 xl2>
+            <v-toolbar-items>
+              <router-link to="PostTrade">
+                <span class="pr-0 textCard">ثبت آگهی</span>
+              </router-link>
+              <router-link to="Forums">
+                <span class="pr-1 textCard">انجمن ها</span>
+              </router-link>
 
-                <v-menu 
-                  offset-y
-                  transition="slide-y-transition"
-                  >
-                    <v-btn
-                    slot="activator"
-                    class="white--text" color="purple"
-                    
-                    >
-                      <span>کمک</span>
-                      <v-icon color="grey" >arrow_drop_down</v-icon>
-                    </v-btn>
-                    <v-list>
-                    <v-list-tile
-                    v-for="(help, index) in helps"
-                    :key="index"
-                    @click="routing(help.path)"
-                    class="menuFont"
-                    >
+              <v-menu 
+                offset-y
+                transition="slide-y-transition"
+              >
+                <v-btn
+                slot="activator"
+                class="white--text" color="purple"
+                
+                >
+                  <span>کمک</span>
+                  <v-icon color="grey" >arrow_drop_down</v-icon>
+                </v-btn>
+                <v-list>
+                  <v-list-tile
+                  v-for="(help, index) in helps"
+                  :key="index"
+                  @click="routing(help.path)"
+                  class="menuFont"
+                  > 
                     <v-icon>{{help.icon}}</v-icon>
                     <v-list-tile-title class="fontIrans1">{{ help.title }}</v-list-tile-title>
-                    </v-list-tile>
-                    </v-list>
-                  </v-menu>
-              </v-toolbar-items>
+                  </v-list-tile>
+                </v-list>
+              </v-menu>
+            </v-toolbar-items>
+            
             </v-flex>
             <v-flex xs4 sm4 md4 lg2 xl2 pr-0>
                 <v-toolbar-items v-if="!payload"> 
@@ -135,76 +136,71 @@
                   <router-link to="EditYourProfile" class="textCard white--text pr3">ویرایش پروفایل</router-link>
                 </v-toolbar-items>
             </v-flex>
-    
-          <v-flex>
-              <v-toolbar-items v-if="payload" > 
-                <router-link  to="EditYourProfile" class="textCard">ویرایش پروفایل</router-link>
-                <router-link  to="Wallet" class="textCard">کیف پول</router-link>
-              </v-toolbar-items>
-          </v-flex>
-          <v-card-text>
-            <v-toolbar-items v-if="!payload"> 
-          
-              <router-link to="Login">
-                <v-tooltip bottom>
-                  <v-icon slot="activator" color="white" dark>
-                    lock
-                  </v-icon>
-                  <span class="saidbar">{{loginState}}</span>
-                </v-tooltip>
-              </router-link>
-              <router-link to="Signup">
-                <v-tooltip bottom>
-                  <v-icon slot="activator" color="white" dark>
-                  star
-                  </v-icon>
-                  <span class="saidbar">{{signState}}</span>
-                </v-tooltip>
-              </router-link>
-              <router-link to="FrequentlyAskedQuestions" class="textCard pr-3">بیشتر</router-link>
-              <router-link to="EditYourProfile" class="textCard white--text pr3">ویرایش پروفایل</router-link>
+  
+            <v-toolbar-items v-if="payload" > 
+              <router-link  to="EditYourProfile" class="textCard">ویرایش پروفایل</router-link>
+              <router-link  to="Wallet" class="textCard">کیف پول</router-link>
             </v-toolbar-items>
-          </v-card-text>
-        
-        
-        
-        <v-toolbar-items v-if="payload" > 
-          <router-link  to="EditYourProfile" class="textCard">ویرایش پروفایل</router-link>
-          <router-link  to="Wallet" class="textCard">کیف پول</router-link>
-        
-          <div class="text-xs-center">
-            <v-menu 
-            offset-y
-            transition="slide-y-transition"
-            >
-              <v-btn slot="activator" dark>
-                <v-icon style="color:aqua">perm_identity</v-icon>
-                <span class="fontIrans1">{{userName}}</span>
-                <v-icon dark>arrow_drop_down</v-icon>
-              </v-btn>
-              <v-list>
-                <v-list-tile
-                  v-for="(profile, index) in Profiles"
-                  :key="index"
-                  @click="routing(profile.path)"
-                  class="fontIrans1 "
+  
+            <v-card-text>
+              <v-toolbar-items v-if="!payload"> 
+                <router-link to="Login">
+                  <v-tooltip bottom>
+                    <v-icon slot="activator" color="white" dark>
+                      lock
+                    </v-icon>
+                    <span class="saidbar">{{loginState}}</span>
+                  </v-tooltip>
+                </router-link>
+                <router-link to="Signup">
+                  <v-tooltip bottom>
+                    <v-icon slot="activator" color="white" dark>
+                    star
+                    </v-icon>
+                    <span class="saidbar">{{signState}}</span>
+                  </v-tooltip>
+                </router-link>
+              </v-toolbar-items>
+            </v-card-text>
+
+            <v-toolbar-items v-if="payload" > 
+              <router-link  to="EditYourProfile" class="textCard">ویرایش پروفایل</router-link>
+              <router-link  to="Wallet" class="textCard">کیف پول</router-link>
+              
+              <div class="text-xs-center">
+                <v-menu 
+                offset-y
+                transition="slide-y-transition"
                 >
-                  <v-icon>{{profile.icon}}</v-icon>
-                  <v-list-tile-title class="fontIrans1 ">{{ profile.title }}</v-list-tile-title>
-                </v-list-tile>
-              </v-list>
-            </v-menu>
-          </div>
-          <v-btn flat @click="logout" class="fontsIran">خروج</v-btn>
-        </v-toolbar-items>
-        <v-card-text class="text-sm-left headline">
-          <v-badge overlap>
-            <span slot="badge">3</span>
+                  <v-btn slot="activator" dark>
+                    <v-icon style="color:aqua">perm_identity</v-icon>
+                    <span class="fontIrans1">{{userName}}</span>
+                    <v-icon dark>arrow_drop_down</v-icon>
+                  </v-btn>
+                  <v-list>
+                    <v-list-tile
+                      v-for="(profile, index) in Profiles"
+                      :key="index"
+                      @click="routing(profile.path)"
+                      class="fontIrans1 "
+                    >
+                      <v-icon>{{profile.icon}}</v-icon>
+                      <v-list-tile-title class="fontIrans1 ">{{ profile.title }}</v-list-tile-title>
+                    </v-list-tile>
+                  </v-list>
+                </v-menu>
+              </div>
+              <v-btn flat @click="logout" class="fontsIran">خروج</v-btn>
+          </v-toolbar-items>
+
+          <v-card-text class="text-sm-left headline">
+            <v-badge overlap>
+              <span slot="badge">3</span>
               <v-icon size="25px" color="purple">notifications</v-icon>
-          </v-badge>
-          <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="body-2">.com</span><v-icon color="grey">home</v-icon></router-link>
-        </v-card-text>
-      </v-toolbar>  
+            </v-badge>
+            <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="body-2">.com</span><v-icon color="grey">home</v-icon></router-link>
+          </v-card-text>
+      </v-toolbar>
     </v-layout>
    
     <v-content>
@@ -256,6 +252,9 @@
         this.$router.push(paths);
         
       }
+    },
+    mounted(){
+     console.log(this.payload);
     }, 
     computed: {
       ...mapState(['currencyMenu']),
@@ -306,7 +305,66 @@
 .saidbar{
   font-family:iranian sans;
 }
-
+.freeRegister{
+  text-decoration:none;
+  color:rgb(153, 68, 68);
+  font-size:15px;
+  font-family:b titr;
+  margin-left:10px;
+}
+.sadrCryptoText{
+  color:rgb(235, 224, 224);
+  text-decoration:none;
+  font-family:b nazanin;
+}
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active, .list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.fontIran{
+    font-family:'Iranian Sans';
+    font-size:19px;
+    color:white;
+}
+.fontsIran{
+    font-family:'Iranian Sans';
+    font-size:15px;
+    color:#E0E0E0;
+}
+.fontIrans{
+    font-family:'Iranian Sans';
+    font-size:12px;
+    color:#9dabb9;
+}
+.textFont{
+  font-family:iranian sans;
+  font-size:13px;
+  color:#E0E0E0;
+}
+.textCard{
+    font-family:'iranian sans';
+    color:rgb(43,255,92);
+    text-decoration:none;
+     font-size:12px;
+}
+.textCard:hover{
+    color:#18FFFF;
+    
+}
+.fontIrans1{
+  font-family:'Iranian Sans';
+  font-size:12px;
+}
+.card{
+  background-color:rgb(30, 38, 52)
+}
 
 </style>
 

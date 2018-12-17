@@ -7,7 +7,7 @@
             </v-card-text>
         </v-flex>
         <!--در پایین قسمتی از توضیحات مرحله ای, یک عکسی هم از سایت باید قرار گیرد-->
-        <v-flex v-for="level in levels" :key="level">
+        <v-flex d-flex v-for="level in levels" :key="level">
             <v-card>
                 <v-card-text class="fontIran card">
                     <span class="text-xs-center mt-2">{{level.text}}</span><br>
@@ -17,20 +17,19 @@
             </v-card>
         </v-flex>
 
-            <v-layout row wrap>
-                <v-flex v-for="dashboard in dashboards" :key="dashboard" xs12 sm6 md6 lg6 xl6>
-                    <router-link class="router" to="">
-                        <v-card class="elevation-15">
-                            <v-card-text class="headlined text-xs-center">
-                                <p class="headlined pt-3">{{dashboard.top}}</p>
-                                <p class="fontIrans">{{dashboard.bottom}}</p>
-                            </v-card-text>
-                        </v-card>
-                    </router-link>
-                </v-flex>
-            </v-layout>
+        <v-layout row wrap>
+            <v-flex d-flex v-for="dashboard in dashboards" :key="dashboard" xs12 sm6 md6 lg6 xl6>
+                <router-link class="textCard" to="">
+                    <v-card class="elevation-15">
+                        <v-card-text class="headlined text-xs-center card">
+                            <p class="fontIran pt-3">{{dashboard.top}}</p>
+                            <p class="fontIrans">{{dashboard.bottom}}</p>
+                        </v-card-text>
+                    </v-card>
+                </router-link>
+            </v-flex>
+        </v-layout>
             
-
         <v-flex>
             <v-card-text class="headlined text-xs-center">
                 <span>می خواهم کمک بیشتری کنم؟</span>
@@ -122,11 +121,9 @@ font-size: 13px;
   font-family: Iranian Sans;
   font-size: 15px;
 } 
-.router{
-    text-decoration: none;
-}
+
 .card{
-  background-color:rgb(30, 38, 52)
+  background-color:rgb(67, 82, 109)
 }
 
 </style>
