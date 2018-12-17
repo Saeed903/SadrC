@@ -145,6 +145,7 @@
             <v-card-text>
               <v-toolbar-items v-if="!payload"> 
                 <router-link to="Login">
+                  
                   <v-tooltip bottom>
                     <v-icon slot="activator" color="white" dark>
                       lock
