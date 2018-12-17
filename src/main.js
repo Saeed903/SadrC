@@ -29,6 +29,6 @@ new Vue({
   router,
   store,
   i18n,
-  apolloProvider: createProvider(),
+  //apolloProvider: createProvider(),
   render: h => h(App)
 }).$mount('#app')

@@ -59,7 +59,6 @@
                     </v-card>
             </v-flex>
 
-            {{publishAdvertise}}
             <v-flex>
                 <Footer></Footer>
         </v-flex>
@@ -80,26 +79,6 @@ export default{
         show:false,
        
     }),
-    computed:{
-        ...mapGetters('publish-advertises', { findPublishAdvertisesOnline: 'find'}),
-
-        publishAdvertise(){
-            return this.findPublishAdvertisesOnline().data;
-        }
-    },
-    methods:{
-        ...mapActions('publish-advertises', { findPublishAdvertises: 'find'}) ,
-    }, 
-    mounted(){
-       this.findPublishAdvertises()
-            .then(response => {
-                const publishAdvertise = response.data || response;
-            })
-    },
-    created(){
-        //console.log('publish', this.publishAdvertise);
-        
-    },
     components:{
         Advertise,
         Footer,
