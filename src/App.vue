@@ -11,6 +11,8 @@
       app
       
       >
+
+      
        <v-list>
         <template  v-for="currency in currencyMenu" >
           <v-layout
