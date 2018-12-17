@@ -164,7 +164,6 @@
               <router-link to="FrequentlyAskedQuestions" class="textCard pr-3">بیشتر</router-link>
               <router-link to="EditYourProfile" class="textCard white--text pr3">ویرایش پروفایل</router-link>
             </v-toolbar-items>
-<<<<<<< HEAD
           </v-card-text>
         
         
@@ -197,36 +196,6 @@
             </v-menu>
           </div>
           <v-btn flat @click="logout" class="fontsIran">خروج</v-btn>
-=======
-        </v-flex>
-    
-        <v-flex>
-            <v-toolbar-items v-if="payload" > 
-              <router-link  to="EditYourProfile" class="textCard">ویرایش پروفایل</router-link>
-              <router-link  to="Wallet" class="textCard">کیف پول</router-link>
-            
-      </v-toolbar-items>
-      </v-card-text>
-      <v-card-text>
-        <v-toolbar-items v-if="!payload"> 
-       
-          <router-link to="Login">
-            <v-tooltip bottom>
-              <v-icon slot="activator" color="white" dark>
-                lock
-              </v-icon>
-              <span class="saidbar">{{loginState}}</span>
-            </v-tooltip>
-          </router-link>
-          <router-link to="Signup">
-            <v-tooltip bottom>
-              <v-icon slot="activator" color="white" dark>
-              star
-              </v-icon>
-              <span class="saidbar">{{signState}}</span>
-            </v-tooltip>
-          </router-link>
->>>>>>> 1c70dac169ef757b1e1b874f7b1a0ff5385b8d89
         </v-toolbar-items>
         <v-card-text class="text-sm-left headline">
           <v-badge overlap>
