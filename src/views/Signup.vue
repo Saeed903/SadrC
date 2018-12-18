@@ -1,24 +1,24 @@
 <template>
   <v-layout row wrap align-justify justify-center>
     <v-flex d-flex xs12 sm7 md6 lg4>
+      <v-card style="max-width:450px" class="round">
         <v-card-text>
           <v-form ref="form" v-model="valid"  
             v-if="!loading"
             @submit.prevent="signUp"
             @keydown.prevent.enter
-            style="max-width:320px" 
+            style="max-width:450px" 
           >
             
             <p class="fontIran text-xs-center">یک حساب جدید ثبت کنید</p>
             <p class="fontsIran text-xs-center">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
             
-
             <v-text-field 
               v-model="user.username"
               :counter="30"
               :rules="notEmptyRules"
               label="نام کاربر"
-              class="textBottom textField pt-0"
+              class="fontIrans1 textField pt-0"
               data-vv-name="username"
               clearable
             ></v-text-field>
@@ -27,7 +27,7 @@
               v-validate="'required|email'"
               v-model="user.email"
               label="ایمیل"
-              class="textBottom emailField pt-0"
+              class="fontIrans1 emailField pt-0"
               data-vv-name="email"
               required
               clearable
@@ -38,7 +38,7 @@
               v-model="user.password"
               :counter="20"
               :rules="notEmptyRules"
-              class="textBottom textField pt-0"
+              class="fontIrans1 textField pt-0"
               :type="'password'"
               label="رمزعبور"
               data-vv-name="password"
@@ -49,7 +49,7 @@
             <v-text-field
               v-model="showPassword"
               :counter="20"
-              class="textBottom textField pt-0"
+              class="fontIrans1 textField pt-0"
               :rules="confirmPasswordRules"
               :type="'password'"
               label="تکرار رمز عبور "
@@ -66,15 +66,15 @@
                 :sitekey = "sitekey">
             </vue-recaptcha>
 
-            <v-btn type="submit" class="textBottom primary" :disabled="!valid" >ارسال</v-btn>
-            <v-btn @click="clear" class="textBottom primary">پاک کردن</v-btn>
+            <v-btn type="submit" class="fontIrans1 primary" :disabled="!valid" >ارسال</v-btn>
+            <v-btn @click="clear" class="fontIrans1 primary">پاک کردن</v-btn>
 
           </v-form>
           <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
-          <p class="fontIran caption">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="textCard">ورود</router-link></p>
-          <p class="fontIran caption">رمز عبور را فراموش کرده اید؟<router-link to="/ResetPassword" class="textCard">.رمز عبور خودتان را باز نشانی کنید</router-link></p>
+          <p class="fontIrans1 ">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="textCard">ورود</router-link></p>
+          <p class="fontIrans1 ">رمز عبور را فراموش کرده اید؟<router-link to="/ResetPassword" class="textCard">.رمز عبور خودتان را باز نشانی کنید</router-link></p>
         </v-card-text>
-     
+      </v-card>
     </v-flex>
   </v-layout>
 </template>
@@ -144,3 +144,8 @@
     }
   }
 </script>
+<style scoped>
+.round{
+  border-radius: 10px;
+}
+</style>
