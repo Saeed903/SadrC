@@ -9,7 +9,7 @@
             v-model="amount"
             type="number"
             :rules="amountRules"
-            label="میزان"
+            label="مقدار"
             color="cyan accent-2"
             class="fontsIran"
             clearable
