@@ -136,6 +136,7 @@
                 label="کمترین مقدار معامله"
                 color="cyan accent-2"
                 v-model="advertise.minTransactionLimit"
+                clearable
                 >
                 </v-text-field>
             </v-flex>
@@ -150,6 +151,7 @@
                 label="بیشترین مقدار معامله"
                 color="cyan accent-2"
                 v-model="advertise.maxTransactionLimit"
+                clearable
                 >
                 </v-text-field>
             </v-flex>
@@ -164,6 +166,7 @@
                 label="محدودیت مقدار معامله"
                 color="cyan accent-2"
                 v-model="advertise.restrictAmountsTo"
+                clearable
                 >
                 </v-text-field>
             </v-flex>
@@ -194,6 +197,7 @@
                 box
                 color="cyan accent-2"
                 v-model="advertise.termsOfTrade"
+                clearable
                 >
                 </v-textarea>
             </v-flex>
