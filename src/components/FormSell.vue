@@ -9,7 +9,7 @@
             v-model="amount"
             type="number"
             :rules="amountRules"
-            label="میزان"
+            label="مقدار"
             color="cyan accent-2"
             class="fontsIran"
             clearable
@@ -46,8 +46,8 @@
         <v-flex d-flex xs12 sm2 md3 lg3 pt-0>
           <v-autocomplete
             v-model="country"
-            class="fontsIran"
             :items="country"
+            class="fontsIran"
             :rules="[v => !!v || 'کشور مورد نیاز ']"
             color="cyan accent-2"
             label="کشور"
