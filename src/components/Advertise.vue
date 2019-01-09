@@ -1,6 +1,6 @@
 <template >
 <div>
-    {{publishAdvertises}}
+    {{advertises}}
   <v-data-table
       class="table"
       :headers="headers"
