@@ -1,11 +1,11 @@
 <template>
 <v-container fluid grid-list-xl pt-0>
     <v-layout  justify-space-around v-if="!loading">
-        <v-flex d-flex xs12 sm7 md6 lg7 xl7>
-          <v-card style="max-width:330px ;" class="round">
+        <v-flex d-flex xs12 sm7 md6 lg6>
+          <v-card style="max-width:450px" class="round">
             <v-card-text>
               <v-form 
-                style="max-width:330px ;" 
+                style="max-width:450px"
                 @submit.prevent="login" 
                 @keydown.prevent.enter 
                 v-model="valid"

@@ -1,7 +1,7 @@
 <template>
   <v-layout row wrap align-justify justify-center>
-    <v-flex d-flex xs12 sm7 md6 lg4>
-      <v-card style="max-width:450px" class="round">
+    <v-flex d-flex xs12 sm7 md6 lg6>
+      <v-card style="max-width:450px" class="round card">
         <v-card-text>
           <v-form ref="form" v-model="valid"  
             v-if="!loading"
@@ -10,8 +10,8 @@
             style="max-width:450px" 
           >
             
-            <p class="fontIran text-xs-center">یک حساب جدید ثبت کنید</p>
-            <p class="fontsIran text-xs-center">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
+            <p class="fontIran text-xs-center textCard">یک حساب جدید ثبت کنید</p>
+            <p class="fontsIran text-xs-center textCard1">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
             
             <v-text-field 
               v-model="user.username"
@@ -147,5 +147,15 @@
 <style scoped>
 .round{
   border-radius: 10px;
+}
+.textCard{
+    color:#18FFFF;
+}
+
+.textCard1{
+    color:#BDBDBD;
+}
+.card{
+  background-color:rgb(82, 95, 127)
 }
 </style>
