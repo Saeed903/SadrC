@@ -25,7 +25,7 @@
       <p class="fontIrans">لطفا تغییر آدرس ایمیل با رمز عبور خود را تایید کنید.</p>
       <v-form ref="form" v-model="valid"  
             v-if="!loading"
-            @submit.prevent="signUp"
+            @submit.prevent="changeEmail"
             @keydown.prevent.enter>
       <v-text-field
         v-validate="'required|max:30'"
@@ -91,7 +91,7 @@
       },
     }),
     methods: {
-      submit () {
+      changeEmail () {
         this.$validator.validateAll()
       },
       clear () {

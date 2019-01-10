@@ -67,6 +67,7 @@ import EditProfilePersonalData from './views/EditProfilePersonalData.vue'
 import PostTradeNextTap from './views/PostTradeNextTap.vue'
 import Blog from './views/Blog.vue'
 import EditProfileDeleteAccount from './views/EditProfileDeleteAccount.vue'
+import CoinList from './views/CoinList.vue'
 Vue.use(Router);
 
 const authFunction = function(to, from, next){
@@ -89,6 +90,10 @@ export default new Router({
   routes: [
  
     {
+      path: '/CoinList',
+      name: 'CoinList',
+      component: CoinList,
+    },{
       path: '/ErrorAuth',
       name: 'ErrorAuth',
       component: ErrorAuth,
