@@ -194,14 +194,15 @@
         </div>
         <v-btn flat @click="logout" class="fontsIran">خروج</v-btn>
     </v-toolbar-items>
-      <v-card-text class="text-sm-left headline">
-         <v-badge overlap>
+     
+      <v-card-text  class="text-sm-left">
+        <v-badge v-if="payload" overlap>
           <span slot="badge">3</span>
-            <v-icon size="25px" color="purple">notifications</v-icon>
+          <v-icon color="purple" size="25px">notifications</v-icon>
         </v-badge>
-        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="body-2">.com</span><v-icon color="grey">home</v-icon></router-link>
+        
+        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="body-2">.com</span></router-link>
       </v-card-text>
-      
     </v-toolbar>
    
     <v-content>
@@ -320,6 +321,7 @@
   color:rgb(235, 224, 224);
   text-decoration:none;
   font-family:b nazanin;
+  font-size:26px;
 }
 .list-item {
   display: inline-block;
