@@ -8,7 +8,7 @@
       v-model="drawer"
       fixed
       right
-      app >
+      app>
        <v-list >
         <template  v-for="currency in currencyMenu" >
           <v-layout
@@ -83,7 +83,6 @@
 
   
     <v-toolbar fixed app >
-      
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-spacer></v-spacer>
       <v-card-text>
@@ -346,7 +345,7 @@
 }
 .fontIrans{
     font-family:'Iranian Sans';
-    font-size:12px;
+    font-size:13px;
     color:#BDBDBD;
 }
 .textFont{

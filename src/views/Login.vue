@@ -2,7 +2,7 @@
 <v-container fluid grid-list-xl pt-0>
     <v-layout  justify-space-around v-if="!loading">
         <v-flex d-flex xs12 sm7 md6 lg6>
-          <v-card style="max-width:450px" class="round">
+          <v-card style="max-width:450px ; background-color:rgb(30, 38, 52)" class="round">
             <v-card-text>
               <v-form 
                 style="max-width:450px"
@@ -11,8 +11,8 @@
                 v-model="valid"
               >
                 
-                <p class="fontIran text-xs-center">ورود</p>
-                <p class="fontsIran">با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید.</p>
+                <p class="fontIran text-xs-center textCard">ورود</p>
+                <p class="fontsIran textCard1">با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید.</p>
                 <v-text-field
                   :roles = "notEmptyRoles"
                   v-model="user.email"
@@ -146,6 +146,12 @@
 <style scoped>
 .round{
   border-radius: 10px;
+}
+.textCard{
+    color:#18FFFF;
+}
+.textCard1{
+    color:#BDBDBD;
 }
 </style>
 
