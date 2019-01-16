@@ -1,7 +1,11 @@
 <template>
   <v-layout row wrap align-justify justify-center>
     <v-flex d-flex xs12 sm7 md6 lg6>
+<<<<<<< HEAD
       <v-card style="max-width:450px" class="round">
+=======
+      <v-card style="max-width:450px ; background-color:rgb(30, 38, 52)" class="round">
+>>>>>>> 611a1594ad7d327b5e9ca8abf33eb66490e1357d
         <v-card-text>
           <v-form ref="form" v-model="valid"  
             v-if="!loading"
@@ -10,14 +14,15 @@
             style="max-width:450px" 
           >
             
-            <p class="fontIran text-xs-center">یک حساب جدید ثبت کنید</p>
-            <p class="fontsIran text-xs-center">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
+            <p class="fontIran text-xs-center textCard">یک حساب جدید ثبت کنید</p>
+            <p class="fontsIran text-xs-center textCard1">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
             
             <v-text-field 
               v-model="user.username"
               :counter="30"
               :rules="notEmptyRules"
               label="نام کاربر"
+              color="cyan accent-2"
               class="fontIrans1 textField pt-0"
               data-vv-name="username"
               clearable
@@ -27,6 +32,7 @@
               v-validate="'required|email'"
               v-model="user.email"
               label="ایمیل"
+              color="cyan accent-2"
               class="fontIrans1 emailField pt-0"
               data-vv-name="email"
               required
@@ -38,6 +44,7 @@
               v-model="user.password"
               :counter="20"
               :rules="notEmptyRules"
+              color="cyan accent-2"
               class="fontIrans1 textField pt-0"
               :type="'password'"
               label="رمزعبور"
@@ -49,6 +56,7 @@
             <v-text-field
               v-model="showPassword"
               :counter="20"
+              color="cyan accent-2"
               class="fontIrans1 textField pt-0"
               :rules="confirmPasswordRules"
               :type="'password'"
@@ -147,5 +155,15 @@
 <style scoped>
 .round{
   border-radius: 10px;
+  background-color:rgb(82, 95, 127);
 }
+.textCard{
+    color:#18FFFF;
+}
+
+.textCard1{
+    color:#BDBDBD;
+}
+
+
 </style>
