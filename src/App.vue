@@ -175,7 +175,7 @@
   export default {
   data: () => ({
       drawer: true,
-        alterIcon:{icon:'arrow_drop_down',},
+        alterIcon:{icon:'arrow_drop_down'},
        helps: [
         { title: 'چگونه بیت کوین بخریم؟', path:'/HowToBuyBticoins',icon:'account_circle'},
         { title: 'سوالات متداول', path:'/FrequentlyAskedQuestions',icon:'home'},
