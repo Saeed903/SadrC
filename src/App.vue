@@ -82,89 +82,35 @@
     </v-navigation-drawer>
 
   
-    <v-toolbar fixed app >
-      
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+    <v-toolbar app >
+      <v-toolbar-side-icon class="pt-2" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-spacer></v-spacer>
       <v-card-text>
       <v-toolbar-items>
-        <router-link to="PostTrade">
-          <v-tooltip bottom>
-            <v-icon slot="activator" color="white" dark >
-              shopping_cart
-            </v-icon>
-            <span class="saidbar">ثبت آگهی</span>
-          </v-tooltip>
-        </router-link>
+        <router-link class="menuHover pr-3 pt-2" to="Signup">ورود/ثبت نام</router-link>  
+        <router-link class="menuHover pr-3 pt-2" to="postTrade">ثبت آگهی</router-link>
+        <router-link class="menuHover pr-3 pt-2" to="Forums">انجمن ها</router-link>
 
-        <router-link to="PostTradeNextTap">
-          <v-tooltip bottom>
-            <v-icon slot="activator" color="white" dark >
-              shopping_cart
-            </v-icon>
-            <span class="saidbar">ثبت آگهی</span>
-          </v-tooltip>
-        </router-link>
-
-        <router-link to="Forums">
-          <v-tooltip bottom>
-            <v-icon slot="activator" color="white" dark>
-              group
-            </v-icon>
-            <span class="saidbar">انجمن ها</span>
-          </v-tooltip>
-        </router-link>
-
-          <v-menu 
-            offset-y
-            transition="slide-y-transition"
+        <v-menu offset-y transition="slide-y-transition">
+          <span slot="activator" dark>
+            <span class="menuHover pr-3">راهنما</span>
+            <v-icon color="cyan accent-2" dark>{{alterIcon.icon}}</v-icon>
+          </span>
+            <v-list>
+            <v-list-tile
+            v-for="(help, index) in helps"
+            :key="index"
+            @click="routing(help.path)"
+            class="menuFont"
             >
-              <v-btn
-              slot="activator"
-              dark
-              >
-                <v-icon>help</v-icon>
-                <v-icon color="grey" dark>arrow_drop_down</v-icon>
-              </v-btn>
-              <v-list>
-              <v-list-tile
-              v-for="(help, index) in helps"
-              :key="index"
-              @click="routing(help.path)"
-              class="menuFont"
-              >
-              <v-icon>{{help.icon}}</v-icon>
-              <v-list-tile-title class="fontIrans1">{{ help.title }}</v-list-tile-title>
-              </v-list-tile>
-              </v-list>
-          </v-menu>
-            
+            <v-icon class="mr-0 ml-2">{{help.icon}}</v-icon>
+            <v-list-tile-title class="fontIrans1">{{ help.title }}</v-list-tile-title>
+            </v-list-tile>
+            </v-list>
+        </v-menu>
+          
       </v-toolbar-items>
       </v-card-text>
-      <v-card-text>
-        <v-toolbar-items v-if="!payload"> 
-       
-          <router-link to="Login">
-            <v-tooltip bottom>
-              <v-icon slot="activator" color="white" dark>
-                lock
-              </v-icon>
-              <span class="saidbar">{{loginState}}</span>
-            </v-tooltip>
-          </router-link>
-          <router-link to="Signup">
-            <v-tooltip bottom>
-              <v-icon slot="activator" color="white" dark>
-              star
-              </v-icon>
-              <span class="saidbar">{{signState}}</span>
-            </v-tooltip>
-          </router-link>
-        </v-toolbar-items>
-      </v-card-text>
-      
-      
-      
       <v-toolbar-items v-if="payload" > 
         <router-link  to="EditYourProfile" class="textCard">ویرایش پروفایل</router-link>
         <router-link  to="Wallet" class="textCard">کیف پول</router-link>
@@ -173,6 +119,7 @@
           <v-menu 
           offset-y
           transition="slide-y-transition"
+          elevation-24
           >
             <v-btn slot="activator" dark>
               <v-icon style="color:aqua">perm_identity</v-icon>
@@ -195,13 +142,13 @@
         <v-btn flat @click="logout" class="fontsIran">خروج</v-btn>
     </v-toolbar-items>
       <v-card-text class="text-sm-left headline">
-         <v-badge overlap>
+         <v-badge overlap v-if="payload">
           <span slot="badge">3</span>
             <v-icon size="25px" color="purple">notifications</v-icon>
         </v-badge>
-        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="body-2">.com</span><v-icon color="grey">home</v-icon></router-link>
+        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="body-2">.com</span><v-icon color="amber darken-2">exit_to_app</v-icon></router-link>
       </v-card-text>
-      
+    
     </v-toolbar>
    
     <v-content>
@@ -228,7 +175,7 @@
   export default {
   data: () => ({
       drawer: true,
-     
+        alterIcon:{icon:'arrow_drop_down',},
        helps: [
         { title: 'چگونه بیت کوین بخریم؟', path:'/HowToBuyBticoins',icon:'account_circle'},
         { title: 'سوالات متداول', path:'/FrequentlyAskedQuestions',icon:'home'},
@@ -317,7 +264,7 @@
   margin-left:10px;
 }
 .sadrCryptoText{
-  color:rgb(235, 224, 224);
+  color:#FFA000;
   text-decoration:none;
   font-family:b nazanin;
 }
@@ -368,7 +315,14 @@
 .card{
   background-color:rgb(82, 95, 127)
 }
-
-
+.menuHover{
+  text-decoration:none;
+  color:#E0E0E0;
+  font-family:iranian sans;
+  font-size:13px;
+}
+.menuHover:hover{
+  color:white;
+}
 </style>
 
