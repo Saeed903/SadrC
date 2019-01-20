@@ -1,7 +1,7 @@
 <template>
   <v-layout row wrap align-justify justify-center>
     <v-flex d-flex xs12 sm7 md6 lg6>
-      <v-card style="max-width:450px ; background-color:rgb(30, 38, 52)" class="round">
+      <v-card style="max-width:450px" class="round">
         <v-card-text>
           <v-form ref="form" v-model="valid"  
             v-if="!loading"

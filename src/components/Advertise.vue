@@ -1,6 +1,6 @@
 <template >
 <div>
-    {{advertises}}
+    {{publishAdvertises}}
   <v-data-table
       class="table"
       :headers="headers"
@@ -9,8 +9,8 @@
       :total-items="totalDesserts"
       :loading="loadingAdvertise"
      >
-      <template v-if="!loading" slot="items" slot-scope="props">
-        <td>{{ props.item.trader }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
+      <template v-if="!loading" slot="publishAdvertises" slot-scope="props">
+        <td>{{ props.item.id }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
         <td >{{ props.item.paymentMethod }}</td>
         <td >{{ props.item.price }}</td>
         <td >{{ props.item.limits }}</td>

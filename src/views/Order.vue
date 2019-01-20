@@ -42,11 +42,9 @@
         </v-flex>
         </v-card>
       </v-flex>
-      <v-card style="background-color:rgb(30, 38, 52)">
       <v-flex d-flex height="100%" md4 lg4 xl4 v-if="!confirmEmailDate && userId" child-flex>
         <working-hour :workingHours="HEY" workingTime="true"></working-hour>
       </v-flex>
-      </v-card>
     </v-layout> 
     
     <v-layout>
