@@ -68,7 +68,7 @@
                 <p class="fontIrans pt-3">برای تجارت آنلاین شما نیاز به مشخص کردن کشور, تجارت محلی، لطفا شهر، کد پستی و یا نام خیابان را مشخص کنید</p>
             </v-flex>
             <v-card-text>
-             <v-divider ></v-divider>
+             <v-divider  ></v-divider>
             </v-card-text>
 
             <v-flex sm6 md6 lg6>
