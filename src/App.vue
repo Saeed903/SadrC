@@ -140,6 +140,7 @@
       </v-card-text>
     
       <v-card-text class=" text-sm-left headline">
+        <v-btn to="FarzadTest">تست</v-btn>
         <v-btn v-if="payload" @click="logout" to="">خروج</v-btn>
         <router-link to="wallet">
           <v-tooltip content-class="bottom" bottom>

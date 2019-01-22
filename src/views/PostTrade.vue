@@ -1,5 +1,5 @@
 <template>
- <v-card style="background-color:rgb(30, 38, 52)">
+ <div>
     <v-card-text class="text-xs-center">
         <span class="fontIran textCard">ثبت آگهی {{currency}}</span>
     </v-card-text>
@@ -292,7 +292,7 @@
 
     <Footer></Footer>
                 
- </v-card>
+ </div>
 </template>
 <script>
 
