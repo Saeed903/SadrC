@@ -17,7 +17,7 @@
                 <td>{{ coin.rank }}</td>
                 <td> {{ coin.name }}</td>
                 <td>{{ coin.symbol }}</td>
-                <td>{{ coin.price_usd | currency }}</td>
+                <td>{{ coin.price_usd  }}</td>
                 <td :style="getColor(coin.percent_change_1h)">
                 <span v-if="coin.percent_change_1h > 0">+</span>{{ coin.percent_change_1h }}%
                 </td>
@@ -27,13 +27,14 @@
                 <td :style="getColor(coin.percent_change_7d)">
                 <span v-if="coin.percent_change_7d > 0">+</span>{{ coin.percent_change_7d }}%
                 </td>
-                <td>{{ coin.market_cap_usd | currency }}</td>
+                <td>{{ coin.market_cap_usd  }}</td>
             </tr>
         </tbody>
     </table>
 </template>
 <script>
 import axios from 'axios';
+import { log } from 'async';
 
 let CRYPTOCOMPARE_API_URI = "https://min-api.cryptocompare.com";
 
@@ -43,7 +44,7 @@ let cryptocompare_api_key= "f31d8751d294d7d559da3847f272834503ea2681473a4ae68f1d
 
 let UPDATE_INTERVAL = 5 * 1000;
 
-let CoinList = {
+export default {
     name: 'CoinList',
     data:() => ({
         coins: [],
@@ -74,22 +75,29 @@ let CoinList = {
                     console.error(err);
                 });
         },
-        // getCoinImage(symbol) {
-        //     return CRYPTOCOMPARE_API_URI + this.coinData[symbol].ImageUrl;
-        // },
+        getCoinImage(symbol) {
+            return CRYPTOCOMPARE_API_URI + this.coinData[symbol].ImageUrl;
+        },
         getColor: (num) => {
             return num > 0 ? "color:green;" : "color:red;";
         },
+        getInterval(){
+            setInterval(() => {
+                this.getCoins();
+                console.log('test');
+                
+            }, UPDATE_INTERVAL);
+        }
+    },
+    mounted(){
+        this.getInterval() 
     },
     created(){
         this.getCoinData();
     }
 };
 
-export default CoinList;
 
-setInterval(() => {
-  CoinList.getCoins();
-}, UPDATE_INTERVAL);
+
 </script>
 
