@@ -87,35 +87,11 @@
       <v-spacer></v-spacer>
       <v-card-text>
       <v-toolbar-items>
-        <v-toolbar-items v-if="payload"> 
-          <div class="text-xs-center">
-            <v-menu 
-            offset-y
-            transition="slide-y-transition"
-            elevation-24
-            class="mt-3"
-            >
-              <v-btn slot="activator" dark>
-                <v-icon style="color:aqua">perm_identity</v-icon>
-                <span class="fontIrans1">{{userName}}</span>
-                <v-icon dark>arrow_drop_down</v-icon>
-              </v-btn>
-              <v-list>
-                <v-list-tile
-                v-for="(profile, index) in Profiles"
-                :key="index"
-                @click="routing(profile.path)"
-                class="fontIrans1"
-                >
-                  <v-icon color="cyan accent-2" class="mr-0 ml-2">{{profile.icon}}</v-icon>
-                  <v-list-tile-title class="fontIrans1">{{ profile.title }}</v-list-tile-title>
-                </v-list-tile>
-              </v-list>
-            </v-menu>
-          </div>
-        </v-toolbar-items> 
-        <router-link class="menuHover pr-3 pt-2" to="postTrade">ثبت آگهی</router-link>
-        <router-link class="menuHover pr-3 pt-2" to="Forums">انجمن ها</router-link>
+       
+        <router-link class="menuHover pr-3 pt-2 hidden-sm-and-down" to="postTrade">ثبت آگهی</router-link>
+        <router-link class="menuHover pr-3 pt-2 hidden-sm-and-down" to="Forums">انجمن ها</router-link>
+        
+
 
         <v-menu offset-y transition="slide-y-transition">
           <span slot="activator" dark>
@@ -134,21 +110,54 @@
             </v-list-tile>
             </v-list>
         </v-menu>
-          
+           <v-toolbar-items class="pr-2" v-if="payload"> 
+          <div class="text-xs-center">
+            <v-menu offset-y transition="slide-y-transition" elevation-24>
+              <span slot="activator" dark>
+                <v-icon color="cyan accent-2">perm_identity</v-icon>
+                <span class="menuHover">{{userName}}</span>
+                <v-icon size="20" color="cyan accent-2" dark>arrow_drop_down</v-icon>
+              </span>
+              <v-list>
+                <v-list-tile
+                v-for="(profile, index) in Profiles"
+                :key="index"
+                @click="routing(profile.path)"
+                class="menuFont"
+                >
+                  <v-icon color="cyan accent-2" class="mr-0 ml-2">{{profile.icon}}</v-icon>
+                  <v-list-tile-title class="fontIrans1">{{ profile.title }}</v-list-tile-title>
+                </v-list-tile>
+              </v-list>
+            </v-menu>
+          </div>
+        </v-toolbar-items> 
       </v-toolbar-items>
       </v-card-text>
     
       <v-card-text class=" text-sm-left headline">
         <v-btn v-if="payload" @click="logout" to="">خروج</v-btn>
-        <router-link to="wallet"><v-icon color="grey lighten-1" class="ml-3" v-if="payload" size="25">monetization_on</v-icon></router-link>
-        <router-link to="DashBoard"><v-icon color="grey lighten-1" class="ml-3" v-if="payload">fas fa-tachometer-alt</v-icon></router-link>
+        <router-link to="wallet">
+          <v-tooltip bottom>
+            <v-icon color="teal lighten-3" class="ml-3" v-if="payload" slot="activator" size="25">monetization_on</v-icon>
+            <span class="iconFont">کیف پول دیجیتالی</span>
+          </v-tooltip>
+        </router-link>
+        <router-link to="dashboard">
+          <v-tooltip bottom>
+            <v-icon color="teal lighten-3" class="ml-3" v-if="payload" slot="activator">fas fa-tachometer-alt</v-icon>
+            <span class="iconFont">داشبورد مدیریتی</span>
+          </v-tooltip>
+        </router-link>
+
          <v-badge overlap v-if="payload">
           <span slot="badge">3</span>
             <v-icon class="ml-2" size="25px" color="red">mail</v-icon>
         </v-badge>
         
-        <router-link v-if="!payload" class="menuHover pl-3 pt-2" to="Signup">ثبت نام<span class="loginLine">/</span>ورود</router-link>
-        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="body-2">.com</span><v-icon color="amber darken-2">mdi-tennis</v-icon></router-link>
+        <router-link v-if="!payload" class="menuHover pl-3 pt-2" to="Signup">{{signState}}</router-link>
+        <router-link v-if="!payload" class="menuHover pl-3 pt-2" to="login">{{loginState}}</router-link>
+        <router-link to="/" class="sadrCryptoText hidden-sm-and-down">SadrCrypto<span class="body-2">.com</span><v-icon color="amber darken-2">mdi-tennis</v-icon></router-link>
         
       </v-card-text>
     
@@ -188,7 +197,7 @@
         { title: 'هزینه ها', path:'/Fees',icon:'help' },
         { title: 'درباره ما', path:'/AboutUs',icon:'lock' },
       ],
-      signState:'ثبت نام رایگان',
+      signState:'ثبت نام',
       loginState:'ورود'
     }),
     props: {
@@ -235,7 +244,7 @@
           { title: 'بازرگان', path:'/Merchant',icon:'public' },
           { title: 'قابل اعتماد', path:'/Trusted',icon:'history' },
           { title: 'پشتیبانی', path:'SupportDrop',icon:'help' },
-          { title:'خروج', icon:'lock' },
+          { title:'خروج از حساب کاربری', icon:'lock' },
         ]
        } ,
     }
@@ -269,10 +278,6 @@
   color:#FFA000;
   text-decoration:none;
   font-family:b nazanin;
-}
-.loginLine{
-  color:#00E5FF;
-  font-weight:bold;
 }
 .list-item {
   display: inline-block;
@@ -322,12 +327,15 @@
 }
 .menuHover{
   text-decoration:none;
-  color:#E0E0E0;
+  color:#80CBC4;
   font-family:iranian sans;
   font-size:13px;
 }
 .menuHover:hover{
-  color:white;
+  color:#B2DFDB;
+}
+.iconFont{
+  font-family:iranian sans;
 }
 </style>
 
