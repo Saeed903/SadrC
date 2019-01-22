@@ -10,10 +10,9 @@
       :loading="loadingAdvertise"
      >
       <template v-if="!loading" slot="publishAdvertises" slot-scope="props">
-        <td>{{ props.item.id }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
-        <td >{{ props.item.paymentMethod }}</td>
-        <td >{{ props.item.price }}</td>
-        <td >{{ props.item.limits }}</td>
+        <td>{{ props.item.id}}</td>
+        <td >{{ props.item.user.userName}}({{props.item.user.mobile}},{{props.item.user.email}},{{props.item.user.introduction}})</td>
+        <td >{{ props.item.margin}}</td>
         <td ><v-btn class="primary elevation-5" @click="buy()" to="Order">خرید</v-btn></td>
       </template>
     </v-data-table>
@@ -169,12 +168,12 @@ export default{
     getDesserts () {
     return [
         {
-            trader:'  فرزاد افسری',
-            tradeCount:'98',
-            satisfiedPercent:'100%',
-            paymentMethod:'تایید کردن',
-            price:'58',
-            limits:'100',
+            id:'8',
+            userName:'فرزاد افسری',
+            mobile:'09360591461',
+            email:'farzad6238afsari@gmail.com',
+            introduction:'100%',
+            margin:'1000',
         },
          {
             trader:'علی',

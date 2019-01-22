@@ -136,16 +136,17 @@
       </v-card-text>
     
       <v-card-text class=" text-sm-left headline">
+        <v-btn to="FarzadTest">تست</v-btn>
         <v-btn v-if="payload" @click="logout" to="">خروج</v-btn>
         <router-link to="wallet">
           <v-tooltip bottom>
-            <v-icon color="teal lighten-3" class="ml-3" v-if="payload" slot="activator" size="25">monetization_on</v-icon>
+            <v-icon color="grey lighten-3" class="ml-3" v-if="payload" slot="activator" size="25">monetization_on</v-icon>
             <span class="iconFont">کیف پول دیجیتالی</span>
           </v-tooltip>
         </router-link>
         <router-link to="dashboard">
           <v-tooltip bottom>
-            <v-icon color="teal lighten-3" class="ml-3" v-if="payload" slot="activator">fas fa-tachometer-alt</v-icon>
+            <v-icon color="grey lighten-3" class="ml-3" v-if="payload" slot="activator">fas fa-tachometer-alt</v-icon>
             <span class="iconFont">داشبورد مدیریتی</span>
           </v-tooltip>
         </router-link>
@@ -327,12 +328,12 @@
 }
 .menuHover{
   text-decoration:none;
-  color:#80CBC4;
+  color:#EEEEEE;
   font-family:iranian sans;
   font-size:13px;
 }
 .menuHover:hover{
-  color:#B2DFDB;
+  color:#F5F5F5;
 }
 .iconFont{
   font-family:iranian sans;

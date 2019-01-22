@@ -67,6 +67,7 @@ import EditProfilePersonalData from './views/EditProfilePersonalData.vue'
 import Blog from './views/Blog.vue'
 import EditProfileDeleteAccount from './views/EditProfileDeleteAccount.vue'
 import CoinList from './views/CoinList.vue'
+import FarzadTest from './components/FarzadTest.vue'
 Vue.use(Router);
 
 const authFunction = function(to, from, next){
@@ -93,6 +94,11 @@ export default new Router({
       name: 'CoinList',
       component: CoinList,
     },
+    {
+      path: '/FarzadTest',
+      name: 'FarzadTest',
+      component: FarzadTest,
+    }, 
     {
       path: '/ErrorAuth',
       name: 'ErrorAuth',
