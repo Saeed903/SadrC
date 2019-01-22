@@ -1,8 +1,7 @@
 <template>
  <div>
-
     <v-card-text class="text-xs-center">
-        <span class="fontIran">ثبت آگهی {{currency}}</span>
+        <span class="fontIran textCard">ثبت آگهی {{currency}}</span>
     </v-card-text>
 
     <v-card class="text-xs-center pt-1 elevation-20" style="height:30px">
@@ -10,8 +9,8 @@
     </v-card>
 
     <v-card-text>
-        <p class="fontIran text-xs-center">قوانین و مقررات تبلیغاتی:</p>
-        <ul class="fontsIran pr-3">
+        <p class="fontIran text-xs-center ">قوانین و مقررات تبلیغاتی:</p>
+        <ul class="fontsIran1 pr-3">
             <li class="mb-3">برای نمایش تبلیغات شما باید بیت کوین را در کیف پول صدر کریپتو خود داشته باشید. شما برای تبلیغات با روش های پرداخت آنلاین و 0.04 بیت کوین یا بیشتر برای تبلیغات محلی (نقد) نیاز به 0.04 بیت کوین یا بیشتر دارید.</li>
             <li class="mb-3">برخی از روش های پرداخت مستلزم آن هستند که قبل از اینکه آگهی های شما قابل مشاهده باشند، باید شناسه،شناسایی شوند.</li>
             <li class="mb-3">هر تبلیغ کننده هزینه های تراکنش تکمیل شده 1٪ از کل مبلغ تجاری است<span><router-link to="" class="textCard">تمام هزینه ها را در صفحه هزینه های ما مشاهده کنید.</router-link></span></li>
@@ -22,14 +21,14 @@
             <li class="mb-3">همه ارتباطات باید در صدر کریپتواتفاق بیافتد.</li>
             <li class="mb-3">روش های پرداخت مشخص شده است ریسک بالا داشتن یک خطر عمده تقلب .هنگام استفاده از روشهای پرداخت با ریسک بالا، مراقب باشید و همیشه آی دی را تأیید کنید.</li>
         </ul>
-        <v-divider class="mt-5 mb-3" color="grey"></v-divider>
+        <v-divider class="mt-5 mb-3" ></v-divider>
     </v-card-text>
 
     <v-card-text>
-        <p class="fontIran">نوع تجارتی که میخواهید انجام دهید:</p>
-        <span class="fontsIran"> اگر بخواهید بیت کوین ها را بفروشید مطمئن شوید که شما بیت کوین ها را در کیف پول صدر  کریپتو خود موجود دارید</span>
+        <p class="fontIran textCard">نوع تجارتی که میخواهید انجام دهید:</p>
+        <span class="fontsIran1"> اگر بخواهید بیت کوین ها را بفروشید مطمئن شوید که شما بیت کوین ها را در کیف پول صدر  کریپتو خود موجود دارید</span>
     </v-card-text>
-
+    
     <v-form v-model="valid"
         v-if="!loading"
         @submit.prevent="createAdvertise"
@@ -45,6 +44,7 @@
             color="cyan accent-2"
             ></v-radio>
         </v-radio-group>
+       
         <v-layout row wrap>
             <v-flex sm6 md6 lg6>
                 <v-autocomplete
@@ -61,12 +61,16 @@
                 clearable
                 >
                 </v-autocomplete>
-            </v-flex>
+               
 
-            <v-flex sm6 md6 lg6>
-                <p class="fontIran caption pt-1">برای تجارت آنلاین شما نیاز به مشخص کردن کشور, تجارت محلی، لطفا شهر، کد پستی و یا نام خیابان را مشخص کنید</p>
             </v-flex>
-        
+            <v-flex sm6 md6 lg6>
+                <p class="fontIrans pt-3">برای تجارت آنلاین شما نیاز به مشخص کردن کشور, تجارت محلی، لطفا شهر، کد پستی و یا نام خیابان را مشخص کنید</p>
+            </v-flex>
+            <v-card-text>
+             <v-divider  ></v-divider>
+            </v-card-text>
+
             <v-flex sm6 md6 lg6>
                 <v-autocomplete
                 v-validate="'required'"
@@ -82,11 +86,15 @@
                 clearable
                 >
                 </v-autocomplete>
+                
             </v-flex>
 
             <v-flex sm6 md6 lg6>
-                <p class="fontIran caption pt-1">شما میتوانید هر ارزی را که میخواهید با آن تجارت کنید را انتخاب کنید.</p>
+                <p class="fontIrans pt-4">شما می توانید هر ارزی را که می خواهید با آن تجارت کنید را انتخاب کنید.</p>
             </v-flex>
+            <v-card-text>
+                <v-divider ></v-divider>
+            </v-card-text>
     
             <v-flex sm6 md6 lg6>
                 <v-text-field
@@ -96,12 +104,13 @@
                 v-model="advertise.margin"
                 clearable
                 >
-                
                 </v-text-field>
+                <v-divider class="mt-4"></v-divider>
             </v-flex>
 
             <v-flex sm6 md6 lg6>
-                <p class="fontIran caption pt-1">محدوده ای که می خواهید بیش از قیمت بازار بیت کوین باشد. ارزش منفی برای خرید یا فروش زیر قیمت بازار را برای جذب مخاطبین بیشتر مورد استفاده قرار دهید. برای قیمت های پیچیده تر ویرایش معادله قیمت به طور مستقیم.</p>
+                <p class="fontIrans pt-3">محدوده ای که می خواهید بیش از قیمت بازار بیت کوین باشد. ارزش منفی برای خرید یا فروش زیر قیمت بازار را برای جذب مخاطبین بیشتر مورد استفاده قرار دهید. برای قیمت های پیچیده تر ویرایش معادله قیمت به طور مستقیم.</p>
+                <v-divider class="mt-3"></v-divider>
             </v-flex>
         
             <v-flex sm6 md6 lg6>
@@ -116,12 +125,12 @@
             </v-flex>
 
             <v-flex sm6 md6 lg6>
-                <p class="fontIran caption pt-1">محدوده ای که می خواهید بیش از قیمت بازار بیت کوین باشد. ارزش منفی برای خرید یا فروش زیر قیمت بازار را برای جذب مخاطبین بیشتر مورد استفاده قرار دهید. برای قیمت های پیچیده تر ویرایش معادله قیمت به طور مستقیم<span class="fontIran green--text">6,266.70 USD/BTC</span></p>    
+                <p class="fontIrans  pt-3">محدوده ای که می خواهید بیش از قیمت بازار بیت کوین باشد. ارزش منفی برای خرید یا فروش زیر قیمت بازار را برای جذب مخاطبین بیشتر مورد استفاده قرار دهید. برای قیمت های پیچیده تر ویرایش معادله قیمت به طور مستقیم<span class="fontIran green--text">6,266.70 USD/BTC</span></p>    
             </v-flex>
         </v-layout>
 
         <v-card-text>
-            <v-divider class="mt-5" color="grey"></v-divider>
+            <v-divider class="mt-5" ></v-divider>
             <ul class="fontsIran mt-5 mb-4 pr-4">
                 <li class="pb-3">چگونه قیمت معاملات از قیمت بازار ساعتی تعیین می شود؟</li>
                 <li class="pb-3">برای اطلاعات بیشتر در رابطه با معادلات نحوه تعریف قیمت معاملاتی خود به سوالات <router-link to="" class="textCard">قیمت گذاری</router-link> مراجعه کنید.</li>
@@ -142,7 +151,7 @@
             </v-flex>
 
             <v-flex sm6 md6 lg6>
-                <p class="fontsIran caption pt-1">کمترین مقدار معامله در یک تجارت اختیاری است</p>    
+                <p class="fontIrans pt-1">کمترین مقدار معامله در یک تجارت اختیاری است</p>    
             </v-flex>
         
             <v-flex sm6 md6 lg6>
@@ -157,7 +166,7 @@
             </v-flex>
 
             <v-flex sm6 md6 lg6>
-                <p class="fontsIran caption pt-1">اختیاری. حداکثر حد معامله در یک تجارت. برای فروش آنلاین، تعادل کیفی صدر کریپتو شما می تواند حداکثر تجارت قابل اعتماد را نیز محدود کند.</p>    
+                <p class="fontIrans pt-1">اختیاری. حداکثر حد معامله در یک تجارت. برای فروش آنلاین، تعادل کیفی صدر کریپتو شما می تواند حداکثر تجارت قابل اعتماد را نیز محدود کند.</p>    
             </v-flex>
         
             <v-flex sm6 md6 lg6>
@@ -172,13 +181,14 @@
             </v-flex>
 
             <v-flex sm6 md6 lg6>
-                <p class="fontsIran caption pt-1">.اختیاری. مقدار معامله را محدود به عدد صحیح جدا از عدد کاما، به عنوان مثال 20،50،100. در ارز فیات (دلار / یورو / و غیره). دستی برای کوین، کارت هدیه و غیره</p>       
+                <p class="fontIrans pt-1">.اختیاری. مقدار معامله را محدود به عدد صحیح جدا از عدد کاما، به عنوان مثال 20،50،100. در ارز فیات (دلار / یورو / و غیره). دستی برای کوین، کارت هدیه و غیره</p>       
             </v-flex>
         </v-layout>
-        <v-divider class="mt-5 mb-3" color="grey"></v-divider>
+        
 
         <v-card-text class="fontsIran"> 
-            <p>روزها و ساعت هایی که میخواهید آگهی و تبلیغات شما نشان داده شود:</p>
+            <v-divider class="mt-5 mb-3" ></v-divider>
+            <p class="textCard mt-5">روزها و ساعت هایی که می خواهید آگهی و تبلیغات شما نشان داده شود:</p>
         </v-card-text>
     
         <v-container grid-list-md>
@@ -203,14 +213,14 @@
             </v-flex>
 
             <v-flex sm6 md6 lg6>
-                <p class="fontIran caption pt-2">سایر اطلاعاتی که میخواهید درباره تجارت خود بگویید<br>.مثال1:این تبلیغات صرفا برای معاملات نقدی است اگر میخواهید با پرداخ ت آنلاین باما تماس بپیرید.
-                        مثال2:لطفا درخواست را فقط زمانی که میتوانید پرداخت را با پول نقد ظرف مدت 12 ساعت تکمیل کمید.<br></p>    
+                <p class="fontIrans pt-2">سایر اطلاعاتی که میخواهید درباره تجارت خود بگویید.مثال1:این تبلیغات صرفا برای معاملات نقدی است اگر میخواهید با پرداخ ت آنلاین باما تماس بپیرید.
+                        مثال2:لطفا درخواست را فقط زمانی که میتوانید پرداخت را با پول نقد ظرف مدت 12 ساعت تکمیل کنید.</p>    
             </v-flex>
         </v-layout>
-        <v-divider class="mt-5 mb-3" color="grey"></v-divider>
-
+        
         <v-card-text class="fontIran">
-            <p>گزینه های نقدینگی</p>
+            <v-divider class="mt-5 mb-3" ></v-divider>
+            <p class="textCard">گزینه های نقدینگی</p>
         </v-card-text>
 
         <v-layout row wrap>
@@ -224,14 +234,13 @@
                 </v-checkbox>
             </v-flex>
             <v-flex sm6 md6 lg6>
-                <span class="fontIran caption">.این گزینه نقدینگی این تبلیغ را به حداکثر محدود می کند. محدودیت معامله خریداران می توانند معاملات را بیش از این مقدار باز نکنند</span>    
+                <span class="fontIrans ">.این گزینه نقدینگی این تبلیغ را به حداکثر محدود می کند. محدودیت معامله خریداران می توانند معاملات را بیش از این مقدار باز نکنند</span>    
             </v-flex>
         </v-layout>
-        <v-divider class="mt-5 mb-3" color="grey"></v-divider>
-
+        
         <v-card-text class="fontIran">
-            <p>گزینه های امنیتی</p>
-            
+            <v-divider class="mt-5 mb-3"></v-divider>
+            <p class="textCard">گزینه های امنیتی</p>
         </v-card-text>
 
         <v-layout row wrap>
@@ -245,7 +254,7 @@
                 </v-checkbox>
             </v-flex>
             <v-flex sm6 md6 lg6>
-                <span class="fontIran caption">.برای تماس با تبلیغات خود، کاربران باید هویت خود را با ارسال شناسه،گواهینامه رانندگی یا گذرنامه تأیید کنند</span>    
+                <span class="fontIrans">.برای تماس با تبلیغات خود، کاربران باید هویت خود را با ارسال شناسه،گواهینامه رانندگی یا گذرنامه تأیید کنند</span>    
             </v-flex>
         </v-layout>
     
@@ -260,7 +269,7 @@
                 </v-checkbox>
             </v-flex>
             <v-flex sm6 md6 lg6>
-                <span class="fontIran caption">.فقط تماس با یک شماره تلفن همراه تأیید شده می تواند از طریق تبلیغ شما با شما تماس بگیرد</span>    
+                <span class="fontIrans">.فقط تماس با یک شماره تلفن همراه تأیید شده می تواند از طریق تبلیغ شما با شما تماس بگیرد</span>    
             </v-flex>
         </v-layout>
 
@@ -275,7 +284,7 @@
                 </v-checkbox>
             </v-flex>
             <v-flex sm6 md6 lg6>
-                <span class="fontIran caption">.تبلیغات خود را محدود کنید تا تنها به کاربران نشان داده شود که شما به عنوان اعتماد علامتگذاری کرده اید<router-link class="textCard" to="">چگونگی علامت گذاری به کاربران مورد اعتماد</router-link>.</span>    
+                <span class="fontIrans">.تبلیغات خود را محدود کنید تا تنها به کاربران نشان داده شود که شما به عنوان اعتماد علامتگذاری کرده اید<router-link class="textCard" to="">چگونگی علامت گذاری به کاربران مورد اعتماد</router-link>.</span>    
             </v-flex>
         </v-layout>
         <v-btn type="submit" class="fontsIran primary" :disabled="!valid" >ثبت اطلاعات</v-btn>
@@ -283,7 +292,7 @@
 
     <Footer></Footer>
                 
-  </div>
+ </div>
 </template>
 <script>
 
@@ -447,3 +456,13 @@ export default{
     }
 }
 </script>
+<style scoped>
+.fontsIran1{
+    font-family:'Iranian Sans';
+    color:#BDBDBD;
+}
+.textCard{
+    color:#18FFFF;
+}
+</style>
+

@@ -114,7 +114,7 @@
       async login () {
         this.errorLogin=false;
 
-        if(this.valid && this.captchaValid){
+        if(this.valid){// && this.captchaValid){
           const { User } = this.$FeathersVuex;
           const user = new User({
               ...this.user
