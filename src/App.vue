@@ -87,7 +87,10 @@
       <v-spacer></v-spacer>
       <v-card-text>
       <v-toolbar-items>
-       
+         <v-badge overlap v-if="payload">
+          <span slot="badge">17</span>
+          <v-icon size="30" class="ml-2" color="yellow accent-4">mail</v-icon>
+        </v-badge>
         <router-link class="menuHover pr-3 pt-2 hidden-sm-and-down" to="postTrade">ثبت آگهی</router-link>
         <router-link class="menuHover pr-3 pt-2 hidden-sm-and-down" to="Forums">انجمن ها</router-link>
         
@@ -127,6 +130,7 @@
                 >
                   <v-icon color="cyan accent-2" class="mr-0 ml-2">{{profile.icon}}</v-icon>
                   <v-list-tile-title class="fontIrans1">{{ profile.title }}</v-list-tile-title>
+                  <v-list-tile-title @click="logout" class="fontIrans1">{{profile.logout}}</v-list-tile-title>
                 </v-list-tile>
               </v-list>
             </v-menu>
@@ -138,22 +142,17 @@
       <v-card-text class=" text-sm-left headline">
         <v-btn v-if="payload" @click="logout" to="">خروج</v-btn>
         <router-link to="wallet">
-          <v-tooltip bottom>
-            <v-icon color="teal lighten-3" class="ml-3" v-if="payload" slot="activator" size="25">monetization_on</v-icon>
+          <v-tooltip content-class="bottom" bottom>
+            <v-icon color="grey lighten-1" class="ml-3" v-if="payload" slot="activator" size="25">monetization_on</v-icon>
             <span class="iconFont">کیف پول دیجیتالی</span>
           </v-tooltip>
         </router-link>
         <router-link to="dashboard">
           <v-tooltip bottom>
-            <v-icon color="teal lighten-3" class="ml-3" v-if="payload" slot="activator">fas fa-tachometer-alt</v-icon>
+            <v-icon color="grey lighten-1" class="ml-3" v-if="payload" slot="activator">fas fa-tachometer-alt</v-icon>
             <span class="iconFont">داشبورد مدیریتی</span>
           </v-tooltip>
         </router-link>
-
-         <v-badge overlap v-if="payload">
-          <span slot="badge">3</span>
-            <v-icon class="ml-2" size="25px" color="red">mail</v-icon>
-        </v-badge>
         
         <router-link v-if="!payload" class="menuHover pl-3 pt-2" to="Signup">{{signState}}</router-link>
         <router-link v-if="!payload" class="menuHover pl-3 pt-2" to="login">{{loginState}}</router-link>
@@ -244,9 +243,9 @@
           { title: 'بازرگان', path:'/Merchant',icon:'public' },
           { title: 'قابل اعتماد', path:'/Trusted',icon:'history' },
           { title: 'پشتیبانی', path:'SupportDrop',icon:'help' },
-          { title:'خروج از حساب کاربری', icon:'lock' },
+          {logout:'خروج از حساب کاربری',icon:'lock'}
         ]
-       } ,
+       },
     }
 }
 </script>
@@ -327,12 +326,12 @@
 }
 .menuHover{
   text-decoration:none;
-  color:#80CBC4;
+  color:#BDBDBD;
   font-family:iranian sans;
   font-size:13px;
 }
 .menuHover:hover{
-  color:#B2DFDB;
+  color:#EEEEEE;
 }
 .iconFont{
   font-family:iranian sans;

@@ -9,11 +9,11 @@
       :total-items="totalDesserts"
       :loading="loadingAdvertise"
      >
-      <template v-if="!loading" slot="publishAdvertises" slot-scope="props">
-        <td>{{ props.item.id }}({{props.item.tradeCount}},{{props.item.satisfiedPercent}})</td>
-        <td >{{ props.item.paymentMethod }}</td>
-        <td >{{ props.item.price }}</td>
-        <td >{{ props.item.limits }}</td>
+      <template v-if="!loading" slot="publishAdvertises" slot-scope="publishAdvertises">
+        <td>{{ props.item.id }}({{props.item.userName}},{{props.item.mobile}})</td>
+        <td >{{ props.item.introduction }}</td>
+        <td >{{ props.item.margin }}</td>
+        <td >{{ props.item.driversLicense }}</td>
         <td ><v-btn class="primary elevation-5" @click="buy()" to="Order">خرید</v-btn></td>
       </template>
     </v-data-table>
@@ -169,12 +169,12 @@ export default{
     getDesserts () {
     return [
         {
-            trader:'  فرزاد افسری',
-            tradeCount:'98',
-            satisfiedPercent:'100%',
-            paymentMethod:'تایید کردن',
-            price:'58',
-            limits:'100',
+            id:'  فرزاد افسری',
+            userName:'98',
+            mobile:'100%',
+            introduction:'تایید کردن',
+            margin:'58',
+            driversLicense:'100',
         },
          {
             trader:'علی',
