@@ -9,11 +9,10 @@
       :total-items="totalDesserts"
       :loading="loadingAdvertise"
      >
-      <template v-if="!loading" slot="publishAdvertises" slot-scope="publishAdvertises">
+      <template v-if="!loading" slot="publishAdvertises" slot-scope="props">
         <td>{{ props.item.id }}({{props.item.userName}},{{props.item.mobile}})</td>
         <td >{{ props.item.introduction }}</td>
         <td >{{ props.item.margin }}</td>
-        <td >{{ props.item.driversLicense }}</td>
         <td ><v-btn class="primary elevation-5" @click="buy()" to="Order">خرید</v-btn></td>
       </template>
     </v-data-table>
