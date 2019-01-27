@@ -19,7 +19,6 @@
                 <p>farzad</p>
                 <p>farzad</p>
                 <p>farzad</p>
-                
               </v-card-text>
             </v-flex>
             <v-flex class="pr-3">
@@ -30,7 +29,6 @@
               
             </v-flex>
         </v-layout>
-        <slot name="farzad" v-for="item in items" :item="item"></slot>
         <v-spacer></v-spacer>
         <v-card-actions class="justify-center">
           <strong class="b Nazanin subheading">copy right all right reserved by sadrCrypto</strong> — 2018&copy;
@@ -50,7 +48,6 @@
         'fab fa-instagram'
       ]
     }),
-    props:['items']
   
   }
 </script>

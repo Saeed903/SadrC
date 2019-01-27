@@ -1,7 +1,7 @@
 <template>
   <v-layout row wrap align-justify justify-center>
-    <v-flex d-flex xs12 sm7 md6 lg6>
-      <v-card style="max-width:450px" class="round">
+    <v-flex d-flex xs12 sm7 md lg4>
+      <v-card class="round elevation-24 mt-5">
         <v-card-text>
           <v-form ref="form" v-model="valid"  
             v-if="!loading"
@@ -11,15 +11,13 @@
           >
             
             <p class="fontIran text-xs-center textCard">یک حساب جدید ثبت کنید</p>
-            <p class="fontsIran text-xs-center textCard1">ثبت نام برای یک حساب کاربری برای شروع خرید و یا فروش بیت کوین</p>
-            
             <v-text-field 
               v-model="user.username"
               :counter="30"
               :rules="notEmptyRules"
-              label="نام کاربر"
+              label="نام کاربری"
               color="cyan accent-2"
-              class="fontIrans1 textField pt-0"
+              class="fontIrans1 textField pt-1"
               data-vv-name="username"
               clearable
             ></v-text-field>
@@ -28,8 +26,9 @@
               v-validate="'required|email'"
               v-model="user.email"
               label="ایمیل"
+              :rules="emailRules"
               color="cyan accent-2"
-              class="fontIrans1 emailField pt-0"
+              class="fontIrans1 emailField pt-2"
               data-vv-name="email"
               required
               clearable
@@ -41,7 +40,7 @@
               :counter="20"
               :rules="notEmptyRules"
               color="cyan accent-2"
-              class="fontIrans1 textField pt-0"
+              class="fontIrans1 textField pt-2"
               :type="'password'"
               label="رمزعبور"
               data-vv-name="password"
@@ -50,33 +49,37 @@
             ></v-text-field>
 
             <v-text-field
-              v-model="showPassword"
+              v-model="user.passwordAgain"
               :counter="20"
-              color="cyan accent-2"
-              class="fontIrans1 textField pt-0"
               :rules="confirmPasswordRules"
+              color="cyan accent-2"
+              class="fontIrans1 textField pt-2 pb-1"
               :type="'password'"
               label="تکرار رمز عبور "
               data-vv-name="passwordAgain"
               required
               clearable
             ></v-text-field>
-
+            <v-checkbox
+            color="cyan accent-2"
+            class="body-2 text-xs-right"
+            label="من شرایط استفاده و همچنین حریم خصوصی را خوانده و موافقم"
+            v-model="checkbox"
+            ></v-checkbox>
             <vue-recaptcha 
-                class="pt-2"
+                class="pt-1 pb-2"
                 theme = "dark"
                 @verify = "onVerify"
                 @expired = "onExpired"
                 :sitekey = "sitekey">
             </vue-recaptcha>
 
-            <v-btn type="submit" class="fontIrans1 primary" :disabled="!valid" >ارسال</v-btn>
-            <v-btn @click="clear" class="fontIrans1 primary">پاک کردن</v-btn>
+            <v-btn type="submit" color="primary" class="fontIrans1 round elevation-24" :disabled="!valid">ارسال</v-btn>
+            <v-btn @click="clear" color="primary" class="fontIrans1 round elevation-24">پاک کردن</v-btn>
 
           </v-form>
           <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
           <p class="fontIrans1 ">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="textCard">ورود</router-link></p>
-          <p class="fontIrans1 ">رمز عبور را فراموش کرده اید؟<router-link to="/ResetPassword" class="textCard">.رمز عبور خودتان را باز نشانی کنید</router-link></p>
         </v-card-text>
       </v-card>
     </v-flex>
@@ -90,7 +93,7 @@
 
 
   export default {
-    
+    checkbox:true,
     computed:{
       ...mapState('users', { loading: 'isCreatePending'})
     },
@@ -100,10 +103,15 @@
     },
     data: (vm) => ({
       valid: false,
+      emailRules:[
+         v => !!v || 'می بایستی فیلد را پر کنید',
+        v => /.+@.+/.test(v) || "می بایستی ایمیل معتبر باشد"
+      ],
       notEmptyRules:[
         v => !!v || 'می بایستی فیلد را پر کنید',
       ],
       confirmPasswordRules:[
+        v => !!v || 'می بایستی فیلد را پر کنید',
         v => v == vm.user.password || 'می بایستی با پسورد یکی باشد' ,
       ],
       validate:false,
@@ -115,7 +123,6 @@
       },
       showPassword:'',
       showConfirmPassword:false,
-      passwordAgain:'',
       passwordAgain:'',
       confirmPassword:'',
       
@@ -160,6 +167,9 @@
 .textCard1{
     color:#BDBDBD;
 }
-
+.checkboxText{
+  font-family:iranian sans;
+  font-size:50px;
+}
 
 </style>

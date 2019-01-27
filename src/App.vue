@@ -140,7 +140,6 @@
       </v-card-text>
     
       <v-card-text class=" text-sm-left headline">
-        <v-btn to="FarzadTest">تست</v-btn>
         <v-btn v-if="payload" @click="logout" to="">خروج</v-btn>
         <router-link to="wallet">
           <v-tooltip content-class="bottom" bottom>
@@ -189,7 +188,7 @@
       drawer: true,
         alterIcon:{icon:'arrow_drop_down'},
        helps: [
-        { title: 'چگونه بیت کوین بخریم؟', path:'/HowToBuyBticoins',icon:'account_circle'},
+        { title: 'چگونه ارز بخریم؟', path:'/HowToBuyBticoins',icon:'account_circle'},
         { title: 'سوالات متداول', path:'/FrequentlyAskedQuestions',icon:'home'},
         { title: 'راهنمایی ها', path:'/Guides',icon:'fas fa-tachometer-alt'},
         { title: 'تماس با پشتیبان', path:'/SupportCreateNewTicket',icon:'public' },
