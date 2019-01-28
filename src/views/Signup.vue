@@ -49,23 +49,17 @@
             ></v-text-field>
 
             <v-text-field
-              v-model="user.passwordAgain"
+              v-model="showConfirmPassword"
               :counter="20"
               :rules="confirmPasswordRules"
               color="cyan accent-2"
               class="fontIrans1 textField pt-2 pb-1"
               :type="'password'"
               label="تکرار رمز عبور "
-              data-vv-name="passwordAgain"
+              data-vv-name="confirmPassword"
               required
               clearable
             ></v-text-field>
-            <v-checkbox
-            color="cyan accent-2"
-            class="body-2 text-xs-right"
-            label="من شرایط استفاده و همچنین حریم خصوصی را خوانده و موافقم"
-            v-model="checkbox"
-            ></v-checkbox>
             <vue-recaptcha 
                 class="pt-1 pb-2"
                 theme = "dark"
@@ -74,9 +68,23 @@
                 :sitekey = "sitekey">
             </vue-recaptcha>
 
-            <v-btn type="submit" color="primary" class="fontIrans1 round elevation-24" :disabled="!valid">ارسال</v-btn>
+            
+            <v-layout row justify-center>
+              <v-dialog v-model="dialog" max-width="290">
+                <v-btn slot="activator" color="primary" dark>ارسال</v-btn>
+                <v-card>
+                  <v-card-title class="headline">Use Google's location service?</v-card-title>
+                  <v-card-text>Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</v-card-text>
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn type="submit" color="green darken-1" flat="flat" @click="dialog = true">مخالفم</v-btn>
+                    <v-btn color="green darken-1" flat="flat" :disabled="!valid" @click="dialog = false">موافقم</v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-dialog>
+            </v-layout>
+            <v-btn  color="primary" class="fontIrans1 round elevation-24"  dark>ارسال</v-btn>
             <v-btn @click="clear" color="primary" class="fontIrans1 round elevation-24">پاک کردن</v-btn>
-
           </v-form>
           <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
           <p class="fontIrans1 ">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="textCard">ورود</router-link></p>
@@ -90,10 +98,8 @@
   import Footer from './../components/Footer.vue'
   import { mapState, mapActions } from 'vuex';
   import VueRecaptcha from 'vue-recaptcha';
-
-
   export default {
-    checkbox:true,
+    
     computed:{
       ...mapState('users', { loading: 'isCreatePending'})
     },
@@ -103,6 +109,7 @@
     },
     data: (vm) => ({
       valid: false,
+      dialog: false,
       emailRules:[
          v => !!v || 'می بایستی فیلد را پر کنید',
         v => /.+@.+/.test(v) || "می بایستی ایمیل معتبر باشد"
@@ -119,12 +126,12 @@
       user:{
         username: '',
         email: '',
-        password: ''
+        password: '',
       },
+      confirmPassword:'',
       showPassword:'',
       showConfirmPassword:false,
-      passwordAgain:'',
-      confirmPassword:'',
+      
       
     }),
     methods: {
@@ -137,7 +144,6 @@
       resetRecaptcha () {
       this.$refs.recaptcha.reset() // Direct call reset method
       },
-
       signUp () {
       if (this.valid){
         const { User } = this.$FeathersVuex;
