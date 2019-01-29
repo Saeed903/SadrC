@@ -1,43 +1,44 @@
 <template>
-<v-container fluid grid-list-xl pt-0>
-    <v-layout  justify-space-around v-if="!loading">
-        <v-flex d-flex xs12 sm7 md6 lg7 xl7>
-          <v-card style="max-width:330px ;" class="round">
+    <v-layout row wrap align-justify justify-center>
+        <v-flex d-flex xs12 sm8 md6 lg5 xl4>
+          <v-card class="round elevation-24 mt-5">
             <v-card-text>
               <v-form 
-                style="max-width:330px ;" 
+                v-if="!loading"
                 @submit.prevent="login" 
                 @keydown.prevent.enter 
                 v-model="valid"
               >
                 
-                <p class="fontIran text-xs-center">ورود</p>
-                <p class="fontsIran">با وارد شدن به حساب خود، می توانید معاملات خود را به راحتی انجام دهید و کیف پول خود را مشاهده کنید.</p>
+                <p class="fontIran text-xs-center textCard">ورود به حساب کاربری</p>
                 <v-text-field
                   :roles = "notEmptyRoles"
                   v-model="user.email"
-                  :counter="30"
                   label="ایمیل"
+                  :rules="emailRules"
                   data-vv-name="email"
+                  prepend-inner-icon="mail"
                   color="cyan accent-2"
-                  class="fontsIran emailField"
+                  class="fontsIran emailField pt-4"
                   required
-                  
+                  clearable
                 >
                 </v-text-field>
 
                 <v-text-field
-                  :roles = "notEmptyRoles"
+                  :roles="notEmptyRoles"
                   v-model="user.password"
                   counter="20"
                   :error-messages="errors.collect('password')"
                   :type="'password'"
+                  :rules="notEmptyRules"
+                  prepend-inner-icon="lock"
                   label="رمز عبور"
                   color="cyan accent-2"
-                  class="fontsIran textField"
+                  class="fontsIran textField pt-2 pb-2"
                   data-vv-name="password"
                   required
-                  
+                  clearable
                 >
                 </v-text-field>
 
@@ -49,7 +50,7 @@
                     :sitekey = "sitekey">
                 </vue-recaptcha>
                 <v-card-text :class="{red:errorLogin}" v-if="errorLogin" >  {{errorMessage}} </v-card-text>
-                <v-btn type="submit" class="fontsIran" color="primary">ورود</v-btn>  
+                <v-btn type="submit" color="primary" class="fontIrans1 round elevation-24">ورود</v-btn>
             </v-form>
 
             <v-flex>
@@ -63,7 +64,6 @@
           </v-card>
         </v-flex>
     </v-layout>
-</v-container>
 </template>
 <script>
  import Vue from 'vue'
@@ -87,7 +87,14 @@
       user: {
         email: '',
         password: '',
-      }
+      },
+      emailRules:[
+         v => !!v || 'می بایستی فیلد را پر کنید',
+        v => /.+@.+/.test(v) || "می بایستی ایمیل معتبر باشد"
+      ],
+      notEmptyRules:[
+        v => !!v || 'می بایستی فیلد را پر کنید',
+      ],
     }),
     mounted () {
       
@@ -123,8 +130,12 @@
             strategy:'local',
             ...this.user
           }).then(async ()=>{
-            console.log('logged in');
-            await this.$router.go(-1);
+            // if(this.$router.go(-1)==='Signup'){
+            //   await this.$router.push('SadrCrypto');
+            // }else{
+              await this.$router.go(-1);
+            
+            
           }).catch(async e => {
             console.error('Authentication Error', e.message);
             this.errorMessage = e.message;

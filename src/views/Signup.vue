@@ -1,6 +1,6 @@
 <template>
   <v-layout row wrap align-justify justify-center>
-    <v-flex d-flex xs12 sm7 md lg4>
+    <v-flex d-flex sm8 md6 lg5 xl4>
       <v-card class="round elevation-24 mt-5">
         <v-card-text>
           <v-form ref="form" v-model="valid"  
@@ -15,9 +15,10 @@
               v-model="user.username"
               :counter="30"
               :rules="notEmptyRules"
+              prepend-inner-icon="person"
               label="نام کاربری"
               color="cyan accent-2"
-              class="fontIrans1 textField pt-1"
+              class="fontIrans1 textField pt-4"
               data-vv-name="username"
               clearable
             ></v-text-field>
@@ -27,6 +28,7 @@
               v-model="user.email"
               label="ایمیل"
               :rules="emailRules"
+              prepend-inner-icon="mail"
               color="cyan accent-2"
               class="fontIrans1 emailField pt-2"
               data-vv-name="email"
@@ -39,6 +41,7 @@
               v-model="user.password"
               :counter="20"
               :rules="notEmptyRules"
+              prepend-inner-icon="lock"
               color="cyan accent-2"
               class="fontIrans1 textField pt-2"
               :type="'password'"
@@ -49,11 +52,13 @@
             ></v-text-field>
 
             <v-text-field
-              v-model="showConfirmPassword"
+              v-model="showPassword"
               :counter="20"
+              prepend-inner-icon="lock"
+              size-icon=""
               :rules="confirmPasswordRules"
               color="cyan accent-2"
-              class="fontIrans1 textField pt-2 pb-1"
+              class="fontIrans1 textField pt-2 pb-2"
               :type="'password'"
               label="تکرار رمز عبور "
               data-vv-name="confirmPassword"
@@ -69,26 +74,26 @@
             </vue-recaptcha>
 
             
-            <v-layout row justify-center>
+            <v-layout>
               <v-dialog v-model="dialog" max-width="290">
-                <v-btn slot="activator" color="primary" dark>ارسال</v-btn>
+                <v-btn slot="activator" color="primary" class="fontIrans1 round elevation-24 ml-3">ارسال</v-btn>
                 <v-card>
                   <v-card-title class="headline">Use Google's location service?</v-card-title>
                   <v-card-text>Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</v-card-text>
                   <v-card-actions>
                     <v-spacer></v-spacer>
                     <v-btn type="submit" color="green darken-1" flat="flat" @click="dialog = true">مخالفم</v-btn>
-                    <v-btn color="green darken-1" flat="flat" :disabled="!valid" @click="dialog = false">موافقم</v-btn>
+                    <v-btn color="green darken-1" flat="flat" :disabled="!valid" @click="accept">موافقم</v-btn>
                   </v-card-actions>
                 </v-card>
               </v-dialog>
             </v-layout>
-            <v-btn  color="primary" class="fontIrans1 round elevation-24"  dark>ارسال</v-btn>
-            <v-btn @click="clear" color="primary" class="fontIrans1 round elevation-24">پاک کردن</v-btn>
           </v-form>
           <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
-          <p class="fontIrans1 ">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="textCard">ورود</router-link></p>
+          <p class="fontIrans1 pt-3">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="textCard">ورود</router-link></p>
         </v-card-text>
+        <v-card-text :class="{red:errorMessage}" v-if="errorMessage" >{{errorMessage}}</v-card-text>
+         <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
       </v-card>
     </v-flex>
   </v-layout>
@@ -96,7 +101,7 @@
 <script>
   import Vue from 'vue'
   import Footer from './../components/Footer.vue'
-  import { mapState, mapActions } from 'vuex';
+  import { mapState, mapActions} from 'vuex';
   import VueRecaptcha from 'vue-recaptcha';
   export default {
     
@@ -108,7 +113,9 @@
       VueRecaptcha
     },
     data: (vm) => ({
+      errorMessage:'',
       valid: false,
+      Verify:'',
       dialog: false,
       emailRules:[
          v => !!v || 'می بایستی فیلد را پر کنید',
@@ -136,7 +143,20 @@
     }),
     methods: {
       onVerify: function (response) {
+        this.Verify = response;
       console.log('Verify: ' + response)
+      },
+      accept(){
+
+        this.dialog = false;
+        if(this.Verify){
+          console.log("test");
+          
+          this.signUp();
+        }else{
+          this.errorMessage="می بایست قسمت تاییدیه ربات نبودن گوگلی را انجام دهید";
+        }
+        
       },
       onExpired: function () {
       console.log('Expired')
@@ -151,7 +171,13 @@
         
         user.save().then(user => {
               console.log(user);
+              //this.$router.go(-1);
               this.$router.push('/login');
+          }).catch( e => {
+            console.error('تکراری بودن', e.message);
+            this.errorMessage = 'قبلا نام کاربری یا این ایمیل ثبت نام کرده است';
+
+            console.log(this.errorMessage);
           });
       }
       },
