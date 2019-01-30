@@ -1,7 +1,7 @@
 <template>
     <v-layout row wrap align-justify justify-center>
         <v-flex d-flex xs12 sm8 md6 lg5 xl4>
-          <v-card class="round elevation-24 mt-5">
+          <v-card class="logCard round mt-5">
             <v-card-text>
               <v-form 
                 v-if="!loading"
@@ -157,6 +157,10 @@
 <style scoped>
 .round{
   border-radius: 10px;
+}
+.logCard{
+  border:1px solid #18FFFF;
+  box-shadow:0px 0px 25px 1px #18FFFF;
 }
 </style>
 

@@ -24,12 +24,13 @@ export default new Vuex.Store({
     
     currency:'',
     currencyMenu: [
-      { icon: 'mdi-currency-btc', text:'بیت کوین', path:'/Bitcoin'},
-      { icon: 'mdi mdi-currency-trx', text:'اتریوم', path:'/Bitcoin'},
-      { icon: 'mdi-currency-gbp', text:'ریپل', path:'/Bitcoin'},
-      { icon: 'mdi-currency-', text:'زد کش', path:'/Bitcoin'},
-      { icon: 'delete', text:'زد کش1', path:'/Bitcoin'},
-      { icon: 'touch_app', text:'یک سوال دارید؟', path:'/Bitcoin'},
+      {arrowIcon: 'keyboard_arrow_up','arrowIcon-alt': 'keyboard_arrow_left', text:'ارز دیجیتال', path:'/Bitcoin',
+        children:[
+          {icon:'mdi-currency-btc',text:'بیت کوین',path:'/bitcoin'},
+          {icon:'mdi-currency-btc',text:'اتریوم',path:'/bitcoin'},
+          {icon:'mdi-currency-btc',text:'ترون',path:'/bitcoin'},
+        ]
+      },
     ],
   },
   mutations:{

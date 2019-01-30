@@ -53,7 +53,7 @@
               @click="routingMenu(child.text)"
             >
               
-              <v-list-tile-content >
+              <v-list-tile-content>
                 <v-list-tile-sub-title>
                   <span class="navChildThem">{{ child.text }}</span>
                 </v-list-tile-sub-title>
@@ -82,15 +82,12 @@
     </v-navigation-drawer>
 
   
-    <v-toolbar app >
+    <v-toolbar app>
       <v-toolbar-side-icon class="pt-2" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-spacer></v-spacer>
       <v-card-text>
-      <v-toolbar-items>
-         <v-badge overlap v-if="payload">
-          <span slot="badge">17</span>
-          <v-icon size="30" class="ml-2" color="yellow accent-4">mail</v-icon>
-        </v-badge>
+      <v-toolbar-items style="min-width:150px;">
+       
         <router-link class="menuHover pr-3 pt-2 hidden-sm-and-down" to="postTrade">ثبت آگهی</router-link>
         <router-link class="menuHover pr-3 pt-2 hidden-sm-and-down" to="Forums">انجمن ها</router-link>
         
@@ -140,24 +137,24 @@
       </v-card-text>
     
       <v-card-text class=" text-sm-left headline">
-        <v-btn v-if="payload" @click="logout" to="">خروج</v-btn>
+        <v-btn class="mr-1" v-if="payload" @click="logout" to="">خروج</v-btn>
         <router-link to="wallet">
           <v-tooltip content-class="bottom" bottom>
-            <v-icon color="grey lighten-1" class="ml-3" v-if="payload" slot="activator" size="25">monetization_on</v-icon>
+            <v-icon color="grey lighten-1" class="hidden-sm-and-down ml-3" v-if="payload" slot="activator" size="25">monetization_on</v-icon>
             <span class="iconFont">کیف پول دیجیتالی</span>
           </v-tooltip>
         </router-link>
         <router-link to="dashboard">
           <v-tooltip bottom>
-            <v-icon color="grey lighten-1" class="ml-3" v-if="payload" slot="activator">fas fa-tachometer-alt</v-icon>
+            <v-icon color="grey lighten-1" class="hidden-sm-and-down ml-3" v-if="payload" slot="activator">fas fa-tachometer-alt</v-icon>
             <span class="iconFont">داشبورد مدیریتی</span>
           </v-tooltip>
         </router-link>
         
-        <router-link v-if="!payload" class="menuHover pl-3 pt-2" to="Signup">{{signState}}</router-link>
-        <router-link v-if="!payload" class="menuHover pl-3 pt-2" to="login">{{loginState}}</router-link>
-        <router-link to="/" class="sadrCryptoText hidden-sm-and-down">SadrCrypto<span class="body-2">.com</span><v-icon color="amber darken-2">mdi-tennis</v-icon></router-link>
-        
+        <router-link v-if="!payload" class="menuHover pl-2 pt-2" to="Signup">{{signState}}</router-link>
+        <router-link v-if="!payload" class="menuHover pl-2 pt-2" to="login">{{loginState}}</router-link>
+        <router-link to="/" class="sadrCryptoText hidden-sm-and-down">SadrCrypto<span class="body-2">.com</span></router-link><router-link to="/"><v-icon class="hidden-xs-and-down" color="amber darken-2">home</v-icon></router-link>
+
       </v-card-text>
     
     </v-toolbar>
