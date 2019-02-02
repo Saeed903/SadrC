@@ -24,13 +24,25 @@ export default new Vuex.Store({
     
     currency:'',
     currencyMenu: [
-      {arrowIcon: 'keyboard_arrow_up','arrowIcon-alt': 'keyboard_arrow_left', text:'ارز دیجیتال', path:'/Bitcoin',
+      {arrowIcon: 'keyboard_arrow_up','arrowIcon-alt': 'keyboard_arrow_left', text:'ارز دیجیتال',
         children:[
           {icon:'mdi-currency-btc',text:'بیت کوین',path:'/bitcoin'},
           {icon:'mdi-currency-btc',text:'اتریوم',path:'/bitcoin'},
           {icon:'mdi-currency-btc',text:'ترون',path:'/bitcoin'},
         ]
       },
+      {arrowIcon: 'keyboard_arrow_up','arrowIcon-alt': 'keyboard_arrow_left',text:'راهنما',path:'',
+        children:[
+          {icon:'search',text:'چگونه ارز بخریم',path:''},
+          {icon:'settings_phone',text:'سواالات متداول',path:''},
+          {icon:'description',text:'راهنمایی ها',path:''},
+          {icon:'supervisor_account',text:'تماس با پشتیبان',path:''},
+          {icon:'video_label',text:'وبلاگ',path:''},
+          {icon:'euro_symbol',text:'هزینه ها',path:''},
+          {icon:'bookmark',text:'درباره ما',path:''},
+        ]
+      },
+      {icon:'', text:'انجمن ها', path:'/',},
     ],
   },
   mutations:{

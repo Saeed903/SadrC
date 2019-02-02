@@ -8,8 +8,9 @@
       v-model="drawer"
       fixed
       right
+      style="background-color:#455A64"
       app >
-       <v-list >
+       <v-list>
         <template  v-for="currency in currencyMenu" >
           <v-layout
             row 
@@ -29,8 +30,7 @@
 
           <v-list-group
             v-else-if="currency.children"
-            :prepend-icon="currency.model ? currency.arrowIcon : currency['arrowIcon-alt']"
-            append-icon=""
+            :append-icon="currency.model ? currency.arrowIcon : currency['arrowIcon-alt']"
             v-model="currency.model"
             :key="currency.text" >
 
@@ -42,7 +42,7 @@
               </v-list-tile-content>
 
               <v-list-tile-action>
-              <v-icon v-if="currency.icon" >{{ currency.icon }}</v-icon>
+              <v-icon v-if="currency.icon" class="text-xs-right">{{ currency.icon }}</v-icon>
               <p v-if="currency.class" :class="currency.class"></p>
             </v-list-tile-action>
 
@@ -52,17 +52,13 @@
               :key="i"
               @click="routingMenu(child.text)"
             >
-              
-              <v-list-tile-content>
+                <v-list-tile-action v-if="child.icon">
+                  <v-icon v-if="child.icon">{{ child.icon }}</v-icon>
+                </v-list-tile-action>
                 <v-list-tile-sub-title>
                   <span class="navChildThem">{{ child.text }}</span>
                 </v-list-tile-sub-title>
-              </v-list-tile-content>
-              <v-list-tile-action v-if="child.icon">
-                <v-icon v-if="child.icon">{{ child.icon }}</v-icon>
-              </v-list-tile-action>
-              
-              
+             
             </v-list-tile>
           </v-list-group>
           <v-list-tile v-else @click="routingMenu(currency.text)" :key="currency.text">
@@ -82,11 +78,11 @@
     </v-navigation-drawer>
 
   
-    <v-toolbar app>
+    <v-toolbar app style="background-color:#455A64">
       <v-toolbar-side-icon class="pt-2" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-spacer></v-spacer>
       <v-card-text>
-      <v-toolbar-items style="min-width:150px;">
+      <v-toolbar-items>
        
         <router-link class="menuHover pr-3 pt-2 hidden-sm-and-down" to="postTrade">ثبت آگهی</router-link>
         <router-link class="menuHover pr-3 pt-2 hidden-sm-and-down" to="Forums">انجمن ها</router-link>
@@ -126,8 +122,8 @@
                 class="menuFont"
                 >
                   <v-icon color="cyan accent-2" class="mr-0 ml-2">{{profile.icon}}</v-icon>
-                  <v-list-tile-title class="fontIrans1">{{ profile.title }}</v-list-tile-title>
-                  <v-list-tile-title @click="logout" class="fontIrans1">{{profile.logout}}</v-list-tile-title>
+                  <span class="fontIrans1">{{ profile.title }}</span>
+                  <span class="fontIrans1" @click="logout">{{profile.logout}}</span>
                 </v-list-tile>
               </v-list>
             </v-menu>
@@ -137,7 +133,6 @@
       </v-card-text>
     
       <v-card-text class=" text-sm-left headline">
-        <v-btn class="mr-1" v-if="payload" @click="logout" to="">خروج</v-btn>
         <router-link to="wallet">
           <v-tooltip content-class="bottom" bottom>
             <v-icon color="grey lighten-1" class="hidden-sm-and-down ml-3" v-if="payload" slot="activator" size="25">monetization_on</v-icon>
@@ -183,7 +178,7 @@
   export default {
   data: () => ({
       drawer: true,
-        alterIcon:{icon:'arrow_drop_down'},
+        alterIcon:{icon: 'arrow_drop_down','arrowIcon-alt': 'keyboard_arrow_left'},
        helps: [
         { title: 'چگونه ارز بخریم؟', path:'/HowToBuyBticoins',icon:'account_circle'},
         { title: 'سوالات متداول', path:'/FrequentlyAskedQuestions',icon:'home'},
@@ -210,7 +205,7 @@
       routing(paths){
         this.$router.push(paths);
         
-      }
+      },
     },
     mounted(){
      console.log(this.payload);
@@ -240,7 +235,7 @@
           { title: 'بازرگان', path:'/Merchant',icon:'public' },
           { title: 'قابل اعتماد', path:'/Trusted',icon:'history' },
           { title: 'پشتیبانی', path:'SupportDrop',icon:'help' },
-          {logout:'خروج از حساب کاربری',icon:'lock'}
+          { logout:'خروج از حساب کاربری',icon:'lock'}
         ]
        },
     }
@@ -248,14 +243,21 @@
 </script>
 
 <style>
-
+.navThem{
+  font-family:iranian sans;
+  font-size:14px;
+}
+.navChildThem{
+  font-family:iranian sans;
+  font-size:12px;
+}
 .slide-fade-enter-active {
   transition: all .2s ease;
 }
 .slide-fade-leave-active {
+
   transition: all .2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.slide-fade-enter, .slide-fade-leave-to
+}.slide-fade-enter, .slide-fade-leave-to
 {
   transform: translateX(10px);
   opacity: 0;
