@@ -1,98 +1,33 @@
 <template>
 <div id="app">
-  <v-app
-    id="inspire"
-    dark
+  <v-app id="inspire" dark>
+    <v-toolbar app style="background-color:#263238">
+
+  <v-menu
+  bottom
+  origin="center center"
+  transition="scale-transition"
+  class="hidden-md-and-up"
+  height="500px"
   >
-    <v-navigation-drawer
-      v-model="drawer"
-      fixed
-      right
-      style="background-color:#455A64"
-      app >
-       <v-list>
-        <template  v-for="currency in currencyMenu" >
-          <v-layout
-            row 
-            v-if="currency.heading"
-            :key="currency.heading">
-           
-            <v-flex xs6 >
-              <v-subheader  v-if="currency.heading">
-                {{ currency.heading }}
-              </v-subheader>
-            </v-flex>
-
-            <v-flex xs6 >
-              <a href="#!" class="">ویرایش</a>
-            </v-flex>
-          </v-layout>
-
-          <v-list-group
-            v-else-if="currency.children"
-            :append-icon="currency.model ? currency.arrowIcon : currency['arrowIcon-alt']"
-            v-model="currency.model"
-            :key="currency.text" >
-
-            <v-list-tile slot="activator">
-              <v-list-tile-content  >
-                <v-list-tile-sub-title>
-                  <span class="navThem">{{ currency.text }}</span>
-                </v-list-tile-sub-title>
-              </v-list-tile-content>
-
-              <v-list-tile-action>
-              <v-icon v-if="currency.icon" class="text-xs-right">{{ currency.icon }}</v-icon>
-              <p v-if="currency.class" :class="currency.class"></p>
-            </v-list-tile-action>
-
-            </v-list-tile>
-            <v-list-tile
-              v-for="(child, i) in currency.children"
-              :key="i"
-              @click="routingMenu(child.text)"
-            >
-                <v-list-tile-action v-if="child.icon">
-                  <v-icon v-if="child.icon">{{ child.icon }}</v-icon>
-                </v-list-tile-action>
-                <v-list-tile-sub-title>
-                  <span class="navChildThem">{{ child.text }}</span>
-                </v-list-tile-sub-title>
-             
-            </v-list-tile>
-          </v-list-group>
-          <v-list-tile v-else @click="routingMenu(currency.text)" :key="currency.text">
-            <v-list-tile-content style="text-align:right">
-              <v-list-tile-sub-title >
-                <span class="saidbar">{{ currency.text }}</span>
-              </v-list-tile-sub-title>
-            </v-list-tile-content>
-            
-            <v-list-tile-action>
-              <v-icon>{{ currency.icon }}</v-icon>
-            </v-list-tile-action>
-            
-          </v-list-tile>
-        </template>
+    <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
+      <v-list>
+        <v-list-tile v-for="(item,i) in items" :key="i" @click="routing(item.path)">
+          <v-icon color="cyan accent-2" dark>{{item.icon}}</v-icon>
+          <v-list-tile-title class="menuHover pr-3">{{item.title}}</v-list-tile-title>
+        </v-list-tile>   
       </v-list>
-    </v-navigation-drawer>
+  </v-menu>
 
-  
-    <v-toolbar app style="background-color:#455A64">
-      <v-toolbar-side-icon class="pt-2" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-spacer></v-spacer>
       <v-card-text>
       <v-toolbar-items>
-       
-        <router-link class="menuHover pr-3 pt-2 hidden-sm-and-down" to="postTrade">ثبت آگهی</router-link>
-        <router-link class="menuHover pr-3 pt-2 hidden-sm-and-down" to="Forums">انجمن ها</router-link>
-        
-
-
+        <router-link class="hidden-sm-and-down menuHover pr-3 pt-2" to="postTrade">ثبت آگهی</router-link>
+        <router-link class="hidden-sm-and-down menuHover pr-3 pt-2" to="Forums">انجمن ها</router-link>
         <v-menu offset-y transition="slide-y-transition">
           <span slot="activator" dark>
-            <span class="menuHover pr-3">راهنما</span>
-            <v-icon color="cyan accent-2" dark>{{alterIcon.icon}}</v-icon>
+            <span class="hidden-sm-and-down menuHover pr-3">راهنما</span>
+            <v-icon class="hidden-sm-and-down" color="cyan accent-2" dark>{{alterIcon.icon}}</v-icon>
           </span>
             <v-list>
             <v-list-tile
@@ -131,7 +66,9 @@
         </v-toolbar-items> 
       </v-toolbar-items>
       </v-card-text>
-    
+
+      
+
       <v-card-text class=" text-sm-left headline">
         <router-link to="wallet">
           <v-tooltip content-class="bottom" bottom>
@@ -178,6 +115,13 @@
   export default {
   data: () => ({
       drawer: true,
+        items: [
+        { title: 'راهنما',icon:'help',path:''},
+        { title: 'ثبت آگهی',icon:'add_shopping_cart',path:'postTrade'},
+        { title: 'انجمن ها',icon:'account_balance',path:'ErrorAuth'},
+        { title:'کیف پول',icon:'monetization_on',path:'ErrorAuth'},
+        { title:'داشبورد',icon:'fas fa-tachometer-alt',path:'ErrorAuth'}
+      ],
         alterIcon:{icon: 'arrow_drop_down','arrowIcon-alt': 'keyboard_arrow_left'},
        helps: [
         { title: 'چگونه ارز بخریم؟', path:'/HowToBuyBticoins',icon:'account_circle'},
