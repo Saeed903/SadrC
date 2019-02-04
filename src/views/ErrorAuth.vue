@@ -1,8 +1,8 @@
 <template>
-    <v-flex>
-    <h1>شما به این صفحه دسترسی ندارید</h1>
-    <v-btn @click="goLoginPage()">برو به صفحه ورود کاربر</v-btn>
-    </v-flex>
+    <div>
+        <p class="fontIran"><v-icon color="red" size="20px">report_problem</v-icon>شما به این صفحه دسترسی ندارید</p>
+        <v-btn class="fontIran elevation-20" @click="goLoginPage()" color="cyan accent-2" outline>برو به صفحه ورود کاربر</v-btn>
+    </div>
 </template>
 <script>
 export default {
