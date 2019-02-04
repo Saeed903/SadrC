@@ -50,11 +50,11 @@
                     :sitekey = "sitekey">
                 </vue-recaptcha>
                 <v-card-text :class="{red:errorLogin}" v-if="errorLogin" >  {{errorMessage}} </v-card-text>
-                <v-btn type="submit" color="primary" class="fontIrans1 round elevation-24">ورود</v-btn>
+                <v-btn type="submit" color="cyan accent-2" class="fontIrans1 elevation-20 mt-3" outline>ورود</v-btn>
             </v-form>
 
             <v-flex>
-              <router-link class="textCard caption" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link><br>
+              <router-link class="textCard caption mr-0 mt-2" to="ResetPassword">رمز عبور را فراموش کرده اید؟</router-link><br>
               <span class="fontIrans caption">یک حساب جدید باز کنید؟<router-link to="/SignUp" class="textCard">ثبت نام کنید</router-link></span>
             </v-flex>
 
