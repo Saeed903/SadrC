@@ -122,7 +122,7 @@
         { title:'کیف پول',icon:'monetization_on',path:'ErrorAuth'},
         { title:'داشبورد',icon:'fas fa-tachometer-alt',path:'ErrorAuth'}
       ],
-        alterIcon:{icon:'home'},
+        alterIcon:{icon:'arrow_drop-down','arrowIcon_alt':'keyboard_arrow_left'},
        helps: [
         { title: 'چگونه ارز بخریم؟', path:'/HowToBuyBticoins',icon:'account_circle'},
         { title: 'سوالات متداول', path:'/FrequentlyAskedQuestions',icon:'home'},
