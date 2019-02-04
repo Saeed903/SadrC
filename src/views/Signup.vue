@@ -76,7 +76,7 @@
             
             <v-layout>
               <v-dialog v-model="dialog" max-width="650">
-                <v-btn slot="activator" color="primary" class="fontIrans1 round elevation-24 ml-3">ارسال</v-btn>
+                <v-btn slot="activator" color="cyan accent-2" class="fontIrans1 elevation-20 mr-3" outline>ارسال</v-btn>
                 <v-card>
                   <p class="topicText text-xs-center">شرایط استفاده از خدمات صدرکریپتو</p>
                   <v-card-text class="centerText">صدرکریپتو یک سرویس پلت فرم همکارانه است که کاربران آن را قادر می سازد تا ارز را به بیتکوین و از آن بفروشند. کاربران می توانند از این پلت فرم برای ایجاد تبلیغات در جایی که آنها پیشنهاد خرید یا فروش بیت کوین را دارند استفاده کنند. کاربران دیگر به این آگهی ها پاسخ می دهند و دو کاربر می توانند با پرداختن به بتکون برای پرداخت پول نقد و یا کسب و کار آنلاین آنلاین موافقت کنند. برای اینکه کاربر برای فروش بیت کوین ها آنها ("فروشنده") باید بیت کوین ها را در کیف پول وب صدرکریپتومتعلق به حساب خود ذخیره کنند، از جایی که بیت کوین ها به کاربر خرید بیت کوین ("خریدار") منتقل می شود، پس از تایید فروشنده پرداخت خریداران تمام معاملات این سایت بین کاربران سرویس انجام می شود. صدرکریپتو ممکن است برای حل اختلاف بین خریداران و فروشندگان کمک کند. به عنوان یک ارائه دهنده سپرده، صدرکریپتو خود بخشی از تجارت یا معاملات تجاری بیت کوین نیست که توسط کاربران آن انجام می شود.</v-card-text>
@@ -95,7 +95,7 @@
             </v-layout>
           </v-form>
           <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
-          <p class="fontIrans1 pt-3">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="textCard">ورود</router-link></p>
+          <p class="fontIrans1 pr-1 pt-3">در حال حاضر یک حساب کاربری دارید؟<router-link to="/Login" class="textCard">ورود</router-link></p>
         </v-card-text>
         <v-card-text :class="{red:errorMessage}" v-if="errorMessage" >{{errorMessage}}</v-card-text>
          <v-progress-circular v-if="loading"  :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
