@@ -6,7 +6,7 @@
   <v-menu
   bottom
   origin="center center"
-  transition="scale-transition"
+   transition="scale-transition"
   class="hidden-md-and-up"
   height="500px"
   >
@@ -24,7 +24,7 @@
       <v-toolbar-items>
         <router-link class="hidden-sm-and-down menuHover pr-3 pt-2" to="postTrade">ثبت آگهی</router-link>
         <router-link class="hidden-sm-and-down menuHover pr-3 pt-2" to="Forums">انجمن ها</router-link>
-        <v-menu offset-y transition="slide-y-transition">
+        <v-menu offset-y  transition="slide-y-reverse-transition">
           <span slot="activator" dark>
             <span class="hidden-sm-and-down menuHover pr-3">راهنما</span>
             <v-icon class="hidden-sm-and-down" color="cyan accent-2" dark>{{alterIcon.icon}}</v-icon>
@@ -83,9 +83,9 @@
           </v-tooltip>
         </router-link>
         
-        <router-link v-if="!payload" class="menuHover pl-2 pt-2" to="Signup">{{signState}}</router-link>
-        <router-link v-if="!payload" class="menuHover pl-2 pt-2" to="login">{{loginState}}</router-link>
-        <router-link to="/" class="sadrCryptoText hidden-sm-and-down">SadrCrypto<span class="body-2">.com</span></router-link><router-link to="/"><v-icon class="hidden-xs-and-down" color="amber darken-2">home</v-icon></router-link>
+        <router-link v-if="!payload" class="menuHover pl-3 pt-2" to="Signup">{{signState}}</router-link>
+        <router-link v-if="!payload" class="menuHover pl-3 pt-2" to="login">{{loginState}}</router-link>
+        <router-link to="/" class="sadrCryptoText hidden-sm-and-down">SadrCrypto<span class="body-2">.com</span></router-link><router-link class="" to="/"><v-icon color="amber darken-2">home</v-icon></router-link>
 
       </v-card-text>
     
@@ -122,7 +122,7 @@
         { title:'کیف پول',icon:'monetization_on',path:'ErrorAuth'},
         { title:'داشبورد',icon:'fas fa-tachometer-alt',path:'ErrorAuth'}
       ],
-        alterIcon:{icon: 'arrow_drop_down','arrowIcon-alt': 'keyboard_arrow_left'},
+        alterIcon:{icon:'home'},
        helps: [
         { title: 'چگونه ارز بخریم؟', path:'/HowToBuyBticoins',icon:'account_circle'},
         { title: 'سوالات متداول', path:'/FrequentlyAskedQuestions',icon:'home'},

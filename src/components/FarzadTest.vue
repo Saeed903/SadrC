@@ -1,28 +1,27 @@
-
 <template>
-  <div>
-    <v-menu bottom origin="center center" transition="scale-transition">
-      <v-btn slot="activator" color="primary" dark>
-        Scale Transition
-      </v-btn>
+  <div class="text-xs-center">
+    <v-toolbar-side-icon
+      dark
+      color="primary"
+      @click="expand = !expand"
+      slot="activator"
+    ></v-toolbar-side-icon>
 
-      <v-list>
-        <v-list-tile v-for="(item, i) in items" :key="i">
-          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-menu>
+    <v-expand-transition>
+      <div v-if="expand">
+        <v-btn flat>راهنما</v-btn>
+        <v-btn flat>ثبت آگهی</v-btn><br/>
+        <v-btn flat>انجمن ها</v-btn><br/>
+        <v-btn flat>کیف پول</v-btn><br/>
+        <v-btn flat>داشبورد</v-btn>
+      </div>
+    </v-expand-transition>
   </div>
 </template>
 <script>
   export default {
     data: () => ({
-      items: [
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me 2' }
-      ]
+      expand: false
     })
   }
 </script>
