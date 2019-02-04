@@ -287,7 +287,7 @@
                 <span class="fontIrans">.تبلیغات خود را محدود کنید تا تنها به کاربران نشان داده شود که شما به عنوان اعتماد علامتگذاری کرده اید<router-link class="textCard" to="">چگونگی علامت گذاری به کاربران مورد اعتماد</router-link>.</span>    
             </v-flex>
         </v-layout>
-        <v-btn type="submit" class="fontsIran primary" :disabled="!valid" >ثبت اطلاعات</v-btn>
+        <v-btn type="submit" class="fontsIran" :disabled="!valid" color="cyan accent-2" outline>ثبت اطلاعات</v-btn>
     </v-form>
 
     <Footer></Footer>
