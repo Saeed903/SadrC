@@ -1,27 +1,28 @@
+
 <template>
-    <div>
-      <v-layout row justify-center>
-            <v-dialog v-model="dialog" max-width="290">
-              <v-btn slot="activator" color="primary" dark>Open Dialog</v-btn>
-            <v-card>
-                <v-card-title class="headline">Use Google's location service?</v-card-title>
-                <v-card-text>Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</v-card-text>
-                <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn color="green darken-1" flat="flat" @click="dialog = false">Disagree</v-btn>
-                <v-btn color="green darken-1" flat="flat" @click="dialog = false">Agree</v-btn>
-                </v-card-actions>
-            </v-card>
-</v-dialog>
-</v-layout>
-    </div>
+  <div>
+    <v-menu bottom origin="center center" transition="scale-transition">
+      <v-btn slot="activator" color="primary" dark>
+        Scale Transition
+      </v-btn>
+
+      <v-list>
+        <v-list-tile v-for="(item, i) in items" :key="i">
+          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+        </v-list-tile>
+      </v-list>
+    </v-menu>
+  </div>
 </template>
 <script>
   export default {
-    data () {
-      return {
-        dialog: false
-      }
-    }
+    data: () => ({
+      items: [
+        { title: 'Click Me' },
+        { title: 'Click Me' },
+        { title: 'Click Me' },
+        { title: 'Click Me 2' }
+      ]
+    })
   }
 </script>
