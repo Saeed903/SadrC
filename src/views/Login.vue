@@ -50,7 +50,17 @@
                     :sitekey = "sitekey">
                 </vue-recaptcha>
                 <v-card-text :class="{red:errorLogin}" v-if="errorLogin" >  {{errorMessage}} </v-card-text>
-                <v-btn type="submit" color="cyan accent-2" class="fontIrans1 elevation-20 mt-3" outline>ورود</v-btn>
+                <v-btn
+                type="submit"
+                :loading="loading3"
+                :disabled="loading3"
+                color="cyan accent-2"
+                class="fontIrans1 elevation-20 mt-3"
+                @click="loader = 'loading3'"
+                outline
+                > 
+                ورود
+                </v-btn>
             </v-form>
 
             <v-flex>
@@ -77,7 +87,10 @@
         
         VueRecaptcha
     },
+    
     data: () => ({ 
+      loader: null,
+      loading3: false,
       errorLogin: false,
       errorMessage:'',
       valid: false,
@@ -101,6 +114,16 @@
     },
     computed: {
       ...mapState('auth', {loading: 'isAuthenticatePending'}),
+    },
+    watch: {
+      loader () {
+        const l = this.loader
+        this[l] = !this[l]
+
+        setTimeout(() => (this[l] = false), 3000)
+
+        this.loader = null
+      }
     },
     methods: {
       ...mapActions('auth',['authenticate']),
