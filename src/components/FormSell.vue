@@ -58,7 +58,18 @@
           
         <v-flex xs12 sm1 md1 pt-0>
           <v-card-text>
-            <v-btn :disabled="!valid" @click="submit" class="fontsIran primary elevation-24" round><v-icon>search</v-icon>جست و جو</v-btn>
+            <v-btn
+            :loading="loading3"
+            :disabled="!valid,loading3"
+            @click="submit,loader='loading3'"
+            color="cyan accent-2"
+            class="fontsIran elevation-24"
+            outline
+            round
+            >
+            <v-icon>search</v-icon>
+            جست و جو
+            </v-btn>
           </v-card-text>
         </v-flex>
       </v-layout>
@@ -70,7 +81,8 @@
   export default {
     props:['currency'],
     data: () => ({
-      
+      loader:null,
+      loading3:false,
       valid: true,
       amount: '',
       amountRules: [
@@ -122,7 +134,16 @@
       ],
       checkbox: false
     }),
+    watch: {
+      loader () {
+        const l = this.loader
+        this[l] = !this[l]
 
+        setTimeout(() => (this[l] = false), 3000)
+
+        this.loader = null
+      }
+    },
     methods: {
       submit () {
         if (this.$refs.form.validate()) {
@@ -139,6 +160,7 @@
       clear () {
         this.$refs.form.reset()
       }
+      
     }
   }
 </script>
