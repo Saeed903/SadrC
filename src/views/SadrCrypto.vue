@@ -1,18 +1,30 @@
 <template>
     <div>
         <v-flex>
-            <p class="fontsIran text-xs-center" >صدرکریپتو ساده ترین و مطمعن ترین راه برای خرید و فروش و مدیریت ارز دیجیتال</p>
-            <p class="fontsIran text-xs-center orange--text">فوری.امن.خصوصی</p>
+            <h1 class="farzad text-xs-center">صدرکریپتو ساده ترین و مطمعن ترین راه برای خرید و فروش و مدیریت ارز دیجیتال</h1>
+            <p class="fontsIran text-xs-center orange--text pt-3">فوری . امن . اختصاصی</p>
             <p class="text-xs-center ">
-                <span class="fontsIran orange--text">تجارت بیت کوین</span>
-                <router-link to="/BitcoinCity" class="textCard">در 16370 شهر</router-link>
+                <span class="fontsIran orange--text">تجارت بیت کوین در</span>
+                <span to="/BitcoinCity" class="textCard"> 16370 شهر</span>
                 <span class="fontsIran orange--text">و</span>
-                <router-link to="/BitcoinCountry" class="textCard">248 کشور</router-link>
+                <span to="/BitcoinCountry" class="textCard">248 کشور</span>
                 <span class="fontsIran orange--text">شامل</span>
-                <router-link to="/RepublicIran" class="textCard">جمهوری اسلامی ایران</router-link>
+                <span to="/RepublicIran" class="textCard">جمهوری اسلامی ایران</span>
             </p>
             <div class="text-xs-center">
-                <v-btn class="fontsIran elevation-24" color="cyan darken-4" to="Signup" round><v-icon size="20px">done_all</v-icon>ثبت نام رایگان</v-btn>
+                <v-btn
+                class="fontsIran elevation-24"
+                color="cyan accent-3"
+                to="Signup"
+                :loading="loading3"
+                :disabled="loading3"
+                outline
+                >
+                    <v-icon size="20px">
+                    done_all
+                    </v-icon>
+                ثبت نام رایگان
+                </v-btn>
             </div>
         </v-flex>
 
@@ -75,6 +87,7 @@ import { mapActions, mapGetters, mapState } from 'vuex';
 export default{
     data:() => ({
         isTrader:0,
+        loading3:false,
         btrAddr: 'bitcoin:18JsNRxD7Tc8KDnCYkx7y98w22fgpgARMn',
         show:false,
        
@@ -86,3 +99,11 @@ export default{
     }
   };
 </script>
+<style scoped>
+.farzad{
+    font-family:iranian sans;
+    font-size:17px;
+    color:#BDBDBD;
+}
+</style>
+
