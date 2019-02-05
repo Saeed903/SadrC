@@ -9,9 +9,9 @@
       class="hidden-md-and-up"
       >
         <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
-          <v-list>
+          <v-list class="logCard">
             <v-list-tile v-for="(item,i) in items" :key="i" @click="routing(item.path)">
-              <v-icon color="cyan accent-2" dark>{{item.icon}}</v-icon>
+              <v-icon color="cyan accent-3" dark>{{item.icon}}</v-icon>
               <v-list-tile-title class="menuHover pr-3">{{item.title}}</v-list-tile-title>
             </v-list-tile>   
         </v-list>
@@ -26,7 +26,7 @@
             <span class="hidden-sm-and-down menuHover pr-3">راهنما</span>
             <v-icon class="hidden-sm-and-down" color="cyan accent-2" dark>arrow_drop_down</v-icon>
           </span>
-            <v-list>
+            <v-list class="logCard">
             <v-list-tile
             v-for="(help, index) in helps"
             :key="index"
@@ -40,13 +40,13 @@
         </v-menu>
            <v-toolbar-items class="pr-2" v-if="payload"> 
           <div class="text-xs-center">
-            <v-menu offset-y transition="slide-y-transition" elevation-24>
+            <v-menu offset-y transition="slide-y-transition">
               <span slot="activator" dark>
                 <v-icon color="cyan accent-2">perm_identity</v-icon>
                 <span class="menuHover">{{userName}}</span>
                 <v-icon size="20" color="cyan accent-2" dark>arrow_drop_down</v-icon>
               </span>
-              <v-list>
+              <v-list class="logCard">
                 <v-list-tile
                 v-for="(profile, index) in Profiles"
                 :key="index"
@@ -223,6 +223,9 @@
 .list-item {
   display: inline-block;
   margin-right: 10px;
+}
+.logCard{
+  border:1px solid #18FFFF;
 }
 .list-enter-active, .list-leave-active {
   transition: all 1s;
