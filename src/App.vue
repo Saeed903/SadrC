@@ -2,23 +2,20 @@
 <div id="app">
   <v-app id="inspire" dark>
     <v-toolbar app style="background-color:#263238">
-
-  <v-menu
-  bottom
-  origin="center center"
-   transition="scale-transition"
-  class="hidden-md-and-up"
-  height="500px"
-  >
-    <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
-      <v-list>
-        <v-list-tile v-for="(item,i) in items" :key="i" @click="routing(item.path)">
-          <v-icon color="cyan accent-2" dark>{{item.icon}}</v-icon>
-          <v-list-tile-title class="menuHover pr-3">{{item.title}}</v-list-tile-title>
-        </v-list-tile>   
-      </v-list>
-  </v-menu>
-
+      <v-menu
+      bottom
+      origin="center center"
+      transition="slide-y-reverse-transition"
+      class="hidden-md-and-up"
+      >
+        <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
+          <v-list>
+            <v-list-tile v-for="(item,i) in items" :key="i" @click="routing(item.path)">
+              <v-icon color="cyan accent-2" dark>{{item.icon}}</v-icon>
+              <v-list-tile-title class="menuHover pr-3">{{item.title}}</v-list-tile-title>
+            </v-list-tile>   
+        </v-list>
+      </v-menu>
       <v-spacer></v-spacer>
       <v-card-text>
       <v-toolbar-items>
@@ -27,7 +24,7 @@
         <v-menu offset-y  transition="slide-y-reverse-transition">
           <span slot="activator" dark>
             <span class="hidden-sm-and-down menuHover pr-3">راهنما</span>
-            <v-icon class="hidden-sm-and-down" color="cyan accent-2" dark>{{alterIcon.icon}}</v-icon>
+            <v-icon class="hidden-sm-and-down" color="cyan accent-2" dark>arrow_drop_down</v-icon>
           </span>
             <v-list>
             <v-list-tile
@@ -83,9 +80,9 @@
           </v-tooltip>
         </router-link>
         
-        <router-link v-if="!payload" class="menuHover pl-3 pt-2" to="Signup">{{signState}}</router-link>
-        <router-link v-if="!payload" class="menuHover pl-3 pt-2" to="login">{{loginState}}</router-link>
-        <router-link to="/" class="sadrCryptoText hidden-sm-and-down">SadrCrypto<span class="body-2">.com</span></router-link><router-link class="" to="/"><v-icon color="amber darken-2">home</v-icon></router-link>
+        <router-link v-if="!payload" class="hidden-sm-and-down menuHover pl-2" to="Signup">{{signState}}</router-link>
+        <router-link v-if="!payload" class="hidden-sm-and-down menuHover pl-2 pr-2" to="login">{{loginState}}</router-link>
+        <router-link to="/" class="sadrCryptoText pl-2">SadrCrypto<span class="body-2">.com</span></router-link><router-link class="" to="/"><v-icon class="hidden-sm-and-down" color="amber darken-2">group_work</v-icon></router-link>
 
       </v-card-text>
     
@@ -116,13 +113,15 @@
   data: () => ({
       drawer: true,
         items: [
-        { title: 'راهنما',icon:'help',path:''},
-        { title: 'ثبت آگهی',icon:'add_shopping_cart',path:'postTrade'},
-        { title: 'انجمن ها',icon:'account_balance',path:'ErrorAuth'},
-        { title:'کیف پول',icon:'monetization_on',path:'ErrorAuth'},
-        { title:'داشبورد',icon:'fas fa-tachometer-alt',path:'ErrorAuth'}
+          { title:'ثبت نام',icon:'home',path:'/signup'},
+          { title:'ورود', icon:'home',path:'/login'},
+          { title:'راهنما',icon:'help',path:''},
+          { title:'ثبت آگهی',icon:'add_shopping_cart',path:'postTrade'},
+          { title:'انجمن ها',icon:'account_balance',path:'ErrorAuth'},
+          { title:'کیف پول',icon:'monetization_on',path:'ErrorAuth'},
+          { title:'داشبورد',icon:'fas fa-tachometer-alt',path:'ErrorAuth'},
       ],
-        alterIcon:{icon:'arrow_drop-down','arrowIcon_alt':'keyboard_arrow_left'},
+        alterIcon:{icon:'arrow_drop-down',},
        helps: [
         { title: 'چگونه ارز بخریم؟', path:'/HowToBuyBticoins',icon:'account_circle'},
         { title: 'سوالات متداول', path:'/FrequentlyAskedQuestions',icon:'home'},
