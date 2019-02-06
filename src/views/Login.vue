@@ -26,9 +26,8 @@
                 </v-text-field>
 
                 <v-text-field
-                  :roles="notEmptyRoles"
                   v-model="user.password"
-                  counter="20"
+                  counter="10"
                   :error-messages="errors.collect('password')"
                   :type="'password'"
                   :rules="notEmptyRules"
@@ -107,6 +106,7 @@
       ],
       notEmptyRules:[
         v => !!v || 'می بایستی فیلد را پر کنید',
+        v => v.length <= 10 || 'می بایستی رمز عبور حداکثر تا 10 کاراکتر باشد'
       ],
     }),
     mounted () {
