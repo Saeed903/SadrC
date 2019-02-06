@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-flex>
-            <h1 class="farzad text-xs-center">صدرکریپتو ساده ترین و مطمعن ترین راه برای خرید و فروش و مدیریت ارز دیجیتال</h1>
+            <h1 class="topText text-xs-center">صدرکریپتو ساده ترین و مطمعن ترین راه برای خرید و فروش و مدیریت ارز دیجیتال</h1>
             <p class="fontsIran text-xs-center orange--text pt-3">فوری . امن . اختصاصی</p>
             <p class="text-xs-center ">
                 <span class="fontsIran orange--text">تجارت بیت کوین در</span>
@@ -14,7 +14,7 @@
             <div class="text-xs-center">
                 <v-btn
                 class="fontsIran elevation-24"
-                color="cyan accent-3"
+                color="cyan accent-2"
                 to="Signup"
                 :loading="loading3"
                 :disabled="loading3"
@@ -100,7 +100,7 @@ export default{
   };
 </script>
 <style scoped>
-.farzad{
+.topText{
     font-family:iranian sans;
     font-size:17px;
     color:#BDBDBD;

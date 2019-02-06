@@ -86,7 +86,6 @@
                 clearable
                 >
                 </v-autocomplete>
-                
             </v-flex>
 
             <v-flex sm6 md6 lg6>
@@ -414,24 +413,7 @@ export default{
                 this.advertise.countryId = this.countries.find(country => country.countryName == selectedCountryName).Id;
             }
         },
-        selectCryptoCurrency:{
-           get: function(){
-               var currencyFullName, currencyModel;
-               currencyModel = this.cryptoCurrencies.find(currency => currency.Id == this.advertise.cryptoCurrencyId);
-               
-               if (currencyModel != null){
-                    currencyFullName = currencyModel.cryptoCurrencyCode + ' ' + 
-                                  currencyModel.cryptoCurrencyName + ' ' + 
-                                  currencyModel.cryptoCurrencyTitle;
-               }
-               return currencyFullName || null;                   
-           },
-           set:function(selectedCryptroCurrency){
-               var cryptoCurrencyCode = selectedCryptroCurrency.split(' ');
-               var currencyModel = this.cryptoCurrencies.find(currency => currency.cryptoCurrencyCode == cryptoCurrencyCode[0]);
-               this.advertise.cryptoCurrencyId = currencyModel.Id;
-           } 
-        },
+  
 
         selectCountries(){
             var selected = [];
