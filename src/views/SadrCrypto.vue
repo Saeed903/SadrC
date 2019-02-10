@@ -49,31 +49,36 @@
                     <Advertise></Advertise>
                 </v-card>
             </v-flex>
+            <v-layout justify-space-around>
+                <v-flex sm6>
+                    <v-card class="logCard mt-5">
+                        <v-card-text class="fontsIran text-xs-center">اخبار صدر سیستم</v-card-text>
+                        <v-divider color="grey"></v-divider>
 
-            <v-flex>
-                    <v-card class="text-xs-center elevation-24">
-                        <v-card-text class="fontIran text-xs-center grey darken-1">اخبار صدر سیستم</v-card-text>
-                        <v-divider></v-divider>
+                        <p class="fontIrans pr-2 pt-2">بیانیه صدرکریپتو در مورد مقررات و مقررات آینده</p>
+                        <p class="fontIrans text-xs-left mb-0 pl-1">September 28th, 2019</p>
+                        <v-divider color="grey"></v-divider>
 
-                        <v-card-text class="contant text-xs-right"><router-link class="textCard" to="">ابزار بیشتر برای معاملات خاموش</router-link></v-card-text>
-                        <v-divider></v-divider>
+                        <p class="fontIrans pr-2 pt-2">ابزار های بیشتر برای معاملات</p>
+                        <p class="fontIrans text-xs-left mb-0 pl-1">September 27th, 2017</p>
+                        <v-divider color="grey"></v-divider>
 
-                        <v-card-text class="contant text-xs-right"><router-link class="textCard" to="">تغییرات صفحه ورود به سیستم</router-link></v-card-text>
-                        <v-divider></v-divider>
+                        <p class="fontIrans pr-2 pt-2">تغییر صفحه ورود به سیستم</p>
+                        <p class="fontIrans text-xs-left mb-0 pl-1">September 25th, 2017</p>
+                        <v-divider color="grey"></v-divider>
 
-                        <v-card-text class="contant text-xs-right"><router-link class="textCard" to="">جبران خسارت برای کاربران دارای تعادل نقدی</router-link></v-card-text>
-                        <v-divider></v-divider>
+                        <p class="fontIrans pr-2 pt-2">جبران برای کاربران متعلق به تعادل</p>
+                        <p class="fontIrans text-xs-left mb-0 pl-1">July 19th, 2017</p>
+                        <v-divider color="grey"></v-divider>
 
-                        <v-card-text class="contant text-xs-right"><router-link class="textCard" to="">سیستم جدید هزینه تراکنش برای بیت کوین</router-link></v-card-text>
-                        <v-divider></v-divider>
-                        
-                        <v-card-text class="fontIrans text-xs-left">اطلاعات بیشتر در<router-link class="textCard" to=""> وبلاگ صدر سیستم </router-link></v-card-text>
+                        <p class="fontIrans pr-2 pt-2">بیانیه صدرکریپتو در مورد چنگال سخت ممکن</p>
+                        <p class="fontIrans text-xs-left mb-0 pl-1 pb-1">February 8th, 2019</p>
+
                     </v-card>
-            </v-flex>
+                </v-flex>
+            </v-layout>
 
-            <v-flex>
-                <Footer></Footer>
-        </v-flex>
+            <Footer class="mt-5"></Footer>
     </div>
 </template>
 <script>
@@ -87,6 +92,7 @@ import { mapActions, mapGetters, mapState } from 'vuex';
 export default{
     data:() => ({
         isTrader:0,
+        show:false,
         loading3:false,
         btrAddr: 'bitcoin:18JsNRxD7Tc8KDnCYkx7y98w22fgpgARMn',
         show:false,
@@ -104,6 +110,15 @@ export default{
     font-family:iranian sans;
     font-size:17px;
     color:#BDBDBD;
+}
+.cardImg{
+  width:450px;
+  max-width:100%;
+}
+.logCard{
+  border:1px solid #18FFFF;
+  box-shadow:0px 0px 25px 1px #18FFFF;
+  border-radius:8px;
 }
 </style>
 
