@@ -12,7 +12,7 @@
         <td>{{ props.item.id }}({{props.item.user.userName}},{{props.item.user.mobile}})</td>
         <td >{{ props.item.introduction }}</td>
         <td >{{ props.item.margin }}</td>
-        <td ><v-btn class="primary elevation-5" @click="buy()" to="Order">خرید</v-btn></td>
+        <td ><v-btn class="elevation-20" outline color="cyan accent-2"  @click="buy()" to="Order">خرید</v-btn></td>
       </template>
     </v-data-table>
 </div>
