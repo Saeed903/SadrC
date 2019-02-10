@@ -1,6 +1,5 @@
 <template>
   <div>
-     
     <p>{{currency}}</p>
     <v-form ref="form" v-model="valid" lazy-validatio>
       <v-layout row wrap>
