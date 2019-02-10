@@ -1,16 +1,15 @@
 <template >
 <div>
-    {{publishAdvertises}}
   <v-data-table
       class="table"
       :headers="headers"
-      :items="desserts"
+      :items="publishAdvertises"
       :pagination.sync="pagination"
-      :total-items="totalDesserts"
-      :loading="loadingAdvertise"
+      :total-items="totalAdvertise"
+      :loading="loadingPublishAdvertises"
      >
-      <template v-if="!loading" slot="publishAdvertises" slot-scope="props">
-        <td>{{ props.item.id }}({{props.item.userName}},{{props.item.mobile}})</td>
+      <template v-if="!loadingPublishAdvertises" slot="items" slot-scope="props">
+        <td>{{ props.item.id }}({{props.item.user.userName}},{{props.item.user.mobile}})</td>
         <td >{{ props.item.introduction }}</td>
         <td >{{ props.item.margin }}</td>
         <td ><v-btn class="primary elevation-5" @click="buy()" to="Order">خرید</v-btn></td>
@@ -28,20 +27,13 @@ export default{
   props:['isSeller', 'query'],
   data () {
     return {
-        totalDesserts: 0,
-        desserts: [],
+        totalAdvertise:0,
         pagination: {},
       }
   },
   computed:{
-    ...mapState('advertises', { loadingAdvertise: 'isFindPending'}),
     ...mapState('publishAdvertises', { loadingPublishAdvertises: 'isFindPending'}),
-    ...mapGetters('advertises', { findAdvertisesOnline: 'find'}),
     ...mapGetters('publishAdvertises', { findPublishAdvertisesOnline: 'find'}),
-
-    advertises(){
-        return this.findAdvertisesOnline().data;
-    },
 
     publishAdvertises(){
         return this.findPublishAdvertisesOnline().data ;
@@ -88,10 +80,9 @@ export default{
   watch: {
     pagination: {
     handler () {
-        this.getDataFromApi()
+        this.findPublishAdvertise()
         .then(data => {
-            this.desserts = data.items
-            this.totalDesserts = data.total
+            this.totalAdvertise = this.publishAdvertises.length;
         })
     },
     deep: true
@@ -99,116 +90,18 @@ export default{
   },
   mounted () {
 
-    this.findAdvertise()
-        .then(response => {
-            const advertises = response.data || response;
-            
-        }), 
-
     this.findPublishAdvertise()
         .then(response => {
             const publishAdvertises = response.data || response;
             console.log(publishAdvertises);
+
+            this.totalAdvertise = publishAdvertises.length;
             
-        }),    
-    this.getDataFromApi()
-        .then(data => {
-            this.desserts = data.items
-            this.totalDesserts = data.total
         })
   },
   methods: {
 
-
-    ...mapActions('advertises', { findAdvertise : 'find'}),
     ...mapActions('publishAdvertises', { findPublishAdvertise : 'find'}),
-
-    buy(){
-
-    },
-
-    getDataFromApi () {
-    this.loading = true
-    return new Promise((resolve, reject) => {
-        const { sortBy, descending, page, rowsPerPage } = this.pagination
-
-        let items = this.getDesserts()
-        const total = items.length
-
-        if (this.pagination.sortBy) {
-        items = items.sort((a, b) => {
-            const sortA = a[sortBy]
-            const sortB = b[sortBy]
-
-            if (descending) {
-            if (sortA < sortB) return 1
-            if (sortA > sortB) return -1
-            return 0
-            } else {
-            if (sortA < sortB) return -1
-            if (sortA > sortB) return 1
-            return 0
-            }
-        })
-        }
-
-        if (rowsPerPage > 0) {
-        items = items.slice((page - 1) * rowsPerPage, page * rowsPerPage)
-        }
-
-        setTimeout(() => {
-        this.loading = false
-        resolve({
-            items,
-            total
-        })
-        }, 1000)
-    })
-    },
-    getDesserts () {
-    return [
-        {
-            id:'  فرزاد افسری',
-            userName:'98',
-            mobile:'100%',
-            introduction:'تایید کردن',
-            margin:'58',
-            driversLicense:'100',
-        },
-         {
-            trader:'علی',
-            tradeCount:'98',
-            satisfiedPercent:'100%',
-            paymentMethod:'تایید کردن',
-            price:'58',
-            limits:'100',
-        },
-         {
-            trader:'حیدر',
-            tradeCount:'98',
-            satisfiedPercent:'100%',
-            paymentMethod:'تایید کردن',
-            price:'58',
-            limits:'100',
-        },
-         {
-            trader:'حسین',
-            tradeCount:'98',
-            satisfiedPercent:'100%',
-            paymentMethod:'تایید کردن',
-            price:'58',
-            limits:'100',
-        },
-         {
-            trader:'باقری',
-            tradeCount:'98',
-            satisfiedPercent:'100%',
-            paymentMethod:'تایید کردن',
-            price:'58',
-            limits:'100',
-        },
-    ]
-    }
   }
 };
   
