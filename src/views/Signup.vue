@@ -40,7 +40,7 @@
               v-validate="'required|max:20'"
               v-model="user.password"
               :counter="20"
-              :rules="notEmptyRules"
+              :rules="EmptyRules"
               prepend-inner-icon="lock"
               color="cyan accent-2"
               class="fontIrans1 textField pt-2"
@@ -140,6 +140,11 @@
       ],
       notEmptyRules:[
         v => !!v || 'می بایستی فیلد را پر کنید',
+        v => v.length <= 30 || 'می بایستی رمز عبور حداکثر تا 30 کاراکتر باشد'
+      ],
+      EmptyRules:[
+        v => !!v || 'می بایستی فیلد را پر کنید',
+        v => v.length <= 20 || 'می بایستی رمز عبور حداکثر تا 20 کاراکتر باشد'
       ],
       confirmPasswordRules:[
         v => !!v || 'می بایستی فیلد را پر کنید',

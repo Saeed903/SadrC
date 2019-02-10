@@ -1,7 +1,7 @@
 <template>
 <div id="app">
-  <v-app id="inspire" dark>
-    <v-toolbar app style="background-color:#263238">
+  <v-app id="inspire" dark style="background-color:#263238">
+    <v-toolbar app style="background-color:#37474F">
       <v-menu
       bottom
       origin="center center"
@@ -89,11 +89,11 @@
     </v-toolbar>
    
     <v-content>
-      <v-container fluid grid-list-xl>
-        <v-layout  justify-space-around>
+      <v-container  fluid grid-list-xl>
+        <v-layout justify-space-around>
           <v-flex lg10 xl9>
             <transition name="list" mode="out-in">
-              <router-view/>
+              <router-view />
             </transition> 
           </v-flex>
         </v-layout>
