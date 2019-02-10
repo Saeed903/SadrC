@@ -51,29 +51,28 @@
             </v-flex>
             <v-layout justify-space-around>
                 <v-flex sm6>
-                    <v-card class="logCard mt-5">
+                    <v-card class="logCard mt-5"  color="grey darken-3">
                         <v-card-text class="fontsIran text-xs-center">اخبار صدر سیستم</v-card-text>
                         <v-divider color="grey"></v-divider>
 
-                        <p class="fontIrans pr-2 pt-2">بیانیه صدرکریپتو در مورد مقررات و مقررات آینده</p>
+                        <router-link to="" style="text-decoration:none;"><p class="newsText pr-2 pt-2">بیانیه صدرکریپتو در مورد مقررات و مقررات آینده</p></router-link>
                         <p class="fontIrans text-xs-left mb-0 pl-1">September 28th, 2019</p>
                         <v-divider color="grey"></v-divider>
 
-                        <p class="fontIrans pr-2 pt-2">ابزار های بیشتر برای معاملات</p>
+                         <router-link to="" style="text-decoration:none;"><p class="newsText pr-2 pt-2">ابزار های بیشتر برای معاملات</p></router-link>
                         <p class="fontIrans text-xs-left mb-0 pl-1">September 27th, 2017</p>
                         <v-divider color="grey"></v-divider>
 
-                        <p class="fontIrans pr-2 pt-2">تغییر صفحه ورود به سیستم</p>
+                         <router-link to="" style="text-decoration:none;"><p class="newsText pr-2 pt-2">تغییر صفحه ورود به سیستم</p></router-link>
                         <p class="fontIrans text-xs-left mb-0 pl-1">September 25th, 2017</p>
                         <v-divider color="grey"></v-divider>
 
-                        <p class="fontIrans pr-2 pt-2">جبران برای کاربران متعلق به تعادل</p>
+                         <router-link to="" style="text-decoration:none;"><p class="newsText pr-2 pt-2">جبران برای کاربران متعلق به تعادل</p></router-link>
                         <p class="fontIrans text-xs-left mb-0 pl-1">July 19th, 2017</p>
                         <v-divider color="grey"></v-divider>
 
-                        <p class="fontIrans pr-2 pt-2">بیانیه صدرکریپتو در مورد چنگال سخت ممکن</p>
+                         <router-link to="" style="text-decoration:none;"><p class="newsText pr-2 pt-2">بیانیه صدرکریپتو در مورد چنگال سخت ممکن</p></router-link>
                         <p class="fontIrans text-xs-left mb-0 pl-1 pb-1">February 8th, 2019</p>
-
                     </v-card>
                 </v-flex>
             </v-layout>
@@ -119,6 +118,12 @@ export default{
   border:1px solid #18FFFF;
   box-shadow:0px 0px 25px 1px #18FFFF;
   border-radius:8px;
+}
+.newsText{
+    font-family:iranian sans;
+    font-size:13px;
+    color:
+#BDBDBD;
 }
 </style>
 
