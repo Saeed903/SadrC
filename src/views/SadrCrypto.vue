@@ -5,10 +5,10 @@
             <p class="fontsIran text-xs-center orange--text pt-3">فوری . امن . اختصاصی</p>
             <p class="text-xs-center ">
                 <span class="fontsIran orange--text">تجارت بیت کوین در</span>
-                <span to="/BitcoinCity" class="textCard"> 16370 شهر</span>
-                <span class="fontsIran orange--text">و</span>
-                <span to="/BitcoinCountry" class="textCard">248 کشور</span>
-                <span class="fontsIran orange--text">شامل</span>
+                <span to="/BitcoinCity" class="textCard"> 16370 شهر </span>
+                <span class="fontsIran orange--text">و </span>
+                <span to="/BitcoinCountry" class="textCard">248 کشور </span>
+                <span class="fontsIran orange--text">شامل </span>
                 <span to="/RepublicIran" class="textCard">جمهوری اسلامی ایران</span>
             </p>
             <div class="text-xs-center">
@@ -50,26 +50,26 @@
                 </v-card>
             </v-flex>
             <v-layout justify-space-around>
-                <v-flex sm6>
-                    <v-card class="logCard mt-5"  color="grey darken-3">
+                <v-flex sm8 md6 lg4 xl5>
+                    <v-card class="logCard mt-5" style="background-color:#37474F;">
                         <v-card-text class="fontsIran text-xs-center">اخبار صدر سیستم</v-card-text>
-                        <v-divider color="grey"></v-divider>
+                        <v-divider color="white"></v-divider>
 
                         <router-link to="" style="text-decoration:none;"><p class="newsText pr-2 pt-2">بیانیه صدرکریپتو در مورد مقررات و مقررات آینده</p></router-link>
                         <p class="fontIrans text-xs-left mb-0 pl-1">September 28th, 2019</p>
-                        <v-divider color="grey"></v-divider>
+                        <v-divider color="white"></v-divider>
 
                          <router-link to="" style="text-decoration:none;"><p class="newsText pr-2 pt-2">ابزار های بیشتر برای معاملات</p></router-link>
                         <p class="fontIrans text-xs-left mb-0 pl-1">September 27th, 2017</p>
-                        <v-divider color="grey"></v-divider>
+                        <v-divider color="white"></v-divider>
 
                          <router-link to="" style="text-decoration:none;"><p class="newsText pr-2 pt-2">تغییر صفحه ورود به سیستم</p></router-link>
                         <p class="fontIrans text-xs-left mb-0 pl-1">September 25th, 2017</p>
-                        <v-divider color="grey"></v-divider>
+                        <v-divider color="white"></v-divider>
 
                          <router-link to="" style="text-decoration:none;"><p class="newsText pr-2 pt-2">جبران برای کاربران متعلق به تعادل</p></router-link>
                         <p class="fontIrans text-xs-left mb-0 pl-1">July 19th, 2017</p>
-                        <v-divider color="grey"></v-divider>
+                        <v-divider color="white"></v-divider>
 
                          <router-link to="" style="text-decoration:none;"><p class="newsText pr-2 pt-2">بیانیه صدرکریپتو در مورد چنگال سخت ممکن</p></router-link>
                         <p class="fontIrans text-xs-left mb-0 pl-1 pb-1">February 8th, 2019</p>
@@ -122,8 +122,7 @@ export default{
 .newsText{
     font-family:iranian sans;
     font-size:13px;
-    color:
-#BDBDBD;
+    color:#BDBDBD;
 }
 </style>
 
