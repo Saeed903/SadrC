@@ -1,7 +1,7 @@
 <template>
   <v-layout row wrap align-justify justify-center>
     <v-flex d-flex sm8 md6 lg5 xl4>
-      <v-card class="logCard round mt-5">
+      <v-card class="logCard round mt-5" style="background-color:#37474F;">
         <v-card-text>
           <v-form ref="form" v-model="valid"  
             v-if="!loading"
