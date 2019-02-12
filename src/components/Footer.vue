@@ -1,84 +1,87 @@
 <template>
-  <v-footer dark height="auto">
-    <v-card class="flex">
-      <v-icon color="cyan accent-2" size="18px">reply_all</v-icon><span class="newsText text-xs-center">صدرکریپتو ساده ترین راه برای خرید و فروش و مدیریت ارز دیجیتال خود</span>
-      <v-card-title class="">
-        <v-layout row>
+  <div>
+    <v-footer dark height="auto">
+      <v-card class="flex text-xs-center elevation-24" style="background-color:#006064">
+
+        <v-card-text>
+          <v-btn v-for="icon in icons" :key="icon" class="mx-3 white--text" icon>
+          <v-icon size="24px">{{ icon }}</v-icon>
+          </v-btn>
+        </v-card-text>
+        
+     <v-layout row wrap>
           <v-flex>
             <ul>
-              <li class="newsText">درباره ما</li>
-              <li class="newsText">درباره ما</li>
-              <li class="newsText">شغل</li>
-              <li class="newsText">هزینه ها</li>
-              <li class="newsText">اسناد امنیتی</li>
-              <li class="newsText">آمار</li>
-              <li class="newsText">شرایط استفاده</li>
-              <li class="newsText">حریم خصوصی</li>
+              <li><router-link class="routerFooter" to="">درباره ما</router-link></li>
+              <li><router-link class="routerFooter" to="">هزینه ها</router-link></li>
+              <li><router-link class="routerFooter" to="">شرایط استفاده</router-link></li>
+              <li><router-link class="routerFooter" to="">حریم خصوصی</router-link></li>
+              <li><router-link class="routerFooter" to="">قوانین سایت</router-link></li>
             </ul>
           </v-flex>
           <v-flex>
             <ul>
-              <li class="newsText">پشتیبانی</li>
-              <li class="newsText">farzad</li>
-              <li class="newsText">farzad</li>
-              <li class="newsText">farzad</li>
-              <li class="newsText">farzad</li>
+              <li><router-link class="routerFooter"  to="">پشتیبانی</router-link></li>
+              <li><router-link class="routerFooter"  to="">پشتیبانی تماس</router-link></li>
+              <li><router-link class="routerFooter"  to="">راهنما</router-link></li>
+              <li><router-link class="routerFooter"  to="">رمز عبور</router-link></li>
+              <li><router-link class="routerFooter"  to="">پرسش و پاسخ</router-link></li>
             </ul>
           </v-flex>
           <v-flex>
             <ul>
-              <li class="newsText">خدمات</li>
-              <li class="newsText">farzad</li>
-              <li class="newsText">farzad</li>
-              <li class="newsText">farzad</li>
-              <li class="newsText">farzad</li>
+              <li><router-link class="routerFooter"  to="">خدمات</router-link></li>
+              <li><router-link class="routerFooter"  to="">انگلیسی</router-link></li>
+              <li><router-link class="routerFooter"  to="">مستندات</router-link></li>
+              <li><router-link class="routerFooter"  to="">وابسته ها</router-link></li>
+              <li><router-link class="routerFooter"  to="">بلوک اکسپلورر</router-link></li>
             </ul>
           </v-flex>
           
           <v-flex>
             <ul>
-              <li class="newsText">مجازی</li>
-              <li class="newsText">farzad</li>
-              <li class="newsText">farzad</li>
-              <li class="newsText">farzad</li>
-              <li class="newsText">farzad</li>
+              <li><router-link class="routerFooter" to="">مجازی</router-link></li>
+              <li><router-link class="routerFooter" to="">تلگرام</router-link></li>
+              <li><router-link class="routerFooter" to="">اینستاگرام</router-link></li>
+              <li><router-link class="routerFooter" to="">سوروش</router-link></li>
+              <li><router-link class="routerFooter" to="">واتساپ</router-link></li>
             </ul>
           </v-flex>
-       
         </v-layout>
-      </v-card-title>
 
-      <v-card-actions class="grey darken-3 justify-center">
-         &copy;2018 —2019 <span class="footerBottom">sadrCrypto </span>
-      </v-card-actions>
-      <v-divider></v-divider>
-      <v-icon color="cyan accent-2" size="18px">reply_all</v-icon><span class="newsText"> شرایط استفاده از سایت</span>
-      <v-spacer></v-spacer>
-      <v-icon color="cyan accent-2" size="18px">reply_all</v-icon><span class="newsText"> قوانین و مقررات سایت</span>
-    </v-card>
-  </v-footer>
+        <v-divider></v-divider>
+
+        <v-card-text class="white--text">
+          &copy; 2019 — <span class="sadrCrp">copy right.all right reserved by sadrCrypto</span>
+        </v-card-text>
+
+      </v-card>
+    </v-footer>
+  </div>
 </template>
 <script>
   export default {
     data: () => ({
       icons: [
+        'fab fa-instagram',
         'fab fa-facebook',
         'fab fa-twitter',
         'fab fa-google-plus',
-        'fab fa-linkedin',
-        'fab fa-instagram'
       ]
     })
   }
 </script>
 <style>
-.footerBottom{
-  font-family:b nazanin;
-  font-size:18px;
+li{
+  list-style-type:none;
+  text-align:right;
 }
-.newsText{
-    font-family:iranian sans;
-    font-size:13px;
-    color:#BDBDBD;
+.routerFooter{
+  text-decoration:none;
+  color:white;
+  font-family:iranian sans;
+  font-size:13px;
 }
+
 </style>
+
