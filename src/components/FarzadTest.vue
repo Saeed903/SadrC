@@ -50,7 +50,7 @@
           </v-flex>
         </v-layout>
       </v-card-text>
-      <v-card-actions class="grey lighten-2 justify-center">
+      <v-card-actions class="grey lighten-2 justify-center black--text">
         &copy;2018 — <strong>Vuetify</strong>
       </v-card-actions>
     </v-card>
