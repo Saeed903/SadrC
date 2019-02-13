@@ -1,59 +1,57 @@
 <template>
   <div>
-    <v-footer dark height="auto">
-      <v-card class="flex text-xs-center elevation-24" style="background-color:#006064">
-
-        <v-card-text>
-          <v-btn v-for="icon in icons" :key="icon" class="mx-3 white--text" icon>
-          <v-icon size="24px">{{ icon }}</v-icon>
+    <v-footer height="auto">
+      <v-card class="flex" style="background-color:#263238">
+        <v-divider color="grey"></v-divider>
+        <p class="text-xs-center mb-0">
+          <v-btn v-for="icon in icons" :key="icon" class="mx-3" icon>
+          <v-icon color="cyan accent-3" size="25px">{{ icon }}</v-icon>
           </v-btn>
-        </v-card-text>
-        
+          </p>
      <v-layout row wrap>
           <v-flex>
             <ul>
-              <li><router-link class="routerFooter" to="">درباره ما</router-link></li>
-              <li><router-link class="routerFooter" to="">هزینه ها</router-link></li>
-              <li><router-link class="routerFooter" to="">شرایط استفاده</router-link></li>
-              <li><router-link class="routerFooter" to="">حریم خصوصی</router-link></li>
-              <li><router-link class="routerFooter" to="">قوانین سایت</router-link></li>
+              <li class="mb-1"><router-link class="routerFooter" to="">درباره ما</router-link></li>
+              <li class="mb-1"><router-link class="routerText" to="">هزینه ها</router-link></li>
+              <li class="mb-1"><router-link class="routerText" to="">شرایط استفاده</router-link></li>
+              <li class="mb-1"><router-link class="routerText" to="">حریم خصوصی</router-link></li>
+              <li class="mb-1"><router-link class="routerText" to="">قوانین سایت</router-link></li>
             </ul>
           </v-flex>
           <v-flex>
             <ul>
-              <li><router-link class="routerFooter"  to="">پشتیبانی</router-link></li>
-              <li><router-link class="routerFooter"  to="">پشتیبانی تماس</router-link></li>
-              <li><router-link class="routerFooter"  to="">راهنما</router-link></li>
-              <li><router-link class="routerFooter"  to="">رمز عبور</router-link></li>
-              <li><router-link class="routerFooter"  to="">پرسش و پاسخ</router-link></li>
+              <li class="mb-1"><router-link class="routerFooter"  to="">پشتیبانی</router-link></li>
+              <li class="mb-1"><router-link class="routerText"  to="">پشتیبانی تماس</router-link></li>
+              <li class="mb-1"><router-link class="routerText"  to="">راهنما</router-link></li>
+              <li class="mb-1"><router-link class="routerText"  to="">رمز عبور</router-link></li>
+              <li class="mb-1"><router-link class="routerText"  to="">پرسش و پاسخ</router-link></li>
             </ul>
           </v-flex>
           <v-flex>
             <ul>
-              <li><router-link class="routerFooter"  to="">خدمات</router-link></li>
-              <li><router-link class="routerFooter"  to="">انگلیسی</router-link></li>
-              <li><router-link class="routerFooter"  to="">مستندات</router-link></li>
-              <li><router-link class="routerFooter"  to="">وابسته ها</router-link></li>
-              <li><router-link class="routerFooter"  to="">بلوک اکسپلورر</router-link></li>
+              <li class="mb-1"><router-link class="routerFooter"  to="">خدمات</router-link></li>
+              <li class="mb-1"><router-link class="routerText"  to="">انگلیسی</router-link></li>
+              <li class="mb-1"><router-link class="routerText"  to="">مستندات</router-link></li>
+              <li class="mb-1"><router-link class="routerText"  to="">وابسته ها</router-link></li>
+              <li class="mb-1"><router-link class="routerText"  to="">بلوک اکسپلورر</router-link></li>
             </ul>
           </v-flex>
           
           <v-flex>
             <ul>
-              <li><router-link class="routerFooter" to="">مجازی</router-link></li>
-              <li><router-link class="routerFooter" to="">تلگرام</router-link></li>
-              <li><router-link class="routerFooter" to="">اینستاگرام</router-link></li>
-              <li><router-link class="routerFooter" to="">سوروش</router-link></li>
-              <li><router-link class="routerFooter" to="">واتساپ</router-link></li>
+              <li class="mb-1"><router-link class="routerFooter" to="">مجازی</router-link></li>
+              <li class="mb-1"><router-link class="routerText" to="">تلگرام</router-link></li>
+              <li class="mb-1"><router-link class="routerText" to="">اینستاگرام</router-link></li>
+              <li class="mb-1"><router-link class="routerText" to="">سوروش</router-link></li>
+              <li class="mb-1"><router-link class="routerText" to="">واتساپ</router-link></li>
             </ul>
           </v-flex>
         </v-layout>
 
-        <v-divider></v-divider>
 
-        <v-card-text class="white--text">
-          &copy; 2019 — <span class="sadrCrp">copy right.all right reserved by sadrCrypto</span>
-        </v-card-text>
+        <p class="sadrCrp text-xs-center mb-0">
+          &copy; 2019 — <span>all right reserved by sadrCrypto</span>
+        </p>
 
       </v-card>
     </v-footer>
@@ -74,13 +72,26 @@
 <style>
 li{
   list-style-type:none;
-  text-align:right;
+  margin-right:55px;
 }
 .routerFooter{
   text-decoration:none;
   color:white;
   font-family:iranian sans;
   font-size:13px;
+  text-align:right;
+}
+.routerText{
+  text-decoration:none;
+  color:#B0BEC5;
+  text-align:right;
+  font-family:iranian sans;
+  font-size:13px;
+}
+.sadrCrp{
+  font-family:iranian sans;
+  font-size:15px;
+  color:#B0BEC5;
 }
 
 </style>
