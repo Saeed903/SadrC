@@ -224,7 +224,8 @@ export default {
 }
 .texts{
     font-family: Iranian Sans;
-    background-color:#757575;
+    background-color:#757575
+    ;
 }
 .link{
     text-decoration: none;

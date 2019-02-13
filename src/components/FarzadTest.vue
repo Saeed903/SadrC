@@ -1,79 +1,44 @@
 <template>
-  <v-footer height="auto">
-    <v-card flat tile>
-      <v-card-title class="teal white--text">
-        <strong class="subheading">Get connected with us on social networks!</strong>
-        <v-spacer></v-spacer>
-        <v-btn
-          v-for="icon in icons"
-          :key="icon"
-          icon
-          dark
-          class="mx-3"
+  <div>
+    <v-hover>
+      <v-card slot-scope="{ hover }" class="mx-auto" color="grey lighten-4" max-width="600">
+        <div style="background-color:grey;">
+          <v-card-text class="white--text">farzad afsari</v-card-text>
+          <v-card-text class="white--text">farzad afsari</v-card-text>
+          <v-card-text class="white--text">farzad afsari</v-card-text>
+          <v-card-text class="white--text">farzad afsari</v-card-text>
+          <v-card-text class="white--text">farzad afsari</v-card-text>
+          <v-card-text class="white--text">farzad afsari</v-card-text>
+          <v-card-text class="white--text">farzad afsari</v-card-text>
+          <v-card-text class="white--text">farzad afsari</v-card-text>
+          <v-card-text class="white--text">farzad afsari</v-card-text>
+          <v-card-text class="white--text">farzad afsari</v-card-text>
+        </div>
+        <v-expand-transition>
+        <div
+        v-if="hover"
+        class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal display-3 white--text"
+        style="height: 100%;"
         >
-          <v-icon size="24px">{{ icon }}</v-icon>
-        </v-btn>
-      </v-card-title>
-      <v-card-text class="grey lighten-3">
-        <v-layout>
-          <v-flex
-            v-for="(col, i) in rows"
-            :key="i"
-            xs3
-          >
-            <span class="body-2 black--text" v-text="col.title.toUpperCase()"/>
-            <div
-              v-for="(child, i) in col.children"
-              :key="i"
-              v-text="child"
-              class="black--text"
-            />
-          </v-flex>
-          <v-flex xs3 layout column>
-            <span class="body-2">CONTACT</span>
-            <div class="black--text">
-              <v-icon size="18px" class="mr-3 black--text">fas fa-home</v-icon>
-              New York, NY 10012, US
-            </div>
-            <div class="black--text">
-              <v-icon size="18px" class="mr-3">fas fa-envelope</v-icon>
-              info@example.com
-            </div>
-            <div class="black--text">
-              <v-icon size="18px" class="mr-3">fas fa-phone</v-icon>
-              + 01 234 567 88
-            </div>
-            <div class="black--text">
-              <v-icon size="18px" class="mr-3">fas fa-print</v-icon>
-              + 01 234 567 89
-            </div>
-          </v-flex>
-        </v-layout>
-      </v-card-text>
-      <v-card-actions class="grey lighten-2 justify-center black--text">
-        &copy;2018 — <strong>Vuetify</strong>
-      </v-card-actions>
-    </v-card>
-  </v-footer>
+        farzad afsari
+        </div>
+        </v-expand-transition>
+      </v-card>
+    </v-hover>
+  </div>
 </template>
 <script>
-  export default {
-    data: () => ({
-      icons: ['fab fa-facebook', 'fab fa-twitter', 'fab fa-google-plus', 'fab fa-linkedin', 'fab fa-instagram'],
-      rows: [
-        {
-          title: 'Company Name',
-          children: ['Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit']
-        },
-        {
-          title: 'Products',
-          children: ['MDBootstrap', 'MDWordPress', 'BrandFlow', 'Bootstrap Angular']
-        },
-        {
-          title: 'Useful Links',
-          children: ['Your account', 'Become an Affiliate', 'Shipping Rates', 'Helper']
-        }
-      ]
-    })
-  }
+export default {
+  
+}
 </script>
+<style>
+.v-card--reveal {
+  align-items: center;
+  bottom: 0;
+  justify-content: center;
+  opacity: .5;
+  position: absolute;
+  width: 100%;
+}
+</style>

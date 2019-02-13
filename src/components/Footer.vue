@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-footer height="auto">
+    <v-footer height="auto" class="mt-5">
       <v-card class="flex" style="background-color:#263238">
         <v-divider color="grey"></v-divider>
         <p class="text-xs-center mb-0">
