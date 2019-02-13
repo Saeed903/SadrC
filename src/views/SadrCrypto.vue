@@ -33,16 +33,15 @@
         </v-flex>
 
         <v-flex pt-0>
-            <v-card height="100%" color="grey darken-1">
+            <v-card height="100%" class="elevation-20" color="grey darken-3">
                 <v-card-text class="fontsIran text-xs-center ">خرید بیت کوین آنلاین در جمهوری اسلامی ایران</v-card-text>
             </v-card>
             <v-card class="elevation-24">
                 <Advertise></Advertise>
             </v-card>
             </v-flex>
-
             <v-flex>
-                <v-card color="grey darken-1">
+                <v-card color="grey darken-3" class="elevation-20">
                     <v-card-text class="fontsIran text-xs-center ">فروش بیت کوین آنلاین در جمهوری اسلامی ایران</v-card-text>
                 </v-card>
                 <v-card class="elevation-24">
