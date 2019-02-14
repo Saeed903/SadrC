@@ -3,7 +3,7 @@
         <v-layout  justify-space-around>
             <v-flex>
                 <v-card-text class="text-xs-center">
-                     <v-icon size="40px" color="cyan accent-2">help_outline</v-icon><br>
+                     <v-icon size="40px" color="cyan accent-3">help_outline</v-icon><br>
                     <span class="titled">سوالات متداول</span><br>
                     <span class="text" color="red">در این صفحه به تمام سوالات شما جواب داده می شود چه یک کاربر جدید باشید چه یک معامله گر تازه وارد.اگر کاربر جدید هستید می توانید از این راهنمایی های این صفحه استفاده کنید.اگر میخواهید یک معامله گر شوید راهنمای آنلاین ارزهای دیجیتال ما برای شما مناسب است.شما همچنین می توانید یک سوال در انجمن های ما بپرسید یا یک بلیط پشتیبانی را برای تماس با پشتیبانی ما باز کنید.</span>
                 </v-card-text>
@@ -13,21 +13,21 @@
                 <v-layout row wrap>
                     <v-flex>
                         <v-card-text class="text-xs-center">
-                        <v-icon large>local_shipping</v-icon><br>
+                        <v-icon color="cyan accent-3" large>local_shipping</v-icon><br>
                         <router-link class="textCard" to="">یک بلیط پشتیبانی را باز کنید</router-link>
                         </v-card-text>
                     </v-flex>
 
                     <v-flex>
                         <v-card-text class="text-xs-center">
-                        <v-icon large>group</v-icon><br>
+                        <v-icon color="cyan accent-3" large>group</v-icon><br>
                         <router-link class="textCard" to="">پست در انجمن ما</router-link>
                         </v-card-text>
                     </v-flex>
 
                     <v-flex>
                         <v-card-text class="text-xs-center">
-                        <v-icon large>fab fa-twitter</v-icon><br>
+                        <v-icon color="cyan accent-3" large>fab fa-twitter</v-icon><br>
                         <router-link class="textCard" to="">در توییت ما بنویسید</router-link>
                         </v-card-text>
                     </v-flex>
@@ -39,6 +39,7 @@
                         v-for="(item,i) in items"
                         :key="i"
                         expand-icon="mdi-menu-down"
+                        style="background-color:#37474F;"
                         >
                         <div class="text text-xs-right" slot="header">{{item.title}}</div>
                             <v-card>
@@ -48,7 +49,7 @@
                     </v-expansion-panel>
                 
                 <v-card-text class="text-xs-center">
-                    <p class="text">در مورد ارز دیجیتال</p>
+                    <p class="describeText">در مورد ارز دیجیتال</p>
                 </v-card-text>
                 <div>
                     <v-expansion-panel>
@@ -56,17 +57,18 @@
                         v-for="(text,i) in texts"
                         :key="i"
                         expand-icon="mdi-menu-down"
+                        style="background-color:#37474F;"
                         >
                         <div class="text text-xs-right" slot="header">{{text.title}}</div>
                         <v-card>
-                            <v-card-text class="text text-xs-right">{{text.persianTitle}}</v-card-text>
+                            <v-card-text class="texts text-xs-right">{{text.persianTitle}}</v-card-text>
                         </v-card>
                         </v-expansion-panel-content>
                     </v-expansion-panel>
                 </div>
 
                 <v-card-text class="help text-xs-center">
-                    <p class="text">استفاده از صدرکریپتو</p>
+                    <p class="describeText">استفاده از صدرکریپتو</p>
                 </v-card-text>
 
                 
@@ -75,16 +77,17 @@
                         v-for="(use,i) in uses"
                         :key="i"
                         expand-icon="mdi-menu-down"
+                        style="background-color:#37474F;"
                         >
                         <div class="text text-xs-right" slot="header">{{use.title}}</div>
                         <v-card>
-                        <v-card-text class="text text-xs-center">{{use.persianTitle}}</v-card-text>
+                        <v-card-text class="texts text-xs-center">{{use.persianTitle}}</v-card-text>
                         </v-card>
                         </v-expansion-panel-content>
                     </v-expansion-panel>
             
                 <v-card-text class="help text-xs-center">
-                    <p class="text">مشکلات و راه حل های مشترک</p>
+                    <p class="describeText">مشکلات و راه حل های مشترک</p>
                 </v-card-text>
                 
                     <v-expansion-panel>
@@ -92,18 +95,19 @@
                         v-for="(problem,i) in problems"
                         :key="i"
                         expand-icon="mdi-menu-down"
+                        style="background-color:#37474F;"
                         >
                         <div class="text text-xs-right" slot="header">{{problem.title}}</div>
                         <v-card
                         
                         >
-                        <v-card-text class="text text-xs-right">{{problem.persianTitle}}</v-card-text>
+                        <v-card-text class="texts text-xs-right">{{problem.persianTitle}}</v-card-text>
                         </v-card>
                         </v-expansion-panel-content>
                     </v-expansion-panel>
                 
                 <v-card-text class="help text-xs-center">
-                    <p class="text">ایجاد تبلیغات و تجارت بیت کوین</p>
+                    <p class="describeText">ایجاد تبلیغات و تجارت بیت کوین</p>
                 </v-card-text>
 
                 <v-card-text>
@@ -112,12 +116,13 @@
                         v-for="(trade,i) in trades"
                         :key="i"
                         expand-icon="mdi-menu-down"
+                        style="background-color:#37474F;"
                         >
                         <div class="text text-xs-right" slot="header">{{trade.title}}</div>
                         <v-card
                         
                         >
-                        <v-card-text class="text text-xs-right">{{trade.persianTitle}}</v-card-text>
+                        <v-card-text class="texts text-xs-right">{{trade.persianTitle}}</v-card-text>
                         </v-card>
                         </v-expansion-panel-content>
                     </v-expansion-panel>
@@ -148,10 +153,15 @@
                 </v-card-text>
             </v-flex>
         </v-layout>
+        <Footer></Footer>
     </v-container>
 </template>
 <script>
+import Footer from './../components/Footer.vue'
 export default {
+    components:{
+        Footer
+    },
     data () {
         return{
             items:[
@@ -222,10 +232,16 @@ export default {
 .text{
     font-family: Iranian Sans;
 }
+.describeText{
+    font-family:iranian sans;
+    font-size:19px;
+}
 .texts{
     font-family: Iranian Sans;
-    background-color:#757575
-    ;
+    background-color:#BDBDBD;
+    color:black;
+    text-align:justify;
+    text-indent:15px;
 }
 .link{
     text-decoration: none;
@@ -234,10 +250,10 @@ export default {
 }
 .textCard{
     font-family:'iranian sans';
-    color:#00E5FF;
+    color:#BDBDBD;
     text-decoration:none;
 }
 .textCard:hover{
-    color:#18FFFF;
+    color:#E0E0E0;
 }
 </style>
