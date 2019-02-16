@@ -28,7 +28,8 @@
             </ul>
           </v-flex>
           <v-flex>
-            <ul>
+            <ul> 
+              
               <li class="mb-1"><router-link class="routerFooter"  to="">خدمات</router-link></li>
               <li class="mb-1"><router-link class="routerText"  to="">انگلیسی</router-link></li>
               <li class="mb-1"><router-link class="routerText"  to="">مستندات</router-link></li>
