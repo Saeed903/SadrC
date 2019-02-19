@@ -25,6 +25,15 @@
         </v-expand-transition>
       </v-card>
     </v-hover>
+     <v-card-text>
+            <v-icon size="40px" color="cyan accent-2">help_outline</v-icon><br>
+            
+
+        </v-card-text>
+        <div style="font-size:25px">
+          <p  style="font-size:10px">سوالات متداول</p><br>
+          <p>در این صفحه به تمام سوالات شما جواب داده می شود چه یک کاربر جدید باشید چه یک معامله گر تازه وارد.اگر کاربر جدید هستید می توانید از این راهنمایی های این صفحه استفاده کنید.اگر میخواهید یک معامله گر شوید راهنمای آنلاین ارزهای دیجیتال ما برای شما مناسب است.شما همچنین می توانید یک سوال در انجمن های ما بپرسید یا یک بلیط پشتیبانی را برای تماس با پشتیبانی ما باز کنید.</p>
+        </div>
   </div>
 </template>
 <script>
@@ -32,7 +41,7 @@ export default {
   
 }
 </script>
-<style>
+<style scoped>
 .v-card--reveal {
   align-items: center;
   bottom: 0;
