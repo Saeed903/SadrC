@@ -2,34 +2,34 @@
     <div>
     <v-flex>
         <v-card-text class="text-xs-center">
-            <v-icon size="40px" color="cyan accent-3">help_outline</v-icon><br>
-            <span class="titled">سوالات متداول</span><br>
-            <span class="text">در این صفحه به تمام سوالات شما جواب داده می شود چه یک کاربر جدید باشید چه یک معامله گر تازه وارد.اگر کاربر جدید هستید می توانید از این راهنمایی های این صفحه استفاده کنید.اگر میخواهید یک معامله گر شوید راهنمای آنلاین ارزهای دیجیتال ما برای شما مناسب است.شما همچنین می توانید یک سوال در انجمن های ما بپرسید یا یک بلیط پشتیبانی را برای تماس با پشتیبانی ما باز کنید.</span>
+            <v-icon size="40px" color="cyan accent-2">help_outline</v-icon><br>
+            <p class="titled">سوالات متداول</p><br>
+            <p class="describePage">در این صفحه به تمام سوالات شما جواب داده می شود چه یک کاربر جدید باشید چه یک معامله گر تازه وارد.اگر کاربر جدید هستید می توانید از این راهنمایی های این صفحه استفاده کنید.اگر میخواهید یک معامله گر شوید راهنمای آنلاین ارزهای دیجیتال ما برای شما مناسب است.شما همچنین می توانید یک سوال در انجمن های ما بپرسید یا یک بلیط پشتیبانی را برای تماس با پشتیبانی ما باز کنید.</p>
         </v-card-text>
 
         <v-layout row wrap>
             <v-flex>
                 <v-card-text class="text-xs-center">
-                    <v-icon color="cyan accent-3" large>email</v-icon><br>
+                    <v-icon color="cyan accent-2" large>email</v-icon><br>
                     <router-link class="textCard" to="SupportCreateNewTicket">یک بلیط پشتیبانی را باز کنید</router-link>
                 </v-card-text>
             </v-flex>
             <v-flex>
                 <v-card-text class="text-xs-center">
-                    <v-icon color="cyan accent-3" large>group</v-icon><br>
+                    <v-icon color="cyan accent-2" large>group</v-icon><br>
                     <router-link class="textCard" to="ErrorAuth">پست در انجمن ما</router-link>
                 </v-card-text>
             </v-flex>
             <v-flex>
                 <v-card-text class="text-xs-center">
-                    <v-icon color="cyan accent-3" large>fab fa-twitter</v-icon><br>
+                    <v-icon color="cyan accent-2" large>fab fa-twitter</v-icon><br>
                     <router-link class="textCard" to="">در توییت ما بنویسید</router-link>
                 </v-card-text>
             </v-flex>
         </v-layout>
 
                 
-                <v-expansion-panel class="md6">
+                <v-expansion-panel>
                     <v-expansion-panel-content
                     v-for="(item,i) in items"
                     :key="i"
@@ -121,24 +121,24 @@
 
     <v-card-text class="describeText text-xs-center">واژه نامه صدرکریپتو</v-card-text>
 
-    <v-card-text class="text">
-    <p class="describeText text-xs-center">آدرس</p>
-    <span class="describeTexts text-xs-left">یک آدرس بیت کوین به نظر می رسد در امتداد یک رشته برای حروف تصادفی و numbers.addresses استفاده می شود زمانی که شما می خواهید برای ارسال و یا دریافت کیف پول bitcoins. حداقل یک دریافت کننده و یک ارسال آدرس. هنگامی که شما می خواهید برای دریافت بیت کوین به کیف پول شما نیاز به دادن فرستنده آدرس کیف پول خود را دریافت کنید.</span>
+    <v-card-text class="text-xs-center">
+    <p class="bottomText">آدرس</p>
+    <p class="describePage mb-0" style="text-align:justify;">یک آدرس بیت کوین به نظر می رسد در امتداد یک رشته برای حروف تصادفی و numbers.addresses استفاده می شود زمانی که شما می خواهید برای ارسال و یا دریافت کیف پول bitcoins. حداقل یک دریافت کننده و یک ارسال آدرس. هنگامی که شما می خواهید برای دریافت بیت کوین به کیف پول شما نیاز به دادن فرستنده آدرس کیف پول خود را دریافت کنید.</p>
     </v-card-text>
 
-    <v-card-text class="text">
-    <p class="describeText text-xs-center">AMLوKYC</p>
-    <span class="describeTexts">ضد پولشویی و دانستن مشتری شما، یک گروه از قوانین در ایران است که به بیت کوین فروشندگان نیاز دارند که مشتریان خود را بشناسند. معامله گران خاصی از شناسایی شما برای مطابقت با این قوانین درخواست خواهند کرد. کشورهای دیگر در سراسر جهان ممکن است قوانین مشابهی داشته باشند. الزامات</span>
+    <v-card-text class="text-xs-center">
+    <p class="bottomText">AMLوKYC</p>
+    <p class="describePage mb-0" style="text-align:justify;">ضد پولشویی و دانستن مشتری شما، یک گروه از قوانین در ایران است که به بیت کوین فروشندگان نیاز دارند که مشتریان خود را بشناسند. معامله گران خاصی از شناسایی شما برای مطابقت با این قوانین درخواست خواهند کرد. کشورهای دیگر در سراسر جهان ممکن است قوانین مشابهی داشته باشند. الزامات</p>
     </v-card-text>
 
-    <v-card-text class="text">
-    <p class="describeText text-xs-center">بلاک چین</p>
-    <span class="describeTexts">بلاکچین تکنولوژی پشت بیت کوین است.این چیزی که باعث می شود آن کار کند. تراکنش های بیت کوین به blockchain فرستاده می شوند تا معدنچیان بتوانند آنها را در بلوک هایی قرار دهند که منزل شما هستند. یک بلوک معادل معامله شما معدن است که به بلوکچین اضافه شده است معامله دریافت یک تاییدیه</span>
+    <v-card-text class="text-xs-center">
+    <p class="bottomText">بلاک چین</p>
+    <p class="describePage mb-0" style="text-align:justify;">بلاکچین تکنولوژی پشت بیت کوین است.این چیزی که باعث می شود آن کار کند. تراکنش های بیت کوین به blockchain فرستاده می شوند تا معدنچیان بتوانند آنها را در بلوک هایی قرار دهند که منزل شما هستند. یک بلوک معادل معامله شما معدن است که به بلوکچین اضافه شده است معامله دریافت یک تاییدیه</p>
     </v-card-text>
 
-    <v-card-text class="text">
-    <p class="describeText text-xs-center">اطلاعات بلاک چین</p>
-    <span class="describeTexts">طلاعات بلوکچین یکی از وب سایت های بسیاری است که به عنوان explocers blockchain کار می کنند.این وب سایت ها به شما اجازه می دهد بلوک چینی را ببینید و در مورد آن چه در جریان است. در شرایط عملی این امکان وجود دارد که معاملات خود را مشاهده کنید و ببینید آیا آنها تایید شده یا نه. همچنین می توانید ببینید که چند راهکار غیرقانونی وجود دارد، هرچه بیشتر طول بکشد تا تراکنش شما تایید شود</span>
+    <v-card-text class="text-xs-center">
+    <p class="bottomText">اطلاعات بلاک چین</p>
+    <p class="describePage mb-0" style="text-align:justify;">طلاعات بلوکچین یکی از وب سایت های بسیاری است که به عنوان explocers blockchain کار می کنند.این وب سایت ها به شما اجازه می دهد بلوک چینی را ببینید و در مورد آن چه در جریان است. در شرایط عملی این امکان وجود دارد که معاملات خود را مشاهده کنید و ببینید آیا آنها تایید شده یا نه. همچنین می توانید ببینید که چند راهکار غیرقانونی وجود دارد، هرچه بیشتر طول بکشد تا تراکنش شما تایید شود</p>
     </v-card-text>
     </v-flex>
     <Footer></Footer>
@@ -218,12 +218,21 @@ export default {
     font-family:iranian sans;
     font-size:14px;
 }
+.bottomText{
+    font-family:iranian sans;
+    font-size:16px;
+    color:white;
+}
 .titled{
     font-family: Iranian Sans;
     font-size: 28px;
-    text-align:justify;
 }
 .text{
+    font-family: Iranian Sans;
+    color:#BDBDBD;
+    font-size:15px;
+}
+.describePage{
     font-family: Iranian Sans;
     color:#BDBDBD;
     font-size:15px;
