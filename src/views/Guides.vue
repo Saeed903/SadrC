@@ -1,16 +1,16 @@
 <template>
     <div>
-        <v-card-text class="text-xs-center fontIran">
-            <v-icon size="50px" color="cyan accent-2">description</v-icon>
-            <p class="titled">راهنمایی در صدرکریپتو</p>
+        <v-card-text class="text-xs-center fontIran mt-5">
+            <v-icon size="50px" color="cyan accent-2">help_outline</v-icon>
+            <p class="titled mb-5">راهنمایی در صدرکریپتو</p>
         </v-card-text>
 
         <v-layout row wrap>
             <v-flex v-for= "(help, index) in Helps" :key="index"  xs12 sm6 md6 lg6 xl6 >
                 <router-link class="router" :to="help.path" >
-                    <v-card class="elevation-24" height="100%">
+                    <v-card class="logCard" height="100%" style="background-color:#37474F;">
                         <v-card-text class="text-xs-center">
-                            <p class="titled">{{help.title}}</p>
+                            <p class="boxText">{{help.title}}</p>
                             <p class="fontIran">{{help.type}}</p>
                         </v-card-text>
                     </v-card>
@@ -44,9 +44,12 @@ export default {
 <style scoped>
 .titled{
   font-family: Iranian Sans;
-  font-size:18px; 
+  font-size:17px; 
 }
-
+.boxText{
+    font-family: Iranian Sans;
+    font-size:17px; 
+}
 .headlined{
   font-family: Iranian Sans;
   font-size: 18px; 
@@ -58,5 +61,11 @@ font-size:12px;
 .router{
     text-decoration: none;
 }
-
+.logCard{
+  border:1px solid #18FFFF;
+  box-shadow:0px 0px 10px 1px #18FFFF;
+}
+.logCard:hover{
+  box-shadow:0px 0px 25px 1px #18ffff;
+}
 </style>
