@@ -6,35 +6,94 @@
         </v-card-text>
 
         <v-layout row wrap>
-            <v-flex v-for= "(help, index) in Helps" :key="index"  xs12 sm6 md6 lg6 xl6 >
-                <router-link class="router" :to="help.path" >
+            <v-flex xs12 sm6 md6 lg6>
+                <router-link class="router" to="">
                     <v-card class="logCard" height="100%" style="background-color:#37474F;">
                         <v-card-text class="text-xs-center">
-                            <p class="boxText">{{help.title}}</p>
-                            <p class="fontIran">{{help.type}}</p>
+                            <p class="boxText">چگونه بیت کوین بخریم؟</p>
+                            <p class="fontIran">خودتان را با راهنمایی های ما راحت کنید</p>
+                        </v-card-text>
+                    </v-card>
+                </router-link>
+            </v-flex>
+            <v-flex xs12 sm6 md6 lg6>
+                <router-link class="router" to="">
+                    <v-card class="logCard" height="100%" style="background-color:#37474F;">
+                        <v-card-text class="text-xs-center">
+                            <p class="boxText">چگونه بیت کوین بفروشیم؟</p>
+                        </v-card-text>
+                    </v-card>
+                </router-link>
+            </v-flex>
+            <v-flex xs12 sm6 md6 lg6>
+                <router-link class="router" to="">
+                    <v-card class="logCard" height="100%" style="background-color:#37474F;">
+                        <v-card-text class="text-xs-center">
+                            <p class="boxText">راهنمای امنیت</p>
+                            <p class="fontIran">راهنمای نگه داشتن خود و پول خود را امن نگه دارید</p>
+                        </v-card-text>
+                    </v-card>
+                </router-link>
+            </v-flex>
+            <v-flex xs12 sm6 md6 lg6>
+                <router-link class="router" to="">
+                    <v-card class="logCard" height="100%" style="background-color:#37474F;">
+                        <v-card-text class="text-xs-center">
+                            <p class="boxText">مقدمه ای برای تجارت بیت کوین آنلاین</p>
+                            <p class="fontIran">مقدمه راهنمایی برای تجارت آنلاین بیت کوین در صدر کریپتو</p>
+                        </v-card-text>
+                    </v-card>
+                </router-link>
+            </v-flex>
+            <v-flex xs12 sm6 md6 lg6>
+                <router-link class="router" to="">
+                    <v-card class="logCard" height="100%" style="background-color:#37474F;">
+                        <v-card-text class="text-xs-center">
+                            <p class="boxText">راهنمایی در مورد چگونگی تجارت بیت کوین در محلی</p>
+                            <p class="fontIran">راهنمای کوتاه در مورد نحوه فروش بیت کوین به صورت محلی برای پول نقد</p>
+                        </v-card-text>
+                    </v-card>
+                </router-link>
+            </v-flex>
+            <v-flex xs12 sm6 md6 lg6>
+                <router-link class="router" to="">
+                    <v-card class="logCard" height="100%" style="background-color:#37474F;">
+                        <v-card-text class="text-xs-center">
+                            <p class="boxText pt-2">معادلات قیمت تبلیغات 101 </p>
+                            <p class="fontIran pt-2">اصول اولیه قیمت تبلیغات را یاد بگیرید</p>
+                        </v-card-text>
+                    </v-card>
+                </router-link>
+            </v-flex>
+            <v-flex xs12 sm6 md6 lg6>
+                <router-link class="router" to="">
+                    <v-card class="logCard" height="100%" style="background-color:#37474F;">
+                        <v-card-text class="text-xs-center">
+                            <p class="boxText">مستندات آی پی</p>
+                            <p class="fontIran">از آی پی استفاده کنید تا برنامه های خودتان را بسازید و به تجارت خودکار بپردازید</p>
+                        </v-card-text>
+                    </v-card>
+                </router-link>
+            </v-flex>
+            <v-flex xs12 sm6 md6 lg6>
+                <router-link class="router" to="">
+                    <v-card class="logCard" height="100%" style="background-color:#37474F;">
+                        <v-card-text class="text-xs-center">
+                            <p class="boxText">بیت کوین ها را در وب سایت خود بپذیرید</p>
+                            <p class="fontIran">نحوه استفاده از آی پی برای پذیرش بیت کوین ها در فروشگاه وب شما چیست؟</p>
                         </v-card-text>
                     </v-card>
                 </router-link>
             </v-flex>
         </v-layout>
+
         <Footer></Footer>
     </div>
 </template>
 <script>
 import Footer from './../components/Footer.vue'
 export default {
-    data : () => ({
-        Helps:[
-            {title:'چگونه بیت کوین بخریم؟', type:'خودتان را با راهنمایی های ما راحت کنید', path: '/'},
-            {title:'چگونه بیت کوین بفروشیم؟', type:'چگونه بیت کوین خود را به سرعت و با خیال راحت بفروشید؟', path: '' },
-            {title:'راهنمای امنیت', type:'راهنمای نگه داشتن خود و پول خود را امن نگه دارید', path: ''},
-            {title:'مقدمه ای برای تجارت بیت کوین آنلاین', type:'مقدمه راهنمایی برای تجارت آنلاین بیت کوین در صدر کریپتو', path: ''},
-            {title:'راهنمایی در مورد چگونگی تجارت بیت کوین در محلی', type:'راهنمای کوتاه در مورد نحوه فروش بیت کوین به صورت محلی برای پول نقد', path: ''},
-            {title:'معادلات قیمت تبلیغات 101 ', type:'اصول اولیه قیمت تبلیغات را یاد بگیرید', path: ''},
-            {title:'مستندات آی پی', type:'از آی پی استفاده کنید تا برنامه های خودتان را بسازید و به تجارت خودکار بپردازید', path: ''},
-            {title:'بیت کوین ها را در وب سایت خود بپذیرید', type:'نحوه استفاده از آی پی برای پذیرش بیت کوین ها در فروشگاه وب شما چیست؟', path: ''},
-        ]
-    }),
+
     components:{
         Footer,
     }
