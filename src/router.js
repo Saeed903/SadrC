@@ -67,7 +67,7 @@ import EditProfilePersonalData from './views/EditProfilePersonalData.vue'
 import Blog from './views/Blog.vue'
 import EditProfileDeleteAccount from './views/EditProfileDeleteAccount.vue'
 import CoinList from './views/CoinList.vue'
-import FarzadTest from './components/FarzadTest.vue'
+import FarzadTest from './views/FarzadTest.vue'
 Vue.use(Router);
 
 const authFunction = function(to, from, next){
