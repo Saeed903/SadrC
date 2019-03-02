@@ -90,6 +90,10 @@ export default new Router({
   routes: [
  
     {
+      path: '/SaeedTest',
+      name: 'SaeedTest',
+      component: SaeedTest,
+    },{
       path: '/CoinList',
       name: 'CoinList',
       component: CoinList,
