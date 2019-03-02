@@ -101,6 +101,7 @@ export default{
         Footer,
         FormSell
     }
+    
   };
 </script>
 <style scoped>

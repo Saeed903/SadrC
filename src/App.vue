@@ -9,7 +9,7 @@
       class="hidden-md-and-up"
       >
         <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
-          <v-list class="logCard">
+          <v-list class="logCard" style="background-color:#37474F;">
             <v-list-tile v-for="(item,i) in items" :key="i" @click="routing(item.path)">
               <v-icon color="cyan accent-3" dark>{{item.icon}}</v-icon>
               <v-list-tile-title class="menuHover pr-3">{{item.title}}</v-list-tile-title>
