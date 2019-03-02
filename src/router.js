@@ -68,6 +68,8 @@ import Blog from './views/Blog.vue'
 import EditProfileDeleteAccount from './views/EditProfileDeleteAccount.vue'
 import CoinList from './views/CoinList.vue'
 import FarzadTest from './views/FarzadTest.vue'
+import AdvertiseApollo from './components/AdvertiseApollo.vue'
+
 Vue.use(Router);
 
 const authFunction = function(to, from, next){
@@ -90,9 +92,9 @@ export default new Router({
   routes: [
  
     {
-      path: '/SaeedTest',
-      name: 'SaeedTest',
-      component: SaeedTest,
+      path: '/AdvertiseApollo',
+      name: 'AdvertiseApollo',
+      component: AdvertiseApollo,
     },{
       path: '/CoinList',
       name: 'CoinList',
