@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <v-hover>
+    <div>
+        <v-hover>
       <v-card slot-scope="{ hover }" class="mx-auto" color="grey lighten-4" max-width="600">
         <div style="background-color:grey;">
           <v-card-text class="white--text">farzad afsari</v-card-text>
@@ -25,39 +25,10 @@
         </v-expand-transition>
       </v-card>
     </v-hover>
-
-    <v-layout>
-        <v-flex>
-            <v-card>
-                <p>farzad</p>
-            </v-card>
-        </v-flex>
-        <v-flex>
-            <v-card>
-                <p>farzad</p>
-            </v-card>
-        </v-flex>
-        <v-flex>
-            <v-card>
-                <p>farzad</p>
-            </v-card>
-        </v-flex>
-    </v-layout>
-
-  </div>
+    </div>
 </template>
 <script>
 export default {
-
+    
 }
 </script>
-<style scoped>
-.v-card--reveal {
-  align-items: center;
-  bottom: 0;
-  justify-content: center;
-  opacity: .5;
-  position: absolute;
-  width: 100%;
-}
-</style>

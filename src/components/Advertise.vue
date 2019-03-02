@@ -1,20 +1,24 @@
 <template >
 <div>
   <v-data-table
-      class="table"
+      class="table elevation-20 mb-5"
       :headers="headers"
       :items="publishAdvertises"
       :pagination.sync="pagination"
       :total-items="totalAdvertise"
       :loading="loadingPublishAdvertises"
+      style="background-color:#37474F;"
+      
      >
+     
       <template v-if="!loadingPublishAdvertises" slot="items" slot-scope="props">
         <td>{{ props.item.id }}({{props.item.user.userName}},{{props.item.user.mobile}})</td>
-        <td >{{ props.item.introduction }}</td>
-        <td >{{ props.item.margin }}</td>
-        <td ><v-btn class="primary elevation-5" @click="buy()" to="Order">خرید</v-btn></td>
+        <td>{{ props.item.introduction }}</td>
+        <td>{{ props.item.margin }}</td>
+        <td><v-btn class="elevation-20" outline color="cyan accent-2"  @click="buy()" to="Order">خرید</v-btn></td>
       </template>
     </v-data-table>
+    
 </div>
 </template>
 <script>
@@ -109,7 +113,6 @@ export default{
 <style scoped>
 .table{
     font-family: Iranian Sans;
-   background-color:rgb(30, 38, 52);
 }
 
 

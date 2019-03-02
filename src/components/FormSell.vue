@@ -1,10 +1,9 @@
 <template>
   <div>
-     
     <p>{{currency}}</p>
     <v-form ref="form" v-model="valid" lazy-validatio>
       <v-layout row wrap>
-        <v-flex d-flex xs12 sm6 md2 lg2 pt-0>
+        <v-flex d-flex xs12 sm6 md4 lg4 xl3 pt-0>
           <v-autocomplete
           :items="selectCryptoCurrencies"
           v-model="selectCryptoCurrency"
@@ -15,7 +14,7 @@
           >
           </v-autocomplete>
         </v-flex>
-        <v-flex d-flex xs12 sm6 md2 lg2 pt-0>
+        <v-flex d-flex xs12 sm6 md4 lg3 xl 3 pt-0>
           <v-text-field 
             v-model="amount"
             type="number"
@@ -27,34 +26,24 @@
             clearable
           ></v-text-field>
         </v-flex>
-          
-        <v-flex d-flex xs12 sm6 md2 lg2 pt-0>
+  
+          <v-flex d-flex xs12 sm6 md4 lg3 xl3 pt-0>
           <v-autocomplete
-            v-model="offers"
-            :items="offers"
-            label  ="تمام وقت"
-            class="fontsIran"
-            color="cyan accent-2"
-            clearable
-          ></v-autocomplete>
+                :items="selectCountries"
+                v-model="selectCountry"
+                label="کشور"
+                class="fontsIran"
+                color="cyan accent-2" 
+                clearable
+                >
+                </v-autocomplete>
         </v-flex>
-          
-        <v-flex d-flex xs12 sm6 md3 lg3 pt-0>
-          <v-autocomplete
-            v-model="country"
-            :items="country"
-            class="fontsIran"
-            color="cyan accent-2"
-            label="کشور"
-            clearable
-          ></v-autocomplete>
-        </v-flex>
-          
-        <v-flex xs12 sm1 md1 pt-0>
+        
+      <v-flex xs12 sm1 md1 pt-0>
           <v-card-text>
             <v-btn
             :loading="loading3"
-            :disabled="!valid,loading3"
+            :disabled="valid,loading3"
             @click="submit,loader='loading3'"
             color="cyan accent-2"
             class="fontsIran elevation-24"
@@ -77,26 +66,19 @@ import { mapState, mapActions, mapGetters } from 'vuex';
 export default{
     data:() => ({
       valid:false,
-      amount:'',
+      submitted:false,
       loader:null,
       loading3:false,
       amountRules:[
-        v => v.length <= 10 || 'می بایستی مقدار حداکثر تا 10 رقم باشد'
-      ]
+      v => v.length <= 10 || 'می بایستی مقدار حداکثر تا 10 رقم باشد'
+      ],
+      advertise:''
     }),
     methods:{
-        
-        ...mapActions('tradeTypes', { findTradeTypes: 'find'}),
         ...mapActions('countries', { findCountries: 'find'}),
         ...mapActions('cryptoCurrencies', { findCryptCurrencies: 'find'}),
     },
     mounted (){
-        this.findTradeTypes()
-            .then( response => {
-                const tradeType = response.data || response;
-                
-            }),
-        
         this.findCountries()
             .then(response => {
                 const countries = response.data || response;
@@ -107,23 +89,45 @@ export default{
                 const cryptoCurrencies = response.data || response;  
             })
     },
-     watch: {
-      loader () {
-        const l = this.loader
-        this[l] = !this[l]
-
-        setTimeout(() => (this[l] = false), 3000)
-
-        this.loader = null
-      }
-    },
     computed: {
+        ...mapState('countries', { loadingCountries: 'isFindPending'}),
+        ...mapState('cryptoCurrencies', { loadingCryptoCurrencies: 'isFindPending'}),
 
         ...mapGetters('cryptoCurrencies', { findCryptoCurrenciesOnline: 'find'}),
+        ...mapGetters('countries', { findCountriesOnline: 'find' }),
+
+        countries(){
+            return this.findCountriesOnline().data;
+        },
 
         cryptoCurrencies() {
             return this.findCryptoCurrenciesOnline().data;
         },
+
+        selectCountry: {
+            get:function(){
+                var countryModel, country;
+                countryModel = this.countries.find(country => country.Id == this.advertise.countryId);
+
+                if(countryModel !=null ){
+                    country = countryModel.countryName;
+                }
+                return country ;
+            },
+            set:function(selectedCountryName){
+                this.advertise.countryId = this.countries.find(country => country.countryName == selectedCountryName).Id;
+            }
+        },
+  
+
+        selectCountries(){
+            var selected = [];
+            this.countries.map( country => {
+                selected.push(country.countryName);
+            })
+            return selected;
+        },
+        
         selectCryptoCurrencies(){
             var selected = [];
             this.cryptoCurrencies.map(v =>{

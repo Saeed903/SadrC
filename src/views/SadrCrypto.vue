@@ -5,10 +5,10 @@
             <p class="fontsIran text-xs-center orange--text pt-3">فوری . امن . اختصاصی</p>
             <p class="text-xs-center ">
                 <span class="fontsIran orange--text">تجارت بیت کوین در</span>
-                <span to="/BitcoinCity" class="textCard"> 16370 شهر</span>
-                <span class="fontsIran orange--text">و</span>
-                <span to="/BitcoinCountry" class="textCard">248 کشور</span>
-                <span class="fontsIran orange--text">شامل</span>
+                <span to="/BitcoinCity" class="textCard"> 16370 شهر </span>
+                <span class="fontsIran orange--text">و </span>
+                <span to="/BitcoinCountry" class="textCard">248 کشور </span>
+                <span class="fontsIran orange--text">شامل </span>
                 <span to="/RepublicIran" class="textCard">جمهوری اسلامی ایران</span>
             </p>
             <div class="text-xs-center">
@@ -33,47 +33,50 @@
         </v-flex>
 
         <v-flex pt-0>
-            <v-card height="100%" color="grey darken-1">
+            <v-card height="100%" class="elevation-20" color="grey darken-3">
                 <v-card-text class="fontsIran text-xs-center ">خرید بیت کوین آنلاین در جمهوری اسلامی ایران</v-card-text>
             </v-card>
             <v-card class="elevation-24">
                 <Advertise></Advertise>
             </v-card>
             </v-flex>
-
             <v-flex>
-                <v-card color="grey darken-1">
+                <v-card color="grey darken-3" class="elevation-20">
                     <v-card-text class="fontsIran text-xs-center ">فروش بیت کوین آنلاین در جمهوری اسلامی ایران</v-card-text>
                 </v-card>
                 <v-card class="elevation-24">
                     <Advertise></Advertise>
                 </v-card>
             </v-flex>
+            <v-layout justify-space-around>
+                <v-flex sm8 md6 lg4 xl5>
+                    <v-card class="logCard mt-5" style="background-color:#37474F;">
+                        <v-card-text class="fontsIran text-xs-center">اخبار صدر سیستم</v-card-text>
+                        <v-divider color="white"></v-divider>
 
-            <v-flex>
-                    <v-card class="text-xs-center elevation-24">
-                        <v-card-text class="fontIran text-xs-center grey darken-1">اخبار صدر سیستم</v-card-text>
-                        <v-divider></v-divider>
+                        <router-link to="" style="text-decoration:none;"><p class="newsText pr-2 pt-2">بیانیه صدرکریپتو در مورد مقررات و مقررات آینده</p></router-link>
+                        <p class="fontIrans text-xs-left mb-0 pl-1">September 28th, 2019</p>
+                        <v-divider color="white"></v-divider>
 
-                        <v-card-text class="contant text-xs-right"><router-link class="textCard" to="">ابزار بیشتر برای معاملات خاموش</router-link></v-card-text>
-                        <v-divider></v-divider>
+                         <router-link to="" style="text-decoration:none;"><p class="newsText pr-2 pt-2">ابزار های بیشتر برای معاملات</p></router-link>
+                        <p class="fontIrans text-xs-left mb-0 pl-1">September 27th, 2017</p>
+                        <v-divider color="white"></v-divider>
 
-                        <v-card-text class="contant text-xs-right"><router-link class="textCard" to="">تغییرات صفحه ورود به سیستم</router-link></v-card-text>
-                        <v-divider></v-divider>
+                         <router-link to="" style="text-decoration:none;"><p class="newsText pr-2 pt-2">تغییر صفحه ورود به سیستم</p></router-link>
+                        <p class="fontIrans text-xs-left mb-0 pl-1">September 25th, 2017</p>
+                        <v-divider color="white"></v-divider>
 
-                        <v-card-text class="contant text-xs-right"><router-link class="textCard" to="">جبران خسارت برای کاربران دارای تعادل نقدی</router-link></v-card-text>
-                        <v-divider></v-divider>
+                         <router-link to="" style="text-decoration:none;"><p class="newsText pr-2 pt-2">جبران برای کاربران متعلق به تعادل</p></router-link>
+                        <p class="fontIrans text-xs-left mb-0 pl-1">July 19th, 2017</p>
+                        <v-divider color="white"></v-divider>
 
-                        <v-card-text class="contant text-xs-right"><router-link class="textCard" to="">سیستم جدید هزینه تراکنش برای بیت کوین</router-link></v-card-text>
-                        <v-divider></v-divider>
-                        
-                        <v-card-text class="fontIrans text-xs-left">اطلاعات بیشتر در<router-link class="textCard" to=""> وبلاگ صدر سیستم </router-link></v-card-text>
+                         <router-link to="" style="text-decoration:none;"><p class="newsText pr-2 pt-2">بیانیه صدرکریپتو در مورد چنگال سخت ممکن</p></router-link>
+                        <p class="fontIrans text-xs-left mb-0 pl-1 pb-1">February 8th, 2019</p>
                     </v-card>
-            </v-flex>
+                </v-flex>
+            </v-layout>
 
-            <v-flex>
-                <Footer></Footer>
-        </v-flex>
+            <Footer class="mt-5"></Footer>
     </div>
 </template>
 <script>
@@ -87,6 +90,7 @@ import { mapActions, mapGetters, mapState } from 'vuex';
 export default{
     data:() => ({
         isTrader:0,
+        show:false,
         loading3:false,
         btrAddr: 'bitcoin:18JsNRxD7Tc8KDnCYkx7y98w22fgpgARMn',
         show:false,
@@ -103,6 +107,20 @@ export default{
 .topText{
     font-family:iranian sans;
     font-size:17px;
+    color:#BDBDBD;
+}
+.cardImg{
+  width:450px;
+  max-width:100%;
+}
+.logCard{
+  border:1px solid #18FFFF;
+  box-shadow:0px 0px 25px 1px #18FFFF;
+  border-radius:8px;
+}
+.newsText{
+    font-family:iranian sans;
+    font-size:13px;
     color:#BDBDBD;
 }
 </style>

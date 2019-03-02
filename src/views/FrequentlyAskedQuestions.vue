@@ -1,168 +1,167 @@
 <template>
-    <v-container fluid grid-list-xl pt-0>
-        <v-layout  justify-space-around>
+    <div>
+    <v-flex>
+        <v-card-text class="text-xs-center">
+            <v-icon size="40px" color="cyan accent-2">help_outline</v-icon><br>
+            <p class="titled">سوالات متداول</p><br>
+            <p class="describePage">در این صفحه به تمام سوالات شما جواب داده می شود چه یک کاربر جدید باشید چه یک معامله گر تازه وارد.اگر کاربر جدید هستید می توانید از این راهنمایی های این صفحه استفاده کنید.اگر میخواهید یک معامله گر شوید راهنمای آنلاین ارزهای دیجیتال ما برای شما مناسب است.شما همچنین می توانید یک سوال در انجمن های ما بپرسید یا یک بلیط پشتیبانی را برای تماس با پشتیبانی ما باز کنید.</p>
+        </v-card-text>
+
+        <v-layout row wrap>
             <v-flex>
                 <v-card-text class="text-xs-center">
-                     <v-icon size="40px" color="cyan accent-2">help_outline</v-icon><br>
-                    <span class="titled">سوالات متداول</span><br>
-                    <span class="text" color="red">در این صفحه به تمام سوالات شما جواب داده می شود چه یک کاربر جدید باشید چه یک معامله گر تازه وارد.اگر کاربر جدید هستید می توانید از این راهنمایی های این صفحه استفاده کنید.اگر میخواهید یک معامله گر شوید راهنمای آنلاین ارزهای دیجیتال ما برای شما مناسب است.شما همچنین می توانید یک سوال در انجمن های ما بپرسید یا یک بلیط پشتیبانی را برای تماس با پشتیبانی ما باز کنید.</span>
+                    <v-icon color="cyan accent-2" large>email</v-icon><br>
+                    <router-link class="textCard" to="SupportCreateNewTicket">یک بلیط پشتیبانی را باز کنید</router-link>
                 </v-card-text>
-                
-                <v-card-text>
-                </v-card-text>
-                <v-layout row wrap>
-                    <v-flex>
-                        <v-card-text class="text-xs-center">
-                        <v-icon large>local_shipping</v-icon><br>
-                        <router-link class="textCard" to="">یک بلیط پشتیبانی را باز کنید</router-link>
-                        </v-card-text>
-                    </v-flex>
-
-                    <v-flex>
-                        <v-card-text class="text-xs-center">
-                        <v-icon large>group</v-icon><br>
-                        <router-link class="textCard" to="">پست در انجمن ما</router-link>
-                        </v-card-text>
-                    </v-flex>
-
-                    <v-flex>
-                        <v-card-text class="text-xs-center">
-                        <v-icon large>fab fa-twitter</v-icon><br>
-                        <router-link class="textCard" to="">در توییت ما بنویسید</router-link>
-                        </v-card-text>
-                    </v-flex>
-                </v-layout>
-
-                    <v-card-text>
-                    <v-expansion-panel>
-                        <v-expansion-panel-content
-                        v-for="(item,i) in items"
-                        :key="i"
-                        expand-icon="mdi-menu-down"
-                        >
-                        <div class="text text-xs-right" slot="header">{{item.title}}</div>
-                            <v-card>
-                                <v-card-text class="texts text-xs-right">{{item.persianTitle}}</v-card-text>
-                            </v-card>
-                        </v-expansion-panel-content>
-                    </v-expansion-panel>
-                
+            </v-flex>
+            <v-flex>
                 <v-card-text class="text-xs-center">
-                    <p class="text">در مورد ارز دیجیتال</p>
+                    <v-icon color="cyan accent-2" large>group</v-icon><br>
+                    <router-link class="textCard" to="ErrorAuth">پست در انجمن ما</router-link>
                 </v-card-text>
-                <div>
-                    <v-expansion-panel>
-                        <v-expansion-panel-content
-                        v-for="(text,i) in texts"
-                        :key="i"
-                        expand-icon="mdi-menu-down"
-                        >
-                        <div class="text text-xs-right" slot="header">{{text.title}}</div>
-                        <v-card>
-                            <v-card-text class="text text-xs-right">{{text.persianTitle}}</v-card-text>
-                        </v-card>
-                        </v-expansion-panel-content>
-                    </v-expansion-panel>
-                </div>
-
-                <v-card-text class="help text-xs-center">
-                    <p class="text">استفاده از صدرکریپتو</p>
-                </v-card-text>
-
-                
-                    <v-expansion-panel>
-                        <v-expansion-panel-content
-                        v-for="(use,i) in uses"
-                        :key="i"
-                        expand-icon="mdi-menu-down"
-                        >
-                        <div class="text text-xs-right" slot="header">{{use.title}}</div>
-                        <v-card>
-                        <v-card-text class="text text-xs-center">{{use.persianTitle}}</v-card-text>
-                        </v-card>
-                        </v-expansion-panel-content>
-                    </v-expansion-panel>
-            
-                <v-card-text class="help text-xs-center">
-                    <p class="text">مشکلات و راه حل های مشترک</p>
-                </v-card-text>
-                
-                    <v-expansion-panel>
-                        <v-expansion-panel-content
-                        v-for="(problem,i) in problems"
-                        :key="i"
-                        expand-icon="mdi-menu-down"
-                        >
-                        <div class="text text-xs-right" slot="header">{{problem.title}}</div>
-                        <v-card
-                        
-                        >
-                        <v-card-text class="text text-xs-right">{{problem.persianTitle}}</v-card-text>
-                        </v-card>
-                        </v-expansion-panel-content>
-                    </v-expansion-panel>
-                
-                <v-card-text class="help text-xs-center">
-                    <p class="text">ایجاد تبلیغات و تجارت بیت کوین</p>
-                </v-card-text>
-
-                <v-card-text>
-                    <v-expansion-panel>
-                        <v-expansion-panel-content
-                        v-for="(trade,i) in trades"
-                        :key="i"
-                        expand-icon="mdi-menu-down"
-                        >
-                        <div class="text text-xs-right" slot="header">{{trade.title}}</div>
-                        <v-card
-                        
-                        >
-                        <v-card-text class="text text-xs-right">{{trade.persianTitle}}</v-card-text>
-                        </v-card>
-                        </v-expansion-panel-content>
-                    </v-expansion-panel>
-                </v-card-text>
-                
-            </v-card-text>
-
-                <v-card-text class="titled text-xs-center">واژه نامه صدرکریپتو</v-card-text>
-
-                <v-card-text class="text text-xs-center">
-                    <p class="help">آدرس</p>
-                    <span>یک آدرس بیت کوین به نظر می رسد در امتداد یک رشته برای حروف تصادفی و numbers.addresses استفاده می شود زمانی که شما می خواهید برای ارسال و یا دریافت کیف پول bitcoins. حداقل یک دریافت کننده و یک ارسال آدرس. هنگامی که شما می خواهید برای دریافت بیت کوین به کیف پول شما نیاز به دادن فرستنده آدرس کیف پول خود را دریافت کنید.</span>
-                </v-card-text>
-
-                <v-card-text class="text text-xs-center">
-                    <p class="help">AMLوKYC</p>
-                    <span>ضد پولشویی و دانستن مشتری شما، یک گروه از قوانین در ایران است که به بیت کوین فروشندگان نیاز دارند که مشتریان خود را بشناسند. معامله گران خاصی از شناسایی شما برای مطابقت با این قوانین درخواست خواهند کرد. کشورهای دیگر در سراسر جهان ممکن است قوانین مشابهی داشته باشند. الزامات</span>
-                </v-card-text>
-
-                <v-card-text class="text text-xs-center">
-                    <p class="help">بلاک چین</p>
-                    <span>بلاکچین تکنولوژی پشت بیت کوین است.این چیزی که باعث می شود آن کار کند. تراکنش های بیت کوین به blockchain فرستاده می شوند تا معدنچیان بتوانند آنها را در بلوک هایی قرار دهند که منزل شما هستند. یک بلوک معادل معامله شما معدن است که به بلوکچین اضافه شده است معامله دریافت یک تاییدیه</span>
-                </v-card-text>
-
-                <v-card-text class="text text-xs-center">
-                    <p class="help">اطلاعات بلاک چین</p>
-                    <span>طلاعات بلوکچین یکی از وب سایت های بسیاری است که به عنوان explocers blockchain کار می کنند.این وب سایت ها به شما اجازه می دهد بلوک چینی را ببینید و در مورد آن چه در جریان است. در شرایط عملی این امکان وجود دارد که معاملات خود را مشاهده کنید و ببینید آیا آنها تایید شده یا نه. همچنین می توانید ببینید که چند راهکار غیرقانونی وجود دارد، هرچه بیشتر طول بکشد تا تراکنش شما تایید شود</span>
+            </v-flex>
+            <v-flex>
+                <v-card-text class="text-xs-center">
+                    <v-icon color="cyan accent-2" large>fab fa-twitter</v-icon><br>
+                    <router-link class="textCard" to="">در توییت ما بنویسید</router-link>
                 </v-card-text>
             </v-flex>
         </v-layout>
-    </v-container>
+
+                
+                <v-expansion-panel>
+                    <v-expansion-panel-content
+                    v-for="(item,i) in items"
+                    :key="i"
+                    style="background-color:#37474F;"
+                    >
+                    <v-icon slot="actions" color="cyan">$vuetify.icons.expand</v-icon>
+                    <div class="text text-xs-right" slot="header">{{item.title}}</div>
+                        <v-card>
+                            <v-card-text class="texts">{{item.persianTitle}}</v-card-text>
+                        </v-card>
+                    </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <v-card-text class="text-xs-center">
+                    <p class="describeText pt-2">در مورد ارز دیجیتال</p>
+                </v-card-text>
+            <div>
+                <v-expansion-panel>
+                    <v-expansion-panel-content
+                    v-for="(text,i) in texts"
+                    :key="i"
+                    expand-icon="mdi-menu-down"
+                    style="background-color:#37474F;"
+                    >
+                    <div class="text text-xs-right" slot="header">{{text.title}}</div>
+                    <v-card>
+                        <v-card-text class="texts">{{text.persianTitle}}</v-card-text>
+                    </v-card>
+                    </v-expansion-panel-content>
+                </v-expansion-panel>
+            </div>
+
+            <v-card-text class="help text-xs-center">
+                <p class="describeText pt-2">استفاده از صدرکریپتو</p>
+            </v-card-text>
+
+            <v-expansion-panel>
+                <v-expansion-panel-content
+                v-for="(use,i) in uses"
+                :key="i"
+                expand-icon="mdi-menu-down"
+                style="background-color:#37474F;"
+                >
+                <div class="text text-xs-right" slot="header">{{use.title}}</div>
+                <v-card>
+                    <v-card-text class="texts">{{use.persianTitle}}</v-card-text>
+                </v-card>
+                </v-expansion-panel-content>
+            </v-expansion-panel>
+
+            <v-card-text class="help text-xs-center">
+                <p class="describeText pt-2">مشکلات و راه حل های مشترک</p>
+            </v-card-text>
+
+            <v-expansion-panel>
+                <v-expansion-panel-content
+                v-for="(problem,i) in problems"
+                :key="i"
+                expand-icon="mdi-menu-down"
+                style="background-color:#37474F;"
+                >
+                <div class="text text-xs-right" slot="header">{{problem.title}}</div>
+                <v-card>
+                    <v-card-text class="texts">{{problem.persianTitle}}</v-card-text>
+                </v-card>
+                </v-expansion-panel-content>
+            </v-expansion-panel>
+
+            <v-card-text class="help text-xs-center">
+                <p class="describeText pt-2">ایجاد تبلیغات و تجارت بیت کوین</p>
+            </v-card-text>
+
+            <v-card-text>
+                <v-expansion-panel>
+                    <v-expansion-panel-content
+                    v-for="(trade,i) in trades"
+                    :key="i"
+                    expand-icon="mdi-menu-down"
+                    style="background-color:#37474F;"
+                    >
+                    <div class="text text-xs-right" slot="header">{{trade.title}}</div>
+                    <v-card>
+                        <v-card-text class="texts">{{trade.persianTitle}}</v-card-text>
+                    </v-card>
+                    </v-expansion-panel-content>
+                </v-expansion-panel>
+            </v-card-text>
+
+
+    <v-card-text class="describeText text-xs-center">واژه نامه صدرکریپتو</v-card-text>
+
+    <v-card-text class="text-xs-center">
+    <p class="bottomText">آدرس</p>
+    <p class="describePage mb-0" style="text-align:justify;">یک آدرس بیت کوین به نظر می رسد در امتداد یک رشته برای حروف تصادفی و numbers.addresses استفاده می شود زمانی که شما می خواهید برای ارسال و یا دریافت کیف پول bitcoins. حداقل یک دریافت کننده و یک ارسال آدرس. هنگامی که شما می خواهید برای دریافت بیت کوین به کیف پول شما نیاز به دادن فرستنده آدرس کیف پول خود را دریافت کنید.</p>
+    </v-card-text>
+
+    <v-card-text class="text-xs-center">
+    <p class="bottomText">AMLوKYC</p>
+    <p class="describePage mb-0" style="text-align:justify;">ضد پولشویی و دانستن مشتری شما، یک گروه از قوانین در ایران است که به بیت کوین فروشندگان نیاز دارند که مشتریان خود را بشناسند. معامله گران خاصی از شناسایی شما برای مطابقت با این قوانین درخواست خواهند کرد. کشورهای دیگر در سراسر جهان ممکن است قوانین مشابهی داشته باشند. الزامات</p>
+    </v-card-text>
+
+    <v-card-text class="text-xs-center">
+    <p class="bottomText">بلاک چین</p>
+    <p class="describePage mb-0" style="text-align:justify;">بلاکچین تکنولوژی پشت بیت کوین است.این چیزی که باعث می شود آن کار کند. تراکنش های بیت کوین به blockchain فرستاده می شوند تا معدنچیان بتوانند آنها را در بلوک هایی قرار دهند که منزل شما هستند. یک بلوک معادل معامله شما معدن است که به بلوکچین اضافه شده است معامله دریافت یک تاییدیه</p>
+    </v-card-text>
+
+    <v-card-text class="text-xs-center">
+    <p class="bottomText">اطلاعات بلاک چین</p>
+    <p class="describePage mb-0" style="text-align:justify;">طلاعات بلوکچین یکی از وب سایت های بسیاری است که به عنوان explocers blockchain کار می کنند.این وب سایت ها به شما اجازه می دهد بلوک چینی را ببینید و در مورد آن چه در جریان است. در شرایط عملی این امکان وجود دارد که معاملات خود را مشاهده کنید و ببینید آیا آنها تایید شده یا نه. همچنین می توانید ببینید که چند راهکار غیرقانونی وجود دارد، هرچه بیشتر طول بکشد تا تراکنش شما تایید شود</p>
+    </v-card-text>
+    </v-flex>
+    <Footer></Footer>
+    </div>
 </template>
 <script>
+import Footer from './../components/Footer.vue'
 export default {
+    components:{
+        Footer
+    },
     data () {
+
         return{
             items:[
                 {title:'درباره صدرکریپتو', persianTitle:'صدرکریپتو یک مبادله ارز دیجیتال است. صدرکریپتو یک بازار است که کاربران می توانند ارزها را از یکدیگر خریداری و به فروش برسانند. کاربران، به نام معامله گران، تبلیغات با قیمت و شرایط پرداخت که می خواهند را ارائه می دهند. شما می توانید در وب سایت ما برای تبلیغات تجاری و جستجوی شرایط  که ترجیح می دهید را پیدا کنید. شما می توانید معامله گران خرید و فروش بیت کوین آنلاین را برای بیش از 60 روش مختلف پرداخت پیدا کنید.اگر شما به صدرکریپتوجدید هستید و میخواهید ارز را خریداری کنید، لطفا راهنمای خرید خود را برای یادگیری نحوه خرید بیت کوین بیاموزید.'},
                 {title:'چگونه ارزدیجیتال خرید و فروش کنم؟', persianTitle:'اگر شما به دنبال خرید و فروش ارز هستید، لطفا به راهنمای نحوه خرید ارز  ما نگاه کنید.'},
-                {title:'امنیت حساب کاربری من در مقابل کلاهبرداری چگونه حفظ می شود؟', persianTitle:'تمام معاملات آنلاین توسط سپرده محافظت می شود. هنگامی که یک تجارت شروع می شود مقدار بیت کوین برای تجارت به طور خودکار از کیف پول  فروشنده ذخیره می شود. این بدان معنی است که اگر فروشنده با پول خود فرار کند و بیت کوین خود را منتشر نکند، پشتیبانی می تواند بیت کوین ها را به شما از سپرده آزاد کند. اگر شما بیت کوین ها را پولی فروختید، قبل از اینکه بدانید که از خریدار بیت کوین پول دریافت کرده اید، سپرده ها را هرگز آزاد نکنید.لطفا توجه داشته باشید که معامله های محلی سپرده گذاری به طور پیش فرض فعال نیستند'},
+                {title:'امنیت حساب کاربری من در مقابل کلاهبرداری چگونه حفظ می شود؟', persianTitle:' ارزهای خود را ارسال کنم و چگونه میتوانم در معامله با بیت کوین پرداخت کنم؟', persianTitle:'اگر بیت کوین ها را با استفاده از صدرکریپتو خریداری کنید بیت کوین ها در کیف پول صدرکریپتو شما ظاهر می شود. از آنجا شما می توانید بیت کوین ها را به دیگر بیت کوین ها ارسال کنید. سرویس بیت کوین اکثریت قریب به اتفاق با یکدیگر سازگار است، بیت کوین هایی که از صدرکریپتو خریداری می کنید در فروشگاه های آنلاین مورد علاقه خود که بیت کوین را قبول می کنند و همچنین در فروشگاه های محلی که بیتکوین را قبول می کنند، کار خواهند کرد.'},
+                {title:'چگونه میتوان بیت کوین ها را به کیف پول صدرکریپتو خود ارسال کرد؟', persianTitle:'برای خرید بیت کوین در صدرکریپ می شود. هنگامی که یک تجارت شروع می شود مقدار بیت کوین برای تجارت به طور خودکار از کیف پول  فروشنده ذخیره می شود. این بدان معنی است که اگر فروشنده با پول خود فرار کند و بیت کوین خود را منتشر نکند، پشتیبانی می تواند بیت کوین ها را به شما از سپرده آزاد کند. اگر شما بیت کوین ها را پولی فروختید، قبل از اینکه بدانید که از خریدار بیت کوین پول دریافت کرده اید، سپرده ها را هرگز آزاد نکنید.لطفا توجه داشته باشید که معامله های محلی سپرده گذاری به طور پیش فرض فعال نیستند'},
                 {title:'آیا می توانم کمتر از یک بیت کوین را خرید کنم؟ هزینه بیت کوین چقدر است؟', persianTitle:'در کنار هر تبلیغ در وب سایت قیمت بیت کوین برای آن تبلیغات به عنوان ارز در هر بیت کوین نشان داده شده است. برای مثال، اگر ما بیت کوین را با دلار آمریکا خریداری کنیم، قیمت آن به 10420 دلار / بایت نشان داده می شود. این بدان معنی است که اگربخواهیم 1 بیت کوین را بخریم، به ما 10420 دلار هزینه می پردازد. '},
                 {title:' چرا برخی روش های پرداخت ارزان تر هستند؟', persianTitle:'یکی از بهترین ویژگی های بیت کوین این است که به شما پول بیشتری را کنترل می کند، اما این ویژگی نیز بسیار متفاوت از پول های سنتی است. معاملات بیت کوین غیرقابل برگشت هستند، بیشتر روش های متداول پرداخت می توانند پرداخت شوند. این باعث ایجاد خطر برای شخص فروش بیت کوین، به عنوان پی پال و یا یک بانک می تواند پول کسی که او را از حساب خود پس از او فرستاده دور بیت کوین. به همین دلیل است که معامله گران باید برای روش های پرداختی خاصی هزینه بالایی داشته باشند تا خود را در برابر این خطر محافظت کنند.'},
                 {title:'تفاوت بین تجارت آنلاین و تجارت محلی چیست؟', persianTitle:'معاملات آنلاین به طور کامل از طریق پلت فرم معاملاتی شما بدون همکاری با شریک تجاری شما انجام می شود. سپرده به طور خودکار فعال و برای معاملات آنلاین تامین می شود، به این معنی که به عنوان یک خریدار شما به طور خودکار توسط سیستم سپرده ما محافظت می شود. اکثر معاملات در صدرکریپتو معاملات آنلاین هستند. معامله های محلی به معنای انجام چهره به چهره است، و سپرده ها به طور خودکار فعال نیست. به همین دلیل است که در تجارت محلی، فروشنده با استفاده از روش پرداخت آنلاین، امن نیست.'},
-                {title:'چگونه میتوانم ارزهای خود را ارسال کنم و چگونه میتوانم در معامله با بیت کوین پرداخت کنم؟', persianTitle:'اگر بیت کوین ها را با استفاده از صدرکریپتو خریداری کنید بیت کوین ها در کیف پول صدرکریپتو شما ظاهر می شود. از آنجا شما می توانید بیت کوین ها را به دیگر بیت کوین ها ارسال کنید. سرویس بیت کوین اکثریت قریب به اتفاق با یکدیگر سازگار است، بیت کوین هایی که از صدرکریپتو خریداری می کنید در فروشگاه های آنلاین مورد علاقه خود که بیت کوین را قبول می کنند و همچنین در فروشگاه های محلی که بیتکوین را قبول می کنند، کار خواهند کرد.'},
-                {title:'چگونه میتوان بیت کوین ها را به کیف پول صدرکریپتو خود ارسال کرد؟', persianTitle:'برای خرید بیت کوین در صدرکریپتو شما ابتدا باید بیت کوین ها را به کیف پول صدرکریپتو خود ارسال کنید. برای انجام این کار به یک حساب صدرکریپتو نیاز دارید، به بیت کوین ها در یک کیف پول بیت کوین دسترسی داشته باشید و شما باید آدرس دریافت صدرکریپتو را بدانید.'},
+                {title:'چگونه میتوانمرا بدانید.'},
                 {title:'چه مدت طول میکشد تا ارزهای خود را به کیف پول صدرکریپتو ارسال یا دریافت کرد؟', persianTitle:''},
                 {title:'من شماره تلفنی ندارم آیا میتوان خرید و فروش کرد؟', persianTitle:'شما می توانید بیت کوین ها را بدون نیاز به تلفن همراه خریداری کنید، اما شما محدود به تبلیغاتی هستید که می توانید پاسخ دهید. با تایید شماره تلفن خود را با صدرکریپتو، تعداد تبلیغاتی را که می توانید با آن تماس بگیرید افزایش می دهد.'},
                 {title:'نقطه سبز کنار نام های کاربری نشانگر چی هستند؟', persianTitle:'بعد از نام کاربری در صفحه اول و نمایه عمومی کاربر می توانید یک نقطه کوچک سبز، زرد یا خاکستری پیدا کنید. این نقطه نشان می دهد که چگونه معامله گر معمولا معمولا به معاملات پاسخ می دهد.نقطه سبز به این معنی است که کاربر در طی 5 دقیقه به معاملات پاسخ می دهد.نقطه زرد به این معنی است که کاربر در عرض 30 دقیقه به معاملات پاسخ می دهد.یک نقطه خاکستری به این معنی است که کاربر برای پاسخ دادن به معاملات بیشتر از 30 دقیقه طول می کشد.'},
@@ -215,16 +214,39 @@ export default {
 }
 </script>
 <style scoped>
+.describeTexts{
+    font-family:iranian sans;
+    font-size:14px;
+}
+.bottomText{
+    font-family:iranian sans;
+    font-size:16px;
+    color:white;
+}
 .titled{
     font-family: Iranian Sans;
     font-size: 28px;
 }
 .text{
     font-family: Iranian Sans;
+    color:#BDBDBD;
+    font-size:15px;
+}
+.describePage{
+    font-family: Iranian Sans;
+    color:#BDBDBD;
+    font-size:15px;
+}
+.describeText{
+    font-family:iranian sans;
+    font-size:17px;
 }
 .texts{
     font-family: Iranian Sans;
-    background-color:#757575;
+    background-color:#BDBDBD;
+    color:black;
+    text-align:justify;
+    text-indent:15px;
 }
 .link{
     text-decoration: none;
@@ -233,10 +255,10 @@ export default {
 }
 .textCard{
     font-family:'iranian sans';
-    color:#00E5FF;
+    color:#BDBDBD;
     text-decoration:none;
 }
 .textCard:hover{
-    color:#18FFFF;
+    color:#E0E0E0;
 }
 </style>

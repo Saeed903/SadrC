@@ -82,7 +82,7 @@
         
         <router-link v-if="!payload" class="hidden-sm-and-down menuHover pl-2" to="Signup">{{signState}}</router-link>
         <router-link v-if="!payload" class="hidden-sm-and-down menuHover pl-2 pr-2" to="login">{{loginState}}</router-link>
-        <router-link to="/" class="sadrCryptoText pl-2">SadrCrypto<span class="body-2">.com</span></router-link><router-link class="" to="/"><v-icon class="hidden-sm-and-down" color="amber darken-2">group_work</v-icon></router-link>
+        <router-link to="/" class="sadrCryptoText">SadrCrypto<span class="body-2">.com</span></router-link><router-link class="" to="/"><v-icon class="hidden-sm-and-down" color="amber darken-2">account_balance</v-icon></router-link>
 
       </v-card-text>
     

@@ -1,10 +1,16 @@
 <template>
     <div>
-        <v-parallax src="img/SadrCrypto/topic.jpg" height="600"></v-parallax>
-        <div class="divTopicImage">
+        <v-carousel class="pt-3">
+            <v-carousel-item
+            v-for="(item,i) in items"
+            :key="i"
+            :src="item.src"
+            ></v-carousel-item>
+        </v-carousel>
+        <div class="divTopicImage pt-4 pb-4">
             <v-card-text class="fontIran text-xs-center">داستانی از دنیای بیت کوین و ارزهای دیجیتال</v-card-text>
         </div>
-        <v-card-text>
+        <v-card-text class="pt-5">
             <span class="textFont" to="">ابزار بیشتر برای معاملات خاموش</span><br>
             <span class="textsFont">ما چندین ابزار را ایجاد کرده ایم که در موارد خاص می تواند معاملات با بیت کوین را ارزان تر کند. یکی از ویژگی های این نرم افزار تنها گزینه ی خاموش برای ابزار تجاری ما است. دیگر تگ recv در کد QR برای سپرده یا پرداخت صورتحساب است. توجه داشته باشید که این پست وبلاگ در راستای توسعه دهندگان، بازرگانان و / یا ارائه دهندگان خدمات است.</span><br>
             <router-link class="textCard" to="">ادامه مطلب</router-link><br>
@@ -46,7 +52,7 @@
             </div>
         </v-card-text>
         <v-divider></v-divider>
-        <v-card-text>
+        <v-card-text class="pb-5">
             <span class="textFont" to="">سیستم جدید هزینه معامله بیت کوین</span><br>
             <span class="textsFont">صدرکریپتو یک سیستم هزینه جدید برای هزینه های شبکه بیت کوین استقرار دارد. ما هزینه بیت کوین را پایین می آوریم و هزینه های سپرده گذاری برای معاملات ورودی را معرفی می کنیم.</span><br>
             <router-link class="textCard" to="">ادامه مطلب</router-link><br>
@@ -55,39 +61,41 @@
                 <span class="">June 13th, 2017</span><br>
             </div>
         </v-card-text>
-        <div class="direction text-xs-center">
-            <v-pagination
-            v-model="page"
-            :length="4"
-            >
-            </v-pagination>
-        </div>
-       
+        <Footer class="pt-5"></Footer>
     </div>
 </template>
 <script>
+import Footer from './../components/Footer.vue'
   export default {
+      components:{
+          Footer,
+      },
     data () {
       return {
         page: 1,
-       
+       items: [
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg'
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
+          }
+        ]
       }
     }
   }
 </script>
 <style scoped>
-.direction{
-    direction:ltr;
-}
-.topicImage{
-    width:100%;
-}
-.divTopicImage{
-    max-width:100%;
-}
+
 .textFont{
     font-family:iranian sans;
-    font-size:15px;
+    font-size:17px;
 }
 .textsFont{
     font-family:iranian sans;
