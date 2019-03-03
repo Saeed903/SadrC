@@ -3,7 +3,7 @@
         //-div {{t}}
         //- div(v-if="$apollo.queries.advertises.loading") Loading...
         div(v-for="(adv,index) in t" :key="index") 
-            li {{adv.tradeType.tradeTypeTitleb  }}
+            li {{adv.tradeType  }}
                 
 </template>
 <script>
