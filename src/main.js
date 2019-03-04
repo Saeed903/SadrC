@@ -23,7 +23,6 @@ Vue.use(Vuetify, {
     current: 'fa'
   }
 });
-
 Vue.use(VeeValidate);
 
 Vue.config.productionTip = false;
