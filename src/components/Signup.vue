@@ -111,7 +111,7 @@ import QrcodeVue from 'qrcode.vue'
     }
   }
 </script>
-<style>
+<style scoped>
 .textCard{
     font-family:'iranian sans';
     color:#00E5FF;

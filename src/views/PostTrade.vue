@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-card-text class="text-xs-center">
-            <span class="fontIran textCard">ثبت آگهی {{currency}}</span>
+            <span class="fontIran">ثبت آگهی {{currency}}</span>
         </v-card-text>
         
         <v-alert
@@ -10,13 +10,14 @@
         icon="warning"
         class="fontsIran"
         outline
+        v-if="!payload"
         >
         لطفا قبل از ثبت آگهی <router-link to="/Login" class="textCard">ورود</router-link> یا <router-link to="/Login" class="textCard">ثبت نام</router-link> نمایید
         </v-alert>
 
-        <v-divider class="mt-4 mb-3" color="grey"></v-divider>
+        <v-divider class="mt-4"></v-divider>
 
-        <v-card-text class="fontsIran1 text-xs-justify">
+        <v-card-text class="pt-5 pb-3 fontsIran1 text-xs-justify">
             <p class="fontIran text-xs-center pb-4">قوانین و مقررات تبلیغاتی:</p>
             <p class="mb-4"><v-icon class="pl-1" color="cyan accent-2" size="18px">reply</v-icon>برای نمایش تبلیغات شما باید بیت کوین را در کیف پول صدر کریپتو خود داشته باشید. شما برای تبلیغات با روش های پرداخت آنلاین و 0.04 بیت کوین یا بیشتر برای تبلیغات محلی (نقد) نیاز به 0.04 بیت کوین یا بیشتر دارید.</p>
             <p class="mb-4"><v-icon class="pl-1" color="cyan accent-2" size="18px">reply</v-icon>برخی از روش های پرداخت مستلزم آن هستند که قبل از اینکه آگهی های شما قابل مشاهده باشند، باید شناسه،شناسایی شوند.</p>
@@ -29,13 +30,12 @@
             <p class="mb-4"><v-icon class="pl-1" color="cyan accent-2" size="18px">reply</v-icon>روش های پرداخت مشخص شده است ریسک بالا داشتن یک خطر عمده تقلب .هنگام استفاده از روشهای پرداخت با ریسک بالا، مراقب باشید و همیشه آی دی را تأیید کنید.</p>
         </v-card-text>
 
-        <v-divider class="mt-4 mb-3" color="grey"></v-divider>
 
 
-        <v-card>
-            <v-card-text class="text-xs-justify">
-                <p class="fontIran text-xs-center pb-4">نوع تجارتی که میخواهید انجام دهید:</p>
-                <span class="fontsIran1"> اگر بخواهید بیت کوین ها را بفروشید مطمئن شوید که شما بیت کوین ها را در کیف پول صدر  کریپتو خود موجود دارید</span>
+        <v-card class="logCard mt-5" style="background-color:#37474F;">
+            <v-card-text class="text-xs-justify pb-5">
+                <p class="fontIran text-xs-center">نوع تجارتی که میخواهید انجام دهید</p>
+                <p class="fontsIran1 text-xs-center"> اگر بخواهید بیت کوین ها را بفروشید مطمئن شوید که شما بیت کوین ها را در کیف پول صدر  کریپتو خود موجود دارید</p>
             </v-card-text>
             <v-form 
             v-model="valid"
@@ -44,7 +44,7 @@
             @keydown.prevent.enter
             >
                 <v-layout row wrap>
-                    <v-flex sm6>
+                    <v-flex xs sm md lg3 xl3>
                         <v-tooltip bottom>
                             <div slot="activator">
                                 <v-autocomplete
@@ -55,11 +55,12 @@
                                 data-vv-name="selectCountries"
                                 label="کشور"
                                 :disabled="!payload"
-                                class="textField mr-3 fontIran"
+                                class="textField ml-3 mr-3 fontIran"
                                 color="cyan accent-2" 
                                 browser-autocomplete
                                 dense
                                 clearable
+                                outline
                                 >
                                     <v-tooltip v-if="!payload" slot="append">
                                         <v-icon slot="activator" color="red">block</v-icon>
@@ -70,7 +71,7 @@
                         </v-tooltip>
                     </v-flex>
 
-                    <v-flex sm6>
+                    <v-flex xs sm md lg3 xl3>
                         <v-tooltip bottom>
                             <div slot="activator">
                                 <v-autocomplete
@@ -81,10 +82,11 @@
                                 :error-messages="errors.collect('selectCryptoCurrency')"
                                 data-vv-name="selectCryptoCurrency"
                                 label="نوع ارز"
-                                class="textField mr-3 fontIran"
+                                class="textField ml-3 mr-3 fontIran"
                                 color="cyan accent-2" 
                                 browser-autocomplete
                                 clearable
+                                outline
                                 >
                                     <v-tooltip v-if="!payload" slot="append">
                                         <v-icon slot="activator" color="red">block</v-icon>
@@ -95,16 +97,17 @@
                         </v-tooltip>
                     </v-flex>
 
-                    <v-flex sm6>
+                    <v-flex xs sm md lg3 xl3>
                         <v-tooltip bottom>
                             <div slot="activator">
                             <v-text-field
-                            class="textField mr-3 fontIran"
+                            class="textField ml-3 mr-3 fontIran"
                             label="معادل قیمت"
                             :disabled="!payload"
                             color="cyan accent-2"
                             v-model="advertise.priceEquation"
                             clearable
+                            outline
                             >
                                 <v-tooltip v-if="!payload" slot="append">
                                     <v-icon slot="activator" color="red">block</v-icon>
@@ -115,16 +118,17 @@
                         </v-tooltip>
                     </v-flex>
 
-                    <v-flex sm6>
+                    <v-flex xs sm md lg3 xl3>
                         <v-tooltip bottom>
                             <div slot="activator">
                             <v-text-field
-                            class="textField mr-3 fontIran"
+                            class="textField ml-3 mr-3 fontIran"
                             label="محدوده تغییرات"
                             color="cyan accent-2"
                             :disabled="!payload"
                             v-model="advertise.margin"
                             clearable
+                            outline
                             >
                                 <v-tooltip v-if="!payload" slot="append">
                                     <v-icon slot="activator" color="red">block</v-icon>
@@ -368,7 +372,6 @@
 
             <v-btn type="submit" class="fontsIran mt-5 mb-5" :disabled="!valid" color="cyan accent-2" outline>ثبت اطلاعات</v-btn>
 
-        </v-form>
         <Footer class="pt-5"></Footer>
     </div>
 </template>
@@ -528,7 +531,7 @@ export default{
 }
 .logCard{
   border:1px solid #18FFFF;
-  box-shadow:0px 0px 25px 1px #18FFFF;
+  box-shadow:0px 0px 20px 1px #18FFFF;
 }
 .logCards{
   border:1px solid #D50000;
