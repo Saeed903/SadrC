@@ -266,7 +266,7 @@
   font-family:'Iranian Sans';
   font-size:12px;
 }
-.card{
+.card{ 
   background-color:rgb(82, 95, 127)
 }
 .menuHover{
