@@ -1,7 +1,6 @@
 <template>
     <div>
-        <v-card-text>
-            <v-card >
+            <v-card>
                 <v-bottom-nav
                     :active.sync="bottomNav"
                     :color="color"
@@ -50,7 +49,6 @@
                 </div>
             </div>
         </transition>
-        <Footer class="fontIrans"></Footer>
     </div>
 </template>
 <script>

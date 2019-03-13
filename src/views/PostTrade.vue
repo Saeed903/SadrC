@@ -32,7 +32,7 @@
 
 
 
-        <v-card class="logCard mt-5" style="background-color:#37474F;">
+        <v-card class="logCard mt-5 mb-5" style="background-color:#37474F;">
             <v-card-text class="text-xs-justify pb-5">
                 <p class="fontIran text-xs-center">نوع تجارتی که میخواهید انجام دهید</p>
                 <p class="fontsIran1 text-xs-center"> اگر بخواهید بیت کوین ها را بفروشید مطمئن شوید که شما بیت کوین ها را در کیف پول صدر  کریپتو خود موجود دارید</p>
@@ -103,6 +103,7 @@
                             <v-text-field
                             class="textField ml-3 mr-3 fontIran"
                             label="معادل قیمت"
+                            type="number"
                             :disabled="!payload"
                             color="cyan accent-2"
                             v-model="advertise.priceEquation"
@@ -126,6 +127,7 @@
                             label="محدوده تغییرات"
                             color="cyan accent-2"
                             :disabled="!payload"
+                            type="number"
                             v-model="advertise.margin"
                             clearable
                             outline
@@ -144,108 +146,117 @@
             </v-form>
         </v-card>
 
-            
-            <v-divider class="mt-5 mb-3" color="grey"></v-divider>
 
-            <v-card-text class="fontsIran1 text-xs-justify">
-                    <p class="fontIran text-xs-center pb-4">چگونه قیمت معاملات از قیمت بازار ساعتی تعیین می شود؟</p>
-                    <p><v-icon class="pl-1" color="cyan accent-2" size="18px">reply</v-icon>برای اطلاعات بیشتر در رابطه با معادلات نحوه تعریف قیمت معاملاتی خود به سوالات <router-link to="" class="textCard">قیمت گذاری</router-link> مراجعه کنید.</p>
-                    <p><v-icon class="pl-1" color="cyan accent-2" size="18px">reply</v-icon>لطفا توجه داشته باشید که همیشه تبلیغ کننده مسئول پرداخت هزینه پردازش پرداخت است.</p>
+     <v-card class="logCard mt-5" style="background-color:#37474F;">
+            <v-card-text class="text-xs-justify pb-5">
+                <p class="fontIran text-xs-center">چگونه قیمت معاملات از قیمت بازار ساعتی تعیین می شود؟</p>
+                <p class="fontsIran1 text-xs-right"><v-icon class="pl-1" color="cyan accent-2" size="18px">reply</v-icon>برای اطلاعات بیشتر در رابطه با معادلات نحوه تعریف قیمت معاملاتی خود به سوالات <router-link to="" class="textCard">قیمت گذاری</router-link> مراجعه کنید.</p>
+                <p class="fontsIran1 text-xs-right"><v-icon class="pl-1" color="cyan accent-2" size="18px">reply</v-icon>لطفا توجه داشته باشید که همیشه تبلیغ کننده مسئول پرداخت هزینه پردازش پرداخت است.</p>
             </v-card-text>
-
-            <v-layout class="mt-4" row wrap>
-                <v-flex xs10 sm5 md4 lg4 xl3>
-                    <v-text-field
-                    class="textField mr-3 fontIran"
-                    label="کمترین مقدار معامله"
-                    :disabled="!payload"
-                    color="cyan accent-2"
-                    v-model="advertise.minTransactionLimit"
-                    clearable
-                    >
-                    <v-tooltip v-if="!payload" slot="append">
-                            <v-icon slot="activator" color="red">block</v-icon>
+            <v-form 
+            v-model="valid"
+            v-if="!loading"
+            @submit.prevent="createAdvertise"
+            @keydown.prevent.enter
+            >
+                <v-layout row wrap>
+                    <v-flex xs sm md lg3 xl3>
+                        <v-tooltip bottom>
+                            <div slot="activator">
+                                <v-text-field
+                                class="textField mr-3 ml-3 fontIran"
+                                label="کمترین مقدار معامله"
+                                :disabled="!payload"
+                                type="number"
+                                color="cyan accent-2"
+                                v-model="advertise.minTransactionLimit"
+                                clearable
+                                outline
+                                >
+                                    <v-tooltip v-if="!payload" slot="append">
+                                        <v-icon slot="activator" color="red">block</v-icon>
+                                    </v-tooltip>
+                                </v-text-field>
+                            </div>
+                            <v-card-text class="fontIrans pt-3 text-xs-justify">کمترین مقدار معامله در یک تجارت اختیاری است</v-card-text>
                         </v-tooltip>
-                    </v-text-field>
-                </v-flex>
-                <v-flex xs10 sm6 md5 lg4 xl4>
-                   <v-card-text class="fontIrans text-xs-justify">کمترین مقدار معامله در یک تجارت اختیاری است</v-card-text>    
-                </v-flex>
-                <v-card-text>
-                    <v-divider class="mt-4 mb-3"></v-divider>
-                </v-card-text>
+                    </v-flex>
 
-                <v-flex xs10 sm5 md4 lg4 xl3>
-                    <v-text-field
-                    class="textField mr-3 fontIran"
-                    label="بیشترین مقدار معامله"
-                    :disabled="!payload"
-                    color="cyan accent-2"
-                    v-model="advertise.maxTransactionLimit"
-                    clearable
-                    >
-                    <v-tooltip v-if="!payload" slot="append">
-                            <v-icon slot="activator" color="red">block</v-icon>
+                    <v-flex xs sm md lg3 xl3>
+                        <v-tooltip bottom>
+                            <div slot="activator">
+                                <v-text-field
+                                class="textField mr-3 ml-3 fontIran"
+                                label="بیشترین مقدار معامله"
+                                :disabled="!payload"
+                                type="number"
+                                color="cyan accent-2"
+                                v-model="advertise.maxTransactionLimit"
+                                clearable
+                                outline
+                                >
+                                    <v-tooltip v-if="!payload" slot="append">
+                                        <v-icon slot="activator" color="red">block</v-icon>
+                                    </v-tooltip>
+                                </v-text-field>
+                            </div>
+                           <v-card-text class="fontIrans pt-4 text-xs-justify">اختیاری. حداکثر حد معامله در یک تجارت. برای فروش آنلاین، تعادل کیفی صدر کریپتو شما می تواند حداکثر تجارت قابل اعتماد را نیز محدود کند.</v-card-text>
                         </v-tooltip>
-                    </v-text-field>
-                </v-flex>
-                <v-flex xs10 sm6 md5 lg4 xl4>
-                    <v-card-text class="fontIrans text-xs-justify">اختیاری. حداکثر حد معامله در یک تجارت. برای فروش آنلاین، تعادل کیفی صدر کریپتو شما می تواند حداکثر تجارت قابل اعتماد را نیز محدود کند.</v-card-text>    
-                </v-flex>
-                <v-card-text>
-                    <v-divider class="mt-4 mb-3"></v-divider>
-                </v-card-text>
-    
-                <v-flex xs10 sm5 md4 lg4 xl3>
-                    <v-text-field
-                    class="textField mr-3 fontIran"
-                    label="محدودیت مقدار معامله"
-                    :disabled="!payload"
-                    color="cyan accent-2"
-                    v-model="advertise.restrictAmountsTo"
-                    clearable
-                    >
-                    <v-tooltip v-if="!payload" slot="append">
-                            <v-icon slot="activator" color="red">block</v-icon>
-                        </v-tooltip>
-                    </v-text-field>
-                </v-flex>
+                    </v-flex>
 
-                <v-flex xs10 sm6 md5 lg4 xl4>
-                     <v-card-text class="fontIrans text-xs-justify">.اختیاری. مقدار معامله را محدود به عدد صحیح جدا از عدد کاما، به عنوان مثال 20،50،100. در ارز فیات (دلار / یورو / و غیره). دستی برای کوین، کارت هدیه و غیره</v-card-text>       
-                </v-flex>
-                <v-card-text>
-                    <v-divider class="mt-4 mb-3"></v-divider>
-                </v-card-text>
-                
-        
-                <v-flex xs10 sm5 md4 lg4 xl3>
-                    <v-text-field
-                    class="textField mr-3 fontIran"
-                    label="معادل قیمت"
-                    color="cyan accent-2"
-                    :disabled="!payload"
-                    v-model="advertise.priceEquation"
-                    clearable
-                    >
-                    <v-tooltip v-if="!payload" slot="append">
-                            <v-icon slot="activator" color="red">block</v-icon>
+                    <v-flex xs sm md lg3 xl3>
+                        <v-tooltip bottom>
+                            <div slot="activator">
+                                <v-text-field
+                                class="textField mr-3 ml-3 fontIran"
+                                label="محدودیت مقدار معامله"
+                                :disabled="!payload"
+                                type="number"
+                                color="cyan accent-2"
+                                v-model="advertise.restrictAmountsTo"
+                                clearable
+                                outline
+                                >
+                                    <v-tooltip v-if="!payload" slot="append">
+                                        <v-icon slot="activator" color="red">block</v-icon>
+                                    </v-tooltip>
+                                </v-text-field>
+                            </div>
+                            <v-card-text class="fontIrans text-xs-justify">.اختیاری. مقدار معامله را محدود به عدد صحیح جدا از عدد کاما، به عنوان مثال 20،50،100. در ارز فیات (دلار / یورو / و غیره). دستی برای کوین، کارت هدیه و غیره</v-card-text>
                         </v-tooltip>
-                    </v-text-field>
-                </v-flex>
+                    </v-flex>
 
-                <v-flex xs10 sm6 md5 lg4 xl4>
-                    <v-card-text class="fontIrans pt-3 text-xs-justify">محدوده ای که می خواهید بیش از قیمت بازار بیت کوین باشد. ارزش منفی برای خرید یا فروش زیر قیمت بازار را برای جذب مخاطبین بیشتر مورد استفاده قرار دهید. برای قیمت های پیچیده تر ویرایش معادله قیمت به طور مستقیم<span class="fontIran green--text">6,266.70 USD/BTC</span></v-card-text>    
-                </v-flex>
-            </v-layout>
-        
-            <v-divider class="mt-5 mb-3" color="grey"></v-divider>
+                    <v-flex xs sm md lg3 xl3>
+                        <v-tooltip bottom>
+                            <div slot="activator">
+                                <v-text-field
+                                class="textField mr-3 ml-3 fontIran"
+                                label="معادل قیمت"
+                                color="cyan accent-2"
+                                type="number"
+                                :disabled="!payload"
+                                v-model="advertise.priceEquation"
+                                clearable
+                                outline
+                                >
+                                    <v-tooltip v-if="!payload" slot="append">
+                                        <v-icon slot="activator" color="red">block</v-icon>
+                                    </v-tooltip>
+                                </v-text-field>
+                            </div>
+                            <v-card-text class="fontIrans pt-3 text-xs-justify">محدوده ای که می خواهید بیش از قیمت بازار بیت کوین باشد. ارزش منفی برای خرید یا فروش زیر قیمت بازار را برای جذب مخاطبین بیشتر مورد استفاده قرار دهید. برای قیمت های پیچیده تر ویرایش معادله قیمت به طور مستقیم</v-card-text>    
+                        </v-tooltip>
+                    </v-flex>
+
+
+                </v-layout>
+            </v-form>
+        </v-card>
+
             
-            <v-card-text class="fontsIran text-xs-center"> 
-                <p class="fontIran">روزها و ساعت هایی که می خواهید آگهی و تبلیغات شما نشان داده شود:</p>
-            </v-card-text>
     
-            <v-container grid-list-md>
+    
+            <v-container grid-list-md class="mb-3">
                 <v-layout row wrap>
                     <v-flex>
                         <WorkingHour1></WorkingHour1>
@@ -253,37 +264,28 @@
                 </v-layout>
             </v-container>
          
-            <v-divider class="mt-5 mb-4" color="grey"></v-divider>
+                
+                <p class="fontIran text-xs-center pt-5 pr-2 pb-4">شرایط تجارت:</p>
+                    <v-flex xs12 sm8 md7 lg5 xl5>
+                        <v-textarea
+                        class="logCard fontIran"
+                        label="شرایط تجارت"
+                        box
+                        style="background-color:#37474F;"
+                        :disabled="!payload"
+                        color="cyan accent-2"
+                        v-model="advertise.termsOfTrade"
+                        clearable
+                        hint="سایر اطلاعاتی که میخواهید درباره تجارت خود بگویید.مثال1:این تبلیغات صرفا برای معاملات نقدی است اگر میخواهید با پرداخ ت آنلاین باما تماس بپیرید. مثال2:لطفا درخواست را فقط زمانی که میتوانید پرداخت را با پول نقد ظرف مدت 12 ساعت تکمیل کنید."
+                        >
+                            <v-tooltip v-if="!payload" slot="append">
+                                <v-icon slot="activator" color="red">block</v-icon>
+                            </v-tooltip>
+                        </v-textarea>
+                    </v-flex>
 
-            <p class="fontIran text-xs-center pb-4">شرایط تجارت</p>
 
-            <v-layout row wrap>
-                <v-flex xs12 sm8 md7 lg5 xl5>
-                    <v-textarea
-                    class="logCard mr-3 fontIran"
-                    label="شرایط تجارت"
-                    box
-                    style="background-color:#37474F;"
-                    :disabled="!payload"
-                    color="cyan accent-2"
-                    v-model="advertise.termsOfTrade"
-                    clearable
-                    >
-                    <v-tooltip v-if="!payload" slot="append">
-                            <v-icon slot="activator" color="red">block</v-icon>
-                        </v-tooltip>
-                    </v-textarea>
-                </v-flex>
-
-                <v-flex xs12 sm8 md5 lg6 xl5>
-                    <v-card-text class="fontIrans pt-2 text-xs-justify">سایر اطلاعاتی که میخواهید درباره تجارت خود بگویید.مثال1:این تبلیغات صرفا برای معاملات نقدی است اگر میخواهید با پرداخ ت آنلاین باما تماس بپیرید.
-                            مثال2:لطفا درخواست را فقط زمانی که میتوانید پرداخت را با پول نقد ظرف مدت 12 ساعت تکمیل کنید.</v-card-text>    
-                </v-flex>
-            </v-layout>
-        
-            <v-divider class="mt-5 mb-4" color="grey"></v-divider>
-
-            <v-card-text class="fontIran text-xs-center">
+            <v-card-text class="fontIran text-xs-center pt-5">
                 <p>گزینه های نقدینگی</p>
             </v-card-text>
 
@@ -307,9 +309,8 @@
                 </v-flex>
             </v-layout>
         
-            <v-divider class="mt-5 mb-4" color="grey"></v-divider>
 
-            <v-card-text class="fontIran text-xs-center">
+            <v-card-text class="fontIran pt-5 text-xs-center">
                 <p>گزینه های امنیتی</p>
             </v-card-text>
 
@@ -331,7 +332,6 @@
                     <p class="fontIrans text-xs-justify">.برای تماس با تبلیغات خود، کاربران باید هویت خود را با ارسال شناسه،گواهینامه رانندگی یا گذرنامه تأیید کنند</p>    
                 </v-flex>
             </v-layout>
-            <v-divider></v-divider>
             <v-layout row wrap>
                 <v-flex sm4 md3 lg3 xl3>
                     <v-checkbox
@@ -350,7 +350,6 @@
                     <p class="fontIrans text-xs-justify">.فقط تماس با یک شماره تلفن همراه تأیید شده می تواند از طریق تبلیغ شما با شما تماس بگیرد</p>    
                 </v-flex>
             </v-layout>
-            <v-divider></v-divider>
             <v-layout row wrap>
                 <v-flex sm4 md3 lg3 xl3>
                     <v-checkbox
@@ -370,7 +369,7 @@
                 </v-flex>
             </v-layout>
 
-            <v-btn type="submit" class="fontsIran mt-5 mb-5" :disabled="!valid" color="cyan accent-2" outline>ثبت اطلاعات</v-btn>
+            <v-btn type="submit" class="fontsIran mt-5 mb-5" :disabled="!valid" color="cyan accent-2" outline>ثبت  آگهی</v-btn>
 
         <Footer class="pt-5"></Footer>
     </div>
@@ -533,6 +532,7 @@ export default{
   border:1px solid #18FFFF;
   box-shadow:0px 0px 20px 1px #18FFFF;
 }
+
 .logCards{
   border:1px solid #D50000;
   box-shadow:1px 1px 40px 1px #D50000;

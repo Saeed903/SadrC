@@ -186,6 +186,9 @@
 </script>
 
 <style>
+.router-link{
+  text-decoration:none;
+}
 .navThem{
   font-family:iranian sans;
   font-size:14px;
