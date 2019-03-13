@@ -35,7 +35,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
 .centerText{
     font-family:iranian sans;
     font-size:19px;

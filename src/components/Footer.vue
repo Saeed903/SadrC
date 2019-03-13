@@ -70,7 +70,7 @@
     })
   }
 </script>
-<style>
+<style scoped>
 li{
   list-style-type:none;
   margin-right:55px;

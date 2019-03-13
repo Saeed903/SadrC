@@ -1,11 +1,9 @@
-<template  lang="pug">
-    div(Style="Background-color:red;")
-        h1 test 
+<template>
      
 </template>
 <script>
 export default {
-    name: 'SaeedTest'
+    name: ''
 }
 </script>
 
