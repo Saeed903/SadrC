@@ -1,16 +1,17 @@
 <template>
-<div>
-  <v-app id="inspire">
-    <v-subheader>
-      <v-btn @click="addBug()">Add Bugs</v-btn>
-    </v-subheader>
-    <v-radio-group v-model="selected" :mandatory="false">
-      <v-radio v-for="(l, i) in data" :key="i" :label="l.name" :value="l.value" @change="getValue(l.value)"></v-radio>
-      <v-radio v-if="bugs" v-for="(l, i) in bugs" :key="i" :label="l.name" :value="l.value" @change="getValue(l.value)"></v-radio>
-    </v-radio-group>
-  </v-app>
-</div>
+    <div>
+            <v-radio-group>
+                <v-radio @click="addBug()">Add Bugs</v-radio>
+            </v-radio-group>
 
+            <v-card v-model="selected" v-if="bugs" v-for="(l, i) in bugs" :key="i" :label="l.name" :value="l.value" @change="getValue(l.value)">
+                <v-text-field label="farzad"></v-text-field>
+                <v-text-field label="farzad"></v-text-field>
+                <v-text-field label="farzad"></v-text-field>
+                <v-btn>farzad</v-btn>
+            </v-card>
+
+    </div>
 </template>
 <script>
 export default {

@@ -17,6 +17,15 @@ module.exports = {
     apollo: {
       enableMocks: true,
       enableEngine: true
+    },
+    css: {
+      loaderOptions: {
+        css: {
+          localIdentName: '[name]-[hash]',
+          camelCase: 'only'
+        }
+      }
     }
-  }
+  },
+  
 }
