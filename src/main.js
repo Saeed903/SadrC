@@ -9,11 +9,17 @@ import './registerServiceWorker'
 import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import '@fortawesome/fontawesome-free/css/all.css'
+
+
+
+
 import i18n from './i18n';
 import apolloProvider from './apollo'
 import dotenv from 'dotenv'
 
 dotenv.config();
+
+
 
 Vue.use(Vuetify, {
   rtl: true,

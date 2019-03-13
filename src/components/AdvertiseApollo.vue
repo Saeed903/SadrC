@@ -1,5 +1,5 @@
 <template lang="pug">
-    div
+    div {{t}}
         //-div {{t}}
         //- div(v-if="$apollo.queries.advertises.loading") Loading...
         div(v-for="(adv,index) in t" :key="index") 
@@ -8,6 +8,7 @@
 </template>
 <script>
 import gql from 'graphql-tag'
+import GRAPHQL_ENDPOINT from './../config'
 export default {
     data:()=>({
         hello:'',
@@ -18,15 +19,43 @@ export default {
         hello: gql`{ hello } `,
         t: {
             query : gql`{
-                advertises{ 
+                advertises{
                     id
-                    margin
-                    minTransactionLimit
+                    tradeTyepId
                     tradeType{
-                        id
-                        tradeTypeTitle
+                    tradeTypeTitle
                     }
-                }  
+                    countryId
+                    country{
+                    id
+                    countryName
+                    countryNickName
+                    coutnryTitle
+                    }
+                    cryptoCurrencyId
+                    cryptoCurrency{
+                    cryptoCurrencyCode
+                    cryptoCurrencyName
+                    cryptoCurrencyTitle
+                    cryptoCurrencyTeamName
+                    }
+                    margin
+                    priceEquation
+                    minTransactionLimit
+                    maxTransactionLimit
+                    restrictAmountsTo
+                    termsOfTrade
+                    trackLiquidity
+                    identifiedPeopleOnly
+                    smsVerification
+                    trustedPeopleOnly
+                    ownerId
+                    owner{
+                    userName
+                    email
+                    }
+                    
+                }
             }`,
             update: data => data.advertises
         },
@@ -50,6 +79,10 @@ export default {
             console.log('test :',this.t[0].tradeType);
             return this.t.tradeType
         }
+    },
+    created(){
+        console.log('test', GRAPHQL_ENDPOINT);
+        
     }
 }
 </script>
